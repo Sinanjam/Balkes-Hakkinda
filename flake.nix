@@ -28,6 +28,11 @@
         in {
           default = pkgs.mkShell {
             packages = [
+              (pkgs.python3.withPackages (pythonPackages: with pythonPackages; [
+                beautifulsoup4
+                lxml
+                requests
+              ]))
               pkgs.jdk17
               pkgs.gradle
               pkgs.git
@@ -42,7 +47,7 @@
 
             shellHook = ''
               export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/35.0.0:$ANDROID_HOME/build-tools/34.0.0:$PATH"
-              echo "Balkes Android ortamı hazır. Build: fish build.fish"
+              echo "Balkes ortamı hazır. Build: fish build.fish | TFF: fish sync-tff.fish"
             '';
           };
         });

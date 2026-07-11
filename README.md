@@ -73,4 +73,16 @@ nix develop --command gradle --no-daemon :app:assembleDebug \
 
 `SCORE_BASE_URL`, `ARCHIVE_MANIFEST_URL` ve `ARCHIVE_MEDIA_BASE_URL` da aynı şekilde Gradle özelliği olarak değiştirilebilir.
 
+## TFF arşiv verisini çek
+
+Balıkesirspor'un TFF'deki profesyonel sezonlarını, ayrıntılı maçlarını ve hafta
+hafta puan tablolarını önbellekli/paralel biçimde üretmek için:
+
+```fish
+fish sync-tff.fish
+```
+
+Yarım kalırsa aynı komutu yeniden çalıştır; biten dosyalar tekrar indirilmez.
+Detaylar: [TFF hızlı veri çekme](docs/TFF_HIZLI_VERI_CEKME.md)
+
 Detaylı inceleme ve taşıma sırası: [docs/INCELEME_VE_TASIMA_PLANI.md](docs/INCELEME_VE_TASIMA_PLANI.md)

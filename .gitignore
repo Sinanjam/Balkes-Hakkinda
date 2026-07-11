@@ -7,3 +7,7 @@ local.properties
 *.jks
 *.keystore
 secrets.properties
+.cache/tff/
+generated/tff-data/
+**/__pycache__/
+*.pyc

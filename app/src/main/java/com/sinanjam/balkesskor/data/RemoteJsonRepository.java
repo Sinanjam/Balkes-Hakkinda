@@ -16,6 +16,10 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -25,45 +29,110 @@ public final class RemoteJsonRepository {
         void onError(String message);
     }
 
+    private static final class Pending {
+        final Callback callback;
+        final boolean hasCachedValue;
+
+        Pending(Callback callback, boolean hasCachedValue) {
+            this.callback = callback;
+            this.hasCachedValue = hasCachedValue;
+        }
+    }
+
     private final File cacheDir;
-    private final ExecutorService executor = Executors.newFixedThreadPool(3);
+    private final ExecutorService executor = Executors.newFixedThreadPool(4);
     private final Handler main = new Handler(Looper.getMainLooper());
+    private final Map<String, Object> memoryCache = new ConcurrentHashMap<>();
+    private final Map<String, ArrayList<Pending>> inFlight = new HashMap<>();
 
     public RemoteJsonRepository(Context context) {
         cacheDir = new File(context.getFilesDir(), "json-cache");
         if (!cacheDir.exists()) cacheDir.mkdirs();
     }
 
+    public void prefetch(String url) {
+        get(url, new Callback() {
+            @Override public void onSuccess(Object json, boolean fromCache) { }
+            @Override public void onError(String message) { }
+        });
+    }
+
     public void get(String url, Callback callback) {
         executor.execute(() -> {
-            File cache = new File(cacheDir, key(url) + ".json");
-            try {
-                String body = fetch(url);
-                Object parsed = parse(body);
-                write(cache, body);
-                main.post(() -> callback.onSuccess(parsed, false));
-            } catch (Exception networkError) {
+            Object cached = memoryCache.get(url);
+            if (cached == null) {
                 try {
-                    Object parsed = parse(read(cache));
-                    main.post(() -> callback.onSuccess(parsed, true));
-                } catch (Exception cacheError) {
-                    main.post(() -> callback.onError("Veri alınamadı. İnternet bağlantısını kontrol edin."));
-                }
+                    cached = parse(read(cacheFile(url)));
+                    memoryCache.put(url, cached);
+                } catch (Exception ignored) { }
             }
+
+            final Object immediate = cached;
+            final boolean hasCachedValue = immediate != null;
+            if (hasCachedValue) {
+                main.post(() -> callback.onSuccess(immediate, true));
+            }
+            enqueueRefresh(url, callback, hasCachedValue);
         });
     }
 
     public void close() {
         executor.shutdownNow();
+        synchronized (inFlight) {
+            inFlight.clear();
+        }
+    }
+
+    private void enqueueRefresh(String url, Callback callback, boolean hasCachedValue) {
+        boolean startRequest = false;
+        synchronized (inFlight) {
+            ArrayList<Pending> listeners = inFlight.get(url);
+            if (listeners == null) {
+                listeners = new ArrayList<>();
+                inFlight.put(url, listeners);
+                startRequest = true;
+            }
+            listeners.add(new Pending(callback, hasCachedValue));
+        }
+        if (startRequest) executor.execute(() -> refresh(url));
+    }
+
+    private void refresh(String url) {
+        try {
+            String body = fetch(url);
+            Object parsed = parse(body);
+            memoryCache.put(url, parsed);
+            write(cacheFile(url), body);
+            finish(url, parsed, null);
+        } catch (Exception error) {
+            finish(url, null, "Veri alınamadı. İnternet bağlantısını kontrol edin.");
+        }
+    }
+
+    private void finish(String url, Object value, String error) {
+        ArrayList<Pending> listeners;
+        synchronized (inFlight) {
+            listeners = inFlight.remove(url);
+        }
+        if (listeners == null) return;
+        for (Pending pending : listeners) {
+            if (value != null) {
+                main.post(() -> pending.callback.onSuccess(value, false));
+            } else if (!pending.hasCachedValue) {
+                main.post(() -> pending.callback.onError(error));
+            }
+        }
     }
 
     private String fetch(String address) throws Exception {
         HttpURLConnection connection = (HttpURLConnection) new URL(address).openConnection();
         try {
-            connection.setConnectTimeout(10_000);
-            connection.setReadTimeout(20_000);
+            connection.setConnectTimeout(7_000);
+            connection.setReadTimeout(15_000);
+            connection.setUseCaches(true);
             connection.setRequestProperty("Accept", "application/json");
-            connection.setRequestProperty("User-Agent", "Balkes-Android/1.1");
+            connection.setRequestProperty("Connection", "keep-alive");
+            connection.setRequestProperty("User-Agent", "Balkes-Android/1.2");
             int status = connection.getResponseCode();
             if (status < 200 || status >= 300) throw new IllegalStateException("HTTP " + status);
             return read(connection.getInputStream());
@@ -79,6 +148,10 @@ public final class RemoteJsonRepository {
         throw new IllegalArgumentException("JSON bekleniyordu");
     }
 
+    private File cacheFile(String url) {
+        return new File(cacheDir, key(url) + ".json");
+    }
+
     private String read(File file) throws Exception {
         if (!file.isFile()) throw new IllegalStateException("Önbellek yok");
         try (InputStream input = new FileInputStream(file)) {
@@ -88,7 +161,7 @@ public final class RemoteJsonRepository {
 
     private String read(InputStream input) throws Exception {
         try (InputStream in = input; ByteArrayOutputStream out = new ByteArrayOutputStream()) {
-            byte[] buffer = new byte[8192];
+            byte[] buffer = new byte[32_768];
             int count;
             while ((count = in.read(buffer)) >= 0) out.write(buffer, 0, count);
             return out.toString(StandardCharsets.UTF_8.name());

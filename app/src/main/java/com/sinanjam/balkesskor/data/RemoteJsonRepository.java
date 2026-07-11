@@ -22,6 +22,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.RejectedExecutionException;
 
 public final class RemoteJsonRepository {
     public interface Callback {
@@ -45,6 +46,7 @@ public final class RemoteJsonRepository {
     private final Map<String, Object> memoryCache = new ConcurrentHashMap<>();
     private final Map<String, String> rawCache = new ConcurrentHashMap<>();
     private final Map<String, ArrayList<Pending>> inFlight = new HashMap<>();
+    private volatile boolean closed;
 
     public RemoteJsonRepository(Context context) {
         cacheDir = new File(context.getFilesDir(), "json-cache");
@@ -59,7 +61,9 @@ public final class RemoteJsonRepository {
     }
 
     public void get(String url, Callback callback) {
-        executor.execute(() -> {
+        if (closed) return;
+        execute(() -> {
+            if (closed) return;
             Object cached = memoryCache.get(url);
             if (cached == null) {
                 try {
@@ -73,20 +77,23 @@ public final class RemoteJsonRepository {
             final Object immediate = cached;
             final boolean hasCachedValue = immediate != null;
             if (hasCachedValue) {
-                main.post(() -> callback.onSuccess(immediate, true));
+                post(() -> callback.onSuccess(immediate, true));
             }
             enqueueRefresh(url, callback, hasCachedValue);
         });
     }
 
     public void close() {
+        closed = true;
         executor.shutdownNow();
+        main.removeCallbacksAndMessages(null);
         synchronized (inFlight) {
             inFlight.clear();
         }
     }
 
     private void enqueueRefresh(String url, Callback callback, boolean hasCachedValue) {
+        if (closed) return;
         boolean startRequest = false;
         synchronized (inFlight) {
             ArrayList<Pending> listeners = inFlight.get(url);
@@ -97,7 +104,7 @@ public final class RemoteJsonRepository {
             }
             listeners.add(new Pending(callback, hasCachedValue));
         }
-        if (startRequest) executor.execute(() -> refresh(url));
+        if (startRequest) execute(() -> refresh(url));
     }
 
     private void refresh(String url) {
@@ -110,7 +117,8 @@ public final class RemoteJsonRepository {
             if (!unchanged) write(cacheFile(url), body);
             finish(url, parsed, null, unchanged);
         } catch (Exception error) {
-            finish(url, null, "Veri alınamadı. İnternet bağlantısını kontrol edin.", false);
+            finish(url, null,
+                    "İçerik alınamadı. İnternet bağlantını kontrol edip tekrar dene.", false);
         }
     }
 
@@ -119,14 +127,27 @@ public final class RemoteJsonRepository {
         synchronized (inFlight) {
             listeners = inFlight.remove(url);
         }
-        if (listeners == null) return;
+        if (listeners == null || closed) return;
         for (Pending pending : listeners) {
             if (value != null && (!unchanged || !pending.hasCachedValue)) {
-                main.post(() -> pending.callback.onSuccess(value, false));
+                post(() -> pending.callback.onSuccess(value, false));
             } else if (!pending.hasCachedValue) {
-                main.post(() -> pending.callback.onError(error));
+                post(() -> pending.callback.onError(error));
             }
         }
+    }
+
+    private void execute(Runnable action) {
+        if (closed) return;
+        try {
+            executor.execute(action);
+        } catch (RejectedExecutionException ignored) { }
+    }
+
+    private void post(Runnable action) {
+        if (!closed) main.post(() -> {
+            if (!closed) action.run();
+        });
     }
 
     private String fetch(String address) throws Exception {
@@ -137,7 +158,7 @@ public final class RemoteJsonRepository {
             connection.setUseCaches(true);
             connection.setRequestProperty("Accept", "application/json");
             connection.setRequestProperty("Connection", "keep-alive");
-            connection.setRequestProperty("User-Agent", "Balkes-Android/1.2");
+            connection.setRequestProperty("User-Agent", "Balkes-Android/1.5");
             int status = connection.getResponseCode();
             if (status < 200 || status >= 300) throw new IllegalStateException("HTTP " + status);
             return read(connection.getInputStream());

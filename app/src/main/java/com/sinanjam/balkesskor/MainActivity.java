@@ -4,13 +4,22 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.text.Editable;
+import android.text.InputType;
+import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.sinanjam.balkesskor.data.DataEndpoints;
+import com.sinanjam.balkesskor.data.RemoteImageLoader;
 import com.sinanjam.balkesskor.data.RemoteJsonRepository;
 import com.sinanjam.balkesskor.ui.EdgeToEdge;
 import com.sinanjam.balkesskor.ui.Ui;
@@ -18,31 +27,87 @@ import com.sinanjam.balkesskor.ui.Ui;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.Locale;
+
 public final class MainActivity extends Activity {
     private enum Tab { SCORE, ARCHIVE, PHOTOS, NEWS, SEASONS }
+    private static final Locale TURKISH = new Locale("tr", "TR");
 
     private RemoteJsonRepository repository;
+    private RemoteImageLoader imageLoader;
+    private final Handler uiHandler = new Handler(Looper.getMainLooper());
+    private final Runnable openChooser = () -> {
+        if (!isFinishing() && !isDestroyed()) showEntryChoice();
+    };
     private LinearLayout content;
+    private ScrollView screenScroll;
     private TextView headerTitle;
     private TextView headerSubtitle;
     private Tab current = Tab.SCORE;
     private boolean chooserVisible = true;
     private Runnable detailBackAction;
     private String detailRequestKey = "";
+    private int archiveRenderGeneration = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.configure(this);
+        if (savedInstanceState == null) {
+            showSplashScreen();
+        } else {
+            showEntryChoice();
+        }
+
         repository = new RemoteJsonRepository(this);
+        imageLoader = new RemoteImageLoader(this);
         warmScoreData();
         repository.prefetch(DataEndpoints.archiveManifest());
-        showEntryChoice();
+        if (savedInstanceState == null) uiHandler.postDelayed(openChooser, 700L);
+    }
+
+    private void showSplashScreen() {
+        chooserVisible = true;
+        LinearLayout root = new LinearLayout(this);
+        root.setOrientation(LinearLayout.VERTICAL);
+        root.setGravity(Gravity.CENTER);
+        root.setBackground(Ui.appBackground());
+
+        TextView badge = Ui.text(this, "B", 50, Color.WHITE);
+        badge.setTypeface(Typeface.DEFAULT_BOLD);
+        badge.setGravity(Gravity.CENTER);
+        badge.setBackground(Ui.badgeBackground(this));
+        badge.setElevation(Ui.dp(this, 14));
+        root.addView(badge, new LinearLayout.LayoutParams(Ui.dp(this, 96), Ui.dp(this, 96)));
+
+        TextView title = Ui.text(this, "BALKES", 34, Ui.TEXT);
+        title.setTypeface(Typeface.DEFAULT_BOLD);
+        title.setLetterSpacing(0.13f);
+        title.setGravity(Gravity.CENTER);
+        LinearLayout.LayoutParams titleParams = new LinearLayout.LayoutParams(-1, -2);
+        titleParams.setMargins(0, Ui.dp(this, 25), 0, 0);
+        root.addView(title, titleParams);
+
+        TextView subtitle = Ui.eyebrow(this, "Skor • Arşiv • Kulübün Hafızası", Ui.CYAN);
+        subtitle.setGravity(Gravity.CENTER);
+        LinearLayout.LayoutParams subtitleParams = new LinearLayout.LayoutParams(-1, -2);
+        subtitleParams.setMargins(0, Ui.dp(this, 9), 0, Ui.dp(this, 25));
+        root.addView(subtitle, subtitleParams);
+
+        View line = new View(this);
+        line.setBackground(Ui.neonLine());
+        root.addView(line, new LinearLayout.LayoutParams(Ui.dp(this, 210), Ui.dp(this, 2)));
+
+        setContentView(root);
+        EdgeToEdge.applyInsets(root, Ui.dp(this, 24), Ui.dp(this, 28),
+                Ui.dp(this, 24), Ui.dp(this, 28));
     }
 
     private void warmScoreData() {
         repository.get(DataEndpoints.scoreManifest(), new RemoteJsonRepository.Callback() {
             @Override public void onSuccess(Object json, boolean fromCache) {
+                if (isFinishing() || isDestroyed()) return;
                 if (!(json instanceof JSONObject)) return;
                 JSONArray seasons = ((JSONObject) json).optJSONArray("availableSeasons");
                 if (seasons == null || seasons.length() == 0) return;
@@ -60,7 +125,12 @@ public final class MainActivity extends Activity {
 
     @Override
     protected void onDestroy() {
-        repository.close();
+        chooserVisible = true;
+        archiveRenderGeneration++;
+        detailRequestKey = "";
+        uiHandler.removeCallbacksAndMessages(null);
+        if (repository != null) repository.close();
+        if (imageLoader != null) imageLoader.close();
         super.onDestroy();
     }
 
@@ -80,12 +150,15 @@ public final class MainActivity extends Activity {
     }
 
     private void showEntryChoice() {
+        uiHandler.removeCallbacks(openChooser);
+        archiveRenderGeneration++;
         chooserVisible = true;
         detailBackAction = null;
         detailRequestKey = "";
         content = null;
 
         ScrollView scroll = new ScrollView(this);
+        screenScroll = scroll;
         scroll.setFillViewport(true);
         scroll.setBackground(Ui.appBackground());
 
@@ -141,7 +214,8 @@ public final class MainActivity extends Activity {
         archiveParams.setMargins(0, Ui.dp(this, 14), 0, 0);
         root.addView(archiveChoice, archiveParams);
 
-        TextView footer = Ui.text(this, "Veriler GitHub üzerinden güvenli biçimde güncellenir", 11, Ui.MUTED);
+        TextView footer = Ui.text(this,
+                "İçerikler otomatik güncellenir ve çevrimdışı da açılır", 11, Ui.MUTED);
         footer.setGravity(Gravity.CENTER);
         LinearLayout.LayoutParams footerParams = new LinearLayout.LayoutParams(-1, -2);
         footerParams.setMargins(0, Ui.dp(this, 27), 0, 0);
@@ -223,12 +297,14 @@ public final class MainActivity extends Activity {
         headerSubtitle = Ui.text(this, "Balıkesirspor dijital merkezi", 11, Ui.CYAN);
         titles.addView(headerSubtitle);
 
-        TextView change = Ui.chip(this, "Değiştir", Color.WHITE);
+        TextView change = Ui.chip(this, "Ana Menü", Color.WHITE);
+        change.setFocusable(true);
         change.setOnClickListener(view -> showEntryChoice());
         header.addView(change, new LinearLayout.LayoutParams(-2, -2));
         root.addView(header, new LinearLayout.LayoutParams(-1, -2));
 
         ScrollView scroll = new ScrollView(this);
+        screenScroll = scroll;
         scroll.setFillViewport(true);
         content = new LinearLayout(this);
         content.setOrientation(LinearLayout.VERTICAL);
@@ -241,6 +317,7 @@ public final class MainActivity extends Activity {
     }
 
     private void select(Tab tab) {
+        archiveRenderGeneration++;
         detailBackAction = null;
         detailRequestKey = "";
         current = tab;
@@ -262,6 +339,7 @@ public final class MainActivity extends Activity {
     }
 
     private void start(String eyebrow, String title, String subtitle, int accent) {
+        scrollToTop();
         content.removeAllViews();
         content.addView(Ui.eyebrow(this, eyebrow, accent));
         TextView heading = Ui.title(this, title);
@@ -278,7 +356,8 @@ public final class MainActivity extends Activity {
     }
 
     private void renderScore() {
-        start("Canlı veri", "Balkes Skor", "Güncel sezon özeti GitHub veri deposundan gelir.", Ui.RED);
+        start("Canlı veri", "Balkes Skor",
+                "Güncel sezonlar ve maç kayıtları otomatik yenilenir.", Ui.RED);
         repository.get(DataEndpoints.scoreManifest(), new RemoteJsonRepository.Callback() {
             @Override public void onSuccess(Object json, boolean fromCache) {
                 if (chooserVisible || current != Tab.SCORE || !(json instanceof JSONObject)) return;
@@ -288,7 +367,8 @@ public final class MainActivity extends Activity {
 
                 LinearLayout hero = Ui.heroCard(MainActivity.this);
                 hero.addView(Ui.chip(MainActivity.this,
-                        fromCache ? "Hızlı önbellek" : "GitHub güncel", fromCache ? Ui.CYAN : Ui.GREEN));
+                        fromCache ? "Hemen hazır" : "Veriler güncel",
+                        fromCache ? Ui.CYAN : Ui.GREEN));
                 TextView big = Ui.text(MainActivity.this,
                         seasons == null ? "—" : String.valueOf(seasons.length()), 46, Ui.TEXT);
                 big.setTypeface(Typeface.DEFAULT_BOLD);
@@ -337,8 +417,8 @@ public final class MainActivity extends Activity {
         final Tab expected = photosOnly ? Tab.PHOTOS : Tab.ARCHIVE;
         start(photosOnly ? "Tarihi kareler" : "Kulübün hafızası",
                 photosOnly ? "Fotoğraf Koleksiyonu" : "Balkes Arşivi",
-                photosOnly ? "Görseller APK içinde değil; ihtiyaç oldukça GitHub'dan gelir."
-                        : "Sezon hikâyeleri ve tarihi yazılar uzaktaki manifestten gelir.",
+                photosOnly ? "Görseller ihtiyaç oldukça indirilir; uygulama hafif kalır."
+                        : "Sezon hikâyeleri ve tarihi yazılar otomatik güncellenir.",
                 photosOnly ? Ui.CYAN : Ui.RED);
         repository.get(DataEndpoints.archiveManifest(), new RemoteJsonRepository.Callback() {
             @Override public void onSuccess(Object json, boolean fromCache) {
@@ -346,7 +426,9 @@ public final class MainActivity extends Activity {
                 JSONArray items = ((JSONObject) json).optJSONArray("items");
                 clearResults();
                 if (items == null) {
-                    content.addView(Ui.message(MainActivity.this, "Boş manifest", "items dizisi bulunamadı."));
+                    content.addView(retryCard("Arşiv hazırlanamadı",
+                            "Arşiv listesi şu anda okunamıyor.", Ui.RED,
+                            view -> select(expected)));
                     return;
                 }
 
@@ -362,39 +444,112 @@ public final class MainActivity extends Activity {
                         14, Ui.MUTED));
                 content.addView(summary);
 
-                for (int i = 0; i < items.length(); i++) {
-                    JSONObject item = items.optJSONObject(i);
-                    if (item == null) continue;
-                    JSONArray photos = item.optJSONArray("photos");
-                    if (photosOnly && (photos == null || photos.length() == 0)) continue;
-                    LinearLayout card = Ui.card(MainActivity.this);
-                    card.addView(Ui.eyebrow(MainActivity.this,
-                            photosOnly ? photos.length() + " fotoğraf" : item.optString("season", "Arşiv"),
-                            photosOnly ? Ui.CYAN : Ui.RED));
-                    TextView heading = strong(item.optString("title", "İsimsiz kayıt"));
-                    heading.setPadding(0, Ui.dp(MainActivity.this, 5), 0, 0);
-                    card.addView(heading);
-                    if (photosOnly) {
-                        JSONObject first = photos.optJSONObject(0);
-                        if (first != null) card.addView(Ui.text(MainActivity.this,
-                                first.optString("caption", "Tarihi arşiv fotoğrafı"), 13, Ui.MUTED));
-                    } else {
-                        card.addView(Ui.text(MainActivity.this, item.optString("summary", ""), 13, Ui.MUTED));
+                EditText search = new EditText(MainActivity.this);
+                search.setSingleLine(true);
+                search.setTextColor(Ui.TEXT);
+                search.setHintTextColor(Ui.MUTED);
+                search.setTextSize(14);
+                search.setHint("Arşivlerde ara…");
+                search.setInputType(InputType.TYPE_CLASS_TEXT
+                        | InputType.TYPE_TEXT_FLAG_CAP_SENTENCES);
+                search.setImeOptions(EditorInfo.IME_ACTION_DONE);
+                search.setPadding(Ui.dp(MainActivity.this, 15), Ui.dp(MainActivity.this, 12),
+                        Ui.dp(MainActivity.this, 15), Ui.dp(MainActivity.this, 12));
+                search.setBackground(Ui.inputBackground(MainActivity.this));
+                LinearLayout.LayoutParams searchParams = new LinearLayout.LayoutParams(-1, -2);
+                searchParams.setMargins(0, Ui.dp(MainActivity.this, 13), 0, Ui.dp(MainActivity.this, 2));
+                content.addView(search, searchParams);
+
+                LinearLayout results = new LinearLayout(MainActivity.this);
+                results.setOrientation(LinearLayout.VERTICAL);
+                content.addView(results, new LinearLayout.LayoutParams(-1, -2));
+                renderArchiveResults(items, photosOnly, "", results, expected);
+
+                search.addTextChangedListener(new TextWatcher() {
+                    @Override public void beforeTextChanged(CharSequence value, int start, int count, int after) { }
+                    @Override public void onTextChanged(CharSequence value, int start, int before, int count) {
+                        renderArchiveResults(items, photosOnly, value.toString(), results, expected);
                     }
-                    final JSONObject selectedItem = item;
-                    makeClickable(card, photosOnly ? "FOTOĞRAF KAYDINI AÇ" : "ARŞİVİ OKU",
-                            photosOnly ? Ui.CYAN : Ui.RED,
-                            view -> renderArchiveDetail(selectedItem, photosOnly));
-                    content.addView(card);
-                }
+                    @Override public void afterTextChanged(Editable value) { }
+                });
             }
             @Override public void onError(String message) { showError(expected, message); }
         });
     }
 
+    private void renderArchiveResults(JSONArray source, boolean photosOnly, String query,
+                                      LinearLayout results, Tab expected) {
+        final int generation = ++archiveRenderGeneration;
+        results.removeAllViews();
+        String normalized = query == null ? ""
+                : query.trim().toLowerCase(TURKISH);
+        ArrayList<JSONObject> filtered = new ArrayList<>();
+
+        for (int i = 0; i < source.length(); i++) {
+            JSONObject item = source.optJSONObject(i);
+            if (item == null) continue;
+            JSONArray photos = item.optJSONArray("photos");
+            if (photosOnly && (photos == null || photos.length() == 0)) continue;
+            String searchable = (item.optString("title", "") + " "
+                    + item.optString("season", "") + " "
+                    + item.optString("summary", ""))
+                    .toLowerCase(TURKISH);
+            if (normalized.length() == 0 || searchable.contains(normalized)) filtered.add(item);
+        }
+
+        TextView status = Ui.eyebrow(this,
+                filtered.size() + (normalized.length() == 0 ? " arşivin tamamı" : " eşleşen arşiv"),
+                Ui.CYAN);
+        status.setPadding(0, Ui.dp(this, 12), 0, 0);
+        results.addView(status);
+
+        if (filtered.isEmpty()) {
+            results.addView(Ui.message(this, "Sonuç bulunamadı",
+                    "Başka bir sezon, takım veya anahtar kelime deneyebilirsin."));
+            return;
+        }
+        appendArchiveBatch(filtered, 0, photosOnly, results, expected, generation);
+    }
+
+    private void appendArchiveBatch(ArrayList<JSONObject> items, int start, boolean photosOnly,
+                                    LinearLayout results, Tab expected, int generation) {
+        if (chooserVisible || current != expected || generation != archiveRenderGeneration) return;
+        int end = Math.min(start + 12, items.size());
+        for (int i = start; i < end; i++) {
+            results.addView(archiveListCard(items.get(i), photosOnly));
+        }
+        if (end < items.size()) {
+            uiHandler.post(() -> appendArchiveBatch(
+                    items, end, photosOnly, results, expected, generation));
+        }
+    }
+
+    private LinearLayout archiveListCard(JSONObject item, boolean photosOnly) {
+        JSONArray photos = item.optJSONArray("photos");
+        LinearLayout card = Ui.card(this);
+        card.addView(Ui.eyebrow(this,
+                photosOnly && photos != null
+                        ? photos.length() + " fotoğraf" : item.optString("season", "Arşiv"),
+                photosOnly ? Ui.CYAN : Ui.RED));
+        TextView heading = strong(item.optString("title", "İsimsiz kayıt"));
+        heading.setPadding(0, Ui.dp(this, 5), 0, 0);
+        card.addView(heading);
+        if (photosOnly && photos != null) {
+            JSONObject first = photos.optJSONObject(0);
+            if (first != null) card.addView(Ui.text(this,
+                    first.optString("caption", "Tarihi arşiv fotoğrafı"), 13, Ui.MUTED));
+        } else {
+            card.addView(Ui.text(this, item.optString("summary", ""), 13, Ui.MUTED));
+        }
+        makeClickable(card, photosOnly ? "FOTOĞRAF KAYDINI AÇ" : "ARŞİVİ OKU",
+                photosOnly ? Ui.CYAN : Ui.RED,
+                view -> renderArchiveDetail(item, photosOnly));
+        return card;
+    }
+
     private void renderNews() {
         start("Son gelişmeler", "Haber ve Duyurular",
-                "Yeni veri deposundaki news/index.json sözleşmesini kullanır.", Ui.RED);
+                "Kulüple ilgili haber ve duyurular burada güncellenir.", Ui.RED);
         repository.get(DataEndpoints.newsManifest(), new RemoteJsonRepository.Callback() {
             @Override public void onSuccess(Object json, boolean fromCache) {
                 if (chooserVisible || current != Tab.NEWS) return;
@@ -402,7 +557,8 @@ public final class MainActivity extends Activity {
                         ? (JSONArray) json : ((JSONObject) json).optJSONArray("items");
                 clearResults();
                 if (items == null || items.length() == 0) {
-                    content.addView(Ui.message(MainActivity.this, "Henüz duyuru yok", "Manifest geçerli fakat içerik boş."));
+                    content.addView(Ui.message(MainActivity.this, "Henüz duyuru yok",
+                            "Yeni bir duyuru yayımlandığında burada görünecek."));
                     return;
                 }
                 for (int i = 0; i < items.length() && i < 12; i++) {
@@ -418,24 +574,23 @@ public final class MainActivity extends Activity {
                 }
             }
             @Override public void onError(String message) {
-                if (chooserVisible || current != Tab.NEWS) return;
-                clearResults();
-                content.addView(Ui.message(MainActivity.this, "Veri deposu bekleniyor",
-                        "news/index.json henüz yayımlanmadı. URL, CONTENT_BASE_URL ile değiştirilebilir."));
+                showError(Tab.NEWS, message);
             }
         });
     }
 
     private void renderSeasons() {
         start("Kulüp tarihi", "Geçmiş Sezonlar",
-                "Skor manifestindeki sezon dizini tek kaynak olarak kullanılır.", Ui.CYAN);
+                "Geçmiş sezonların maç ve sonuç kayıtlarını incele.", Ui.CYAN);
         repository.get(DataEndpoints.scoreManifest(), new RemoteJsonRepository.Callback() {
             @Override public void onSuccess(Object json, boolean fromCache) {
                 if (chooserVisible || current != Tab.SEASONS || !(json instanceof JSONObject)) return;
                 JSONArray seasons = ((JSONObject) json).optJSONArray("availableSeasons");
                 clearResults();
                 if (seasons == null) {
-                    content.addView(Ui.message(MainActivity.this, "Sezon yok", "availableSeasons bulunamadı."));
+                    content.addView(retryCard("Sezonlar hazırlanamadı",
+                            "Sezon listesi şu anda okunamıyor.", Ui.CYAN,
+                            view -> select(Tab.SEASONS)));
                     return;
                 }
                 for (int i = 0; i < seasons.length(); i++) {
@@ -471,6 +626,7 @@ public final class MainActivity extends Activity {
 
     private LinearLayout beginDetail(String eyebrow, String title, String subtitle,
                                      int accent, Runnable backAction) {
+        scrollToTop();
         detailBackAction = backAction;
         content.removeAllViews();
 
@@ -498,6 +654,10 @@ public final class MainActivity extends Activity {
         body.setOrientation(LinearLayout.VERTICAL);
         content.addView(body, new LinearLayout.LayoutParams(-1, -2));
         return body;
+    }
+
+    private void scrollToTop() {
+        if (screenScroll != null) screenScroll.post(() -> screenScroll.scrollTo(0, 0));
     }
 
     private void renderArchiveDetail(JSONObject item, boolean photosOnly) {
@@ -536,14 +696,34 @@ public final class MainActivity extends Activity {
         if (photos != null && photos.length() > 0) {
             LinearLayout photoCard = Ui.card(this);
             photoCard.addView(Ui.eyebrow(this, photos.length() + " fotoğraf kaydı", Ui.CYAN));
-            int limit = Math.min(photos.length(), 6);
+            int limit = Math.min(photos.length(), 4);
             for (int i = 0; i < limit; i++) {
                 JSONObject photo = photos.optJSONObject(i);
                 if (photo == null) continue;
-                TextView caption = Ui.text(this,
-                        "• " + photo.optString("caption", "Tarihi arşiv fotoğrafı"), 13, Ui.MUTED);
-                caption.setPadding(0, Ui.dp(this, 8), 0, 0);
+                String captionText = photo.optString("caption", "Tarihi arşiv fotoğrafı");
+                String asset = photo.optString("asset", "");
+                String imageUrl = asset.length() > 0
+                        ? DataEndpoints.archiveMedia(asset) : photo.optString("sourceUrl", "");
+
+                ImageView image = new ImageView(this);
+                image.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                image.setContentDescription(captionText);
+                image.setBackgroundColor(Ui.SURFACE);
+                LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(
+                        -1, Ui.dp(this, 210));
+                imageParams.setMargins(0, Ui.dp(this, 13), 0, 0);
+                photoCard.addView(image, imageParams);
+                imageLoader.load(imageUrl, image);
+
+                TextView caption = Ui.text(this, captionText, 12, Ui.MUTED);
+                caption.setPadding(0, Ui.dp(this, 7), 0, Ui.dp(this, 4));
                 photoCard.addView(caption);
+            }
+            if (photos.length() > limit) {
+                TextView remaining = Ui.eyebrow(this,
+                        "+" + (photos.length() - limit) + " ek fotoğraf kaydı", Ui.RED);
+                remaining.setPadding(0, Ui.dp(this, 10), 0, 0);
+                photoCard.addView(remaining);
             }
             body.addView(photoCard);
         }
@@ -585,7 +765,7 @@ public final class MainActivity extends Activity {
 
                         LinearLayout summary = Ui.heroCard(MainActivity.this);
                         summary.addView(Ui.chip(MainActivity.this,
-                                fromCache ? "Hızlı önbellek" : "GitHub güncel",
+                                fromCache ? "Hemen hazır" : "Veriler güncel",
                                 fromCache ? Ui.CYAN : Ui.GREEN));
                         TextView count = Ui.text(MainActivity.this, String.valueOf(matches.length()), 42, Ui.TEXT);
                         count.setTypeface(Typeface.DEFAULT_BOLD);
@@ -621,7 +801,8 @@ public final class MainActivity extends Activity {
                     @Override public void onError(String message) {
                         if (chooserVisible || !key.equals(detailRequestKey)) return;
                         body.removeAllViews();
-                        body.addView(Ui.message(MainActivity.this, "Skorlar açılamadı", message));
+                        body.addView(retryCard("Skorlar açılamadı", friendlyError(message), Ui.RED,
+                                view -> renderSeasonDetail(seasonId, seasonName, origin)));
                     }
                 });
     }
@@ -712,7 +893,8 @@ public final class MainActivity extends Activity {
             @Override public void onError(String message) {
                 if (chooserVisible || !key.equals(detailRequestKey)) return;
                 extra.removeAllViews();
-                extra.addView(Ui.message(MainActivity.this, "Detay alınamadı", message));
+                extra.addView(retryCard("Maç detayı açılamadı", friendlyError(message), Ui.RED,
+                        view -> renderMatchDetail(match, seasonId, seasonName, origin)));
             }
         });
     }
@@ -767,6 +949,30 @@ public final class MainActivity extends Activity {
     private void showError(Tab expected, String message) {
         if (chooserVisible || current != expected) return;
         clearResults();
-        content.addView(Ui.message(this, "Bağlantı kurulamadı", message));
+        content.addView(retryCard("İçerik açılamadı", friendlyError(message),
+                expected == Tab.ARCHIVE || expected == Tab.SCORE || expected == Tab.NEWS
+                        ? Ui.RED : Ui.CYAN,
+                view -> select(expected)));
+    }
+
+    private LinearLayout retryCard(String title, String message, int accent,
+                                   View.OnClickListener retry) {
+        LinearLayout card = Ui.card(this);
+        card.addView(Ui.eyebrow(this, "Bağlantı sorunu", accent));
+        TextView heading = strong(title);
+        heading.setPadding(0, Ui.dp(this, 6), 0, 0);
+        card.addView(heading);
+        TextView detail = Ui.text(this, message, 13, Ui.MUTED);
+        detail.setPadding(0, Ui.dp(this, 7), 0, 0);
+        card.addView(detail);
+        makeClickable(card, "TEKRAR DENE", accent, retry);
+        return card;
+    }
+
+    private String friendlyError(String message) {
+        if (message == null || message.trim().length() == 0) {
+            return "İnternet bağlantını kontrol edip yeniden deneyebilirsin.";
+        }
+        return message.trim();
     }
 }

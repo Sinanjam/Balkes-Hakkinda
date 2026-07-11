@@ -10,7 +10,10 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import java.util.Locale;
+
 public final class Ui {
+    private static final Locale TURKISH = new Locale("tr", "TR");
     public static final int BACKGROUND = Color.rgb(2, 4, 8);
     public static final int SURFACE = Color.rgb(4, 7, 12);
     public static final int CARD = Color.rgb(8, 12, 19);
@@ -31,7 +34,7 @@ public final class Ui {
     }
 
     public static TextView eyebrow(Context context, String value, int color) {
-        TextView view = text(context, value.toUpperCase(), 11, color);
+        TextView view = text(context, value.toUpperCase(TURKISH), 11, color);
         view.setTypeface(Typeface.DEFAULT_BOLD);
         view.setLetterSpacing(0.12f);
         return view;
@@ -86,7 +89,7 @@ public final class Ui {
         ProgressBar progress = new ProgressBar(context);
         progress.getIndeterminateDrawable().setTint(RED);
         box.addView(progress, new LinearLayout.LayoutParams(dp(context, 38), dp(context, 38)));
-        TextView label = text(context, "GitHub verisi hazırlanıyor…", 13, MUTED);
+        TextView label = text(context, "İçerikler hazırlanıyor…", 13, MUTED);
         label.setGravity(Gravity.CENTER);
         label.setPadding(0, dp(context, 10), 0, 0);
         box.addView(label);
@@ -129,6 +132,12 @@ public final class Ui {
 
     public static GradientDrawable badgeBackground(Context context) {
         return roundedGradient(context, new int[]{RED, RED_DARK, Color.rgb(0, 80, 90)}, CYAN, 18, 1);
+    }
+
+    public static GradientDrawable inputBackground(Context context) {
+        return roundedGradient(context,
+                new int[]{Color.rgb(6, 11, 18), Color.rgb(3, 7, 12)},
+                Color.argb(190, 0, 238, 255), 12, 1);
     }
 
     public static GradientDrawable neonLine() {

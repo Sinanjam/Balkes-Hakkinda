@@ -24,6 +24,13 @@ fish sync-tff.fish 10 true
 Çıktı `generated/tff-data/` altında oluşur. Yarım kalırsa aynı komutu yeniden
 çalıştırmak yeterlidir; tamamlanan HTML ve JSON dosyaları tekrar indirilmez.
 
+`true` ile zorunlu yenilemeyi yalnız bozuk bir HTML önbelleği olduğunda kullan.
+Normal devam komutu daha hızlıdır:
+
+```fish
+fish sync-tff.fish 10 false
+```
+
 ## Yalnızca bir sezonu denemek
 
 Önce tek sezonla hızlı kontrol:
@@ -48,6 +55,21 @@ nix develop . --command python3 tools/tff/sync_all.py \
 - Bulunabildiği yerde resmi hafta hafta puan cetveli
 - Resmi haftalık tablo yoksa TFF maç sonuçlarından hesaplanan ve kaynak türü
   açıkça işaretlenen haftalık tablo
+- Eski liglerde Kademe/Klasman gibi aynı sezon içindeki birden çok resmi aşama
+
+## Mevcut çıktıyı temizlemek
+
+Eski bir `generated/tff-data` klasörünü yeniden indirmeden yalnız yerel olarak
+temizlemek için:
+
+```fish
+nix develop . --command python3 tools/tff/sanitize_export.py \
+  --data-root generated/tff-data
+```
+
+Bu işlem yalnız üretilmiş veri ağacında çalışır; U14-U21/PAF/BAL kayıtlarını,
+ertelenip başka tarihte oynanmış eski fikstürü ve indekste olmayan artık detay
+dosyalarını çıkarır. Tam senkron bunu zaten otomatik çalıştırır.
 
 ## Dosya düzeni
 
@@ -59,6 +81,8 @@ generated/tff-data/
   seasons/<sezon>/matches_index.json
   seasons/<sezon>/matches/<mac-id>.json
   seasons/<sezon>/standings_by_week.json
+  reports/sanitization.json
+  reports/club_fixture_discovery.json
   reports/validation.json
 ```
 
@@ -68,15 +92,52 @@ Git'e eklenmez; uygulama APK'sına da girmez.
 ## Hız ve güvenlik
 
 - Sezon keşfi, sezon işleme ve maç detayları sınırlı paralellikle çalışır.
+- TFF RadGrid sayfalaması HTML'deki gerçek numaralı ASP.NET LinkButton ile
+  yapılır. Sayfa geçişi yine olmazsa ilk sayfa kaybedilmez; sonuç açıkça
+  `paginationComplete=false` olarak raporlanır.
+- Resmi puan tablolarının haftaları paralel çekilir; aynı exact URL registry'de
+  iki kez geçse bile yalnız bir kez indirilir.
 - Varsayılan 10 iş TFF'yi gereksiz yere zorlamadan hızlı tamamlanacak şekilde
   seçilmiştir; 12'nin üzerine çıkılması önerilmez.
 - Her istek iki kez denenir; 502/503/504 veren ölü arşiv dalları hızlı atlanır.
 - Tarihi sezon dışındaki ve Balıkesirspor içermeyen maçlar yayımlanmaz.
+- Yalnız profesyonel A takım kabul edilir. U14-U21, PAF, akademi, kadın,
+  futsal ve BAL takımı etiketli kayıtlar kalite hatasıdır.
 - Her çalışmanın sonunda bütün maç kimlikleri, detay dosyaları ve puan tabloları
   `reports/validation.json` içine raporlanır.
 - Bir sezonun lig/grup hedefi bulunamazsa yalnız Balıkesirspor maçlarından sahte
   bir "tam lig tablosu" hesaplanmaz; eksik durum kalite raporuna yazılır.
 - TFF'de bulunmayan eski kayıtlar uydurulmaz; raporda eksik olarak bırakılır.
+
+## Yüklenen ilk çıktıda bulunan sorunlar
+
+`tff-data.zip` taramasında 440 kayıt görünmesine rağmen 2018-2019 klasöründeki
+207 kaydın 166'sı altyapı/PAF maçıydı. Kulüp fikstürü keşfi 37 sezonun 31'inde
+ikinci sayfaya geçememiş, 1996-1997 sezonunda yalnız 2 maç kalmış ve 2019-2020
+COVID sonrası Temmuz maçları sezon dışı sayılmıştı.
+
+Güçlendirilmiş hat canlı TFF denemesinde şu sonuçları verdi:
+
+| Sezon | Eski çıktı | Canlı doğrulanan profesyonel çıktı |
+|---|---:|---:|
+| 2019-2020 | 30 | 34 lig + 1 kupa |
+| 2018-2019 | 207 | 34 lig + 6 kupa |
+| 1996-1997 | 2 | 32 lig + 1 kupa |
+
+1996-1997 puan tablosu TFF'deki iki resmi aşamadan üretilir: Kademe 02 için
+18 hafta/maç ve Klasman K2 için 14 hafta/maç. JSON kayıtlarında hem kesintisiz
+`week` hem de aşama içindeki `stageWeek`, `stageId` ve `stageLabel` bulunur.
+
+Kalite kapısını ayrıca çalıştırmak için:
+
+```fish
+nix develop . --command python3 tools/tff/validate_export.py \
+  --data-root generated/tff-data \
+  --registry .cache/tff/runtime_registry.json
+```
+
+Yapısal hata, altyapı karışması, oynanan/ertelenmiş kopya veya resmi son tablo
+ile maç sayısı çelişkisi varsa komut sıfır olmayan kodla biter.
 
 ## GitHub verisine dönüştürme
 

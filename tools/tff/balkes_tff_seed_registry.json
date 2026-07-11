@@ -33,7 +33,7 @@
     },
     "2019-2020": {
       "start": "2019-07-01",
-      "end": "2020-06-30"
+      "end": "2020-07-31"
     },
     "2018-2019": {
       "start": "2018-07-01",
@@ -217,7 +217,22 @@
       ],
       "knownMatchIds": [],
       "tryWeeklyStandings": false,
-      "targetUrls": []
+      "tffPlan": {
+        "competition": "Nesine 3. Lig",
+        "group": "4. Grup",
+        "pageID": "971",
+        "grupID": "2786",
+        "maxWeek": 30,
+        "confidence": "verified-from-prior-export"
+      },
+      "targetPageID": "971",
+      "targetGrupID": "2786",
+      "maxWeek": 30,
+      "expectedLeagueMatches": 30,
+      "targetUrls": [
+        "https://www.tff.org/Default.aspx?grupID=2786&pageID=971"
+      ],
+      "planConfidence": "verified-from-prior-export"
     },
     {
       "season": "2024-2025",
@@ -239,6 +254,7 @@
       "targetPageID": "1733",
       "targetGrupID": "2605",
       "maxWeek": 30,
+      "expectedLeagueMatches": 30,
       "targetUrls": [
         "https://www.tff.org/Default.aspx?grupID=2605&pageID=1733"
       ],
@@ -258,12 +274,13 @@
         "group": "4. Grup",
         "pageID": "1651",
         "grupID": "2445",
-        "maxWeek": 28,
+        "maxWeek": 30,
         "confidence": "high"
       },
       "targetPageID": "1651",
       "targetGrupID": "2445",
-      "maxWeek": 28,
+      "maxWeek": 30,
+      "expectedLeagueMatches": 28,
       "targetUrls": [
         "https://www.tff.org/Default.aspx?grupID=2445&pageID=1651"
       ],
@@ -290,6 +307,7 @@
       "targetPageID": "1632",
       "targetGrupID": "2234",
       "maxWeek": 38,
+      "expectedLeagueMatches": 38,
       "targetUrls": [
         "https://www.tff.org/Default.aspx?grupID=2234&pageID=1632"
       ],
@@ -317,6 +335,7 @@
       "targetPageID": "1580",
       "targetGrupID": "",
       "maxWeek": 38,
+      "expectedLeagueMatches": 36,
       "targetUrls": [
         "https://www.tff.org/Default.aspx?pageID=1580"
       ],
@@ -347,6 +366,7 @@
       "targetPageID": "1530",
       "targetGrupID": "",
       "maxWeek": 34,
+      "expectedLeagueMatches": 34,
       "targetUrls": [
         "https://www.tff.org/Default.aspx?pageID=1530"
       ],
@@ -377,6 +397,7 @@
       "targetPageID": "1502",
       "targetGrupID": "",
       "maxWeek": 34,
+      "expectedLeagueMatches": 34,
       "targetUrls": [
         "https://www.tff.org/Default.aspx?pageID=1502"
       ],
@@ -402,36 +423,41 @@
       "professionalStatus": "professional",
       "competition": "TFF 1. Lig",
       "leagueEra": "TFF 1. Lig",
-      "planConfidence": "bounded-legacy-pageid-probe",
-      "targetUrls": [],
+      "tffPlan": {
+        "competition": "Spor Toto 1. Lig",
+        "group": "",
+        "pageID": "1469",
+        "grupID": "",
+        "maxWeek": 34,
+        "confidence": "verified-from-produced-probe-diagnostics"
+      },
+      "targetPageID": "1469",
+      "targetGrupID": "",
+      "maxWeek": 34,
+      "expectedLeagueMatches": 34,
+      "planConfidence": "verified-from-produced-probe-diagnostics",
+      "targetUrls": [
+        "https://www.tff.org/Default.aspx?pageID=1469"
+      ],
       "allowLegacyBroadFallback": false,
       "legacyBroadProbeLimit": 0,
-      "legacyDiscoveryNote": "No exact TFF season pageID is confirmed in registry yet; factory uses generic page discovery, verifies date/team, and broad-fallbacks only if selected IDs produce zero hits.",
+      "legacyDiscoveryNote": "pageID 1469 was isolated by the prior bounded probe; only professional Balıkesirspor rows are accepted.",
       "legacySeason": true,
-      "legacySafetyNote": "No blind generic pageId scan; only hand-verified knownMatchIds are probed until exact season target is added.",
+      "legacySafetyNote": "Exact historical TFF season pageID is used; blind legacy window scan is disabled.",
       "knownOnly": false,
       "skipTff": false,
       "skipReason": "",
       "notes": [
-        "Hand-verified macId only. No generic legacy discovery; exact historical TFF season target is not verified.",
-        "v2.5: exact target missing; safe bounded pageID probe enabled instead of blind current-page scan."
+        "pageID 1469 produced the 2018-2019 professional league pool in the supplied run.",
+        "U14-U21/PAF records are rejected by the professional-team guard."
       ],
       "requiresExactTffTarget": false,
       "noTffRecord": false,
       "amateurSeason": false,
       "legacyPageIdProbe": {
-        "enabled": true,
-        "pageIdRanges": [
-          {
-            "start": 1460,
-            "end": 1505
-          }
-        ],
-        "maxWeek": 40,
-        "groupLimit": 40,
-        "strategy": "scan bounded historical pageID window; expand weeks only when page/group mentions Balıkesirspor; abandon repeated 502/503/504 gateway branches; accept only match details with Balıkesirspor and date inside season",
-        "confidence": "safe-bounded-probe-gateway-guard",
-        "gatewaySkipAfter": 3
+        "enabled": false,
+        "strategy": "exact pageID 1469 replaces the expensive overlapping legacy window",
+        "confidence": "exact-target"
       }
     },
     {
@@ -595,11 +621,25 @@
       "professionalStatus": "professional",
       "competition": "Süper Lig",
       "leagueEra": "Süper Lig",
-      "planConfidence": "bounded-legacy-pageid-probe",
-      "targetUrls": [],
+      "tffPlan": {
+        "competition": "Spor Toto Süper Lig",
+        "group": "",
+        "pageID": "1318",
+        "grupID": "",
+        "maxWeek": 34,
+        "confidence": "verified-official"
+      },
+      "targetPageID": "1318",
+      "targetGrupID": "",
+      "maxWeek": 34,
+      "expectedLeagueMatches": 34,
+      "planConfidence": "verified-official",
+      "targetUrls": [
+        "https://www.tff.org/Default.aspx?pageID=1318"
+      ],
       "allowLegacyBroadFallback": false,
       "legacyBroadProbeLimit": 0,
-      "legacyDiscoveryNote": "No exact TFF season pageID is confirmed in registry yet; factory uses generic page discovery, verifies date/team, and broad-fallbacks only if selected IDs produce zero hits.",
+      "legacyDiscoveryNote": "Official Süper Lig archive pageID 1318 was live-verified.",
       "legacySeason": true,
       "requiresExactTffTarget": false,
       "legacySafetyNote": "Skipped in strict mode until exact TFF targetPageID/targetUrl or hand-verified knownMatchIds are added.",
@@ -609,21 +649,12 @@
       "noTffRecord": false,
       "amateurSeason": false,
       "legacyPageIdProbe": {
-        "enabled": true,
-        "pageIdRanges": [
-          {
-            "start": 1280,
-            "end": 1365
-          }
-        ],
-        "maxWeek": 40,
-        "groupLimit": 40,
-        "strategy": "scan bounded historical pageID window; expand weeks only when page/group mentions Balıkesirspor; abandon repeated 502/503/504 gateway branches; accept only match details with Balıkesirspor and date inside season",
-        "confidence": "safe-bounded-probe-gateway-guard",
-        "gatewaySkipAfter": 3
+        "enabled": false,
+        "strategy": "exact official pageID 1318",
+        "confidence": "verified"
       },
       "notes": [
-        "v2.5: exact target missing; safe bounded pageID probe enabled instead of blind current-page scan."
+        "Official final table contains Balıkesirspor with 34 matches."
       ]
     },
     {
@@ -699,6 +730,7 @@
       "targetPageID": "1239",
       "targetGrupID": "",
       "maxWeek": 34,
+      "expectedLeagueMatches": 32,
       "targetUrls": [
         "https://www.tff.org/Default.aspx?pageID=1239"
       ],
@@ -1281,36 +1313,54 @@
       "professionalStatus": "professional",
       "competition": "Türkiye 2. Ligi",
       "leagueEra": "Türkiye 2. Ligi",
-      "planConfidence": "bounded-legacy-pageid-probe",
-      "targetUrls": [],
+      "planConfidence": "verified-official-multi-stage-archive",
+      "maxWeek": 32,
+      "expectedLeagueMatches": 32,
+      "targetUrls": [
+        "https://www.tff.org/Default.aspx?pageID=805&grupID=210",
+        "https://www.tff.org/Default.aspx?pageID=805&grupID=216"
+      ],
+      "standingsStages": [
+        {
+          "id": "group-02",
+          "label": "Kademe 02",
+          "targetPageID": "805",
+          "targetGrupID": "210",
+          "targetUrl": "https://www.tff.org/Default.aspx?pageID=805&grupID=210",
+          "maxWeek": 18,
+          "expectedMatches": 18,
+          "teamCount": 10
+        },
+        {
+          "id": "group-k2",
+          "label": "Klasman K2",
+          "targetPageID": "805",
+          "targetGrupID": "216",
+          "targetUrl": "https://www.tff.org/Default.aspx?pageID=805&grupID=216",
+          "maxWeek": 14,
+          "expectedMatches": 14,
+          "teamCount": 8
+        }
+      ],
       "allowLegacyBroadFallback": false,
       "legacyBroadProbeLimit": 0,
-      "legacyDiscoveryNote": "No exact TFF season pageID is confirmed in registry yet; factory uses generic page discovery, verifies date/team, and broad-fallbacks only if selected IDs produce zero hits.",
+      "legacyDiscoveryNote": "Official TFF pageID 805: Kademe 02/grupID 210 and Klasman K2/grupID 216.",
       "legacySeason": true,
-      "legacySafetyNote": "No blind generic pageId scan; only hand-verified knownMatchIds are probed until exact season target is added.",
+      "legacySafetyNote": "Two exact official stage targets replace the blind legacy pageID window.",
       "knownOnly": false,
       "skipTff": false,
       "skipReason": "",
       "notes": [
-        "Hand-verified macId only. No generic legacy discovery; exact historical TFF season target is not verified.",
-        "v2.5: exact target missing; safe bounded pageID probe enabled instead of blind current-page scan."
+        "Live club fixture pagination returned 32 league and 1 cup match.",
+        "Official archive tables were verified for Kademe 02 and Klasman K2."
       ],
       "requiresExactTffTarget": false,
       "noTffRecord": false,
       "amateurSeason": false,
       "legacyPageIdProbe": {
-        "enabled": true,
-        "pageIdRanges": [
-          {
-            "start": 360,
-            "end": 620
-          }
-        ],
-        "maxWeek": 40,
-        "groupLimit": 40,
-        "strategy": "scan bounded historical pageID window; expand weeks only when page/group mentions Balıkesirspor; abandon repeated 502/503/504 gateway branches; accept only match details with Balıkesirspor and date inside season",
-        "confidence": "safe-bounded-probe-gateway-guard",
-        "gatewaySkipAfter": 3
+        "enabled": false,
+        "strategy": "exact official multi-stage targets",
+        "confidence": "verified"
       }
     },
     {

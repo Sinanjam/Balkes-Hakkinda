@@ -39,7 +39,7 @@ TFF = os.environ.get("TFF_BASE_URL", "http://www.tff.org/Default.aspx")
 FETCH_TIMEOUT = float(os.environ.get("TFF_FETCH_TIMEOUT", "24"))
 FAST_SKIP_HTTP_CODES = {502, 503, 504}
 FETCH_LAST_ERROR_BY_PATH: dict[str, str] = {}
-FACTORY_VERSION = "v4-fast-club-discovery-concurrent"
+FACTORY_VERSION = "v5-professional-only-resilient"
 TEAM_CANONICAL = "Balıkesirspor"
 DATA_BASE_URL = os.environ.get(
     "BALKES_DATA_BASE_URL",
@@ -172,6 +172,37 @@ def is_balkes(s: Any) -> bool:
     return False
 
 
+NON_PROFESSIONAL_MARKERS = (
+    "paf takimi", "rezerv takim", "akademi", "altyapi", "gelisim ligi",
+    "genclik", "kadin", "futsal", "plaj", "engelli", "bal takimi",
+    "bolgesel amator", "amator takim",
+)
+
+
+def professional_competition_status(value: Any) -> tuple[bool, str]:
+    """Müsabakanın Balıkesirspor profesyonel A takımına ait olup olmadığını söyler.
+
+    TFF'nin yeni sayfaları ``(Profesyonel Takım)`` etiketini taşır. Çok eski
+    sayfalarda bu etiket bulunmayabildiği için, açık bir altyapı/amateur işareti
+    yoksa kayıt ``inferred`` olarak kabul edilir; kirli U14-U21/PAF/BAL verisi
+    hiçbir koşulda uygulama çıktısına alınmaz.
+    """
+    text = norm(value)
+    if not text:
+        return False, "competition_missing"
+    if any(marker in text for marker in NON_PROFESSIONAL_MARKERS):
+        return False, "non_professional_marker"
+    if re.search(r"(?:^| )u ?(?:13|14|15|16|17|18|19|20|21|23)(?: |$)", text):
+        return False, "youth_age_group"
+    if "profesyonel takim" in text or re.search(r"(?:^| )a takim(?:i)?(?: |$)", text):
+        return True, "explicit_professional"
+    return True, "inferred_senior"
+
+
+def is_professional_competition(value: Any) -> bool:
+    return professional_competition_status(value)[0]
+
+
 def clean_text(s: Any) -> str:
     return re.sub(r"\s+", " ", fix_mojibake(s)).strip()
 
@@ -219,11 +250,15 @@ def extract_balkes_ids(raw: str) -> list[str]:
             # TFF bazı fikstür satırlarında link metni boş olabiliyor; küçük çevre fallback.
             if is_balkes(ctx):
                 ids.add(m.group(1))
-    # Eski sayfalarda soup parent yeterli değilse küçük pencere fallback.
-    for m in re.finditer(r"[?&]macId=(\d+)", raw, re.I):
-        ctx = raw[max(0, m.start() - 700): min(len(raw), m.end() + 700)]
-        if is_balkes(ctx):
-            ids.add(m.group(1))
+        # Parser çalıştığında ham HTML çevre penceresi kullanılmaz. Bu pencere
+        # komşu satırdaki Balıkesirspor adını görüp yüzlerce ilgisiz macId'yi
+        # seçebiliyordu.
+        return sorted(ids, key=lambda x: int(x))
+    # BeautifulSoup bulunmayan minimal ortamlarda satır bazlı güvenli fallback.
+    for row in re.findall(r"<tr\b[^>]*>.*?</tr>", raw, re.I | re.S):
+        if not is_balkes(re.sub(r"<[^>]+>", " ", row)):
+            continue
+        ids.update(re.findall(r"[?&]macId=(\d+)", html.unescape(row), re.I))
     return sorted(ids, key=lambda x: int(x))
 
 
@@ -779,6 +814,7 @@ def parse_detail(mid: str, raw: str, season: str, source_url: str, seed: dict[st
     sh, sa, sdisp, played = score_from_soup(soup, txt)
     match_date, match_time = parse_date_time(soup, txt)
     competition = parse_competition(soup, txt)
+    professional, professional_evidence = professional_competition_status(competition)
     match_type, match_label = classify_type(competition)
     stage = match_label
     is_home = is_balkes(home)
@@ -814,6 +850,8 @@ def parse_detail(mid: str, raw: str, season: str, source_url: str, seed: dict[st
         "matchCode": parse_match_code(soup, txt),
         "season": season,
         "competition": competition,
+        "teamLevel": "professional" if professional else "non_professional",
+        "teamLevelEvidence": professional_evidence,
         "competitionType": match_type,
         "competitionLabel": match_label,
         "stadium": stadium,
@@ -863,6 +901,9 @@ def detail_is_valid_for_season(detail: dict[str, Any], season: str, seed: dict[s
         return False, f"date_out_of_season:{detail.get('date')}"
     if not detail.get("homeTeam") or not detail.get("awayTeam"):
         return False, "teams_missing"
+    professional, evidence = professional_competition_status(detail.get("competition"))
+    if not professional:
+        return False, f"non_professional_team:{evidence}"
     # Skor yoksa da fikstür olarak kabul edelim; uygulama played=false gösterebilir.
     return True, "ok"
 
@@ -1179,8 +1220,45 @@ def match_signature(match: dict[str, Any]) -> str:
     ])
 
 
+def remove_superseded_unplayed(
+    details: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """Oynanan yeni tarih varken iptal/ertelenmiş eski lig kaydını çıkarır."""
+    groups: dict[str, list[dict[str, Any]]] = {}
+    for detail in details:
+        if detail.get("matchType") != "league":
+            continue
+        key = "|".join([
+            norm(detail.get("competition")),
+            norm(detail.get("homeTeam")),
+            norm(detail.get("awayTeam")),
+        ])
+        groups.setdefault(key, []).append(detail)
+
+    dropped_ids: set[str] = set()
+    dropped: list[dict[str, Any]] = []
+    for key, group in groups.items():
+        played = [item for item in group if (item.get("score") or {}).get("played")]
+        unplayed = [item for item in group if not (item.get("score") or {}).get("played")]
+        if not played or not unplayed:
+            continue
+        kept = sorted(played, key=lambda item: (item.get("date") or "", str(item.get("id") or "")))[-1]
+        for item in unplayed:
+            match_id = str(item.get("id") or "")
+            dropped_ids.add(match_id)
+            dropped.append({
+                "kept": str(kept.get("id") or ""),
+                "dropped": match_id,
+                "reason": "superseded_unplayed_league_fixture",
+                "pair": key,
+                "playedDate": kept.get("date"),
+                "unplayedDate": item.get("date"),
+            })
+    return [item for item in details if str(item.get("id") or "") not in dropped_ids], dropped
+
+
 def index_from_detail(d: dict[str, Any]) -> dict[str, Any]:
-    keys = ["id", "matchCode", "season", "week", "standingsWeek", "competition", "competitionType", "competitionLabel", "stadium", "venue", "stage", "stageLabel", "date", "time", "dateDisplay", "homeTeam", "awayTeam", "matchType", "matchTypeLabel", "type", "typeLabel", "score", "balkes", "quality", "detailCompleteness"]
+    keys = ["id", "matchCode", "season", "week", "standingsWeek", "competition", "competitionType", "competitionLabel", "teamLevel", "teamLevelEvidence", "stadium", "venue", "stage", "stageLabel", "date", "time", "dateDisplay", "homeTeam", "awayTeam", "matchType", "matchTypeLabel", "type", "typeLabel", "score", "balkes", "quality", "detailCompleteness"]
     out = {k: d.get(k) for k in keys if d.get(k) not in (None, "", {}, [])}
     out["detailUrl"] = f"seasons/{d['season']}/matches/{d['id']}.json"
     out["source"] = d["source"]
@@ -1388,8 +1466,49 @@ def process_season(item: dict[str, Any], args: argparse.Namespace, seed: dict[st
             by_sig[sig] = d
 
     details = sorted(by_sig.values(), key=lambda m: (m.get("date") or "", int(str(m.get("id") or 0))))
+    details, superseded = remove_superseded_unplayed(details)
+    duplicates.extend(superseded)
+
+    if not details:
+        existing_index = read_json(season_dir / "matches_index.json", [])
+        existing_count = len(existing_index) if isinstance(existing_index, list) else 0
+        quality = {
+            "season": season,
+            "selectedIds": len(selected),
+            "allDiscoveredIds": len(all_ids),
+            "detailCandidates": len(candidates),
+            "candidateMode": mode,
+            "knownOnly": bool(known_only),
+            "plannedTarget": bool(planned_target),
+            "legacyPageIdProbe": bool(has_legacy_pageid_probe(item)),
+            "legacyProbeDiagnostics": discovery_diagnostics,
+            "matchesPublished": existing_count,
+            "newMatchesPublished": 0,
+            "preservedExisting": existing_count > 0,
+            "detailFiles": len(list(matches_dir.glob("*.json"))),
+            "duplicatesDropped": len(duplicates),
+            "rejectedReasons": rejected,
+            "rejectedSamples": rejected_samples,
+            "standingsSkipped": True,
+            "standingsSnapshots": 0,
+            "balkesTableFound": False,
+            "matchTypeCounts": {},
+            "seasonGuard": {"start": season_bounds(season, seed)[0], "end": season_bounds(season, seed)[1]},
+            "generatedAt": now(),
+        }
+        write_json(reports_root / "seasons" / f"{season}_quality.json", quality)
+        log(
+            f"{season}: doğrulanmış yeni maç yok; "
+            f"mevcut={existing_count} {'korundu' if existing_count else 'yok'}"
+        )
+        return quality
+
     for d in details:
         write_json(matches_dir / f"{d['id']}.json", d)
+    published_ids = {str(detail["id"]) for detail in details}
+    stale_files = [path for path in matches_dir.glob("*.json") if path.stem not in published_ids]
+    for path in stale_files:
+        path.unlink()
     index = [index_from_detail(d) for d in details]
     write_json(season_dir / "matches_index.json", index)
     write_json(season_dir / "standings_by_week.json", [])
@@ -1431,7 +1550,10 @@ def process_season(item: dict[str, Any], args: argparse.Namespace, seed: dict[st
         "legacyPageIdProbe": bool(has_legacy_pageid_probe(item)),
         "legacyProbeDiagnostics": discovery_diagnostics,
         "matchesPublished": len(index),
+        "newMatchesPublished": len(index),
+        "preservedExisting": False,
         "detailFiles": len(list(matches_dir.glob("*.json"))),
+        "staleDetailFilesPruned": len(stale_files),
         "duplicatesDropped": len(duplicates),
         "rejectedReasons": rejected,
         "rejectedSamples": rejected_samples,
@@ -1460,6 +1582,10 @@ def build_manifest(data_root: Path, processed: list[str]) -> None:
                     item["competition"] = season_json.get("competition")
                 if season_json.get("summary"):
                     item["summary"] = season_json.get("summary")
+                if season_json.get("leagueSummary"):
+                    item["leagueSummary"] = season_json.get("leagueSummary")
+                if season_json.get("leagueStages"):
+                    item["leagueStages"] = season_json.get("leagueStages")
             seasons.append(item)
     write_json(data_root / "manifest.json", {
         "app": "Balkes Hakkında",

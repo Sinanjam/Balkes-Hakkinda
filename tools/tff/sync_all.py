@@ -127,6 +127,14 @@ def main() -> int:
         factory.append("--force")
     run(factory, env)
 
+    # Önceki yarım koşudan kalan altyapı/PAF ve artık JSON dosyalarını da
+    # temizle; böylece yalnız bu turda işlenen sezonlara güvenmeyiz.
+    run([
+        sys.executable, str(TOOLS / "sanitize_export.py"),
+        "--data-root", str(output),
+        "--report", str(report_root / "sanitization.json"),
+    ], env)
+
     if not args.no_standings:
         standings = [
             sys.executable, str(TOOLS / "tff_standings_builder.py"),
@@ -140,6 +148,7 @@ def main() -> int:
             "--mode", args.standings_mode,
             "--probe-limit", "5000",
             "--workers", str(detail_workers),
+            "--week-workers", str(max(2, min(6, detail_workers))),
             "--season-workers", str(max(1, args.season_workers)),
             "--detail-fetch-mode", "missing",
             "--week-param-mode", "smart",
@@ -155,6 +164,8 @@ def main() -> int:
         sys.executable, str(TOOLS / "validate_export.py"),
         "--data-root", str(output),
         "--report", str(report_root / "validation.json"),
+        "--registry", str(registry),
+        "--discovery-report", str(report_root / "club_fixture_discovery.json"),
     ]
     run(validation, env)
     log(f"TAMAMLANDI: {output}")

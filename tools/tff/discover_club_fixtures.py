@@ -32,6 +32,11 @@ from tff_factory import (
     read_json,
     write_json,
 )
+from tff_standings_builder import (
+    clean_standings_rows,
+    parse_official_standings,
+    standings_rows_are_usable,
+)
 
 
 DEFAULT_CLUB_URL = os.environ.get(
@@ -46,6 +51,11 @@ TEAM_TEXT = "BALIKESİRSPOR(Profesyonel Takım)"
 TEAM_ID = "136"
 USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) Balkes-TFF-Sync/1.0"
 PRINT_LOCK = threading.Lock()
+ARCHIVE_ROOT_PAGE_IDS = {
+    "first": 563,
+    "second": 371,
+    "third": 376,
+}
 
 
 def seed_item(seed: dict[str, Any], season: str) -> dict[str, Any] | None:
@@ -58,7 +68,8 @@ def seed_item(seed: dict[str, Any], season: str) -> dict[str, Any] | None:
 def has_standings_target(item: dict[str, Any]) -> bool:
     plan = item.get("tffPlan") or {}
     return bool(
-        item.get("targetUrls")
+        item.get("standingsStages")
+        or item.get("targetUrls")
         or item.get("targetPageID")
         or plan.get("pageID")
     )
@@ -254,21 +265,85 @@ def fixture_page_count(raw: str) -> int:
     return max(1, count)
 
 
-def fixture_page_commands(raw: str) -> dict[int, tuple[str, str]]:
-    decoded = html_lib.unescape(raw)
-    commands: dict[int, tuple[str, str]] = {}
-    pattern = re.compile(
-        r"__doPostBack\(['\"]([^'\"]*m_28_398[^'\"]*grdFikstur[^'\"]*)['\"],"
-        r"['\"]Page\$(\d+)['\"]\)",
-        re.I,
+def _postback_from_script(script: str) -> tuple[str, str] | None:
+    """ASP.NET LinkButton ve WebForm postback komutunu JavaScript'ten çıkarır."""
+    decoded = html_lib.unescape(str(script or ""))
+    patterns = (
+        r"__doPostBack\(\s*['\"]([^'\"]+)['\"]\s*,\s*['\"]([^'\"]*)['\"]\s*\)",
+        r"WebForm_PostBackOptions\(\s*['\"]([^'\"]+)['\"]\s*,\s*['\"]([^'\"]*)['\"]",
     )
-    for match in pattern.finditer(decoded):
-        page = int(match.group(2))
-        commands[page] = (match.group(1), f"Page${page}")
-    return commands
+    for pattern in patterns:
+        match = re.search(pattern, decoded, re.I)
+        if match:
+            return match.group(1), match.group(2)
+    return None
 
 
-def merge_fixture_pages(pages: list[str], season: str, source_url: str) -> dict[str, Any]:
+def fixture_page_actions(raw: str, page: int) -> list[dict[str, str]]:
+    """Telerik RadGrid için güvenli sayfalama eylemlerini öncelik sırasıyla bulur.
+
+    Eski TFF sayfası her dönemde aynı pager HTML'ini üretmiyor. Bazı sürümler
+    ``Page$2`` argümanı, bazıları ise numaralı LinkButton'ın tam kontrol adını
+    ve boş argümanı kullanıyor. HTML'deki gerçek düğme daima ilk tercihtir.
+    """
+    decoded = html_lib.unescape(raw)
+    actions: list[dict[str, str]] = []
+    seen: set[tuple[str, str, str, str]] = set()
+
+    def add(*, target: str = "", argument: str = "", submit_name: str = "",
+            submit_value: str = "", source: str) -> None:
+        key = (target, argument, submit_name, submit_value)
+        if key in seen or not (target or submit_name):
+            return
+        seen.add(key)
+        actions.append({
+            "target": target,
+            "argument": argument,
+            "submitName": submit_name,
+            "submitValue": submit_value,
+            "source": source,
+        })
+
+    soup = BeautifulSoup(raw, "lxml")
+    grid = soup.find(id=re.compile(r"m_28_398.*grdFikstur$", re.I)) or soup
+    for node in grid.find_all(["a", "button", "input"]):
+        label = clean_text(node.get("value") or node.get_text(" ", strip=True))
+        script = " ".join(str(node.get(name) or "") for name in ("href", "onclick"))
+        normalized_script = html_lib.unescape(script)
+        is_requested = bool(
+            re.search(rf"Page\${page}(?:\D|$)", normalized_script, re.I)
+            or label == str(page)
+            or re.search(rf"(?:sayfa|page)\s*{page}\b", norm(label + " " + str(node.get("title") or "")), re.I)
+        )
+        if not is_requested:
+            continue
+        postback = _postback_from_script(normalized_script)
+        if postback:
+            add(target=postback[0], argument=postback[1], source="html_postback")
+        name = str(node.get("name") or "")
+        if name and "grdfikstur" in name.lower():
+            add(submit_name=name, submit_value=str(node.get("value") or label), source="html_submit")
+
+    # HTML parserın dışında kalan script bloklarındaki açık Page$N komutları.
+    for match in re.finditer(
+        r"__doPostBack\(\s*['\"]([^'\"]*grdFikstur[^'\"]*)['\"]\s*,"
+        rf"\s*['\"]Page\${page}['\"]\s*\)",
+        decoded,
+        re.I,
+    ):
+        add(target=match.group(1), argument=f"Page${page}", source="script_page_command")
+
+    # Son çareler: farklı Telerik sürümlerinde grid veya master table hedef olur.
+    add(target=FIXTURE_GRID, argument=f"Page${page}", source="radgrid_fallback")
+    add(target=FIXTURE_GRID + "$ctl00", argument=f"Page${page}", source="master_table_fallback")
+    return actions
+
+
+def merge_fixture_pages(pages: list[str], season: str, source_url: str, *,
+                        expected_pages: int | None = None,
+                        pagination_complete: bool = True,
+                        pagination_error: str = "",
+                        pagination_strategies: list[str] | None = None) -> dict[str, Any]:
     merged_fixtures: dict[str, dict[str, Any]] = {}
     targets: set[str] = set()
     max_week = 0
@@ -287,7 +362,10 @@ def merge_fixture_pages(pages: list[str], season: str, source_url: str) -> dict[
         "targetUrls": sorted(targets),
         "maxWeek": max_week,
         "fixturePages": len(pages),
-        "paginationComplete": True,
+        "fixturePagesExpected": int(expected_pages or len(pages)),
+        "paginationComplete": bool(pagination_complete),
+        "paginationError": pagination_error,
+        "paginationStrategies": pagination_strategies or [],
     }
 
 
@@ -327,6 +405,158 @@ def adult_league_tier(value: str) -> str:
     if "bolgesel amator" in text or text == "bal":
         return "regional"
     return ""
+
+
+def archive_root_for_item(item: dict[str, Any]) -> int:
+    text = norm(" ".join(str(item.get(key) or "") for key in (
+        "competition", "leagueEra", "professionalStatus"
+    )))
+    if re.search(r"(?:^| )(?:tff |turkiye )?3 (?:lig|ligi)(?: |$)", text):
+        return ARCHIVE_ROOT_PAGE_IDS["third"]
+    if re.search(r"(?:^| )(?:tff |turkiye )?2 (?:lig|ligi)(?: |$)", text):
+        return ARCHIVE_ROOT_PAGE_IDS["second"]
+    if re.search(r"(?:^| )(?:tff |turkiye )?1 (?:lig|ligi)(?: |$)", text):
+        return ARCHIVE_ROOT_PAGE_IDS["first"]
+    return 0
+
+
+def archive_stage_sort_key(stage: dict[str, Any]) -> tuple[int, str]:
+    label = norm(stage.get("label") or "")
+    # Kademe/numaralı gruplar ilk devre, Klasman/Final grupları ikinci devredir.
+    if re.fullmatch(r"\d+", label) or "kademe" in label:
+        return 0, label
+    if label.startswith("k") or "klasman" in label or label == "f":
+        return 1, label
+    return 2, label
+
+
+def discover_archive_standings_stages(
+    item: dict[str, Any],
+    cache_dir: Path,
+    timeout: float,
+    attempts: int,
+    delay: float,
+    force: bool,
+) -> dict[str, Any]:
+    """TFF lig arşivinden sezon sayfası ve Balıkesirspor grup(lar)ını bulur."""
+    season = str(item.get("season") or "")
+    root_page_id = archive_root_for_item(item)
+    if not root_page_id:
+        return {"season": season, "error": "lig arşiv kökü belirlenemedi"}
+
+    def get_cached(session: requests.Session, url: str, path: Path) -> str:
+        if path.exists() and path.stat().st_size > 500 and not force:
+            return path.read_text(encoding="utf-8", errors="replace")
+        response = request(
+            session, "GET", url, data=None,
+            timeout=timeout, attempts=attempts, delay=delay,
+        )
+        raw = decode_response(response)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(raw, encoding="utf-8")
+        return raw
+
+    session = make_session()
+    try:
+        root_url = f"http://www.tff.org/Default.aspx?pageID={root_page_id}"
+        root_raw = get_cached(
+            session,
+            root_url,
+            cache_dir / "archive" / f"root_{root_page_id}.html",
+        )
+        root_soup = BeautifulSoup(root_raw, "lxml")
+        season_page_id = ""
+        for anchor in root_soup.find_all("a", href=True):
+            if clean_text(anchor.get_text(" ", strip=True)) != season:
+                continue
+            query = dict(parse_qsl(urlparse(urljoin(root_url, str(anchor.get("href")))).query))
+            season_page_id = str(query.get("pageID") or query.get("pageId") or "")
+            if season_page_id:
+                break
+        if not season_page_id:
+            return {
+                "season": season,
+                "archiveRootPageID": str(root_page_id),
+                "error": "lig arşivinde sezon bağlantısı bulunamadı",
+            }
+
+        season_url = f"http://www.tff.org/Default.aspx?pageID={season_page_id}"
+        season_raw = get_cached(
+            session,
+            season_url,
+            cache_dir / "archive" / season / f"page_{season_page_id}.html",
+        )
+        season_soup = BeautifulSoup(season_raw, "lxml")
+        groups: dict[str, dict[str, str]] = {}
+        for anchor in season_soup.find_all("a", href=True):
+            href = html_lib.unescape(str(anchor.get("href") or ""))
+            query = dict(parse_qsl(urlparse(urljoin(season_url, href)).query))
+            page_id = str(query.get("pageID") or query.get("pageId") or "")
+            group_id = str(query.get("grupID") or query.get("grupId") or "")
+            if page_id != season_page_id or not group_id:
+                continue
+            label = clean_text(anchor.get_text(" ", strip=True)) or f"Grup {group_id}"
+            groups.setdefault(group_id, {"id": group_id, "label": label})
+
+        candidates = list(groups.values()) or [{"id": "", "label": "Lig"}]
+
+        def inspect_group(candidate: dict[str, str]) -> dict[str, Any] | None:
+            group_id = candidate["id"]
+            url = season_url + (f"&grupID={group_id}" if group_id else "")
+            worker_session = make_session()
+            try:
+                raw = get_cached(
+                    worker_session,
+                    url,
+                    cache_dir / "archive" / season / f"page_{season_page_id}_group_{group_id or 'none'}.html",
+                )
+            finally:
+                worker_session.close()
+            rows = clean_standings_rows(parse_official_standings(raw))
+            if not standings_rows_are_usable(rows, require_balkes=True):
+                return None
+            balkes = next((row for row in rows if is_balkes(row.get("team", ""))), None)
+            if not balkes:
+                return None
+            played = int(balkes.get("played") or 0)
+            team_count = len(rows)
+            max_week = played + 2 if team_count % 2 == 1 and played > 0 else played
+            label = candidate["label"]
+            return {
+                "id": f"group-{norm(label).replace(' ', '-') or group_id or 'league'}",
+                "label": label,
+                "targetPageID": season_page_id,
+                "targetGrupID": group_id,
+                "targetUrl": url,
+                "maxWeek": max_week,
+                "expectedMatches": played,
+                "teamCount": team_count,
+                "finalRank": int(balkes.get("rank") or 0),
+                "finalPoints": int(balkes.get("points") or 0),
+            }
+
+        stages: list[dict[str, Any]] = []
+        with ThreadPoolExecutor(max_workers=max(1, min(8, len(candidates)))) as executor:
+            for stage in executor.map(inspect_group, candidates):
+                if stage:
+                    stages.append(stage)
+        stages.sort(key=archive_stage_sort_key)
+        if not stages:
+            return {
+                "season": season,
+                "archiveRootPageID": str(root_page_id),
+                "seasonPageID": season_page_id,
+                "error": "arşiv gruplarında Balıkesirspor puan tablosu bulunamadı",
+            }
+        return {
+            "season": season,
+            "archiveRootPageID": str(root_page_id),
+            "seasonPageID": season_page_id,
+            "strategy": "official_tff_archive_groups",
+            "stages": stages,
+        }
+    finally:
+        session.close()
 
 
 def points_options(raw: str) -> list[dict[str, Any]]:
@@ -562,7 +792,7 @@ def enrich_standings_targets(runtime: dict[str, Any], results: list[dict[str, An
         return []
 
     log(f"Eksik puan tablosu hedefleri keşfediliyor: sezon={len(jobs)}")
-    discovered: list[dict[str, Any]] = []
+    by_discovered: dict[str, dict[str, Any]] = {}
     with ThreadPoolExecutor(max_workers=max(1, min(4, workers))) as executor:
         futures = {
             executor.submit(
@@ -577,7 +807,7 @@ def enrich_standings_targets(runtime: dict[str, Any], results: list[dict[str, An
                 target = future.result()
             except Exception as exc:
                 target = {"season": season, "error": str(exc)}
-            discovered.append(target)
+            by_discovered[season] = target
             item = seed_item(runtime, season)
             if target.get("targetUrl") and item:
                 item["targetUrls"] = sorted(set(item.get("targetUrls", [])) | {target["targetUrl"]})
@@ -586,8 +816,62 @@ def enrich_standings_targets(runtime: dict[str, Any], results: list[dict[str, An
                 item["standingsTargetDiscovery"] = target
                 log(f"{season}: puan hedefi bulundu pageID={target['pageId']} grupID={target['groupId']}")
             else:
-                log(f"{season}: puan hedefi bulunamadı ({target.get('error', 'bilinmeyen hata')})")
-    return sorted(discovered, key=lambda value: str(value.get("season")), reverse=True)
+                log(
+                    f"{season}: maç detayından puan hedefi bulunamadı; "
+                    "lig arşivi deneniyor"
+                )
+
+    archive_jobs = [
+        item for item, _ in jobs
+        if not by_discovered.get(str(item["season"]), {}).get("targetUrl")
+        and archive_root_for_item(item)
+    ]
+    if archive_jobs:
+        with ThreadPoolExecutor(max_workers=max(1, min(4, workers))) as executor:
+            futures = {
+                executor.submit(
+                    discover_archive_standings_stages,
+                    item, cache_dir, timeout, attempts, delay, force,
+                ): str(item["season"])
+                for item in archive_jobs
+            }
+            for future in as_completed(futures):
+                season = futures[future]
+                previous = by_discovered.get(season, {})
+                try:
+                    target = future.result()
+                except Exception as exc:
+                    target = {"season": season, "error": str(exc)}
+                if previous.get("error"):
+                    target["matchDetailDiscoveryError"] = previous["error"]
+                by_discovered[season] = target
+                item = seed_item(runtime, season)
+                stages = target.get("stages") or []
+                if stages and item:
+                    item["standingsStages"] = stages
+                    item["targetUrls"] = sorted(
+                        set(item.get("targetUrls", []))
+                        | {str(stage["targetUrl"]) for stage in stages if stage.get("targetUrl")}
+                    )
+                    if len(stages) == 1:
+                        stage = stages[0]
+                        item["targetPageID"] = str(stage.get("targetPageID") or "")
+                        item["targetGrupID"] = str(stage.get("targetGrupID") or "")
+                        item["maxWeek"] = int(stage.get("maxWeek") or 0)
+                    item["standingsTargetDiscovery"] = target
+                    log(
+                        f"{season}: lig arşivinden puan aşaması bulundu: "
+                        + ", ".join(
+                            f"{stage.get('label')}({stage.get('expectedMatches')} maç)"
+                            for stage in stages
+                        )
+                    )
+                else:
+                    log(
+                        f"{season}: puan hedefi bulunamadı "
+                        f"({target.get('error', 'bilinmeyen hata')})"
+                    )
+    return sorted(by_discovered.values(), key=lambda value: str(value.get("season")), reverse=True)
 
 
 def fetch_season(choice: dict[str, str | int], club_url: str, cache_dir: Path,
@@ -597,7 +881,12 @@ def fetch_season(choice: dict[str, str | int], club_url: str, cache_dir: Path,
     cache_file = cache_dir / f"{season}.html"
     cached_pages = cached_fixture_pages(cache_dir, season) if not force else None
     if cached_pages:
-        result = merge_fixture_pages(cached_pages, season, club_url)
+        result = merge_fixture_pages(
+            cached_pages,
+            season,
+            club_url,
+            expected_pages=len(cached_pages),
+        )
         result["cache"] = True
         return result
 
@@ -645,37 +934,71 @@ def fetch_season(choice: dict[str, str | int], club_url: str, cache_dir: Path,
         expected_pages = fixture_page_count(raw)
         current_raw = raw
         previous_ids = set(extract_fixture_result(raw, season, club_url).get("matchIds", []))
+        pagination_complete = True
+        pagination_error = ""
+        pagination_strategies: list[str] = []
         for page in range(2, expected_pages + 1):
-            command = fixture_page_commands(current_raw).get(page, (FIXTURE_GRID, f"Page${page}"))
-            page_data = form_fields(current_raw)
-            page_data["__EVENTTARGET"] = command[0]
-            page_data["__EVENTARGUMENT"] = command[1]
-            page_data.pop(SEARCH_BUTTON, None)
-            page_response = request(
-                session,
-                "POST",
-                club_url,
-                data=page_data,
-                timeout=timeout,
-                attempts=attempts,
-                delay=delay,
-            )
-            current_raw = decode_response(page_response)
-            if selected_season(current_raw) != season:
-                raise RuntimeError(f"fikstür sayfalamasında sezon değişti: {season}, sayfa={page}")
-            page_ids = set(extract_fixture_result(current_raw, season, club_url).get("matchIds", []))
-            if not page_ids or page_ids == previous_ids:
-                raise RuntimeError(
-                    f"fikstür sayfalaması ilerlemedi: sezon={season}, sayfa={page}/{expected_pages}"
+            advanced = False
+            attempted: list[str] = []
+            for action in fixture_page_actions(current_raw, page):
+                attempted.append(action["source"])
+                page_data = form_fields(current_raw)
+                page_data.pop(SEARCH_BUTTON, None)
+                if action.get("submitName"):
+                    page_data["__EVENTTARGET"] = ""
+                    page_data["__EVENTARGUMENT"] = ""
+                    page_data[action["submitName"]] = action.get("submitValue", "")
+                else:
+                    page_data["__EVENTTARGET"] = action["target"]
+                    page_data["__EVENTARGUMENT"] = action.get("argument", "")
+                try:
+                    page_response = request(
+                        session,
+                        "POST",
+                        club_url,
+                        data=page_data,
+                        timeout=timeout,
+                        attempts=attempts,
+                        delay=delay,
+                    )
+                except Exception:
+                    continue
+                candidate_raw = decode_response(page_response)
+                if selected_season(candidate_raw) != season:
+                    continue
+                page_ids = set(
+                    extract_fixture_result(candidate_raw, season, club_url).get("matchIds", [])
                 )
-            previous_ids = page_ids
-            pages.append(current_raw)
+                if page_ids and page_ids != previous_ids:
+                    current_raw = candidate_raw
+                    previous_ids = page_ids
+                    pages.append(current_raw)
+                    pagination_strategies.append(action["source"])
+                    advanced = True
+                    break
+            if not advanced:
+                pagination_complete = False
+                pagination_error = (
+                    f"fikstür sayfalaması ilerlemedi: sezon={season}, "
+                    f"sayfa={page}/{expected_pages}, denenen={','.join(dict.fromkeys(attempted))}"
+                )
+                # İlk sayfadaki doğrulanmış maçları kaybetmek, kısmi ama dürüst
+                # bir sonuçtan daha kötüdür. Eksik durum rapora yazılır.
+                break
 
         cache_file.parent.mkdir(parents=True, exist_ok=True)
         for page, page_raw in enumerate(pages, start=1):
             page_path = cache_file if page == 1 else cache_dir / f"{season}_page_{page:02d}.html"
             page_path.write_text(page_raw, encoding="utf-8")
-        result = merge_fixture_pages(pages, season, club_url)
+        result = merge_fixture_pages(
+            pages,
+            season,
+            club_url,
+            expected_pages=expected_pages,
+            pagination_complete=pagination_complete,
+            pagination_error=pagination_error,
+            pagination_strategies=pagination_strategies,
+        )
         result["cache"] = False
         return result
     finally:
@@ -740,7 +1063,9 @@ def merge_results(seed: dict[str, Any], choices: list[dict[str, str | int]],
         item["knownFixtures"] = [fixture_by_id[mid] for mid in sorted(fixture_by_id, key=int)]
         item["targetUrls"] = targets
         if ids:
-            item["knownOnly"] = True
+            # Tam kulüp fikstürü bütün lig/kupa maçlarını kapsar ve en hızlı
+            # yoldur. Kısmi sayfalama ise exact sezon sayfasıyla tamamlanmalıdır.
+            item["knownOnly"] = bool(result.get("paginationComplete", True))
             item["skipTff"] = False
             item["skipReason"] = ""
             item["noTffRecord"] = False
@@ -760,6 +1085,10 @@ def merge_results(seed: dict[str, Any], choices: list[dict[str, str | int]],
             "source": DEFAULT_CLUB_URL,
             "matchCount": len(ids),
             "targetUrlCount": len(targets),
+            "fixturePages": int(result.get("fixturePages") or 1),
+            "fixturePagesExpected": int(result.get("fixturePagesExpected") or 1),
+            "paginationComplete": bool(result.get("paginationComplete", True)),
+            "paginationError": str(result.get("paginationError") or ""),
             "discoveredAt": now(),
         }
 
@@ -832,6 +1161,7 @@ def main() -> int:
                 log(
                     f"{completed}/{len(choices)} {season}: maç={len(result['matchIds'])}, "
                     f"fikstürSayfası={result.get('fixturePages', 1)}, "
+                    f"tam={result.get('paginationComplete', True)}, "
                     f"hedef={len(result['targetUrls'])}, cache={result['cache']}"
                 )
             except Exception as exc:
@@ -860,6 +1190,16 @@ def main() -> int:
         "seasonsWithMatches": sum(1 for item in results if item.get("matchIds")),
         "uniqueMatchIds": len({mid for item in results for mid in item.get("matchIds", [])}),
         "errors": [{"season": item["season"], "error": item["error"]} for item in results if item.get("error")],
+        "paginationFailures": [
+            {
+                "season": item["season"],
+                "pagesFetched": item.get("fixturePages", 0),
+                "pagesExpected": item.get("fixturePagesExpected", 0),
+                "error": item.get("paginationError", ""),
+            }
+            for item in results
+            if not item.get("error") and not item.get("paginationComplete", True)
+        ],
         "results": results,
         "standingsTargets": standings_targets,
         "runtimeRegistry": str(args.output),

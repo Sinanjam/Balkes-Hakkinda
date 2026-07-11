@@ -61,7 +61,7 @@ except Exception as exc:  # pragma: no cover
 
 TFF = os.environ.get("TFF_BASE_URL", "http://www.tff.org/Default.aspx")
 DEFAULT_PENALTIES = "data/standings_penalties.json"
-BUILDER_VERSION = "standings-builder-v3-clean-computed-safe"
+BUILDER_VERSION = "standings-builder-v4-parallel-weekly-safe"
 
 
 def now() -> str:
@@ -137,6 +137,21 @@ def build_item_urls(item: dict[str, Any], week: int | None = None) -> list[tuple
         u = u.replace("https://www.tff.org", "http://www.tff.org")
         label = "extra_" + hashlib.sha1(u.encode("utf-8")).hexdigest()[:10]
         bases.append((label, u.strip()))
+
+    # Registry çoğu zaman aynı exact hedefi hem alanlarda hem targetUrls içinde
+    # taşır. Aynı TFF sayfasını iki farklı cache adıyla indirmeyelim.
+    unique_bases: list[tuple[str, str]] = []
+    seen_urls: set[str] = set()
+    for label, url in bases:
+        parsed = urllib.parse.urlparse(url)
+        normalized = urllib.parse.urlunparse(
+            parsed._replace(query=urllib.parse.urlencode(sorted(urllib.parse.parse_qsl(parsed.query))))
+        ).lower()
+        if normalized in seen_urls:
+            continue
+        seen_urls.add(normalized)
+        unique_bases.append((label, url))
+    bases = unique_bases
 
     if week is None:
         return bases
@@ -835,35 +850,76 @@ def compute_weekly_standings(matches: list[dict[str, Any]], season: str, max_wee
     return snapshots
 
 
-def try_official_weekly(item: dict[str, Any], season: str, raw_root: Path, sleep_s: float, force: bool, max_week: int) -> list[dict[str, Any]]:
-    snapshots: list[dict[str, Any]] = []
-    for week in range(1, max_week + 1):
-        best: list[dict[str, Any]] = []
-        best_url = ""
-        for label, url in build_item_urls(item, week):
-            ok, raw = fetch_url(url, raw_root / season / "official_tables" / f"{safe_name(label)}.html", sleep_s, force)
-            if not ok:
-                continue
-            rows = clean_standings_rows(parse_official_standings(raw))
-            if standings_rows_are_usable(rows, require_balkes=True) and (not best or len(rows) > len(best) or any(r.get("isBalkes") for r in rows)):
-                best = rows
-                best_url = url
-        if best:
-            best = clean_standings_rows(best)
-            for i, row in enumerate(best, 1):
-                if not row.get("rank"):
-                    row["rank"] = i
-                row["isBalkes"] = bool(is_balkes(row.get("team", "")))
-            snapshots.append({
-                "week": week,
-                "source": "official_tff_weekly_table",
-                "generatedAt": now(),
-                "builderVersion": BUILDER_VERSION,
-                "sourceUrl": best_url,
-                "standings": best,
-                "warnings": [],
-            })
-        log(f"{season}: resmi hafta {week}/{max_week} tablo={'var' if best else 'yok'}")
+def fetch_official_week(item: dict[str, Any], season: str, raw_root: Path,
+                        sleep_s: float, force: bool, week: int) -> tuple[int, dict[str, Any] | None]:
+    best: list[dict[str, Any]] = []
+    best_url = ""
+    for label, url in build_item_urls(item, week):
+        ok, raw = fetch_url(
+            url,
+            raw_root / season / "official_tables" / f"{safe_name(label)}.html",
+            sleep_s,
+            force,
+        )
+        if not ok:
+            continue
+        rows = clean_standings_rows(parse_official_standings(raw))
+        if standings_rows_are_usable(rows, require_balkes=True) and (
+            not best or len(rows) > len(best) or any(r.get("isBalkes") for r in rows)
+        ):
+            best = rows
+            best_url = url
+    if best:
+        best = clean_standings_rows(best)
+        for i, row in enumerate(best, 1):
+            if not row.get("rank"):
+                row["rank"] = i
+            row["isBalkes"] = bool(is_balkes(row.get("team", "")))
+        return week, {
+            "week": week,
+            "source": "official_tff_weekly_table",
+            "generatedAt": now(),
+            "builderVersion": BUILDER_VERSION,
+            "sourceUrl": best_url,
+            "standings": best,
+            "warnings": [],
+        }
+    return week, None
+
+
+def try_official_weekly(item: dict[str, Any], season: str, raw_root: Path,
+                        sleep_s: float, force: bool, max_week: int,
+                        workers: int = 4) -> list[dict[str, Any]]:
+    snapshots_by_week: dict[int, dict[str, Any]] = {}
+    worker_count = max(1, min(int(workers), max_week))
+    if worker_count == 1:
+        iterator = (
+            fetch_official_week(item, season, raw_root, sleep_s, force, week)
+            for week in range(1, max_week + 1)
+        )
+        for completed, (week, snapshot) in enumerate(iterator, 1):
+            if snapshot:
+                snapshots_by_week[week] = snapshot
+            log(f"{season}: resmi hafta {completed}/{max_week} tamamlandı")
+    else:
+        with ThreadPoolExecutor(max_workers=worker_count) as executor:
+            futures = {
+                executor.submit(
+                    fetch_official_week, item, season, raw_root,
+                    sleep_s, force, week,
+                ): week
+                for week in range(1, max_week + 1)
+            }
+            for completed, future in enumerate(as_completed(futures), 1):
+                week, snapshot = future.result()
+                if snapshot:
+                    snapshots_by_week[week] = snapshot
+                if completed % 5 == 0 or completed == max_week:
+                    log(
+                        f"{season}: resmi haftalar {completed}/{max_week}, "
+                        f"tablo={len(snapshots_by_week)}, workers={worker_count}"
+                    )
+    snapshots = [snapshots_by_week[week] for week in sorted(snapshots_by_week)]
     if len(snapshots) < max(2, max_week // 3):
         return []
     unique = {standings_signature(s.get("standings") or []) for s in snapshots}
@@ -871,6 +927,47 @@ def try_official_weekly(item: dict[str, Any], season: str, raw_root: Path, sleep
         log(f"{season}: resmi tablo haftalık değişmiyor; computed fallback kullanılacak")
         return []
     return snapshots
+
+
+def try_official_stages(item: dict[str, Any], season: str, raw_root: Path,
+                        sleep_s: float, force: bool, workers: int) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    combined: list[dict[str, Any]] = []
+    stage_reports: list[dict[str, Any]] = []
+    offset = 0
+    for stage_number, stage in enumerate(item.get("standingsStages") or [], 1):
+        stage_id = str(stage.get("id") or f"stage-{stage_number}")
+        stage_label = str(stage.get("label") or stage_id)
+        max_week = int(stage.get("maxWeek") or 0)
+        stage_item = {
+            "targetPageID": str(stage.get("targetPageID") or ""),
+            "targetGrupID": str(stage.get("targetGrupID") or ""),
+            "targetUrls": [] if stage.get("targetPageID") else [stage.get("targetUrl")],
+        }
+        snapshots = try_official_weekly(
+            stage_item, season, raw_root / "stages" / stage_id,
+            sleep_s, force, max_week, workers,
+        ) if max_week > 0 else []
+        stage_reports.append({
+            "id": stage_id,
+            "label": stage_label,
+            "maxWeek": max_week,
+            "expectedMatches": int(stage.get("expectedMatches") or 0),
+            "weeksGenerated": len(snapshots),
+            "targetPageID": stage.get("targetPageID"),
+            "targetGrupID": stage.get("targetGrupID"),
+        })
+        if not snapshots:
+            return [], stage_reports
+        for snapshot in snapshots:
+            stage_week = int(snapshot.get("week") or 0)
+            snapshot["week"] = offset + stage_week
+            snapshot["stageWeek"] = stage_week
+            snapshot["stageId"] = stage_id
+            snapshot["stageLabel"] = stage_label
+            snapshot["stageNumber"] = stage_number
+            combined.append(snapshot)
+        offset += max_week
+    return combined, stage_reports
 
 
 def season_item(seed: dict[str, Any], season: str) -> dict[str, Any] | None:
@@ -898,17 +995,63 @@ def update_season_files(data_root: Path, season: str, snapshots: list[dict[str, 
     files = season_json.setdefault("files", {})
     files["standingsByWeek"] = f"seasons/{season}/standings_by_week.json"
     if snapshots:
+        stage_finals: dict[str, dict[str, Any]] = {}
+        stage_ranges: dict[str, list[int]] = {}
+        for snapshot in snapshots:
+            stage_id = str(snapshot.get("stageId") or "")
+            if not stage_id:
+                continue
+            stage_finals[stage_id] = snapshot
+            stage_ranges.setdefault(stage_id, []).append(int(snapshot.get("week") or 0))
+        if stage_finals:
+            league_stages: list[dict[str, Any]] = []
+            for stage_id, snapshot in stage_finals.items():
+                rows = snapshot.get("standings") or []
+                row = next((value for value in rows if value.get("isBalkes")), None)
+                if not row:
+                    continue
+                weeks = stage_ranges.get(stage_id) or []
+                league_stages.append({
+                    "id": stage_id,
+                    "label": snapshot.get("stageLabel") or stage_id,
+                    "stageNumber": int(snapshot.get("stageNumber") or 0),
+                    "startWeek": min(weeks, default=0),
+                    "endWeek": max(weeks, default=0),
+                    "played": int(row.get("played") or 0),
+                    "won": int(row.get("won") or 0),
+                    "drawn": int(row.get("drawn") or 0),
+                    "lost": int(row.get("lost") or 0),
+                    "goalsFor": int(row.get("goalsFor") or 0),
+                    "goalsAgainst": int(row.get("goalsAgainst") or 0),
+                    "goalDifference": int(row.get("goalDifference") or 0),
+                    "points": int(row.get("points") or 0),
+                    "finalRank": int(row.get("rank") or 0),
+                })
+            league_stages.sort(key=lambda value: (value.get("stageNumber", 0), value.get("startWeek", 0)))
+            season_json["leagueStages"] = league_stages
         final = snapshots[-1].get("standings") or []
         balkes = next((r for r in final if r.get("isBalkes")), None)
         if balkes:
+            league_summary = {
+                "played": int(balkes.get("played") or 0),
+                "won": int(balkes.get("won") or 0),
+                "drawn": int(balkes.get("drawn") or 0),
+                "lost": int(balkes.get("lost") or 0),
+                "goalsFor": int(balkes.get("goalsFor") or 0),
+                "goalsAgainst": int(balkes.get("goalsAgainst") or 0),
+                "goalDifference": int(balkes.get("goalDifference") or 0),
+                "points": int(balkes.get("points") or 0),
+                "rawPoints": int(balkes.get("rawPoints") or balkes.get("points") or 0),
+                "pointsDeducted": int(balkes.get("pointsDeducted") or 0),
+                "finalRank": int(balkes.get("rank") or 0),
+            }
+            season_json["leagueSummary"] = league_summary
             summary = season_json.setdefault("summary", {})
-            summary["points"] = int(balkes.get("points") or 0)
-            summary["rawPoints"] = int(balkes.get("rawPoints") or balkes.get("points") or 0)
-            summary["pointsDeducted"] = int(balkes.get("pointsDeducted") or 0)
-            summary["finalRank"] = int(balkes.get("rank") or 0)
-            summary["goalsFor"] = int(balkes.get("goalsFor") or summary.get("goalsFor") or 0)
-            summary["goalsAgainst"] = int(balkes.get("goalsAgainst") or summary.get("goalsAgainst") or 0)
-            summary["goalDifference"] = int(balkes.get("goalDifference") or summary.get("goalDifference") or 0)
+            # Genel özet kupa/play-off dahil bütün maçları kapsar. Puan tablosu
+            # verisi bu gol toplamlarının üzerine yazılmaz; yalnız lig alanları
+            # ayrıca tutulur ve eski istemci için birkaç alan aynalanır.
+            for key in ("points", "rawPoints", "pointsDeducted", "finalRank"):
+                summary[key] = league_summary[key]
     season_json["standingsUpdatedAt"] = now()
     season_json["standingsBuilderVersion"] = BUILDER_VERSION
     write_json(season_dir / "season.json", season_json)
@@ -923,6 +1066,10 @@ def update_manifest(data_root: Path, seasons: list[str]) -> None:
         season_json = read_json(data_root / "seasons" / season / "season.json", {}) or {}
         if season in by_season and season_json.get("summary"):
             by_season[season]["summary"] = season_json.get("summary")
+            if season_json.get("leagueSummary"):
+                by_season[season]["leagueSummary"] = season_json.get("leagueSummary")
+            if season_json.get("leagueStages"):
+                by_season[season]["leagueStages"] = season_json.get("leagueStages")
             by_season[season]["standingsByWeekUrl"] = f"seasons/{season}/standings_by_week.json"
     manifest["standingsUpdatedAt"] = now()
     manifest["standingsBuilderVersion"] = BUILDER_VERSION
@@ -957,7 +1104,12 @@ def process_one(season: str, item: dict[str, Any], args: argparse.Namespace, see
     data_root = Path(args.data_root)
     raw_root = Path(args.raw_root)
     reports_root = Path(args.reports_root)
-    max_week = int(item.get("maxWeek") or (item.get("tffPlan") or {}).get("maxWeek") or args.default_max_week)
+    configured_stages = item.get("standingsStages") or []
+    max_week = (
+        sum(int(stage.get("maxWeek") or 0) for stage in configured_stages)
+        if configured_stages
+        else int(item.get("maxWeek") or (item.get("tffPlan") or {}).get("maxWeek") or args.default_max_week)
+    )
     report: dict[str, Any] = {
         "season": season,
         "generatedAt": now(),
@@ -979,7 +1131,7 @@ def process_one(season: str, item: dict[str, Any], args: argparse.Namespace, see
         log(f"{season}: atlandı ({report['warnings'][-1]})")
         return report
 
-    if not build_item_urls(item, None):
+    if not configured_stages and not build_item_urls(item, None):
         # Yalnızca Balıkesirspor'un maçlarından bütün ligin tablosu hesaplanamaz.
         # Böyle bir çıktı sayısal olarak düzgün görünse bile rakiplerin birbirleriyle
         # oynadığı maçları içermediği için yanlıştır. Eksik hedefi açıkça raporla.
@@ -994,9 +1146,20 @@ def process_one(season: str, item: dict[str, Any], args: argparse.Namespace, see
     snapshots: list[dict[str, Any]] = []
     if args.mode in {"auto", "official-only"}:
         log(f"{season}: resmi haftalık tablo deneniyor")
-        snapshots = try_official_weekly(item, season, raw_root, args.sleep, args.force, max_week)
+        if configured_stages:
+            snapshots, stage_reports = try_official_stages(
+                item, season, raw_root, args.sleep, args.force, args.week_workers
+            )
+            report["stages"] = stage_reports
+        else:
+            snapshots = try_official_weekly(
+                item, season, raw_root, args.sleep, args.force, max_week, args.week_workers
+            )
         if snapshots and snapshots_look_clean(snapshots):
-            report["source"] = "official_tff_weekly_table"
+            report["source"] = (
+                "official_tff_multi_stage_weekly_table"
+                if configured_stages else "official_tff_weekly_table"
+            )
         elif snapshots:
             report["warnings"].append("Resmi tablo parse edildi ama satır tutarlılığı zayıf; hesaplama fallback kullanılacak.")
             snapshots = []
@@ -1048,6 +1211,7 @@ def main() -> int:
     ap.add_argument("--default-max-week", type=int, default=34)
     ap.add_argument("--probe-limit", type=int, default=2500)
     ap.add_argument("--workers", type=int, default=4, help="Parallel detail fetch workers. Use 1 for fully serial/polite mode.")
+    ap.add_argument("--week-workers", type=int, default=4, help="Bir sezonun resmi hafta sayfaları için paralel istek sayısı.")
     ap.add_argument("--season-workers", type=int, default=2, help="Aynı anda işlenecek sezon sayısı.")
     ap.add_argument("--detail-fetch-mode", choices=["missing", "all", "none"], default="missing", help="missing=listing rows first, details only for missing rows; all=verify every ID; none=listing-only fast mode.")
     ap.add_argument("--week-param-mode", choices=["smart", "fast", "wide"], default="smart", help="smart tries hafta first then fallbacks only when needed; fast uses only hafta; wide tries all params.")

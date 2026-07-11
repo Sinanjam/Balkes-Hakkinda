@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dataVersion": 1,
+  "generatedAt": "2026-07-11T00:00:00Z",
+  "score": {
+    "manifest": "score/manifest.json"
+  },
+  "archive": {
+    "index": "archive/index.json"
+  },
+  "photos": {
+    "index": "photos/index.json"
+  },
+  "news": {
+    "index": "news/index.json"
+  },
+  "mediaBaseUrl": "https://raw.githubusercontent.com/Sinanjam/balkes-data/main/media/"
+}

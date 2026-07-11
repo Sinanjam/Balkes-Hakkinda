@@ -1,0 +1,52 @@
+plugins {
+    id "com.android.application"
+}
+
+def scoreBase = providers.gradleProperty("SCORE_BASE_URL")
+        .getOrElse("https://raw.githubusercontent.com/Sinanjam/balkes-skor/main/data/")
+def archiveManifest = providers.gradleProperty("ARCHIVE_MANIFEST_URL")
+        .getOrElse("https://raw.githubusercontent.com/Sinanjam/Balkes-Arsivi/main/app/src/main/assets/archive/archive_items.json")
+def archiveMediaBase = providers.gradleProperty("ARCHIVE_MEDIA_BASE_URL")
+        .getOrElse("https://raw.githubusercontent.com/Sinanjam/Balkes-Arsivi/main/app/src/main/assets/")
+def contentBase = providers.gradleProperty("CONTENT_BASE_URL")
+        .getOrElse("https://raw.githubusercontent.com/Sinanjam/balkes-data/main/")
+
+android {
+    namespace "com.sinanjam.balkesskor"
+    compileSdk 35
+    buildToolsVersion "35.0.0"
+
+    defaultConfig {
+        applicationId "com.sinanjam.balkesskor"
+        minSdk 23
+        targetSdk 35
+        versionCode 101
+        versionName "1.1.0-alpha01"
+
+        buildConfigField "String", "SCORE_BASE_URL", "\"${scoreBase}\""
+        buildConfigField "String", "ARCHIVE_MANIFEST_URL", "\"${archiveManifest}\""
+        buildConfigField "String", "ARCHIVE_MEDIA_BASE_URL", "\"${archiveMediaBase}\""
+        buildConfigField "String", "CONTENT_BASE_URL", "\"${contentBase}\""
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-dev"
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}

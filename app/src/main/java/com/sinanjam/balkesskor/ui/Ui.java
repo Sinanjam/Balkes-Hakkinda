@@ -11,14 +11,14 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public final class Ui {
-    public static final int BACKGROUND = Color.rgb(8, 10, 15);
-    public static final int SURFACE = Color.rgb(19, 22, 30);
-    public static final int CARD = Color.rgb(27, 31, 41);
+    public static final int BACKGROUND = Color.rgb(2, 4, 8);
+    public static final int SURFACE = Color.rgb(4, 7, 12);
+    public static final int CARD = Color.rgb(8, 12, 19);
     public static final int TEXT = Color.rgb(250, 250, 252);
     public static final int MUTED = Color.rgb(174, 180, 195);
-    public static final int RED = Color.rgb(224, 0, 52);
-    public static final int RED_DARK = Color.rgb(118, 5, 31);
-    public static final int GOLD = Color.rgb(217, 174, 83);
+    public static final int RED = Color.rgb(255, 18, 76);
+    public static final int RED_DARK = Color.rgb(105, 0, 34);
+    public static final int CYAN = Color.rgb(0, 238, 255);
     public static final int GREEN = Color.rgb(99, 211, 145);
 
     private Ui() {}
@@ -51,8 +51,8 @@ public final class Ui {
         card.setOrientation(LinearLayout.VERTICAL);
         card.setPadding(dp(context, 18), dp(context, 16), dp(context, 18), dp(context, 16));
         card.setBackground(roundedGradient(context,
-                new int[]{Color.rgb(31, 35, 46), Color.rgb(22, 25, 34)},
-                Color.rgb(54, 60, 75), 18, 1));
+                new int[]{Color.rgb(10, 15, 24), Color.rgb(5, 8, 14)},
+                Color.argb(160, 0, 238, 255), 14, 1));
         card.setElevation(dp(context, 4));
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(-1, -2);
         params.setMargins(0, dp(context, 11), 0, 0);
@@ -64,8 +64,8 @@ public final class Ui {
         LinearLayout card = card(context);
         card.setPadding(dp(context, 20), dp(context, 20), dp(context, 20), dp(context, 20));
         card.setBackground(roundedGradient(context,
-                new int[]{Color.rgb(91, 4, 27), Color.rgb(35, 17, 29), Color.rgb(22, 25, 34)},
-                Color.rgb(153, 20, 53), 20, 1));
+                new int[]{Color.rgb(70, 0, 25), Color.rgb(12, 11, 22), Color.rgb(4, 10, 16)},
+                CYAN, 16, 1));
         card.setElevation(dp(context, 8));
         return card;
     }
@@ -106,36 +106,34 @@ public final class Ui {
 
     public static GradientDrawable appBackground() {
         return roundedGradient(null, new int[]{
-                Color.rgb(44, 2, 14),
-                Color.rgb(17, 11, 19),
+                Color.rgb(26, 0, 12),
+                Color.rgb(3, 11, 17),
                 BACKGROUND
         }, Color.TRANSPARENT, 0, 0);
     }
 
     public static GradientDrawable headerBackground() {
         return roundedGradient(null, new int[]{
-                Color.rgb(46, 3, 16),
-                Color.rgb(126, 5, 34),
-                Color.rgb(50, 5, 20)
+                Color.rgb(8, 12, 20),
+                Color.rgb(88, 0, 30),
+                Color.rgb(2, 17, 23)
         }, Color.TRANSPARENT, 0, 0);
     }
 
     public static GradientDrawable choiceBackground(Context context, int accent) {
         return roundedGradient(context, new int[]{
-                Color.rgb(31, 34, 45),
-                Color.rgb(20, 23, 31)
+                Color.rgb(9, 14, 22),
+                Color.rgb(3, 7, 12)
         }, Color.argb(175, Color.red(accent), Color.green(accent), Color.blue(accent)), 22, 1);
     }
 
-    public static GradientDrawable navBackground(Context context, boolean active) {
-        if (active) {
-            return roundedGradient(context, new int[]{RED_DARK, RED}, Color.rgb(242, 66, 104), 14, 1);
-        }
-        return rounded(context, Color.TRANSPARENT, Color.TRANSPARENT, 14, 0);
+    public static GradientDrawable badgeBackground(Context context) {
+        return roundedGradient(context, new int[]{RED, RED_DARK, Color.rgb(0, 80, 90)}, CYAN, 18, 1);
     }
 
-    public static GradientDrawable badgeBackground(Context context) {
-        return roundedGradient(context, new int[]{RED, RED_DARK}, Color.rgb(255, 91, 126), 22, 1);
+    public static GradientDrawable neonLine() {
+        return new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT,
+                new int[]{Color.TRANSPARENT, RED, CYAN, Color.TRANSPARENT});
     }
 
     public static GradientDrawable rounded(Context context, int fill, int stroke, int radiusDp, int strokeDp) {

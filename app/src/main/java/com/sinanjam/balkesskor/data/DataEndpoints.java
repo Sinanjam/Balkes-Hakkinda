@@ -9,6 +9,10 @@ public final class DataEndpoints {
         return slash(BuildConfig.SCORE_BASE_URL) + "manifest.json";
     }
 
+    public static String scoreFile(String relativePath) {
+        return slash(BuildConfig.SCORE_BASE_URL) + trim(relativePath);
+    }
+
     public static String archiveManifest() {
         return BuildConfig.ARCHIVE_MANIFEST_URL;
     }

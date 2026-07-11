@@ -32,6 +32,9 @@ public final class EdgeToEdge {
 
     public static void applyInsets(View view, int left, int top, int right, int bottom) {
         view.setOnApplyWindowInsetsListener((target, windowInsets) -> {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                Api30.useLightSystemBarIcons(target);
+            }
             int[] systemInsets = Build.VERSION.SDK_INT >= Build.VERSION_CODES.R
                     ? Api30.readInsets(windowInsets)
                     : readLegacyInsets(windowInsets);
@@ -71,7 +74,10 @@ public final class EdgeToEdge {
 
         static void configure(Window window) {
             window.setDecorFitsSystemWindows(false);
-            android.view.WindowInsetsController controller = window.getInsetsController();
+        }
+
+        static void useLightSystemBarIcons(View view) {
+            android.view.WindowInsetsController controller = view.getWindowInsetsController();
             if (controller != null) {
                 controller.setSystemBarsAppearance(0,
                         android.view.WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS

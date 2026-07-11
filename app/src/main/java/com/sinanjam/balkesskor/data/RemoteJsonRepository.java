@@ -43,6 +43,7 @@ public final class RemoteJsonRepository {
     private final ExecutorService executor = Executors.newFixedThreadPool(4);
     private final Handler main = new Handler(Looper.getMainLooper());
     private final Map<String, Object> memoryCache = new ConcurrentHashMap<>();
+    private final Map<String, String> rawCache = new ConcurrentHashMap<>();
     private final Map<String, ArrayList<Pending>> inFlight = new HashMap<>();
 
     public RemoteJsonRepository(Context context) {
@@ -62,8 +63,10 @@ public final class RemoteJsonRepository {
             Object cached = memoryCache.get(url);
             if (cached == null) {
                 try {
-                    cached = parse(read(cacheFile(url)));
+                    String cachedBody = read(cacheFile(url));
+                    cached = parse(cachedBody);
                     memoryCache.put(url, cached);
+                    rawCache.put(url, cachedBody);
                 } catch (Exception ignored) { }
             }
 
@@ -101,22 +104,24 @@ public final class RemoteJsonRepository {
         try {
             String body = fetch(url);
             Object parsed = parse(body);
+            boolean unchanged = body.equals(rawCache.get(url));
             memoryCache.put(url, parsed);
-            write(cacheFile(url), body);
-            finish(url, parsed, null);
+            rawCache.put(url, body);
+            if (!unchanged) write(cacheFile(url), body);
+            finish(url, parsed, null, unchanged);
         } catch (Exception error) {
-            finish(url, null, "Veri alınamadı. İnternet bağlantısını kontrol edin.");
+            finish(url, null, "Veri alınamadı. İnternet bağlantısını kontrol edin.", false);
         }
     }
 
-    private void finish(String url, Object value, String error) {
+    private void finish(String url, Object value, String error, boolean unchanged) {
         ArrayList<Pending> listeners;
         synchronized (inFlight) {
             listeners = inFlight.remove(url);
         }
         if (listeners == null) return;
         for (Pending pending : listeners) {
-            if (value != null) {
+            if (value != null && (!unchanged || !pending.hasCachedValue)) {
                 main.post(() -> pending.callback.onSuccess(value, false));
             } else if (!pending.hasCachedValue) {
                 main.post(() -> pending.callback.onError(error));

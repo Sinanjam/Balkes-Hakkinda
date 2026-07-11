@@ -20,8 +20,8 @@ android {
         applicationId "com.sinanjam.balkesskor"
         minSdk 23
         targetSdk 35
-        versionCode 103
-        versionName "1.3.0-alpha01"
+        versionCode 104
+        versionName "1.4.0-alpha01"
 
         buildConfigField "String", "SCORE_BASE_URL", "\"${scoreBase}\""
         buildConfigField "String", "ARCHIVE_MANIFEST_URL", "\"${archiveManifest}\""

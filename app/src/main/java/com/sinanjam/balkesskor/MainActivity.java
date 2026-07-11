@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.sinanjam.balkesskor.data.DataEndpoints;
 import com.sinanjam.balkesskor.data.RemoteJsonRepository;
+import com.sinanjam.balkesskor.ui.EdgeToEdge;
 import com.sinanjam.balkesskor.ui.Ui;
 
 import org.json.JSONArray;
@@ -22,7 +23,6 @@ public final class MainActivity extends Activity {
 
     private RemoteJsonRepository repository;
     private LinearLayout content;
-    private LinearLayout tabs;
     private TextView headerTitle;
     private TextView headerSubtitle;
     private Tab current = Tab.SCORE;
@@ -33,6 +33,7 @@ public final class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.configure(this);
         repository = new RemoteJsonRepository(this);
         warmScoreData();
         repository.prefetch(DataEndpoints.archiveManifest());
@@ -83,9 +84,6 @@ public final class MainActivity extends Activity {
         detailBackAction = null;
         detailRequestKey = "";
         content = null;
-        tabs = null;
-        getWindow().setStatusBarColor(Color.rgb(40, 2, 14));
-        getWindow().setNavigationBarColor(Ui.BACKGROUND);
 
         ScrollView scroll = new ScrollView(this);
         scroll.setFillViewport(true);
@@ -150,6 +148,7 @@ public final class MainActivity extends Activity {
         root.addView(footer, footerParams);
 
         setContentView(scroll);
+        EdgeToEdge.applyInsets(scroll, 0, 0, 0, 0);
     }
 
     private View choiceCard(String eyebrow, String title, String body, int accent,
@@ -196,9 +195,6 @@ public final class MainActivity extends Activity {
     }
 
     private void buildShell() {
-        getWindow().setStatusBarColor(Color.rgb(44, 3, 17));
-        getWindow().setNavigationBarColor(Ui.BACKGROUND);
-
         LinearLayout root = new LinearLayout(this);
         root.setOrientation(LinearLayout.VERTICAL);
         root.setBackgroundColor(Ui.BACKGROUND);
@@ -240,21 +236,8 @@ public final class MainActivity extends Activity {
         scroll.addView(content);
         root.addView(scroll, new LinearLayout.LayoutParams(-1, 0, 1));
 
-        LinearLayout bottom = new LinearLayout(this);
-        bottom.setOrientation(LinearLayout.VERTICAL);
-        bottom.setBackgroundColor(Ui.SURFACE);
-
-        View neonLine = new View(this);
-        neonLine.setBackground(Ui.neonLine());
-        bottom.addView(neonLine, new LinearLayout.LayoutParams(-1, Ui.dp(this, 1)));
-
-        tabs = new LinearLayout(this);
-        tabs.setOrientation(LinearLayout.HORIZONTAL);
-        tabs.setGravity(Gravity.CENTER);
-        tabs.setPadding(Ui.dp(this, 5), Ui.dp(this, 5), Ui.dp(this, 5), Ui.dp(this, 3));
-        bottom.addView(tabs, new LinearLayout.LayoutParams(-1, 0, 1));
-        root.addView(bottom, new LinearLayout.LayoutParams(-1, Ui.dp(this, 62)));
         setContentView(root);
+        EdgeToEdge.applyInsets(root, 0, 0, 0, 0);
     }
 
     private void select(Tab tab) {
@@ -262,7 +245,6 @@ public final class MainActivity extends Activity {
         detailRequestKey = "";
         current = tab;
         updateHeader(tab);
-        renderTabs();
         if (tab == Tab.SCORE) renderScore();
         else if (tab == Tab.ARCHIVE) renderArchive(false);
         else if (tab == Tab.PHOTOS) renderArchive(true);
@@ -277,40 +259,6 @@ public final class MainActivity extends Activity {
         else if (tab == Tab.PHOTOS) headerSubtitle.setText("Tarihi kareler • fotoğraf");
         else if (tab == Tab.NEWS) headerSubtitle.setText("Haberler • duyurular");
         else headerSubtitle.setText("Geçmiş sezonlar • istatistik");
-    }
-
-    private void renderTabs() {
-        tabs.removeAllViews();
-        addTab("Skor", Tab.SCORE);
-        addTab("Arşiv", Tab.ARCHIVE);
-        addTab("Foto", Tab.PHOTOS);
-        addTab("Haber", Tab.NEWS);
-        addTab("Sezon", Tab.SEASONS);
-    }
-
-    private void addTab(String label, Tab tab) {
-        boolean active = current == tab;
-        LinearLayout item = new LinearLayout(this);
-        item.setOrientation(LinearLayout.VERTICAL);
-        item.setGravity(Gravity.CENTER);
-        item.setBackgroundColor(Color.TRANSPARENT);
-        item.setClickable(true);
-        item.setFocusable(true);
-        item.setOnClickListener(view -> select(tab));
-
-        TextView text = Ui.text(this, label, 11, active ? Ui.CYAN : Ui.MUTED);
-        text.setTypeface(active ? Typeface.DEFAULT_BOLD : Typeface.DEFAULT);
-        text.setGravity(Gravity.CENTER);
-        item.addView(text, new LinearLayout.LayoutParams(-1, 0, 1));
-
-        View line = new View(this);
-        line.setBackgroundColor(active ? Ui.CYAN : Color.TRANSPARENT);
-        LinearLayout.LayoutParams lineParams = new LinearLayout.LayoutParams(Ui.dp(this, 24), Ui.dp(this, 2));
-        lineParams.setMargins(0, 0, 0, Ui.dp(this, 2));
-        item.addView(line, lineParams);
-
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(0, -1, 1);
-        tabs.addView(item, params);
     }
 
     private void start(String eyebrow, String title, String subtitle, int accent) {
@@ -409,11 +357,12 @@ public final class MainActivity extends Activity {
                 count.setTypeface(Typeface.DEFAULT_BOLD);
                 count.setPadding(0, Ui.dp(MainActivity.this, 12), 0, 0);
                 summary.addView(count);
-                summary.addView(Ui.text(MainActivity.this, photosOnly ? "arşiv kaynağı tarandı" : "arşiv kaydı bulundu", 14, Ui.MUTED));
+                summary.addView(Ui.text(MainActivity.this,
+                        photosOnly ? "fotoğraflı arşiv kaynaklarının tamamı" : "arşiv kaydının tamamı gösteriliyor",
+                        14, Ui.MUTED));
                 content.addView(summary);
 
-                int shown = 0;
-                for (int i = 0; i < items.length() && shown < 10; i++) {
+                for (int i = 0; i < items.length(); i++) {
                     JSONObject item = items.optJSONObject(i);
                     if (item == null) continue;
                     JSONArray photos = item.optJSONArray("photos");
@@ -437,7 +386,6 @@ public final class MainActivity extends Activity {
                             photosOnly ? Ui.CYAN : Ui.RED,
                             view -> renderArchiveDetail(selectedItem, photosOnly));
                     content.addView(card);
-                    shown++;
                 }
             }
             @Override public void onError(String message) { showError(expected, message); }

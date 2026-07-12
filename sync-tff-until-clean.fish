@@ -40,7 +40,7 @@ mkdir -p $state_dir
 or exit 1
 touch $log_file
 
-function write_state --argument-names phase attempt exit_code
+function write_state --argument-names phase attempt exit_code state_file output log_file
     printf 'PHASE=%s\nATTEMPT=%s\nEXIT_CODE=%s\nUPDATED_AT=%s\nOUTPUT=%s\nLOG=%s\n' \
         $phase $attempt $exit_code (date -Is) $output $log_file >$state_file
 end
@@ -59,7 +59,7 @@ while true
         set force true
     end
 
-    write_state running $attempt -1
+    write_state running $attempt -1 $state_file $output $log_file
     echo "" | tee -a $log_file
     echo "=== DENEME $attempt | "(date -Is)" | force=$force ===" | tee -a $log_file
 
@@ -67,15 +67,15 @@ while true
     set -l sync_status $pipestatus[1]
 
     if test $sync_status -eq 0
-        write_state completed $attempt 0
+        write_state completed $attempt 0 $state_file $output $log_file
         echo "TAMAMLANDI: sıkı kalite kapısı geçildi — "(date -Is) | tee -a $log_file
         exit 0
     end
 
-    write_state retrying $attempt $sync_status
+    write_state retrying $attempt $sync_status $state_file $output $log_file
     echo "Deneme $attempt tamamlanamadı (kod=$sync_status). Önbellek korunuyor." | tee -a $log_file
     if test $max_attempts -gt 0 -a $attempt -ge $max_attempts
-        write_state failed $attempt $sync_status
+        write_state failed $attempt $sync_status $state_file $output $log_file
         echo "Azami deneme sayısına ulaşıldı." | tee -a $log_file
         exit $sync_status
     end

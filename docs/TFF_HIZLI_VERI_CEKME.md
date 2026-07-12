@@ -107,6 +107,10 @@ Git'e eklenmez; uygulama APK'sına da girmez.
   `reports/validation.json` içine raporlanır.
 - Bir sezonun lig/grup hedefi bulunamazsa yalnız Balıkesirspor maçlarından sahte
   bir "tam lig tablosu" hesaplanmaz; eksik durum kalite raporuna yazılır.
+- Puan hedefi, sayfada istenen sezon ve doğru grup modülü birlikte görülmeden
+  kabul edilmez. Aynı hedef iki farklı sezonda kullanılırsa doğrulama hata verir.
+- Kademe toplamını devralan Klasman tablolarında ham resmi toplam ile o aşamada
+  eklenen maç sayısı ayrı tutulur.
 - TFF'de bulunmayan eski kayıtlar uydurulmaz; raporda eksik olarak bırakılır.
 
 ## Yüklenen ilk çıktıda bulunan sorunlar
@@ -127,6 +131,9 @@ Güçlendirilmiş hat canlı TFF denemesinde şu sonuçları verdi:
 1996-1997 puan tablosu TFF'deki iki resmi aşamadan üretilir: Kademe 02 için
 18 hafta/maç ve Klasman K2 için 14 hafta/maç. JSON kayıtlarında hem kesintisiz
 `week` hem de aşama içindeki `stageWeek`, `stageId` ve `stageLabel` bulunur.
+
+İkinci tam çıktıdaki 1083 profesyonel maç ve tarihsel puan hedefleri için yapılan
+son denetim: [TFF veri çıktısı denetimi — 2026-07-12](TFF_DATA_AUDIT_2026-07-12.md).
 
 Kalite kapısını ayrıca çalıştırmak için:
 

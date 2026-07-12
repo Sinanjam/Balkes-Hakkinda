@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import sys
+import json
+import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -10,13 +12,27 @@ from unittest.mock import patch
 TOOLS = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(TOOLS))
 
-from discover_club_fixtures import archive_stage_sort_key, fixture_page_actions  # noqa: E402
+from discover_club_fixtures import (  # noqa: E402
+    archive_group_is_selected,
+    archive_stage_sort_key,
+    fixture_page_actions,
+    page_mentions_season,
+    reconcile_archive_stages,
+    standalone_archive_stages,
+)
 from tff_factory import (  # noqa: E402
     extract_balkes_ids,
+    match_override_for,
     professional_competition_status,
     remove_superseded_unplayed,
 )
-from tff_standings_builder import build_item_urls, try_official_stages  # noqa: E402
+from tff_standings_builder import (  # noqa: E402
+    build_item_urls,
+    parse_official_standings,
+    try_official_stages,
+    update_season_files,
+)
+from validate_export import validate_discovery  # noqa: E402
 
 
 class FixtureDiscoveryTests(unittest.TestCase):
@@ -47,6 +63,20 @@ class FixtureDiscoveryTests(unittest.TestCase):
             ["02", "K2"],
         )
 
+    def test_standings_target_must_mention_requested_season(self) -> None:
+        raw = "<html><title>2025-2026 Sezonu</title><body>Balıkesirspor</body></html>"
+        self.assertTrue(page_mentions_season(raw, "2025-2026"))
+        self.assertFalse(page_mentions_season(raw, "2009-2010"))
+
+    def test_archive_group_selection_marker_is_checked(self) -> None:
+        raw = """
+        <a href='Default.aspx?pageID=806&grupID=229' style='background:#a10102'>02</a>
+        <a href='Default.aspx?pageID=806&grupID=233'>F</a>
+        """
+        self.assertTrue(archive_group_is_selected(raw, "229"))
+        self.assertFalse(archive_group_is_selected(raw, "233"))
+        self.assertFalse(archive_group_is_selected(raw, "999"))
+
 
 class ProfessionalFilterTests(unittest.TestCase):
     def test_professional_team_is_accepted(self) -> None:
@@ -72,8 +102,70 @@ class ProfessionalFilterTests(unittest.TestCase):
         self.assertEqual([item["id"] for item in kept], ["2"])
         self.assertEqual(dropped[0]["reason"], "superseded_unplayed_league_fixture")
 
+    def test_verified_match_override_is_scoped_to_season_and_id(self) -> None:
+        seed = {"seasons": [{"season": "1995-1996", "matchOverrides": {
+            "47516": {"matchType": "playoff"}
+        }}]}
+        self.assertEqual(match_override_for(seed, "1995-1996", "47516")["matchType"], "playoff")
+        self.assertEqual(match_override_for(seed, "1996-1997", "47516"), {})
+
 
 class StandingsTests(unittest.TestCase):
+    @staticmethod
+    def standings_table(team_prefix: str, include_balkes: bool) -> str:
+        teams = [f"{team_prefix}{index}" for index in range(1, 9)]
+        if include_balkes:
+            teams[3] = "Balıkesirspor"
+        rows = "".join(
+            f"<tr><td>{index}.{team}</td><td>1</td><td>1</td><td>0</td><td>0</td>"
+            f"<td>2</td><td>0</td><td>2</td><td>3</td></tr>"
+            for index, team in enumerate(teams, 1)
+        )
+        return "<table><tr><th>Takım</th><th>O</th><th>G</th><th>B</th><th>M</th>" \
+               "<th>A</th><th>Y</th><th>AV</th><th>P</th></tr>" + rows + "</table>"
+
+    def test_group_scoped_parser_does_not_leak_from_other_module(self) -> None:
+        raw = (
+            "<div id='first_ctnr_div'><a href='?grupID=233'>F</a>"
+            + self.standings_table("Final", True)
+            + "</div><div id='second_ctnr_div'><a href='?grupID=229'>02</a>"
+            + self.standings_table("Kademe", False)
+            + "</div>"
+        )
+        global_rows = parse_official_standings(raw)
+        scoped_rows = parse_official_standings(raw, "229")
+        self.assertTrue(any(row.get("isBalkes") for row in global_rows))
+        self.assertFalse(any(row.get("isBalkes") for row in scoped_rows))
+        self.assertEqual(parse_official_standings(raw, module_id="missing"), [])
+
+    def test_group_less_promotion_module_becomes_a_separate_stage(self) -> None:
+        module_id = "ctl00_MPane_m_980_5402_ctnr_div"
+        raw = (
+            f"<div id='{module_id}'><div class='moduleTitle'>Yükselme Grubu</div>"
+            "<a href='?pageID=980&hafta=1'>1</a><a href='?pageID=980&hafta=18'>18</a>"
+            + self.standings_table("Final", True)
+            + "</div><div id='ctl00_MPane_m_980_6193_ctnr_div'>"
+            "<div class='moduleTitle'>Kademe Grupları</div><a href='?grupID=605'>01</a>"
+            + self.standings_table("Kademe", True)
+            + "</div>"
+        )
+        stages = standalone_archive_stages(raw, "980", "http://www.tff.org/Default.aspx?pageID=980")
+        self.assertEqual(len(stages), 1)
+        self.assertEqual(stages[0]["targetModuleID"], module_id)
+        self.assertEqual(stages[0]["maxWeek"], 18)
+
+    def test_cumulative_klasman_table_is_converted_to_incremental_stage(self) -> None:
+        stages = [
+            {"id": "kademe", "label": "02", "expectedMatches": 18, "teamCount": 10},
+            {"id": "klasman", "label": "K2", "expectedMatches": 32, "teamCount": 8},
+            {"id": "wrong", "label": "Yükselme Grubu", "expectedMatches": 18, "teamCount": 10},
+        ]
+        selected = reconcile_archive_stages(stages, 32)
+        self.assertEqual([stage["id"] for stage in selected], ["kademe", "klasman"])
+        self.assertEqual(selected[1]["expectedMatches"], 14)
+        self.assertEqual(selected[1]["carriedMatches"], 18)
+        self.assertEqual(selected[1]["maxWeek"], 14)
+
     def test_duplicate_exact_target_url_is_fetched_once(self) -> None:
         item = {
             "targetPageID": "805",
@@ -102,6 +194,47 @@ class StandingsTests(unittest.TestCase):
         self.assertEqual([item["stageWeek"] for item in combined], [1, 2, 1])
         self.assertEqual([item["stageId"] for item in combined], ["kademe", "kademe", "klasman"])
         self.assertEqual([item["weeksGenerated"] for item in reports], [2, 1])
+
+    def test_season_summary_handles_cumulative_second_stage(self) -> None:
+        def row(played: int, won: int, drawn: int, lost: int, gf: int, ga: int, points: int) -> dict:
+            return {
+                "team": "Balıkesirspor", "isBalkes": True, "rank": 1,
+                "played": played, "won": won, "drawn": drawn, "lost": lost,
+                "goalsFor": gf, "goalsAgainst": ga, "goalDifference": gf - ga,
+                "points": points, "rawPoints": points, "pointsDeducted": 0,
+            }
+
+        snapshots = [
+            {"week": 18, "stageId": "kademe", "stageLabel": "Kademe", "stageNumber": 1,
+             "stageCarriedMatches": 0, "standings": [row(18, 7, 2, 9, 27, 34, 23)]},
+            {"week": 32, "stageId": "klasman", "stageLabel": "Klasman", "stageNumber": 2,
+             "stageCarriedMatches": 18, "standings": [row(32, 14, 5, 13, 44, 46, 47)]},
+        ]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            update_season_files(root, "2008-2009", snapshots)
+            season = json.loads((root / "seasons/2008-2009/season.json").read_text())
+        self.assertEqual(season["leagueSummary"]["played"], 32)
+        self.assertEqual(season["leagueStages"][1]["played"], 14)
+        self.assertTrue(season["leagueStages"][1]["officialTableIsCumulative"])
+
+
+class ValidationTests(unittest.TestCase):
+    def test_cross_season_standings_target_reuse_is_an_error(self) -> None:
+        report = {
+            "seasonsRequested": 2,
+            "seasonsSucceeded": 2,
+            "standingsTargets": [
+                {"season": "2009-2010", "targetUrl": "http://www.tff.org/Default.aspx?pageID=971&grupID=2605"},
+                {"season": "1990-1991", "targetUrl": "https://www.tff.org/Default.aspx?grupID=2605&pageID=971"},
+            ],
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "discovery.json"
+            path.write_text(json.dumps(report), encoding="utf-8")
+            errors, _warnings, summary = validate_discovery(path, strict=False)
+        self.assertEqual(summary["reusedStandingsTargets"], 1)
+        self.assertTrue(any("aynı puan hedefini" in error for error in errors))
 
 
 if __name__ == "__main__":

@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 import copy
 import html as html_lib
+import itertools
 import json
 import os
 import re
@@ -35,6 +36,7 @@ from tff_factory import (
 from tff_standings_builder import (
     clean_standings_rows,
     parse_official_standings,
+    standings_signature,
     standings_rows_are_usable,
 )
 
@@ -56,6 +58,7 @@ ARCHIVE_ROOT_PAGE_IDS = {
     "second": 371,
     "third": 376,
 }
+STANDINGS_TARGET_CACHE_VERSION = 2
 
 
 def seed_item(seed: dict[str, Any], season: str) -> dict[str, Any] | None:
@@ -430,6 +433,177 @@ def archive_stage_sort_key(stage: dict[str, Any]) -> tuple[int, str]:
     return 2, label
 
 
+def expected_league_matches_from_item(item: dict[str, Any]) -> int:
+    fixtures = [value for value in item.get("knownFixtures", []) if isinstance(value, dict)]
+    if not fixtures:
+        return 0
+    overrides = item.get("matchOverrides") or {}
+    return sum(
+        1
+        for fixture in fixtures
+        if adult_league_tier(str(fixture.get("rowText") or ""))
+        and str(
+            (overrides.get(str(fixture.get("id") or "")) or {}).get("matchType")
+            or "league"
+        ) == "league"
+    )
+
+
+def reconcile_archive_stages(
+    stages: list[dict[str, Any]],
+    expected_league_matches: int,
+) -> list[dict[str, Any]]:
+    """Choose the chronological stages matching the discovered league fixture count.
+
+    Some TFF Klasman tables carry Kademe totals forward.  In that case a row
+    can say 32 played although the second stage added only 14 matches.
+    """
+    ordered = sorted((copy.deepcopy(stage) for stage in stages), key=archive_stage_sort_key)
+
+    def annotate(
+        values: tuple[dict[str, Any], ...] | list[dict[str, Any]],
+    ) -> tuple[list[dict[str, Any]], int]:
+        out: list[dict[str, Any]] = []
+        running = 0
+        for original in values:
+            stage = copy.deepcopy(original)
+            raw_played = int(stage.get("expectedMatches") or 0)
+            carried = running if running > 0 and raw_played > running else 0
+            incremental = raw_played - carried if carried else raw_played
+            if incremental <= 0:
+                return [], -1
+            stage["rawFinalPlayed"] = raw_played
+            stage["carriedMatches"] = carried
+            stage["expectedMatches"] = incremental
+            team_count = int(stage.get("teamCount") or 0)
+            stage["maxWeek"] = (
+                incremental + 2
+                if team_count % 2 == 1 and incremental > 0
+                else incremental
+            )
+            running += incremental
+            out.append(stage)
+        return out, running
+
+    if expected_league_matches <= 0:
+        return annotate(ordered)[0]
+
+    exact: list[list[dict[str, Any]]] = []
+    for length in range(1, len(ordered) + 1):
+        for subset in itertools.combinations(ordered, length):
+            annotated, total = annotate(subset)
+            if total == expected_league_matches:
+                exact.append(annotated)
+    if not exact:
+        return []
+    # More stages preserve more of the real week-by-week chronology.
+    return max(
+        exact,
+        key=lambda values: (
+            len(values),
+            sum(int(value.get("maxWeek") or 0) for value in values),
+        ),
+    )
+
+
+def page_mentions_season(raw: str, season: str) -> bool:
+    """Require the exact requested season on a candidate standings page."""
+    match = re.fullmatch(r"(\d{4})-(\d{4})", str(season or "").strip())
+    if not match:
+        return False
+    start, end = match.groups()
+    visible = clean_text(BeautifulSoup(raw, "lxml").get_text(" ", strip=True))
+    patterns = (
+        rf"\b{start}\s*[-/]\s*{end}\b",
+        rf"\b{start}\s*[-/]\s*{end[-2:]}\b",
+    )
+    return any(re.search(pattern, visible) for pattern in patterns)
+
+
+def archive_group_is_selected(raw: str, group_id: str) -> bool:
+    """Verify that TFF actually activated the requested archive group."""
+    wanted = str(group_id or "").strip()
+    if not wanted:
+        return True
+    soup = BeautifulSoup(raw, "lxml")
+    for anchor in soup.find_all("a", href=True):
+        query = dict(parse_qsl(
+            urlparse(html_lib.unescape(str(anchor.get("href") or ""))).query
+        ))
+        candidate = str(query.get("grupID") or query.get("grupId") or "")
+        if candidate != wanted:
+            continue
+        marker = " ".join([
+            str(anchor.get("style") or ""),
+            " ".join(anchor.get("class") or []),
+            " ".join((anchor.parent or {}).get("class") or []) if anchor.parent else "",
+        ]).lower()
+        if "a10102" in marker or re.search(r"\b(active|selected|current|on)\b", marker):
+            return True
+    return False
+
+
+def standalone_archive_stages(
+    raw: str,
+    season_page_id: str,
+    season_url: str,
+) -> list[dict[str, Any]]:
+    """Find group-less promotion/final tables rendered beside archive groups."""
+    soup = BeautifulSoup(raw, "lxml")
+    stages: list[dict[str, Any]] = []
+    for module in soup.find_all(
+        "div",
+        id=lambda value: bool(
+            value and "_MPane_" in str(value) and str(value).endswith("_ctnr_div")
+        ),
+    ):
+        module_id = str(module.get("id") or "")
+        group_links = []
+        week_numbers: list[int] = []
+        for anchor in module.find_all("a", href=True):
+            query = dict(parse_qsl(
+                urlparse(html_lib.unescape(str(anchor.get("href") or ""))).query
+            ))
+            group_id = str(query.get("grupID") or query.get("grupId") or "")
+            if group_id:
+                group_links.append(group_id)
+            week = str(query.get("hafta") or "")
+            if not group_id and week.isdigit():
+                week_numbers.append(int(week))
+        if group_links:
+            continue
+        rows = clean_standings_rows(parse_official_standings(str(module)))
+        if not standings_rows_are_usable(rows, require_balkes=True):
+            continue
+        balkes = next((row for row in rows if is_balkes(row.get("team", ""))), None)
+        if not balkes:
+            continue
+        title = module.find(class_=re.compile(r"moduleTitle", re.I))
+        label = clean_text(title.get_text(" ", strip=True)) if title else ""
+        if not label:
+            continue
+        played = int(balkes.get("played") or 0)
+        team_count = len(rows)
+        inferred_max = played + 2 if team_count % 2 == 1 and played > 0 else played
+        max_week = max(week_numbers, default=inferred_max)
+        stage_id = "standalone-" + (norm(label).replace(" ", "-") or module_id.lower())
+        stages.append({
+            "id": stage_id,
+            "label": label,
+            "targetPageID": season_page_id,
+            "targetGrupID": "",
+            "targetModuleID": module_id,
+            "targetUrl": season_url,
+            "maxWeek": max_week,
+            "expectedMatches": played,
+            "teamCount": team_count,
+            "finalRank": int(balkes.get("rank") or 0),
+            "finalPoints": int(balkes.get("points") or 0),
+            "standingsSignature": standings_signature(rows),
+        })
+    return stages
+
+
 def discover_archive_standings_stages(
     item: dict[str, Any],
     cache_dir: Path,
@@ -512,7 +686,9 @@ def discover_archive_standings_stages(
                 )
             finally:
                 worker_session.close()
-            rows = clean_standings_rows(parse_official_standings(raw))
+            if group_id and not archive_group_is_selected(raw, group_id):
+                return None
+            rows = clean_standings_rows(parse_official_standings(raw, group_id))
             if not standings_rows_are_usable(rows, require_balkes=True):
                 return None
             balkes = next((row for row in rows if is_balkes(row.get("team", ""))), None)
@@ -533,6 +709,7 @@ def discover_archive_standings_stages(
                 "teamCount": team_count,
                 "finalRank": int(balkes.get("rank") or 0),
                 "finalPoints": int(balkes.get("points") or 0),
+                "standingsSignature": standings_signature(rows),
             }
 
         stages: list[dict[str, Any]] = []
@@ -540,7 +717,29 @@ def discover_archive_standings_stages(
             for stage in executor.map(inspect_group, candidates):
                 if stage:
                     stages.append(stage)
+        stages.extend(standalone_archive_stages(season_raw, season_page_id, season_url))
         stages.sort(key=archive_stage_sort_key)
+        unique_stages: list[dict[str, Any]] = []
+        seen_signatures: set[str] = set()
+        for stage in stages:
+            signature = str(stage.get("standingsSignature") or "")
+            if signature and signature in seen_signatures:
+                continue
+            if signature:
+                seen_signatures.add(signature)
+            unique_stages.append(stage)
+        stages = unique_stages
+        expected_league_matches = expected_league_matches_from_item(item)
+        reconciled = reconcile_archive_stages(stages, expected_league_matches)
+        if expected_league_matches and not reconciled:
+            return {
+                "season": season,
+                "archiveRootPageID": str(root_page_id),
+                "seasonPageID": season_page_id,
+                "expectedLeagueMatches": expected_league_matches,
+                "error": "arşiv aşamaları kulüp fikstüründeki lig maçı sayısıyla uzlaştırılamadı",
+            }
+        stages = reconciled
         if not stages:
             return {
                 "season": season,
@@ -553,6 +752,7 @@ def discover_archive_standings_stages(
             "archiveRootPageID": str(root_page_id),
             "seasonPageID": season_page_id,
             "strategy": "official_tff_archive_groups",
+            "expectedLeagueMatches": expected_league_matches,
             "stages": stages,
         }
     finally:
@@ -675,13 +875,18 @@ def discover_standings_target(item: dict[str, Any], result: dict[str, Any], seed
     cached = cache_dir / season / "target.json"
     if cached.exists() and not force:
         value = read_json(cached, {}) or {}
-        if value.get("targetUrl"):
+        if (
+            value.get("targetUrl")
+            and value.get("season") == season
+            and int(value.get("discoveryVersion") or 0) == STANDINGS_TARGET_CACHE_VERSION
+        ):
             value["cache"] = True
             return value
 
     match_ids = [str(value) for value in result.get("matchIds", [])]
     last_error = "uygun lig maçı veya puan cetveli grubu bulunamadı"
     for match_id in match_ids[:8]:
+        wrong_season_target_seen = False
         detail_url = tff_http(f"http://www.tff.org/Default.aspx?pageID=29&macId={match_id}")
         session = make_session()
         try:
@@ -749,10 +954,21 @@ def discover_standings_target(item: dict[str, Any], result: dict[str, Any], seed
                     delay=delay,
                 )
                 verify_raw = decode_response(verify_response)
-                if not is_balkes(verify_raw):
+                target_group = str(target.get("groupId") or "")
+                verify_rows = clean_standings_rows(
+                    parse_official_standings(verify_raw, target_group)
+                )
+                if not page_mentions_season(verify_raw, season):
+                    wrong_season_target_seen = True
                     last_error = (
                         f"{match_id}: grup {option['groupId']} bulundu fakat lig URL'si "
-                        "Balıkesirspor ile doğrulanamadı"
+                        f"{season} sezonuna ait değil"
+                    )
+                    continue
+                if not standings_rows_are_usable(verify_rows, require_balkes=True):
+                    last_error = (
+                        f"{match_id}: grup {option['groupId']} bulundu fakat lig URL'si "
+                        "Balıkesirspor puan tablosuyla doğrulanamadı"
                     )
                     continue
                 target.update({
@@ -761,6 +977,7 @@ def discover_standings_target(item: dict[str, Any], result: dict[str, Any], seed
                     "verified": True,
                     "verifiedUrl": tff_http(verify_response.url),
                     "discoveredAt": now(),
+                    "discoveryVersion": STANDINGS_TARGET_CACHE_VERSION,
                     "cache": False,
                 })
                 write_json(cached, target)
@@ -771,6 +988,15 @@ def discover_standings_target(item: dict[str, Any], result: dict[str, Any], seed
                     verify_raw, encoding="utf-8"
                 )
                 return target
+            if wrong_season_target_seen:
+                # Maç detayındaki açılır kutu tarihsel grup yerine güncel ligi
+                # gösteriyorsa sonraki yedi maçı aynı postback zinciriyle tekrar
+                # denemek yalnızca süre kaybettirir. Arşiv fallback'ine geç.
+                return {
+                    "season": season,
+                    "error": last_error,
+                    "strategy": "archive_fallback_after_wrong_season_target",
+                }
         except Exception as exc:
             last_error = f"{match_id}: {exc}"
         finally:
@@ -1183,6 +1409,7 @@ def main() -> int:
     )
     write_json(args.output, runtime)
     report = {
+        "discoveryVersion": STANDINGS_TARGET_CACHE_VERSION,
         "generatedAt": now(),
         "clubUrl": club_url,
         "seasonsRequested": len(choices),

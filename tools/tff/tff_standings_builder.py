@@ -15,6 +15,7 @@ Designed for NixOS + Fish, but only needs Python + bs4/lxml.
 from __future__ import annotations
 
 import argparse
+import html
 import hashlib
 import json
 import os
@@ -61,7 +62,7 @@ except Exception as exc:  # pragma: no cover
 
 TFF = os.environ.get("TFF_BASE_URL", "http://www.tff.org/Default.aspx")
 DEFAULT_PENALTIES = "data/standings_penalties.json"
-BUILDER_VERSION = "standings-builder-v4-parallel-weekly-safe"
+BUILDER_VERSION = "standings-builder-v5-archive-stage-scope-carry-safe"
 
 
 def now() -> str:
@@ -368,12 +369,68 @@ def standings_rows_are_usable(rows: list[dict[str, Any]], require_balkes: bool =
         return False
     return True
 
-def parse_official_standings(raw: str) -> list[dict[str, Any]]:
+def _standings_scopes_for_group(sp: Any, group_id: str) -> list[Any]:
+    """Return only the archive module that owns ``group_id``.
+
+    Historical TFF pages can render two independent standings modules in the
+    same HTML document (for example Kademe and Klasman/Yukselme groups).  A
+    page-wide table scan can therefore return Balikesirspor from the other
+    module even when the requested group does not contain the club.
+    """
+    wanted = str(group_id or "").strip()
+    if not wanted:
+        return []
+    scopes: list[Any] = []
+    seen: set[int] = set()
+    for anchor in sp.find_all("a", href=True):
+        query = urllib.parse.parse_qs(
+            urllib.parse.urlparse(html.unescape(str(anchor.get("href") or ""))).query
+        )
+        candidate = (query.get("grupID") or query.get("grupId") or [""])[0]
+        if str(candidate) != wanted:
+            continue
+        container = anchor.find_parent(
+            "div", id=re.compile(r"_ctnr_div$", re.I)
+        )
+        if container is None:
+            continue
+        marker = id(container)
+        if marker not in seen:
+            seen.add(marker)
+            scopes.append(container)
+    return scopes
+
+
+def parse_official_standings(
+    raw: str,
+    group_id: str = "",
+    module_id: str = "",
+) -> list[dict[str, Any]]:
     sp = soup(raw)
     if not sp:
         return []
+    scopes: list[Any] = []
+    if module_id:
+        module = sp.find(id=str(module_id))
+        if module is None:
+            return []
+        scopes = [module]
+    elif group_id:
+        scopes = _standings_scopes_for_group(sp, group_id)
+        # Modern league pages can expose one standings module without group
+        # links. Their caller also verifies season and Balikesirspor rows. Old
+        # multi-module archive pages are guarded by archive_group_is_selected.
+    table_roots = scopes or [sp]
     candidates: list[list[dict[str, Any]]] = []
-    for table in sp.find_all("table"):
+    tables: list[Any] = []
+    seen_tables: set[int] = set()
+    for root in table_roots:
+        for table in root.find_all("table"):
+            marker = id(table)
+            if marker not in seen_tables:
+                seen_tables.add(marker)
+                tables.append(table)
+    for table in tables:
         header: dict[str, int] | None = None
         rows: list[dict[str, Any]] = []
         for tr in table.find_all("tr"):
@@ -863,7 +920,17 @@ def fetch_official_week(item: dict[str, Any], season: str, raw_root: Path,
         )
         if not ok:
             continue
-        rows = clean_standings_rows(parse_official_standings(raw))
+        query = urllib.parse.parse_qs(urllib.parse.urlparse(url).query)
+        group_id = str(
+            (query.get("grupID") or query.get("grupId") or [
+                item.get("targetGrupID") or ""
+            ])[0]
+        )
+        rows = clean_standings_rows(parse_official_standings(
+            raw,
+            group_id,
+            str(item.get("targetModuleID") or ""),
+        ))
         if standings_rows_are_usable(rows, require_balkes=True) and (
             not best or len(rows) > len(best) or any(r.get("isBalkes") for r in rows)
         ):
@@ -941,6 +1008,7 @@ def try_official_stages(item: dict[str, Any], season: str, raw_root: Path,
         stage_item = {
             "targetPageID": str(stage.get("targetPageID") or ""),
             "targetGrupID": str(stage.get("targetGrupID") or ""),
+            "targetModuleID": str(stage.get("targetModuleID") or ""),
             "targetUrls": [] if stage.get("targetPageID") else [stage.get("targetUrl")],
         }
         snapshots = try_official_weekly(
@@ -952,9 +1020,12 @@ def try_official_stages(item: dict[str, Any], season: str, raw_root: Path,
             "label": stage_label,
             "maxWeek": max_week,
             "expectedMatches": int(stage.get("expectedMatches") or 0),
+            "carriedMatches": int(stage.get("carriedMatches") or 0),
+            "rawFinalPlayed": int(stage.get("rawFinalPlayed") or 0),
             "weeksGenerated": len(snapshots),
             "targetPageID": stage.get("targetPageID"),
             "targetGrupID": stage.get("targetGrupID"),
+            "targetModuleID": stage.get("targetModuleID"),
         })
         if not snapshots:
             return [], stage_reports
@@ -965,6 +1036,9 @@ def try_official_stages(item: dict[str, Any], season: str, raw_root: Path,
             snapshot["stageId"] = stage_id
             snapshot["stageLabel"] = stage_label
             snapshot["stageNumber"] = stage_number
+            snapshot["stageExpectedMatches"] = int(stage.get("expectedMatches") or 0)
+            snapshot["stageCarriedMatches"] = int(stage.get("carriedMatches") or 0)
+            snapshot["stageRawFinalPlayed"] = int(stage.get("rawFinalPlayed") or 0)
             combined.append(snapshot)
         offset += max_week
     return combined, stage_reports
@@ -995,6 +1069,7 @@ def update_season_files(data_root: Path, season: str, snapshots: list[dict[str, 
     files = season_json.setdefault("files", {})
     files["standingsByWeek"] = f"seasons/{season}/standings_by_week.json"
     if snapshots:
+        league_summary_from_stages: dict[str, Any] | None = None
         stage_finals: dict[str, dict[str, Any]] = {}
         stage_ranges: dict[str, list[int]] = {}
         for snapshot in snapshots:
@@ -1005,34 +1080,73 @@ def update_season_files(data_root: Path, season: str, snapshots: list[dict[str, 
             stage_ranges.setdefault(stage_id, []).append(int(snapshot.get("week") or 0))
         if stage_finals:
             league_stages: list[dict[str, Any]] = []
-            for stage_id, snapshot in stage_finals.items():
+            aggregate = {
+                "played": 0, "won": 0, "drawn": 0, "lost": 0,
+                "goalsFor": 0, "goalsAgainst": 0,
+                "points": 0, "rawPoints": 0, "pointsDeducted": 0,
+            }
+            ordered_finals = sorted(
+                stage_finals.items(),
+                key=lambda value: int(value[1].get("stageNumber") or 0),
+            )
+            final_rank = 0
+            for stage_id, snapshot in ordered_finals:
                 rows = snapshot.get("standings") or []
                 row = next((value for value in rows if value.get("isBalkes")), None)
                 if not row:
                     continue
                 weeks = stage_ranges.get(stage_id) or []
-                league_stages.append({
-                    "id": stage_id,
-                    "label": snapshot.get("stageLabel") or stage_id,
-                    "stageNumber": int(snapshot.get("stageNumber") or 0),
-                    "startWeek": min(weeks, default=0),
-                    "endWeek": max(weeks, default=0),
+                carried = int(snapshot.get("stageCarriedMatches") or 0)
+                raw_values = {
                     "played": int(row.get("played") or 0),
                     "won": int(row.get("won") or 0),
                     "drawn": int(row.get("drawn") or 0),
                     "lost": int(row.get("lost") or 0),
                     "goalsFor": int(row.get("goalsFor") or 0),
                     "goalsAgainst": int(row.get("goalsAgainst") or 0),
-                    "goalDifference": int(row.get("goalDifference") or 0),
                     "points": int(row.get("points") or 0),
-                    "finalRank": int(row.get("rank") or 0),
+                    "rawPoints": int(row.get("rawPoints") or row.get("points") or 0),
+                    "pointsDeducted": int(row.get("pointsDeducted") or 0),
+                }
+                effective = {
+                    key: raw_values[key] - aggregate[key] if carried else raw_values[key]
+                    for key in aggregate
+                }
+                if carried:
+                    aggregate.update(raw_values)
+                else:
+                    for key, value in effective.items():
+                        aggregate[key] += value
+                final_rank = int(row.get("rank") or 0)
+                league_stages.append({
+                    "id": stage_id,
+                    "label": snapshot.get("stageLabel") or stage_id,
+                    "stageNumber": int(snapshot.get("stageNumber") or 0),
+                    "startWeek": min(weeks, default=0),
+                    "endWeek": max(weeks, default=0),
+                    "played": effective["played"],
+                    "won": effective["won"],
+                    "drawn": effective["drawn"],
+                    "lost": effective["lost"],
+                    "goalsFor": effective["goalsFor"],
+                    "goalsAgainst": effective["goalsAgainst"],
+                    "goalDifference": effective["goalsFor"] - effective["goalsAgainst"],
+                    "points": effective["points"],
+                    "finalRank": final_rank,
+                    "carriedMatches": carried,
+                    "officialTableIsCumulative": bool(carried),
                 })
             league_stages.sort(key=lambda value: (value.get("stageNumber", 0), value.get("startWeek", 0)))
             season_json["leagueStages"] = league_stages
+            league_summary_from_stages = {
+                **aggregate,
+                "goalDifference": aggregate["goalsFor"] - aggregate["goalsAgainst"],
+                "finalRank": final_rank,
+            }
         final = snapshots[-1].get("standings") or []
         balkes = next((r for r in final if r.get("isBalkes")), None)
         if balkes:
-            league_summary = {
+            league_summary = league_summary_from_stages or {
                 "played": int(balkes.get("played") or 0),
                 "won": int(balkes.get("won") or 0),
                 "drawn": int(balkes.get("drawn") or 0),

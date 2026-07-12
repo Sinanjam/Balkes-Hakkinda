@@ -85,4 +85,7 @@ fish sync-tff.fish
 Yarım kalırsa aynı komutu yeniden çalıştır; biten dosyalar tekrar indirilmez.
 Detaylar: [TFF hızlı veri çekme](docs/TFF_HIZLI_VERI_CEKME.md)
 
+Son 1083 maçlık çıktının puan tablosu denetimi ve giderilen tarihsel hedef
+hataları: [docs/TFF_DATA_AUDIT_2026-07-12.md](docs/TFF_DATA_AUDIT_2026-07-12.md)
+
 Detaylı inceleme ve taşıma sırası: [docs/INCELEME_VE_TASIMA_PLANI.md](docs/INCELEME_VE_TASIMA_PLANI.md)

@@ -1,5 +1,5 @@
 {
-  "policy": "TFF-only; perfect details; strict legacy safe pageID probe v2.6 with gateway-branch guard/no blind current scan",
+  "policy": "TFF-only; season-verified target discovery v2.7; scoped archive stages; no blind current scan",
   "team": "Balıkesirspor",
   "baseline": {
     "minSeasons": 1,
@@ -1224,6 +1224,23 @@
       "professionalStatus": "professional",
       "competition": "Türkiye 3. Ligi",
       "leagueEra": "Türkiye 3. Ligi",
+      "expectedLeagueMatches": 32,
+      "matchOverrides": {
+        "32333": {
+          "matchType": "playoff",
+          "matchTypeLabel": "Play-off",
+          "stage": "3. Lig Play-off",
+          "reason": "25 Mayıs 2000 Beykozspor-Balıkesirspor karşılaşması sezon sonu yükselme play-off maçıdır.",
+          "sourceUrl": "https://www.tff.org/Default.aspx?macId=32333&pageID=528"
+        },
+        "32335": {
+          "matchType": "playoff",
+          "matchTypeLabel": "Play-off",
+          "stage": "3. Lig Play-off",
+          "reason": "27 Mayıs 2000 Balıkesirspor-A.Sebatspor karşılaşması sezon sonu yükselme play-off maçıdır.",
+          "sourceUrl": "https://www.tff.org/Default.aspx?macId=32335&pageID=528"
+        }
+      },
       "planConfidence": "history-only-legacy-probe",
       "targetUrls": [],
       "allowLegacyBroadFallback": false,
@@ -1375,40 +1392,70 @@
         29,
         528
       ],
-      "knownMatchIds": [],
+      "knownMatchIds": [
+        "47516"
+      ],
       "tryWeeklyStandings": false,
       "professionalStatus": "professional",
       "competition": "Türkiye 2. Ligi",
       "leagueEra": "Türkiye 2. Ligi",
-      "planConfidence": "bounded-legacy-pageid-probe",
-      "targetUrls": [],
+      "planConfidence": "verified-official-multi-stage-archive",
+      "maxWeek": 36,
+      "expectedLeagueMatches": 36,
+      "targetUrls": [
+        "https://www.tff.org/Default.aspx?pageID=806&grupID=229",
+        "https://www.tff.org/Default.aspx?pageID=806&grupID=233"
+      ],
+      "standingsStages": [
+        {
+          "id": "group-02",
+          "label": "Kademe 02",
+          "targetPageID": "806",
+          "targetGrupID": "229",
+          "targetUrl": "https://www.tff.org/Default.aspx?pageID=806&grupID=229",
+          "maxWeek": 18,
+          "expectedMatches": 18,
+          "teamCount": 10
+        },
+        {
+          "id": "group-f",
+          "label": "Yükselme F",
+          "targetPageID": "806",
+          "targetGrupID": "233",
+          "targetUrl": "https://www.tff.org/Default.aspx?pageID=806&grupID=233",
+          "maxWeek": 18,
+          "expectedMatches": 18,
+          "teamCount": 10
+        }
+      ],
+      "matchOverrides": {
+        "47516": {
+          "matchType": "playoff",
+          "matchTypeLabel": "Play-off",
+          "stage": "1. Lig Play-off",
+          "reason": "20 Mayıs 1996 Karabükspor-Balıkesirspor karşılaşması resmi lig tablosundan sonraki play-off eleme maçıdır.",
+          "sourceUrl": "https://www.tff.org/Default.aspx?macId=47516&pageID=528"
+        }
+      },
       "allowLegacyBroadFallback": false,
       "legacyBroadProbeLimit": 0,
-      "legacyDiscoveryNote": "No exact TFF season pageID is confirmed in registry yet; factory uses generic page discovery, verifies date/team, and broad-fallbacks only if selected IDs produce zero hits.",
+      "legacyDiscoveryNote": "Official TFF pageID 806: Kademe 02/grupID 229 and Yükselme F/grupID 233; match 47516 is the subsequent play-off tie.",
       "legacySeason": true,
       "requiresExactTffTarget": false,
-      "legacySafetyNote": "Skipped in strict mode until exact TFF targetPageID/targetUrl or hand-verified knownMatchIds are added.",
+      "legacySafetyNote": "Exact official stage targets and one source-reviewed play-off classification replace the legacy probe.",
       "skipTff": false,
       "skipReason": "",
       "knownOnly": false,
       "noTffRecord": false,
       "amateurSeason": false,
       "legacyPageIdProbe": {
-        "enabled": true,
-        "pageIdRanges": [
-          {
-            "start": 300,
-            "end": 560
-          }
-        ],
-        "maxWeek": 40,
-        "groupLimit": 40,
-        "strategy": "scan bounded historical pageID window; expand weeks only when page/group mentions Balıkesirspor; abandon repeated 502/503/504 gateway branches; accept only match details with Balıkesirspor and date inside season",
-        "confidence": "safe-bounded-probe-gateway-guard",
-        "gatewaySkipAfter": 3
+        "enabled": false,
+        "strategy": "exact official multi-stage targets",
+        "confidence": "verified"
       },
       "notes": [
-        "v2.5: exact target missing; safe bounded pageID probe enabled instead of blind current-page scan."
+        "Official final tables: Kademe 02 (18 matches) and Yükselme F (18 matches).",
+        "Match 47516 is preserved as a play-off match and excluded only from league-table totals."
       ]
     },
     {

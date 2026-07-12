@@ -7,6 +7,7 @@ from collections import Counter, defaultdict
 from datetime import date
 from pathlib import Path
 from typing import Any
+from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 
 from tff_factory import (
     is_balkes,
@@ -70,6 +71,15 @@ def recompute_summary(details: list[dict[str, Any]]) -> dict[str, int]:
     }
 
 
+def normalized_target_url(value: Any) -> str:
+    raw = str(value or "").strip()
+    if not raw:
+        return ""
+    parsed = urlparse(raw)
+    query = urlencode(sorted((key.lower(), val) for key, val in parse_qsl(parsed.query)))
+    return urlunparse(("", parsed.netloc.lower(), parsed.path.lower(), "", query, ""))
+
+
 def validate_discovery(path: Path, strict: bool) -> tuple[list[str], list[str], dict[str, Any]]:
     discovery = read_json(path, None)
     if not isinstance(discovery, dict):
@@ -107,6 +117,44 @@ def validate_discovery(path: Path, strict: bool) -> tuple[list[str], list[str], 
     succeeded = as_int(discovery.get("seasonsSucceeded"))
     if requested and succeeded < requested and not hard_errors:
         warnings.append(f"Keşif kapsamı eksik: {succeeded}/{requested} sezon başarılı.")
+
+    target_seasons: defaultdict[str, set[str]] = defaultdict(set)
+    duplicate_stage_signatures = 0
+    for item in as_list(discovery.get("standingsTargets")):
+        if not isinstance(item, dict):
+            continue
+        season = str(item.get("season") or "")
+        urls = [item.get("targetUrl")]
+        signatures: defaultdict[str, list[str]] = defaultdict(list)
+        for stage in as_list(item.get("stages")):
+            if not isinstance(stage, dict):
+                continue
+            urls.append(stage.get("targetUrl"))
+            signature = str(stage.get("standingsSignature") or "")
+            if signature:
+                signatures[signature].append(str(stage.get("id") or stage.get("label") or "?"))
+        for url in urls:
+            normalized = normalized_target_url(url)
+            if normalized and season:
+                target_seasons[normalized].add(season)
+        for stage_ids in signatures.values():
+            if len(stage_ids) > 1:
+                duplicate_stage_signatures += 1
+                errors.append(
+                    f"Keşif {season}: aynı resmi puan tablosu birden fazla aşama sayıldı "
+                    f"({', '.join(stage_ids)})."
+                )
+
+    reused_targets = {
+        url: sorted(seasons)
+        for url, seasons in target_seasons.items()
+        if len(seasons) > 1
+    }
+    for url, seasons in reused_targets.items():
+        errors.append(
+            "Keşif sezonları aynı puan hedefini paylaşıyor: "
+            f"{', '.join(seasons)} -> {url}"
+        )
     return errors, warnings, {
         "available": True,
         "requested": requested,
@@ -114,6 +162,8 @@ def validate_discovery(path: Path, strict: bool) -> tuple[list[str], list[str], 
         "withMatches": as_int(discovery.get("seasonsWithMatches")),
         "hardErrors": len(hard_errors),
         "partialPagination": len(partial),
+        "reusedStandingsTargets": len(reused_targets),
+        "duplicateStageSignatures": duplicate_stage_signatures,
     }
 
 
@@ -326,6 +376,7 @@ def main() -> int:
         last_week = 0
         last_balkes: dict[str, Any] | None = None
         stage_balkes: dict[str, dict[str, Any]] = {}
+        stage_snapshots: dict[str, dict[str, Any]] = {}
         for snapshot in standings:
             if not isinstance(snapshot, dict):
                 continue
@@ -357,7 +408,9 @@ def main() -> int:
             valid_week_numbers.append(week)
             last_balkes = balkes_row
             if snapshot.get("stageId"):
-                stage_balkes[str(snapshot["stageId"])] = balkes_row
+                stage_id = str(snapshot["stageId"])
+                stage_balkes[stage_id] = balkes_row
+                stage_snapshots[stage_id] = snapshot
 
         if valid_week_numbers:
             expected_weeks = set(range(1, max(valid_week_numbers) + 1))
@@ -386,20 +439,39 @@ def main() -> int:
                     for stage in (registry_by_season.get(season) or {}).get("standingsStages", [])
                     if isinstance(stage, dict) and stage.get("id")
                 }
-                stage_played = sum(as_int(row.get("played")) for row in stage_balkes.values())
-                for stage_id, row in stage_balkes.items():
+                stage_ids = sorted(
+                    stage_balkes,
+                    key=lambda value: as_int((stage_snapshots.get(value) or {}).get("stageNumber")),
+                )
+                stage_played = 0
+                table_goals_for = 0
+                table_goals_against = 0
+                for stage_id in stage_ids:
+                    row = stage_balkes[stage_id]
+                    snapshot = stage_snapshots.get(stage_id) or {}
+                    carried = as_int(snapshot.get("stageCarriedMatches"))
+                    effective_played = as_int(row.get("played")) - carried
                     expected = as_int((configured.get(stage_id) or {}).get("expectedMatches"))
-                    if expected and as_int(row.get("played")) != expected:
+                    if not expected:
+                        expected = as_int(snapshot.get("stageExpectedMatches"))
+                    if expected and effective_played != expected:
                         season_errors.append(
-                            f"{stage_id} son tablosu oynanan={row.get('played')}, beklenen={expected}"
+                            f"{stage_id} son tablosu ek oynanan={effective_played}, beklenen={expected}"
                         )
+                    stage_played += effective_played
+                    raw_goals_for = as_int(row.get("goalsFor"))
+                    raw_goals_against = as_int(row.get("goalsAgainst"))
+                    if carried:
+                        table_goals_for = raw_goals_for
+                        table_goals_against = raw_goals_against
+                    else:
+                        table_goals_for += raw_goals_for
+                        table_goals_against += raw_goals_against
                 if stage_played != league_played:
                     season_errors.append(
                         f"resmi aşamalarda toplam oynanan={stage_played}, "
                         f"maç indeksinde oynanan lig maçı={league_played}"
                     )
-                table_goals_for = sum(as_int(row.get("goalsFor")) for row in stage_balkes.values())
-                table_goals_against = sum(as_int(row.get("goalsAgainst")) for row in stage_balkes.values())
             else:
                 standings_played = as_int(last_balkes.get("played"))
                 if standings_played != league_played:

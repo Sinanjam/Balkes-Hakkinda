@@ -807,6 +807,17 @@ def parse_events_best_effort(txt: str, home: str, away: str) -> list[dict[str, A
     return events
 
 
+def match_override_for(seed: dict[str, Any], season: str, mid: str) -> dict[str, Any]:
+    """Return a narrowly scoped, source-reviewed correction for one match."""
+    for item in seed.get("seasons", []) or []:
+        if str(item.get("season") or "") != str(season):
+            continue
+        overrides = item.get("matchOverrides") or {}
+        value = overrides.get(str(mid)) if isinstance(overrides, dict) else None
+        return value if isinstance(value, dict) else {}
+    return {}
+
+
 def parse_detail(mid: str, raw: str, season: str, source_url: str, seed: dict[str, Any]) -> dict[str, Any]:
     soup = soup_from_html(raw)
     txt = text_from_html(raw)
@@ -816,7 +827,11 @@ def parse_detail(mid: str, raw: str, season: str, source_url: str, seed: dict[st
     competition = parse_competition(soup, txt)
     professional, professional_evidence = professional_competition_status(competition)
     match_type, match_label = classify_type(competition)
-    stage = match_label
+    correction = match_override_for(seed, season, str(mid))
+    if correction.get("matchType"):
+        match_type = str(correction["matchType"])
+        match_label = str(correction.get("matchTypeLabel") or correction.get("label") or match_type)
+    stage = str(correction.get("stage") or match_label)
     is_home = is_balkes(home)
     is_away = is_balkes(away)
     opponent = away if is_home else home if is_away else (away or home)
@@ -845,7 +860,7 @@ def parse_detail(mid: str, raw: str, season: str, source_url: str, seed: dict[st
         "players": len(players),
     }
     quality = "A" if home and away and played and match_date and (completeness["starting11Home"] or completeness["starting11Away"] or completeness["goals"] or completeness["cards"]) else "B" if home and away and match_date else "D"
-    return {
+    detail = {
         "id": str(mid),
         "matchCode": parse_match_code(soup, txt),
         "season": season,
@@ -890,6 +905,13 @@ def parse_detail(mid: str, raw: str, season: str, source_url: str, seed: dict[st
         "quality": quality,
         "source": {"name": "TFF", "url": source_url, "retrievedAt": now(), "sourceType": "official_tff_match_detail"},
     }
+    if correction:
+        detail["dataCorrection"] = {
+            "kind": "verified_match_classification",
+            "reason": str(correction.get("reason") or "Registry override"),
+            "sourceUrl": str(correction.get("sourceUrl") or source_url),
+        }
+    return detail
 
 
 def detail_is_valid_for_season(detail: dict[str, Any], season: str, seed: dict[str, Any]) -> tuple[bool, str]:

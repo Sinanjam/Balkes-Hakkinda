@@ -85,6 +85,22 @@ fish sync-tff.fish
 Yarım kalırsa aynı komutu yeniden çalıştır; biten dosyalar tekrar indirilmez.
 Detaylar: [TFF hızlı veri çekme](docs/TFF_HIZLI_VERI_CEKME.md)
 
+Uzun çekimi yalnız bu bilgisayarda, terminal kapansa da kalite kapısını geçene
+kadar çalıştırmak için:
+
+```fish
+fish start-tff-local.fish
+```
+
+```fish
+fish status-tff-local.fish
+fish stop-tff-local.fish
+```
+
+Bu görev GitHub'a veya APK'ya veri yüklemez. Sonuç ve ham önbellek sırasıyla
+`generated/tff-data/` ve `.cache/tff/` altında yerelde kalır. Yapısal eksik,
+yarım TFF sayfalaması veya eksik puan tablosu varken görev tamamlanmış sayılmaz.
+
 Son 1083 maçlık çıktının puan tablosu denetimi ve giderilen tarihsel hedef
 hataları: [docs/TFF_DATA_AUDIT_2026-07-12.md](docs/TFF_DATA_AUDIT_2026-07-12.md)
 

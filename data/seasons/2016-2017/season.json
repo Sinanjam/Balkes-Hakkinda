@@ -1,0 +1,66 @@
+{
+  "id": "2016-2017",
+  "name": "2016-2017",
+  "competition": "TFF 1.Lig (Profesyonel Takım)",
+  "sourcePolicy": "TFF-only",
+  "factoryVersion": "v5-professional-only-resilient",
+  "updatedAt": "2026-07-12T17:36:54.808913Z",
+  "summary": {
+    "matches": 36,
+    "wins": 11,
+    "draws": 12,
+    "losses": 13,
+    "goalsFor": 58,
+    "goalsAgainst": 52,
+    "goalDifference": 6,
+    "matchTypes": {
+      "league": 34,
+      "cup": 2
+    },
+    "points": 42,
+    "rawPoints": 42,
+    "pointsDeducted": 0,
+    "finalRank": 9
+  },
+  "files": {
+    "matchesIndex": "seasons/2016-2017/matches_index.json",
+    "standingsByWeek": "seasons/2016-2017/standings_by_week.json"
+  },
+  "sanitizedAt": "2026-07-12T17:38:45.594367Z",
+  "sanitizerVersion": "v1-professional-team-only",
+  "leagueStages": [
+    {
+      "id": "group-lig",
+      "label": "Lig",
+      "stageNumber": 1,
+      "startWeek": 1,
+      "endWeek": 34,
+      "played": 34,
+      "won": 10,
+      "drawn": 12,
+      "lost": 12,
+      "goalsFor": 56,
+      "goalsAgainst": 48,
+      "goalDifference": 8,
+      "points": 42,
+      "finalRank": 9,
+      "carriedMatches": 0,
+      "officialTableIsCumulative": false
+    }
+  ],
+  "leagueSummary": {
+    "played": 34,
+    "won": 10,
+    "drawn": 12,
+    "lost": 12,
+    "goalsFor": 56,
+    "goalsAgainst": 48,
+    "points": 42,
+    "rawPoints": 42,
+    "pointsDeducted": 0,
+    "goalDifference": 8,
+    "finalRank": 9
+  },
+  "standingsUpdatedAt": "2026-07-12T17:47:45.314380Z",
+  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+}

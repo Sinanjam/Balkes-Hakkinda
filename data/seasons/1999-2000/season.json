@@ -1,0 +1,66 @@
+{
+  "id": "1999-2000",
+  "name": "1999-2000",
+  "competition": "3. Lig (Profesyonel Takım)",
+  "sourcePolicy": "TFF-only",
+  "factoryVersion": "v5-professional-only-resilient",
+  "updatedAt": "2026-07-12T17:38:03.226342Z",
+  "summary": {
+    "matches": 34,
+    "wins": 19,
+    "draws": 8,
+    "losses": 7,
+    "goalsFor": 54,
+    "goalsAgainst": 31,
+    "goalDifference": 23,
+    "matchTypes": {
+      "league": 32,
+      "playoff": 2
+    },
+    "points": 62,
+    "rawPoints": 62,
+    "pointsDeducted": 0,
+    "finalRank": 2
+  },
+  "files": {
+    "matchesIndex": "seasons/1999-2000/matches_index.json",
+    "standingsByWeek": "seasons/1999-2000/standings_by_week.json"
+  },
+  "sanitizedAt": "2026-07-12T17:38:45.893969Z",
+  "sanitizerVersion": "v1-professional-team-only",
+  "leagueStages": [
+    {
+      "id": "group-06",
+      "label": "06",
+      "stageNumber": 1,
+      "startWeek": 1,
+      "endWeek": 34,
+      "played": 32,
+      "won": 18,
+      "drawn": 8,
+      "lost": 6,
+      "goalsFor": 48,
+      "goalsAgainst": 24,
+      "goalDifference": 24,
+      "points": 62,
+      "finalRank": 2,
+      "carriedMatches": 0,
+      "officialTableIsCumulative": false
+    }
+  ],
+  "leagueSummary": {
+    "played": 32,
+    "won": 18,
+    "drawn": 8,
+    "lost": 6,
+    "goalsFor": 48,
+    "goalsAgainst": 24,
+    "points": 62,
+    "rawPoints": 62,
+    "pointsDeducted": 0,
+    "goalDifference": 24,
+    "finalRank": 2
+  },
+  "standingsUpdatedAt": "2026-07-12T18:00:06.362835Z",
+  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+}

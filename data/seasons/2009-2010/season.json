@@ -1,0 +1,84 @@
+{
+  "id": "2009-2010",
+  "name": "2009-2010",
+  "competition": "TFF 3.Lig Kademe (Profesyonel Takım)",
+  "sourcePolicy": "TFF-only",
+  "factoryVersion": "v5-professional-only-resilient",
+  "updatedAt": "2026-07-12T17:37:34.244248Z",
+  "summary": {
+    "matches": 39,
+    "wins": 23,
+    "draws": 8,
+    "losses": 8,
+    "goalsFor": 70,
+    "goalsAgainst": 34,
+    "goalDifference": 36,
+    "matchTypes": {
+      "league": 38,
+      "cup": 1
+    },
+    "points": 77,
+    "rawPoints": 77,
+    "pointsDeducted": 0,
+    "finalRank": 2
+  },
+  "files": {
+    "matchesIndex": "seasons/2009-2010/matches_index.json",
+    "standingsByWeek": "seasons/2009-2010/standings_by_week.json"
+  },
+  "sanitizedAt": "2026-07-12T17:38:45.777731Z",
+  "sanitizerVersion": "v1-professional-team-only",
+  "leagueStages": [
+    {
+      "id": "group-01",
+      "label": "01",
+      "stageNumber": 1,
+      "startWeek": 1,
+      "endWeek": 22,
+      "played": 20,
+      "won": 13,
+      "drawn": 4,
+      "lost": 3,
+      "goalsFor": 40,
+      "goalsAgainst": 13,
+      "goalDifference": 27,
+      "points": 43,
+      "finalRank": 1,
+      "carriedMatches": 0,
+      "officialTableIsCumulative": false
+    },
+    {
+      "id": "standalone-yukselme-grubu",
+      "label": "Yükselme Grubu",
+      "stageNumber": 2,
+      "startWeek": 23,
+      "endWeek": 40,
+      "played": 18,
+      "won": 10,
+      "drawn": 4,
+      "lost": 4,
+      "goalsFor": 30,
+      "goalsAgainst": 16,
+      "goalDifference": 14,
+      "points": 34,
+      "finalRank": 2,
+      "carriedMatches": 0,
+      "officialTableIsCumulative": false
+    }
+  ],
+  "leagueSummary": {
+    "played": 38,
+    "won": 23,
+    "drawn": 8,
+    "lost": 7,
+    "goalsFor": 70,
+    "goalsAgainst": 29,
+    "points": 77,
+    "rawPoints": 77,
+    "pointsDeducted": 0,
+    "goalDifference": 41,
+    "finalRank": 2
+  },
+  "standingsUpdatedAt": "2026-07-12T17:57:04.606558Z",
+  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+}

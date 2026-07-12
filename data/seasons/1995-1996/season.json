@@ -1,0 +1,85 @@
+{
+  "id": "1995-1996",
+  "name": "1995-1996",
+  "competition": "Lig B Klasman (Profesyonel Takım)",
+  "sourcePolicy": "TFF-only",
+  "factoryVersion": "v5-professional-only-resilient",
+  "updatedAt": "2026-07-12T17:38:24.302663Z",
+  "summary": {
+    "matches": 39,
+    "wins": 18,
+    "draws": 10,
+    "losses": 11,
+    "goalsFor": 61,
+    "goalsAgainst": 47,
+    "goalDifference": 14,
+    "matchTypes": {
+      "league": 36,
+      "cup": 2,
+      "playoff": 1
+    },
+    "points": 61,
+    "rawPoints": 61,
+    "pointsDeducted": 0,
+    "finalRank": 4
+  },
+  "files": {
+    "matchesIndex": "seasons/1995-1996/matches_index.json",
+    "standingsByWeek": "seasons/1995-1996/standings_by_week.json"
+  },
+  "sanitizedAt": "2026-07-12T17:38:45.987274Z",
+  "sanitizerVersion": "v1-professional-team-only",
+  "leagueStages": [
+    {
+      "id": "group-02",
+      "label": "Kademe 02",
+      "stageNumber": 1,
+      "startWeek": 1,
+      "endWeek": 18,
+      "played": 18,
+      "won": 9,
+      "drawn": 6,
+      "lost": 3,
+      "goalsFor": 29,
+      "goalsAgainst": 18,
+      "goalDifference": 11,
+      "points": 33,
+      "finalRank": 1,
+      "carriedMatches": 0,
+      "officialTableIsCumulative": false
+    },
+    {
+      "id": "group-f",
+      "label": "Yükselme F",
+      "stageNumber": 2,
+      "startWeek": 19,
+      "endWeek": 36,
+      "played": 18,
+      "won": 8,
+      "drawn": 4,
+      "lost": 6,
+      "goalsFor": 26,
+      "goalsAgainst": 23,
+      "goalDifference": 3,
+      "points": 28,
+      "finalRank": 4,
+      "carriedMatches": 0,
+      "officialTableIsCumulative": false
+    }
+  ],
+  "leagueSummary": {
+    "played": 36,
+    "won": 17,
+    "drawn": 10,
+    "lost": 9,
+    "goalsFor": 55,
+    "goalsAgainst": 41,
+    "points": 61,
+    "rawPoints": 61,
+    "pointsDeducted": 0,
+    "goalDifference": 14,
+    "finalRank": 4
+  },
+  "standingsUpdatedAt": "2026-07-12T18:01:18.067165Z",
+  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+}

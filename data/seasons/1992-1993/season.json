@@ -1,0 +1,84 @@
+{
+  "id": "1992-1993",
+  "name": "1992-1993",
+  "competition": "Lig B Klasman (Profesyonel Takım)",
+  "sourcePolicy": "TFF-only",
+  "factoryVersion": "v5-professional-only-resilient",
+  "updatedAt": "2026-07-12T17:38:35.165609Z",
+  "summary": {
+    "matches": 38,
+    "wins": 19,
+    "draws": 5,
+    "losses": 14,
+    "goalsFor": 69,
+    "goalsAgainst": 61,
+    "goalDifference": 8,
+    "matchTypes": {
+      "league": 36,
+      "cup": 2
+    },
+    "points": 59,
+    "rawPoints": 59,
+    "pointsDeducted": 0,
+    "finalRank": 1
+  },
+  "files": {
+    "matchesIndex": "seasons/1992-1993/matches_index.json",
+    "standingsByWeek": "seasons/1992-1993/standings_by_week.json"
+  },
+  "sanitizedAt": "2026-07-12T17:38:46.056536Z",
+  "sanitizerVersion": "v1-professional-team-only",
+  "leagueStages": [
+    {
+      "id": "group-02",
+      "label": "02",
+      "stageNumber": 1,
+      "startWeek": 1,
+      "endWeek": 22,
+      "played": 20,
+      "won": 10,
+      "drawn": 1,
+      "lost": 9,
+      "goalsFor": 32,
+      "goalsAgainst": 34,
+      "goalDifference": -2,
+      "points": 31,
+      "finalRank": 4,
+      "carriedMatches": 0,
+      "officialTableIsCumulative": false
+    },
+    {
+      "id": "group-k2",
+      "label": "K2",
+      "stageNumber": 2,
+      "startWeek": 23,
+      "endWeek": 40,
+      "played": 16,
+      "won": 8,
+      "drawn": 4,
+      "lost": 4,
+      "goalsFor": 33,
+      "goalsAgainst": 23,
+      "goalDifference": 10,
+      "points": 28,
+      "finalRank": 1,
+      "carriedMatches": 0,
+      "officialTableIsCumulative": false
+    }
+  ],
+  "leagueSummary": {
+    "played": 36,
+    "won": 18,
+    "drawn": 5,
+    "lost": 13,
+    "goalsFor": 65,
+    "goalsAgainst": 57,
+    "points": 59,
+    "rawPoints": 59,
+    "pointsDeducted": 0,
+    "goalDifference": 8,
+    "finalRank": 1
+  },
+  "standingsUpdatedAt": "2026-07-12T18:01:32.607312Z",
+  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+}

@@ -1,0 +1,1417 @@
+{
+  "id": "251256",
+  "matchCode": "4722",
+  "season": "2023-2024",
+  "competition": "TFF 3. LİG (Profesyonel Takım)",
+  "teamLevel": "professional",
+  "teamLevelEvidence": "explicit_professional",
+  "competitionType": "league",
+  "competitionLabel": "Lig",
+  "stadium": "BALIKESİR ATATÜRK - BALIKESİR",
+  "venue": "BALIKESİR ATATÜRK - BALIKESİR",
+  "stage": "Lig",
+  "stageLabel": "Lig",
+  "date": "2023-12-10",
+  "time": "14:00",
+  "dateDisplay": "2023-12-10 - 14:00",
+  "homeTeam": "Balıkesirspor",
+  "awayTeam": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+  "matchType": "league",
+  "matchTypeLabel": "Lig",
+  "type": "league",
+  "typeLabel": "Lig",
+  "score": {
+    "home": 2,
+    "away": 2,
+    "display": "2-2",
+    "played": true
+  },
+  "balkes": {
+    "isHome": true,
+    "isAway": false,
+    "opponent": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+    "goalsFor": 2,
+    "goalsAgainst": 2,
+    "result": "D"
+  },
+  "officials": [
+    {
+      "role": "Hakem",
+      "name": "UGURCAN GÖKLER"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "ABDULLAH POLAT"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "AHMET FINDIK"
+    },
+    {
+      "role": "Dördüncü Hakem",
+      "name": "ÖMER TAHANKUT MUSLU"
+    }
+  ],
+  "referees": [
+    {
+      "role": "Hakem",
+      "name": "UGURCAN GÖKLER"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "ABDULLAH POLAT"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "AHMET FINDIK"
+    },
+    {
+      "role": "Dördüncü Hakem",
+      "name": "ÖMER TAHANKUT MUSLU"
+    }
+  ],
+  "lineups": {
+    "home": {
+      "team": "Balıkesirspor",
+      "starting11": [
+        {
+          "name": "HÜSEYİN ALTINTAŞ",
+          "number": 12,
+          "shirt_no": "12",
+          "tffPersonId": "974194"
+        },
+        {
+          "name": "BİROL PARLAK",
+          "number": 4,
+          "shirt_no": "4",
+          "tffPersonId": "824596"
+        },
+        {
+          "name": "BERAT AYDOĞDU",
+          "number": 6,
+          "shirt_no": "6",
+          "tffPersonId": "1196386"
+        },
+        {
+          "name": "ARDA İBRAHİM AKGÜN",
+          "number": 11,
+          "shirt_no": "11",
+          "tffPersonId": "1934117"
+        },
+        {
+          "name": "HAKAN AKGÜL",
+          "number": 14,
+          "shirt_no": "14",
+          "tffPersonId": "1613383"
+        },
+        {
+          "name": "ASIM HAMZAÇEBİ",
+          "number": 15,
+          "shirt_no": "15",
+          "tffPersonId": "1340429"
+        },
+        {
+          "name": "DOĞANAY AVCI",
+          "number": 20,
+          "shirt_no": "20",
+          "tffPersonId": "2024592"
+        },
+        {
+          "name": "ERKAN SÜER",
+          "number": 40,
+          "shirt_no": "40",
+          "tffPersonId": "1567856"
+        },
+        {
+          "name": "OKTAY BALA",
+          "number": 55,
+          "shirt_no": "55",
+          "tffPersonId": "1108664"
+        },
+        {
+          "name": "GÖKSU MUTLU",
+          "number": 70,
+          "shirt_no": "70",
+          "tffPersonId": "1449337"
+        },
+        {
+          "name": "UTKAN GÖKÇEN",
+          "number": 88,
+          "shirt_no": "88",
+          "tffPersonId": "1734117"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "YİĞİTHAN KIR",
+          "number": 1,
+          "shirt_no": "1",
+          "tffPersonId": "1588286"
+        },
+        {
+          "name": "KAĞAN KAYALI",
+          "number": 5,
+          "shirt_no": "5",
+          "tffPersonId": "1377605"
+        },
+        {
+          "name": "BERKAY AYKURT",
+          "number": 7,
+          "shirt_no": "7",
+          "tffPersonId": "1621081"
+        },
+        {
+          "name": "BERKE DOĞUKAN ÖNDE",
+          "number": 9,
+          "shirt_no": "9",
+          "tffPersonId": "1139074"
+        },
+        {
+          "name": "SEDAT YİĞİT KURNAZ",
+          "number": 10,
+          "shirt_no": "10",
+          "tffPersonId": "1712887"
+        },
+        {
+          "name": "ABDULLAH ADIYAMAN",
+          "number": 13,
+          "shirt_no": "13",
+          "tffPersonId": "1913579"
+        },
+        {
+          "name": "BERK TOSUN",
+          "number": 16,
+          "shirt_no": "16",
+          "tffPersonId": "1621067"
+        },
+        {
+          "name": "ENES KARABULUT",
+          "number": 19,
+          "shirt_no": "19",
+          "tffPersonId": "1695696"
+        },
+        {
+          "name": "GÖRKEM ALTUN",
+          "number": 22,
+          "shirt_no": "22",
+          "tffPersonId": "1802108"
+        },
+        {
+          "name": "VOLKAN PALA",
+          "number": 29,
+          "shirt_no": "29",
+          "tffPersonId": "1021608"
+        }
+      ],
+      "technicalStaff": [
+        {
+          "name": "İSMAİL CEM CAMBAZ"
+        }
+      ],
+      "coach": "İSMAİL CEM CAMBAZ",
+      "raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu"
+    },
+    "away": {
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "starting11": [
+        {
+          "name": "DOĞUKAN ÖZÇİMEN",
+          "number": 48,
+          "shirt_no": "48",
+          "tffPersonId": "1388265"
+        },
+        {
+          "name": "KAĞAN TOPÇU",
+          "number": 4,
+          "shirt_no": "4",
+          "tffPersonId": "1515021"
+        },
+        {
+          "name": "HALİL İBRAHİM KELEŞ",
+          "number": 6,
+          "shirt_no": "6",
+          "tffPersonId": "1127101"
+        },
+        {
+          "name": "BURAK GÖKSEL",
+          "number": 7,
+          "shirt_no": "7",
+          "tffPersonId": "742652"
+        },
+        {
+          "name": "İBRAHİM ŞİRİN",
+          "number": 11,
+          "shirt_no": "11",
+          "tffPersonId": "1034014"
+        },
+        {
+          "name": "YILMAZ ÖZEREN",
+          "number": 14,
+          "shirt_no": "14",
+          "tffPersonId": "312903"
+        },
+        {
+          "name": "ATALAY YILDIRIM",
+          "number": 17,
+          "shirt_no": "17",
+          "tffPersonId": "1568965"
+        },
+        {
+          "name": "ERHAN ŞENTÜRK",
+          "number": 20,
+          "shirt_no": "20",
+          "tffPersonId": "690888"
+        },
+        {
+          "name": "METE KARAHAN",
+          "number": 53,
+          "shirt_no": "53",
+          "tffPersonId": "1261427"
+        },
+        {
+          "name": "SAMET AYDIN",
+          "number": 61,
+          "shirt_no": "61",
+          "tffPersonId": "863133"
+        },
+        {
+          "name": "AZİZ KIZILGÜN",
+          "number": 70,
+          "shirt_no": "70",
+          "tffPersonId": "876962"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "AMİR GÜREN",
+          "number": 33,
+          "shirt_no": "33",
+          "tffPersonId": "846542"
+        },
+        {
+          "name": "FERHAT ÇULCUOĞLU",
+          "number": 5,
+          "shirt_no": "5",
+          "tffPersonId": "303288"
+        },
+        {
+          "name": "ALİ EMRE USTAALİOĞLU",
+          "number": 9,
+          "shirt_no": "9",
+          "tffPersonId": "1558375"
+        },
+        {
+          "name": "BERKANT ALPŞANLI",
+          "number": 21,
+          "shirt_no": "21",
+          "tffPersonId": "1810944"
+        },
+        {
+          "name": "MELİH ŞENCAN",
+          "number": 22,
+          "shirt_no": "22",
+          "tffPersonId": "1005842"
+        },
+        {
+          "name": "MELİH SERHAT İŞTAR",
+          "number": 23,
+          "shirt_no": "23",
+          "tffPersonId": "1669954"
+        },
+        {
+          "name": "ARDA OKUMUŞ",
+          "number": 26,
+          "shirt_no": "26",
+          "tffPersonId": "1605903"
+        },
+        {
+          "name": "MERT ÇAKAR",
+          "number": 35,
+          "shirt_no": "35",
+          "tffPersonId": "876968"
+        },
+        {
+          "name": "FUAT DURAN",
+          "number": 42,
+          "shirt_no": "42",
+          "tffPersonId": "1526329"
+        },
+        {
+          "name": "BERAT YAMAN",
+          "number": 88,
+          "shirt_no": "88",
+          "tffPersonId": "1686455"
+        }
+      ],
+      "technicalStaff": [
+        {
+          "name": "SÜLEYMAN VARLIK"
+        }
+      ],
+      "coach": "SÜLEYMAN VARLIK",
+      "raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu"
+    }
+  },
+  "players": [
+    {
+      "name": "ABDULLAH ADIYAMAN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 13,
+      "tffPersonId": "1913579"
+    },
+    {
+      "name": "ARDA İBRAHİM AKGÜN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 11,
+      "tffPersonId": "1934117"
+    },
+    {
+      "name": "ASIM HAMZAÇEBİ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 15,
+      "tffPersonId": "1340429"
+    },
+    {
+      "name": "BERAT AYDOĞDU",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 6,
+      "tffPersonId": "1196386"
+    },
+    {
+      "name": "BERK TOSUN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 16,
+      "tffPersonId": "1621067"
+    },
+    {
+      "name": "BERKAY AYKURT",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 7,
+      "tffPersonId": "1621081"
+    },
+    {
+      "name": "BERKE DOĞUKAN ÖNDE",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 9,
+      "tffPersonId": "1139074"
+    },
+    {
+      "name": "BİROL PARLAK",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 4,
+      "tffPersonId": "824596"
+    },
+    {
+      "name": "DOĞANAY AVCI",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "goal",
+        "red_card"
+      ],
+      "number": 20,
+      "tffPersonId": "2024592"
+    },
+    {
+      "name": "ENES KARABULUT",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 19,
+      "tffPersonId": "1695696"
+    },
+    {
+      "name": "ERKAN SÜER",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card",
+        "substitution_out"
+      ],
+      "number": 40,
+      "tffPersonId": "1567856"
+    },
+    {
+      "name": "GÖKSU MUTLU",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 70,
+      "tffPersonId": "1449337"
+    },
+    {
+      "name": "GÖRKEM ALTUN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "yellow_card"
+      ],
+      "number": 22,
+      "tffPersonId": "1802108"
+    },
+    {
+      "name": "HAKAN AKGÜL",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "goal",
+        "yellow_card"
+      ],
+      "number": 14,
+      "tffPersonId": "1613383"
+    },
+    {
+      "name": "HÜSEYİN ALTINTAŞ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 12,
+      "tffPersonId": "974194"
+    },
+    {
+      "name": "İSMAİL CEM CAMBAZ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "technical_staff"
+      ]
+    },
+    {
+      "name": "KAĞAN KAYALI",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 5,
+      "tffPersonId": "1377605"
+    },
+    {
+      "name": "OKTAY BALA",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 55,
+      "tffPersonId": "1108664"
+    },
+    {
+      "name": "SEDAT YİĞİT KURNAZ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "yellow_card",
+        "substitution_in"
+      ],
+      "number": 10,
+      "tffPersonId": "1712887"
+    },
+    {
+      "name": "UTKAN GÖKÇEN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 88,
+      "tffPersonId": "1734117"
+    },
+    {
+      "name": "VOLKAN PALA",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 29,
+      "tffPersonId": "1021608"
+    },
+    {
+      "name": "YİĞİTHAN KIR",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 1,
+      "tffPersonId": "1588286"
+    },
+    {
+      "name": "ALİ EMRE USTAALİOĞLU",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "substitute"
+      ],
+      "number": 9,
+      "tffPersonId": "1558375"
+    },
+    {
+      "name": "AMİR GÜREN",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "substitute",
+        "red_card"
+      ],
+      "number": 33,
+      "tffPersonId": "846542"
+    },
+    {
+      "name": "ARDA OKUMUŞ",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "substitute"
+      ],
+      "number": 26,
+      "tffPersonId": "1605903"
+    },
+    {
+      "name": "ATALAY YILDIRIM",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "starting11"
+      ],
+      "number": 17,
+      "tffPersonId": "1568965"
+    },
+    {
+      "name": "AZİZ KIZILGÜN",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 70,
+      "tffPersonId": "876962"
+    },
+    {
+      "name": "BERAT YAMAN",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "substitute",
+        "yellow_card",
+        "substitution_in"
+      ],
+      "number": 88,
+      "tffPersonId": "1686455"
+    },
+    {
+      "name": "BERKANT ALPŞANLI",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 21,
+      "tffPersonId": "1810944"
+    },
+    {
+      "name": "BURAK GÖKSEL",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "starting11",
+        "goal",
+        "substitution_out"
+      ],
+      "number": 7,
+      "tffPersonId": "742652"
+    },
+    {
+      "name": "DOĞUKAN ÖZÇİMEN",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "starting11"
+      ],
+      "number": 48,
+      "tffPersonId": "1388265"
+    },
+    {
+      "name": "ERHAN ŞENTÜRK",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "starting11",
+        "goal"
+      ],
+      "number": 20,
+      "tffPersonId": "690888"
+    },
+    {
+      "name": "FERHAT ÇULCUOĞLU",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 5,
+      "tffPersonId": "303288"
+    },
+    {
+      "name": "FUAT DURAN",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "substitute"
+      ],
+      "number": 42,
+      "tffPersonId": "1526329"
+    },
+    {
+      "name": "HALİL İBRAHİM KELEŞ",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 6,
+      "tffPersonId": "1127101"
+    },
+    {
+      "name": "İBRAHİM ŞİRİN",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 11,
+      "tffPersonId": "1034014"
+    },
+    {
+      "name": "KAĞAN TOPÇU",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "starting11"
+      ],
+      "number": 4,
+      "tffPersonId": "1515021"
+    },
+    {
+      "name": "MELİH ŞENCAN",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 22,
+      "tffPersonId": "1005842"
+    },
+    {
+      "name": "MELİH SERHAT İŞTAR",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "substitute"
+      ],
+      "number": 23,
+      "tffPersonId": "1669954"
+    },
+    {
+      "name": "MERT ÇAKAR",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 35,
+      "tffPersonId": "876968"
+    },
+    {
+      "name": "METE KARAHAN",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "starting11"
+      ],
+      "number": 53,
+      "tffPersonId": "1261427"
+    },
+    {
+      "name": "SAMET AYDIN",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 61,
+      "tffPersonId": "863133"
+    },
+    {
+      "name": "SÜLEYMAN VARLIK",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "technical_staff"
+      ]
+    },
+    {
+      "name": "YILMAZ ÖZEREN",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "roles": [
+        "starting11",
+        "yellow_card",
+        "substitution_out"
+      ],
+      "number": 14,
+      "tffPersonId": "312903"
+    }
+  ],
+  "events": [
+    {
+      "type": "goal",
+      "team": "Balıkesirspor",
+      "player": "DOĞANAY AVCI",
+      "scorer": "DOĞANAY AVCI",
+      "raw": "DOĞANAY AVCI,20.dk (F)",
+      "minute": 20,
+      "minuteRaw": "DOĞANAY AVCI,20.dk",
+      "goalType": "F",
+      "tffPersonId": "2024592"
+    },
+    {
+      "type": "goal",
+      "team": "Balıkesirspor",
+      "player": "HAKAN AKGÜL",
+      "scorer": "HAKAN AKGÜL",
+      "raw": "HAKAN AKGÜL,51.dk (H)",
+      "minute": 51,
+      "minuteRaw": "HAKAN AKGÜL,51.dk",
+      "goalType": "H",
+      "tffPersonId": "1613383"
+    },
+    {
+      "type": "goal",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "BURAK GÖKSEL",
+      "scorer": "BURAK GÖKSEL",
+      "raw": "BURAK GÖKSEL,40.dk (F)",
+      "minute": 40,
+      "minuteRaw": "BURAK GÖKSEL,40.dk",
+      "goalType": "F",
+      "tffPersonId": "742652"
+    },
+    {
+      "type": "goal",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "ERHAN ŞENTÜRK",
+      "scorer": "ERHAN ŞENTÜRK",
+      "raw": "ERHAN ŞENTÜRK,64.dk (H)",
+      "minute": 64,
+      "minuteRaw": "ERHAN ŞENTÜRK,64.dk",
+      "goalType": "H",
+      "tffPersonId": "690888"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ERKAN SÜER",
+      "minute": 70,
+      "minuteRaw": "70.dk",
+      "tffPersonId": "1567856"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "HAKAN AKGÜL",
+      "minute": 56,
+      "minuteRaw": "56.dk",
+      "tffPersonId": "1613383"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "SEDAT YİĞİT KURNAZ",
+      "minute": 90,
+      "minuteRaw": "90+6.dk",
+      "tffPersonId": "1712887"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "GÖRKEM ALTUN",
+      "minute": 55,
+      "minuteRaw": "55.dk",
+      "tffPersonId": "1802108"
+    },
+    {
+      "type": "red_card",
+      "card": "red",
+      "team": "Balıkesirspor",
+      "player": "DOĞANAY AVCI",
+      "minute": "MS",
+      "minuteRaw": "MS",
+      "tffPersonId": "2024592"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "YILMAZ ÖZEREN",
+      "minute": 43,
+      "minuteRaw": "43.dk",
+      "tffPersonId": "312903"
+    },
+    {
+      "type": "red_card",
+      "card": "red",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "AMİR GÜREN",
+      "minute": "MS",
+      "minuteRaw": "MS",
+      "tffPersonId": "846542"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "SAMET AYDIN",
+      "minute": 60,
+      "minuteRaw": "60.dk",
+      "tffPersonId": "863133"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "BERAT YAMAN",
+      "minute": 90,
+      "minuteRaw": "90+6.dk",
+      "tffPersonId": "1686455"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 1,
+      "player_in": "BERKE DOĞUKAN ÖNDE",
+      "player_out": "OKTAY BALA",
+      "playerIn": "BERKE DOĞUKAN ÖNDE",
+      "playerOut": "OKTAY BALA",
+      "minute": 75,
+      "minuteRaw": "75.dk",
+      "minute_text": "75.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "OKTAY BALA",
+      "order": 1,
+      "minute": 75,
+      "minuteRaw": "75.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "BERKE DOĞUKAN ÖNDE",
+      "order": 1,
+      "minute": 75,
+      "minuteRaw": "75.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 2,
+      "player_in": "SEDAT YİĞİT KURNAZ",
+      "player_out": "ERKAN SÜER",
+      "playerIn": "SEDAT YİĞİT KURNAZ",
+      "playerOut": "ERKAN SÜER",
+      "minute": 82,
+      "minuteRaw": "82.dk",
+      "minute_text": "82.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "ERKAN SÜER",
+      "order": 2,
+      "minute": 82,
+      "minuteRaw": "82.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "SEDAT YİĞİT KURNAZ",
+      "order": 2,
+      "minute": 82,
+      "minuteRaw": "82.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 3,
+      "player_in": "BERKAY AYKURT",
+      "player_out": "ARDA İBRAHİM AKGÜN",
+      "playerIn": "BERKAY AYKURT",
+      "playerOut": "ARDA İBRAHİM AKGÜN",
+      "minute": 89,
+      "minuteRaw": "89.dk",
+      "minute_text": "89.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "ARDA İBRAHİM AKGÜN",
+      "order": 3,
+      "minute": 89,
+      "minuteRaw": "89.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "BERKAY AYKURT",
+      "order": 3,
+      "minute": 89,
+      "minuteRaw": "89.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "order": 1,
+      "player_in": "MERT ÇAKAR",
+      "player_out": "YILMAZ ÖZEREN",
+      "playerIn": "MERT ÇAKAR",
+      "playerOut": "YILMAZ ÖZEREN",
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "minute_text": "46.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "YILMAZ ÖZEREN",
+      "order": 1,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "MERT ÇAKAR",
+      "order": 1,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "order": 2,
+      "player_in": "BERKANT ALPŞANLI",
+      "player_out": "BURAK GÖKSEL",
+      "playerIn": "BERKANT ALPŞANLI",
+      "playerOut": "BURAK GÖKSEL",
+      "minute": 90,
+      "minuteRaw": "90+2.dk",
+      "minute_text": "90+2.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "BURAK GÖKSEL",
+      "order": 2,
+      "minute": 90,
+      "minuteRaw": "90+2.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "BERKANT ALPŞANLI",
+      "order": 2,
+      "minute": 90,
+      "minuteRaw": "90+2.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "order": 3,
+      "player_in": "FERHAT ÇULCUOĞLU",
+      "player_out": "AZİZ KIZILGÜN",
+      "playerIn": "FERHAT ÇULCUOĞLU",
+      "playerOut": "AZİZ KIZILGÜN",
+      "minute": 85,
+      "minuteRaw": "85.dk",
+      "minute_text": "85.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "AZİZ KIZILGÜN",
+      "order": 3,
+      "minute": 85,
+      "minuteRaw": "85.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "FERHAT ÇULCUOĞLU",
+      "order": 3,
+      "minute": 85,
+      "minuteRaw": "85.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "order": 4,
+      "player_in": "MELİH ŞENCAN",
+      "player_out": "İBRAHİM ŞİRİN",
+      "playerIn": "MELİH ŞENCAN",
+      "playerOut": "İBRAHİM ŞİRİN",
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "minute_text": "46.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "İBRAHİM ŞİRİN",
+      "order": 4,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "MELİH ŞENCAN",
+      "order": 4,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "order": 5,
+      "player_in": "BERAT YAMAN",
+      "player_out": "HALİL İBRAHİM KELEŞ",
+      "playerIn": "BERAT YAMAN",
+      "playerOut": "HALİL İBRAHİM KELEŞ",
+      "minute": 85,
+      "minuteRaw": "85.dk",
+      "minute_text": "85.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "HALİL İBRAHİM KELEŞ",
+      "order": 5,
+      "minute": 85,
+      "minuteRaw": "85.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "BERAT YAMAN",
+      "order": 5,
+      "minute": 85,
+      "minuteRaw": "85.dk"
+    }
+  ],
+  "goals": [
+    {
+      "type": "goal",
+      "team": "Balıkesirspor",
+      "player": "DOĞANAY AVCI",
+      "scorer": "DOĞANAY AVCI",
+      "raw": "DOĞANAY AVCI,20.dk (F)",
+      "minute": 20,
+      "minuteRaw": "DOĞANAY AVCI,20.dk",
+      "goalType": "F",
+      "tffPersonId": "2024592"
+    },
+    {
+      "type": "goal",
+      "team": "Balıkesirspor",
+      "player": "HAKAN AKGÜL",
+      "scorer": "HAKAN AKGÜL",
+      "raw": "HAKAN AKGÜL,51.dk (H)",
+      "minute": 51,
+      "minuteRaw": "HAKAN AKGÜL,51.dk",
+      "goalType": "H",
+      "tffPersonId": "1613383"
+    },
+    {
+      "type": "goal",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "BURAK GÖKSEL",
+      "scorer": "BURAK GÖKSEL",
+      "raw": "BURAK GÖKSEL,40.dk (F)",
+      "minute": 40,
+      "minuteRaw": "BURAK GÖKSEL,40.dk",
+      "goalType": "F",
+      "tffPersonId": "742652"
+    },
+    {
+      "type": "goal",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "ERHAN ŞENTÜRK",
+      "scorer": "ERHAN ŞENTÜRK",
+      "raw": "ERHAN ŞENTÜRK,64.dk (H)",
+      "minute": 64,
+      "minuteRaw": "ERHAN ŞENTÜRK,64.dk",
+      "goalType": "H",
+      "tffPersonId": "690888"
+    }
+  ],
+  "goalScorers": [
+    {
+      "player": "DOĞANAY AVCI",
+      "team": "Balıkesirspor",
+      "minute": 20,
+      "goalType": "F"
+    },
+    {
+      "player": "HAKAN AKGÜL",
+      "team": "Balıkesirspor",
+      "minute": 51,
+      "goalType": "H"
+    },
+    {
+      "player": "BURAK GÖKSEL",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "minute": 40,
+      "goalType": "F"
+    },
+    {
+      "player": "ERHAN ŞENTÜRK",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "minute": 64,
+      "goalType": "H"
+    }
+  ],
+  "cards": [
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ERKAN SÜER",
+      "minute": 70,
+      "minuteRaw": "70.dk",
+      "tffPersonId": "1567856"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "HAKAN AKGÜL",
+      "minute": 56,
+      "minuteRaw": "56.dk",
+      "tffPersonId": "1613383"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "SEDAT YİĞİT KURNAZ",
+      "minute": 90,
+      "minuteRaw": "90+6.dk",
+      "tffPersonId": "1712887"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "GÖRKEM ALTUN",
+      "minute": 55,
+      "minuteRaw": "55.dk",
+      "tffPersonId": "1802108"
+    },
+    {
+      "type": "red_card",
+      "card": "red",
+      "team": "Balıkesirspor",
+      "player": "DOĞANAY AVCI",
+      "minute": "MS",
+      "minuteRaw": "MS",
+      "tffPersonId": "2024592"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "YILMAZ ÖZEREN",
+      "minute": 43,
+      "minuteRaw": "43.dk",
+      "tffPersonId": "312903"
+    },
+    {
+      "type": "red_card",
+      "card": "red",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "AMİR GÜREN",
+      "minute": "MS",
+      "minuteRaw": "MS",
+      "tffPersonId": "846542"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "SAMET AYDIN",
+      "minute": 60,
+      "minuteRaw": "60.dk",
+      "tffPersonId": "863133"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "player": "BERAT YAMAN",
+      "minute": 90,
+      "minuteRaw": "90+6.dk",
+      "tffPersonId": "1686455"
+    }
+  ],
+  "substitutions": [
+    {
+      "team": "Balıkesirspor",
+      "order": 1,
+      "minute": 75,
+      "minuteRaw": "75.dk",
+      "playerOut": "OKTAY BALA",
+      "player_out": "OKTAY BALA",
+      "playerOutTffPersonId": "1108664",
+      "playerIn": "BERKE DOĞUKAN ÖNDE",
+      "player_in": "BERKE DOĞUKAN ÖNDE",
+      "playerInTffPersonId": "1139074"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 2,
+      "minute": 82,
+      "minuteRaw": "82.dk",
+      "playerOut": "ERKAN SÜER",
+      "player_out": "ERKAN SÜER",
+      "playerOutTffPersonId": "1567856",
+      "playerIn": "SEDAT YİĞİT KURNAZ",
+      "player_in": "SEDAT YİĞİT KURNAZ",
+      "playerInTffPersonId": "1712887"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 3,
+      "minute": 89,
+      "minuteRaw": "89.dk",
+      "playerOut": "ARDA İBRAHİM AKGÜN",
+      "player_out": "ARDA İBRAHİM AKGÜN",
+      "playerOutTffPersonId": "1934117",
+      "playerIn": "BERKAY AYKURT",
+      "player_in": "BERKAY AYKURT",
+      "playerInTffPersonId": "1621081"
+    },
+    {
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "order": 1,
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "playerOut": "YILMAZ ÖZEREN",
+      "player_out": "YILMAZ ÖZEREN",
+      "playerOutTffPersonId": "312903",
+      "playerIn": "MERT ÇAKAR",
+      "player_in": "MERT ÇAKAR",
+      "playerInTffPersonId": "876968"
+    },
+    {
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "order": 2,
+      "minute": 90,
+      "minuteRaw": "90+2.dk",
+      "playerOut": "BURAK GÖKSEL",
+      "player_out": "BURAK GÖKSEL",
+      "playerOutTffPersonId": "742652",
+      "playerIn": "BERKANT ALPŞANLI",
+      "player_in": "BERKANT ALPŞANLI",
+      "playerInTffPersonId": "1810944"
+    },
+    {
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "order": 3,
+      "minute": 85,
+      "minuteRaw": "85.dk",
+      "playerOut": "AZİZ KIZILGÜN",
+      "player_out": "AZİZ KIZILGÜN",
+      "playerOutTffPersonId": "876962",
+      "playerIn": "FERHAT ÇULCUOĞLU",
+      "player_in": "FERHAT ÇULCUOĞLU",
+      "playerInTffPersonId": "303288"
+    },
+    {
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "order": 4,
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "playerOut": "İBRAHİM ŞİRİN",
+      "player_out": "İBRAHİM ŞİRİN",
+      "playerOutTffPersonId": "1034014",
+      "playerIn": "MELİH ŞENCAN",
+      "player_in": "MELİH ŞENCAN",
+      "playerInTffPersonId": "1005842"
+    },
+    {
+      "team": "BERGAMA SPORTİF FAALİYETLER A.Ş",
+      "order": 5,
+      "minute": 85,
+      "minuteRaw": "85.dk",
+      "playerOut": "HALİL İBRAHİM KELEŞ",
+      "player_out": "HALİL İBRAHİM KELEŞ",
+      "playerOutTffPersonId": "1127101",
+      "playerIn": "BERAT YAMAN",
+      "player_in": "BERAT YAMAN",
+      "playerInTffPersonId": "1686455"
+    }
+  ],
+  "sections_raw": {
+    "full_text_excerpt": "BALIKESİRSPOR BERGAMA SPORTİF FAALİYETLER A.Ş - Maç Detayları TFF\nAra\nTR\nEN\nTRENDYOL SÜPER LİG\nZİRAAT TÜRKİYE KUPASI\nE-SHOP\nANA SAYFA\nTFF\nMİLLİ TAKIMLAR\nLİGLER\nKUPALAR\nKADIN FUTBOLU\nFGD\nBİLGİ BANKASI\nPUAN DURUMU\nTRENDYOL SÜPERLIG\nFutbol Bilgi Bankası\nFutbolcular\nTeknik Direktörler\nTüm Maçlar\nMilli Maçlar\nKulüpler\nStadyumlar\nCezalar\nHakemler\nGözlemci ve Temsilciler\nFutbol Menajerleri\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nFormlar ve Sözleşmeler\nStatüler\nTalimatlar\nTFF Kanun ve Statüsü\nOnline Başvurular\nTam Saha içerikleri için tıklayınız\nFikstürler\nLig Seçiniz...\nTrendyol Süper Lig\nTrendyol 1. Lig\nTFF 2. Lig\nTFF 3. Lig\nKadın Ligleri\nZiraat Türkiye Kupası\nBölgesel Amatör Lig\nGelişim Ligleri\nEngelli Futbolu\nFutsal Ligi\nPlaj Futbolu\nFutbol Altyapı Gelişim Ligi\nSezon Planlaması\nPuan Cetvelleri\nLig Seçiniz..\nTrendyol Süper Lig Şamil Ekinci Sezonu\nTrendyol 1.Lig\nTrendyol 1. Lig Play Off Müsabakaları\nNesine 2. Lig Kırmızı\nNesine 2. Lig Beyaz\nNesine 2. Lig Play Off Müsabakaları\nNesine 3. Lig 01\nNesine 3. Lig 02\nNesine 3. Lig 03\nNesine 3. Lig 04\nNesine 3. Lig Play Off Müsabakaları\nZiraat Türkiye Kupası\nZiraat Türkiye Kupası Grup Aşaması A\nZiraat Türkiye Kupası Grup Aşaması B\nZiraat Türkiye Kupası Grup Aşaması C\nZiraat Türkiye Kupası Grup Aşaması D\nTurkcell Kadın Futbol Süper Ligi\nKadınlar 1. Ligi A Grubu\nKadınlar 1. Ligi B Grubu\nTFF Kadınlar 1. Ligi Play Off 3.lük Müsabakaları\nTFF Kadınlar 1. Ligi Play Off Şampiyonluk Grubu\nTFF Kadınlar 1. Ligi Play Off Yükselme Grubu\nKadınlar 2.Ligi Play Off Müsabakaları\nKadınlar 3.Ligi Play Off Müsabakaları\nKadınlar 2. Ligi A Grup\nKadınlar 2. Ligi B Grup\nKadınlar 2. Ligi C Grup\nKadınlar 2. Ligi D Grup\nKadınlar 3. Ligi 1.\nKadınlar 3. Ligi 10.\nKadınlar 3. Ligi 11.\nKadınlar 3. Ligi 12.\nKadınlar 3. Ligi 13.\nKadınlar 3. Ligi 14.\nKadınlar 3. Ligi 15.\nKadınlar 3. Ligi 16.\nKadınlar 3. Ligi 17.\nKadınlar 3. Ligi 18.\nKadınlar 3. Ligi 19.\nKadınlar 3. Ligi 2.\nKadınlar 3. Ligi 20.\nKadınlar 3. Ligi 21.\nKadınlar 3. Ligi 22.\nKadınlar 3. Ligi 23.\nKadınlar 3. Ligi 24.\nKadınlar 3. Ligi 25.\nKadınlar 3. Ligi 26.\nKadınlar 3. Ligi 27.\nKadınlar 3. Ligi 28.\nKadınlar 3. Ligi 29.\nKadınlar 3. Ligi 3.\nKadınlar 3. Ligi 30.\nKadınlar 3. Ligi 31.\nKadınlar 3. Ligi 32.\nKadınlar 3. Ligi 4.\nKadınlar 3. Ligi 5.\nKadınlar 3. Ligi 6.\nKadınlar 3. Ligi 7.\nKadınlar 3. Ligi 8.\nKadınlar 3. Ligi 9.\nBölgesel Amatör Ligi 1. GRUP\nBölgesel Amatör Ligi 10. GRUP\nBölgesel Amatör Ligi 2. GRUP\nBölgesel Amatör Ligi 3. GRUP\nBölgesel Amatör Ligi 4. GRUP\nBölgesel Amatör Ligi 5. GRUP\nBölgesel Amatör Ligi 6. GRUP\nBölgesel Amatör Ligi 7. GRUP\nBölgesel Amatör Ligi 8. GRUP\nBölgesel Amatör Ligi 9. GRUP\nBölgesel Amatör Lig Baraj Maçları\nBölgesel Amatör Lig Play Off\nU17 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU17 Bölgesel Gelişim Ligi 1. Grup\nU17 Bölgesel Gelişim Ligi 2. Grup\nU17 Bölgesel Gelişim Ligi 3. Grup\nU17 Bölgesel Gelişim Ligi 4. Grup\nU17 Bölgesel Gelişim Ligi 5. Grup\nU17 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi 1. Grup\nU19 Bölgesel Gelişim Ligi 2. Grup\nU19 Bölgesel Gelişim Ligi 3. Grup\nU19 Bölgesel Gelişim Ligi 4. Grup\nU19 Bölgesel Gelişim Ligi 5. Grup\nU19 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Grup 1\nU14 Gelişim Ligi Grup 2\nU14 Gelişim Ligi Grup 3\nU14 Gelişim Ligi Grup 4\nU14 Gelişim Ligi Grup 5\nU14 Gelişim Ligi Grup 6\nU14 Gelişim Ligi Grup 7\nU14 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Finalleri\nU15 Gelişim Ligi Grup 1\nU15 Gelişim Ligi Grup 2\nU15 Gelişim Ligi Grup 3\nU15 Gelişim Ligi Grup 4\nU15 Gelişim Ligi Grup 5\nU15 Gelişim Ligi Grup 6\nU15 Gelişim Ligi Grup 7\nU15 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU15 Gelişim Ligi Finalleri\nU16 Gelişim Ligi Grup 1\nU16 Gelişim Ligi Grup 2\nU16 Gelişim Ligi Grup 3\nU16 Gelişim Ligi Grup 4\nU16 Gelişim Ligi Grup 5\nU16 Gelişim Ligi Grup 6\nU16 Gelişim Ligi Grup 7\nU16 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU16 Gelişim Ligi Finalleri\nU17 Elit A Ligi\nU17 Elit B Ligi\nU19 Elit A Ligi\nU19 Elit B Ligi\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP A\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP B\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP A\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP B\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP A\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP B\nU14 Amatör Türkiye Şampiyonası\nU15 Amatör Türkiye Şampiyonası\nU16 Amatör Türkiye Şampiyonası\nU17 Amatör Türkiye Şampiyonası\nU18 Amatör Türkiye Şampiyonası\nHaftalık Maç Görevlileri\nHakem, Gözlemci ve Temsilciler\nMİLLİ TAKIM TARAFTAR KULÜBÜ\nSON DAKIKA..”\nU17 Kiz Milli Takimi'ndan Zafer Bayrami kutlamasi\n'Kuralina Göre' Programi beIN SPORTS'ta basliyor\nU18 Milli Takimimiz, Azerbaycan karsisinda\nU18 Milli Takimimiz, Azerbaycan karsisinda\n”\nBALIKESİRSPOR\n2\nBERGAMA SPORTİF FAALİYETLER A.Ş\n2\nTFF 3. LİG (Profesyonel Takım)\nMaç Kodu:\n4722\nBALIKESİR ATATÜRK - BALIKESİR\n10.12.2023 - 14:00\nUGURCAN GÖKLER(Hakem)\nABDULLAH POLAT(1. Yardımcı Hakem)\nAHMET FINDIK(2. Yardımcı Hakem)\nÖMER TAHANKUT MUSLU(Dördüncü Hakem)\nMEHMET GÜVEN(Gözlemci)\nÜNAL AKÇA(Temsilci)\nMEHMET KAĞAN BİNGÜL(Temsilci)\nİlk 11\n12.\nHÜSEYİN ALTINTAŞ\n4.\nBİROL PARLAK\n6.\nBERAT AYDOĞDU\n11.\nARDA İBRAHİM AKGÜN\n14.\nHAKAN AKGÜL\n15.\nASIM HAMZAÇEBİ\n20.\nDOĞANAY AVCI\n40.\nERKAN SÜER\n55.\nOKTAY BALA\n70.\nGÖKSU MUTLU\n88.\nUTKAN GÖKÇEN\nYedekler\n1.\nYİĞİTHAN KIR\n5.\nKAĞAN KAYALI\n7.\nBERKAY AYKURT\n9.\nBERKE DOĞUKAN ÖNDE\n10.\nSEDAT YİĞİT KURNAZ\n13.\nABDULLAH ADIYAMAN\n16.\nBERK TOSUN\n19.\nENES KARABULUT\n22.\nGÖRKEM ALTUN\n29.\nVOLKAN PALA\nTeknik Sorumlu\nİSMAİL CEM CAMBAZ\nGoller\nDOĞANAY AVCI,20.dk (F)\nHAKAN AKGÜL,51.dk (H)\nKartlar\nERKAN SÜER\n70.dk\nHAKAN AKGÜL\n56.dk\nSEDAT YİĞİT KURNAZ\n90+6.dk\nGÖRKEM ALTUN\n55.dk\nDOĞANAY AVCI\nMS\nOyundan Çıkanlar\nOKTAY BALA\n75.dk\nERKAN SÜER\n82.dk\nARDA İBRAHİM AKGÜN\n89.dk\nOyuna Girenler\nBERKE DOĞUKAN ÖNDE\n75.dk\nSEDAT YİĞİT KURNAZ\n82.dk\nBERKAY AYKURT\n89.dk\nİlk 11\n48.\nDOĞUKAN ÖZÇİMEN\n4.\nKAĞAN TOPÇU\n6.\nHALİL İBRAHİM KELEŞ\n7.\nBURAK GÖKSEL\n11.\nİBRAHİM ŞİRİN\n14.\nYILMAZ ÖZEREN\n17.\nATALAY YILDIRIM\n20.\nERHAN ŞENTÜRK\n53.\nMETE KARAHAN\n61.\nSAMET AYDIN\n70.\nAZİZ KIZILGÜN\nYedekler\n33.\nAMİR GÜREN\n5.\nFERHAT ÇULCUOĞLU\n9.\nALİ EMRE USTAALİOĞLU\n21.\nBERKANT ALPŞANLI\n22.\nMELİH ŞENCAN\n23.\nMELİH SERHAT İŞTAR\n26.\nARDA OKUMUŞ\n35.\nMERT ÇAKAR\n42.\nFUAT DURAN\n88.\nBERAT YAMAN\nTeknik Sorumlu\nSÜLEYMAN VARLIK\nGoller\nBURAK GÖKSEL,40.dk (F)\nERHAN ŞENTÜRK,64.dk (H)\nKartlar\nYILMAZ ÖZEREN\n43.dk\nAMİR GÜREN\nMS\nSAMET AYDIN\n60.dk\nBERAT YAMAN\n90+6.dk\nOyundan Çıkanlar\nYILMAZ ÖZEREN\n46.dk\nBURAK GÖKSEL\n90+2.dk\nAZİZ KIZILGÜN\n85.dk\nİBRAHİM ŞİRİN\n85.dk\nHALİL İBRAHİM KELEŞ\n46.dk\nOyuna Girenler\nMERT ÇAKAR\n46.dk\nBERKANT ALPŞANLI\n90+2.dk\nFERHAT ÇULCUOĞLU\n85.dk\nMELİH ŞENCAN\n46.dk\nBERAT YAMAN\n85.dk\nF:F - Ayak\nH:H - Kafa\nK:K - Kendi Kalesine\nP:P - Penaltı\nS:S - Seri Penaltı\nİletişim\n|\nSite Haritası\n|\nKopya Hakları\n|\nKullanım Şartları\n|\nSponsorlar\nTüm hakları Türkiye Futbol Federasyonu'na aittir.\nSosyal Medya Adreslerimiz:\nTFF\nTFF\nMilli Takımlar\nSüper Lig\nE-Millî Takım",
+    "officials_raw": "Hakemler\nGözlemci ve Temsilciler\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nHakem, Gözlemci ve Temsilciler\nUGURCAN GÖKLER(Hakem)\nABDULLAH POLAT(1. Yardımcı Hakem)\nAHMET FINDIK(2. Yardımcı Hakem)\nÖMER TAHANKUT MUSLU(Dördüncü Hakem)\nMEHMET GÜVEN(Gözlemci)\nÜNAL AKÇA(Temsilci)\nMEHMET KAĞAN BİNGÜL(Temsilci)",
+    "lineups_raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu",
+    "events_raw": "Goller\nDOĞANAY AVCI,20.dk (F)\nHAKAN AKGÜL,51.dk (H)\n70.dk\n56.dk\n90+6.dk\n55.dk\nOyundan Çıkanlar\n75.dk\n82.dk\n89.dk\nOyuna Girenler\n75.dk\n82.dk\n89.dk\nGoller\nBURAK GÖKSEL,40.dk (F)\nERHAN ŞENTÜRK,64.dk (H)\n43.dk\n60.dk\n90+6.dk\nOyundan Çıkanlar\n46.dk\n90+2.dk\n85.dk\n85.dk\n46.dk\nOyuna Girenler\n46.dk\n90+2.dk\n85.dk\n46.dk\n85.dk\nP:P - Penaltı\nS:S - Seri Penaltı"
+  },
+  "detailCompleteness": {
+    "hasStadium": true,
+    "starting11Home": 11,
+    "starting11Away": 11,
+    "substitutesHome": 10,
+    "substitutesAway": 10,
+    "goals": 4,
+    "cards": 9,
+    "substitutions": 8,
+    "players": 44
+  },
+  "quality": "A",
+  "source": {
+    "name": "TFF",
+    "url": "http://www.tff.org/Default.aspx?pageID=29&macId=251256",
+    "retrievedAt": "2026-07-12T17:36:11.409175Z",
+    "sourceType": "official_tff_match_detail"
+  },
+  "clubFixture": {
+    "week": 0,
+    "rowText": "14 BALIKESİRSPOR 2-2 BERGAMA SPORTİF FAALİYETLER A.Ş 10 Aralık 2023 TFF 3. LİG 04",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=251256&pageID=29"
+  },
+  "week": 14,
+  "standingsWeek": 14,
+  "stageWeek": 14,
+  "roundType": "league",
+  "roundLabel": "14. Hafta",
+  "roundSource": "stage_sequence_fallback"
+}

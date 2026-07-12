@@ -160,6 +160,16 @@ def main() -> int:
             standings.append("--force")
         run(standings, env)
 
+    # Puan tabloları tamamlandıktan sonra lig maçlarını gerçek fikstür haftaları
+    # ile eşleştir, kirli kişi adlarını temizle ve uygulama uyumlu indeksleri kur.
+    run([
+        sys.executable, str(TOOLS / "repair_export.py"),
+        "--data-root", str(output),
+        "--registry", str(registry),
+        "--report", str(report_root / "repair_export.json"),
+        "--validation-report", str(report_root / "repair_validation.json"),
+    ], env)
+
     validation = [
         sys.executable, str(TOOLS / "validate_export.py"),
         "--data-root", str(output),
@@ -170,7 +180,9 @@ def main() -> int:
     run(validation, env)
     log(f"TAMAMLANDI: {output}")
     log(f"Uygulama verisi: {output / 'manifest.json'}")
-    log(f"Kalite raporu: {report_root / 'validation.json'}")
+    log(f"Onarım raporu: {report_root / 'repair_export.json'}")
+    log(f"Onarım kalite raporu: {report_root / 'repair_validation.json'}")
+    log(f"Genel kalite raporu: {report_root / 'validation.json'}")
     return 0
 
 

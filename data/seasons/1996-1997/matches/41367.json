@@ -1,0 +1,919 @@
+{
+  "id": "41367",
+  "matchCode": "2144",
+  "season": "1996-1997",
+  "competition": "Lig B Klasman (Profesyonel Takım)",
+  "teamLevel": "professional",
+  "teamLevelEvidence": "explicit_professional",
+  "competitionType": "league",
+  "competitionLabel": "Lig",
+  "stadium": "BALIKESİR ATATÜRK",
+  "venue": "BALIKESİR ATATÜRK",
+  "stage": "Lig",
+  "stageLabel": "Kademe 02",
+  "date": "1996-10-20",
+  "time": "14:00",
+  "dateDisplay": "1996-10-20 - 14:00",
+  "homeTeam": "Balıkesirspor",
+  "awayTeam": "SOMA LİNYİTSPOR",
+  "matchType": "league",
+  "matchTypeLabel": "Lig",
+  "type": "league",
+  "typeLabel": "Lig",
+  "score": {
+    "home": 0,
+    "away": 1,
+    "display": "0-1",
+    "played": true
+  },
+  "balkes": {
+    "isHome": true,
+    "isAway": false,
+    "opponent": "SOMA LİNYİTSPOR",
+    "goalsFor": 0,
+    "goalsAgainst": 1,
+    "result": "L"
+  },
+  "officials": [
+    {
+      "role": "DND)Y.DIŞI(Hakem",
+      "name": "BÜLENT AKKAŞLI"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "METİN AYDINOĞLU"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "MEHMET ÇAĞLAYAN KÖKKILINÇ"
+    }
+  ],
+  "referees": [
+    {
+      "role": "DND)Y.DIŞI(Hakem",
+      "name": "BÜLENT AKKAŞLI"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "METİN AYDINOĞLU"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "MEHMET ÇAĞLAYAN KÖKKILINÇ"
+    }
+  ],
+  "lineups": {
+    "home": {
+      "team": "Balıkesirspor",
+      "starting11": [
+        {
+          "name": "HASAN ARABACI",
+          "number": 1,
+          "shirt_no": "1",
+          "tffPersonId": "21586"
+        },
+        {
+          "name": "MURAT DURAN",
+          "number": 2,
+          "shirt_no": "2",
+          "tffPersonId": "24390"
+        },
+        {
+          "name": "CAN FERİK",
+          "number": 3,
+          "shirt_no": "3",
+          "tffPersonId": "22956"
+        },
+        {
+          "name": "MUHAMMET TERZİ",
+          "number": 4,
+          "shirt_no": "4",
+          "tffPersonId": "25117"
+        },
+        {
+          "name": "BİLAL GÜVEN",
+          "number": 5,
+          "shirt_no": "5",
+          "tffPersonId": "21936"
+        },
+        {
+          "name": "ALTAY CAN",
+          "number": 6,
+          "shirt_no": "6",
+          "tffPersonId": "24696"
+        },
+        {
+          "name": "YAHYA ŞEMŞEK",
+          "number": 7,
+          "shirt_no": "7",
+          "tffPersonId": "21290"
+        },
+        {
+          "name": "SUAT SARICAN",
+          "number": 8,
+          "shirt_no": "8",
+          "tffPersonId": "22341"
+        },
+        {
+          "name": "HÜSEYİN YENİKAN",
+          "number": 9,
+          "shirt_no": "9",
+          "tffPersonId": "22672"
+        },
+        {
+          "name": "TURGUT UÇAR",
+          "number": 10,
+          "shirt_no": "10",
+          "tffPersonId": "21355"
+        },
+        {
+          "name": "SAİT KARAFIRTINALAR",
+          "number": 11,
+          "shirt_no": "11",
+          "tffPersonId": "22118"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "OKTAY BOZDOĞAN",
+          "number": 12,
+          "shirt_no": "12",
+          "tffPersonId": "361683"
+        },
+        {
+          "name": "MUSTAFA ZENGİN",
+          "number": 13,
+          "shirt_no": "13",
+          "tffPersonId": "26292"
+        },
+        {
+          "name": "TARIK ANIK",
+          "number": 14,
+          "shirt_no": "14",
+          "tffPersonId": "27287"
+        },
+        {
+          "name": "HİKMET MURAT SALAR",
+          "number": 15,
+          "shirt_no": "15",
+          "tffPersonId": "27213"
+        },
+        {
+          "name": "ENGİN GÜLIŞIK",
+          "number": 16,
+          "shirt_no": "16",
+          "tffPersonId": "24960"
+        }
+      ],
+      "technicalStaff": [],
+      "coach": "",
+      "raw": "İlk 11\nYedekler\nİlk 11\nYedekler"
+    },
+    "away": {
+      "team": "SOMA LİNYİTSPOR",
+      "starting11": [
+        {
+          "name": "ENGİN GÖZALAN",
+          "number": 1,
+          "shirt_no": "1",
+          "tffPersonId": "23775"
+        },
+        {
+          "name": "GÜNAL AKÇA",
+          "number": 2,
+          "shirt_no": "2",
+          "tffPersonId": "25137"
+        },
+        {
+          "name": "YALÇIN ÇİÇEK",
+          "number": 3,
+          "shirt_no": "3",
+          "tffPersonId": "23049"
+        },
+        {
+          "name": "SONER DURDU",
+          "number": 4,
+          "shirt_no": "4",
+          "tffPersonId": "24890"
+        },
+        {
+          "name": "METİN AYDEMİR",
+          "number": 5,
+          "shirt_no": "5",
+          "tffPersonId": "21306"
+        },
+        {
+          "name": "RAMAZAN ÖZALP",
+          "number": 6,
+          "shirt_no": "6",
+          "tffPersonId": "25294"
+        },
+        {
+          "name": "NUSRET ERDİ DEMİR",
+          "number": 7,
+          "shirt_no": "7",
+          "tffPersonId": "22295"
+        },
+        {
+          "name": "AHMET ERDİNÇ",
+          "number": 8,
+          "shirt_no": "8",
+          "tffPersonId": "21382"
+        },
+        {
+          "name": "OSMAN ŞEN",
+          "number": 9,
+          "shirt_no": "9",
+          "tffPersonId": "21392"
+        },
+        {
+          "name": "YAKUP CAN",
+          "number": 10,
+          "shirt_no": "10",
+          "tffPersonId": "24404"
+        },
+        {
+          "name": "HÜSEYİN EROĞLU",
+          "number": 11,
+          "shirt_no": "11",
+          "tffPersonId": "25228"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "YAKUP SAYGILI",
+          "number": 12,
+          "shirt_no": "12",
+          "tffPersonId": "24906"
+        },
+        {
+          "name": "ABDULLAH BARUT",
+          "number": 13,
+          "shirt_no": "13",
+          "tffPersonId": "25546"
+        },
+        {
+          "name": "SALİH AĞLAMAZ",
+          "number": 14,
+          "shirt_no": "14",
+          "tffPersonId": "22384"
+        },
+        {
+          "name": "CEVDET YILDIRIM",
+          "number": 15,
+          "shirt_no": "15",
+          "tffPersonId": "21381"
+        },
+        {
+          "name": "SONER ZÜMRÜTEL",
+          "number": 16,
+          "shirt_no": "16",
+          "tffPersonId": "27511"
+        }
+      ],
+      "technicalStaff": [],
+      "coach": "",
+      "raw": "İlk 11\nYedekler\nİlk 11\nYedekler"
+    }
+  },
+  "players": [
+    {
+      "name": "ALTAY CAN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 6,
+      "tffPersonId": "24696"
+    },
+    {
+      "name": "BİLAL GÜVEN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 5,
+      "tffPersonId": "21936"
+    },
+    {
+      "name": "CAN FERİK",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 3,
+      "tffPersonId": "22956"
+    },
+    {
+      "name": "ENGİN GÜLIŞIK",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "yellow_card",
+        "substitution_in"
+      ],
+      "number": 16,
+      "tffPersonId": "24960"
+    },
+    {
+      "name": "HASAN ARABACI",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 1,
+      "tffPersonId": "21586"
+    },
+    {
+      "name": "HİKMET MURAT SALAR",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 15,
+      "tffPersonId": "27213"
+    },
+    {
+      "name": "HÜSEYİN YENİKAN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 9,
+      "tffPersonId": "22672"
+    },
+    {
+      "name": "MUHAMMET TERZİ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 4,
+      "tffPersonId": "25117"
+    },
+    {
+      "name": "MURAT DURAN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 2,
+      "tffPersonId": "24390"
+    },
+    {
+      "name": "MUSTAFA ZENGİN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 13,
+      "tffPersonId": "26292"
+    },
+    {
+      "name": "OKTAY BOZDOĞAN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 12,
+      "tffPersonId": "361683"
+    },
+    {
+      "name": "SAİT KARAFIRTINALAR",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 11,
+      "tffPersonId": "22118"
+    },
+    {
+      "name": "SUAT SARICAN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 8,
+      "tffPersonId": "22341"
+    },
+    {
+      "name": "TARIK ANIK",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 14,
+      "tffPersonId": "27287"
+    },
+    {
+      "name": "TURGUT UÇAR",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 10,
+      "tffPersonId": "21355"
+    },
+    {
+      "name": "YAHYA ŞEMŞEK",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 7,
+      "tffPersonId": "21290"
+    },
+    {
+      "name": "ABDULLAH BARUT",
+      "team": "SOMA LİNYİTSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 13,
+      "tffPersonId": "25546"
+    },
+    {
+      "name": "AHMET ERDİNÇ",
+      "team": "SOMA LİNYİTSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 8,
+      "tffPersonId": "21382"
+    },
+    {
+      "name": "CEVDET YILDIRIM",
+      "team": "SOMA LİNYİTSPOR",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 15,
+      "tffPersonId": "21381"
+    },
+    {
+      "name": "ENGİN GÖZALAN",
+      "team": "SOMA LİNYİTSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 1,
+      "tffPersonId": "23775"
+    },
+    {
+      "name": "GÜNAL AKÇA",
+      "team": "SOMA LİNYİTSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 2,
+      "tffPersonId": "25137"
+    },
+    {
+      "name": "HÜSEYİN EROĞLU",
+      "team": "SOMA LİNYİTSPOR",
+      "roles": [
+        "starting11",
+        "goal"
+      ],
+      "number": 11,
+      "tffPersonId": "25228"
+    },
+    {
+      "name": "METİN AYDEMİR",
+      "team": "SOMA LİNYİTSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 5,
+      "tffPersonId": "21306"
+    },
+    {
+      "name": "NUSRET ERDİ DEMİR",
+      "team": "SOMA LİNYİTSPOR",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 7,
+      "tffPersonId": "22295"
+    },
+    {
+      "name": "OSMAN ŞEN",
+      "team": "SOMA LİNYİTSPOR",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 9,
+      "tffPersonId": "21392"
+    },
+    {
+      "name": "RAMAZAN ÖZALP",
+      "team": "SOMA LİNYİTSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 6,
+      "tffPersonId": "25294"
+    },
+    {
+      "name": "SALİH AĞLAMAZ",
+      "team": "SOMA LİNYİTSPOR",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 14,
+      "tffPersonId": "22384"
+    },
+    {
+      "name": "SONER DURDU",
+      "team": "SOMA LİNYİTSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 4,
+      "tffPersonId": "24890"
+    },
+    {
+      "name": "SONER ZÜMRÜTEL",
+      "team": "SOMA LİNYİTSPOR",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 16,
+      "tffPersonId": "27511"
+    },
+    {
+      "name": "YAKUP CAN",
+      "team": "SOMA LİNYİTSPOR",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 10,
+      "tffPersonId": "24404"
+    },
+    {
+      "name": "YAKUP SAYGILI",
+      "team": "SOMA LİNYİTSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 12,
+      "tffPersonId": "24906"
+    },
+    {
+      "name": "YALÇIN ÇİÇEK",
+      "team": "SOMA LİNYİTSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 3,
+      "tffPersonId": "23049"
+    }
+  ],
+  "events": [
+    {
+      "type": "goal",
+      "team": "SOMA LİNYİTSPOR",
+      "player": "HÜSEYİN EROĞLU",
+      "scorer": "HÜSEYİN EROĞLU",
+      "raw": "HÜSEYİN EROĞLU,61.dk (F)",
+      "minute": 61,
+      "minuteRaw": "HÜSEYİN EROĞLU,61.dk",
+      "goalType": "F",
+      "tffPersonId": "25228"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ENGİN GÜLIŞIK",
+      "minute": 69,
+      "minuteRaw": "69.dk",
+      "tffPersonId": "24960"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 1,
+      "player_in": "TARIK ANIK",
+      "player_out": "YAHYA ŞEMŞEK",
+      "playerIn": "TARIK ANIK",
+      "playerOut": "YAHYA ŞEMŞEK",
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "minute_text": "46.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "YAHYA ŞEMŞEK",
+      "order": 1,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "TARIK ANIK",
+      "order": 1,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 2,
+      "player_in": "HİKMET MURAT SALAR",
+      "player_out": "SAİT KARAFIRTINALAR",
+      "playerIn": "HİKMET MURAT SALAR",
+      "playerOut": "SAİT KARAFIRTINALAR",
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "minute_text": "46.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "SAİT KARAFIRTINALAR",
+      "order": 2,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "HİKMET MURAT SALAR",
+      "order": 2,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 3,
+      "player_in": "ENGİN GÜLIŞIK",
+      "player_out": "MURAT DURAN",
+      "playerIn": "ENGİN GÜLIŞIK",
+      "playerOut": "MURAT DURAN",
+      "minute": 65,
+      "minuteRaw": "65.dk",
+      "minute_text": "65.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "MURAT DURAN",
+      "order": 3,
+      "minute": 65,
+      "minuteRaw": "65.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "ENGİN GÜLIŞIK",
+      "order": 3,
+      "minute": 65,
+      "minuteRaw": "65.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "SOMA LİNYİTSPOR",
+      "order": 1,
+      "player_in": "SALİH AĞLAMAZ",
+      "player_out": "OSMAN ŞEN",
+      "playerIn": "SALİH AĞLAMAZ",
+      "playerOut": "OSMAN ŞEN",
+      "minute": 80,
+      "minuteRaw": "80.dk",
+      "minute_text": "80.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "SOMA LİNYİTSPOR",
+      "player": "OSMAN ŞEN",
+      "order": 1,
+      "minute": 80,
+      "minuteRaw": "80.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "SOMA LİNYİTSPOR",
+      "player": "SALİH AĞLAMAZ",
+      "order": 1,
+      "minute": 80,
+      "minuteRaw": "80.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "SOMA LİNYİTSPOR",
+      "order": 2,
+      "player_in": "CEVDET YILDIRIM",
+      "player_out": "NUSRET ERDİ DEMİR",
+      "playerIn": "CEVDET YILDIRIM",
+      "playerOut": "NUSRET ERDİ DEMİR",
+      "minute": 88,
+      "minuteRaw": "88.dk",
+      "minute_text": "88.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "SOMA LİNYİTSPOR",
+      "player": "NUSRET ERDİ DEMİR",
+      "order": 2,
+      "minute": 88,
+      "minuteRaw": "88.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "SOMA LİNYİTSPOR",
+      "player": "CEVDET YILDIRIM",
+      "order": 2,
+      "minute": 88,
+      "minuteRaw": "88.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "SOMA LİNYİTSPOR",
+      "order": 3,
+      "player_in": "SONER ZÜMRÜTEL",
+      "player_out": "YAKUP CAN",
+      "playerIn": "SONER ZÜMRÜTEL",
+      "playerOut": "YAKUP CAN",
+      "minute": 85,
+      "minuteRaw": "85.dk",
+      "minute_text": "85.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "SOMA LİNYİTSPOR",
+      "player": "YAKUP CAN",
+      "order": 3,
+      "minute": 85,
+      "minuteRaw": "85.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "SOMA LİNYİTSPOR",
+      "player": "SONER ZÜMRÜTEL",
+      "order": 3,
+      "minute": 85,
+      "minuteRaw": "85.dk"
+    }
+  ],
+  "goals": [
+    {
+      "type": "goal",
+      "team": "SOMA LİNYİTSPOR",
+      "player": "HÜSEYİN EROĞLU",
+      "scorer": "HÜSEYİN EROĞLU",
+      "raw": "HÜSEYİN EROĞLU,61.dk (F)",
+      "minute": 61,
+      "minuteRaw": "HÜSEYİN EROĞLU,61.dk",
+      "goalType": "F",
+      "tffPersonId": "25228"
+    }
+  ],
+  "goalScorers": [
+    {
+      "player": "HÜSEYİN EROĞLU",
+      "team": "SOMA LİNYİTSPOR",
+      "minute": 61,
+      "goalType": "F"
+    }
+  ],
+  "cards": [
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ENGİN GÜLIŞIK",
+      "minute": 69,
+      "minuteRaw": "69.dk",
+      "tffPersonId": "24960"
+    }
+  ],
+  "substitutions": [
+    {
+      "team": "Balıkesirspor",
+      "order": 1,
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "playerOut": "YAHYA ŞEMŞEK",
+      "player_out": "YAHYA ŞEMŞEK",
+      "playerOutTffPersonId": "21290",
+      "playerIn": "TARIK ANIK",
+      "player_in": "TARIK ANIK",
+      "playerInTffPersonId": "27287"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 2,
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "playerOut": "SAİT KARAFIRTINALAR",
+      "player_out": "SAİT KARAFIRTINALAR",
+      "playerOutTffPersonId": "22118",
+      "playerIn": "HİKMET MURAT SALAR",
+      "player_in": "HİKMET MURAT SALAR",
+      "playerInTffPersonId": "27213"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 3,
+      "minute": 65,
+      "minuteRaw": "65.dk",
+      "playerOut": "MURAT DURAN",
+      "player_out": "MURAT DURAN",
+      "playerOutTffPersonId": "24390",
+      "playerIn": "ENGİN GÜLIŞIK",
+      "player_in": "ENGİN GÜLIŞIK",
+      "playerInTffPersonId": "24960"
+    },
+    {
+      "team": "SOMA LİNYİTSPOR",
+      "order": 1,
+      "minute": 80,
+      "minuteRaw": "80.dk",
+      "playerOut": "OSMAN ŞEN",
+      "player_out": "OSMAN ŞEN",
+      "playerOutTffPersonId": "21392",
+      "playerIn": "SALİH AĞLAMAZ",
+      "player_in": "SALİH AĞLAMAZ",
+      "playerInTffPersonId": "22384"
+    },
+    {
+      "team": "SOMA LİNYİTSPOR",
+      "order": 2,
+      "minute": 88,
+      "minuteRaw": "88.dk",
+      "playerOut": "NUSRET ERDİ DEMİR",
+      "player_out": "NUSRET ERDİ DEMİR",
+      "playerOutTffPersonId": "22295",
+      "playerIn": "CEVDET YILDIRIM",
+      "player_in": "CEVDET YILDIRIM",
+      "playerInTffPersonId": "21381"
+    },
+    {
+      "team": "SOMA LİNYİTSPOR",
+      "order": 3,
+      "minute": 85,
+      "minuteRaw": "85.dk",
+      "playerOut": "YAKUP CAN",
+      "player_out": "YAKUP CAN",
+      "playerOutTffPersonId": "24404",
+      "playerIn": "SONER ZÜMRÜTEL",
+      "player_in": "SONER ZÜMRÜTEL",
+      "playerInTffPersonId": "27511"
+    }
+  ],
+  "sections_raw": {
+    "full_text_excerpt": "BALIKESİRSPOR SOMA LİNYİTSPOR - Maç Detayları TFF\nAra\nTR\nEN\nTRENDYOL SÜPER LİG\nZİRAAT TÜRKİYE KUPASI\nE-SHOP\nANA SAYFA\nTFF\nMİLLİ TAKIMLAR\nLİGLER\nKUPALAR\nKADIN FUTBOLU\nFGD\nBİLGİ BANKASI\nPUAN DURUMU\nTRENDYOL SÜPERLIG\nFutbol Bilgi Bankası\nFutbolcular\nTeknik Direktörler\nTüm Maçlar\nMilli Maçlar\nKulüpler\nStadyumlar\nCezalar\nHakemler\nGözlemci ve Temsilciler\nFutbol Menajerleri\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nFormlar ve Sözleşmeler\nStatüler\nTalimatlar\nTFF Kanun ve Statüsü\nOnline Başvurular\nTam Saha içerikleri için tıklayınız\nFikstürler\nLig Seçiniz...\nTrendyol Süper Lig\nTrendyol 1. Lig\nTFF 2. Lig\nTFF 3. Lig\nKadın Ligleri\nZiraat Türkiye Kupası\nBölgesel Amatör Lig\nGelişim Ligleri\nEngelli Futbolu\nFutsal Ligi\nPlaj Futbolu\nFutbol Altyapı Gelişim Ligi\nSezon Planlaması\nPuan Cetvelleri\nLig Seçiniz..\nTrendyol Süper Lig Şamil Ekinci Sezonu\nTrendyol 1.Lig\nTrendyol 1. Lig Play Off Müsabakaları\nNesine 2. Lig Kırmızı\nNesine 2. Lig Beyaz\nNesine 2. Lig Play Off Müsabakaları\nNesine 3. Lig 01\nNesine 3. Lig 02\nNesine 3. Lig 03\nNesine 3. Lig 04\nNesine 3. Lig Play Off Müsabakaları\nZiraat Türkiye Kupası\nZiraat Türkiye Kupası Grup Aşaması A\nZiraat Türkiye Kupası Grup Aşaması B\nZiraat Türkiye Kupası Grup Aşaması C\nZiraat Türkiye Kupası Grup Aşaması D\nTurkcell Kadın Futbol Süper Ligi\nKadınlar 1. Ligi A Grubu\nKadınlar 1. Ligi B Grubu\nTFF Kadınlar 1. Ligi Play Off 3.lük Müsabakaları\nTFF Kadınlar 1. Ligi Play Off Şampiyonluk Grubu\nTFF Kadınlar 1. Ligi Play Off Yükselme Grubu\nKadınlar 2.Ligi Play Off Müsabakaları\nKadınlar 3.Ligi Play Off Müsabakaları\nKadınlar 2. Ligi A Grup\nKadınlar 2. Ligi B Grup\nKadınlar 2. Ligi C Grup\nKadınlar 2. Ligi D Grup\nKadınlar 3. Ligi 1.\nKadınlar 3. Ligi 10.\nKadınlar 3. Ligi 11.\nKadınlar 3. Ligi 12.\nKadınlar 3. Ligi 13.\nKadınlar 3. Ligi 14.\nKadınlar 3. Ligi 15.\nKadınlar 3. Ligi 16.\nKadınlar 3. Ligi 17.\nKadınlar 3. Ligi 18.\nKadınlar 3. Ligi 19.\nKadınlar 3. Ligi 2.\nKadınlar 3. Ligi 20.\nKadınlar 3. Ligi 21.\nKadınlar 3. Ligi 22.\nKadınlar 3. Ligi 23.\nKadınlar 3. Ligi 24.\nKadınlar 3. Ligi 25.\nKadınlar 3. Ligi 26.\nKadınlar 3. Ligi 27.\nKadınlar 3. Ligi 28.\nKadınlar 3. Ligi 29.\nKadınlar 3. Ligi 3.\nKadınlar 3. Ligi 30.\nKadınlar 3. Ligi 31.\nKadınlar 3. Ligi 32.\nKadınlar 3. Ligi 4.\nKadınlar 3. Ligi 5.\nKadınlar 3. Ligi 6.\nKadınlar 3. Ligi 7.\nKadınlar 3. Ligi 8.\nKadınlar 3. Ligi 9.\nBölgesel Amatör Ligi 1. GRUP\nBölgesel Amatör Ligi 10. GRUP\nBölgesel Amatör Ligi 2. GRUP\nBölgesel Amatör Ligi 3. GRUP\nBölgesel Amatör Ligi 4. GRUP\nBölgesel Amatör Ligi 5. GRUP\nBölgesel Amatör Ligi 6. GRUP\nBölgesel Amatör Ligi 7. GRUP\nBölgesel Amatör Ligi 8. GRUP\nBölgesel Amatör Ligi 9. GRUP\nBölgesel Amatör Lig Baraj Maçları\nBölgesel Amatör Lig Play Off\nU17 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU17 Bölgesel Gelişim Ligi 1. Grup\nU17 Bölgesel Gelişim Ligi 2. Grup\nU17 Bölgesel Gelişim Ligi 3. Grup\nU17 Bölgesel Gelişim Ligi 4. Grup\nU17 Bölgesel Gelişim Ligi 5. Grup\nU17 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi 1. Grup\nU19 Bölgesel Gelişim Ligi 2. Grup\nU19 Bölgesel Gelişim Ligi 3. Grup\nU19 Bölgesel Gelişim Ligi 4. Grup\nU19 Bölgesel Gelişim Ligi 5. Grup\nU19 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Grup 1\nU14 Gelişim Ligi Grup 2\nU14 Gelişim Ligi Grup 3\nU14 Gelişim Ligi Grup 4\nU14 Gelişim Ligi Grup 5\nU14 Gelişim Ligi Grup 6\nU14 Gelişim Ligi Grup 7\nU14 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Finalleri\nU15 Gelişim Ligi Grup 1\nU15 Gelişim Ligi Grup 2\nU15 Gelişim Ligi Grup 3\nU15 Gelişim Ligi Grup 4\nU15 Gelişim Ligi Grup 5\nU15 Gelişim Ligi Grup 6\nU15 Gelişim Ligi Grup 7\nU15 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU15 Gelişim Ligi Finalleri\nU16 Gelişim Ligi Grup 1\nU16 Gelişim Ligi Grup 2\nU16 Gelişim Ligi Grup 3\nU16 Gelişim Ligi Grup 4\nU16 Gelişim Ligi Grup 5\nU16 Gelişim Ligi Grup 6\nU16 Gelişim Ligi Grup 7\nU16 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU16 Gelişim Ligi Finalleri\nU17 Elit A Ligi\nU17 Elit B Ligi\nU19 Elit A Ligi\nU19 Elit B Ligi\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP A\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP B\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP A\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP B\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP A\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP B\nU14 Amatör Türkiye Şampiyonası\nU15 Amatör Türkiye Şampiyonası\nU16 Amatör Türkiye Şampiyonası\nU17 Amatör Türkiye Şampiyonası\nU18 Amatör Türkiye Şampiyonası\nHaftalık Maç Görevlileri\nHakem, Gözlemci ve Temsilciler\nMİLLİ TAKIM TARAFTAR KULÜBÜ\nSON DAKIKA..”\nU17 Kiz Milli Takimi'ndan Zafer Bayrami kutlamasi\n'Kuralina Göre' Programi beIN SPORTS'ta basliyor\nU18 Milli Takimimiz, Azerbaycan karsisinda\nU18 Milli Takimimiz, Azerbaycan karsisinda\n”\nBALIKESİRSPOR\n0\nSOMA LİNYİTSPOR\n1\nLig B Klasman (Profesyonel Takım)\nMaç Kodu:\n2144\nBALIKESİR ATATÜRK\n20.10.1996 - 14:00\nBÜLENT AKKAŞLI(DND)Y.DIŞI(Hakem)\nMETİN AYDINOĞLU(1. Yardımcı Hakem)\nMEHMET ÇAĞLAYAN KÖKKILINÇ(2. Yardımcı Hakem)\nMEHMET FAHRİ OVACIK(Gözlemci)\nİlk 11\n1.\nHASAN ARABACI\n2.\nMURAT DURAN\n3.\nCAN FERİK\n4.\nMUHAMMET TERZİ\n5.\nBİLAL GÜVEN\n6.\nALTAY CAN\n7.\nYAHYA ŞEMŞEK\n8.\nSUAT SARICAN\n9.\nHÜSEYİN YENİKAN\n10.\nTURGUT UÇAR\n11.\nSAİT KARAFIRTINALAR\nYedekler\n12.\nOKTAY BOZDOĞAN\n13.\nMUSTAFA ZENGİN\n14.\nTARIK ANIK\n15.\nHİKMET MURAT SALAR\n16.\nENGİN GÜLIŞIK\nKartlar\nENGİN GÜLIŞIK\n69.dk\nOyundan Çıkanlar\nYAHYA ŞEMŞEK\n46.dk\nSAİT KARAFIRTINALAR\n46.dk\nMURAT DURAN\n65.dk\nOyuna Girenler\nTARIK ANIK\n46.dk\nHİKMET MURAT SALAR\n46.dk\nENGİN GÜLIŞIK\n65.dk\nİlk 11\n1.\nENGİN GÖZALAN\n2.\nGÜNAL AKÇA\n3.\nYALÇIN ÇİÇEK\n4.\nSONER DURDU\n5.\nMETİN AYDEMİR\n6.\nRAMAZAN ÖZALP\n7.\nNUSRET ERDİ DEMİR\n8.\nAHMET ERDİNÇ\n9.\nOSMAN ŞEN\n10.\nYAKUP CAN\n11.\nHÜSEYİN EROĞLU\nYedekler\n12.\nYAKUP SAYGILI\n13.\nABDULLAH BARUT\n14.\nSALİH AĞLAMAZ\n15.\nCEVDET YILDIRIM\n16.\nSONER ZÜMRÜTEL\nGoller\nHÜSEYİN EROĞLU,61.dk (F)\nOyundan Çıkanlar\nOSMAN ŞEN\n80.dk\nNUSRET ERDİ DEMİR\n88.dk\nYAKUP CAN\n85.dk\nOyuna Girenler\nSALİH AĞLAMAZ\n80.dk\nCEVDET YILDIRIM\n88.dk\nSONER ZÜMRÜTEL\n85.dk\nF:F - Ayak\nH:H - Kafa\nK:K - Kendi Kalesine\nP:P - Penaltı\nS:S - Seri Penaltı\nİletişim\n|\nSite Haritası\n|\nKopya Hakları\n|\nKullanım Şartları\n|\nSponsorlar\nTüm hakları Türkiye Futbol Federasyonu'na aittir.\nSosyal Medya Adreslerimiz:\nTFF\nTFF\nMilli Takımlar\nSüper Lig\nE-Millî Takım",
+    "officials_raw": "Hakemler\nGözlemci ve Temsilciler\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nHakem, Gözlemci ve Temsilciler\nBÜLENT AKKAŞLI(DND)Y.DIŞI(Hakem)\nMETİN AYDINOĞLU(1. Yardımcı Hakem)\nMEHMET ÇAĞLAYAN KÖKKILINÇ(2. Yardımcı Hakem)\nMEHMET FAHRİ OVACIK(Gözlemci)",
+    "lineups_raw": "İlk 11\nYedekler\nİlk 11\nYedekler",
+    "events_raw": "69.dk\nOyundan Çıkanlar\n46.dk\n46.dk\n65.dk\nOyuna Girenler\n46.dk\n46.dk\n65.dk\nGoller\nHÜSEYİN EROĞLU,61.dk (F)\nOyundan Çıkanlar\n80.dk\n88.dk\n85.dk\nOyuna Girenler\n80.dk\n88.dk\n85.dk\nP:P - Penaltı\nS:S - Seri Penaltı"
+  },
+  "detailCompleteness": {
+    "hasStadium": true,
+    "starting11Home": 11,
+    "starting11Away": 11,
+    "substitutesHome": 5,
+    "substitutesAway": 5,
+    "goals": 1,
+    "cards": 1,
+    "substitutions": 6,
+    "players": 32
+  },
+  "quality": "A",
+  "source": {
+    "name": "TFF",
+    "url": "http://www.tff.org/Default.aspx?pageID=29&macId=41367",
+    "retrievedAt": "2026-07-12T17:38:08.321240Z",
+    "sourceType": "official_tff_match_detail"
+  },
+  "clubFixture": {
+    "week": 0,
+    "rowText": "11 BALIKESİRSPOR 0-1 SOMA LİNYİTSPOR 20 Ekim 1996 Lig B Klasman 02",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=41367&pageID=29"
+  },
+  "week": 11,
+  "standingsWeek": 11,
+  "stageWeek": 11,
+  "roundType": "league",
+  "roundLabel": "11. Hafta",
+  "roundSource": "stage_sequence_fallback",
+  "leagueStageId": "group-02",
+  "leagueStageLabel": "Kademe 02",
+  "leagueStageNumber": 1,
+  "stageId": "group-02",
+  "stageNumber": 1
+}

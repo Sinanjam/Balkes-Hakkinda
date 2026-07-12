@@ -1,0 +1,46 @@
+{
+  "id": "2014-2015",
+  "name": "2014-2015",
+  "competition": "Spor Toto Süper Lig Süleyman Seba Sezonu (Profesyonel Takım)",
+  "sourcePolicy": "TFF-only",
+  "factoryVersion": "v5-professional-only-resilient",
+  "updatedAt": "2026-07-12T17:37:10.579388Z",
+  "summary": {
+    "matches": 35,
+    "wins": 6,
+    "draws": 9,
+    "losses": 20,
+    "goalsFor": 50,
+    "goalsAgainst": 73,
+    "goalDifference": -23,
+    "matchTypes": {
+      "league": 34,
+      "cup": 1
+    },
+    "points": 27,
+    "rawPoints": 27,
+    "pointsDeducted": 0,
+    "finalRank": 18
+  },
+  "files": {
+    "matchesIndex": "seasons/2014-2015/matches_index.json",
+    "standingsByWeek": "seasons/2014-2015/standings_by_week.json"
+  },
+  "sanitizedAt": "2026-07-12T17:38:45.647469Z",
+  "sanitizerVersion": "v1-professional-team-only",
+  "leagueSummary": {
+    "played": 34,
+    "won": 6,
+    "drawn": 9,
+    "lost": 19,
+    "goalsFor": 48,
+    "goalsAgainst": 69,
+    "goalDifference": -21,
+    "points": 27,
+    "rawPoints": 27,
+    "pointsDeducted": 0,
+    "finalRank": 18
+  },
+  "standingsUpdatedAt": "2026-07-12T17:50:08.522395Z",
+  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+}

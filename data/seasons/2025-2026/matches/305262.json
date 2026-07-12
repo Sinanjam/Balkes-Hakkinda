@@ -1,0 +1,1463 @@
+{
+  "id": "305262",
+  "matchCode": "577",
+  "season": "2025-2026",
+  "competition": "Ziraat Türkiye Kupası (Profesyonel Takım) (2.Tur)",
+  "teamLevel": "professional",
+  "teamLevelEvidence": "explicit_professional",
+  "competitionType": "cup",
+  "competitionLabel": "Ziraat Türkiye Kupası",
+  "stadium": "BALIKESİR ATATÜRK - BALIKESİR - BALIKESİR MERKEZ",
+  "venue": "BALIKESİR ATATÜRK - BALIKESİR - BALIKESİR MERKEZ",
+  "stage": "Ziraat Türkiye Kupası",
+  "stageLabel": "Ziraat Türkiye Kupası",
+  "date": "2025-09-17",
+  "time": "19:00",
+  "dateDisplay": "2025-09-17 - 19:00",
+  "homeTeam": "Balıkesirspor",
+  "awayTeam": "YALOVA FK 77 SPOR KULÜBÜ",
+  "matchType": "cup",
+  "matchTypeLabel": "Ziraat Türkiye Kupası",
+  "type": "cup",
+  "typeLabel": "Ziraat Türkiye Kupası",
+  "score": {
+    "home": 1,
+    "away": 2,
+    "display": "1-2",
+    "played": true
+  },
+  "balkes": {
+    "isHome": true,
+    "isAway": false,
+    "opponent": "YALOVA FK 77 SPOR KULÜBÜ",
+    "goalsFor": 1,
+    "goalsAgainst": 2,
+    "result": "L"
+  },
+  "officials": [
+    {
+      "role": "Hakem",
+      "name": "BERAT OSMANCIKLI"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "ABDULLAH ÖZCAN"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "DEMİRHAN EMİR"
+    },
+    {
+      "role": "Dördüncü Hakem",
+      "name": "BEDİRHAN YİĞİTBAŞ"
+    }
+  ],
+  "referees": [
+    {
+      "role": "Hakem",
+      "name": "BERAT OSMANCIKLI"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "ABDULLAH ÖZCAN"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "DEMİRHAN EMİR"
+    },
+    {
+      "role": "Dördüncü Hakem",
+      "name": "BEDİRHAN YİĞİTBAŞ"
+    }
+  ],
+  "lineups": {
+    "home": {
+      "team": "Balıkesirspor",
+      "starting11": [
+        {
+          "name": "YASİN YİĞİT BERBER",
+          "number": 26,
+          "shirt_no": "26",
+          "tffPersonId": "1569202"
+        },
+        {
+          "name": "MEHMET BAĞCI",
+          "number": 66,
+          "shirt_no": "66",
+          "tffPersonId": "2552279"
+        },
+        {
+          "name": "YİĞİT EPÖZDEMİR",
+          "number": 33,
+          "shirt_no": "33",
+          "tffPersonId": "1749227"
+        },
+        {
+          "name": "HARUN TOPRAK",
+          "number": 6,
+          "shirt_no": "6",
+          "tffPersonId": "1771562"
+        },
+        {
+          "name": "AHMET NECAT AYDIN",
+          "number": 29,
+          "shirt_no": "29",
+          "tffPersonId": "1770316"
+        },
+        {
+          "name": "TALHA DOĞUŞ",
+          "number": 8,
+          "shirt_no": "8",
+          "tffPersonId": "2022790"
+        },
+        {
+          "name": "YİĞİT BAYINDIR",
+          "number": 78,
+          "shirt_no": "78",
+          "tffPersonId": "1897526"
+        },
+        {
+          "name": "ERŞAN YAŞA",
+          "number": 27,
+          "shirt_no": "27",
+          "tffPersonId": "1589637"
+        },
+        {
+          "name": "BORA YILMAZ",
+          "number": 17,
+          "shirt_no": "17",
+          "tffPersonId": "1629396"
+        },
+        {
+          "name": "HASAN GÜNDOĞDU",
+          "number": 21,
+          "shirt_no": "21",
+          "tffPersonId": "1214605"
+        },
+        {
+          "name": "ALİ TOPÇU",
+          "number": 70,
+          "shirt_no": "70",
+          "tffPersonId": "2825011"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "FURKAN YARDIM",
+          "number": 77,
+          "shirt_no": "77",
+          "tffPersonId": "1429137"
+        },
+        {
+          "name": "MİKDAT ÇİL",
+          "number": 41,
+          "shirt_no": "41",
+          "tffPersonId": "2015877"
+        },
+        {
+          "name": "SEDAT YİĞİT KURNAZ",
+          "number": 10,
+          "shirt_no": "10",
+          "tffPersonId": "1712887"
+        },
+        {
+          "name": "YEKTA SÖNMEZ",
+          "number": 20,
+          "shirt_no": "20",
+          "tffPersonId": "1515022"
+        },
+        {
+          "name": "CELAL EMİR DEDE",
+          "number": 7,
+          "shirt_no": "7",
+          "tffPersonId": "1602439"
+        },
+        {
+          "name": "ALİ SİNAN GAYLA",
+          "number": 11,
+          "shirt_no": "11",
+          "tffPersonId": "1260923"
+        },
+        {
+          "name": "ARTUN AKÇAKIN",
+          "number": 9,
+          "shirt_no": "9",
+          "tffPersonId": "652987"
+        },
+        {
+          "name": "OĞUZCAN KESGİN",
+          "number": 18,
+          "shirt_no": "18",
+          "tffPersonId": "1757645"
+        },
+        {
+          "name": "KAAN BOZKURT",
+          "number": 19,
+          "shirt_no": "19",
+          "tffPersonId": "2174457"
+        },
+        {
+          "name": "EFE OKUTAN",
+          "number": 83,
+          "shirt_no": "83",
+          "tffPersonId": "1994993"
+        }
+      ],
+      "technicalStaff": [
+        {
+          "name": "CEM KAVÇAK"
+        }
+      ],
+      "coach": "CEM KAVÇAK",
+      "raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu"
+    },
+    "away": {
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "starting11": [
+        {
+          "name": "DOĞUKAN ÖZKAN",
+          "number": 13,
+          "shirt_no": "13",
+          "tffPersonId": "1499424"
+        },
+        {
+          "name": "BARAN ÇETİN",
+          "number": 23,
+          "shirt_no": "23",
+          "tffPersonId": "1733279"
+        },
+        {
+          "name": "ALİ YEŞİLYURT",
+          "number": 58,
+          "shirt_no": "58",
+          "tffPersonId": "1754246"
+        },
+        {
+          "name": "MURAT AKÇA",
+          "number": 28,
+          "shirt_no": "28",
+          "tffPersonId": "705968"
+        },
+        {
+          "name": "ARDA YAVUZ",
+          "number": 88,
+          "shirt_no": "88",
+          "tffPersonId": "1837699"
+        },
+        {
+          "name": "ERGÜN NAZLI",
+          "number": 15,
+          "shirt_no": "15",
+          "tffPersonId": "1674212"
+        },
+        {
+          "name": "İZZET TOPATAR",
+          "number": 52,
+          "shirt_no": "52",
+          "tffPersonId": "1577335"
+        },
+        {
+          "name": "BEHLÜL AYDIN",
+          "number": 19,
+          "shirt_no": "19",
+          "tffPersonId": "1450986"
+        },
+        {
+          "name": "METEHAN MUSTAFA MOLLAOĞLU",
+          "number": 90,
+          "shirt_no": "90",
+          "tffPersonId": "1774142"
+        },
+        {
+          "name": "MUHAMMED HASAN YILDIRIM",
+          "number": 21,
+          "shirt_no": "21",
+          "tffPersonId": "2098424"
+        },
+        {
+          "name": "ONUR ARI",
+          "number": 9,
+          "shirt_no": "9",
+          "tffPersonId": "1539861"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "MİRAÇ FATİH DEĞİRMENCİ",
+          "number": 27,
+          "shirt_no": "27",
+          "tffPersonId": "1466211"
+        },
+        {
+          "name": "EFE TECİMER",
+          "number": 17,
+          "shirt_no": "17",
+          "tffPersonId": "1693047"
+        },
+        {
+          "name": "MUSTAFA ÖZBAY",
+          "number": 97,
+          "shirt_no": "97",
+          "tffPersonId": "2053230"
+        },
+        {
+          "name": "ÖMER FARUK ÖZDEMİR",
+          "number": 25,
+          "shirt_no": "25",
+          "tffPersonId": "1731956"
+        },
+        {
+          "name": "BERKAN GÜNER",
+          "number": 54,
+          "shirt_no": "54",
+          "tffPersonId": "1673758"
+        },
+        {
+          "name": "ATA ÖZTÜRK",
+          "number": 34,
+          "shirt_no": "34",
+          "tffPersonId": "1702144"
+        },
+        {
+          "name": "EREN AKDEMİR",
+          "number": 20,
+          "shirt_no": "20",
+          "tffPersonId": "1777499"
+        },
+        {
+          "name": "ARİF RIŞVANOĞLU",
+          "number": 99,
+          "shirt_no": "99",
+          "tffPersonId": "1873195"
+        },
+        {
+          "name": "KAAN GEÇİM",
+          "number": 37,
+          "shirt_no": "37",
+          "tffPersonId": "1957352"
+        },
+        {
+          "name": "İBRAHİM YILMAZ ÇİÇEK",
+          "number": 30,
+          "shirt_no": "30",
+          "tffPersonId": "1860311"
+        }
+      ],
+      "technicalStaff": [
+        {
+          "name": "FATİH AKYEL"
+        }
+      ],
+      "coach": "FATİH AKYEL",
+      "raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu"
+    }
+  },
+  "players": [
+    {
+      "name": "AHMET NECAT AYDIN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 29,
+      "tffPersonId": "1770316"
+    },
+    {
+      "name": "ALİ SİNAN GAYLA",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 11,
+      "tffPersonId": "1260923"
+    },
+    {
+      "name": "ALİ TOPÇU",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 70,
+      "tffPersonId": "2825011"
+    },
+    {
+      "name": "ARTUN AKÇAKIN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "yellow_card",
+        "substitution_in"
+      ],
+      "number": 9,
+      "tffPersonId": "652987"
+    },
+    {
+      "name": "BORA YILMAZ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "goal"
+      ],
+      "number": 17,
+      "tffPersonId": "1629396"
+    },
+    {
+      "name": "CELAL EMİR DEDE",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 7,
+      "tffPersonId": "1602439"
+    },
+    {
+      "name": "CEM KAVÇAK",
+      "team": "Balıkesirspor",
+      "roles": [
+        "technical_staff"
+      ]
+    },
+    {
+      "name": "EFE OKUTAN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 83,
+      "tffPersonId": "1994993"
+    },
+    {
+      "name": "ERŞAN YAŞA",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card",
+        "substitution_out"
+      ],
+      "number": 27,
+      "tffPersonId": "1589637"
+    },
+    {
+      "name": "FURKAN YARDIM",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 77,
+      "tffPersonId": "1429137"
+    },
+    {
+      "name": "HARUN TOPRAK",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 6,
+      "tffPersonId": "1771562"
+    },
+    {
+      "name": "HASAN GÜNDOĞDU",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 21,
+      "tffPersonId": "1214605"
+    },
+    {
+      "name": "KAAN BOZKURT",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 19,
+      "tffPersonId": "2174457"
+    },
+    {
+      "name": "MEHMET BAĞCI",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 66,
+      "tffPersonId": "2552279"
+    },
+    {
+      "name": "MİKDAT ÇİL",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 41,
+      "tffPersonId": "2015877"
+    },
+    {
+      "name": "OĞUZCAN KESGİN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 18,
+      "tffPersonId": "1757645"
+    },
+    {
+      "name": "SEDAT YİĞİT KURNAZ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 10,
+      "tffPersonId": "1712887"
+    },
+    {
+      "name": "TALHA DOĞUŞ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 8,
+      "tffPersonId": "2022790"
+    },
+    {
+      "name": "YASİN YİĞİT BERBER",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 26,
+      "tffPersonId": "1569202"
+    },
+    {
+      "name": "YEKTA SÖNMEZ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 20,
+      "tffPersonId": "1515022"
+    },
+    {
+      "name": "YİĞİT BAYINDIR",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 78,
+      "tffPersonId": "1897526"
+    },
+    {
+      "name": "YİĞİT EPÖZDEMİR",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 33,
+      "tffPersonId": "1749227"
+    },
+    {
+      "name": "ALİ YEŞİLYURT",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "starting11"
+      ],
+      "number": 58,
+      "tffPersonId": "1754246"
+    },
+    {
+      "name": "ARDA YAVUZ",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 88,
+      "tffPersonId": "1837699"
+    },
+    {
+      "name": "ARİF RIŞVANOĞLU",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "substitute"
+      ],
+      "number": 99,
+      "tffPersonId": "1873195"
+    },
+    {
+      "name": "ATA ÖZTÜRK",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "substitute"
+      ],
+      "number": 34,
+      "tffPersonId": "1702144"
+    },
+    {
+      "name": "BARAN ÇETİN",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "starting11"
+      ],
+      "number": 23,
+      "tffPersonId": "1733279"
+    },
+    {
+      "name": "BEHLÜL AYDIN",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 19,
+      "tffPersonId": "1450986"
+    },
+    {
+      "name": "BERKAN GÜNER",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 54,
+      "tffPersonId": "1673758"
+    },
+    {
+      "name": "DOĞUKAN ÖZKAN",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "starting11"
+      ],
+      "number": 13,
+      "tffPersonId": "1499424"
+    },
+    {
+      "name": "EFE TECİMER",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "substitute"
+      ],
+      "number": 17,
+      "tffPersonId": "1693047"
+    },
+    {
+      "name": "EREN AKDEMİR",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "substitute"
+      ],
+      "number": 20,
+      "tffPersonId": "1777499"
+    },
+    {
+      "name": "ERGÜN NAZLI",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "starting11",
+        "yellow_card",
+        "substitution_out"
+      ],
+      "number": 15,
+      "tffPersonId": "1674212"
+    },
+    {
+      "name": "FATİH AKYEL",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "technical_staff"
+      ]
+    },
+    {
+      "name": "İBRAHİM YILMAZ ÇİÇEK",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "substitute",
+        "yellow_card",
+        "substitution_in"
+      ],
+      "number": 30,
+      "tffPersonId": "1860311"
+    },
+    {
+      "name": "İZZET TOPATAR",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "starting11",
+        "goal",
+        "yellow_card",
+        "substitution_out"
+      ],
+      "number": 52,
+      "tffPersonId": "1577335"
+    },
+    {
+      "name": "KAAN GEÇİM",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "substitute"
+      ],
+      "number": 37,
+      "tffPersonId": "1957352"
+    },
+    {
+      "name": "METEHAN MUSTAFA MOLLAOĞLU",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "starting11"
+      ],
+      "number": 90,
+      "tffPersonId": "1774142"
+    },
+    {
+      "name": "MİRAÇ FATİH DEĞİRMENCİ",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "substitute",
+        "red_card"
+      ],
+      "number": 27,
+      "tffPersonId": "1466211"
+    },
+    {
+      "name": "MUHAMMED HASAN YILDIRIM",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 21,
+      "tffPersonId": "2098424"
+    },
+    {
+      "name": "MURAT AKÇA",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "starting11",
+        "goal",
+        "yellow_card"
+      ],
+      "number": 28,
+      "tffPersonId": "705968"
+    },
+    {
+      "name": "MUSTAFA ÖZBAY",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 97,
+      "tffPersonId": "2053230"
+    },
+    {
+      "name": "ÖMER FARUK ÖZDEMİR",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 25,
+      "tffPersonId": "1731956"
+    },
+    {
+      "name": "ONUR ARI",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "roles": [
+        "starting11"
+      ],
+      "number": 9,
+      "tffPersonId": "1539861"
+    }
+  ],
+  "events": [
+    {
+      "type": "goal",
+      "team": "Balıkesirspor",
+      "player": "BORA YILMAZ",
+      "scorer": "BORA YILMAZ",
+      "raw": "BORA YILMAZ,11.dk (F)",
+      "minute": 11,
+      "minuteRaw": "BORA YILMAZ,11.dk",
+      "goalType": "F",
+      "tffPersonId": "1629396"
+    },
+    {
+      "type": "goal",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "MURAT AKÇA",
+      "scorer": "MURAT AKÇA",
+      "raw": "MURAT AKÇA,26.dk (F)",
+      "minute": 26,
+      "minuteRaw": "MURAT AKÇA,26.dk",
+      "goalType": "F",
+      "tffPersonId": "705968"
+    },
+    {
+      "type": "goal",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "İZZET TOPATAR",
+      "scorer": "İZZET TOPATAR",
+      "raw": "İZZET TOPATAR,64.dk (F)",
+      "minute": 64,
+      "minuteRaw": "İZZET TOPATAR,64.dk",
+      "goalType": "F",
+      "tffPersonId": "1577335"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ARTUN AKÇAKIN",
+      "minute": 81,
+      "minuteRaw": "81.dk",
+      "tffPersonId": "652987"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "HASAN GÜNDOĞDU",
+      "minute": 51,
+      "minuteRaw": "51.dk",
+      "tffPersonId": "1214605"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ERŞAN YAŞA",
+      "minute": 29,
+      "minuteRaw": "29.dk",
+      "tffPersonId": "1589637"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "HARUN TOPRAK",
+      "minute": 81,
+      "minuteRaw": "81.dk",
+      "tffPersonId": "1771562"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "TALHA DOĞUŞ",
+      "minute": 18,
+      "minuteRaw": "18.dk",
+      "tffPersonId": "2022790"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "MURAT AKÇA",
+      "minute": 45,
+      "minuteRaw": "45+1.dk",
+      "tffPersonId": "705968"
+    },
+    {
+      "type": "red_card",
+      "card": "red",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "MİRAÇ FATİH DEĞİRMENCİ",
+      "minute": 81,
+      "minuteRaw": "81.dk",
+      "tffPersonId": "1466211"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "İZZET TOPATAR",
+      "minute": 81,
+      "minuteRaw": "81.dk",
+      "tffPersonId": "1577335"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "ERGÜN NAZLI",
+      "minute": 57,
+      "minuteRaw": "57.dk",
+      "tffPersonId": "1674212"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "ARDA YAVUZ",
+      "minute": 90,
+      "minuteRaw": "90+2.dk",
+      "tffPersonId": "1837699"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "İBRAHİM YILMAZ ÇİÇEK",
+      "minute": 90,
+      "minuteRaw": "90+1.dk",
+      "tffPersonId": "1860311"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 1,
+      "player_in": "ALİ SİNAN GAYLA",
+      "player_out": "ERŞAN YAŞA",
+      "playerIn": "ALİ SİNAN GAYLA",
+      "playerOut": "ERŞAN YAŞA",
+      "minute": 68,
+      "minuteRaw": "68.dk",
+      "minute_text": "68.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "ERŞAN YAŞA",
+      "order": 1,
+      "minute": 68,
+      "minuteRaw": "68.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "ALİ SİNAN GAYLA",
+      "order": 1,
+      "minute": 68,
+      "minuteRaw": "68.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 2,
+      "player_in": "MİKDAT ÇİL",
+      "player_out": "YİĞİT EPÖZDEMİR",
+      "playerIn": "MİKDAT ÇİL",
+      "playerOut": "YİĞİT EPÖZDEMİR",
+      "minute": 86,
+      "minuteRaw": "86.dk",
+      "minute_text": "86.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "YİĞİT EPÖZDEMİR",
+      "order": 2,
+      "minute": 86,
+      "minuteRaw": "86.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "MİKDAT ÇİL",
+      "order": 2,
+      "minute": 86,
+      "minuteRaw": "86.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 3,
+      "player_in": "ARTUN AKÇAKIN",
+      "player_out": "AHMET NECAT AYDIN",
+      "playerIn": "ARTUN AKÇAKIN",
+      "playerOut": "AHMET NECAT AYDIN",
+      "minute": 68,
+      "minuteRaw": "68.dk",
+      "minute_text": "68.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "AHMET NECAT AYDIN",
+      "order": 3,
+      "minute": 68,
+      "minuteRaw": "68.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "ARTUN AKÇAKIN",
+      "order": 3,
+      "minute": 68,
+      "minuteRaw": "68.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 4,
+      "player_in": "CELAL EMİR DEDE",
+      "player_out": "YİĞİT BAYINDIR",
+      "playerIn": "CELAL EMİR DEDE",
+      "playerOut": "YİĞİT BAYINDIR",
+      "minute": 61,
+      "minuteRaw": "61.dk",
+      "minute_text": "61.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "YİĞİT BAYINDIR",
+      "order": 4,
+      "minute": 61,
+      "minuteRaw": "61.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "CELAL EMİR DEDE",
+      "order": 4,
+      "minute": 61,
+      "minuteRaw": "61.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 5,
+      "player_in": "SEDAT YİĞİT KURNAZ",
+      "player_out": "ALİ TOPÇU",
+      "playerIn": "SEDAT YİĞİT KURNAZ",
+      "playerOut": "ALİ TOPÇU",
+      "minute": 61,
+      "minuteRaw": "61.dk",
+      "minute_text": "61.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "ALİ TOPÇU",
+      "order": 5,
+      "minute": 61,
+      "minuteRaw": "61.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "SEDAT YİĞİT KURNAZ",
+      "order": 5,
+      "minute": 61,
+      "minuteRaw": "61.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "order": 1,
+      "player_in": "İBRAHİM YILMAZ ÇİÇEK",
+      "player_out": "BEHLÜL AYDIN",
+      "playerIn": "İBRAHİM YILMAZ ÇİÇEK",
+      "playerOut": "BEHLÜL AYDIN",
+      "minute": 90,
+      "minuteRaw": "90.dk",
+      "minute_text": "90.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "BEHLÜL AYDIN",
+      "order": 1,
+      "minute": 90,
+      "minuteRaw": "90.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "İBRAHİM YILMAZ ÇİÇEK",
+      "order": 1,
+      "minute": 90,
+      "minuteRaw": "90.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "order": 2,
+      "player_in": "BERKAN GÜNER",
+      "player_out": "İZZET TOPATAR",
+      "playerIn": "BERKAN GÜNER",
+      "playerOut": "İZZET TOPATAR",
+      "minute": 90,
+      "minuteRaw": "90.dk",
+      "minute_text": "90.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "İZZET TOPATAR",
+      "order": 2,
+      "minute": 90,
+      "minuteRaw": "90.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "BERKAN GÜNER",
+      "order": 2,
+      "minute": 90,
+      "minuteRaw": "90.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "order": 3,
+      "player_in": "ÖMER FARUK ÖZDEMİR",
+      "player_out": "ERGÜN NAZLI",
+      "playerIn": "ÖMER FARUK ÖZDEMİR",
+      "playerOut": "ERGÜN NAZLI",
+      "minute": 61,
+      "minuteRaw": "61.dk",
+      "minute_text": "61.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "ERGÜN NAZLI",
+      "order": 3,
+      "minute": 61,
+      "minuteRaw": "61.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "ÖMER FARUK ÖZDEMİR",
+      "order": 3,
+      "minute": 61,
+      "minuteRaw": "61.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "order": 4,
+      "player_in": "MUSTAFA ÖZBAY",
+      "player_out": "MUHAMMED HASAN YILDIRIM",
+      "playerIn": "MUSTAFA ÖZBAY",
+      "playerOut": "MUHAMMED HASAN YILDIRIM",
+      "minute": 69,
+      "minuteRaw": "69.dk",
+      "minute_text": "69.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "MUHAMMED HASAN YILDIRIM",
+      "order": 4,
+      "minute": 69,
+      "minuteRaw": "69.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "MUSTAFA ÖZBAY",
+      "order": 4,
+      "minute": 69,
+      "minuteRaw": "69.dk"
+    }
+  ],
+  "goals": [
+    {
+      "type": "goal",
+      "team": "Balıkesirspor",
+      "player": "BORA YILMAZ",
+      "scorer": "BORA YILMAZ",
+      "raw": "BORA YILMAZ,11.dk (F)",
+      "minute": 11,
+      "minuteRaw": "BORA YILMAZ,11.dk",
+      "goalType": "F",
+      "tffPersonId": "1629396"
+    },
+    {
+      "type": "goal",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "MURAT AKÇA",
+      "scorer": "MURAT AKÇA",
+      "raw": "MURAT AKÇA,26.dk (F)",
+      "minute": 26,
+      "minuteRaw": "MURAT AKÇA,26.dk",
+      "goalType": "F",
+      "tffPersonId": "705968"
+    },
+    {
+      "type": "goal",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "İZZET TOPATAR",
+      "scorer": "İZZET TOPATAR",
+      "raw": "İZZET TOPATAR,64.dk (F)",
+      "minute": 64,
+      "minuteRaw": "İZZET TOPATAR,64.dk",
+      "goalType": "F",
+      "tffPersonId": "1577335"
+    }
+  ],
+  "goalScorers": [
+    {
+      "player": "BORA YILMAZ",
+      "team": "Balıkesirspor",
+      "minute": 11,
+      "goalType": "F"
+    },
+    {
+      "player": "MURAT AKÇA",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "minute": 26,
+      "goalType": "F"
+    },
+    {
+      "player": "İZZET TOPATAR",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "minute": 64,
+      "goalType": "F"
+    }
+  ],
+  "cards": [
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ARTUN AKÇAKIN",
+      "minute": 81,
+      "minuteRaw": "81.dk",
+      "tffPersonId": "652987"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "HASAN GÜNDOĞDU",
+      "minute": 51,
+      "minuteRaw": "51.dk",
+      "tffPersonId": "1214605"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ERŞAN YAŞA",
+      "minute": 29,
+      "minuteRaw": "29.dk",
+      "tffPersonId": "1589637"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "HARUN TOPRAK",
+      "minute": 81,
+      "minuteRaw": "81.dk",
+      "tffPersonId": "1771562"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "TALHA DOĞUŞ",
+      "minute": 18,
+      "minuteRaw": "18.dk",
+      "tffPersonId": "2022790"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "MURAT AKÇA",
+      "minute": 45,
+      "minuteRaw": "45+1.dk",
+      "tffPersonId": "705968"
+    },
+    {
+      "type": "red_card",
+      "card": "red",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "MİRAÇ FATİH DEĞİRMENCİ",
+      "minute": 81,
+      "minuteRaw": "81.dk",
+      "tffPersonId": "1466211"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "İZZET TOPATAR",
+      "minute": 81,
+      "minuteRaw": "81.dk",
+      "tffPersonId": "1577335"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "ERGÜN NAZLI",
+      "minute": 57,
+      "minuteRaw": "57.dk",
+      "tffPersonId": "1674212"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "ARDA YAVUZ",
+      "minute": 90,
+      "minuteRaw": "90+2.dk",
+      "tffPersonId": "1837699"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "player": "İBRAHİM YILMAZ ÇİÇEK",
+      "minute": 90,
+      "minuteRaw": "90+1.dk",
+      "tffPersonId": "1860311"
+    }
+  ],
+  "substitutions": [
+    {
+      "team": "Balıkesirspor",
+      "order": 1,
+      "minute": 68,
+      "minuteRaw": "68.dk",
+      "playerOut": "ERŞAN YAŞA",
+      "player_out": "ERŞAN YAŞA",
+      "playerOutTffPersonId": "1589637",
+      "playerIn": "ALİ SİNAN GAYLA",
+      "player_in": "ALİ SİNAN GAYLA",
+      "playerInTffPersonId": "1260923"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 2,
+      "minute": 86,
+      "minuteRaw": "86.dk",
+      "playerOut": "YİĞİT EPÖZDEMİR",
+      "player_out": "YİĞİT EPÖZDEMİR",
+      "playerOutTffPersonId": "1749227",
+      "playerIn": "MİKDAT ÇİL",
+      "player_in": "MİKDAT ÇİL",
+      "playerInTffPersonId": "2015877"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 3,
+      "minute": 68,
+      "minuteRaw": "68.dk",
+      "playerOut": "AHMET NECAT AYDIN",
+      "player_out": "AHMET NECAT AYDIN",
+      "playerOutTffPersonId": "1770316",
+      "playerIn": "ARTUN AKÇAKIN",
+      "player_in": "ARTUN AKÇAKIN",
+      "playerInTffPersonId": "652987"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 4,
+      "minute": 61,
+      "minuteRaw": "61.dk",
+      "playerOut": "YİĞİT BAYINDIR",
+      "player_out": "YİĞİT BAYINDIR",
+      "playerOutTffPersonId": "1897526",
+      "playerIn": "CELAL EMİR DEDE",
+      "player_in": "CELAL EMİR DEDE",
+      "playerInTffPersonId": "1602439"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 5,
+      "minute": 61,
+      "minuteRaw": "61.dk",
+      "playerOut": "ALİ TOPÇU",
+      "player_out": "ALİ TOPÇU",
+      "playerOutTffPersonId": "2825011",
+      "playerIn": "SEDAT YİĞİT KURNAZ",
+      "player_in": "SEDAT YİĞİT KURNAZ",
+      "playerInTffPersonId": "1712887"
+    },
+    {
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "order": 1,
+      "minute": 90,
+      "minuteRaw": "90.dk",
+      "playerOut": "BEHLÜL AYDIN",
+      "player_out": "BEHLÜL AYDIN",
+      "playerOutTffPersonId": "1450986",
+      "playerIn": "İBRAHİM YILMAZ ÇİÇEK",
+      "player_in": "İBRAHİM YILMAZ ÇİÇEK",
+      "playerInTffPersonId": "1860311"
+    },
+    {
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "order": 2,
+      "minute": 90,
+      "minuteRaw": "90.dk",
+      "playerOut": "İZZET TOPATAR",
+      "player_out": "İZZET TOPATAR",
+      "playerOutTffPersonId": "1577335",
+      "playerIn": "BERKAN GÜNER",
+      "player_in": "BERKAN GÜNER",
+      "playerInTffPersonId": "1673758"
+    },
+    {
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "order": 3,
+      "minute": 61,
+      "minuteRaw": "61.dk",
+      "playerOut": "ERGÜN NAZLI",
+      "player_out": "ERGÜN NAZLI",
+      "playerOutTffPersonId": "1674212",
+      "playerIn": "ÖMER FARUK ÖZDEMİR",
+      "player_in": "ÖMER FARUK ÖZDEMİR",
+      "playerInTffPersonId": "1731956"
+    },
+    {
+      "team": "YALOVA FK 77 SPOR KULÜBÜ",
+      "order": 4,
+      "minute": 69,
+      "minuteRaw": "69.dk",
+      "playerOut": "MUHAMMED HASAN YILDIRIM",
+      "player_out": "MUHAMMED HASAN YILDIRIM",
+      "playerOutTffPersonId": "2098424",
+      "playerIn": "MUSTAFA ÖZBAY",
+      "player_in": "MUSTAFA ÖZBAY",
+      "playerInTffPersonId": "2053230"
+    }
+  ],
+  "sections_raw": {
+    "full_text_excerpt": "NEV SAĞLIK GRUBU BALIKESİRSPOR YALOVA FK 77 SPOR KULÜBÜ - Maç Detayları TFF\nAra\nTR\nEN\nTRENDYOL SÜPER LİG\nZİRAAT TÜRKİYE KUPASI\nE-SHOP\nANA SAYFA\nTFF\nMİLLİ TAKIMLAR\nLİGLER\nKUPALAR\nKADIN FUTBOLU\nFGD\nBİLGİ BANKASI\nPUAN DURUMU\nTRENDYOL SÜPERLIG\nFutbol Bilgi Bankası\nFutbolcular\nTeknik Direktörler\nTüm Maçlar\nMilli Maçlar\nKulüpler\nStadyumlar\nCezalar\nHakemler\nGözlemci ve Temsilciler\nFutbol Menajerleri\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nFormlar ve Sözleşmeler\nStatüler\nTalimatlar\nTFF Kanun ve Statüsü\nOnline Başvurular\nTam Saha içerikleri için tıklayınız\nFikstürler\nLig Seçiniz...\nTrendyol Süper Lig\nTrendyol 1. Lig\nTFF 2. Lig\nTFF 3. Lig\nKadın Ligleri\nZiraat Türkiye Kupası\nBölgesel Amatör Lig\nGelişim Ligleri\nEngelli Futbolu\nFutsal Ligi\nPlaj Futbolu\nFutbol Altyapı Gelişim Ligi\nSezon Planlaması\nPuan Cetvelleri\nLig Seçiniz..\nTrendyol Süper Lig Şamil Ekinci Sezonu\nTrendyol 1.Lig\nTrendyol 1. Lig Play Off Müsabakaları\nNesine 2. Lig Kırmızı\nNesine 2. Lig Beyaz\nNesine 2. Lig Play Off Müsabakaları\nNesine 3. Lig 01\nNesine 3. Lig 02\nNesine 3. Lig 03\nNesine 3. Lig 04\nNesine 3. Lig Play Off Müsabakaları\nZiraat Türkiye Kupası\nZiraat Türkiye Kupası Grup Aşaması A\nZiraat Türkiye Kupası Grup Aşaması B\nZiraat Türkiye Kupası Grup Aşaması C\nZiraat Türkiye Kupası Grup Aşaması D\nTurkcell Kadın Futbol Süper Ligi\nKadınlar 1. Ligi A Grubu\nKadınlar 1. Ligi B Grubu\nTFF Kadınlar 1. Ligi Play Off 3.lük Müsabakaları\nTFF Kadınlar 1. Ligi Play Off Şampiyonluk Grubu\nTFF Kadınlar 1. Ligi Play Off Yükselme Grubu\nKadınlar 2.Ligi Play Off Müsabakaları\nKadınlar 3.Ligi Play Off Müsabakaları\nKadınlar 2. Ligi A Grup\nKadınlar 2. Ligi B Grup\nKadınlar 2. Ligi C Grup\nKadınlar 2. Ligi D Grup\nKadınlar 3. Ligi 1.\nKadınlar 3. Ligi 10.\nKadınlar 3. Ligi 11.\nKadınlar 3. Ligi 12.\nKadınlar 3. Ligi 13.\nKadınlar 3. Ligi 14.\nKadınlar 3. Ligi 15.\nKadınlar 3. Ligi 16.\nKadınlar 3. Ligi 17.\nKadınlar 3. Ligi 18.\nKadınlar 3. Ligi 19.\nKadınlar 3. Ligi 2.\nKadınlar 3. Ligi 20.\nKadınlar 3. Ligi 21.\nKadınlar 3. Ligi 22.\nKadınlar 3. Ligi 23.\nKadınlar 3. Ligi 24.\nKadınlar 3. Ligi 25.\nKadınlar 3. Ligi 26.\nKadınlar 3. Ligi 27.\nKadınlar 3. Ligi 28.\nKadınlar 3. Ligi 29.\nKadınlar 3. Ligi 3.\nKadınlar 3. Ligi 30.\nKadınlar 3. Ligi 31.\nKadınlar 3. Ligi 32.\nKadınlar 3. Ligi 4.\nKadınlar 3. Ligi 5.\nKadınlar 3. Ligi 6.\nKadınlar 3. Ligi 7.\nKadınlar 3. Ligi 8.\nKadınlar 3. Ligi 9.\nBölgesel Amatör Ligi 1. GRUP\nBölgesel Amatör Ligi 10. GRUP\nBölgesel Amatör Ligi 2. GRUP\nBölgesel Amatör Ligi 3. GRUP\nBölgesel Amatör Ligi 4. GRUP\nBölgesel Amatör Ligi 5. GRUP\nBölgesel Amatör Ligi 6. GRUP\nBölgesel Amatör Ligi 7. GRUP\nBölgesel Amatör Ligi 8. GRUP\nBölgesel Amatör Ligi 9. GRUP\nBölgesel Amatör Lig Baraj Maçları\nBölgesel Amatör Lig Play Off\nU17 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU17 Bölgesel Gelişim Ligi 1. Grup\nU17 Bölgesel Gelişim Ligi 2. Grup\nU17 Bölgesel Gelişim Ligi 3. Grup\nU17 Bölgesel Gelişim Ligi 4. Grup\nU17 Bölgesel Gelişim Ligi 5. Grup\nU17 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi 1. Grup\nU19 Bölgesel Gelişim Ligi 2. Grup\nU19 Bölgesel Gelişim Ligi 3. Grup\nU19 Bölgesel Gelişim Ligi 4. Grup\nU19 Bölgesel Gelişim Ligi 5. Grup\nU19 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Grup 1\nU14 Gelişim Ligi Grup 2\nU14 Gelişim Ligi Grup 3\nU14 Gelişim Ligi Grup 4\nU14 Gelişim Ligi Grup 5\nU14 Gelişim Ligi Grup 6\nU14 Gelişim Ligi Grup 7\nU14 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Finalleri\nU15 Gelişim Ligi Grup 1\nU15 Gelişim Ligi Grup 2\nU15 Gelişim Ligi Grup 3\nU15 Gelişim Ligi Grup 4\nU15 Gelişim Ligi Grup 5\nU15 Gelişim Ligi Grup 6\nU15 Gelişim Ligi Grup 7\nU15 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU15 Gelişim Ligi Finalleri\nU16 Gelişim Ligi Grup 1\nU16 Gelişim Ligi Grup 2\nU16 Gelişim Ligi Grup 3\nU16 Gelişim Ligi Grup 4\nU16 Gelişim Ligi Grup 5\nU16 Gelişim Ligi Grup 6\nU16 Gelişim Ligi Grup 7\nU16 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU16 Gelişim Ligi Finalleri\nU17 Elit A Ligi\nU17 Elit B Ligi\nU19 Elit A Ligi\nU19 Elit B Ligi\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP A\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP B\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP A\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP B\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP A\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP B\nU14 Amatör Türkiye Şampiyonası\nU15 Amatör Türkiye Şampiyonası\nU16 Amatör Türkiye Şampiyonası\nU17 Amatör Türkiye Şampiyonası\nU18 Amatör Türkiye Şampiyonası\nHaftalık Maç Görevlileri\nHakem, Gözlemci ve Temsilciler\nMİLLİ TAKIM TARAFTAR KULÜBÜ\nSON DAKIKA..”\nU17 Kiz Milli Takimi'ndan Zafer Bayrami kutlamasi\n'Kuralina Göre' Programi beIN SPORTS'ta basliyor\nU18 Milli Takimimiz, Azerbaycan karsisinda\nU18 Milli Takimimiz, Azerbaycan karsisinda\n”\nNEV SAĞLIK GRUBU BALIKESİRSPOR\n1\nYALOVA FK 77 SPOR KULÜBÜ\n2\nZiraat Türkiye Kupası (Profesyonel Takım)\n(2.Tur)\nMaç Kodu:\n577\nBALIKESİR ATATÜRK - BALIKESİR - BALIKESİR MERKEZ\n17.09.2025 - 19:00\nBERAT OSMANCIKLI(Hakem)\nABDULLAH ÖZCAN(1. Yardımcı Hakem)\nDEMİRHAN EMİR(2. Yardımcı Hakem)\nBEDİRHAN YİĞİTBAŞ(Dördüncü Hakem)\nKEMAL M. SERBES(Gözlemci)\nERDOĞAN KURT(Temsilci)\nİlk 11\n26.\nYASİN YİĞİT BERBER\n66.\nMEHMET BAĞCI\n33.\nYİĞİT EPÖZDEMİR\n6.\nHARUN TOPRAK\n29.\nAHMET NECAT AYDIN\n8.\nTALHA DOĞUŞ\n78.\nYİĞİT BAYINDIR\n27.\nERŞAN YAŞA\n17.\nBORA YILMAZ\n21.\nHASAN GÜNDOĞDU\n70.\nALİ TOPÇU\nYedekler\n77.\nFURKAN YARDIM\n41.\nMİKDAT ÇİL\n10.\nSEDAT YİĞİT KURNAZ\n20.\nYEKTA SÖNMEZ\n7.\nCELAL EMİR DEDE\n11.\nALİ SİNAN GAYLA\n9.\nARTUN AKÇAKIN\n18.\nOĞUZCAN KESGİN\n19.\nKAAN BOZKURT\n83.\nEFE OKUTAN\nTeknik Sorumlu\nCEM KAVÇAK\nGoller\nBORA YILMAZ,11.dk (F)\nKartlar\nARTUN AKÇAKIN\n81.dk\nHASAN GÜNDOĞDU\n51.dk\nERŞAN YAŞA\n29.dk\nHARUN TOPRAK\n81.dk\nTALHA DOĞUŞ\n18.dk\nOyundan Çıkanlar\nERŞAN YAŞA\n68.dk\nYİĞİT EPÖZDEMİR\n86.dk\nAHMET NECAT AYDIN\n61.dk\nYİĞİT BAYINDIR\n61.dk\nALİ TOPÇU\n68.dk\nOyuna Girenler\nALİ SİNAN GAYLA\n68.dk\nMİKDAT ÇİL\n86.dk\nARTUN AKÇAKIN\n68.dk\nCELAL EMİR DEDE\n61.dk\nSEDAT YİĞİT KURNAZ\n61.dk\nİlk 11\n13.\nDOĞUKAN ÖZKAN\n23.\nBARAN ÇETİN\n58.\nALİ YEŞİLYURT\n28.\nMURAT AKÇA\n88.\nARDA YAVUZ\n15.\nERGÜN NAZLI\n52.\nİZZET TOPATAR\n19.\nBEHLÜL AYDIN\n90.\nMETEHAN MUSTAFA MOLLAOĞLU\n21.\nMUHAMMED HASAN YILDIRIM\n9.\nONUR ARI\nYedekler\n27.\nMİRAÇ FATİH DEĞİRMENCİ\n17.\nEFE TECİMER\n97.\nMUSTAFA ÖZBAY\n25.\nÖMER FARUK ÖZDEMİR\n54.\nBERKAN GÜNER\n34.\nATA ÖZTÜRK\n20.\nEREN AKDEMİR\n99.\nARİF RIŞVANOĞLU\n37.\nKAAN GEÇİM\n30.\nİBRAHİM YILMAZ ÇİÇEK\nTeknik Sorumlu\nFATİH AKYEL\nGoller\nMURAT AKÇA,26.dk (F)\nİZZET TOPATAR,64.dk (F)\nKartlar\nMURAT AKÇA\n45+1.dk\nMİRAÇ FATİH DEĞİRMENCİ\n81.dk\nİZZET TOPATAR\n81.dk\nERGÜN NAZLI\n57.dk\nARDA YAVUZ\n90+2.dk\nİBRAHİM YILMAZ ÇİÇEK\n90+1.dk\nOyundan Çıkanlar\nBEHLÜL AYDIN\n90.dk\nİZZET TOPATAR\n90.dk\nERGÜN NAZLI\n61.dk\nMUHAMMED HASAN YILDIRIM\n69.dk\nOyuna Girenler\nİBRAHİM YILMAZ ÇİÇEK\n90.dk\nBERKAN GÜNER\n90.dk\nÖMER FARUK ÖZDEMİR\n61.dk\nMUSTAFA ÖZBAY\n69.dk\nF:F - Ayak\nH:H - Kafa\nK:K - Kendi Kalesine\nP:P - Penaltı\nS:S - Seri Penaltı\nİletişim\n|\nSite Haritası\n|\nKopya Hakları\n|\nKullanım Şartları\n|\nSponsorlar\nTüm hakları Türkiye Futbol Federasyonu'na aittir.\nSosyal Medya Adreslerimiz:\nTFF\nTFF\nMilli Takımlar\nSüper Lig\nE-Millî Takım",
+    "officials_raw": "Hakemler\nGözlemci ve Temsilciler\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nHakem, Gözlemci ve Temsilciler\nBERAT OSMANCIKLI(Hakem)\nABDULLAH ÖZCAN(1. Yardımcı Hakem)\nDEMİRHAN EMİR(2. Yardımcı Hakem)\nBEDİRHAN YİĞİTBAŞ(Dördüncü Hakem)\nKEMAL M. SERBES(Gözlemci)\nERDOĞAN KURT(Temsilci)",
+    "lineups_raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu",
+    "events_raw": "Goller\nBORA YILMAZ,11.dk (F)\n81.dk\n51.dk\n29.dk\n81.dk\n18.dk\nOyundan Çıkanlar\n68.dk\n86.dk\n61.dk\n61.dk\n68.dk\nOyuna Girenler\n68.dk\n86.dk\n68.dk\n61.dk\n61.dk\nGoller\nMURAT AKÇA,26.dk (F)\nİZZET TOPATAR,64.dk (F)\n45+1.dk\n81.dk\n81.dk\n57.dk\n90+2.dk\n90+1.dk\nOyundan Çıkanlar\n90.dk\n90.dk\n61.dk\n69.dk\nOyuna Girenler\n90.dk\n90.dk\n61.dk\n69.dk\nP:P - Penaltı\nS:S - Seri Penaltı"
+  },
+  "detailCompleteness": {
+    "hasStadium": true,
+    "starting11Home": 11,
+    "starting11Away": 11,
+    "substitutesHome": 10,
+    "substitutesAway": 10,
+    "goals": 3,
+    "cards": 11,
+    "substitutions": 9,
+    "players": 44
+  },
+  "quality": "A",
+  "source": {
+    "name": "TFF",
+    "url": "http://www.tff.org/Default.aspx?pageID=29&macId=305262",
+    "retrievedAt": "2026-07-12T17:36:05.764432Z",
+    "sourceType": "official_tff_match_detail"
+  },
+  "clubFixture": {
+    "week": 0,
+    "rowText": "NEV SAĞLIK GRUBU BALIKESİRSPOR 1-2 YALOVA FK 77 SPOR KULÜBÜ 17 Eylül 2025 Ziraat Türkiye Kupası",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=305262&pageID=29"
+  },
+  "roundType": "cup"
+}

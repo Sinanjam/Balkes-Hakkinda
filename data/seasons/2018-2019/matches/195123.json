@@ -1,0 +1,949 @@
+{
+  "id": "195123",
+  "matchCode": "2304",
+  "season": "2018-2019",
+  "competition": "Spor Toto 1. Lig (Profesyonel Takım)",
+  "teamLevel": "professional",
+  "teamLevelEvidence": "explicit_professional",
+  "competitionType": "league",
+  "competitionLabel": "Lig",
+  "stadium": "BALIKESİR ATATÜRK - BALIKESİR",
+  "venue": "BALIKESİR ATATÜRK - BALIKESİR",
+  "stage": "Lig",
+  "stageLabel": "Lig",
+  "date": "2019-05-17",
+  "time": "16:30",
+  "dateDisplay": "2019-05-17 - 16:30",
+  "homeTeam": "Balıkesirspor",
+  "awayTeam": "HATAYSPOR",
+  "matchType": "league",
+  "matchTypeLabel": "Lig",
+  "type": "league",
+  "typeLabel": "Lig",
+  "score": {
+    "home": 0,
+    "away": 3,
+    "display": "0-3",
+    "played": true
+  },
+  "balkes": {
+    "isHome": true,
+    "isAway": false,
+    "opponent": "HATAYSPOR",
+    "goalsFor": 0,
+    "goalsAgainst": 3,
+    "result": "L"
+  },
+  "officials": [
+    {
+      "role": "Hakem",
+      "name": "MURAT ERDOĞAN"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "MURAT ALTAN"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "UFUK UĞURLU"
+    },
+    {
+      "role": "Dördüncü Hakem",
+      "name": "CİHAN AYDIN"
+    }
+  ],
+  "referees": [
+    {
+      "role": "Hakem",
+      "name": "MURAT ERDOĞAN"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "MURAT ALTAN"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "UFUK UĞURLU"
+    },
+    {
+      "role": "Dördüncü Hakem",
+      "name": "CİHAN AYDIN"
+    }
+  ],
+  "lineups": {
+    "home": {
+      "team": "Balıkesirspor",
+      "starting11": [
+        {
+          "name": "ASİL KAAN ERYILMAZ",
+          "number": 98,
+          "shirt_no": "98",
+          "tffPersonId": "1504113"
+        },
+        {
+          "name": "MUHAMMED ALİ DOĞAN",
+          "number": 6,
+          "shirt_no": "6",
+          "tffPersonId": "1626907"
+        },
+        {
+          "name": "FURKAN ÇİL",
+          "number": 8,
+          "shirt_no": "8",
+          "tffPersonId": "854926"
+        },
+        {
+          "name": "SEDAT ŞAHİNTÜRK",
+          "number": 11,
+          "shirt_no": "11",
+          "tffPersonId": "951516"
+        },
+        {
+          "name": "RAHMİ ANIL BAŞARAN",
+          "number": 20,
+          "shirt_no": "20",
+          "tffPersonId": "1442246"
+        },
+        {
+          "name": "SERDAR GÜNCÜ",
+          "number": 21,
+          "shirt_no": "21",
+          "tffPersonId": "1365955"
+        },
+        {
+          "name": "OĞUZHAN ÇAPAR",
+          "number": 23,
+          "shirt_no": "23",
+          "tffPersonId": "1048331"
+        },
+        {
+          "name": "KAĞAN KAYALI",
+          "number": 66,
+          "shirt_no": "66",
+          "tffPersonId": "1377605"
+        },
+        {
+          "name": "DOĞA İŞERİ",
+          "number": 77,
+          "shirt_no": "77",
+          "tffPersonId": "116812"
+        },
+        {
+          "name": "CELAL EMİR DEDE",
+          "number": 80,
+          "shirt_no": "80",
+          "tffPersonId": "1602439"
+        },
+        {
+          "name": "CUMALİ BİŞİ",
+          "number": 93,
+          "shirt_no": "93",
+          "tffPersonId": "929616"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "ATİLLA ÖZMEN",
+          "number": 19,
+          "shirt_no": "19",
+          "tffPersonId": "412201"
+        },
+        {
+          "name": "ÖMER TAYYİB KARADUMAN",
+          "number": 14,
+          "shirt_no": "14",
+          "tffPersonId": "1556663"
+        },
+        {
+          "name": "HARUN RAŞİT OYBAK",
+          "number": 24,
+          "shirt_no": "24",
+          "tffPersonId": "1300112"
+        }
+      ],
+      "technicalStaff": [
+        {
+          "name": "GİRAY BULAK"
+        }
+      ],
+      "coach": "GİRAY BULAK",
+      "raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu"
+    },
+    "away": {
+      "team": "HATAYSPOR",
+      "starting11": [
+        {
+          "name": "ÖMER ALICI",
+          "number": 1,
+          "shirt_no": "1",
+          "tffPersonId": "78120"
+        },
+        {
+          "name": "MEHMET TAYFUN DİNGİL",
+          "number": 5,
+          "shirt_no": "5",
+          "tffPersonId": "1927814"
+        },
+        {
+          "name": "SONER ÖRNEK",
+          "number": 4,
+          "shirt_no": "4",
+          "tffPersonId": "78628"
+        },
+        {
+          "name": "HAMIDOU MAIGA",
+          "number": 33,
+          "shirt_no": "33",
+          "tffPersonId": "2115664"
+        },
+        {
+          "name": "YASİN GÜRELER",
+          "number": 3,
+          "shirt_no": "3",
+          "tffPersonId": "869000"
+        },
+        {
+          "name": "ABDOULAYE SADIO DIALLO",
+          "number": 28,
+          "shirt_no": "28",
+          "tffPersonId": "2019482"
+        },
+        {
+          "name": "SEMİH ÜSTÜN",
+          "number": 19,
+          "shirt_no": "19",
+          "tffPersonId": "1158237"
+        },
+        {
+          "name": "WELLINGTON BRITO DA SILVA",
+          "number": 88,
+          "shirt_no": "88",
+          "tffPersonId": "1466129"
+        },
+        {
+          "name": "DMYTRO KORKISHKO",
+          "number": 17,
+          "shirt_no": "17",
+          "tffPersonId": "2017850"
+        },
+        {
+          "name": "ÖZGÜR KAZAR",
+          "number": 81,
+          "shirt_no": "81",
+          "tffPersonId": "1391140"
+        },
+        {
+          "name": "HONORE GOMIS",
+          "number": 27,
+          "shirt_no": "27",
+          "tffPersonId": "2119240"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "SÜLEYMAN ÇAMLICA",
+          "number": 89,
+          "shirt_no": "89",
+          "tffPersonId": "1929064"
+        },
+        {
+          "name": "RESUL MERT SUNGUR",
+          "number": 98,
+          "shirt_no": "98",
+          "tffPersonId": "1410405"
+        },
+        {
+          "name": "HALUK RAY",
+          "number": 96,
+          "shirt_no": "96",
+          "tffPersonId": "1669389"
+        },
+        {
+          "name": "OĞUZ KAAN ORAL",
+          "number": 94,
+          "shirt_no": "94",
+          "tffPersonId": "1388030"
+        },
+        {
+          "name": "İSMAİL YILMAZ",
+          "number": 13,
+          "shirt_no": "13",
+          "tffPersonId": "1679434"
+        },
+        {
+          "name": "JOSEPH AKOMADI",
+          "number": 41,
+          "shirt_no": "41",
+          "tffPersonId": "2118272"
+        },
+        {
+          "name": "İSA TAŞ",
+          "number": 93,
+          "shirt_no": "93",
+          "tffPersonId": "1366940"
+        }
+      ],
+      "technicalStaff": [],
+      "coach": "",
+      "raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu"
+    }
+  },
+  "players": [
+    {
+      "name": "ASİL KAAN ERYILMAZ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 98,
+      "tffPersonId": "1504113"
+    },
+    {
+      "name": "ATİLLA ÖZMEN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 19,
+      "tffPersonId": "412201"
+    },
+    {
+      "name": "CELAL EMİR DEDE",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 80,
+      "tffPersonId": "1602439"
+    },
+    {
+      "name": "CUMALİ BİŞİ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 93,
+      "tffPersonId": "929616"
+    },
+    {
+      "name": "DOĞA İŞERİ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 77,
+      "tffPersonId": "116812"
+    },
+    {
+      "name": "FURKAN ÇİL",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 8,
+      "tffPersonId": "854926"
+    },
+    {
+      "name": "GİRAY BULAK",
+      "team": "Balıkesirspor",
+      "roles": [
+        "technical_staff"
+      ]
+    },
+    {
+      "name": "HARUN RAŞİT OYBAK",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 24,
+      "tffPersonId": "1300112"
+    },
+    {
+      "name": "KAĞAN KAYALI",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 66,
+      "tffPersonId": "1377605"
+    },
+    {
+      "name": "MUHAMMED ALİ DOĞAN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 6,
+      "tffPersonId": "1626907"
+    },
+    {
+      "name": "OĞUZHAN ÇAPAR",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 23,
+      "tffPersonId": "1048331"
+    },
+    {
+      "name": "ÖMER TAYYİB KARADUMAN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 14,
+      "tffPersonId": "1556663"
+    },
+    {
+      "name": "RAHMİ ANIL BAŞARAN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 20,
+      "tffPersonId": "1442246"
+    },
+    {
+      "name": "SEDAT ŞAHİNTÜRK",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 11,
+      "tffPersonId": "951516"
+    },
+    {
+      "name": "SERDAR GÜNCÜ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 21,
+      "tffPersonId": "1365955"
+    },
+    {
+      "name": "ABDOULAYE SADIO DIALLO",
+      "team": "HATAYSPOR",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 28,
+      "tffPersonId": "2019482"
+    },
+    {
+      "name": "DMYTRO KORKISHKO",
+      "team": "HATAYSPOR",
+      "roles": [
+        "starting11",
+        "goal"
+      ],
+      "number": 17,
+      "tffPersonId": "2017850"
+    },
+    {
+      "name": "HALUK RAY",
+      "team": "HATAYSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 96,
+      "tffPersonId": "1669389"
+    },
+    {
+      "name": "HAMIDOU MAIGA",
+      "team": "HATAYSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 33,
+      "tffPersonId": "2115664"
+    },
+    {
+      "name": "HONORE GOMIS",
+      "team": "HATAYSPOR",
+      "roles": [
+        "starting11",
+        "goal"
+      ],
+      "number": 27,
+      "tffPersonId": "2119240"
+    },
+    {
+      "name": "İSA TAŞ",
+      "team": "HATAYSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 93,
+      "tffPersonId": "1366940"
+    },
+    {
+      "name": "İSMAİL YILMAZ",
+      "team": "HATAYSPOR",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 13,
+      "tffPersonId": "1679434"
+    },
+    {
+      "name": "JOSEPH AKOMADI",
+      "team": "HATAYSPOR",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 41,
+      "tffPersonId": "2118272"
+    },
+    {
+      "name": "MEHMET TAYFUN DİNGİL",
+      "team": "HATAYSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 5,
+      "tffPersonId": "1927814"
+    },
+    {
+      "name": "OĞUZ KAAN ORAL",
+      "team": "HATAYSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 94,
+      "tffPersonId": "1388030"
+    },
+    {
+      "name": "ÖMER ALICI",
+      "team": "HATAYSPOR",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 1,
+      "tffPersonId": "78120"
+    },
+    {
+      "name": "ÖZGÜR KAZAR",
+      "team": "HATAYSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 81,
+      "tffPersonId": "1391140"
+    },
+    {
+      "name": "RESUL MERT SUNGUR",
+      "team": "HATAYSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 98,
+      "tffPersonId": "1410405"
+    },
+    {
+      "name": "SEMİH ÜSTÜN",
+      "team": "HATAYSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 19,
+      "tffPersonId": "1158237"
+    },
+    {
+      "name": "SONER ÖRNEK",
+      "team": "HATAYSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 4,
+      "tffPersonId": "78628"
+    },
+    {
+      "name": "SÜLEYMAN ÇAMLICA",
+      "team": "HATAYSPOR",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 89,
+      "tffPersonId": "1929064"
+    },
+    {
+      "name": "WELLINGTON BRITO DA SILVA",
+      "team": "HATAYSPOR",
+      "roles": [
+        "starting11",
+        "goal",
+        "substitution_out"
+      ],
+      "number": 88,
+      "tffPersonId": "1466129"
+    },
+    {
+      "name": "YASİN GÜRELER",
+      "team": "HATAYSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 3,
+      "tffPersonId": "869000"
+    }
+  ],
+  "events": [
+    {
+      "type": "goal",
+      "team": "HATAYSPOR",
+      "player": "DMYTRO KORKISHKO",
+      "scorer": "DMYTRO KORKISHKO",
+      "raw": "DMYTRO KORKISHKO,49.dk (F)",
+      "minute": 49,
+      "minuteRaw": "DMYTRO KORKISHKO,49.dk",
+      "goalType": "F",
+      "tffPersonId": "2017850"
+    },
+    {
+      "type": "goal",
+      "team": "HATAYSPOR",
+      "player": "WELLINGTON BRITO DA SILVA",
+      "scorer": "WELLINGTON BRITO DA SILVA",
+      "raw": "WELLINGTON BRITO DA SILVA,58.dk (P)",
+      "minute": 58,
+      "minuteRaw": "WELLINGTON BRITO DA SILVA,58.dk",
+      "goalType": "P",
+      "tffPersonId": "1466129"
+    },
+    {
+      "type": "goal",
+      "team": "HATAYSPOR",
+      "player": "HONORE GOMIS",
+      "scorer": "HONORE GOMIS",
+      "raw": "HONORE GOMIS,63.dk (F)",
+      "minute": 63,
+      "minuteRaw": "HONORE GOMIS,63.dk",
+      "goalType": "F",
+      "tffPersonId": "2119240"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "CUMALİ BİŞİ",
+      "minute": 57,
+      "minuteRaw": "57.dk",
+      "tffPersonId": "929616"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 1,
+      "player_in": "ÖMER TAYYİB KARADUMAN",
+      "player_out": "SEDAT ŞAHİNTÜRK",
+      "playerIn": "ÖMER TAYYİB KARADUMAN",
+      "playerOut": "SEDAT ŞAHİNTÜRK",
+      "minute": 77,
+      "minuteRaw": "77.dk",
+      "minute_text": "77.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "SEDAT ŞAHİNTÜRK",
+      "order": 1,
+      "minute": 77,
+      "minuteRaw": "77.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "ÖMER TAYYİB KARADUMAN",
+      "order": 1,
+      "minute": 77,
+      "minuteRaw": "77.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 2,
+      "player_in": "HARUN RAŞİT OYBAK",
+      "player_out": "RAHMİ ANIL BAŞARAN",
+      "playerIn": "HARUN RAŞİT OYBAK",
+      "playerOut": "RAHMİ ANIL BAŞARAN",
+      "minute": 85,
+      "minuteRaw": "85.dk",
+      "minute_text": "85.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "RAHMİ ANIL BAŞARAN",
+      "order": 2,
+      "minute": 85,
+      "minuteRaw": "85.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "HARUN RAŞİT OYBAK",
+      "order": 2,
+      "minute": 85,
+      "minuteRaw": "85.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "HATAYSPOR",
+      "order": 1,
+      "player_in": "SÜLEYMAN ÇAMLICA",
+      "player_out": "ÖMER ALICI",
+      "playerIn": "SÜLEYMAN ÇAMLICA",
+      "playerOut": "ÖMER ALICI",
+      "minute": 82,
+      "minuteRaw": "82.dk",
+      "minute_text": "82.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "HATAYSPOR",
+      "player": "ÖMER ALICI",
+      "order": 1,
+      "minute": 82,
+      "minuteRaw": "82.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "HATAYSPOR",
+      "player": "SÜLEYMAN ÇAMLICA",
+      "order": 1,
+      "minute": 82,
+      "minuteRaw": "82.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "HATAYSPOR",
+      "order": 2,
+      "player_in": "İSMAİL YILMAZ",
+      "player_out": "WELLINGTON BRITO DA SILVA",
+      "playerIn": "İSMAİL YILMAZ",
+      "playerOut": "WELLINGTON BRITO DA SILVA",
+      "minute": 82,
+      "minuteRaw": "82.dk",
+      "minute_text": "82.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "HATAYSPOR",
+      "player": "WELLINGTON BRITO DA SILVA",
+      "order": 2,
+      "minute": 82,
+      "minuteRaw": "82.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "HATAYSPOR",
+      "player": "İSMAİL YILMAZ",
+      "order": 2,
+      "minute": 82,
+      "minuteRaw": "82.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "HATAYSPOR",
+      "order": 3,
+      "player_in": "JOSEPH AKOMADI",
+      "player_out": "ABDOULAYE SADIO DIALLO",
+      "playerIn": "JOSEPH AKOMADI",
+      "playerOut": "ABDOULAYE SADIO DIALLO",
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "minute_text": "46.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "HATAYSPOR",
+      "player": "ABDOULAYE SADIO DIALLO",
+      "order": 3,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "HATAYSPOR",
+      "player": "JOSEPH AKOMADI",
+      "order": 3,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    }
+  ],
+  "goals": [
+    {
+      "type": "goal",
+      "team": "HATAYSPOR",
+      "player": "DMYTRO KORKISHKO",
+      "scorer": "DMYTRO KORKISHKO",
+      "raw": "DMYTRO KORKISHKO,49.dk (F)",
+      "minute": 49,
+      "minuteRaw": "DMYTRO KORKISHKO,49.dk",
+      "goalType": "F",
+      "tffPersonId": "2017850"
+    },
+    {
+      "type": "goal",
+      "team": "HATAYSPOR",
+      "player": "WELLINGTON BRITO DA SILVA",
+      "scorer": "WELLINGTON BRITO DA SILVA",
+      "raw": "WELLINGTON BRITO DA SILVA,58.dk (P)",
+      "minute": 58,
+      "minuteRaw": "WELLINGTON BRITO DA SILVA,58.dk",
+      "goalType": "P",
+      "tffPersonId": "1466129"
+    },
+    {
+      "type": "goal",
+      "team": "HATAYSPOR",
+      "player": "HONORE GOMIS",
+      "scorer": "HONORE GOMIS",
+      "raw": "HONORE GOMIS,63.dk (F)",
+      "minute": 63,
+      "minuteRaw": "HONORE GOMIS,63.dk",
+      "goalType": "F",
+      "tffPersonId": "2119240"
+    }
+  ],
+  "goalScorers": [
+    {
+      "player": "DMYTRO KORKISHKO",
+      "team": "HATAYSPOR",
+      "minute": 49,
+      "goalType": "F"
+    },
+    {
+      "player": "WELLINGTON BRITO DA SILVA",
+      "team": "HATAYSPOR",
+      "minute": 58,
+      "goalType": "P"
+    },
+    {
+      "player": "HONORE GOMIS",
+      "team": "HATAYSPOR",
+      "minute": 63,
+      "goalType": "F"
+    }
+  ],
+  "cards": [
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "CUMALİ BİŞİ",
+      "minute": 57,
+      "minuteRaw": "57.dk",
+      "tffPersonId": "929616"
+    }
+  ],
+  "substitutions": [
+    {
+      "team": "Balıkesirspor",
+      "order": 1,
+      "minute": 77,
+      "minuteRaw": "77.dk",
+      "playerOut": "SEDAT ŞAHİNTÜRK",
+      "player_out": "SEDAT ŞAHİNTÜRK",
+      "playerOutTffPersonId": "951516",
+      "playerIn": "ÖMER TAYYİB KARADUMAN",
+      "player_in": "ÖMER TAYYİB KARADUMAN",
+      "playerInTffPersonId": "1556663"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 2,
+      "minute": 85,
+      "minuteRaw": "85.dk",
+      "playerOut": "RAHMİ ANIL BAŞARAN",
+      "player_out": "RAHMİ ANIL BAŞARAN",
+      "playerOutTffPersonId": "1442246",
+      "playerIn": "HARUN RAŞİT OYBAK",
+      "player_in": "HARUN RAŞİT OYBAK",
+      "playerInTffPersonId": "1300112"
+    },
+    {
+      "team": "HATAYSPOR",
+      "order": 1,
+      "minute": 82,
+      "minuteRaw": "82.dk",
+      "playerOut": "ÖMER ALICI",
+      "player_out": "ÖMER ALICI",
+      "playerOutTffPersonId": "78120",
+      "playerIn": "SÜLEYMAN ÇAMLICA",
+      "player_in": "SÜLEYMAN ÇAMLICA",
+      "playerInTffPersonId": "1929064"
+    },
+    {
+      "team": "HATAYSPOR",
+      "order": 2,
+      "minute": 82,
+      "minuteRaw": "82.dk",
+      "playerOut": "WELLINGTON BRITO DA SILVA",
+      "player_out": "WELLINGTON BRITO DA SILVA",
+      "playerOutTffPersonId": "1466129",
+      "playerIn": "İSMAİL YILMAZ",
+      "player_in": "İSMAİL YILMAZ",
+      "playerInTffPersonId": "1679434"
+    },
+    {
+      "team": "HATAYSPOR",
+      "order": 3,
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "playerOut": "ABDOULAYE SADIO DIALLO",
+      "player_out": "ABDOULAYE SADIO DIALLO",
+      "playerOutTffPersonId": "2019482",
+      "playerIn": "JOSEPH AKOMADI",
+      "player_in": "JOSEPH AKOMADI",
+      "playerInTffPersonId": "2118272"
+    }
+  ],
+  "sections_raw": {
+    "full_text_excerpt": "BALIKESİRSPOR BALTOK HATAYSPOR - Maç Detayları TFF\nAra\nTR\nEN\nTRENDYOL SÜPER LİG\nZİRAAT TÜRKİYE KUPASI\nE-SHOP\nANA SAYFA\nTFF\nMİLLİ TAKIMLAR\nLİGLER\nKUPALAR\nKADIN FUTBOLU\nFGD\nBİLGİ BANKASI\nPUAN DURUMU\nTRENDYOL SÜPERLIG\nFutbol Bilgi Bankası\nFutbolcular\nTeknik Direktörler\nTüm Maçlar\nMilli Maçlar\nKulüpler\nStadyumlar\nCezalar\nHakemler\nGözlemci ve Temsilciler\nFutbol Menajerleri\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nFormlar ve Sözleşmeler\nStatüler\nTalimatlar\nTFF Kanun ve Statüsü\nOnline Başvurular\nTam Saha içerikleri için tıklayınız\nFikstürler\nLig Seçiniz...\nTrendyol Süper Lig\nTrendyol 1. Lig\nTFF 2. Lig\nTFF 3. Lig\nKadın Ligleri\nZiraat Türkiye Kupası\nBölgesel Amatör Lig\nGelişim Ligleri\nEngelli Futbolu\nFutsal Ligi\nPlaj Futbolu\nFutbol Altyapı Gelişim Ligi\nSezon Planlaması\nPuan Cetvelleri\nLig Seçiniz..\nTrendyol Süper Lig Şamil Ekinci Sezonu\nTrendyol 1.Lig\nTrendyol 1. Lig Play Off Müsabakaları\nNesine 2. Lig Kırmızı\nNesine 2. Lig Beyaz\nNesine 2. Lig Play Off Müsabakaları\nNesine 3. Lig 01\nNesine 3. Lig 02\nNesine 3. Lig 03\nNesine 3. Lig 04\nNesine 3. Lig Play Off Müsabakaları\nZiraat Türkiye Kupası\nZiraat Türkiye Kupası Grup Aşaması A\nZiraat Türkiye Kupası Grup Aşaması B\nZiraat Türkiye Kupası Grup Aşaması C\nZiraat Türkiye Kupası Grup Aşaması D\nTurkcell Kadın Futbol Süper Ligi\nKadınlar 1. Ligi A Grubu\nKadınlar 1. Ligi B Grubu\nTFF Kadınlar 1. Ligi Play Off 3.lük Müsabakaları\nTFF Kadınlar 1. Ligi Play Off Şampiyonluk Grubu\nTFF Kadınlar 1. Ligi Play Off Yükselme Grubu\nKadınlar 2.Ligi Play Off Müsabakaları\nKadınlar 3.Ligi Play Off Müsabakaları\nKadınlar 2. Ligi A Grup\nKadınlar 2. Ligi B Grup\nKadınlar 2. Ligi C Grup\nKadınlar 2. Ligi D Grup\nKadınlar 3. Ligi 1.\nKadınlar 3. Ligi 10.\nKadınlar 3. Ligi 11.\nKadınlar 3. Ligi 12.\nKadınlar 3. Ligi 13.\nKadınlar 3. Ligi 14.\nKadınlar 3. Ligi 15.\nKadınlar 3. Ligi 16.\nKadınlar 3. Ligi 17.\nKadınlar 3. Ligi 18.\nKadınlar 3. Ligi 19.\nKadınlar 3. Ligi 2.\nKadınlar 3. Ligi 20.\nKadınlar 3. Ligi 21.\nKadınlar 3. Ligi 22.\nKadınlar 3. Ligi 23.\nKadınlar 3. Ligi 24.\nKadınlar 3. Ligi 25.\nKadınlar 3. Ligi 26.\nKadınlar 3. Ligi 27.\nKadınlar 3. Ligi 28.\nKadınlar 3. Ligi 29.\nKadınlar 3. Ligi 3.\nKadınlar 3. Ligi 30.\nKadınlar 3. Ligi 31.\nKadınlar 3. Ligi 32.\nKadınlar 3. Ligi 4.\nKadınlar 3. Ligi 5.\nKadınlar 3. Ligi 6.\nKadınlar 3. Ligi 7.\nKadınlar 3. Ligi 8.\nKadınlar 3. Ligi 9.\nBölgesel Amatör Ligi 1. GRUP\nBölgesel Amatör Ligi 10. GRUP\nBölgesel Amatör Ligi 2. GRUP\nBölgesel Amatör Ligi 3. GRUP\nBölgesel Amatör Ligi 4. GRUP\nBölgesel Amatör Ligi 5. GRUP\nBölgesel Amatör Ligi 6. GRUP\nBölgesel Amatör Ligi 7. GRUP\nBölgesel Amatör Ligi 8. GRUP\nBölgesel Amatör Ligi 9. GRUP\nBölgesel Amatör Lig Baraj Maçları\nBölgesel Amatör Lig Play Off\nU17 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU17 Bölgesel Gelişim Ligi 1. Grup\nU17 Bölgesel Gelişim Ligi 2. Grup\nU17 Bölgesel Gelişim Ligi 3. Grup\nU17 Bölgesel Gelişim Ligi 4. Grup\nU17 Bölgesel Gelişim Ligi 5. Grup\nU17 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi 1. Grup\nU19 Bölgesel Gelişim Ligi 2. Grup\nU19 Bölgesel Gelişim Ligi 3. Grup\nU19 Bölgesel Gelişim Ligi 4. Grup\nU19 Bölgesel Gelişim Ligi 5. Grup\nU19 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Grup 1\nU14 Gelişim Ligi Grup 2\nU14 Gelişim Ligi Grup 3\nU14 Gelişim Ligi Grup 4\nU14 Gelişim Ligi Grup 5\nU14 Gelişim Ligi Grup 6\nU14 Gelişim Ligi Grup 7\nU14 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Finalleri\nU15 Gelişim Ligi Grup 1\nU15 Gelişim Ligi Grup 2\nU15 Gelişim Ligi Grup 3\nU15 Gelişim Ligi Grup 4\nU15 Gelişim Ligi Grup 5\nU15 Gelişim Ligi Grup 6\nU15 Gelişim Ligi Grup 7\nU15 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU15 Gelişim Ligi Finalleri\nU16 Gelişim Ligi Grup 1\nU16 Gelişim Ligi Grup 2\nU16 Gelişim Ligi Grup 3\nU16 Gelişim Ligi Grup 4\nU16 Gelişim Ligi Grup 5\nU16 Gelişim Ligi Grup 6\nU16 Gelişim Ligi Grup 7\nU16 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU16 Gelişim Ligi Finalleri\nU17 Elit A Ligi\nU17 Elit B Ligi\nU19 Elit A Ligi\nU19 Elit B Ligi\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP A\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP B\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP A\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP B\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP A\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP B\nU14 Amatör Türkiye Şampiyonası\nU15 Amatör Türkiye Şampiyonası\nU16 Amatör Türkiye Şampiyonası\nU17 Amatör Türkiye Şampiyonası\nU18 Amatör Türkiye Şampiyonası\nHaftalık Maç Görevlileri\nHakem, Gözlemci ve Temsilciler\nMİLLİ TAKIM TARAFTAR KULÜBÜ\nSON DAKIKA..”\nU17 Kiz Milli Takimi'ndan Zafer Bayrami kutlamasi\n'Kuralina Göre' Programi beIN SPORTS'ta basliyor\nU18 Milli Takimimiz, Azerbaycan karsisinda\nU18 Milli Takimimiz, Azerbaycan karsisinda\n”\nBALIKESİRSPOR BALTOK\n0\nHATAYSPOR\n3\nSpor Toto 1. Lig (Profesyonel Takım)\nMaç Kodu:\n2304\nBALIKESİR ATATÜRK - BALIKESİR\n17.05.2019 - 16:30\nMURAT ERDOĞAN(Hakem)\nMURAT ALTAN(1. Yardımcı Hakem)\nUFUK UĞURLU(2. Yardımcı Hakem)\nCİHAN AYDIN(Dördüncü Hakem)\nMÜRVET SEZER(Gözlemci)\nAHMET SERT(Temsilci)\nOSMAN YILDIRIM(Temsilci)\nRAMAZAN GÜN(Temsilci)\nİlk 11\n98.\nASİL KAAN ERYILMAZ\n6.\nMUHAMMED ALİ DOĞAN\n8.\nFURKAN ÇİL\n11.\nSEDAT ŞAHİNTÜRK\n20.\nRAHMİ ANIL BAŞARAN\n21.\nSERDAR GÜNCÜ\n23.\nOĞUZHAN ÇAPAR\n66.\nKAĞAN KAYALI\n77.\nDOĞA İŞERİ\n80.\nCELAL EMİR DEDE\n93.\nCUMALİ BİŞİ\nYedekler\n19.\nATİLLA ÖZMEN\n14.\nÖMER TAYYİB KARADUMAN\n24.\nHARUN RAŞİT OYBAK\nTeknik Sorumlu\nGİRAY BULAK\nKartlar\nCUMALİ BİŞİ\n57.dk\nOyundan Çıkanlar\nSEDAT ŞAHİNTÜRK\n77.dk\nRAHMİ ANIL BAŞARAN\n85.dk\nOyuna Girenler\nÖMER TAYYİB KARADUMAN\n77.dk\nHARUN RAŞİT OYBAK\n85.dk\nİlk 11\n1.\nÖMER ALICI\n5.\nMEHMET TAYFUN DİNGİL\n4.\nSONER ÖRNEK\n33.\nHAMIDOU MAIGA\n3.\nYASİN GÜRELER\n28.\nABDOULAYE SADIO DIALLO\n19.\nSEMİH ÜSTÜN\n88.\nWELLINGTON BRITO DA SILVA\n17.\nDMYTRO KORKISHKO\n81.\nÖZGÜR KAZAR\n27.\nHONORE GOMIS\nYedekler\n89.\nSÜLEYMAN ÇAMLICA\n98.\nRESUL MERT SUNGUR\n96.\nHALUK RAY\n94.\nOĞUZ KAAN ORAL\n13.\nİSMAİL YILMAZ\n41.\nJOSEPH AKOMADI\n93.\nİSA TAŞ\nTeknik Sorumlu\nGoller\nDMYTRO KORKISHKO,49.dk (F)\nWELLINGTON BRITO DA SILVA,58.dk (P)\nHONORE GOMIS,63.dk (F)\nOyundan Çıkanlar\nÖMER ALICI\n82.dk\nWELLINGTON BRITO DA SILVA\n82.dk\nABDOULAYE SADIO DIALLO\n46.dk\nOyuna Girenler\nSÜLEYMAN ÇAMLICA\n82.dk\nİSMAİL YILMAZ\n82.dk\nJOSEPH AKOMADI\n46.dk\nF:F - Ayak\nH:H - Kafa\nK:K - Kendi Kalesine\nP:P - Penaltı\nS:S - Seri Penaltı\nİletişim\n|\nSite Haritası\n|\nKopya Hakları\n|\nKullanım Şartları\n|\nSponsorlar\nTüm hakları Türkiye Futbol Federasyonu'na aittir.\nSosyal Medya Adreslerimiz:\nTFF\nTFF\nMilli Takımlar\nSüper Lig\nE-Millî Takım",
+    "officials_raw": "Hakemler\nGözlemci ve Temsilciler\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nHakem, Gözlemci ve Temsilciler\nMURAT ERDOĞAN(Hakem)\nMURAT ALTAN(1. Yardımcı Hakem)\nUFUK UĞURLU(2. Yardımcı Hakem)\nCİHAN AYDIN(Dördüncü Hakem)\nMÜRVET SEZER(Gözlemci)\nAHMET SERT(Temsilci)\nOSMAN YILDIRIM(Temsilci)\nRAMAZAN GÜN(Temsilci)",
+    "lineups_raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu",
+    "events_raw": "57.dk\nOyundan Çıkanlar\n77.dk\n85.dk\nOyuna Girenler\n77.dk\n85.dk\nGoller\nDMYTRO KORKISHKO,49.dk (F)\nWELLINGTON BRITO DA SILVA,58.dk (P)\nHONORE GOMIS,63.dk (F)\nOyundan Çıkanlar\n82.dk\n82.dk\n46.dk\nOyuna Girenler\n82.dk\n82.dk\n46.dk\nP:P - Penaltı\nS:S - Seri Penaltı"
+  },
+  "detailCompleteness": {
+    "hasStadium": true,
+    "starting11Home": 11,
+    "starting11Away": 11,
+    "substitutesHome": 3,
+    "substitutesAway": 7,
+    "goals": 3,
+    "cards": 1,
+    "substitutions": 5,
+    "players": 33
+  },
+  "quality": "A",
+  "source": {
+    "name": "TFF",
+    "url": "http://www.tff.org/Default.aspx?pageID=29&macId=195123",
+    "retrievedAt": "2026-07-12T17:36:40.352167Z",
+    "sourceType": "official_tff_match_detail"
+  },
+  "clubFixture": {
+    "week": 0,
+    "rowText": "34 BALIKESİRSPOR BALTOK 0-3 HATAYSPOR 17 Mayıs 2019 Spor Toto 1. Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=195123&pageID=29"
+  },
+  "week": 34,
+  "standingsWeek": 34,
+  "stageWeek": 34,
+  "roundType": "league",
+  "roundLabel": "34. Hafta",
+  "roundSource": "stage_sequence_fallback"
+}

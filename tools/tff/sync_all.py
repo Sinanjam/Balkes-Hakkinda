@@ -176,13 +176,20 @@ def main() -> int:
         "--report", str(report_root / "validation.json"),
         "--registry", str(registry),
         "--discovery-report", str(report_root / "club_fixture_discovery.json"),
+        "--strict",
     ]
     run(validation, env)
+    run([
+        sys.executable, str(TOOLS / "completion_gate.py"),
+        "--data-root", str(output),
+        "--report", str(report_root / "completion.json"),
+    ], env)
     log(f"TAMAMLANDI: {output}")
     log(f"Uygulama verisi: {output / 'manifest.json'}")
     log(f"Onarım raporu: {report_root / 'repair_export.json'}")
     log(f"Onarım kalite raporu: {report_root / 'repair_validation.json'}")
     log(f"Genel kalite raporu: {report_root / 'validation.json'}")
+    log(f"Tamamlanma raporu: {report_root / 'completion.json'}")
     return 0
 
 

@@ -42,7 +42,11 @@ def registry_items(path: Path) -> tuple[list[str], dict[str, dict[str, Any]]]:
 
 
 def intentionally_skipped(item: dict[str, Any]) -> bool:
-    if any(bool(item.get(key)) for key in ("skipTff", "noTffRecord", "amateurSeason")):
+    # ``skipTff`` eski sabit-hedef toplayıcının bu sezonu atlaması için
+    # kullanılıyordu. Yeni kulüp-fikstürü keşfi 1997-2001 arasındaki
+    # profesyonel sezonları da bulabildiği için bu alan artık sezonun bütünüyle
+    # beklenmediği anlamına gelmez.
+    if bool(item.get("amateurSeason")) or bool(item.get("noTffRecord")):
         return True
     status = norm(item.get("professionalStatus") or item.get("level") or "")
     return status == "amateur" or "amator" in status

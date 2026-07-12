@@ -32,7 +32,7 @@ from tff_standings_builder import (  # noqa: E402
     try_official_stages,
     update_season_files,
 )
-from validate_export import validate_discovery  # noqa: E402
+from validate_export import intentionally_skipped, validate_discovery  # noqa: E402
 
 
 class FixtureDiscoveryTests(unittest.TestCase):
@@ -220,6 +220,17 @@ class StandingsTests(unittest.TestCase):
 
 
 class ValidationTests(unittest.TestCase):
+    def test_legacy_skip_flag_does_not_hide_professional_season(self) -> None:
+        self.assertFalse(intentionally_skipped({
+            "skipTff": True,
+            "professionalStatus": "professional",
+        }))
+        self.assertTrue(intentionally_skipped({
+            "skipTff": True,
+            "noTffRecord": True,
+            "professionalStatus": "amateur",
+        }))
+
     def test_cross_season_standings_target_reuse_is_an_error(self) -> None:
         report = {
             "seasonsRequested": 2,

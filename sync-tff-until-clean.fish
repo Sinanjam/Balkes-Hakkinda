@@ -63,6 +63,12 @@ while true
     echo "" | tee -a $log_file
     echo "=== DENEME $attempt | "(date -Is)" | force=$force ===" | tee -a $log_file
 
+    # Önceki başarılı turun raporu yeni bir başarısızlığı gizlemesin.
+    rm -f \
+        $output/reports/completion.json \
+        $output/reports/validation.json \
+        $output/reports/repair_validation.json
+
     fish ./sync-tff.fish $workers $force $output 2>&1 | tee -a $log_file
     set -l sync_status $pipestatus[1]
 
@@ -73,6 +79,11 @@ while true
     end
 
     write_state retrying $attempt $sync_status $state_file $output $log_file
+    # Hat yarıda kesildiyse de o ana kadarki eksikleri makinece okunabilir tek
+    # rapora dökmeyi dene. Bunun çıkış kodu ana senkron sonucunu değiştirmez.
+    nix develop . --command python3 tools/tff/completion_gate.py \
+        --data-root $output \
+        --report $output/reports/completion.json 2>&1 | tee -a $log_file
     echo "Deneme $attempt tamamlanamadı (kod=$sync_status). Önbellek korunuyor." | tee -a $log_file
     if test $max_attempts -gt 0 -a $attempt -ge $max_attempts
         write_state failed $attempt $sync_status $state_file $output $log_file

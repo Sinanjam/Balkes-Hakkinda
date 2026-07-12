@@ -24,6 +24,55 @@ fish sync-tff.fish 10 true
 Çıktı `generated/tff-data/` altında oluşur. Yarım kalırsa aynı komutu yeniden
 çalıştırmak yeterlidir; tamamlanan HTML ve JSON dosyaları tekrar indirilmez.
 
+## Gece boyunca yerelde çalıştırma
+
+Proje klasöründe yalnız şu komutu ver:
+
+```fish
+fish start-tff-local.fish
+```
+
+Bu komut `balkes-tff-sync` adlı yerel systemd kullanıcı görevini başlatır.
+Terminal kapanabilir; bilgisayar açık ve kullanıcı oturumu etkin kaldığı sürece
+iş sürer. Bilgisayardan tamamen çıkış yapacaksan görevi başlatmadan önce bir kez:
+
+```fish
+sudo loginctl enable-linger $USER
+```
+
+Durumu ve son kalite raporunu görmek için:
+
+```fish
+fish status-tff-local.fish
+```
+
+Durdurmak için:
+
+```fish
+fish stop-tff-local.fish
+```
+
+Durdurmak indirilenleri silmez. Aynı başlatma komutu kaldığı yerden, yerel
+`.cache/tff/` önbelleğini kullanarak devam eder. Görev ilk üç denemede önbelleği
+korur; hâlâ hata varsa dördüncü denemede eski/bozuk HTML olasılığını elemek için
+bir kez tam yenileme yapar. Sonraki denemeler yine önbelleklidir.
+
+Varsayılan görev kalite kapısı geçene kadar durmaz. Daha az paralellik istersen:
+
+```fish
+fish start-tff-local.fish 6
+```
+
+Ön planda çalıştırmak istersen:
+
+```fish
+fish sync-tff-until-clean.fish
+```
+
+Bu akış **yalnız yerelde çalışır**; GitHub'a veri göndermez. Üretilen veri
+`generated/tff-data/`, günlük `.cache/tff/overnight/latest.log`, son makinece
+okunabilir sonuç ise `generated/tff-data/reports/completion.json` içindedir.
+
 `true` ile zorunlu yenilemeyi yalnız bozuk bir HTML önbelleği olduğunda kullan.
 Normal devam komutu daha hızlıdır:
 
@@ -83,7 +132,10 @@ generated/tff-data/
   seasons/<sezon>/standings_by_week.json
   reports/sanitization.json
   reports/club_fixture_discovery.json
+  reports/repair_export.json
+  reports/repair_validation.json
   reports/validation.json
+  reports/completion.json
 ```
 
 Ham HTML ve kaldığı yer bilgisi `.cache/tff/` altında tutulur. Bu klasörler
@@ -105,6 +157,12 @@ Git'e eklenmez; uygulama APK'sına da girmez.
   futsal ve BAL takımı etiketli kayıtlar kalite hatasıdır.
 - Her çalışmanın sonunda bütün maç kimlikleri, detay dosyaları ve puan tabloları
   `reports/validation.json` içine raporlanır.
+- Senkron artık sıkı modda doğrulanır. Beklenen profesyonel sezon, fikstür
+  sayfalaması, lig maçı haftası veya haftalık tablo eksikse sıfır olmayan kodla
+  biter ve yerel gece görevi yeniden dener.
+- `completion.json`, temel alanların tamamlığını ve maçların kadro/olay/hakem
+  kapsamasını ayrıca sayar. TFF'nin kendi maç sayfasında hiç yayımlanmamış alanlar
+  uydurulmaz; `sourceLimitedMatches` altında kaynak kısıtı olarak listelenir.
 - Bir sezonun lig/grup hedefi bulunamazsa yalnız Balıkesirspor maçlarından sahte
   bir "tam lig tablosu" hesaplanmaz; eksik durum kalite raporuna yazılır.
 - Puan hedefi, sayfada istenen sezon ve doğru grup modülü birlikte görülmeden

@@ -1,0 +1,84 @@
+{
+  "id": "1994-1995",
+  "name": "1994-1995",
+  "competition": "Lig B Klasman (Profesyonel Takım)",
+  "sourcePolicy": "TFF-only",
+  "factoryVersion": "v5-professional-only-resilient",
+  "updatedAt": "2026-07-12T17:38:23.481359Z",
+  "summary": {
+    "matches": 33,
+    "wins": 13,
+    "draws": 6,
+    "losses": 14,
+    "goalsFor": 38,
+    "goalsAgainst": 37,
+    "goalDifference": 1,
+    "matchTypes": {
+      "league": 32,
+      "cup": 1
+    },
+    "points": 45,
+    "rawPoints": 45,
+    "pointsDeducted": 0,
+    "finalRank": 3
+  },
+  "files": {
+    "matchesIndex": "seasons/1994-1995/matches_index.json",
+    "standingsByWeek": "seasons/1994-1995/standings_by_week.json"
+  },
+  "sanitizedAt": "2026-07-12T17:38:46.009465Z",
+  "sanitizerVersion": "v1-professional-team-only",
+  "leagueStages": [
+    {
+      "id": "group-02",
+      "label": "02",
+      "stageNumber": 1,
+      "startWeek": 1,
+      "endWeek": 18,
+      "played": 18,
+      "won": 6,
+      "drawn": 4,
+      "lost": 8,
+      "goalsFor": 19,
+      "goalsAgainst": 21,
+      "goalDifference": -2,
+      "points": 22,
+      "finalRank": 8,
+      "carriedMatches": 0,
+      "officialTableIsCumulative": false
+    },
+    {
+      "id": "group-k2",
+      "label": "K2",
+      "stageNumber": 2,
+      "startWeek": 19,
+      "endWeek": 32,
+      "played": 14,
+      "won": 7,
+      "drawn": 2,
+      "lost": 5,
+      "goalsFor": 18,
+      "goalsAgainst": 14,
+      "goalDifference": 4,
+      "points": 23,
+      "finalRank": 3,
+      "carriedMatches": 0,
+      "officialTableIsCumulative": false
+    }
+  ],
+  "leagueSummary": {
+    "played": 32,
+    "won": 13,
+    "drawn": 6,
+    "lost": 13,
+    "goalsFor": 37,
+    "goalsAgainst": 35,
+    "points": 45,
+    "rawPoints": 45,
+    "pointsDeducted": 0,
+    "goalDifference": 2,
+    "finalRank": 3
+  },
+  "standingsUpdatedAt": "2026-07-12T18:01:17.659744Z",
+  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+}

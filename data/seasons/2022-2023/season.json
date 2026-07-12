@@ -1,0 +1,46 @@
+{
+  "id": "2022-2023",
+  "name": "2022-2023",
+  "competition": "TFF 2.Lig (Profesyonel Takım)",
+  "sourcePolicy": "TFF-only",
+  "factoryVersion": "v5-professional-only-resilient",
+  "updatedAt": "2026-07-12T17:36:18.478517Z",
+  "summary": {
+    "matches": 40,
+    "wins": 7,
+    "draws": 10,
+    "losses": 23,
+    "goalsFor": 34,
+    "goalsAgainst": 78,
+    "goalDifference": -44,
+    "matchTypes": {
+      "league": 38,
+      "cup": 2
+    },
+    "points": 25,
+    "rawPoints": 25,
+    "pointsDeducted": 0,
+    "finalRank": 17
+  },
+  "files": {
+    "matchesIndex": "seasons/2022-2023/matches_index.json",
+    "standingsByWeek": "seasons/2022-2023/standings_by_week.json"
+  },
+  "sanitizedAt": "2026-07-12T17:38:45.433904Z",
+  "sanitizerVersion": "v1-professional-team-only",
+  "leagueSummary": {
+    "played": 38,
+    "won": 6,
+    "drawn": 10,
+    "lost": 22,
+    "goalsFor": 32,
+    "goalsAgainst": 76,
+    "goalDifference": -44,
+    "points": 25,
+    "rawPoints": 25,
+    "pointsDeducted": 0,
+    "finalRank": 17
+  },
+  "standingsUpdatedAt": "2026-07-12T17:40:49.144246Z",
+  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+}

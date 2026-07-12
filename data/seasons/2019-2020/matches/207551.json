@@ -1,0 +1,1120 @@
+{
+  "id": "207551",
+  "matchCode": "2092",
+  "season": "2019-2020",
+  "competition": "TFF 1. Lig (Profesyonel Takım)",
+  "teamLevel": "professional",
+  "teamLevelEvidence": "explicit_professional",
+  "competitionType": "league",
+  "competitionLabel": "Lig",
+  "stadium": "BALIKESİR ATATÜRK - BALIKESİR",
+  "venue": "BALIKESİR ATATÜRK - BALIKESİR",
+  "stage": "Lig",
+  "stageLabel": "Lig",
+  "date": "2019-11-10",
+  "time": "19:00",
+  "dateDisplay": "2019-11-10 - 19:00",
+  "homeTeam": "Balıkesirspor",
+  "awayTeam": "ALTINORDU",
+  "matchType": "league",
+  "matchTypeLabel": "Lig",
+  "type": "league",
+  "typeLabel": "Lig",
+  "score": {
+    "home": 0,
+    "away": 0,
+    "display": "0-0",
+    "played": true
+  },
+  "balkes": {
+    "isHome": true,
+    "isAway": false,
+    "opponent": "ALTINORDU",
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "result": "D"
+  },
+  "officials": [
+    {
+      "role": "Hakem",
+      "name": "TURGUT DOMAN"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "ÖMER TEVFİK ÖZKOÇ"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "GÖKHAN BARCIN"
+    },
+    {
+      "role": "Dördüncü Hakem",
+      "name": "SEMİH KURT"
+    }
+  ],
+  "referees": [
+    {
+      "role": "Hakem",
+      "name": "TURGUT DOMAN"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "ÖMER TEVFİK ÖZKOÇ"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "GÖKHAN BARCIN"
+    },
+    {
+      "role": "Dördüncü Hakem",
+      "name": "SEMİH KURT"
+    }
+  ],
+  "lineups": {
+    "home": {
+      "team": "Balıkesirspor",
+      "starting11": [
+        {
+          "name": "ANDRIJA VUKOVIC",
+          "number": 1,
+          "shirt_no": "1",
+          "tffPersonId": "1771457"
+        },
+        {
+          "name": "BATUHAN İŞÇİLER",
+          "number": 35,
+          "shirt_no": "35",
+          "tffPersonId": "981308"
+        },
+        {
+          "name": "TOMISLAV GLUMAC",
+          "number": 44,
+          "shirt_no": "44",
+          "tffPersonId": "1827834"
+        },
+        {
+          "name": "OĞUZHAN ÇAPAR",
+          "number": 5,
+          "shirt_no": "5",
+          "tffPersonId": "1048331"
+        },
+        {
+          "name": "DOĞA İŞERİ",
+          "number": 6,
+          "shirt_no": "6",
+          "tffPersonId": "116812"
+        },
+        {
+          "name": "ANTONIO MRSIC",
+          "number": 59,
+          "shirt_no": "59",
+          "tffPersonId": "2217528"
+        },
+        {
+          "name": "FURKAN ÇİL",
+          "number": 8,
+          "shirt_no": "8",
+          "tffPersonId": "854926"
+        },
+        {
+          "name": "FOXI KETHEVOAMA",
+          "number": 10,
+          "shirt_no": "10",
+          "tffPersonId": "1877482"
+        },
+        {
+          "name": "MAHATMA OSUMANU OTOO",
+          "number": 18,
+          "shirt_no": "18",
+          "tffPersonId": "1973822"
+        },
+        {
+          "name": "İBRAHİM HALİL ÇOLAK",
+          "number": 63,
+          "shirt_no": "63",
+          "tffPersonId": "1344340"
+        },
+        {
+          "name": "RAHMİ ANIL BAŞARAN",
+          "number": 20,
+          "shirt_no": "20",
+          "tffPersonId": "1442246"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "ATİLLA ÖZMEN",
+          "number": 19,
+          "shirt_no": "19",
+          "tffPersonId": "412201"
+        },
+        {
+          "name": "KAĞAN KAYALI",
+          "number": 66,
+          "shirt_no": "66",
+          "tffPersonId": "1377605"
+        },
+        {
+          "name": "BERAT AYDOĞDU",
+          "number": 3,
+          "shirt_no": "3",
+          "tffPersonId": "1196386"
+        },
+        {
+          "name": "SEZER ÖZMEN",
+          "number": 23,
+          "shirt_no": "23",
+          "tffPersonId": "897889"
+        },
+        {
+          "name": "ABDÜLKADİR KAYALI",
+          "number": 4,
+          "shirt_no": "4",
+          "tffPersonId": "648438"
+        },
+        {
+          "name": "SERDAR GÜNCÜ",
+          "number": 21,
+          "shirt_no": "21",
+          "tffPersonId": "1365955"
+        },
+        {
+          "name": "CELAL EMİR DEDE",
+          "number": 7,
+          "shirt_no": "7",
+          "tffPersonId": "1602439"
+        },
+        {
+          "name": "CENK GÜVENÇ",
+          "number": 22,
+          "shirt_no": "22",
+          "tffPersonId": "1228713"
+        },
+        {
+          "name": "OKWUCHUKWU FRANCIS EZEH",
+          "number": 80,
+          "shirt_no": "80",
+          "tffPersonId": "2217530"
+        },
+        {
+          "name": "ANIL TAŞDEMİR",
+          "number": 24,
+          "shirt_no": "24",
+          "tffPersonId": "316547"
+        }
+      ],
+      "technicalStaff": [
+        {
+          "name": "MUSTAFA ATİ GÖKSU"
+        }
+      ],
+      "coach": "MUSTAFA ATİ GÖKSU",
+      "raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu"
+    },
+    "away": {
+      "team": "ALTINORDU",
+      "starting11": [
+        {
+          "name": "ERHAN ERENTÜRK",
+          "number": 1,
+          "shirt_no": "1",
+          "tffPersonId": "1134978"
+        },
+        {
+          "name": "UFUK BUDAK",
+          "number": 3,
+          "shirt_no": "3",
+          "tffPersonId": "1508968"
+        },
+        {
+          "name": "YUSUF YALÇIN ARSLAN",
+          "number": 23,
+          "shirt_no": "23",
+          "tffPersonId": "1059030"
+        },
+        {
+          "name": "BERKAY SAMANCI",
+          "number": 5,
+          "shirt_no": "5",
+          "tffPersonId": "773501"
+        },
+        {
+          "name": "ANIL KOÇ",
+          "number": 7,
+          "shirt_no": "7",
+          "tffPersonId": "1478607"
+        },
+        {
+          "name": "OĞULCAN ÜLGÜN",
+          "number": 8,
+          "shirt_no": "8",
+          "tffPersonId": "1087701"
+        },
+        {
+          "name": "MUHAMMED MERT",
+          "number": 10,
+          "shirt_no": "10",
+          "tffPersonId": "1341186"
+        },
+        {
+          "name": "HÜSEYİN ATAKAN ÜNER",
+          "number": 17,
+          "shirt_no": "17",
+          "tffPersonId": "1157364"
+        },
+        {
+          "name": "KERİM ALICI",
+          "number": 22,
+          "shirt_no": "22",
+          "tffPersonId": "1034330"
+        },
+        {
+          "name": "OKAN DERİCİ",
+          "number": 39,
+          "shirt_no": "39",
+          "tffPersonId": "1164634"
+        },
+        {
+          "name": "SİNAN OSMANOĞLU",
+          "number": 90,
+          "shirt_no": "90",
+          "tffPersonId": "718571"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "ALİ EMRE YANAR",
+          "number": 12,
+          "shirt_no": "12",
+          "tffPersonId": "1056541"
+        },
+        {
+          "name": "KAHRAMAN DEMİRTAŞ",
+          "number": 2,
+          "shirt_no": "2",
+          "tffPersonId": "2114900"
+        },
+        {
+          "name": "KEMAL RÜZGAR",
+          "number": 9,
+          "shirt_no": "9",
+          "tffPersonId": "1546355"
+        },
+        {
+          "name": "EGEHAN GÖK",
+          "number": 18,
+          "shirt_no": "18",
+          "tffPersonId": "1139036"
+        },
+        {
+          "name": "ALİ MERT AYDIN",
+          "number": 20,
+          "shirt_no": "20",
+          "tffPersonId": "1039374"
+        },
+        {
+          "name": "BURAK İNCE",
+          "number": 21,
+          "shirt_no": "21",
+          "tffPersonId": "1713564"
+        },
+        {
+          "name": "RAVİL TAGİR",
+          "number": 4,
+          "shirt_no": "4",
+          "tffPersonId": "1877358"
+        },
+        {
+          "name": "ONUR TAHA TAKIR",
+          "number": 41,
+          "shirt_no": "41",
+          "tffPersonId": "1470884"
+        },
+        {
+          "name": "ERSEL ASLIYÜKSEK",
+          "number": 53,
+          "shirt_no": "53",
+          "tffPersonId": "911784"
+        },
+        {
+          "name": "FATİH AKTAY",
+          "number": 99,
+          "shirt_no": "99",
+          "tffPersonId": "1033243"
+        }
+      ],
+      "technicalStaff": [
+        {
+          "name": "HÜSEYİN EROĞLU"
+        }
+      ],
+      "coach": "HÜSEYİN EROĞLU",
+      "raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu"
+    }
+  },
+  "players": [
+    {
+      "name": "ALİ EMRE YANAR",
+      "team": "ALTINORDU",
+      "roles": [
+        "substitute"
+      ],
+      "number": 12,
+      "tffPersonId": "1056541"
+    },
+    {
+      "name": "ALİ MERT AYDIN",
+      "team": "ALTINORDU",
+      "roles": [
+        "substitute"
+      ],
+      "number": 20,
+      "tffPersonId": "1039374"
+    },
+    {
+      "name": "ANIL KOÇ",
+      "team": "ALTINORDU",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 7,
+      "tffPersonId": "1478607"
+    },
+    {
+      "name": "BERKAY SAMANCI",
+      "team": "ALTINORDU",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 5,
+      "tffPersonId": "773501"
+    },
+    {
+      "name": "BURAK İNCE",
+      "team": "ALTINORDU",
+      "roles": [
+        "substitute"
+      ],
+      "number": 21,
+      "tffPersonId": "1713564"
+    },
+    {
+      "name": "EGEHAN GÖK",
+      "team": "ALTINORDU",
+      "roles": [
+        "substitute"
+      ],
+      "number": 18,
+      "tffPersonId": "1139036"
+    },
+    {
+      "name": "ERHAN ERENTÜRK",
+      "team": "ALTINORDU",
+      "roles": [
+        "starting11"
+      ],
+      "number": 1,
+      "tffPersonId": "1134978"
+    },
+    {
+      "name": "ERSEL ASLIYÜKSEK",
+      "team": "ALTINORDU",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 53,
+      "tffPersonId": "911784"
+    },
+    {
+      "name": "FATİH AKTAY",
+      "team": "ALTINORDU",
+      "roles": [
+        "substitute"
+      ],
+      "number": 99,
+      "tffPersonId": "1033243"
+    },
+    {
+      "name": "HÜSEYİN ATAKAN ÜNER",
+      "team": "ALTINORDU",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 17,
+      "tffPersonId": "1157364"
+    },
+    {
+      "name": "HÜSEYİN EROĞLU",
+      "team": "ALTINORDU",
+      "roles": [
+        "technical_staff"
+      ]
+    },
+    {
+      "name": "KAHRAMAN DEMİRTAŞ",
+      "team": "ALTINORDU",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 2,
+      "tffPersonId": "2114900"
+    },
+    {
+      "name": "KEMAL RÜZGAR",
+      "team": "ALTINORDU",
+      "roles": [
+        "substitute"
+      ],
+      "number": 9,
+      "tffPersonId": "1546355"
+    },
+    {
+      "name": "KERİM ALICI",
+      "team": "ALTINORDU",
+      "roles": [
+        "starting11"
+      ],
+      "number": 22,
+      "tffPersonId": "1034330"
+    },
+    {
+      "name": "MUHAMMED MERT",
+      "team": "ALTINORDU",
+      "roles": [
+        "starting11"
+      ],
+      "number": 10,
+      "tffPersonId": "1341186"
+    },
+    {
+      "name": "OĞULCAN ÜLGÜN",
+      "team": "ALTINORDU",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 8,
+      "tffPersonId": "1087701"
+    },
+    {
+      "name": "OKAN DERİCİ",
+      "team": "ALTINORDU",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 39,
+      "tffPersonId": "1164634"
+    },
+    {
+      "name": "ONUR TAHA TAKIR",
+      "team": "ALTINORDU",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 41,
+      "tffPersonId": "1470884"
+    },
+    {
+      "name": "RAVİL TAGİR",
+      "team": "ALTINORDU",
+      "roles": [
+        "substitute"
+      ],
+      "number": 4,
+      "tffPersonId": "1877358"
+    },
+    {
+      "name": "SİNAN OSMANOĞLU",
+      "team": "ALTINORDU",
+      "roles": [
+        "starting11"
+      ],
+      "number": 90,
+      "tffPersonId": "718571"
+    },
+    {
+      "name": "UFUK BUDAK",
+      "team": "ALTINORDU",
+      "roles": [
+        "starting11"
+      ],
+      "number": 3,
+      "tffPersonId": "1508968"
+    },
+    {
+      "name": "YUSUF YALÇIN ARSLAN",
+      "team": "ALTINORDU",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 23,
+      "tffPersonId": "1059030"
+    },
+    {
+      "name": "ABDÜLKADİR KAYALI",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 4,
+      "tffPersonId": "648438"
+    },
+    {
+      "name": "ANDRIJA VUKOVIC",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 1,
+      "tffPersonId": "1771457"
+    },
+    {
+      "name": "ANIL TAŞDEMİR",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 24,
+      "tffPersonId": "316547"
+    },
+    {
+      "name": "ANTONIO MRSIC",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 59,
+      "tffPersonId": "2217528"
+    },
+    {
+      "name": "ATİLLA ÖZMEN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 19,
+      "tffPersonId": "412201"
+    },
+    {
+      "name": "BATUHAN İŞÇİLER",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 35,
+      "tffPersonId": "981308"
+    },
+    {
+      "name": "BERAT AYDOĞDU",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 3,
+      "tffPersonId": "1196386"
+    },
+    {
+      "name": "CELAL EMİR DEDE",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 7,
+      "tffPersonId": "1602439"
+    },
+    {
+      "name": "CENK GÜVENÇ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 22,
+      "tffPersonId": "1228713"
+    },
+    {
+      "name": "DOĞA İŞERİ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 6,
+      "tffPersonId": "116812"
+    },
+    {
+      "name": "FOXI KETHEVOAMA",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 10,
+      "tffPersonId": "1877482"
+    },
+    {
+      "name": "FURKAN ÇİL",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 8,
+      "tffPersonId": "854926"
+    },
+    {
+      "name": "İBRAHİM HALİL ÇOLAK",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 63,
+      "tffPersonId": "1344340"
+    },
+    {
+      "name": "KAĞAN KAYALI",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 66,
+      "tffPersonId": "1377605"
+    },
+    {
+      "name": "MAHATMA OSUMANU OTOO",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 18,
+      "tffPersonId": "1973822"
+    },
+    {
+      "name": "MUSTAFA ATİ GÖKSU",
+      "team": "Balıkesirspor",
+      "roles": [
+        "technical_staff"
+      ]
+    },
+    {
+      "name": "OĞUZHAN ÇAPAR",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 5,
+      "tffPersonId": "1048331"
+    },
+    {
+      "name": "OKWUCHUKWU FRANCIS EZEH",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 80,
+      "tffPersonId": "2217530"
+    },
+    {
+      "name": "RAHMİ ANIL BAŞARAN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 20,
+      "tffPersonId": "1442246"
+    },
+    {
+      "name": "SERDAR GÜNCÜ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 21,
+      "tffPersonId": "1365955"
+    },
+    {
+      "name": "SEZER ÖZMEN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 23,
+      "tffPersonId": "897889"
+    },
+    {
+      "name": "TOMISLAV GLUMAC",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 44,
+      "tffPersonId": "1827834"
+    }
+  ],
+  "events": [
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ANTONIO MRSIC",
+      "minute": 23,
+      "minuteRaw": "23.dk",
+      "tffPersonId": "2217528"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "ALTINORDU",
+      "player": "BERKAY SAMANCI",
+      "minute": 21,
+      "minuteRaw": "21.dk",
+      "tffPersonId": "773501"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "ALTINORDU",
+      "player": "YUSUF YALÇIN ARSLAN",
+      "minute": 51,
+      "minuteRaw": "51.dk",
+      "tffPersonId": "1059030"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "ALTINORDU",
+      "player": "OĞULCAN ÜLGÜN",
+      "minute": 74,
+      "minuteRaw": "74.dk",
+      "tffPersonId": "1087701"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 1,
+      "player_in": "CELAL EMİR DEDE",
+      "player_out": "İBRAHİM HALİL ÇOLAK",
+      "playerIn": "CELAL EMİR DEDE",
+      "playerOut": "İBRAHİM HALİL ÇOLAK",
+      "minute": 77,
+      "minuteRaw": "77.dk",
+      "minute_text": "77.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "İBRAHİM HALİL ÇOLAK",
+      "order": 1,
+      "minute": 77,
+      "minuteRaw": "77.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "CELAL EMİR DEDE",
+      "order": 1,
+      "minute": 77,
+      "minuteRaw": "77.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 2,
+      "player_in": "ABDÜLKADİR KAYALI",
+      "player_out": "FOXI KETHEVOAMA",
+      "playerIn": "ABDÜLKADİR KAYALI",
+      "playerOut": "FOXI KETHEVOAMA",
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "minute_text": "46.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "FOXI KETHEVOAMA",
+      "order": 2,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "ABDÜLKADİR KAYALI",
+      "order": 2,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 3,
+      "player_in": "OKWUCHUKWU FRANCIS EZEH",
+      "player_out": "MAHATMA OSUMANU OTOO",
+      "playerIn": "OKWUCHUKWU FRANCIS EZEH",
+      "playerOut": "MAHATMA OSUMANU OTOO",
+      "minute": 68,
+      "minuteRaw": "68.dk",
+      "minute_text": "68.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "MAHATMA OSUMANU OTOO",
+      "order": 3,
+      "minute": 68,
+      "minuteRaw": "68.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "OKWUCHUKWU FRANCIS EZEH",
+      "order": 3,
+      "minute": 68,
+      "minuteRaw": "68.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "ALTINORDU",
+      "order": 1,
+      "player_in": "ONUR TAHA TAKIR",
+      "player_out": "HÜSEYİN ATAKAN ÜNER",
+      "playerIn": "ONUR TAHA TAKIR",
+      "playerOut": "HÜSEYİN ATAKAN ÜNER",
+      "minute": 85,
+      "minuteRaw": "85.dk",
+      "minute_text": "85.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "ALTINORDU",
+      "player": "HÜSEYİN ATAKAN ÜNER",
+      "order": 1,
+      "minute": 85,
+      "minuteRaw": "85.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "ALTINORDU",
+      "player": "ONUR TAHA TAKIR",
+      "order": 1,
+      "minute": 85,
+      "minuteRaw": "85.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "ALTINORDU",
+      "order": 2,
+      "player_in": "ERSEL ASLIYÜKSEK",
+      "player_out": "OKAN DERİCİ",
+      "playerIn": "ERSEL ASLIYÜKSEK",
+      "playerOut": "OKAN DERİCİ",
+      "minute": 54,
+      "minuteRaw": "54.dk",
+      "minute_text": "54.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "ALTINORDU",
+      "player": "OKAN DERİCİ",
+      "order": 2,
+      "minute": 54,
+      "minuteRaw": "54.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "ALTINORDU",
+      "player": "ERSEL ASLIYÜKSEK",
+      "order": 2,
+      "minute": 54,
+      "minuteRaw": "54.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "ALTINORDU",
+      "order": 3,
+      "player_in": "KAHRAMAN DEMİRTAŞ",
+      "player_out": "ANIL KOÇ",
+      "playerIn": "KAHRAMAN DEMİRTAŞ",
+      "playerOut": "ANIL KOÇ",
+      "minute": 90,
+      "minuteRaw": "90+4.dk",
+      "minute_text": "90+4.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "ALTINORDU",
+      "player": "ANIL KOÇ",
+      "order": 3,
+      "minute": 90,
+      "minuteRaw": "90+4.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "ALTINORDU",
+      "player": "KAHRAMAN DEMİRTAŞ",
+      "order": 3,
+      "minute": 90,
+      "minuteRaw": "90+4.dk"
+    }
+  ],
+  "goals": [],
+  "goalScorers": [],
+  "cards": [
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ANTONIO MRSIC",
+      "minute": 23,
+      "minuteRaw": "23.dk",
+      "tffPersonId": "2217528"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "ALTINORDU",
+      "player": "BERKAY SAMANCI",
+      "minute": 21,
+      "minuteRaw": "21.dk",
+      "tffPersonId": "773501"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "ALTINORDU",
+      "player": "YUSUF YALÇIN ARSLAN",
+      "minute": 51,
+      "minuteRaw": "51.dk",
+      "tffPersonId": "1059030"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "ALTINORDU",
+      "player": "OĞULCAN ÜLGÜN",
+      "minute": 74,
+      "minuteRaw": "74.dk",
+      "tffPersonId": "1087701"
+    }
+  ],
+  "substitutions": [
+    {
+      "team": "Balıkesirspor",
+      "order": 1,
+      "minute": 77,
+      "minuteRaw": "77.dk",
+      "playerOut": "İBRAHİM HALİL ÇOLAK",
+      "player_out": "İBRAHİM HALİL ÇOLAK",
+      "playerOutTffPersonId": "1344340",
+      "playerIn": "CELAL EMİR DEDE",
+      "player_in": "CELAL EMİR DEDE",
+      "playerInTffPersonId": "1602439"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 2,
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "playerOut": "FOXI KETHEVOAMA",
+      "player_out": "FOXI KETHEVOAMA",
+      "playerOutTffPersonId": "1877482",
+      "playerIn": "ABDÜLKADİR KAYALI",
+      "player_in": "ABDÜLKADİR KAYALI",
+      "playerInTffPersonId": "648438"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 3,
+      "minute": 68,
+      "minuteRaw": "68.dk",
+      "playerOut": "MAHATMA OSUMANU OTOO",
+      "player_out": "MAHATMA OSUMANU OTOO",
+      "playerOutTffPersonId": "1973822",
+      "playerIn": "OKWUCHUKWU FRANCIS EZEH",
+      "player_in": "OKWUCHUKWU FRANCIS EZEH",
+      "playerInTffPersonId": "2217530"
+    },
+    {
+      "team": "ALTINORDU",
+      "order": 1,
+      "minute": 85,
+      "minuteRaw": "85.dk",
+      "playerOut": "HÜSEYİN ATAKAN ÜNER",
+      "player_out": "HÜSEYİN ATAKAN ÜNER",
+      "playerOutTffPersonId": "1157364",
+      "playerIn": "ONUR TAHA TAKIR",
+      "player_in": "ONUR TAHA TAKIR",
+      "playerInTffPersonId": "1470884"
+    },
+    {
+      "team": "ALTINORDU",
+      "order": 2,
+      "minute": 54,
+      "minuteRaw": "54.dk",
+      "playerOut": "OKAN DERİCİ",
+      "player_out": "OKAN DERİCİ",
+      "playerOutTffPersonId": "1164634",
+      "playerIn": "ERSEL ASLIYÜKSEK",
+      "player_in": "ERSEL ASLIYÜKSEK",
+      "playerInTffPersonId": "911784"
+    },
+    {
+      "team": "ALTINORDU",
+      "order": 3,
+      "minute": 90,
+      "minuteRaw": "90+4.dk",
+      "playerOut": "ANIL KOÇ",
+      "player_out": "ANIL KOÇ",
+      "playerOutTffPersonId": "1478607",
+      "playerIn": "KAHRAMAN DEMİRTAŞ",
+      "player_in": "KAHRAMAN DEMİRTAŞ",
+      "playerInTffPersonId": "2114900"
+    }
+  ],
+  "sections_raw": {
+    "full_text_excerpt": "BALIKESİRSPOR ALTINORDU - Maç Detayları TFF\nAra\nTR\nEN\nTRENDYOL SÜPER LİG\nZİRAAT TÜRKİYE KUPASI\nE-SHOP\nANA SAYFA\nTFF\nMİLLİ TAKIMLAR\nLİGLER\nKUPALAR\nKADIN FUTBOLU\nFGD\nBİLGİ BANKASI\nPUAN DURUMU\nTRENDYOL SÜPERLIG\nFutbol Bilgi Bankası\nFutbolcular\nTeknik Direktörler\nTüm Maçlar\nMilli Maçlar\nKulüpler\nStadyumlar\nCezalar\nHakemler\nGözlemci ve Temsilciler\nFutbol Menajerleri\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nFormlar ve Sözleşmeler\nStatüler\nTalimatlar\nTFF Kanun ve Statüsü\nOnline Başvurular\nTam Saha içerikleri için tıklayınız\nFikstürler\nLig Seçiniz...\nTrendyol Süper Lig\nTrendyol 1. Lig\nTFF 2. Lig\nTFF 3. Lig\nKadın Ligleri\nZiraat Türkiye Kupası\nBölgesel Amatör Lig\nGelişim Ligleri\nEngelli Futbolu\nFutsal Ligi\nPlaj Futbolu\nFutbol Altyapı Gelişim Ligi\nSezon Planlaması\nPuan Cetvelleri\nLig Seçiniz..\nTrendyol Süper Lig Şamil Ekinci Sezonu\nTrendyol 1.Lig\nTrendyol 1. Lig Play Off Müsabakaları\nNesine 2. Lig Kırmızı\nNesine 2. Lig Beyaz\nNesine 2. Lig Play Off Müsabakaları\nNesine 3. Lig 01\nNesine 3. Lig 02\nNesine 3. Lig 03\nNesine 3. Lig 04\nNesine 3. Lig Play Off Müsabakaları\nZiraat Türkiye Kupası\nZiraat Türkiye Kupası Grup Aşaması A\nZiraat Türkiye Kupası Grup Aşaması B\nZiraat Türkiye Kupası Grup Aşaması C\nZiraat Türkiye Kupası Grup Aşaması D\nTurkcell Kadın Futbol Süper Ligi\nKadınlar 1. Ligi A Grubu\nKadınlar 1. Ligi B Grubu\nTFF Kadınlar 1. Ligi Play Off 3.lük Müsabakaları\nTFF Kadınlar 1. Ligi Play Off Şampiyonluk Grubu\nTFF Kadınlar 1. Ligi Play Off Yükselme Grubu\nKadınlar 2.Ligi Play Off Müsabakaları\nKadınlar 3.Ligi Play Off Müsabakaları\nKadınlar 2. Ligi A Grup\nKadınlar 2. Ligi B Grup\nKadınlar 2. Ligi C Grup\nKadınlar 2. Ligi D Grup\nKadınlar 3. Ligi 1.\nKadınlar 3. Ligi 10.\nKadınlar 3. Ligi 11.\nKadınlar 3. Ligi 12.\nKadınlar 3. Ligi 13.\nKadınlar 3. Ligi 14.\nKadınlar 3. Ligi 15.\nKadınlar 3. Ligi 16.\nKadınlar 3. Ligi 17.\nKadınlar 3. Ligi 18.\nKadınlar 3. Ligi 19.\nKadınlar 3. Ligi 2.\nKadınlar 3. Ligi 20.\nKadınlar 3. Ligi 21.\nKadınlar 3. Ligi 22.\nKadınlar 3. Ligi 23.\nKadınlar 3. Ligi 24.\nKadınlar 3. Ligi 25.\nKadınlar 3. Ligi 26.\nKadınlar 3. Ligi 27.\nKadınlar 3. Ligi 28.\nKadınlar 3. Ligi 29.\nKadınlar 3. Ligi 3.\nKadınlar 3. Ligi 30.\nKadınlar 3. Ligi 31.\nKadınlar 3. Ligi 32.\nKadınlar 3. Ligi 4.\nKadınlar 3. Ligi 5.\nKadınlar 3. Ligi 6.\nKadınlar 3. Ligi 7.\nKadınlar 3. Ligi 8.\nKadınlar 3. Ligi 9.\nBölgesel Amatör Ligi 1. GRUP\nBölgesel Amatör Ligi 10. GRUP\nBölgesel Amatör Ligi 2. GRUP\nBölgesel Amatör Ligi 3. GRUP\nBölgesel Amatör Ligi 4. GRUP\nBölgesel Amatör Ligi 5. GRUP\nBölgesel Amatör Ligi 6. GRUP\nBölgesel Amatör Ligi 7. GRUP\nBölgesel Amatör Ligi 8. GRUP\nBölgesel Amatör Ligi 9. GRUP\nBölgesel Amatör Lig Baraj Maçları\nBölgesel Amatör Lig Play Off\nU17 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU17 Bölgesel Gelişim Ligi 1. Grup\nU17 Bölgesel Gelişim Ligi 2. Grup\nU17 Bölgesel Gelişim Ligi 3. Grup\nU17 Bölgesel Gelişim Ligi 4. Grup\nU17 Bölgesel Gelişim Ligi 5. Grup\nU17 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi 1. Grup\nU19 Bölgesel Gelişim Ligi 2. Grup\nU19 Bölgesel Gelişim Ligi 3. Grup\nU19 Bölgesel Gelişim Ligi 4. Grup\nU19 Bölgesel Gelişim Ligi 5. Grup\nU19 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Grup 1\nU14 Gelişim Ligi Grup 2\nU14 Gelişim Ligi Grup 3\nU14 Gelişim Ligi Grup 4\nU14 Gelişim Ligi Grup 5\nU14 Gelişim Ligi Grup 6\nU14 Gelişim Ligi Grup 7\nU14 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Finalleri\nU15 Gelişim Ligi Grup 1\nU15 Gelişim Ligi Grup 2\nU15 Gelişim Ligi Grup 3\nU15 Gelişim Ligi Grup 4\nU15 Gelişim Ligi Grup 5\nU15 Gelişim Ligi Grup 6\nU15 Gelişim Ligi Grup 7\nU15 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU15 Gelişim Ligi Finalleri\nU16 Gelişim Ligi Grup 1\nU16 Gelişim Ligi Grup 2\nU16 Gelişim Ligi Grup 3\nU16 Gelişim Ligi Grup 4\nU16 Gelişim Ligi Grup 5\nU16 Gelişim Ligi Grup 6\nU16 Gelişim Ligi Grup 7\nU16 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU16 Gelişim Ligi Finalleri\nU17 Elit A Ligi\nU17 Elit B Ligi\nU19 Elit A Ligi\nU19 Elit B Ligi\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP A\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP B\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP A\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP B\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP A\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP B\nU14 Amatör Türkiye Şampiyonası\nU15 Amatör Türkiye Şampiyonası\nU16 Amatör Türkiye Şampiyonası\nU17 Amatör Türkiye Şampiyonası\nU18 Amatör Türkiye Şampiyonası\nHaftalık Maç Görevlileri\nHakem, Gözlemci ve Temsilciler\nMİLLİ TAKIM TARAFTAR KULÜBÜ\nSON DAKIKA..”\nU17 Kiz Milli Takimi'ndan Zafer Bayrami kutlamasi\n'Kuralina Göre' Programi beIN SPORTS'ta basliyor\nU18 Milli Takimimiz, Azerbaycan karsisinda\nU18 Milli Takimimiz, Azerbaycan karsisinda\n”\nBALIKESİRSPOR\n0\nALTINORDU\n0\nTFF 1. Lig (Profesyonel Takım)\nMaç Kodu:\n2092\nBALIKESİR ATATÜRK - BALIKESİR\n10.11.2019 - 19:00\nTURGUT DOMAN(Hakem)\nÖMER TEVFİK ÖZKOÇ(1. Yardımcı Hakem)\nGÖKHAN BARCIN(2. Yardımcı Hakem)\nSEMİH KURT(Dördüncü Hakem)\nAKİF UĞURDUR(Gözlemci)\nAHMET BOZAN(Temsilci)\nNURULLAH ÖZTÜRK(Temsilci)\nSERKAN ATALAY(Temsilci)\nİlk 11\n1.\nANDRIJA VUKOVIC\n35.\nBATUHAN İŞÇİLER\n44.\nTOMISLAV GLUMAC\n5.\nOĞUZHAN ÇAPAR\n6.\nDOĞA İŞERİ\n59.\nANTONIO MRSIC\n8.\nFURKAN ÇİL\n10.\nFOXI KETHEVOAMA\n18.\nMAHATMA OSUMANU OTOO\n63.\nİBRAHİM HALİL ÇOLAK\n20.\nRAHMİ ANIL BAŞARAN\nYedekler\n19.\nATİLLA ÖZMEN\n66.\nKAĞAN KAYALI\n3.\nBERAT AYDOĞDU\n23.\nSEZER ÖZMEN\n4.\nABDÜLKADİR KAYALI\n21.\nSERDAR GÜNCÜ\n7.\nCELAL EMİR DEDE\n22.\nCENK GÜVENÇ\n80.\nOKWUCHUKWU FRANCIS EZEH\n24.\nANIL TAŞDEMİR\nTeknik Sorumlu\nMUSTAFA ATİ GÖKSU\nKartlar\nANTONIO MRSIC\n23.dk\nOyundan Çıkanlar\nİBRAHİM HALİL ÇOLAK\n77.dk\nFOXI KETHEVOAMA\n46.dk\nMAHATMA OSUMANU OTOO\n68.dk\nOyuna Girenler\nCELAL EMİR DEDE\n77.dk\nABDÜLKADİR KAYALI\n46.dk\nOKWUCHUKWU FRANCIS EZEH\n68.dk\nİlk 11\n1.\nERHAN ERENTÜRK\n3.\nUFUK BUDAK\n23.\nYUSUF YALÇIN ARSLAN\n5.\nBERKAY SAMANCI\n7.\nANIL KOÇ\n8.\nOĞULCAN ÜLGÜN\n10.\nMUHAMMED MERT\n17.\nHÜSEYİN ATAKAN ÜNER\n22.\nKERİM ALICI\n39.\nOKAN DERİCİ\n90.\nSİNAN OSMANOĞLU\nYedekler\n12.\nALİ EMRE YANAR\n2.\nKAHRAMAN DEMİRTAŞ\n9.\nKEMAL RÜZGAR\n18.\nEGEHAN GÖK\n20.\nALİ MERT AYDIN\n21.\nBURAK İNCE\n4.\nRAVİL TAGİR\n41.\nONUR TAHA TAKIR\n53.\nERSEL ASLIYÜKSEK\n99.\nFATİH AKTAY\nTeknik Sorumlu\nHÜSEYİN EROĞLU\nKartlar\nBERKAY SAMANCI\n21.dk\nYUSUF YALÇIN ARSLAN\n51.dk\nOĞULCAN ÜLGÜN\n74.dk\nOyundan Çıkanlar\nHÜSEYİN ATAKAN ÜNER\n85.dk\nOKAN DERİCİ\n54.dk\nANIL KOÇ\n90+4.dk\nOyuna Girenler\nONUR TAHA TAKIR\n85.dk\nERSEL ASLIYÜKSEK\n54.dk\nKAHRAMAN DEMİRTAŞ\n90+4.dk\nF:F - Ayak\nH:H - Kafa\nK:K - Kendi Kalesine\nP:P - Penaltı\nS:S - Seri Penaltı\nİletişim\n|\nSite Haritası\n|\nKopya Hakları\n|\nKullanım Şartları\n|\nSponsorlar\nTüm hakları Türkiye Futbol Federasyonu'na aittir.\nSosyal Medya Adreslerimiz:\nTFF\nTFF\nMilli Takımlar\nSüper Lig\nE-Millî Takım",
+    "officials_raw": "Hakemler\nGözlemci ve Temsilciler\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nHakem, Gözlemci ve Temsilciler\nTURGUT DOMAN(Hakem)\nÖMER TEVFİK ÖZKOÇ(1. Yardımcı Hakem)\nGÖKHAN BARCIN(2. Yardımcı Hakem)\nSEMİH KURT(Dördüncü Hakem)\nAKİF UĞURDUR(Gözlemci)\nAHMET BOZAN(Temsilci)\nNURULLAH ÖZTÜRK(Temsilci)\nSERKAN ATALAY(Temsilci)",
+    "lineups_raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu",
+    "events_raw": "23.dk\nOyundan Çıkanlar\n77.dk\n46.dk\n68.dk\nOyuna Girenler\n77.dk\n46.dk\n68.dk\n21.dk\n51.dk\n74.dk\nOyundan Çıkanlar\n85.dk\n54.dk\n90+4.dk\nOyuna Girenler\n85.dk\n54.dk\n90+4.dk\nP:P - Penaltı\nS:S - Seri Penaltı"
+  },
+  "detailCompleteness": {
+    "hasStadium": true,
+    "starting11Home": 11,
+    "starting11Away": 11,
+    "substitutesHome": 10,
+    "substitutesAway": 10,
+    "goals": 0,
+    "cards": 4,
+    "substitutions": 6,
+    "players": 44
+  },
+  "quality": "A",
+  "source": {
+    "name": "TFF",
+    "url": "http://www.tff.org/Default.aspx?pageID=29&macId=207551",
+    "retrievedAt": "2026-07-12T17:36:33.424597Z",
+    "sourceType": "official_tff_match_detail"
+  },
+  "clubFixture": {
+    "week": 0,
+    "rowText": "11 BALIKESİRSPOR 0-0 ALTINORDU 10 Kasım 2019 TFF 1. Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=207551&pageID=29"
+  },
+  "week": 11,
+  "standingsWeek": 11,
+  "stageWeek": 11,
+  "roundType": "league",
+  "roundLabel": "11. Hafta",
+  "roundSource": "stage_sequence_fallback"
+}

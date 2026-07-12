@@ -1,0 +1,1283 @@
+{
+  "id": "235817",
+  "matchCode": "3428",
+  "season": "2022-2023",
+  "competition": "TFF 2.Lig (Profesyonel Takım)",
+  "teamLevel": "professional",
+  "teamLevelEvidence": "explicit_professional",
+  "competitionType": "league",
+  "competitionLabel": "Lig",
+  "stadium": "BALIKESİR ATATÜRK - BALIKESİR",
+  "venue": "BALIKESİR ATATÜRK - BALIKESİR",
+  "stage": "Lig",
+  "stageLabel": "Lig",
+  "date": "2023-03-15",
+  "time": "14:00",
+  "dateDisplay": "2023-03-15 - 14:00",
+  "homeTeam": "Balıkesirspor",
+  "awayTeam": "GMG KASTAMONUSPOR",
+  "matchType": "league",
+  "matchTypeLabel": "Lig",
+  "type": "league",
+  "typeLabel": "Lig",
+  "score": {
+    "home": 1,
+    "away": 1,
+    "display": "1-1",
+    "played": true
+  },
+  "balkes": {
+    "isHome": true,
+    "isAway": false,
+    "opponent": "GMG KASTAMONUSPOR",
+    "goalsFor": 1,
+    "goalsAgainst": 1,
+    "result": "D"
+  },
+  "officials": [
+    {
+      "role": "Hakem",
+      "name": "FEVZİ ERDEM AKBAŞ"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "MÜCAHİD ADEM ÇELEBİ"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "BURAK SAMİ ŞAD"
+    },
+    {
+      "role": "Dördüncü Hakem",
+      "name": "SÜLEYMAN SOYUTÜRK"
+    }
+  ],
+  "referees": [
+    {
+      "role": "Hakem",
+      "name": "FEVZİ ERDEM AKBAŞ"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "MÜCAHİD ADEM ÇELEBİ"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "BURAK SAMİ ŞAD"
+    },
+    {
+      "role": "Dördüncü Hakem",
+      "name": "SÜLEYMAN SOYUTÜRK"
+    }
+  ],
+  "lineups": {
+    "home": {
+      "team": "Balıkesirspor",
+      "starting11": [
+        {
+          "name": "YİĞİTHAN KIR",
+          "number": 1,
+          "shirt_no": "1",
+          "tffPersonId": "1588286"
+        },
+        {
+          "name": "GÖRKEM ALTUN",
+          "number": 44,
+          "shirt_no": "44",
+          "tffPersonId": "1802108"
+        },
+        {
+          "name": "KAĞAN KAYALI",
+          "number": 15,
+          "shirt_no": "15",
+          "tffPersonId": "1377605"
+        },
+        {
+          "name": "HÜSEYİN KARABEY",
+          "number": 39,
+          "shirt_no": "39",
+          "tffPersonId": "1754543"
+        },
+        {
+          "name": "BERAT AYDOĞDU",
+          "number": 3,
+          "shirt_no": "3",
+          "tffPersonId": "1196386"
+        },
+        {
+          "name": "İBRAHİM HALİL ÇOLAK",
+          "number": 63,
+          "shirt_no": "63",
+          "tffPersonId": "1344340"
+        },
+        {
+          "name": "DOĞANAY AVCI",
+          "number": 27,
+          "shirt_no": "27",
+          "tffPersonId": "2024592"
+        },
+        {
+          "name": "SEDAT DURSUN",
+          "number": 5,
+          "shirt_no": "5",
+          "tffPersonId": "1209334"
+        },
+        {
+          "name": "OĞUZ HAN AYNAOĞLU",
+          "number": 10,
+          "shirt_no": "10",
+          "tffPersonId": "1668998"
+        },
+        {
+          "name": "SEDAT YİĞİT KURNAZ",
+          "number": 21,
+          "shirt_no": "21",
+          "tffPersonId": "1712887"
+        },
+        {
+          "name": "EMİRHAN ÇAKIR",
+          "number": 99,
+          "shirt_no": "99",
+          "tffPersonId": "1614404"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "YASİN YİĞİT BERBER",
+          "number": 26,
+          "shirt_no": "26",
+          "tffPersonId": "1569202"
+        },
+        {
+          "name": "UMUT CAN AKÇAOĞLU",
+          "number": 69,
+          "shirt_no": "69",
+          "tffPersonId": "1731543"
+        },
+        {
+          "name": "ENES KARABULUT",
+          "number": 23,
+          "shirt_no": "23",
+          "tffPersonId": "1695696"
+        },
+        {
+          "name": "BERKAY AYKURT",
+          "number": 97,
+          "shirt_no": "97",
+          "tffPersonId": "1621081"
+        },
+        {
+          "name": "ANDAÇ GÜLERYÜZ",
+          "number": 7,
+          "shirt_no": "7",
+          "tffPersonId": "1726614"
+        },
+        {
+          "name": "BERK TOSUN",
+          "number": 20,
+          "shirt_no": "20",
+          "tffPersonId": "1621067"
+        },
+        {
+          "name": "ABDULLAH ADIYAMAN",
+          "number": 25,
+          "shirt_no": "25",
+          "tffPersonId": "1913579"
+        },
+        {
+          "name": "ARDA İBRAHİM AKGÜN",
+          "number": 67,
+          "shirt_no": "67",
+          "tffPersonId": "1934117"
+        },
+        {
+          "name": "ÜMİT DOĞRU",
+          "number": 80,
+          "shirt_no": "80",
+          "tffPersonId": "1614412"
+        },
+        {
+          "name": "HASAN CAN BİNGÜL",
+          "number": 61,
+          "shirt_no": "61",
+          "tffPersonId": "1706053"
+        }
+      ],
+      "technicalStaff": [
+        {
+          "name": "CAN CANGÖK"
+        }
+      ],
+      "coach": "CAN CANGÖK",
+      "raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu"
+    },
+    "away": {
+      "team": "GMG KASTAMONUSPOR",
+      "starting11": [
+        {
+          "name": "MUSTAFA GÜNGÖR",
+          "number": 27,
+          "shirt_no": "27",
+          "tffPersonId": "1164845"
+        },
+        {
+          "name": "MUSTAFA BERKAN AYDENİZ",
+          "number": 40,
+          "shirt_no": "40",
+          "tffPersonId": "2216499"
+        },
+        {
+          "name": "ŞABAN ÖZEL",
+          "number": 3,
+          "shirt_no": "3",
+          "tffPersonId": "780270"
+        },
+        {
+          "name": "EMRE CAN COŞKUN",
+          "number": 35,
+          "shirt_no": "35",
+          "tffPersonId": "960427"
+        },
+        {
+          "name": "ERCAN YAZICI",
+          "number": 16,
+          "shirt_no": "16",
+          "tffPersonId": "1032404"
+        },
+        {
+          "name": "YASİN BAŞAYTAÇ",
+          "number": 66,
+          "shirt_no": "66",
+          "tffPersonId": "1049256"
+        },
+        {
+          "name": "MUSTAFA ALPTEKİN ÇAYLI",
+          "number": 20,
+          "shirt_no": "20",
+          "tffPersonId": "1816476"
+        },
+        {
+          "name": "BERTU ALİCAN ÖZYÜREK",
+          "number": 67,
+          "shirt_no": "67",
+          "tffPersonId": "1665615"
+        },
+        {
+          "name": "YİĞİTALİ BAYRAK",
+          "number": 89,
+          "shirt_no": "89",
+          "tffPersonId": "982381"
+        },
+        {
+          "name": "FUAT BAVUK",
+          "number": 11,
+          "shirt_no": "11",
+          "tffPersonId": "1447614"
+        },
+        {
+          "name": "ERGİN KELEŞ",
+          "number": 12,
+          "shirt_no": "12",
+          "tffPersonId": "228016"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "EMRE KEŞKEK",
+          "number": 22,
+          "shirt_no": "22",
+          "tffPersonId": "1685000"
+        },
+        {
+          "name": "YUSUF TALUM",
+          "number": 29,
+          "shirt_no": "29",
+          "tffPersonId": "1674011"
+        },
+        {
+          "name": "KADİR KELEŞ",
+          "number": 61,
+          "shirt_no": "61",
+          "tffPersonId": "235249"
+        },
+        {
+          "name": "KEMAL CAN AYDEMİR",
+          "number": 41,
+          "shirt_no": "41",
+          "tffPersonId": "1054035"
+        },
+        {
+          "name": "RAMAZAN KESKİN",
+          "number": 99,
+          "shirt_no": "99",
+          "tffPersonId": "1363255"
+        },
+        {
+          "name": "ÖMER FARUK YÜCEL",
+          "number": 6,
+          "shirt_no": "6",
+          "tffPersonId": "1588833"
+        },
+        {
+          "name": "SEÇKİN GETBAY",
+          "number": 18,
+          "shirt_no": "18",
+          "tffPersonId": "633617"
+        },
+        {
+          "name": "MUHAMMED ENES DURMUŞ",
+          "number": 80,
+          "shirt_no": "80",
+          "tffPersonId": "1048411"
+        },
+        {
+          "name": "BURAK ÇALIK",
+          "number": 24,
+          "shirt_no": "24",
+          "tffPersonId": "143417"
+        },
+        {
+          "name": "ABDULAZİZ SOLMAZ",
+          "number": 7,
+          "shirt_no": "7",
+          "tffPersonId": "235260"
+        }
+      ],
+      "technicalStaff": [
+        {
+          "name": "LEVENT ERİŞ"
+        }
+      ],
+      "coach": "LEVENT ERİŞ",
+      "raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu"
+    }
+  },
+  "players": [
+    {
+      "name": "ABDULLAH ADIYAMAN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 25,
+      "tffPersonId": "1913579"
+    },
+    {
+      "name": "ANDAÇ GÜLERYÜZ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 7,
+      "tffPersonId": "1726614"
+    },
+    {
+      "name": "ARDA İBRAHİM AKGÜN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 67,
+      "tffPersonId": "1934117"
+    },
+    {
+      "name": "BERAT AYDOĞDU",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 3,
+      "tffPersonId": "1196386"
+    },
+    {
+      "name": "BERK TOSUN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 20,
+      "tffPersonId": "1621067"
+    },
+    {
+      "name": "BERKAY AYKURT",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 97,
+      "tffPersonId": "1621081"
+    },
+    {
+      "name": "CAN CANGÖK",
+      "team": "Balıkesirspor",
+      "roles": [
+        "technical_staff"
+      ]
+    },
+    {
+      "name": "DOĞANAY AVCI",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 27,
+      "tffPersonId": "2024592"
+    },
+    {
+      "name": "EMİRHAN ÇAKIR",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 99,
+      "tffPersonId": "1614404"
+    },
+    {
+      "name": "ENES KARABULUT",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 23,
+      "tffPersonId": "1695696"
+    },
+    {
+      "name": "GÖRKEM ALTUN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 44,
+      "tffPersonId": "1802108"
+    },
+    {
+      "name": "HASAN CAN BİNGÜL",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 61,
+      "tffPersonId": "1706053"
+    },
+    {
+      "name": "HÜSEYİN KARABEY",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 39,
+      "tffPersonId": "1754543"
+    },
+    {
+      "name": "İBRAHİM HALİL ÇOLAK",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 63,
+      "tffPersonId": "1344340"
+    },
+    {
+      "name": "KAĞAN KAYALI",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 15,
+      "tffPersonId": "1377605"
+    },
+    {
+      "name": "OĞUZ HAN AYNAOĞLU",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 10,
+      "tffPersonId": "1668998"
+    },
+    {
+      "name": "SEDAT DURSUN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "goal"
+      ],
+      "number": 5,
+      "tffPersonId": "1209334"
+    },
+    {
+      "name": "SEDAT YİĞİT KURNAZ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 21,
+      "tffPersonId": "1712887"
+    },
+    {
+      "name": "ÜMİT DOĞRU",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 80,
+      "tffPersonId": "1614412"
+    },
+    {
+      "name": "UMUT CAN AKÇAOĞLU",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 69,
+      "tffPersonId": "1731543"
+    },
+    {
+      "name": "YASİN YİĞİT BERBER",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 26,
+      "tffPersonId": "1569202"
+    },
+    {
+      "name": "YİĞİTHAN KIR",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 1,
+      "tffPersonId": "1588286"
+    },
+    {
+      "name": "ABDULAZİZ SOLMAZ",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 7,
+      "tffPersonId": "235260"
+    },
+    {
+      "name": "BERTU ALİCAN ÖZYÜREK",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 67,
+      "tffPersonId": "1665615"
+    },
+    {
+      "name": "BURAK ÇALIK",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 24,
+      "tffPersonId": "143417"
+    },
+    {
+      "name": "EMRE CAN COŞKUN",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 35,
+      "tffPersonId": "960427"
+    },
+    {
+      "name": "EMRE KEŞKEK",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 22,
+      "tffPersonId": "1685000"
+    },
+    {
+      "name": "ERCAN YAZICI",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 16,
+      "tffPersonId": "1032404"
+    },
+    {
+      "name": "ERGİN KELEŞ",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 12,
+      "tffPersonId": "228016"
+    },
+    {
+      "name": "FUAT BAVUK",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "starting11",
+        "goal",
+        "red_card"
+      ],
+      "number": 11,
+      "tffPersonId": "1447614"
+    },
+    {
+      "name": "KADİR KELEŞ",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 61,
+      "tffPersonId": "235249"
+    },
+    {
+      "name": "KEMAL CAN AYDEMİR",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 41,
+      "tffPersonId": "1054035"
+    },
+    {
+      "name": "LEVENT ERİŞ",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "technical_staff"
+      ]
+    },
+    {
+      "name": "MUHAMMED ENES DURMUŞ",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "substitute",
+        "substitution_out",
+        "substitution_in"
+      ],
+      "number": 80,
+      "tffPersonId": "1048411"
+    },
+    {
+      "name": "MUSTAFA ALPTEKİN ÇAYLI",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 20,
+      "tffPersonId": "1816476"
+    },
+    {
+      "name": "MUSTAFA BERKAN AYDENİZ",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "starting11",
+        "yellow_card",
+        "substitution_out"
+      ],
+      "number": 40,
+      "tffPersonId": "2216499"
+    },
+    {
+      "name": "MUSTAFA GÜNGÖR",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 27,
+      "tffPersonId": "1164845"
+    },
+    {
+      "name": "ÖMER FARUK YÜCEL",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 6,
+      "tffPersonId": "1588833"
+    },
+    {
+      "name": "RAMAZAN KESKİN",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 99,
+      "tffPersonId": "1363255"
+    },
+    {
+      "name": "ŞABAN ÖZEL",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 3,
+      "tffPersonId": "780270"
+    },
+    {
+      "name": "SEÇKİN GETBAY",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 18,
+      "tffPersonId": "633617"
+    },
+    {
+      "name": "YASİN BAŞAYTAÇ",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 66,
+      "tffPersonId": "1049256"
+    },
+    {
+      "name": "YİĞİTALİ BAYRAK",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 89,
+      "tffPersonId": "982381"
+    },
+    {
+      "name": "YUSUF TALUM",
+      "team": "GMG KASTAMONUSPOR",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 29,
+      "tffPersonId": "1674011"
+    }
+  ],
+  "events": [
+    {
+      "type": "goal",
+      "team": "Balıkesirspor",
+      "player": "SEDAT DURSUN",
+      "scorer": "SEDAT DURSUN",
+      "raw": "SEDAT DURSUN,84.dk (H)",
+      "minute": 84,
+      "minuteRaw": "SEDAT DURSUN,84.dk",
+      "goalType": "H",
+      "tffPersonId": "1209334"
+    },
+    {
+      "type": "goal",
+      "team": "GMG KASTAMONUSPOR",
+      "player": "FUAT BAVUK",
+      "scorer": "FUAT BAVUK",
+      "raw": "FUAT BAVUK,39.dk (F)",
+      "minute": 39,
+      "minuteRaw": "FUAT BAVUK,39.dk",
+      "goalType": "F",
+      "tffPersonId": "1447614"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "HÜSEYİN KARABEY",
+      "minute": 45,
+      "minuteRaw": "45+3.dk",
+      "tffPersonId": "1754543"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "GMG KASTAMONUSPOR",
+      "player": "EMRE CAN COŞKUN",
+      "minute": 90,
+      "minuteRaw": "90+3.dk",
+      "tffPersonId": "960427"
+    },
+    {
+      "type": "red_card",
+      "card": "red",
+      "team": "GMG KASTAMONUSPOR",
+      "player": "FUAT BAVUK",
+      "minute": 69,
+      "minuteRaw": "69.dk",
+      "tffPersonId": "1447614"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "GMG KASTAMONUSPOR",
+      "player": "MUSTAFA ALPTEKİN ÇAYLI",
+      "minute": 90,
+      "minuteRaw": "90+5.dk",
+      "tffPersonId": "1816476"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "GMG KASTAMONUSPOR",
+      "player": "MUSTAFA BERKAN AYDENİZ",
+      "minute": 32,
+      "minuteRaw": "32.dk",
+      "tffPersonId": "2216499"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 1,
+      "player_in": "HASAN CAN BİNGÜL",
+      "player_out": "KAĞAN KAYALI",
+      "playerIn": "HASAN CAN BİNGÜL",
+      "playerOut": "KAĞAN KAYALI",
+      "minute": 84,
+      "minuteRaw": "84.dk",
+      "minute_text": "84.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "KAĞAN KAYALI",
+      "order": 1,
+      "minute": 84,
+      "minuteRaw": "84.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "HASAN CAN BİNGÜL",
+      "order": 1,
+      "minute": 84,
+      "minuteRaw": "84.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 2,
+      "player_in": "ENES KARABULUT",
+      "player_out": "SEDAT YİĞİT KURNAZ",
+      "playerIn": "ENES KARABULUT",
+      "playerOut": "SEDAT YİĞİT KURNAZ",
+      "minute": 59,
+      "minuteRaw": "59.dk",
+      "minute_text": "59.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "SEDAT YİĞİT KURNAZ",
+      "order": 2,
+      "minute": 59,
+      "minuteRaw": "59.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "ENES KARABULUT",
+      "order": 2,
+      "minute": 59,
+      "minuteRaw": "59.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 3,
+      "player_in": "ANDAÇ GÜLERYÜZ",
+      "player_out": "DOĞANAY AVCI",
+      "playerIn": "ANDAÇ GÜLERYÜZ",
+      "playerOut": "DOĞANAY AVCI",
+      "minute": 59,
+      "minuteRaw": "59.dk",
+      "minute_text": "59.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "DOĞANAY AVCI",
+      "order": 3,
+      "minute": 59,
+      "minuteRaw": "59.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "ANDAÇ GÜLERYÜZ",
+      "order": 3,
+      "minute": 59,
+      "minuteRaw": "59.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "GMG KASTAMONUSPOR",
+      "order": 1,
+      "player_in": "ABDULAZİZ SOLMAZ",
+      "player_out": "ŞABAN ÖZEL",
+      "playerIn": "ABDULAZİZ SOLMAZ",
+      "playerOut": "ŞABAN ÖZEL",
+      "minute": 51,
+      "minuteRaw": "51.dk",
+      "minute_text": "51.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "GMG KASTAMONUSPOR",
+      "player": "ŞABAN ÖZEL",
+      "order": 1,
+      "minute": 51,
+      "minuteRaw": "51.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "GMG KASTAMONUSPOR",
+      "player": "ABDULAZİZ SOLMAZ",
+      "order": 1,
+      "minute": 51,
+      "minuteRaw": "51.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "GMG KASTAMONUSPOR",
+      "order": 2,
+      "player_in": "RAMAZAN KESKİN",
+      "player_out": "YİĞİTALİ BAYRAK",
+      "playerIn": "RAMAZAN KESKİN",
+      "playerOut": "YİĞİTALİ BAYRAK",
+      "minute": 65,
+      "minuteRaw": "65.dk",
+      "minute_text": "65.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "GMG KASTAMONUSPOR",
+      "player": "YİĞİTALİ BAYRAK",
+      "order": 2,
+      "minute": 65,
+      "minuteRaw": "65.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "GMG KASTAMONUSPOR",
+      "player": "RAMAZAN KESKİN",
+      "order": 2,
+      "minute": 65,
+      "minuteRaw": "65.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "GMG KASTAMONUSPOR",
+      "order": 3,
+      "player_in": "MUHAMMED ENES DURMUŞ",
+      "player_out": "MUHAMMED ENES DURMUŞ",
+      "playerIn": "MUHAMMED ENES DURMUŞ",
+      "playerOut": "MUHAMMED ENES DURMUŞ",
+      "minute": 65,
+      "minuteRaw": "65.dk",
+      "minute_text": "65.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "GMG KASTAMONUSPOR",
+      "player": "MUHAMMED ENES DURMUŞ",
+      "order": 3,
+      "minute": 65,
+      "minuteRaw": "65.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "GMG KASTAMONUSPOR",
+      "player": "MUHAMMED ENES DURMUŞ",
+      "order": 3,
+      "minute": 65,
+      "minuteRaw": "65.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "GMG KASTAMONUSPOR",
+      "order": 4,
+      "player_in": "KEMAL CAN AYDEMİR",
+      "player_out": "BERTU ALİCAN ÖZYÜREK",
+      "playerIn": "KEMAL CAN AYDEMİR",
+      "playerOut": "BERTU ALİCAN ÖZYÜREK",
+      "minute": 87,
+      "minuteRaw": "87.dk",
+      "minute_text": "87.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "GMG KASTAMONUSPOR",
+      "player": "BERTU ALİCAN ÖZYÜREK",
+      "order": 4,
+      "minute": 87,
+      "minuteRaw": "87.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "GMG KASTAMONUSPOR",
+      "player": "KEMAL CAN AYDEMİR",
+      "order": 4,
+      "minute": 87,
+      "minuteRaw": "87.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "GMG KASTAMONUSPOR",
+      "order": 5,
+      "player_in": "YUSUF TALUM",
+      "player_out": "MUSTAFA BERKAN AYDENİZ",
+      "playerIn": "YUSUF TALUM",
+      "playerOut": "MUSTAFA BERKAN AYDENİZ",
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "minute_text": "46.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "GMG KASTAMONUSPOR",
+      "player": "MUSTAFA BERKAN AYDENİZ",
+      "order": 5,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "GMG KASTAMONUSPOR",
+      "player": "YUSUF TALUM",
+      "order": 5,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    }
+  ],
+  "goals": [
+    {
+      "type": "goal",
+      "team": "Balıkesirspor",
+      "player": "SEDAT DURSUN",
+      "scorer": "SEDAT DURSUN",
+      "raw": "SEDAT DURSUN,84.dk (H)",
+      "minute": 84,
+      "minuteRaw": "SEDAT DURSUN,84.dk",
+      "goalType": "H",
+      "tffPersonId": "1209334"
+    },
+    {
+      "type": "goal",
+      "team": "GMG KASTAMONUSPOR",
+      "player": "FUAT BAVUK",
+      "scorer": "FUAT BAVUK",
+      "raw": "FUAT BAVUK,39.dk (F)",
+      "minute": 39,
+      "minuteRaw": "FUAT BAVUK,39.dk",
+      "goalType": "F",
+      "tffPersonId": "1447614"
+    }
+  ],
+  "goalScorers": [
+    {
+      "player": "SEDAT DURSUN",
+      "team": "Balıkesirspor",
+      "minute": 84,
+      "goalType": "H"
+    },
+    {
+      "player": "FUAT BAVUK",
+      "team": "GMG KASTAMONUSPOR",
+      "minute": 39,
+      "goalType": "F"
+    }
+  ],
+  "cards": [
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "HÜSEYİN KARABEY",
+      "minute": 45,
+      "minuteRaw": "45+3.dk",
+      "tffPersonId": "1754543"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "GMG KASTAMONUSPOR",
+      "player": "EMRE CAN COŞKUN",
+      "minute": 90,
+      "minuteRaw": "90+3.dk",
+      "tffPersonId": "960427"
+    },
+    {
+      "type": "red_card",
+      "card": "red",
+      "team": "GMG KASTAMONUSPOR",
+      "player": "FUAT BAVUK",
+      "minute": 69,
+      "minuteRaw": "69.dk",
+      "tffPersonId": "1447614"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "GMG KASTAMONUSPOR",
+      "player": "MUSTAFA ALPTEKİN ÇAYLI",
+      "minute": 90,
+      "minuteRaw": "90+5.dk",
+      "tffPersonId": "1816476"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "GMG KASTAMONUSPOR",
+      "player": "MUSTAFA BERKAN AYDENİZ",
+      "minute": 32,
+      "minuteRaw": "32.dk",
+      "tffPersonId": "2216499"
+    }
+  ],
+  "substitutions": [
+    {
+      "team": "Balıkesirspor",
+      "order": 1,
+      "minute": 84,
+      "minuteRaw": "84.dk",
+      "playerOut": "KAĞAN KAYALI",
+      "player_out": "KAĞAN KAYALI",
+      "playerOutTffPersonId": "1377605",
+      "playerIn": "HASAN CAN BİNGÜL",
+      "player_in": "HASAN CAN BİNGÜL",
+      "playerInTffPersonId": "1706053"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 2,
+      "minute": 59,
+      "minuteRaw": "59.dk",
+      "playerOut": "SEDAT YİĞİT KURNAZ",
+      "player_out": "SEDAT YİĞİT KURNAZ",
+      "playerOutTffPersonId": "1712887",
+      "playerIn": "ENES KARABULUT",
+      "player_in": "ENES KARABULUT",
+      "playerInTffPersonId": "1695696"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 3,
+      "minute": 59,
+      "minuteRaw": "59.dk",
+      "playerOut": "DOĞANAY AVCI",
+      "player_out": "DOĞANAY AVCI",
+      "playerOutTffPersonId": "2024592",
+      "playerIn": "ANDAÇ GÜLERYÜZ",
+      "player_in": "ANDAÇ GÜLERYÜZ",
+      "playerInTffPersonId": "1726614"
+    },
+    {
+      "team": "GMG KASTAMONUSPOR",
+      "order": 1,
+      "minute": 51,
+      "minuteRaw": "51.dk",
+      "playerOut": "ŞABAN ÖZEL",
+      "player_out": "ŞABAN ÖZEL",
+      "playerOutTffPersonId": "780270",
+      "playerIn": "ABDULAZİZ SOLMAZ",
+      "player_in": "ABDULAZİZ SOLMAZ",
+      "playerInTffPersonId": "235260"
+    },
+    {
+      "team": "GMG KASTAMONUSPOR",
+      "order": 2,
+      "minute": 65,
+      "minuteRaw": "65.dk",
+      "playerOut": "YİĞİTALİ BAYRAK",
+      "player_out": "YİĞİTALİ BAYRAK",
+      "playerOutTffPersonId": "982381",
+      "playerIn": "RAMAZAN KESKİN",
+      "player_in": "RAMAZAN KESKİN",
+      "playerInTffPersonId": "1363255"
+    },
+    {
+      "team": "GMG KASTAMONUSPOR",
+      "order": 3,
+      "minute": 65,
+      "minuteRaw": "65.dk",
+      "playerOut": "MUHAMMED ENES DURMUŞ",
+      "player_out": "MUHAMMED ENES DURMUŞ",
+      "playerOutTffPersonId": "1048411",
+      "playerIn": "MUHAMMED ENES DURMUŞ",
+      "player_in": "MUHAMMED ENES DURMUŞ",
+      "playerInTffPersonId": "1048411"
+    },
+    {
+      "team": "GMG KASTAMONUSPOR",
+      "order": 4,
+      "minute": 87,
+      "minuteRaw": "87.dk",
+      "playerOut": "BERTU ALİCAN ÖZYÜREK",
+      "player_out": "BERTU ALİCAN ÖZYÜREK",
+      "playerOutTffPersonId": "1665615",
+      "playerIn": "KEMAL CAN AYDEMİR",
+      "player_in": "KEMAL CAN AYDEMİR",
+      "playerInTffPersonId": "1054035"
+    },
+    {
+      "team": "GMG KASTAMONUSPOR",
+      "order": 5,
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "playerOut": "MUSTAFA BERKAN AYDENİZ",
+      "player_out": "MUSTAFA BERKAN AYDENİZ",
+      "playerOutTffPersonId": "2216499",
+      "playerIn": "YUSUF TALUM",
+      "player_in": "YUSUF TALUM",
+      "playerInTffPersonId": "1674011"
+    }
+  ],
+  "sections_raw": {
+    "full_text_excerpt": "BAYNET İNŞAAT BALIKESİRSPOR GMG KASTAMONUSPOR - Maç Detayları TFF\nAra\nTR\nEN\nTRENDYOL SÜPER LİG\nZİRAAT TÜRKİYE KUPASI\nE-SHOP\nANA SAYFA\nTFF\nMİLLİ TAKIMLAR\nLİGLER\nKUPALAR\nKADIN FUTBOLU\nFGD\nBİLGİ BANKASI\nPUAN DURUMU\nTRENDYOL SÜPERLIG\nFutbol Bilgi Bankası\nFutbolcular\nTeknik Direktörler\nTüm Maçlar\nMilli Maçlar\nKulüpler\nStadyumlar\nCezalar\nHakemler\nGözlemci ve Temsilciler\nFutbol Menajerleri\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nFormlar ve Sözleşmeler\nStatüler\nTalimatlar\nTFF Kanun ve Statüsü\nOnline Başvurular\nTam Saha içerikleri için tıklayınız\nFikstürler\nLig Seçiniz...\nTrendyol Süper Lig\nTrendyol 1. Lig\nTFF 2. Lig\nTFF 3. Lig\nKadın Ligleri\nZiraat Türkiye Kupası\nBölgesel Amatör Lig\nGelişim Ligleri\nEngelli Futbolu\nFutsal Ligi\nPlaj Futbolu\nFutbol Altyapı Gelişim Ligi\nSezon Planlaması\nPuan Cetvelleri\nLig Seçiniz..\nTrendyol Süper Lig Şamil Ekinci Sezonu\nTrendyol 1.Lig\nTrendyol 1. Lig Play Off Müsabakaları\nNesine 2. Lig Kırmızı\nNesine 2. Lig Beyaz\nNesine 2. Lig Play Off Müsabakaları\nNesine 3. Lig 01\nNesine 3. Lig 02\nNesine 3. Lig 03\nNesine 3. Lig 04\nNesine 3. Lig Play Off Müsabakaları\nZiraat Türkiye Kupası\nZiraat Türkiye Kupası Grup Aşaması A\nZiraat Türkiye Kupası Grup Aşaması B\nZiraat Türkiye Kupası Grup Aşaması C\nZiraat Türkiye Kupası Grup Aşaması D\nTurkcell Kadın Futbol Süper Ligi\nKadınlar 1. Ligi A Grubu\nKadınlar 1. Ligi B Grubu\nTFF Kadınlar 1. Ligi Play Off 3.lük Müsabakaları\nTFF Kadınlar 1. Ligi Play Off Şampiyonluk Grubu\nTFF Kadınlar 1. Ligi Play Off Yükselme Grubu\nKadınlar 2.Ligi Play Off Müsabakaları\nKadınlar 3.Ligi Play Off Müsabakaları\nKadınlar 2. Ligi A Grup\nKadınlar 2. Ligi B Grup\nKadınlar 2. Ligi C Grup\nKadınlar 2. Ligi D Grup\nKadınlar 3. Ligi 1.\nKadınlar 3. Ligi 10.\nKadınlar 3. Ligi 11.\nKadınlar 3. Ligi 12.\nKadınlar 3. Ligi 13.\nKadınlar 3. Ligi 14.\nKadınlar 3. Ligi 15.\nKadınlar 3. Ligi 16.\nKadınlar 3. Ligi 17.\nKadınlar 3. Ligi 18.\nKadınlar 3. Ligi 19.\nKadınlar 3. Ligi 2.\nKadınlar 3. Ligi 20.\nKadınlar 3. Ligi 21.\nKadınlar 3. Ligi 22.\nKadınlar 3. Ligi 23.\nKadınlar 3. Ligi 24.\nKadınlar 3. Ligi 25.\nKadınlar 3. Ligi 26.\nKadınlar 3. Ligi 27.\nKadınlar 3. Ligi 28.\nKadınlar 3. Ligi 29.\nKadınlar 3. Ligi 3.\nKadınlar 3. Ligi 30.\nKadınlar 3. Ligi 31.\nKadınlar 3. Ligi 32.\nKadınlar 3. Ligi 4.\nKadınlar 3. Ligi 5.\nKadınlar 3. Ligi 6.\nKadınlar 3. Ligi 7.\nKadınlar 3. Ligi 8.\nKadınlar 3. Ligi 9.\nBölgesel Amatör Ligi 1. GRUP\nBölgesel Amatör Ligi 10. GRUP\nBölgesel Amatör Ligi 2. GRUP\nBölgesel Amatör Ligi 3. GRUP\nBölgesel Amatör Ligi 4. GRUP\nBölgesel Amatör Ligi 5. GRUP\nBölgesel Amatör Ligi 6. GRUP\nBölgesel Amatör Ligi 7. GRUP\nBölgesel Amatör Ligi 8. GRUP\nBölgesel Amatör Ligi 9. GRUP\nBölgesel Amatör Lig Baraj Maçları\nBölgesel Amatör Lig Play Off\nU17 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU17 Bölgesel Gelişim Ligi 1. Grup\nU17 Bölgesel Gelişim Ligi 2. Grup\nU17 Bölgesel Gelişim Ligi 3. Grup\nU17 Bölgesel Gelişim Ligi 4. Grup\nU17 Bölgesel Gelişim Ligi 5. Grup\nU17 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi 1. Grup\nU19 Bölgesel Gelişim Ligi 2. Grup\nU19 Bölgesel Gelişim Ligi 3. Grup\nU19 Bölgesel Gelişim Ligi 4. Grup\nU19 Bölgesel Gelişim Ligi 5. Grup\nU19 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Grup 1\nU14 Gelişim Ligi Grup 2\nU14 Gelişim Ligi Grup 3\nU14 Gelişim Ligi Grup 4\nU14 Gelişim Ligi Grup 5\nU14 Gelişim Ligi Grup 6\nU14 Gelişim Ligi Grup 7\nU14 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Finalleri\nU15 Gelişim Ligi Grup 1\nU15 Gelişim Ligi Grup 2\nU15 Gelişim Ligi Grup 3\nU15 Gelişim Ligi Grup 4\nU15 Gelişim Ligi Grup 5\nU15 Gelişim Ligi Grup 6\nU15 Gelişim Ligi Grup 7\nU15 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU15 Gelişim Ligi Finalleri\nU16 Gelişim Ligi Grup 1\nU16 Gelişim Ligi Grup 2\nU16 Gelişim Ligi Grup 3\nU16 Gelişim Ligi Grup 4\nU16 Gelişim Ligi Grup 5\nU16 Gelişim Ligi Grup 6\nU16 Gelişim Ligi Grup 7\nU16 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU16 Gelişim Ligi Finalleri\nU17 Elit A Ligi\nU17 Elit B Ligi\nU19 Elit A Ligi\nU19 Elit B Ligi\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP A\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP B\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP A\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP B\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP A\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP B\nU14 Amatör Türkiye Şampiyonası\nU15 Amatör Türkiye Şampiyonası\nU16 Amatör Türkiye Şampiyonası\nU17 Amatör Türkiye Şampiyonası\nU18 Amatör Türkiye Şampiyonası\nHaftalık Maç Görevlileri\nHakem, Gözlemci ve Temsilciler\nMİLLİ TAKIM TARAFTAR KULÜBÜ\nSON DAKIKA..”\nU17 Kiz Milli Takimi'ndan Zafer Bayrami kutlamasi\n'Kuralina Göre' Programi beIN SPORTS'ta basliyor\nU18 Milli Takimimiz, Azerbaycan karsisinda\nU18 Milli Takimimiz, Azerbaycan karsisinda\n”\nBAYNET İNŞAAT BALIKESİRSPOR\n1\nGMG KASTAMONUSPOR\n1\nTFF 2.Lig (Profesyonel Takım)\nMaç Kodu:\n3428\nBALIKESİR ATATÜRK - BALIKESİR\n15.03.2023 - 14:00\nFEVZİ ERDEM AKBAŞ(Hakem)\nMÜCAHİD ADEM ÇELEBİ(1. Yardımcı Hakem)\nBURAK SAMİ ŞAD(2. Yardımcı Hakem)\nSÜLEYMAN SOYUTÜRK(Dördüncü Hakem)\nÖMER KÜRŞAD TÜFEKCİ(Gözlemci)\nNEVZAT SÜZEN(Temsilci)\nİSMAİL GÖKÇE(Temsilci)\nİlk 11\n1.\nYİĞİTHAN KIR\n44.\nGÖRKEM ALTUN\n15.\nKAĞAN KAYALI\n39.\nHÜSEYİN KARABEY\n3.\nBERAT AYDOĞDU\n63.\nİBRAHİM HALİL ÇOLAK\n27.\nDOĞANAY AVCI\n5.\nSEDAT DURSUN\n10.\nOĞUZ HAN AYNAOĞLU\n21.\nSEDAT YİĞİT KURNAZ\n99.\nEMİRHAN ÇAKIR\nYedekler\n26.\nYASİN YİĞİT BERBER\n69.\nUMUT CAN AKÇAOĞLU\n23.\nENES KARABULUT\n97.\nBERKAY AYKURT\n7.\nANDAÇ GÜLERYÜZ\n20.\nBERK TOSUN\n25.\nABDULLAH ADIYAMAN\n67.\nARDA İBRAHİM AKGÜN\n80.\nÜMİT DOĞRU\n61.\nHASAN CAN BİNGÜL\nTeknik Sorumlu\nCAN CANGÖK\nGoller\nSEDAT DURSUN,84.dk (H)\nKartlar\nHÜSEYİN KARABEY\n45+3.dk\nOyundan Çıkanlar\nKAĞAN KAYALI\n84.dk\nSEDAT YİĞİT KURNAZ\n59.dk\nDOĞANAY AVCI\n59.dk\nOyuna Girenler\nHASAN CAN BİNGÜL\n84.dk\nENES KARABULUT\n59.dk\nANDAÇ GÜLERYÜZ\n59.dk\nİlk 11\n27.\nMUSTAFA GÜNGÖR\n40.\nMUSTAFA BERKAN AYDENİZ\n3.\nŞABAN ÖZEL\n35.\nEMRE CAN COŞKUN\n16.\nERCAN YAZICI\n66.\nYASİN BAŞAYTAÇ\n20.\nMUSTAFA ALPTEKİN ÇAYLI\n67.\nBERTU ALİCAN ÖZYÜREK\n89.\nYİĞİTALİ BAYRAK\n11.\nFUAT BAVUK\n12.\nERGİN KELEŞ\nYedekler\n22.\nEMRE KEŞKEK\n29.\nYUSUF TALUM\n61.\nKADİR KELEŞ\n41.\nKEMAL CAN AYDEMİR\n99.\nRAMAZAN KESKİN\n6.\nÖMER FARUK YÜCEL\n18.\nSEÇKİN GETBAY\n80.\nMUHAMMED ENES DURMUŞ\n24.\nBURAK ÇALIK\n7.\nABDULAZİZ SOLMAZ\nTeknik Sorumlu\nLEVENT ERİŞ\nGoller\nFUAT BAVUK,39.dk (F)\nKartlar\nEMRE CAN COŞKUN\n90+3.dk\nFUAT BAVUK\n69.dk\nMUSTAFA ALPTEKİN ÇAYLI\n90+5.dk\nMUSTAFA BERKAN AYDENİZ\n32.dk\nOyundan Çıkanlar\nŞABAN ÖZEL\n51.dk\nYİĞİTALİ BAYRAK\n65.dk\nMUHAMMED ENES DURMUŞ\n87.dk\nBERTU ALİCAN ÖZYÜREK\n65.dk\nMUSTAFA BERKAN AYDENİZ\n46.dk\nOyuna Girenler\nABDULAZİZ SOLMAZ\n51.dk\nRAMAZAN KESKİN\n65.dk\nMUHAMMED ENES DURMUŞ\n65.dk\nKEMAL CAN AYDEMİR\n87.dk\nYUSUF TALUM\n46.dk\nF:F - Ayak\nH:H - Kafa\nK:K - Kendi Kalesine\nP:P - Penaltı\nS:S - Seri Penaltı\nİletişim\n|\nSite Haritası\n|\nKopya Hakları\n|\nKullanım Şartları\n|\nSponsorlar\nTüm hakları Türkiye Futbol Federasyonu'na aittir.\nSosyal Medya Adreslerimiz:\nTFF\nTFF\nMilli Takımlar\nSüper Lig\nE-Millî Takım",
+    "officials_raw": "Hakemler\nGözlemci ve Temsilciler\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nHakem, Gözlemci ve Temsilciler\nFEVZİ ERDEM AKBAŞ(Hakem)\nMÜCAHİD ADEM ÇELEBİ(1. Yardımcı Hakem)\nBURAK SAMİ ŞAD(2. Yardımcı Hakem)\nSÜLEYMAN SOYUTÜRK(Dördüncü Hakem)\nÖMER KÜRŞAD TÜFEKCİ(Gözlemci)\nNEVZAT SÜZEN(Temsilci)\nİSMAİL GÖKÇE(Temsilci)",
+    "lineups_raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu",
+    "events_raw": "Goller\nSEDAT DURSUN,84.dk (H)\n45+3.dk\nOyundan Çıkanlar\n84.dk\n59.dk\n59.dk\nOyuna Girenler\n84.dk\n59.dk\n59.dk\nGoller\nFUAT BAVUK,39.dk (F)\n90+3.dk\n69.dk\n90+5.dk\n32.dk\nOyundan Çıkanlar\n51.dk\n65.dk\n87.dk\n65.dk\n46.dk\nOyuna Girenler\n51.dk\n65.dk\n65.dk\n87.dk\n46.dk\nP:P - Penaltı\nS:S - Seri Penaltı"
+  },
+  "detailCompleteness": {
+    "hasStadium": true,
+    "starting11Home": 11,
+    "starting11Away": 11,
+    "substitutesHome": 10,
+    "substitutesAway": 10,
+    "goals": 2,
+    "cards": 5,
+    "substitutions": 8,
+    "players": 44
+  },
+  "quality": "A",
+  "source": {
+    "name": "TFF",
+    "url": "http://www.tff.org/Default.aspx?pageID=29&macId=235817",
+    "retrievedAt": "2026-07-12T17:36:10.198481Z",
+    "sourceType": "official_tff_match_detail"
+  },
+  "clubFixture": {
+    "week": 0,
+    "rowText": "24 BAYNET İNŞAAT BALIKESİRSPOR 1-1 GMG KASTAMONUSPOR 15 Mart 2023 TFF 2.Lig Kırmızı",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=235817&pageID=29"
+  },
+  "week": 26,
+  "standingsWeek": 26,
+  "stageWeek": 26,
+  "roundType": "league",
+  "roundLabel": "26. Hafta",
+  "roundSource": "stage_sequence_fallback"
+}

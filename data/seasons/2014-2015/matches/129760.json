@@ -1,0 +1,1240 @@
+{
+  "id": "129760",
+  "matchCode": "1213",
+  "season": "2014-2015",
+  "competition": "Spor Toto Süper Lig Süleyman Seba Sezonu (Profesyonel Takım)",
+  "teamLevel": "professional",
+  "teamLevelEvidence": "explicit_professional",
+  "competitionType": "league",
+  "competitionLabel": "Lig",
+  "stadium": "BURSA ATATÜRK - BURSA",
+  "venue": "BURSA ATATÜRK - BURSA",
+  "stage": "Lig",
+  "stageLabel": "Lig",
+  "date": "2015-03-13",
+  "time": "20:00",
+  "dateDisplay": "2015-03-13 - 20:00",
+  "homeTeam": "BURSASPOR",
+  "awayTeam": "Balıkesirspor",
+  "matchType": "league",
+  "matchTypeLabel": "Lig",
+  "type": "league",
+  "typeLabel": "Lig",
+  "score": {
+    "home": 4,
+    "away": 2,
+    "display": "4-2",
+    "played": true
+  },
+  "balkes": {
+    "isHome": false,
+    "isAway": true,
+    "opponent": "BURSASPOR",
+    "goalsFor": 2,
+    "goalsAgainst": 4,
+    "result": "L"
+  },
+  "officials": [
+    {
+      "role": "Hakem",
+      "name": "ALİ PALABIYIK"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "ERDİNÇ SEZERTAM"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "SERKAN OLGUNCAN"
+    },
+    {
+      "role": "Dördüncü Hakem",
+      "name": "ERDEM İREN"
+    },
+    {
+      "role": "5. Hakem",
+      "name": "MURAT TÜRKER"
+    },
+    {
+      "role": "6. Hakem",
+      "name": "ÖZER ÖZDEN"
+    }
+  ],
+  "referees": [
+    {
+      "role": "Hakem",
+      "name": "ALİ PALABIYIK"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "ERDİNÇ SEZERTAM"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "SERKAN OLGUNCAN"
+    },
+    {
+      "role": "Dördüncü Hakem",
+      "name": "ERDEM İREN"
+    },
+    {
+      "role": "5. Hakem",
+      "name": "MURAT TÜRKER"
+    },
+    {
+      "role": "6. Hakem",
+      "name": "ÖZER ÖZDEN"
+    }
+  ],
+  "lineups": {
+    "home": {
+      "team": "BURSASPOR",
+      "starting11": [
+        {
+          "name": "HARUN TEKİN",
+          "number": 12,
+          "shirt_no": "12",
+          "tffPersonId": "868021"
+        },
+        {
+          "name": "SERDAR AZİZ",
+          "number": 4,
+          "shirt_no": "4",
+          "tffPersonId": "428986"
+        },
+        {
+          "name": "RENATO CIVELLI",
+          "number": 2,
+          "shirt_no": "2",
+          "tffPersonId": "1622365"
+        },
+        {
+          "name": "ŞENER ÖZBAYRAKLI",
+          "number": 22,
+          "shirt_no": "22",
+          "tffPersonId": "862107"
+        },
+        {
+          "name": "AZİZ ERALTAY",
+          "number": 23,
+          "shirt_no": "23",
+          "tffPersonId": "1569179"
+        },
+        {
+          "name": "OZAN TUFAN",
+          "number": 7,
+          "shirt_no": "7",
+          "tffPersonId": "914769"
+        },
+        {
+          "name": "FERNANDO DANIEL BELLUSCHI",
+          "number": 5,
+          "shirt_no": "5",
+          "tffPersonId": "1514810"
+        },
+        {
+          "name": "SAMUEL TOBIAS HOLMEN",
+          "number": 20,
+          "shirt_no": "20",
+          "tffPersonId": "1343834"
+        },
+        {
+          "name": "OZAN İPEK",
+          "number": 33,
+          "shirt_no": "33",
+          "tffPersonId": "98266"
+        },
+        {
+          "name": "JOSUE FILIPE SOARES PESQUEIRA",
+          "number": 30,
+          "shirt_no": "30",
+          "tffPersonId": "1723360"
+        },
+        {
+          "name": "JOSE FERNANDO VIANA DE SANTANA",
+          "number": 9,
+          "shirt_no": "9",
+          "tffPersonId": "1669000"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "OKAN KOCUK",
+          "number": 25,
+          "shirt_no": "25",
+          "tffPersonId": "977639"
+        },
+        {
+          "name": "ŞAMİL ÇİNAZ",
+          "number": 6,
+          "shirt_no": "6",
+          "tffPersonId": "1509309"
+        },
+        {
+          "name": "SÜHEYL ÇETİN",
+          "number": 18,
+          "shirt_no": "18",
+          "tffPersonId": "949289"
+        },
+        {
+          "name": "BAKAYE TRAORE",
+          "number": 8,
+          "shirt_no": "8",
+          "tffPersonId": "1632429"
+        },
+        {
+          "name": "BEKİR YILMAZ",
+          "number": 88,
+          "shirt_no": "88",
+          "tffPersonId": "304929"
+        },
+        {
+          "name": "ERTUĞRUL ERSOY",
+          "number": 24,
+          "shirt_no": "24",
+          "tffPersonId": "1153929"
+        },
+        {
+          "name": "ENES ÜNAL",
+          "number": 10,
+          "shirt_no": "10",
+          "tffPersonId": "980555"
+        }
+      ],
+      "technicalStaff": [
+        {
+          "name": "ŞENOL GÜNEŞ"
+        }
+      ],
+      "coach": "ŞENOL GÜNEŞ",
+      "raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu"
+    },
+    "away": {
+      "team": "Balıkesirspor",
+      "starting11": [
+        {
+          "name": "ANDRIJA VUKOVIC",
+          "number": 99,
+          "shirt_no": "99",
+          "tffPersonId": "1771457"
+        },
+        {
+          "name": "OKAN ALKAN",
+          "number": 17,
+          "shirt_no": "17",
+          "tffPersonId": "954644"
+        },
+        {
+          "name": "TOMISLAV GLUMAC",
+          "number": 44,
+          "shirt_no": "44",
+          "tffPersonId": "1827834"
+        },
+        {
+          "name": "ANTE KULUSIC",
+          "number": 20,
+          "shirt_no": "20",
+          "tffPersonId": "1221577"
+        },
+        {
+          "name": "BERKAN EMİR",
+          "number": 3,
+          "shirt_no": "3",
+          "tffPersonId": "775548"
+        },
+        {
+          "name": "AYKUT ÇEVİKER",
+          "number": 6,
+          "shirt_no": "6",
+          "tffPersonId": "641077"
+        },
+        {
+          "name": "VİTOR HUGO GOMES DA SILVA",
+          "number": 12,
+          "shirt_no": "12",
+          "tffPersonId": "1773416"
+        },
+        {
+          "name": "ERAY ATASEVEN",
+          "number": 5,
+          "shirt_no": "5",
+          "tffPersonId": "976361"
+        },
+        {
+          "name": "SERCAN YILDIRIM",
+          "number": 19,
+          "shirt_no": "19",
+          "tffPersonId": "425843"
+        },
+        {
+          "name": "GÖKHAN ÜNAL",
+          "number": 9,
+          "shirt_no": "9",
+          "tffPersonId": "557340"
+        },
+        {
+          "name": "ERMIN ZEC",
+          "number": 50,
+          "shirt_no": "50",
+          "tffPersonId": "1343826"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "EMRULLAH ŞALK",
+          "number": 15,
+          "shirt_no": "15",
+          "tffPersonId": "696285"
+        },
+        {
+          "name": "BÜLENT CEVAHİR",
+          "number": 61,
+          "shirt_no": "61",
+          "tffPersonId": "867934"
+        },
+        {
+          "name": "ALİ ÖZTÜRK",
+          "number": 10,
+          "shirt_no": "10",
+          "tffPersonId": "430218"
+        },
+        {
+          "name": "RONALD ALEJANDRO VARGAS ARANGUREN",
+          "number": 8,
+          "shirt_no": "8",
+          "tffPersonId": "1723110"
+        },
+        {
+          "name": "HASAN HATİPOĞLU",
+          "number": 45,
+          "shirt_no": "45",
+          "tffPersonId": "882959"
+        },
+        {
+          "name": "MUĞDAT ÇELİK",
+          "number": 88,
+          "shirt_no": "88",
+          "tffPersonId": "833249"
+        },
+        {
+          "name": "PROMISE ISAAC",
+          "number": 30,
+          "shirt_no": "30",
+          "tffPersonId": "915429"
+        }
+      ],
+      "technicalStaff": [
+        {
+          "name": "KEMAL ÖZDEŞ"
+        }
+      ],
+      "coach": "KEMAL ÖZDEŞ",
+      "raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu"
+    }
+  },
+  "players": [
+    {
+      "name": "ALİ ÖZTÜRK",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 10,
+      "tffPersonId": "430218"
+    },
+    {
+      "name": "ANDRIJA VUKOVIC",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 99,
+      "tffPersonId": "1771457"
+    },
+    {
+      "name": "ANTE KULUSIC",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 20,
+      "tffPersonId": "1221577"
+    },
+    {
+      "name": "AYKUT ÇEVİKER",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 6,
+      "tffPersonId": "641077"
+    },
+    {
+      "name": "BERKAN EMİR",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 3,
+      "tffPersonId": "775548"
+    },
+    {
+      "name": "BÜLENT CEVAHİR",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 61,
+      "tffPersonId": "867934"
+    },
+    {
+      "name": "EMRULLAH ŞALK",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 15,
+      "tffPersonId": "696285"
+    },
+    {
+      "name": "ERAY ATASEVEN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 5,
+      "tffPersonId": "976361"
+    },
+    {
+      "name": "ERMIN ZEC",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 50,
+      "tffPersonId": "1343826"
+    },
+    {
+      "name": "GÖKHAN ÜNAL",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "goal",
+        "substitution_out"
+      ],
+      "number": 9,
+      "tffPersonId": "557340"
+    },
+    {
+      "name": "HASAN HATİPOĞLU",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 45,
+      "tffPersonId": "882959"
+    },
+    {
+      "name": "KEMAL ÖZDEŞ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "technical_staff"
+      ]
+    },
+    {
+      "name": "MUĞDAT ÇELİK",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 88,
+      "tffPersonId": "833249"
+    },
+    {
+      "name": "OKAN ALKAN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 17,
+      "tffPersonId": "954644"
+    },
+    {
+      "name": "PROMISE ISAAC",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 30,
+      "tffPersonId": "915429"
+    },
+    {
+      "name": "RONALD ALEJANDRO VARGAS ARANGUREN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 8,
+      "tffPersonId": "1723110"
+    },
+    {
+      "name": "SERCAN YILDIRIM",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 19,
+      "tffPersonId": "425843"
+    },
+    {
+      "name": "TOMISLAV GLUMAC",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 44,
+      "tffPersonId": "1827834"
+    },
+    {
+      "name": "VİTOR HUGO GOMES DA SILVA",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 12,
+      "tffPersonId": "1773416"
+    },
+    {
+      "name": "AZİZ ERALTAY",
+      "team": "BURSASPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 23,
+      "tffPersonId": "1569179"
+    },
+    {
+      "name": "BAKAYE TRAORE",
+      "team": "BURSASPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 8,
+      "tffPersonId": "1632429"
+    },
+    {
+      "name": "BEKİR YILMAZ",
+      "team": "BURSASPOR",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 88,
+      "tffPersonId": "304929"
+    },
+    {
+      "name": "ENES ÜNAL",
+      "team": "BURSASPOR",
+      "roles": [
+        "substitute",
+        "goal",
+        "substitution_in"
+      ],
+      "number": 10,
+      "tffPersonId": "980555"
+    },
+    {
+      "name": "ERTUĞRUL ERSOY",
+      "team": "BURSASPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 24,
+      "tffPersonId": "1153929"
+    },
+    {
+      "name": "FERNANDO DANIEL BELLUSCHI",
+      "team": "BURSASPOR",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 5,
+      "tffPersonId": "1514810"
+    },
+    {
+      "name": "HARUN TEKİN",
+      "team": "BURSASPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 12,
+      "tffPersonId": "868021"
+    },
+    {
+      "name": "JOSE FERNANDO VIANA DE SANTANA",
+      "team": "BURSASPOR",
+      "roles": [
+        "starting11",
+        "goal",
+        "yellow_card"
+      ],
+      "number": 9,
+      "tffPersonId": "1669000"
+    },
+    {
+      "name": "JOSUE FILIPE SOARES PESQUEIRA",
+      "team": "BURSASPOR",
+      "roles": [
+        "starting11",
+        "goal"
+      ],
+      "number": 30,
+      "tffPersonId": "1723360"
+    },
+    {
+      "name": "OKAN KOCUK",
+      "team": "BURSASPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 25,
+      "tffPersonId": "977639"
+    },
+    {
+      "name": "OZAN İPEK",
+      "team": "BURSASPOR",
+      "roles": [
+        "starting11",
+        "yellow_card",
+        "substitution_out"
+      ],
+      "number": 33,
+      "tffPersonId": "98266"
+    },
+    {
+      "name": "OZAN TUFAN",
+      "team": "BURSASPOR",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 7,
+      "tffPersonId": "914769"
+    },
+    {
+      "name": "RENATO CIVELLI",
+      "team": "BURSASPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 2,
+      "tffPersonId": "1622365"
+    },
+    {
+      "name": "ŞAMİL ÇİNAZ",
+      "team": "BURSASPOR",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 6,
+      "tffPersonId": "1509309"
+    },
+    {
+      "name": "SAMUEL TOBIAS HOLMEN",
+      "team": "BURSASPOR",
+      "roles": [
+        "starting11",
+        "goal",
+        "substitution_out"
+      ],
+      "number": 20,
+      "tffPersonId": "1343834"
+    },
+    {
+      "name": "ŞENER ÖZBAYRAKLI",
+      "team": "BURSASPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 22,
+      "tffPersonId": "862107"
+    },
+    {
+      "name": "ŞENOL GÜNEŞ",
+      "team": "BURSASPOR",
+      "roles": [
+        "technical_staff"
+      ]
+    },
+    {
+      "name": "SERDAR AZİZ",
+      "team": "BURSASPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 4,
+      "tffPersonId": "428986"
+    },
+    {
+      "name": "SÜHEYL ÇETİN",
+      "team": "BURSASPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 18,
+      "tffPersonId": "949289"
+    }
+  ],
+  "events": [
+    {
+      "type": "goal",
+      "team": "BURSASPOR",
+      "player": "JOSUE FILIPE SOARES PESQUEIRA",
+      "scorer": "JOSUE FILIPE SOARES PESQUEIRA",
+      "raw": "JOSUE FILIPE SOARES PESQUEIRA,14.dk (F)",
+      "minute": 14,
+      "minuteRaw": "JOSUE FILIPE SOARES PESQUEIRA,14.dk",
+      "goalType": "F",
+      "tffPersonId": "1723360"
+    },
+    {
+      "type": "goal",
+      "team": "BURSASPOR",
+      "player": "SAMUEL TOBIAS HOLMEN",
+      "scorer": "SAMUEL TOBIAS HOLMEN",
+      "raw": "SAMUEL TOBIAS HOLMEN,35.dk (F)",
+      "minute": 35,
+      "minuteRaw": "SAMUEL TOBIAS HOLMEN,35.dk",
+      "goalType": "F",
+      "tffPersonId": "1343834"
+    },
+    {
+      "type": "goal",
+      "team": "BURSASPOR",
+      "player": "JOSE FERNANDO VIANA DE SANTANA",
+      "scorer": "JOSE FERNANDO VIANA DE SANTANA",
+      "raw": "JOSE FERNANDO VIANA DE SANTANA,73.dk (P)",
+      "minute": 73,
+      "minuteRaw": "JOSE FERNANDO VIANA DE SANTANA,73.dk",
+      "goalType": "P",
+      "tffPersonId": "1669000"
+    },
+    {
+      "type": "goal",
+      "team": "BURSASPOR",
+      "player": "ENES ÜNAL",
+      "scorer": "ENES ÜNAL",
+      "raw": "ENES ÜNAL,84.dk (F)",
+      "minute": 84,
+      "minuteRaw": "ENES ÜNAL,84.dk",
+      "goalType": "F",
+      "tffPersonId": "980555"
+    },
+    {
+      "type": "goal",
+      "team": "Balıkesirspor",
+      "player": "GÖKHAN ÜNAL",
+      "scorer": "GÖKHAN ÜNAL",
+      "raw": "GÖKHAN ÜNAL,25.dk (F)",
+      "minute": 25,
+      "minuteRaw": "GÖKHAN ÜNAL,25.dk",
+      "goalType": "F",
+      "tffPersonId": "557340"
+    },
+    {
+      "type": "goal",
+      "team": "Balıkesirspor",
+      "player": "GÖKHAN ÜNAL",
+      "scorer": "GÖKHAN ÜNAL",
+      "raw": "GÖKHAN ÜNAL,29.dk (H)",
+      "minute": 29,
+      "minuteRaw": "GÖKHAN ÜNAL,29.dk",
+      "goalType": "H",
+      "tffPersonId": "557340"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BURSASPOR",
+      "player": "OZAN İPEK",
+      "minute": 2,
+      "minuteRaw": "2.dk",
+      "tffPersonId": "98266"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BURSASPOR",
+      "player": "FERNANDO DANIEL BELLUSCHI",
+      "minute": 74,
+      "minuteRaw": "74.dk",
+      "tffPersonId": "1514810"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BURSASPOR",
+      "player": "JOSE FERNANDO VIANA DE SANTANA",
+      "minute": 65,
+      "minuteRaw": "65.dk",
+      "tffPersonId": "1669000"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ANTE KULUSIC",
+      "minute": 90,
+      "minuteRaw": "90.dk",
+      "tffPersonId": "1221577"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ERMIN ZEC",
+      "minute": 17,
+      "minuteRaw": "17.dk",
+      "tffPersonId": "1343826"
+    },
+    {
+      "type": "substitution",
+      "team": "BURSASPOR",
+      "order": 1,
+      "player_in": "ENES ÜNAL",
+      "player_out": "OZAN İPEK",
+      "playerIn": "ENES ÜNAL",
+      "playerOut": "OZAN İPEK",
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "minute_text": "46.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "BURSASPOR",
+      "player": "OZAN İPEK",
+      "order": 1,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "BURSASPOR",
+      "player": "ENES ÜNAL",
+      "order": 1,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "BURSASPOR",
+      "order": 2,
+      "player_in": "BEKİR YILMAZ",
+      "player_out": "OZAN TUFAN",
+      "playerIn": "BEKİR YILMAZ",
+      "playerOut": "OZAN TUFAN",
+      "minute": 90,
+      "minuteRaw": "90.dk",
+      "minute_text": "90.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "BURSASPOR",
+      "player": "OZAN TUFAN",
+      "order": 2,
+      "minute": 90,
+      "minuteRaw": "90.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "BURSASPOR",
+      "player": "BEKİR YILMAZ",
+      "order": 2,
+      "minute": 90,
+      "minuteRaw": "90.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "BURSASPOR",
+      "order": 3,
+      "player_in": "ŞAMİL ÇİNAZ",
+      "player_out": "SAMUEL TOBIAS HOLMEN",
+      "playerIn": "ŞAMİL ÇİNAZ",
+      "playerOut": "SAMUEL TOBIAS HOLMEN",
+      "minute": 63,
+      "minuteRaw": "63.dk",
+      "minute_text": "63.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "BURSASPOR",
+      "player": "SAMUEL TOBIAS HOLMEN",
+      "order": 3,
+      "minute": 63,
+      "minuteRaw": "63.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "BURSASPOR",
+      "player": "ŞAMİL ÇİNAZ",
+      "order": 3,
+      "minute": 63,
+      "minuteRaw": "63.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 1,
+      "player_in": "ALİ ÖZTÜRK",
+      "player_out": "SERCAN YILDIRIM",
+      "playerIn": "ALİ ÖZTÜRK",
+      "playerOut": "SERCAN YILDIRIM",
+      "minute": 81,
+      "minuteRaw": "81.dk",
+      "minute_text": "81.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "SERCAN YILDIRIM",
+      "order": 1,
+      "minute": 81,
+      "minuteRaw": "81.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "ALİ ÖZTÜRK",
+      "order": 1,
+      "minute": 81,
+      "minuteRaw": "81.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 2,
+      "player_in": "MUĞDAT ÇELİK",
+      "player_out": "GÖKHAN ÜNAL",
+      "playerIn": "MUĞDAT ÇELİK",
+      "playerOut": "GÖKHAN ÜNAL",
+      "minute": 75,
+      "minuteRaw": "75.dk",
+      "minute_text": "75.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "GÖKHAN ÜNAL",
+      "order": 2,
+      "minute": 75,
+      "minuteRaw": "75.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "MUĞDAT ÇELİK",
+      "order": 2,
+      "minute": 75,
+      "minuteRaw": "75.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 3,
+      "player_in": "RONALD ALEJANDRO VARGAS ARANGUREN",
+      "player_out": "VİTOR HUGO GOMES DA SILVA",
+      "playerIn": "RONALD ALEJANDRO VARGAS ARANGUREN",
+      "playerOut": "VİTOR HUGO GOMES DA SILVA",
+      "minute": 75,
+      "minuteRaw": "75.dk",
+      "minute_text": "75.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "VİTOR HUGO GOMES DA SILVA",
+      "order": 3,
+      "minute": 75,
+      "minuteRaw": "75.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "RONALD ALEJANDRO VARGAS ARANGUREN",
+      "order": 3,
+      "minute": 75,
+      "minuteRaw": "75.dk"
+    }
+  ],
+  "goals": [
+    {
+      "type": "goal",
+      "team": "BURSASPOR",
+      "player": "JOSUE FILIPE SOARES PESQUEIRA",
+      "scorer": "JOSUE FILIPE SOARES PESQUEIRA",
+      "raw": "JOSUE FILIPE SOARES PESQUEIRA,14.dk (F)",
+      "minute": 14,
+      "minuteRaw": "JOSUE FILIPE SOARES PESQUEIRA,14.dk",
+      "goalType": "F",
+      "tffPersonId": "1723360"
+    },
+    {
+      "type": "goal",
+      "team": "BURSASPOR",
+      "player": "SAMUEL TOBIAS HOLMEN",
+      "scorer": "SAMUEL TOBIAS HOLMEN",
+      "raw": "SAMUEL TOBIAS HOLMEN,35.dk (F)",
+      "minute": 35,
+      "minuteRaw": "SAMUEL TOBIAS HOLMEN,35.dk",
+      "goalType": "F",
+      "tffPersonId": "1343834"
+    },
+    {
+      "type": "goal",
+      "team": "BURSASPOR",
+      "player": "JOSE FERNANDO VIANA DE SANTANA",
+      "scorer": "JOSE FERNANDO VIANA DE SANTANA",
+      "raw": "JOSE FERNANDO VIANA DE SANTANA,73.dk (P)",
+      "minute": 73,
+      "minuteRaw": "JOSE FERNANDO VIANA DE SANTANA,73.dk",
+      "goalType": "P",
+      "tffPersonId": "1669000"
+    },
+    {
+      "type": "goal",
+      "team": "BURSASPOR",
+      "player": "ENES ÜNAL",
+      "scorer": "ENES ÜNAL",
+      "raw": "ENES ÜNAL,84.dk (F)",
+      "minute": 84,
+      "minuteRaw": "ENES ÜNAL,84.dk",
+      "goalType": "F",
+      "tffPersonId": "980555"
+    },
+    {
+      "type": "goal",
+      "team": "Balıkesirspor",
+      "player": "GÖKHAN ÜNAL",
+      "scorer": "GÖKHAN ÜNAL",
+      "raw": "GÖKHAN ÜNAL,25.dk (F)",
+      "minute": 25,
+      "minuteRaw": "GÖKHAN ÜNAL,25.dk",
+      "goalType": "F",
+      "tffPersonId": "557340"
+    },
+    {
+      "type": "goal",
+      "team": "Balıkesirspor",
+      "player": "GÖKHAN ÜNAL",
+      "scorer": "GÖKHAN ÜNAL",
+      "raw": "GÖKHAN ÜNAL,29.dk (H)",
+      "minute": 29,
+      "minuteRaw": "GÖKHAN ÜNAL,29.dk",
+      "goalType": "H",
+      "tffPersonId": "557340"
+    }
+  ],
+  "goalScorers": [
+    {
+      "player": "JOSUE FILIPE SOARES PESQUEIRA",
+      "team": "BURSASPOR",
+      "minute": 14,
+      "goalType": "F"
+    },
+    {
+      "player": "SAMUEL TOBIAS HOLMEN",
+      "team": "BURSASPOR",
+      "minute": 35,
+      "goalType": "F"
+    },
+    {
+      "player": "JOSE FERNANDO VIANA DE SANTANA",
+      "team": "BURSASPOR",
+      "minute": 73,
+      "goalType": "P"
+    },
+    {
+      "player": "ENES ÜNAL",
+      "team": "BURSASPOR",
+      "minute": 84,
+      "goalType": "F"
+    },
+    {
+      "player": "GÖKHAN ÜNAL",
+      "team": "Balıkesirspor",
+      "minute": 25,
+      "goalType": "F"
+    },
+    {
+      "player": "GÖKHAN ÜNAL",
+      "team": "Balıkesirspor",
+      "minute": 29,
+      "goalType": "H"
+    }
+  ],
+  "cards": [
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BURSASPOR",
+      "player": "OZAN İPEK",
+      "minute": 2,
+      "minuteRaw": "2.dk",
+      "tffPersonId": "98266"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BURSASPOR",
+      "player": "FERNANDO DANIEL BELLUSCHI",
+      "minute": 74,
+      "minuteRaw": "74.dk",
+      "tffPersonId": "1514810"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BURSASPOR",
+      "player": "JOSE FERNANDO VIANA DE SANTANA",
+      "minute": 65,
+      "minuteRaw": "65.dk",
+      "tffPersonId": "1669000"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ANTE KULUSIC",
+      "minute": 90,
+      "minuteRaw": "90.dk",
+      "tffPersonId": "1221577"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ERMIN ZEC",
+      "minute": 17,
+      "minuteRaw": "17.dk",
+      "tffPersonId": "1343826"
+    }
+  ],
+  "substitutions": [
+    {
+      "team": "BURSASPOR",
+      "order": 1,
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "playerOut": "OZAN İPEK",
+      "player_out": "OZAN İPEK",
+      "playerOutTffPersonId": "98266",
+      "playerIn": "ENES ÜNAL",
+      "player_in": "ENES ÜNAL",
+      "playerInTffPersonId": "980555"
+    },
+    {
+      "team": "BURSASPOR",
+      "order": 2,
+      "minute": 90,
+      "minuteRaw": "90.dk",
+      "playerOut": "OZAN TUFAN",
+      "player_out": "OZAN TUFAN",
+      "playerOutTffPersonId": "914769",
+      "playerIn": "BEKİR YILMAZ",
+      "player_in": "BEKİR YILMAZ",
+      "playerInTffPersonId": "304929"
+    },
+    {
+      "team": "BURSASPOR",
+      "order": 3,
+      "minute": 63,
+      "minuteRaw": "63.dk",
+      "playerOut": "SAMUEL TOBIAS HOLMEN",
+      "player_out": "SAMUEL TOBIAS HOLMEN",
+      "playerOutTffPersonId": "1343834",
+      "playerIn": "ŞAMİL ÇİNAZ",
+      "player_in": "ŞAMİL ÇİNAZ",
+      "playerInTffPersonId": "1509309"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 1,
+      "minute": 81,
+      "minuteRaw": "81.dk",
+      "playerOut": "SERCAN YILDIRIM",
+      "player_out": "SERCAN YILDIRIM",
+      "playerOutTffPersonId": "425843",
+      "playerIn": "ALİ ÖZTÜRK",
+      "player_in": "ALİ ÖZTÜRK",
+      "playerInTffPersonId": "430218"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 2,
+      "minute": 75,
+      "minuteRaw": "75.dk",
+      "playerOut": "GÖKHAN ÜNAL",
+      "player_out": "GÖKHAN ÜNAL",
+      "playerOutTffPersonId": "557340",
+      "playerIn": "MUĞDAT ÇELİK",
+      "player_in": "MUĞDAT ÇELİK",
+      "playerInTffPersonId": "833249"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 3,
+      "minute": 75,
+      "minuteRaw": "75.dk",
+      "playerOut": "VİTOR HUGO GOMES DA SILVA",
+      "player_out": "VİTOR HUGO GOMES DA SILVA",
+      "playerOutTffPersonId": "1773416",
+      "playerIn": "RONALD ALEJANDRO VARGAS ARANGUREN",
+      "player_in": "RONALD ALEJANDRO VARGAS ARANGUREN",
+      "playerInTffPersonId": "1723110"
+    }
+  ],
+  "sections_raw": {
+    "full_text_excerpt": "BURSASPOR BALIKESİRSPOR - Maç Detayları TFF\nAra\nTR\nEN\nTRENDYOL SÜPER LİG\nZİRAAT TÜRKİYE KUPASI\nE-SHOP\nANA SAYFA\nTFF\nMİLLİ TAKIMLAR\nLİGLER\nKUPALAR\nKADIN FUTBOLU\nFGD\nBİLGİ BANKASI\nPUAN DURUMU\nTRENDYOL SÜPERLIG\nFutbol Bilgi Bankası\nFutbolcular\nTeknik Direktörler\nTüm Maçlar\nMilli Maçlar\nKulüpler\nStadyumlar\nCezalar\nHakemler\nGözlemci ve Temsilciler\nFutbol Menajerleri\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nFormlar ve Sözleşmeler\nStatüler\nTalimatlar\nTFF Kanun ve Statüsü\nOnline Başvurular\nTam Saha içerikleri için tıklayınız\nFikstürler\nLig Seçiniz...\nTrendyol Süper Lig\nTrendyol 1. Lig\nTFF 2. Lig\nTFF 3. Lig\nKadın Ligleri\nZiraat Türkiye Kupası\nBölgesel Amatör Lig\nGelişim Ligleri\nEngelli Futbolu\nFutsal Ligi\nPlaj Futbolu\nFutbol Altyapı Gelişim Ligi\nSezon Planlaması\nPuan Cetvelleri\nLig Seçiniz..\nTrendyol Süper Lig Şamil Ekinci Sezonu\nTrendyol 1.Lig\nTrendyol 1. Lig Play Off Müsabakaları\nNesine 2. Lig Kırmızı\nNesine 2. Lig Beyaz\nNesine 2. Lig Play Off Müsabakaları\nNesine 3. Lig 01\nNesine 3. Lig 02\nNesine 3. Lig 03\nNesine 3. Lig 04\nNesine 3. Lig Play Off Müsabakaları\nZiraat Türkiye Kupası\nZiraat Türkiye Kupası Grup Aşaması A\nZiraat Türkiye Kupası Grup Aşaması B\nZiraat Türkiye Kupası Grup Aşaması C\nZiraat Türkiye Kupası Grup Aşaması D\nTurkcell Kadın Futbol Süper Ligi\nKadınlar 1. Ligi A Grubu\nKadınlar 1. Ligi B Grubu\nTFF Kadınlar 1. Ligi Play Off 3.lük Müsabakaları\nTFF Kadınlar 1. Ligi Play Off Şampiyonluk Grubu\nTFF Kadınlar 1. Ligi Play Off Yükselme Grubu\nKadınlar 2.Ligi Play Off Müsabakaları\nKadınlar 3.Ligi Play Off Müsabakaları\nKadınlar 2. Ligi A Grup\nKadınlar 2. Ligi B Grup\nKadınlar 2. Ligi C Grup\nKadınlar 2. Ligi D Grup\nKadınlar 3. Ligi 1.\nKadınlar 3. Ligi 10.\nKadınlar 3. Ligi 11.\nKadınlar 3. Ligi 12.\nKadınlar 3. Ligi 13.\nKadınlar 3. Ligi 14.\nKadınlar 3. Ligi 15.\nKadınlar 3. Ligi 16.\nKadınlar 3. Ligi 17.\nKadınlar 3. Ligi 18.\nKadınlar 3. Ligi 19.\nKadınlar 3. Ligi 2.\nKadınlar 3. Ligi 20.\nKadınlar 3. Ligi 21.\nKadınlar 3. Ligi 22.\nKadınlar 3. Ligi 23.\nKadınlar 3. Ligi 24.\nKadınlar 3. Ligi 25.\nKadınlar 3. Ligi 26.\nKadınlar 3. Ligi 27.\nKadınlar 3. Ligi 28.\nKadınlar 3. Ligi 29.\nKadınlar 3. Ligi 3.\nKadınlar 3. Ligi 30.\nKadınlar 3. Ligi 31.\nKadınlar 3. Ligi 32.\nKadınlar 3. Ligi 4.\nKadınlar 3. Ligi 5.\nKadınlar 3. Ligi 6.\nKadınlar 3. Ligi 7.\nKadınlar 3. Ligi 8.\nKadınlar 3. Ligi 9.\nBölgesel Amatör Ligi 1. GRUP\nBölgesel Amatör Ligi 10. GRUP\nBölgesel Amatör Ligi 2. GRUP\nBölgesel Amatör Ligi 3. GRUP\nBölgesel Amatör Ligi 4. GRUP\nBölgesel Amatör Ligi 5. GRUP\nBölgesel Amatör Ligi 6. GRUP\nBölgesel Amatör Ligi 7. GRUP\nBölgesel Amatör Ligi 8. GRUP\nBölgesel Amatör Ligi 9. GRUP\nBölgesel Amatör Lig Baraj Maçları\nBölgesel Amatör Lig Play Off\nU17 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU17 Bölgesel Gelişim Ligi 1. Grup\nU17 Bölgesel Gelişim Ligi 2. Grup\nU17 Bölgesel Gelişim Ligi 3. Grup\nU17 Bölgesel Gelişim Ligi 4. Grup\nU17 Bölgesel Gelişim Ligi 5. Grup\nU17 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi 1. Grup\nU19 Bölgesel Gelişim Ligi 2. Grup\nU19 Bölgesel Gelişim Ligi 3. Grup\nU19 Bölgesel Gelişim Ligi 4. Grup\nU19 Bölgesel Gelişim Ligi 5. Grup\nU19 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Grup 1\nU14 Gelişim Ligi Grup 2\nU14 Gelişim Ligi Grup 3\nU14 Gelişim Ligi Grup 4\nU14 Gelişim Ligi Grup 5\nU14 Gelişim Ligi Grup 6\nU14 Gelişim Ligi Grup 7\nU14 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Finalleri\nU15 Gelişim Ligi Grup 1\nU15 Gelişim Ligi Grup 2\nU15 Gelişim Ligi Grup 3\nU15 Gelişim Ligi Grup 4\nU15 Gelişim Ligi Grup 5\nU15 Gelişim Ligi Grup 6\nU15 Gelişim Ligi Grup 7\nU15 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU15 Gelişim Ligi Finalleri\nU16 Gelişim Ligi Grup 1\nU16 Gelişim Ligi Grup 2\nU16 Gelişim Ligi Grup 3\nU16 Gelişim Ligi Grup 4\nU16 Gelişim Ligi Grup 5\nU16 Gelişim Ligi Grup 6\nU16 Gelişim Ligi Grup 7\nU16 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU16 Gelişim Ligi Finalleri\nU17 Elit A Ligi\nU17 Elit B Ligi\nU19 Elit A Ligi\nU19 Elit B Ligi\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP A\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP B\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP A\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP B\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP A\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP B\nU14 Amatör Türkiye Şampiyonası\nU15 Amatör Türkiye Şampiyonası\nU16 Amatör Türkiye Şampiyonası\nU17 Amatör Türkiye Şampiyonası\nU18 Amatör Türkiye Şampiyonası\nHaftalık Maç Görevlileri\nHakem, Gözlemci ve Temsilciler\nMİLLİ TAKIM TARAFTAR KULÜBÜ\nSON DAKIKA..”\nU17 Kiz Milli Takimi'ndan Zafer Bayrami kutlamasi\n'Kuralina Göre' Programi beIN SPORTS'ta basliyor\nU18 Milli Takimimiz, Azerbaycan karsisinda\nU18 Milli Takimimiz, Azerbaycan karsisinda\n”\nBURSASPOR\n4\nBALIKESİRSPOR\n2\nSpor Toto Süper Lig Süleyman Seba Sezonu (Profesyonel Takım)\nMaç Kodu:\n1213\nBURSA ATATÜRK - BURSA\n(EVSAHİBİ TAKIM SEYİRCİSİZ)\n13.03.2015 - 20:00\nALİ PALABIYIK(Hakem)\nERDİNÇ SEZERTAM(1. Yardımcı Hakem)\nSERKAN OLGUNCAN(2. Yardımcı Hakem)\nERDEM İREN(Dördüncü Hakem)\nMURAT TÜRKER(5. Hakem)\nÖZER ÖZDEN(6. Hakem)\nSERDAR ÇAKIR(Gözlemci)\nNİHAT DOKER(Temsilci)\nAKIN KILAVUZ(Temsilci)\nOLCAY MÜLAZIMOĞLU(Temsilci)\nİlk 11\n12.\nHARUN TEKİN\n4.\nSERDAR AZİZ\n2.\nRENATO CIVELLI\n22.\nŞENER ÖZBAYRAKLI\n23.\nAZİZ ERALTAY\n7.\nOZAN TUFAN\n5.\nFERNANDO DANIEL BELLUSCHI\n20.\nSAMUEL TOBIAS HOLMEN\n33.\nOZAN İPEK\n30.\nJOSUE FILIPE SOARES PESQUEIRA\n9.\nJOSE FERNANDO VIANA DE SANTANA\nYedekler\n25.\nOKAN KOCUK\n6.\nŞAMİL ÇİNAZ\n18.\nSÜHEYL ÇETİN\n8.\nBAKAYE TRAORE\n88.\nBEKİR YILMAZ\n24.\nERTUĞRUL ERSOY\n10.\nENES ÜNAL\nTeknik Sorumlu\nŞENOL GÜNEŞ\nGoller\nJOSUE FILIPE SOARES PESQUEIRA,14.dk (F)\nSAMUEL TOBIAS HOLMEN,35.dk (F)\nJOSE FERNANDO VIANA DE SANTANA,73.dk (P)\nENES ÜNAL,84.dk (F)\nKartlar\nOZAN İPEK\n2.dk\nFERNANDO DANIEL BELLUSCHI\n74.dk\nJOSE FERNANDO VIANA DE SANTANA\n65.dk\nOyundan Çıkanlar\nOZAN İPEK\n46.dk\nOZAN TUFAN\n90.dk\nSAMUEL TOBIAS HOLMEN\n63.dk\nOyuna Girenler\nENES ÜNAL\n46.dk\nBEKİR YILMAZ\n90.dk\nŞAMİL ÇİNAZ\n63.dk\nİlk 11\n99.\nANDRIJA VUKOVIC\n17.\nOKAN ALKAN\n44.\nTOMISLAV GLUMAC\n20.\nANTE KULUSIC\n3.\nBERKAN EMİR\n6.\nAYKUT ÇEVİKER\n12.\nVİTOR HUGO GOMES DA SILVA\n5.\nERAY ATASEVEN\n19.\nSERCAN YILDIRIM\n9.\nGÖKHAN ÜNAL\n50.\nERMIN ZEC\nYedekler\n15.\nEMRULLAH ŞALK\n61.\nBÜLENT CEVAHİR\n10.\nALİ ÖZTÜRK\n8.\nRONALD ALEJANDRO VARGAS ARANGUREN\n45.\nHASAN HATİPOĞLU\n88.\nMUĞDAT ÇELİK\n30.\nPROMISE ISAAC\nTeknik Sorumlu\nKEMAL ÖZDEŞ\nGoller\nGÖKHAN ÜNAL,25.dk (F)\nGÖKHAN ÜNAL,29.dk (H)\nKartlar\nANTE KULUSIC\n90.dk\nERMIN ZEC\n17.dk\nOyundan Çıkanlar\nSERCAN YILDIRIM\n81.dk\nGÖKHAN ÜNAL\n75.dk\nVİTOR HUGO GOMES DA SILVA\n75.dk\nOyuna Girenler\nALİ ÖZTÜRK\n81.dk\nMUĞDAT ÇELİK\n75.dk\nRONALD ALEJANDRO VARGAS ARANGUREN\n75.dk\nF:F - Ayak\nH:H - Kafa\nK:K - Kendi Kalesine\nP:P - Penaltı\nS:S - Seri Penaltı\nİletişim\n|\nSite Haritası\n|\nKopya Hakları\n|\nKullanım Şartları\n|\nSponsorlar\nTüm hakları Türkiye Futbol Federasyonu'na aittir.\nSosyal Medya Adreslerimiz:\nTFF\nTFF\nMilli Takımlar\nSüper Lig\nE-Millî Takım",
+    "officials_raw": "Hakemler\nGözlemci ve Temsilciler\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nHakem, Gözlemci ve Temsilciler\nALİ PALABIYIK(Hakem)\nERDİNÇ SEZERTAM(1. Yardımcı Hakem)\nSERKAN OLGUNCAN(2. Yardımcı Hakem)\nERDEM İREN(Dördüncü Hakem)\nMURAT TÜRKER(5. Hakem)\nÖZER ÖZDEN(6. Hakem)\nSERDAR ÇAKIR(Gözlemci)\nNİHAT DOKER(Temsilci)\nAKIN KILAVUZ(Temsilci)\nOLCAY MÜLAZIMOĞLU(Temsilci)",
+    "lineups_raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu",
+    "events_raw": "Goller\nJOSUE FILIPE SOARES PESQUEIRA,14.dk (F)\nSAMUEL TOBIAS HOLMEN,35.dk (F)\nJOSE FERNANDO VIANA DE SANTANA,73.dk (P)\nENES ÜNAL,84.dk (F)\n2.dk\n74.dk\n65.dk\nOyundan Çıkanlar\n46.dk\n90.dk\n63.dk\nOyuna Girenler\n46.dk\n90.dk\n63.dk\nGoller\nGÖKHAN ÜNAL,25.dk (F)\nGÖKHAN ÜNAL,29.dk (H)\n90.dk\n17.dk\nOyundan Çıkanlar\n81.dk\n75.dk\n75.dk\nOyuna Girenler\n81.dk\n75.dk\n75.dk\nP:P - Penaltı\nS:S - Seri Penaltı"
+  },
+  "detailCompleteness": {
+    "hasStadium": true,
+    "starting11Home": 11,
+    "starting11Away": 11,
+    "substitutesHome": 7,
+    "substitutesAway": 7,
+    "goals": 6,
+    "cards": 5,
+    "substitutions": 6,
+    "players": 38
+  },
+  "quality": "A",
+  "source": {
+    "name": "TFF",
+    "url": "http://www.tff.org/Default.aspx?pageID=29&macId=129760",
+    "retrievedAt": "2026-07-12T17:37:02.068506Z",
+    "sourceType": "official_tff_match_detail"
+  },
+  "clubFixture": {
+    "week": 0,
+    "rowText": "24 BURSASPOR 4-2 BALIKESİRSPOR 13 Mart 2015 Spor Toto Süper Lig Süleyman Seba Sezonu",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=129760&pageID=29"
+  },
+  "week": 24,
+  "standingsWeek": 24,
+  "stageWeek": 24,
+  "roundType": "league",
+  "roundLabel": "24. Hafta",
+  "roundSource": "stage_sequence_fallback"
+}

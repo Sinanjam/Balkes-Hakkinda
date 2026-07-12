@@ -1,0 +1,66 @@
+{
+  "id": "2017-2018",
+  "name": "2017-2018",
+  "competition": "Spor Toto 1. Lig (Profesyonel Takım)",
+  "sourcePolicy": "TFF-only",
+  "factoryVersion": "v5-professional-only-resilient",
+  "updatedAt": "2026-07-12T17:36:50.497069Z",
+  "summary": {
+    "matches": 35,
+    "wins": 16,
+    "draws": 7,
+    "losses": 12,
+    "goalsFor": 62,
+    "goalsAgainst": 53,
+    "goalDifference": 9,
+    "matchTypes": {
+      "league": 34,
+      "cup": 1
+    },
+    "points": 52,
+    "rawPoints": 52,
+    "pointsDeducted": 0,
+    "finalRank": 8
+  },
+  "files": {
+    "matchesIndex": "seasons/2017-2018/matches_index.json",
+    "standingsByWeek": "seasons/2017-2018/standings_by_week.json"
+  },
+  "sanitizedAt": "2026-07-12T17:38:45.568731Z",
+  "sanitizerVersion": "v1-professional-team-only",
+  "leagueStages": [
+    {
+      "id": "group-lig",
+      "label": "Lig",
+      "stageNumber": 1,
+      "startWeek": 1,
+      "endWeek": 34,
+      "played": 34,
+      "won": 16,
+      "drawn": 7,
+      "lost": 11,
+      "goalsFor": 56,
+      "goalsAgainst": 46,
+      "goalDifference": 10,
+      "points": 52,
+      "finalRank": 8,
+      "carriedMatches": 0,
+      "officialTableIsCumulative": false
+    }
+  ],
+  "leagueSummary": {
+    "played": 34,
+    "won": 16,
+    "drawn": 7,
+    "lost": 11,
+    "goalsFor": 56,
+    "goalsAgainst": 46,
+    "points": 52,
+    "rawPoints": 52,
+    "pointsDeducted": 0,
+    "goalDifference": 10,
+    "finalRank": 8
+  },
+  "standingsUpdatedAt": "2026-07-12T17:46:55.373070Z",
+  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "2011-2012",
+  "name": "2011-2012",
+  "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
+  "sourcePolicy": "TFF-only",
+  "factoryVersion": "v5-professional-only-resilient",
+  "updatedAt": "2026-07-12T17:37:22.355496Z",
+  "summary": {
+    "matches": 33,
+    "wins": 20,
+    "draws": 8,
+    "losses": 5,
+    "goalsFor": 73,
+    "goalsAgainst": 33,
+    "goalDifference": 40,
+    "matchTypes": {
+      "league": 32,
+      "playoff": 1
+    },
+    "points": 68,
+    "rawPoints": 68,
+    "pointsDeducted": 0,
+    "finalRank": 2
+  },
+  "files": {
+    "matchesIndex": "seasons/2011-2012/matches_index.json",
+    "standingsByWeek": "seasons/2011-2012/standings_by_week.json"
+  },
+  "sanitizedAt": "2026-07-12T17:38:45.724555Z",
+  "sanitizerVersion": "v1-professional-team-only",
+  "leagueStages": [
+    {
+      "id": "group-beyaz",
+      "label": "Beyaz",
+      "stageNumber": 1,
+      "startWeek": 1,
+      "endWeek": 34,
+      "played": 32,
+      "won": 20,
+      "drawn": 8,
+      "lost": 4,
+      "goalsFor": 73,
+      "goalsAgainst": 32,
+      "goalDifference": 41,
+      "points": 68,
+      "finalRank": 2,
+      "carriedMatches": 0,
+      "officialTableIsCumulative": false
+    }
+  ],
+  "leagueSummary": {
+    "played": 32,
+    "won": 20,
+    "drawn": 8,
+    "lost": 4,
+    "goalsFor": 73,
+    "goalsAgainst": 32,
+    "points": 68,
+    "rawPoints": 68,
+    "pointsDeducted": 0,
+    "goalDifference": 41,
+    "finalRank": 2
+  },
+  "standingsUpdatedAt": "2026-07-12T17:56:03.857219Z",
+  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+}

@@ -14,6 +14,7 @@ sys.path.insert(0, str(TOOLS))
 from repair_export import (  # noqa: E402
     assign_league_rounds,
     clean_person_name,
+    fixture_week,
     rebuild_players_index,
     repair_detail_people,
 )
@@ -53,6 +54,22 @@ class PersonNameRepairTests(unittest.TestCase):
 
 
 class RoundRepairTests(unittest.TestCase):
+    def test_leading_fixture_column_is_used_as_official_week(self) -> None:
+        week, source = fixture_week({}, {
+            "clubFixture": {
+                "week": 0,
+                "rowText": "17 BALIKESİRSPOR 2-0 RAKİP 28 Ocak 2007 3. Lig 03",
+            },
+        })
+        self.assertEqual(week, 17)
+        self.assertEqual(source, "tff_club_fixture_embedded_leading_column")
+
+    def test_leading_column_does_not_treat_large_number_as_week(self) -> None:
+        week, source = fixture_week({}, {
+            "clubFixture": {"week": 0, "rowText": "2025 BALIKESİRSPOR 2-0 RAKİP"},
+        })
+        self.assertEqual((week, source), (0, "missing"))
+
     def test_multi_stage_rounds_keep_stage_week_and_global_week(self) -> None:
         details = [
             {"id": "1", "date": "1996-09-01", "matchType": "league"},

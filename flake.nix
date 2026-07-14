@@ -37,6 +37,8 @@
               pkgs.gradle
               pkgs.git
               pkgs.jq
+              pkgs.zip
+              pkgs.unzip
               sdk
             ];
 

@@ -16,6 +16,7 @@ from discover_club_fixtures import (  # noqa: E402
     archive_group_is_selected,
     archive_stage_sort_key,
     fixture_page_actions,
+    extract_fixture_result,
     page_mentions_season,
     reconcile_archive_stages,
     standalone_archive_stages,
@@ -36,6 +37,16 @@ from validate_export import intentionally_skipped, validate_discovery  # noqa: E
 
 
 class FixtureDiscoveryTests(unittest.TestCase):
+    def test_leading_fixture_column_is_parsed_as_week(self) -> None:
+        raw = """
+        <table id='ctl00_MPane_m_28_398_ctnr_m_28_398_grdFikstur'>
+          <tr><td>17</td><td>BALIKESİRSPOR 2-0 RAKİP</td>
+              <td><a href='?pageID=29&amp;macId=123'>Detay</a></td></tr>
+        </table>
+        """
+        result = extract_fixture_result(raw, "2006-2007", "http://www.tff.org/Default.aspx?pageID=28")
+        self.assertEqual(result["fixtures"][0]["week"], 17)
+
     def test_row_scoped_match_id_does_not_leak_from_neighbour(self) -> None:
         raw = """
         <table>

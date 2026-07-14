@@ -35,6 +35,7 @@ DIRTY_PERSON_RE = re.compile(
     re.I,
 )
 WEEK_RE = re.compile(r"\b(\d{1,3})\s*\.?\s*Hafta\b", re.I)
+LEADING_WEEK_RE = re.compile(r"^\s*(\d{1,2})(?=\s+\S)")
 
 
 def as_list(value: Any) -> list[Any]:
@@ -111,6 +112,12 @@ def fixture_week(fixture: dict[str, Any], detail: dict[str, Any]) -> tuple[int, 
     match = WEEK_RE.search(row_text)
     if match:
         return int(match.group(1)), "tff_club_fixture_row"
+    # TFF kulüp fikstürü tablosunda hafta ayrı sütundadır. ``tr`` metni
+    # düzleştirildiğinde "17 BALIKESİRSPOR ..." biçiminde satırın başına gelir;
+    # yanında "Hafta" kelimesi bulunmaz.
+    match = LEADING_WEEK_RE.match(row_text)
+    if match and 0 < int(match.group(1)) <= 60:
+        return int(match.group(1)), "tff_club_fixture_row_leading_column"
     club_fixture = detail.get("clubFixture") if isinstance(detail.get("clubFixture"), dict) else {}
     week = as_int(club_fixture.get("week"))
     if week > 0:
@@ -118,6 +125,9 @@ def fixture_week(fixture: dict[str, Any], detail: dict[str, Any]) -> tuple[int, 
     match = WEEK_RE.search(str(club_fixture.get("rowText") or ""))
     if match:
         return int(match.group(1)), "tff_club_fixture_embedded_row"
+    match = LEADING_WEEK_RE.match(str(club_fixture.get("rowText") or ""))
+    if match and 0 < int(match.group(1)) <= 60:
+        return int(match.group(1)), "tff_club_fixture_embedded_leading_column"
     for key in ("stageWeek", "standingsWeek", "week"):
         week = as_int(detail.get(key))
         if week > 0:

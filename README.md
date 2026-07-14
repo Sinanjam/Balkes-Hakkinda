@@ -97,6 +97,16 @@ fish status-tff-local.fish
 fish stop-tff-local.fish
 ```
 
+Görev bittikten ve `readyToPublish: true` görüldükten sonra doğrulanmış ZIP
+oluşturmak için:
+
+```fish
+fish pack-tff-data.fish
+```
+
+Paketleyici görev çalışırken veya kalite kapısı geçilmemişken dosya üretmez;
+oluşturduğu `tff-data-final-*.zip` arşivini de otomatik test eder.
+
 Bu görev GitHub'a veya APK'ya veri yüklemez. Sonuç ve ham önbellek sırasıyla
 `generated/tff-data/` ve `.cache/tff/` altında yerelde kalır. Yapısal eksik,
 yarım TFF sayfalaması veya eksik puan tablosu varken görev tamamlanmış sayılmaz.

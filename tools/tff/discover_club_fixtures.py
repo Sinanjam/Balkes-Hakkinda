@@ -211,7 +211,14 @@ def extract_fixture_result(raw: str, season: str, source_url: str) -> dict[str, 
 
         row_text = clean_text(row.get_text(" ", strip=True))
         week_match = re.search(r"\b(\d{1,2})\s*\.?\s*Hafta\b", row_text, re.I)
-        week = int(week_match.group(1)) if week_match else 0
+        # Güncel/eski TFF kulüp fikstürü görünümlerinde hafta çoğunlukla ayrı
+        # ilk sütundur. Satır metni "17 BALIKESİRSPOR ..." olur ve "Hafta"
+        # sözcüğü bulunmaz. 60 üst sınırı yanlışlıkla maç kodu/tarih almamızı
+        # engeller.
+        leading_week = re.match(r"^\s*(\d{1,2})(?=\s+\S)", row_text)
+        week = int(week_match.group(1)) if week_match else (
+            int(leading_week.group(1)) if leading_week and 0 < int(leading_week.group(1)) <= 60 else 0
+        )
         if week:
             weeks.append(week)
 

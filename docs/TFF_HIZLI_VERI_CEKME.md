@@ -52,6 +52,17 @@ Durdurmak için:
 fish stop-tff-local.fish
 ```
 
+`status-tff-local.fish` çıktısında `PHASE=completed` ve
+`readyToPublish: true` görüldüğünde sonucu paketle:
+
+```fish
+fish pack-tff-data.fish
+```
+
+Bu komut çalışan klasörü paketlemez. Kalite raporunu denetler, zaman damgalı
+`tff-data-final-*.zip` üretir ve ZIP'in merkez dizisiyle bütün dosya gövdelerini
+`unzip -t` ile sınar. Böylece yarım çalışan klasörden bozuk ZIP çıkmaz.
+
 Durdurmak indirilenleri silmez. Aynı başlatma komutu kaldığı yerden, yerel
 `.cache/tff/` önbelleğini kullanarak devam eder. Görev ilk üç denemede önbelleği
 korur; hâlâ hata varsa dördüncü denemede eski/bozuk HTML olasılığını elemek için

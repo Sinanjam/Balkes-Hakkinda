@@ -28,7 +28,9 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 public final class MainActivity extends Activity {
     private enum Tab { SCORE, ARCHIVE, PHOTOS, NEWS, SEASONS }
@@ -49,6 +51,8 @@ public final class MainActivity extends Activity {
     private Runnable detailBackAction;
     private String detailRequestKey = "";
     private int archiveRenderGeneration = 0;
+    private final Map<String, String> seasonMatchUrls = new HashMap<>();
+    private final Map<String, String> seasonStandingsUrls = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,7 +136,7 @@ public final class MainActivity extends Activity {
         repository.get(primary, new RemoteJsonRepository.Callback() {
             @Override public void onSuccess(Object json, boolean fromCache) {
                 if (json instanceof JSONObject) {
-                    DataEndpoints.configureScoreManifest((JSONObject) json, primary);
+                    configureScoreManifest((JSONObject) json, primary);
                 }
                 callback.onSuccess(json, fromCache);
             }
@@ -146,7 +150,7 @@ public final class MainActivity extends Activity {
                 repository.get(fallback, new RemoteJsonRepository.Callback() {
                     @Override public void onSuccess(Object json, boolean fromCache) {
                         if (json instanceof JSONObject) {
-                            DataEndpoints.configureScoreManifest((JSONObject) json, fallback);
+                            configureScoreManifest((JSONObject) json, fallback);
                         }
                         callback.onSuccess(json, fromCache);
                     }
@@ -157,6 +161,24 @@ public final class MainActivity extends Activity {
                 });
             }
         });
+    }
+
+    private void configureScoreManifest(JSONObject manifest, String manifestUrl) {
+        DataEndpoints.configureScoreManifest(manifest, manifestUrl);
+        seasonMatchUrls.clear();
+        seasonStandingsUrls.clear();
+        JSONArray seasons = manifest.optJSONArray("availableSeasons");
+        if (seasons == null) return;
+        for (int index = 0; index < seasons.length(); index++) {
+            JSONObject season = seasons.optJSONObject(index);
+            if (season == null) continue;
+            String id = season.optString("id", "");
+            if (id.length() == 0) continue;
+            seasonMatchUrls.put(id, season.optString(
+                    "matchesIndexUrl", "seasons/" + id + "/matches_index.json"));
+            String standings = season.optString("standingsByWeekUrl", "");
+            if (standings.length() > 0) seasonStandingsUrls.put(id, standings);
+        }
     }
 
     @Override
@@ -792,7 +814,11 @@ public final class MainActivity extends Activity {
                 () -> select(origin));
         body.addView(Ui.loading(this));
 
-        repository.get(DataEndpoints.scoreFile("seasons/" + seasonId + "/matches_index.json"),
+        String matchesUrl = seasonMatchUrls.get(seasonId);
+        if (matchesUrl == null || matchesUrl.length() == 0) {
+            matchesUrl = "seasons/" + seasonId + "/matches_index.json";
+        }
+        repository.get(DataEndpoints.scoreFile(matchesUrl),
                 new RemoteJsonRepository.Callback() {
                     @Override public void onSuccess(Object json, boolean fromCache) {
                         if (chooserVisible || !key.equals(detailRequestKey) || !(json instanceof JSONArray)) return;
@@ -849,9 +875,13 @@ public final class MainActivity extends Activity {
     }
 
     private void loadSeasonStandings(String seasonId, String requestKey, LinearLayout slot) {
+        String standingsUrl = seasonStandingsUrls.get(seasonId);
+        if (standingsUrl == null || standingsUrl.length() == 0) {
+            slot.removeAllViews();
+            return;
+        }
         slot.addView(Ui.loading(this));
-        repository.get(DataEndpoints.scoreFile(
-                        "seasons/" + seasonId + "/standings_by_week.json"),
+        repository.get(DataEndpoints.scoreFile(standingsUrl),
                 new RemoteJsonRepository.Callback() {
                     @Override public void onSuccess(Object json, boolean fromCache) {
                         if (chooserVisible || !requestKey.equals(detailRequestKey)

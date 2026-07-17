@@ -19,6 +19,7 @@ import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -37,6 +38,16 @@ public final class RemoteJsonRepository {
         Pending(Callback callback, boolean hasCachedValue) {
             this.callback = callback;
             this.hasCachedValue = hasCachedValue;
+        }
+    }
+
+    private static final class FetchResult {
+        final String body;
+        final boolean notModified;
+
+        FetchResult(String body, boolean notModified) {
+            this.body = body;
+            this.notModified = notModified;
         }
     }
 
@@ -109,9 +120,10 @@ public final class RemoteJsonRepository {
 
     private void refresh(String url) {
         try {
-            String body = fetch(url);
+            FetchResult response = fetch(url);
+            String body = response.body;
             Object parsed = parse(body);
-            boolean unchanged = body.equals(rawCache.get(url));
+            boolean unchanged = response.notModified || body.equals(rawCache.get(url));
             memoryCache.put(url, parsed);
             rawCache.put(url, body);
             if (!unchanged) write(cacheFile(url), body);
@@ -150,18 +162,43 @@ public final class RemoteJsonRepository {
         });
     }
 
-    private String fetch(String address) throws Exception {
+    private FetchResult fetch(String address) throws Exception {
         HttpURLConnection connection = (HttpURLConnection) new URL(address).openConnection();
         try {
             connection.setConnectTimeout(7_000);
             connection.setReadTimeout(15_000);
             connection.setUseCaches(true);
             connection.setRequestProperty("Accept", "application/json");
+            connection.setRequestProperty("Cache-Control", "no-cache");
             connection.setRequestProperty("Connection", "keep-alive");
             connection.setRequestProperty("User-Agent", "Balkes-Android/1.5");
+            String cachedBody = rawCache.get(address);
+            Properties metadata = readMetadata(metaFile(address));
+            if (cachedBody != null) {
+                String etag = metadata.getProperty("etag", "");
+                String lastModified = metadata.getProperty("lastModified", "");
+                if (etag.length() > 0) connection.setRequestProperty("If-None-Match", etag);
+                if (lastModified.length() > 0) {
+                    connection.setRequestProperty("If-Modified-Since", lastModified);
+                }
+            }
             int status = connection.getResponseCode();
+            if (status == HttpURLConnection.HTTP_NOT_MODIFIED && cachedBody != null) {
+                return new FetchResult(cachedBody, true);
+            }
             if (status < 200 || status >= 300) throw new IllegalStateException("HTTP " + status);
-            return read(connection.getInputStream());
+            String body = read(connection.getInputStream());
+            Properties updated = new Properties();
+            String etag = connection.getHeaderField("ETag");
+            String lastModified = connection.getHeaderField("Last-Modified");
+            if (etag != null && etag.length() > 0) updated.setProperty("etag", etag);
+            if (lastModified != null && lastModified.length() > 0) {
+                updated.setProperty("lastModified", lastModified);
+            }
+            try {
+                writeMetadata(metaFile(address), updated);
+            } catch (Exception ignored) { }
+            return new FetchResult(body, false);
         } finally {
             connection.disconnect();
         }
@@ -176,6 +213,19 @@ public final class RemoteJsonRepository {
 
     private File cacheFile(String url) {
         return new File(cacheDir, key(url) + ".json");
+    }
+
+    private File metaFile(String url) {
+        return new File(cacheDir, key(url) + ".properties");
+    }
+
+    private Properties readMetadata(File file) {
+        Properties result = new Properties();
+        if (!file.isFile()) return result;
+        try (InputStream input = new FileInputStream(file)) {
+            result.load(input);
+        } catch (Exception ignored) { }
+        return result;
     }
 
     private String read(File file) throws Exception {
@@ -202,6 +252,19 @@ public final class RemoteJsonRepository {
         if (!temporary.renameTo(file)) {
             try (FileOutputStream output = new FileOutputStream(file)) {
                 output.write(body.getBytes(StandardCharsets.UTF_8));
+            }
+            temporary.delete();
+        }
+    }
+
+    private void writeMetadata(File file, Properties metadata) throws Exception {
+        File temporary = new File(file.getParentFile(), file.getName() + ".tmp");
+        try (FileOutputStream output = new FileOutputStream(temporary)) {
+            metadata.store(output, "Balkes HTTP cache validators");
+        }
+        if (!temporary.renameTo(file)) {
+            try (FileOutputStream output = new FileOutputStream(file)) {
+                metadata.store(output, "Balkes HTTP cache validators");
             }
             temporary.delete();
         }

@@ -1019,6 +1019,21 @@
       "targetUrls": [
         "https://www.tff.org/Default.aspx?grupID=15&pageID=575"
       ],
+      "standingsGroupByWeek": {
+        "18": "14",
+        "19": "14",
+        "20": "14",
+        "21": "14",
+        "22": "14",
+        "23": "14",
+        "24": "14",
+        "25": "14",
+        "26": "14",
+        "27": "14",
+        "28": "14",
+        "29": "14"
+      },
+      "standingsGroupRoutingNote": "TFF pageID=575 grupID=15 standings modülü 18-29. haftalarda başka grubun tablosunu döndürüyor; aynı resmi arşivde grupID=14 bu haftalar için kulupID=135 Balıkesirspor tablosunu ve sırasıyla 18-29 oynanan maçı döndürüyor. 1-17 ve 30. hafta grupID=15 olarak kalır.",
       "allowLegacyBroadFallback": false,
       "legacyBroadProbeLimit": 0,
       "legacyDiscoveryNote": "Exact official TFF 2006-2007 group 03 archive target is pinned; bounded probe remains only as an unused safety fallback.",
@@ -1045,7 +1060,7 @@
         "gatewaySkipAfter": 3
       },
       "notes": [
-        "v2.7: official 2006-2007 group 03 archive pinned to pageID=575 and grupID=15."
+        "v2.8: official 2006-2007 group 03 archive pinned to pageID=575; standings module weeks 18-29 use source-verified groupID=14 routing."
       ]
     },
     {

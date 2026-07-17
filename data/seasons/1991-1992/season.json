@@ -4,7 +4,7 @@
   "competition": "3. Lig (Profesyonel Takım)",
   "sourcePolicy": "TFF-only",
   "factoryVersion": "v5-professional-only-resilient",
-  "updatedAt": "2026-07-12T17:38:43.581701Z",
+  "updatedAt": "2026-07-17T19:33:41.574868Z",
   "summary": {
     "matches": 34,
     "wins": 24,
@@ -25,7 +25,7 @@
     "matchesIndex": "seasons/1991-1992/matches_index.json",
     "standingsByWeek": "seasons/1991-1992/standings_by_week.json"
   },
-  "sanitizedAt": "2026-07-12T17:38:46.078807Z",
+  "sanitizedAt": "2026-07-17T19:33:43.514413Z",
   "sanitizerVersion": "v1-professional-team-only",
   "leagueStages": [
     {
@@ -47,6 +47,22 @@
       "officialTableIsCumulative": false
     }
   ],
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 34,
+    "won": 24,
+    "drawn": 7,
+    "lost": 3,
+    "goalsFor": 69,
+    "goalsAgainst": 27,
+    "points": 79,
+    "rawPoints": 79,
+    "pointsDeducted": 0,
+    "goalDifference": 42,
+    "finalRank": 1
+  },
   "leagueSummary": {
     "played": 34,
     "won": 24,
@@ -60,6 +76,6 @@
     "goalDifference": 42,
     "finalRank": 1
   },
-  "standingsUpdatedAt": "2026-07-12T18:01:42.495730Z",
-  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+  "standingsUpdatedAt": "2026-07-17T22:28:53.844369Z",
+  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing"
 }

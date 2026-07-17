@@ -1186,18 +1186,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=207497",
-    "retrievedAt": "2026-07-12T17:36:30.152756Z",
+    "retrievedAt": "2026-07-17T19:31:33.745344Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "5 İSTANBULSPOR A.Ş. 2-2 BALIKESİRSPOR 20 Eylül 2019 TFF 1. Lig",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=207497&pageID=29"
   },
   "week": 5,
   "standingsWeek": 5,
+  "clubFixture": {
+    "week": 5,
+    "rowText": "5 İSTANBULSPOR A.Ş. 2-2 BALIKESİRSPOR 20 Eylül 2019 TFF 1. Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=207497&pageID=29"
+  },
   "stageWeek": 5,
   "roundType": "league",
   "roundLabel": "5. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

@@ -1063,20 +1063,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=157851",
-    "retrievedAt": "2026-07-12T17:36:44.858798Z",
+    "retrievedAt": "2026-07-17T19:31:54.141661Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "2 GİRESUNSPOR 1-0 BALIKESİRSPOR 28 Ağustos 2016 TFF 1.Lig",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=157851&pageID=29"
   },
   "week": 2,
   "standingsWeek": 2,
+  "clubFixture": {
+    "week": 2,
+    "rowText": "2 GİRESUNSPOR 1-0 BALIKESİRSPOR 28 Ağustos 2016 TFF 1.Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=157851&pageID=29"
+  },
   "stageWeek": 2,
   "roundType": "league",
   "roundLabel": "2. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-lig",
   "leagueStageLabel": "Lig",
   "leagueStageNumber": 1

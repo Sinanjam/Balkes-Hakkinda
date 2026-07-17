@@ -1,0 +1,44 @@
+{
+  "season": "2011-2012",
+  "generatedAt": "2026-07-17T22:16:49.772864Z",
+  "builderVersion": "standings-builder-v8-legacy-week-group-routing",
+  "mode": "official-only",
+  "maxWeek": 34,
+  "source": "official_tff_multi_stage_weekly_table",
+  "weeksGenerated": 34,
+  "teams": 17,
+  "matchesUsed": 0,
+  "penaltiesApplied": 0,
+  "warnings": [],
+  "stages": [
+    {
+      "id": "group-beyaz",
+      "label": "Beyaz",
+      "maxWeek": 34,
+      "expectedMatches": 32,
+      "carriedMatches": 0,
+      "rawFinalPlayed": 32,
+      "weeksGenerated": 34,
+      "targetPageID": "1157",
+      "targetGrupID": "825",
+      "targetModuleID": null
+    }
+  ],
+  "balkesFinal": {
+    "rank": 2,
+    "team": "Balıkesirspor",
+    "played": 32,
+    "won": 20,
+    "drawn": 8,
+    "lost": 4,
+    "goalsFor": 73,
+    "goalsAgainst": 32,
+    "goalDifference": 41,
+    "points": 68,
+    "rawPoints": 68,
+    "pointsDeducted": 0,
+    "penaltyNote": "",
+    "isBalkes": true,
+    "teamId": "135"
+  }
+}

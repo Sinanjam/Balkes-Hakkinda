@@ -748,20 +748,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=56289",
-    "retrievedAt": "2026-07-12T17:38:31.941641Z",
+    "retrievedAt": "2026-07-17T19:33:31.173113Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "4 MUĞLASPOR 1-0 BALIKESIRSPOR 21 Şubat 1993 Lig B K2",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=56289&pageID=29"
   },
   "week": 26,
   "standingsWeek": 26,
+  "clubFixture": {
+    "week": 4,
+    "rowText": "4 MUĞLASPOR 1-0 BALIKESIRSPOR 21 Şubat 1993 Lig B K2",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=56289&pageID=29"
+  },
   "stageWeek": 4,
   "roundType": "league",
   "roundLabel": "4. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-k2",
   "leagueStageLabel": "K2",
   "leagueStageNumber": 2,

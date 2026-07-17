@@ -1074,20 +1074,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=86205",
-    "retrievedAt": "2026-07-12T17:37:33.439116Z",
+    "retrievedAt": "2026-07-17T19:32:36.316063Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "16 BALIKESİRSPOR 1-0 ARAKLISPOR 25 Nisan 2010 TFF 3.Lig Yükselme Yükselme",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=86205&pageID=29"
   },
   "week": 38,
   "standingsWeek": 38,
+  "clubFixture": {
+    "week": 16,
+    "rowText": "16 BALIKESİRSPOR 1-0 ARAKLISPOR 25 Nisan 2010 TFF 3.Lig Yükselme Yükselme",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=86205&pageID=29"
+  },
   "stageWeek": 16,
   "roundType": "league",
   "roundLabel": "16. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "standalone-yukselme-grubu",
   "leagueStageLabel": "Yükselme Grubu",
   "leagueStageNumber": 2,

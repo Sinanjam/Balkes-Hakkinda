@@ -1157,18 +1157,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=285700",
-    "retrievedAt": "2026-07-12T17:36:00.143557Z",
+    "retrievedAt": "2026-07-17T19:31:05.940991Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "12 AYVALIKGÜCÜ BELEDİYESPOR 1-0 NEV SAĞLIK GRUBU BALIKESİRSPOR 7 Aralık 2025 Nesine 3. Lig 04",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=285700&pageID=29"
   },
   "week": 12,
   "standingsWeek": 12,
+  "clubFixture": {
+    "week": 12,
+    "rowText": "12 AYVALIKGÜCÜ BELEDİYESPOR 1-0 NEV SAĞLIK GRUBU BALIKESİRSPOR 7 Aralık 2025 Nesine 3. Lig 04",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=285700&pageID=29"
+  },
   "stageWeek": 12,
   "roundType": "league",
   "roundLabel": "12. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

@@ -1190,18 +1190,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=235988",
-    "retrievedAt": "2026-07-12T17:36:14.821173Z",
+    "retrievedAt": "2026-07-17T19:31:27.664888Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "6 BAYNET İNŞAAT BALIKESİRSPOR 0-2 ANKARA DEMİRSPOR 24 Eylül 2022 TFF 2.Lig Kırmızı",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=235988&pageID=29"
   },
   "week": 6,
   "standingsWeek": 6,
+  "clubFixture": {
+    "week": 6,
+    "rowText": "6 BAYNET İNŞAAT BALIKESİRSPOR 0-2 ANKARA DEMİRSPOR 24 Eylül 2022 TFF 2.Lig Kırmızı",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=235988&pageID=29"
+  },
   "stageWeek": 6,
   "roundType": "league",
   "roundLabel": "6. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

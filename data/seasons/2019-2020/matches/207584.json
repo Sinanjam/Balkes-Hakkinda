@@ -1058,18 +1058,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=207584",
-    "retrievedAt": "2026-07-12T17:36:32.017480Z",
+    "retrievedAt": "2026-07-17T19:31:35.995033Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "14 FATİH KARAGÜMRÜK A.Ş. 0-0 EKOL HASTANESİ BALIKESİRSPOR 7 Aralık 2019 TFF 1. Lig",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=207584&pageID=29"
   },
   "week": 14,
   "standingsWeek": 14,
+  "clubFixture": {
+    "week": 14,
+    "rowText": "14 FATİH KARAGÜMRÜK A.Ş. 0-0 EKOL HASTANESİ BALIKESİRSPOR 7 Aralık 2019 TFF 1. Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=207584&pageID=29"
+  },
   "stageWeek": 14,
   "roundType": "league",
   "roundLabel": "14. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

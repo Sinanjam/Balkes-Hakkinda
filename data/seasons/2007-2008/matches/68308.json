@@ -1105,20 +1105,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=68308",
-    "retrievedAt": "2026-07-12T17:37:41.442239Z",
+    "retrievedAt": "2026-07-17T19:32:44.504474Z",
     "sourceType": "official_tff_match_detail"
   },
+  "week": 25,
+  "standingsWeek": 25,
   "clubFixture": {
-    "week": 0,
+    "week": 25,
     "rowText": "25 BALIKESİRSPOR 0-0 KÜTAHYASPOR 2 Mart 2008 TFF 3. Lig 03",
     "sourceUrl": "http://www.tff.org/Default.aspx?macID=68308&pageID=29"
   },
-  "week": 22,
-  "standingsWeek": 22,
-  "stageWeek": 22,
+  "stageWeek": 25,
   "roundType": "league",
-  "roundLabel": "22. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundLabel": "25. Hafta",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-03",
   "leagueStageLabel": "03",
   "leagueStageNumber": 1

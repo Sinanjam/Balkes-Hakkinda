@@ -1233,18 +1233,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=265616",
-    "retrievedAt": "2026-07-12T17:35:58.204991Z",
+    "retrievedAt": "2026-07-17T19:31:10.807655Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "5 BALIKESİRSPOR 0-1 MUĞLASPOR KULÜBÜ 5 Ekim 2024 Nesine 3. Lig 02",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=265616&pageID=29"
   },
   "week": 5,
   "standingsWeek": 5,
+  "clubFixture": {
+    "week": 5,
+    "rowText": "5 BALIKESİRSPOR 0-1 MUĞLASPOR KULÜBÜ 5 Ekim 2024 Nesine 3. Lig 02",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=265616&pageID=29"
+  },
   "stageWeek": 5,
   "roundType": "league",
   "roundLabel": "5. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

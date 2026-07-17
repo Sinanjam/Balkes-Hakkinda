@@ -1032,20 +1032,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=98387",
-    "retrievedAt": "2026-07-12T17:37:16.731863Z",
+    "retrievedAt": "2026-07-17T19:32:22.593730Z",
     "sourceType": "official_tff_match_detail"
   },
+  "week": 15,
+  "standingsWeek": 15,
   "clubFixture": {
-    "week": 0,
+    "week": 15,
     "rowText": "15 BALIKESİRSPOR 0-0 PENDİKSPOR 25 Aralık 2011 Spor Toto 2. Lig Beyaz",
     "sourceUrl": "http://www.tff.org/Default.aspx?macID=98387&pageID=29"
   },
-  "week": 14,
-  "standingsWeek": 14,
-  "stageWeek": 14,
+  "stageWeek": 15,
   "roundType": "league",
-  "roundLabel": "14. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundLabel": "15. Hafta",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-beyaz",
   "leagueStageLabel": "Beyaz",
   "leagueStageNumber": 1

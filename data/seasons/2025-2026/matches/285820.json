@@ -1337,18 +1337,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=285820",
-    "retrievedAt": "2026-07-12T17:36:04.696908Z",
+    "retrievedAt": "2026-07-17T19:31:09.428149Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "27 NEV SAĞLIK GRUBU BALIKESİRSPOR 1-2 AYVALIKGÜCÜ BELEDİYESPOR 29 Mart 2026 Nesine 3. Lig 04",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=285820&pageID=29"
   },
   "week": 27,
   "standingsWeek": 27,
+  "clubFixture": {
+    "week": 27,
+    "rowText": "27 NEV SAĞLIK GRUBU BALIKESİRSPOR 1-2 AYVALIKGÜCÜ BELEDİYESPOR 29 Mart 2026 Nesine 3. Lig 04",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=285820&pageID=29"
+  },
   "stageWeek": 27,
   "roundType": "league",
   "roundLabel": "27. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

@@ -1092,18 +1092,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=194867",
-    "retrievedAt": "2026-07-12T17:36:33.065567Z",
+    "retrievedAt": "2026-07-17T19:31:44.202601Z",
     "sourceType": "official_tff_match_detail"
   },
+  "week": 6,
+  "standingsWeek": 6,
   "clubFixture": {
-    "week": 0,
+    "week": 6,
     "rowText": "6 AFJET AFYONSPOR 1-1 BALIKESİRSPOR BALTOK 23 Eylül 2018 Spor Toto 1. Lig",
     "sourceUrl": "http://www.tff.org/Default.aspx?macID=194867&pageID=29"
   },
-  "week": 5,
-  "standingsWeek": 5,
-  "stageWeek": 5,
+  "stageWeek": 6,
   "roundType": "league",
-  "roundLabel": "5. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundLabel": "6. Hafta",
+  "roundSource": "tff_club_fixture"
 }

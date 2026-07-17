@@ -835,20 +835,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=63763",
-    "retrievedAt": "2026-07-12T17:38:40.232565Z",
+    "retrievedAt": "2026-07-17T19:33:39.336749Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "15 ÇANSPOR 0-1 BALIKESIRSPOR 23 Aralık 1990 3. Lig 7",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=63763&pageID=29"
   },
   "week": 15,
   "standingsWeek": 15,
+  "clubFixture": {
+    "week": 15,
+    "rowText": "15 ÇANSPOR 0-1 BALIKESIRSPOR 23 Aralık 1990 3. Lig 7",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=63763&pageID=29"
+  },
   "stageWeek": 15,
   "roundType": "league",
   "roundLabel": "15. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-7",
   "leagueStageLabel": "7",
   "leagueStageNumber": 1

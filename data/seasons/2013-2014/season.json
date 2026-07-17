@@ -4,7 +4,7 @@
   "competition": "PTT 1.Lig (Profesyonel Takım)",
   "sourcePolicy": "TFF-only",
   "factoryVersion": "v5-professional-only-resilient",
-  "updatedAt": "2026-07-12T17:37:11.989520Z",
+  "updatedAt": "2026-07-17T19:32:20.106083Z",
   "summary": {
     "matches": 40,
     "wins": 25,
@@ -26,7 +26,7 @@
     "matchesIndex": "seasons/2013-2014/matches_index.json",
     "standingsByWeek": "seasons/2013-2014/standings_by_week.json"
   },
-  "sanitizedAt": "2026-07-12T17:38:45.675558Z",
+  "sanitizedAt": "2026-07-17T19:33:43.101569Z",
   "sanitizerVersion": "v1-professional-team-only",
   "leagueStages": [
     {
@@ -48,6 +48,22 @@
       "officialTableIsCumulative": false
     }
   ],
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 36,
+    "won": 22,
+    "drawn": 7,
+    "lost": 7,
+    "goalsFor": 56,
+    "goalsAgainst": 33,
+    "points": 73,
+    "rawPoints": 73,
+    "pointsDeducted": 0,
+    "goalDifference": 23,
+    "finalRank": 2
+  },
   "leagueSummary": {
     "played": 36,
     "won": 22,
@@ -61,6 +77,6 @@
     "goalDifference": 23,
     "finalRank": 2
   },
-  "standingsUpdatedAt": "2026-07-12T17:52:10.554615Z",
-  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+  "standingsUpdatedAt": "2026-07-17T22:16:49.769487Z",
+  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing"
 }

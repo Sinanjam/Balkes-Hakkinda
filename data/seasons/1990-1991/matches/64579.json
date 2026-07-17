@@ -877,20 +877,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=64579",
-    "retrievedAt": "2026-07-12T17:38:41.921143Z",
+    "retrievedAt": "2026-07-17T19:33:39.956740Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "20 S. MERİNOSSPOR 1-2 BALIKESIRSPOR 16 Şubat 1991 3. Lig 7",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=64579&pageID=29"
   },
   "week": 20,
   "standingsWeek": 20,
+  "clubFixture": {
+    "week": 20,
+    "rowText": "20 S. MERİNOSSPOR 1-2 BALIKESIRSPOR 16 Şubat 1991 3. Lig 7",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=64579&pageID=29"
+  },
   "stageWeek": 20,
   "roundType": "league",
   "roundLabel": "20. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-7",
   "leagueStageLabel": "7",
   "leagueStageNumber": 1

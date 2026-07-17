@@ -1014,20 +1014,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=56100",
-    "retrievedAt": "2026-07-12T17:38:31.026344Z",
+    "retrievedAt": "2026-07-17T19:33:30.720662Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "1 BALIKESIRSPOR 3-3 Y. NAZİLLİSPOR 31 Ocak 1993 Lig B K2",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=56100&pageID=29"
   },
   "week": 23,
   "standingsWeek": 23,
+  "clubFixture": {
+    "week": 1,
+    "rowText": "1 BALIKESIRSPOR 3-3 Y. NAZİLLİSPOR 31 Ocak 1993 Lig B K2",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=56100&pageID=29"
+  },
   "stageWeek": 1,
   "roundType": "league",
   "roundLabel": "1. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-k2",
   "leagueStageLabel": "K2",
   "leagueStageNumber": 2,

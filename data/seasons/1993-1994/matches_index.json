@@ -53,7 +53,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=50765",
-      "retrievedAt": "2026-07-12T17:38:24.660174Z",
+      "retrievedAt": "2026-07-17T19:33:23.599464Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 1,
@@ -61,7 +61,7 @@
     "stageNumber": 1,
     "roundType": "league",
     "roundLabel": "1. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-02",
     "leagueStageLabel": "02",
     "leagueStageNumber": 1
@@ -120,7 +120,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=50736",
-      "retrievedAt": "2026-07-12T17:38:24.832143Z",
+      "retrievedAt": "2026-07-17T19:33:23.372913Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 2,
@@ -128,7 +128,7 @@
     "stageNumber": 1,
     "roundType": "league",
     "roundLabel": "2. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-02",
     "leagueStageLabel": "02",
     "leagueStageNumber": 1
@@ -187,7 +187,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=50792",
-      "retrievedAt": "2026-07-12T17:38:24.858938Z",
+      "retrievedAt": "2026-07-17T19:33:24.071688Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 3,
@@ -195,7 +195,7 @@
     "stageNumber": 1,
     "roundType": "league",
     "roundLabel": "3. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-02",
     "leagueStageLabel": "02",
     "leagueStageNumber": 1
@@ -254,7 +254,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=50833",
-      "retrievedAt": "2026-07-12T17:38:24.760332Z",
+      "retrievedAt": "2026-07-17T19:33:23.265239Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 4,
@@ -262,7 +262,7 @@
     "stageNumber": 1,
     "roundType": "league",
     "roundLabel": "4. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-02",
     "leagueStageLabel": "02",
     "leagueStageNumber": 1
@@ -321,7 +321,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=50889",
-      "retrievedAt": "2026-07-12T17:38:24.246429Z",
+      "retrievedAt": "2026-07-17T19:33:24.154701Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 5,
@@ -329,7 +329,7 @@
     "stageNumber": 1,
     "roundType": "league",
     "roundLabel": "5. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-02",
     "leagueStageLabel": "02",
     "leagueStageNumber": 1
@@ -388,7 +388,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=51020",
-      "retrievedAt": "2026-07-12T17:38:25.446583Z",
+      "retrievedAt": "2026-07-17T19:33:23.964776Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 6,
@@ -396,7 +396,7 @@
     "stageNumber": 1,
     "roundType": "league",
     "roundLabel": "6. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-02",
     "leagueStageLabel": "02",
     "leagueStageNumber": 1
@@ -405,6 +405,7 @@
     "id": "51237",
     "matchCode": "7522",
     "season": "1993-1994",
+    "week": 1,
     "competition": "Fortis Türkiye Kupası (Profesyonel Takım) (1. Kademe)",
     "competitionType": "cup",
     "competitionLabel": "Ziraat Türkiye Kupası",
@@ -453,7 +454,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=51237",
-      "retrievedAt": "2026-07-12T17:38:26.554254Z",
+      "retrievedAt": "2026-07-17T19:33:24.329344Z",
       "sourceType": "official_tff_match_detail"
     },
     "roundType": "cup"
@@ -512,7 +513,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=51178",
-      "retrievedAt": "2026-07-12T17:38:25.965151Z",
+      "retrievedAt": "2026-07-17T19:33:23.856067Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 7,
@@ -520,7 +521,7 @@
     "stageNumber": 1,
     "roundType": "league",
     "roundLabel": "7. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-02",
     "leagueStageLabel": "02",
     "leagueStageNumber": 1
@@ -579,7 +580,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=51313",
-      "retrievedAt": "2026-07-12T17:38:26.282908Z",
+      "retrievedAt": "2026-07-17T19:33:24.346334Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 8,
@@ -587,7 +588,7 @@
     "stageNumber": 1,
     "roundType": "league",
     "roundLabel": "8. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-02",
     "leagueStageLabel": "02",
     "leagueStageNumber": 1
@@ -596,6 +597,7 @@
     "id": "51520",
     "matchCode": "7572",
     "season": "1993-1994",
+    "week": 2,
     "competition": "Fortis Türkiye Kupası (Profesyonel Takım) (2. Kademe)",
     "competitionType": "cup",
     "competitionLabel": "Ziraat Türkiye Kupası",
@@ -644,7 +646,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=51520",
-      "retrievedAt": "2026-07-12T17:38:26.784142Z",
+      "retrievedAt": "2026-07-17T19:33:25.000666Z",
       "sourceType": "official_tff_match_detail"
     },
     "roundType": "cup"
@@ -703,7 +705,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=51400",
-      "retrievedAt": "2026-07-12T17:38:26.021389Z",
+      "retrievedAt": "2026-07-17T19:33:24.447381Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 9,
@@ -711,7 +713,7 @@
     "stageNumber": 1,
     "roundType": "league",
     "roundLabel": "9. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-02",
     "leagueStageLabel": "02",
     "leagueStageNumber": 1
@@ -770,7 +772,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=51539",
-      "retrievedAt": "2026-07-12T17:38:27.371876Z",
+      "retrievedAt": "2026-07-17T19:33:24.670044Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 10,
@@ -778,7 +780,7 @@
     "stageNumber": 1,
     "roundType": "league",
     "roundLabel": "10. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-02",
     "leagueStageLabel": "02",
     "leagueStageNumber": 1
@@ -837,7 +839,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=51665",
-      "retrievedAt": "2026-07-12T17:38:28.151764Z",
+      "retrievedAt": "2026-07-17T19:33:25.575055Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 11,
@@ -845,7 +847,7 @@
     "stageNumber": 1,
     "roundType": "league",
     "roundLabel": "11. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-02",
     "leagueStageLabel": "02",
     "leagueStageNumber": 1
@@ -904,7 +906,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=51809",
-      "retrievedAt": "2026-07-12T17:38:27.930881Z",
+      "retrievedAt": "2026-07-17T19:33:24.743334Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 12,
@@ -912,7 +914,7 @@
     "stageNumber": 1,
     "roundType": "league",
     "roundLabel": "12. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-02",
     "leagueStageLabel": "02",
     "leagueStageNumber": 1
@@ -971,7 +973,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=51882",
-      "retrievedAt": "2026-07-12T17:38:27.541400Z",
+      "retrievedAt": "2026-07-17T19:33:24.952527Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 13,
@@ -979,7 +981,7 @@
     "stageNumber": 1,
     "roundType": "league",
     "roundLabel": "13. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-02",
     "leagueStageLabel": "02",
     "leagueStageNumber": 1
@@ -1038,7 +1040,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=51999",
-      "retrievedAt": "2026-07-12T17:38:28.077632Z",
+      "retrievedAt": "2026-07-17T19:33:25.050047Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 14,
@@ -1046,7 +1048,7 @@
     "stageNumber": 1,
     "roundType": "league",
     "roundLabel": "14. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-02",
     "leagueStageLabel": "02",
     "leagueStageNumber": 1
@@ -1105,7 +1107,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=52080",
-      "retrievedAt": "2026-07-12T17:38:28.538376Z",
+      "retrievedAt": "2026-07-17T19:33:25.621121Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 15,
@@ -1113,7 +1115,7 @@
     "stageNumber": 1,
     "roundType": "league",
     "roundLabel": "15. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-02",
     "leagueStageLabel": "02",
     "leagueStageNumber": 1
@@ -1172,7 +1174,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=52259",
-      "retrievedAt": "2026-07-12T17:38:28.671725Z",
+      "retrievedAt": "2026-07-17T19:33:25.956840Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 16,
@@ -1180,7 +1182,7 @@
     "stageNumber": 1,
     "roundType": "league",
     "roundLabel": "16. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-02",
     "leagueStageLabel": "02",
     "leagueStageNumber": 1
@@ -1239,7 +1241,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=52337",
-      "retrievedAt": "2026-07-12T17:38:29.429604Z",
+      "retrievedAt": "2026-07-17T19:33:25.336723Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 17,
@@ -1247,7 +1249,7 @@
     "stageNumber": 1,
     "roundType": "league",
     "roundLabel": "17. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-02",
     "leagueStageLabel": "02",
     "leagueStageNumber": 1
@@ -1306,7 +1308,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=52412",
-      "retrievedAt": "2026-07-12T17:38:29.580037Z",
+      "retrievedAt": "2026-07-17T19:33:25.452415Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 18,
@@ -1314,7 +1316,7 @@
     "stageNumber": 1,
     "roundType": "league",
     "roundLabel": "18. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-02",
     "leagueStageLabel": "02",
     "leagueStageNumber": 1
@@ -1373,7 +1375,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=52562",
-      "retrievedAt": "2026-07-12T17:38:29.374592Z",
+      "retrievedAt": "2026-07-17T19:33:26.091570Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 1,
@@ -1381,7 +1383,7 @@
     "stageNumber": 2,
     "roundType": "league",
     "roundLabel": "1. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-k2",
     "leagueStageLabel": "K2",
     "leagueStageNumber": 2
@@ -1440,7 +1442,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=52676",
-      "retrievedAt": "2026-07-12T17:38:30.190389Z",
+      "retrievedAt": "2026-07-17T19:33:26.133513Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 2,
@@ -1448,7 +1450,7 @@
     "stageNumber": 2,
     "roundType": "league",
     "roundLabel": "2. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-k2",
     "leagueStageLabel": "K2",
     "leagueStageNumber": 2
@@ -1507,7 +1509,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=52789",
-      "retrievedAt": "2026-07-12T17:38:29.744621Z",
+      "retrievedAt": "2026-07-17T19:33:26.240181Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 3,
@@ -1515,7 +1517,7 @@
     "stageNumber": 2,
     "roundType": "league",
     "roundLabel": "3. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-k2",
     "leagueStageLabel": "K2",
     "leagueStageNumber": 2
@@ -1574,7 +1576,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=52861",
-      "retrievedAt": "2026-07-12T17:38:30.435703Z",
+      "retrievedAt": "2026-07-17T19:33:26.456867Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 4,
@@ -1582,7 +1584,7 @@
     "stageNumber": 2,
     "roundType": "league",
     "roundLabel": "4. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-k2",
     "leagueStageLabel": "K2",
     "leagueStageNumber": 2
@@ -1641,7 +1643,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=52975",
-      "retrievedAt": "2026-07-12T17:38:30.764065Z",
+      "retrievedAt": "2026-07-17T19:33:26.593795Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 5,
@@ -1649,7 +1651,7 @@
     "stageNumber": 2,
     "roundType": "league",
     "roundLabel": "5. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-k2",
     "leagueStageLabel": "K2",
     "leagueStageNumber": 2
@@ -1708,7 +1710,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=53123",
-      "retrievedAt": "2026-07-12T17:38:31.341194Z",
+      "retrievedAt": "2026-07-17T19:33:26.532615Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 6,
@@ -1716,7 +1718,7 @@
     "stageNumber": 2,
     "roundType": "league",
     "roundLabel": "6. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-k2",
     "leagueStageLabel": "K2",
     "leagueStageNumber": 2
@@ -1775,7 +1777,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=53151",
-      "retrievedAt": "2026-07-12T17:38:31.365514Z",
+      "retrievedAt": "2026-07-17T19:33:26.658117Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 7,
@@ -1783,7 +1785,7 @@
     "stageNumber": 2,
     "roundType": "league",
     "roundLabel": "7. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-k2",
     "leagueStageLabel": "K2",
     "leagueStageNumber": 2
@@ -1842,7 +1844,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=53263",
-      "retrievedAt": "2026-07-12T17:38:31.420722Z",
+      "retrievedAt": "2026-07-17T19:33:27.611640Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 8,
@@ -1850,7 +1852,7 @@
     "stageNumber": 2,
     "roundType": "league",
     "roundLabel": "8. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-k2",
     "leagueStageLabel": "K2",
     "leagueStageNumber": 2
@@ -1909,7 +1911,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=53391",
-      "retrievedAt": "2026-07-12T17:38:31.614331Z",
+      "retrievedAt": "2026-07-17T19:33:27.033564Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 9,
@@ -1917,7 +1919,7 @@
     "stageNumber": 2,
     "roundType": "league",
     "roundLabel": "9. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-k2",
     "leagueStageLabel": "K2",
     "leagueStageNumber": 2
@@ -1976,7 +1978,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=53505",
-      "retrievedAt": "2026-07-12T17:38:31.945324Z",
+      "retrievedAt": "2026-07-17T19:33:27.357065Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 10,
@@ -1984,7 +1986,7 @@
     "stageNumber": 2,
     "roundType": "league",
     "roundLabel": "10. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-k2",
     "leagueStageLabel": "K2",
     "leagueStageNumber": 2
@@ -2043,7 +2045,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=53596",
-      "retrievedAt": "2026-07-12T17:38:32.669065Z",
+      "retrievedAt": "2026-07-17T19:33:27.555778Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 11,
@@ -2051,7 +2053,7 @@
     "stageNumber": 2,
     "roundType": "league",
     "roundLabel": "11. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-k2",
     "leagueStageLabel": "K2",
     "leagueStageNumber": 2
@@ -2110,7 +2112,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=53732",
-      "retrievedAt": "2026-07-12T17:38:32.757446Z",
+      "retrievedAt": "2026-07-17T19:33:27.626527Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 12,
@@ -2118,7 +2120,7 @@
     "stageNumber": 2,
     "roundType": "league",
     "roundLabel": "12. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-k2",
     "leagueStageLabel": "K2",
     "leagueStageNumber": 2
@@ -2177,7 +2179,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=53906",
-      "retrievedAt": "2026-07-12T17:38:32.880706Z",
+      "retrievedAt": "2026-07-17T19:33:28.377273Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 13,
@@ -2185,7 +2187,7 @@
     "stageNumber": 2,
     "roundType": "league",
     "roundLabel": "13. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-k2",
     "leagueStageLabel": "K2",
     "leagueStageNumber": 2
@@ -2244,7 +2246,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=53950",
-      "retrievedAt": "2026-07-12T17:38:32.984577Z",
+      "retrievedAt": "2026-07-17T19:33:27.851934Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 14,
@@ -2252,7 +2254,7 @@
     "stageNumber": 2,
     "roundType": "league",
     "roundLabel": "14. Hafta",
-    "roundSource": "stage_sequence_fallback",
+    "roundSource": "tff_club_fixture",
     "leagueStageId": "group-k2",
     "leagueStageLabel": "K2",
     "leagueStageNumber": 2

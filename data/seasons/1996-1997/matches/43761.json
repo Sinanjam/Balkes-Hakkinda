@@ -1017,20 +1017,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=43761",
-    "retrievedAt": "2026-07-12T17:38:12.373413Z",
+    "retrievedAt": "2026-07-17T19:33:13.537519Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "9 BALIKESİRSPOR 1-3 SOMA LİNYİTSPOR 20 Nisan 1997 Lig B K2",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=43761&pageID=29"
   },
   "week": 27,
   "standingsWeek": 27,
+  "clubFixture": {
+    "week": 9,
+    "rowText": "9 BALIKESİRSPOR 1-3 SOMA LİNYİTSPOR 20 Nisan 1997 Lig B K2",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=43761&pageID=29"
+  },
   "stageWeek": 9,
   "roundType": "league",
   "roundLabel": "9. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-k2",
   "leagueStageLabel": "Klasman K2",
   "leagueStageNumber": 2,

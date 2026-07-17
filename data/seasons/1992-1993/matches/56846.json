@@ -918,20 +918,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=56846",
-    "retrievedAt": "2026-07-12T17:38:33.388111Z",
+    "retrievedAt": "2026-07-17T19:33:31.514586Z",
     "sourceType": "official_tff_match_detail"
   },
+  "week": 31,
+  "standingsWeek": 31,
   "clubFixture": {
-    "week": 0,
+    "week": 9,
     "rowText": "9 BUCASPOR 0-2 BALIKESIRSPOR 28 Mart 1993 Lig B K2",
     "sourceUrl": "http://www.tff.org/Default.aspx?macID=56846&pageID=29"
   },
-  "week": 30,
-  "standingsWeek": 30,
-  "stageWeek": 8,
+  "stageWeek": 9,
   "roundType": "league",
-  "roundLabel": "8. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundLabel": "9. Hafta",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-k2",
   "leagueStageLabel": "K2",
   "leagueStageNumber": 2,

@@ -1081,20 +1081,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=68270",
-    "retrievedAt": "2026-07-12T17:37:40.895678Z",
+    "retrievedAt": "2026-07-17T19:32:43.870116Z",
     "sourceType": "official_tff_match_detail"
   },
+  "week": 20,
+  "standingsWeek": 20,
   "clubFixture": {
-    "week": 0,
+    "week": 20,
     "rowText": "20 BALIKESİRSPOR 1-1 KONYA ŞEKERSPOR 27 Ocak 2008 TFF 3. Lig 03",
     "sourceUrl": "http://www.tff.org/Default.aspx?macID=68270&pageID=29"
   },
-  "week": 19,
-  "standingsWeek": 19,
-  "stageWeek": 19,
+  "stageWeek": 20,
   "roundType": "league",
-  "roundLabel": "19. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundLabel": "20. Hafta",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-03",
   "leagueStageLabel": "03",
   "leagueStageNumber": 1

@@ -4,7 +4,7 @@
   "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
   "sourcePolicy": "TFF-only",
   "factoryVersion": "v5-professional-only-resilient",
-  "updatedAt": "2026-07-12T17:37:20.895263Z",
+  "updatedAt": "2026-07-17T19:32:25.369120Z",
   "summary": {
     "matches": 35,
     "wins": 22,
@@ -26,8 +26,24 @@
     "matchesIndex": "seasons/2012-2013/matches_index.json",
     "standingsByWeek": "seasons/2012-2013/standings_by_week.json"
   },
-  "sanitizedAt": "2026-07-12T17:38:45.700438Z",
+  "sanitizedAt": "2026-07-17T19:33:43.127808Z",
   "sanitizerVersion": "v1-professional-team-only",
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 32,
+    "won": 20,
+    "drawn": 9,
+    "lost": 3,
+    "goalsFor": 46,
+    "goalsAgainst": 20,
+    "goalDifference": 26,
+    "points": 69,
+    "rawPoints": 69,
+    "pointsDeducted": 0,
+    "finalRank": 1
+  },
   "leagueSummary": {
     "played": 32,
     "won": 20,
@@ -41,6 +57,6 @@
     "pointsDeducted": 0,
     "finalRank": 1
   },
-  "standingsUpdatedAt": "2026-07-12T17:54:15.033121Z",
-  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+  "standingsUpdatedAt": "2026-07-17T22:19:50.318806Z",
+  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing"
 }

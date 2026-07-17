@@ -922,20 +922,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=44078",
-    "retrievedAt": "2026-07-12T17:38:12.914697Z",
+    "retrievedAt": "2026-07-17T19:33:14.385571Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "12 BALIKESİRSPOR 2-0 Y.SALİHLİSPOR 11 Mayıs 1997 Lig B K2",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=44078&pageID=29"
   },
   "week": 30,
   "standingsWeek": 30,
+  "clubFixture": {
+    "week": 12,
+    "rowText": "12 BALIKESİRSPOR 2-0 Y.SALİHLİSPOR 11 Mayıs 1997 Lig B K2",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=44078&pageID=29"
+  },
   "stageWeek": 12,
   "roundType": "league",
   "roundLabel": "12. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-k2",
   "leagueStageLabel": "Klasman K2",
   "leagueStageNumber": 2,

@@ -962,20 +962,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=46075",
-    "retrievedAt": "2026-07-12T17:38:19.903090Z",
+    "retrievedAt": "2026-07-17T19:33:16.926584Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "3 BALIKESİRSPOR 1-0 MERSİN İDMAN YURDU 28 Ocak 1996 Lig B F",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=46075&pageID=29"
   },
   "week": 21,
   "standingsWeek": 21,
+  "clubFixture": {
+    "week": 3,
+    "rowText": "3 BALIKESİRSPOR 1-0 MERSİN İDMAN YURDU 28 Ocak 1996 Lig B F",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=46075&pageID=29"
+  },
   "stageWeek": 3,
   "roundType": "league",
   "roundLabel": "3. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-f",
   "leagueStageLabel": "Yükselme F",
   "leagueStageNumber": 2,

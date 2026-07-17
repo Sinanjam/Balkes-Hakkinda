@@ -1188,18 +1188,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=219409",
-    "retrievedAt": "2026-07-12T17:36:20.009661Z",
+    "retrievedAt": "2026-07-17T19:31:32.503676Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "2 TUZLASPOR A.Ş. 1-0 BALIKESİRSPOR 19 Eylül 2020 TFF 1. Lig",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=219409&pageID=29"
   },
   "week": 2,
   "standingsWeek": 2,
+  "clubFixture": {
+    "week": 2,
+    "rowText": "2 TUZLASPOR A.Ş. 1-0 BALIKESİRSPOR 19 Eylül 2020 TFF 1. Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=219409&pageID=29"
+  },
   "stageWeek": 2,
   "roundType": "league",
   "roundLabel": "2. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

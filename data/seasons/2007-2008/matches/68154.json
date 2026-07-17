@@ -1054,20 +1054,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=68154",
-    "retrievedAt": "2026-07-12T17:37:35.827903Z",
+    "retrievedAt": "2026-07-17T19:32:41.987347Z",
     "sourceType": "official_tff_match_detail"
   },
+  "week": 6,
+  "standingsWeek": 6,
   "clubFixture": {
-    "week": 0,
+    "week": 6,
     "rowText": "6 GÖZTEPE A.Ş. 1-1 BALIKESİRSPOR 7 Ekim 2007 TFF 3. Lig 03",
     "sourceUrl": "http://www.tff.org/Default.aspx?macID=68154&pageID=29"
   },
-  "week": 5,
-  "standingsWeek": 5,
-  "stageWeek": 5,
+  "stageWeek": 6,
   "roundType": "league",
-  "roundLabel": "5. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundLabel": "6. Hafta",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-03",
   "leagueStageLabel": "03",
   "leagueStageNumber": 1

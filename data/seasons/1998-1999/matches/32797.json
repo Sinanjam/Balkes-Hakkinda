@@ -1139,20 +1139,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=32797",
-    "retrievedAt": "2026-07-12T17:37:56.003179Z",
+    "retrievedAt": "2026-07-17T19:33:00.370715Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "3 BALIKESİRSPOR 2-4 ÖZ SAHRAYİ CEDİTSPOR 13 Eylül 1998 3. Lig 07",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=32797&pageID=29"
   },
   "week": 3,
   "standingsWeek": 3,
+  "clubFixture": {
+    "week": 3,
+    "rowText": "3 BALIKESİRSPOR 2-4 ÖZ SAHRAYİ CEDİTSPOR 13 Eylül 1998 3. Lig 07",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=32797&pageID=29"
+  },
   "stageWeek": 3,
   "roundType": "league",
   "roundLabel": "3. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-07",
   "leagueStageLabel": "07",
   "leagueStageNumber": 1

@@ -1062,20 +1062,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=59302",
-    "retrievedAt": "2026-07-12T17:38:37.041498Z",
+    "retrievedAt": "2026-07-17T19:33:34.087236Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "11 BALIKESIRSPOR 6-1 EDREMITSPOR 17 Kasım 1991 3. Lig 7",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=59302&pageID=29"
   },
   "week": 11,
   "standingsWeek": 11,
+  "clubFixture": {
+    "week": 11,
+    "rowText": "11 BALIKESIRSPOR 6-1 EDREMITSPOR 17 Kasım 1991 3. Lig 7",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=59302&pageID=29"
+  },
   "stageWeek": 11,
   "roundType": "league",
   "roundLabel": "11. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-7",
   "leagueStageLabel": "7",
   "leagueStageNumber": 1

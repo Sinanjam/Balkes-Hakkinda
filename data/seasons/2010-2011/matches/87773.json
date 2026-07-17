@@ -1135,20 +1135,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=87773",
-    "retrievedAt": "2026-07-12T17:37:29.968052Z",
+    "retrievedAt": "2026-07-17T19:32:31.431280Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "29 BALIKESİRSPOR 2-2 KOCAELİSPOR 30 Mart 2011 Spor Toto 2. Lig Kırmızı",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=87773&pageID=29"
   },
   "week": 29,
   "standingsWeek": 29,
+  "clubFixture": {
+    "week": 29,
+    "rowText": "29 BALIKESİRSPOR 2-2 KOCAELİSPOR 30 Mart 2011 Spor Toto 2. Lig Kırmızı",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=87773&pageID=29"
+  },
   "stageWeek": 29,
   "roundType": "league",
   "roundLabel": "29. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-kirmizi",
   "leagueStageLabel": "Kırmızı",
   "leagueStageNumber": 1

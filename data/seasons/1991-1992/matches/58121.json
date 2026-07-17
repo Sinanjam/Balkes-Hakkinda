@@ -1147,20 +1147,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=58121",
-    "retrievedAt": "2026-07-12T17:38:34.905067Z",
+    "retrievedAt": "2026-07-17T19:33:33.490409Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "2 BALIKESIRSPOR 9-1 BURHANIYESPOR 15 Eylül 1991 3. Lig 7",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=58121&pageID=29"
   },
   "week": 2,
   "standingsWeek": 2,
+  "clubFixture": {
+    "week": 2,
+    "rowText": "2 BALIKESIRSPOR 9-1 BURHANIYESPOR 15 Eylül 1991 3. Lig 7",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=58121&pageID=29"
+  },
   "stageWeek": 2,
   "roundType": "league",
   "roundLabel": "2. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-7",
   "leagueStageLabel": "7",
   "leagueStageNumber": 1

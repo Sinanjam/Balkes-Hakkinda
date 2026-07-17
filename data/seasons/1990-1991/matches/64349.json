@@ -801,20 +801,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=64349",
-    "retrievedAt": "2026-07-12T17:38:40.934556Z",
+    "retrievedAt": "2026-07-17T19:33:39.878956Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "18 BABAESKİSPOR 1-1 BALIKESIRSPOR 3 Şubat 1991 3. Lig 7",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=64349&pageID=29"
   },
   "week": 18,
   "standingsWeek": 18,
+  "clubFixture": {
+    "week": 18,
+    "rowText": "18 BABAESKİSPOR 1-1 BALIKESIRSPOR 3 Şubat 1991 3. Lig 7",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=64349&pageID=29"
+  },
   "stageWeek": 18,
   "roundType": "league",
   "roundLabel": "18. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-7",
   "leagueStageLabel": "7",
   "leagueStageNumber": 1

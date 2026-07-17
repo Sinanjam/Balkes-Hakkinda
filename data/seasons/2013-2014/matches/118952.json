@@ -1082,20 +1082,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=118952",
-    "retrievedAt": "2026-07-12T17:37:07.115090Z",
+    "retrievedAt": "2026-07-17T19:32:12.667203Z",
     "sourceType": "official_tff_match_detail"
   },
+  "week": 22,
+  "standingsWeek": 22,
   "clubFixture": {
-    "week": 0,
+    "week": 22,
     "rowText": "22 TEKDEN DENİZLİSPOR 1-0 BALIKESİRSPOR 27 Ocak 2014 PTT 1.Lig",
     "sourceUrl": "http://www.tff.org/Default.aspx?macID=118952&pageID=29"
   },
-  "week": 21,
-  "standingsWeek": 21,
-  "stageWeek": 21,
+  "stageWeek": 22,
   "roundType": "league",
-  "roundLabel": "21. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundLabel": "22. Hafta",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-lig",
   "leagueStageLabel": "Lig",
   "leagueStageNumber": 1

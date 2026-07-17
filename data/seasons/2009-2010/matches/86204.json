@@ -1168,20 +1168,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=86204",
-    "retrievedAt": "2026-07-12T17:37:33.609118Z",
+    "retrievedAt": "2026-07-17T19:32:36.101198Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "15 BALIKESİRSPOR 1-1 ANADOLU ÜSKÜDAR 1908 SPOR 18 Nisan 2010 TFF 3.Lig Yükselme Yükselme",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=86204&pageID=29"
   },
   "week": 37,
   "standingsWeek": 37,
+  "clubFixture": {
+    "week": 15,
+    "rowText": "15 BALIKESİRSPOR 1-1 ANADOLU ÜSKÜDAR 1908 SPOR 18 Nisan 2010 TFF 3.Lig Yükselme Yükselme",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=86204&pageID=29"
+  },
   "stageWeek": 15,
   "roundType": "league",
   "roundLabel": "15. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "standalone-yukselme-grubu",
   "leagueStageLabel": "Yükselme Grubu",
   "leagueStageNumber": 2,

@@ -951,20 +951,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=44821",
-    "retrievedAt": "2026-07-12T17:38:15.415572Z",
+    "retrievedAt": "2026-07-17T19:33:14.964090Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "8 BUCASPOR 1-2 BALIKESİRSPOR 1 Ekim 1995 Lig B Klasman 02",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=44821&pageID=29"
   },
   "week": 8,
   "standingsWeek": 8,
+  "clubFixture": {
+    "week": 8,
+    "rowText": "8 BUCASPOR 1-2 BALIKESİRSPOR 1 Ekim 1995 Lig B Klasman 02",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=44821&pageID=29"
+  },
   "stageWeek": 8,
   "roundType": "league",
   "roundLabel": "8. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-02",
   "leagueStageLabel": "Kademe 02",
   "leagueStageNumber": 1,

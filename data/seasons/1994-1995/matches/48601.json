@@ -931,20 +931,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=48601",
-    "retrievedAt": "2026-07-12T17:38:18.125010Z",
+    "retrievedAt": "2026-07-17T19:33:20.675115Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "13 BALIKESIRSPOR 0-3 MUĞLASPOR 6 Kasım 1994 Lig B Klasman 02",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=48601&pageID=29"
   },
   "week": 13,
   "standingsWeek": 13,
+  "clubFixture": {
+    "week": 13,
+    "rowText": "13 BALIKESIRSPOR 0-3 MUĞLASPOR 6 Kasım 1994 Lig B Klasman 02",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=48601&pageID=29"
+  },
   "stageWeek": 13,
   "roundType": "league",
   "roundLabel": "13. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-02",
   "leagueStageLabel": "02",
   "leagueStageNumber": 1,

@@ -905,20 +905,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=42166",
-    "retrievedAt": "2026-07-12T17:38:09.410352Z",
+    "retrievedAt": "2026-07-17T19:33:11.598273Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "18 BALIKESİRSPOR 2-1 GÖZTEPE 8 Aralık 1996 Lig B Klasman 02",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=42166&pageID=29"
   },
   "week": 18,
   "standingsWeek": 18,
+  "clubFixture": {
+    "week": 18,
+    "rowText": "18 BALIKESİRSPOR 2-1 GÖZTEPE 8 Aralık 1996 Lig B Klasman 02",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=42166&pageID=29"
+  },
   "stageWeek": 18,
   "roundType": "league",
   "roundLabel": "18. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-02",
   "leagueStageLabel": "Kademe 02",
   "leagueStageNumber": 1,

@@ -918,20 +918,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=47561",
-    "retrievedAt": "2026-07-12T17:38:14.892389Z",
+    "retrievedAt": "2026-07-17T19:33:19.179916Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "1 BALIKESIRSPOR 1-1 Y.TURGUTLUSPOR 14 Ağustos 1994 Lig B Klasman 02",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=47561&pageID=29"
   },
   "week": 1,
   "standingsWeek": 1,
+  "clubFixture": {
+    "week": 1,
+    "rowText": "1 BALIKESIRSPOR 1-1 Y.TURGUTLUSPOR 14 Ağustos 1994 Lig B Klasman 02",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=47561&pageID=29"
+  },
   "stageWeek": 1,
   "roundType": "league",
   "roundLabel": "1. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-02",
   "leagueStageLabel": "02",
   "leagueStageNumber": 1,

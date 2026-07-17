@@ -782,20 +782,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=63666",
-    "retrievedAt": "2026-07-12T17:38:36.950974Z",
+    "retrievedAt": "2026-07-17T19:33:37.619365Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "4 BOZÜYÜKSPOR 1-2 BALIKESIRSPOR 7 Ekim 1990 3. Lig 7",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=63666&pageID=29"
   },
   "week": 4,
   "standingsWeek": 4,
+  "clubFixture": {
+    "week": 4,
+    "rowText": "4 BOZÜYÜKSPOR 1-2 BALIKESIRSPOR 7 Ekim 1990 3. Lig 7",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=63666&pageID=29"
+  },
   "stageWeek": 4,
   "roundType": "league",
   "roundLabel": "4. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-7",
   "leagueStageLabel": "7",
   "leagueStageNumber": 1

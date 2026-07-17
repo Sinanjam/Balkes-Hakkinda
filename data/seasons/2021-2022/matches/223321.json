@@ -1299,18 +1299,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=223321",
-    "retrievedAt": "2026-07-12T17:36:18.130519Z",
+    "retrievedAt": "2026-07-17T19:31:22.121428Z",
     "sourceType": "official_tff_match_detail"
   },
+  "week": 4,
+  "standingsWeek": 4,
   "clubFixture": {
-    "week": 0,
+    "week": 4,
     "rowText": "4 BALIKESİRSPOR 0-1 TUZLASPOR A.Ş. 13 Eylül 2021 Spor Toto 1. Lig",
     "sourceUrl": "http://www.tff.org/Default.aspx?macID=223321&pageID=29"
   },
-  "week": 3,
-  "standingsWeek": 3,
-  "stageWeek": 3,
+  "stageWeek": 4,
   "roundType": "league",
-  "roundLabel": "3. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundLabel": "4. Hafta",
+  "roundSource": "tff_club_fixture"
 }

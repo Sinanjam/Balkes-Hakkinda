@@ -839,20 +839,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=48014",
-    "retrievedAt": "2026-07-12T17:38:16.634424Z",
+    "retrievedAt": "2026-07-17T19:33:19.589384Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "8 BALIKESIRSPOR 0-0 GÖZTEPE 2 Ekim 1994 Lig B Klasman 02",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=48014&pageID=29"
   },
   "week": 8,
   "standingsWeek": 8,
+  "clubFixture": {
+    "week": 8,
+    "rowText": "8 BALIKESIRSPOR 0-0 GÖZTEPE 2 Ekim 1994 Lig B Klasman 02",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=48014&pageID=29"
+  },
   "stageWeek": 8,
   "roundType": "league",
   "roundLabel": "8. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-02",
   "leagueStageLabel": "02",
   "leagueStageNumber": 1,

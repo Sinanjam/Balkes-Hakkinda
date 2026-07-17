@@ -1035,20 +1035,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=140294",
-    "retrievedAt": "2026-07-12T17:36:52.051111Z",
+    "retrievedAt": "2026-07-17T19:31:56.860039Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "2 ALANYASPOR 1-1 BALIKESİRSPOR 22 Ağustos 2015 PTT 1.Lig",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=140294&pageID=29"
   },
   "week": 2,
   "standingsWeek": 2,
+  "clubFixture": {
+    "week": 2,
+    "rowText": "2 ALANYASPOR 1-1 BALIKESİRSPOR 22 Ağustos 2015 PTT 1.Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=140294&pageID=29"
+  },
   "stageWeek": 2,
   "roundType": "league",
   "roundLabel": "2. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-lig",
   "leagueStageLabel": "Lig",
   "leagueStageNumber": 1

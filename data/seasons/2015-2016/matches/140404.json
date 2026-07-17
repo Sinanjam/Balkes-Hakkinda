@@ -1032,20 +1032,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=140404",
-    "retrievedAt": "2026-07-12T17:36:54.795526Z",
+    "retrievedAt": "2026-07-17T19:32:01.127940Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "14 BALIKESİRSPOR 0-0 KARŞIYAKA 6 Aralık 2015 PTT 1.Lig",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=140404&pageID=29"
   },
   "week": 14,
   "standingsWeek": 14,
+  "clubFixture": {
+    "week": 14,
+    "rowText": "14 BALIKESİRSPOR 0-0 KARŞIYAKA 6 Aralık 2015 PTT 1.Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=140404&pageID=29"
+  },
   "stageWeek": 14,
   "roundType": "league",
   "roundLabel": "14. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-lig",
   "leagueStageLabel": "Lig",
   "leagueStageNumber": 1

@@ -847,20 +847,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=60263",
-    "retrievedAt": "2026-07-12T17:38:38.907548Z",
+    "retrievedAt": "2026-07-17T19:33:35.549825Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "19 BURHANIYESPOR 0-1 BALIKESIRSPOR 16 Şubat 1992 3. Lig 7",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=60263&pageID=29"
   },
   "week": 19,
   "standingsWeek": 19,
+  "clubFixture": {
+    "week": 19,
+    "rowText": "19 BURHANIYESPOR 0-1 BALIKESIRSPOR 16 Şubat 1992 3. Lig 7",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=60263&pageID=29"
+  },
   "stageWeek": 19,
   "roundType": "league",
   "roundLabel": "19. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-7",
   "leagueStageLabel": "7",
   "leagueStageNumber": 1

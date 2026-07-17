@@ -4,7 +4,7 @@
   "competition": "Lig B Klasman (Profesyonel Takım)",
   "sourcePolicy": "TFF-only",
   "factoryVersion": "v5-professional-only-resilient",
-  "updatedAt": "2026-07-12T17:38:33.595699Z",
+  "updatedAt": "2026-07-17T19:33:32.116808Z",
   "summary": {
     "matches": 34,
     "wins": 12,
@@ -26,7 +26,7 @@
     "matchesIndex": "seasons/1993-1994/matches_index.json",
     "standingsByWeek": "seasons/1993-1994/standings_by_week.json"
   },
-  "sanitizedAt": "2026-07-12T17:38:46.032035Z",
+  "sanitizedAt": "2026-07-17T19:33:43.467146Z",
   "sanitizerVersion": "v1-professional-team-only",
   "leagueStages": [
     {
@@ -66,6 +66,22 @@
       "officialTableIsCumulative": false
     }
   ],
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 32,
+    "won": 11,
+    "drawn": 10,
+    "lost": 11,
+    "goalsFor": 39,
+    "goalsAgainst": 35,
+    "points": 43,
+    "rawPoints": 43,
+    "pointsDeducted": 0,
+    "goalDifference": 4,
+    "finalRank": 6
+  },
   "leagueSummary": {
     "played": 32,
     "won": 11,
@@ -79,6 +95,6 @@
     "goalDifference": 4,
     "finalRank": 6
   },
-  "standingsUpdatedAt": "2026-07-12T18:01:28.436681Z",
-  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+  "standingsUpdatedAt": "2026-07-17T22:28:36.675101Z",
+  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing"
 }

@@ -1,9 +1,27 @@
 {
-  "generatedAt": "2026-07-12T17:38:46.788656Z",
+  "generatedAt": "2026-07-17T19:33:44.247302Z",
   "sourcePolicy": "TFF-only",
   "factoryVersion": "v5-professional-only-resilient",
-  "totalAppMatches": 1083,
+  "totalAppMatches": 1117,
   "seasons": [
+    {
+      "id": "2026-2027",
+      "name": "2026-2027",
+      "matchCount": 34,
+      "competition": "Nesine 3. Lig (Profesyonel Takım)",
+      "summary": {
+        "matches": 34,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "matchTypes": {
+          "league": 34
+        }
+      }
+    },
     {
       "id": "2025-2026",
       "name": "2025-2026",
@@ -595,7 +613,7 @@
     }
   ],
   "playersIndexed": 8551,
-  "opponentsIndexed": 278,
+  "opponentsIndexed": 282,
   "notes": [
     "Puan tablosu bu factory içinde çekilmez; Nix standings hattı kullanılacak.",
     "Raw HTML repo'ya commitlenmez; artifact olarak saklanır."

@@ -991,20 +991,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=32176",
-    "retrievedAt": "2026-07-12T17:38:02.193716Z",
+    "retrievedAt": "2026-07-17T19:32:59.396356Z",
     "sourceType": "official_tff_match_detail"
   },
+  "week": 33,
+  "standingsWeek": 33,
   "clubFixture": {
-    "week": 0,
+    "week": 33,
     "rowText": "33 GÖNENSPOR 0-0 BALIKESİRSPOR 17 Mayıs 2000 3. Lig 06",
     "sourceUrl": "http://www.tff.org/Default.aspx?macID=32176&pageID=29"
   },
-  "week": 32,
-  "standingsWeek": 32,
-  "stageWeek": 32,
+  "stageWeek": 33,
   "roundType": "league",
-  "roundLabel": "32. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundLabel": "33. Hafta",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-06",
   "leagueStageLabel": "06",
   "leagueStageNumber": 1

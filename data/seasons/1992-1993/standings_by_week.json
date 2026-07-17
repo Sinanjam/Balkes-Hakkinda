@@ -2,8 +2,8 @@
   {
     "week": 1,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:19.587312Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:27.529671Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=1",
     "standings": [
       {
@@ -20,7 +20,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 2,
@@ -36,7 +37,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 3,
@@ -52,7 +54,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 4,
@@ -68,7 +71,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 5,
@@ -84,7 +88,8 @@
         "rawPoints": 1,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 6,
@@ -100,7 +105,8 @@
         "rawPoints": 1,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 7,
@@ -116,7 +122,8 @@
         "rawPoints": 0,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 8,
@@ -132,7 +139,8 @@
         "rawPoints": 0,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 9,
@@ -148,7 +156,8 @@
         "rawPoints": 0,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 10,
@@ -164,7 +173,8 @@
         "rawPoints": 0,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       }
     ],
     "warnings": [],
@@ -179,8 +189,8 @@
   {
     "week": 2,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:19.893271Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:27.710032Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=2",
     "standings": [
       {
@@ -197,7 +207,8 @@
         "rawPoints": 6,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 2,
@@ -213,7 +224,8 @@
         "rawPoints": 6,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 3,
@@ -229,7 +241,8 @@
         "rawPoints": 6,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 4,
@@ -245,7 +258,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 5,
@@ -261,7 +275,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 6,
@@ -277,7 +292,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 7,
@@ -293,7 +309,8 @@
         "rawPoints": 1,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 8,
@@ -309,7 +326,8 @@
         "rawPoints": 1,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 9,
@@ -325,7 +343,8 @@
         "rawPoints": 0,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 10,
@@ -341,7 +360,8 @@
         "rawPoints": 0,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 11,
@@ -357,7 +377,8 @@
         "rawPoints": 0,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       }
     ],
     "warnings": [],
@@ -372,8 +393,8 @@
   {
     "week": 3,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:19.511860Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:26.975155Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=3",
     "standings": [
       {
@@ -390,7 +411,8 @@
         "rawPoints": 9,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 2,
@@ -406,7 +428,8 @@
         "rawPoints": 7,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 3,
@@ -422,7 +445,8 @@
         "rawPoints": 7,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 4,
@@ -438,7 +462,8 @@
         "rawPoints": 6,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 5,
@@ -454,7 +479,8 @@
         "rawPoints": 4,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 6,
@@ -470,7 +496,8 @@
         "rawPoints": 4,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 7,
@@ -486,7 +513,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 8,
@@ -502,7 +530,8 @@
         "rawPoints": 2,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 9,
@@ -518,7 +547,8 @@
         "rawPoints": 0,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 10,
@@ -534,7 +564,8 @@
         "rawPoints": 0,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 11,
@@ -550,7 +581,8 @@
         "rawPoints": 0,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       }
     ],
     "warnings": [],
@@ -565,8 +597,8 @@
   {
     "week": 4,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:19.821029Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:28.031441Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=4",
     "standings": [
       {
@@ -583,7 +615,8 @@
         "rawPoints": 9,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 2,
@@ -599,7 +632,8 @@
         "rawPoints": 8,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 3,
@@ -615,7 +649,8 @@
         "rawPoints": 7,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 4,
@@ -631,7 +666,8 @@
         "rawPoints": 6,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 5,
@@ -647,7 +683,8 @@
         "rawPoints": 6,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 6,
@@ -663,7 +700,8 @@
         "rawPoints": 5,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 7,
@@ -679,7 +717,8 @@
         "rawPoints": 5,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 8,
@@ -695,7 +734,8 @@
         "rawPoints": 4,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 9,
@@ -711,7 +751,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 10,
@@ -727,7 +768,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 11,
@@ -743,7 +785,8 @@
         "rawPoints": 0,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       }
     ],
     "warnings": [],
@@ -758,8 +801,8 @@
   {
     "week": 5,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:19.980459Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:27.565210Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=5",
     "standings": [
       {
@@ -776,7 +819,8 @@
         "rawPoints": 10,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 2,
@@ -792,7 +836,8 @@
         "rawPoints": 9,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 3,
@@ -808,7 +853,8 @@
         "rawPoints": 9,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 4,
@@ -824,7 +870,8 @@
         "rawPoints": 8,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 5,
@@ -840,7 +887,8 @@
         "rawPoints": 7,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 6,
@@ -856,7 +904,8 @@
         "rawPoints": 6,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 7,
@@ -872,7 +921,8 @@
         "rawPoints": 6,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 8,
@@ -888,7 +938,8 @@
         "rawPoints": 5,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 9,
@@ -904,7 +955,8 @@
         "rawPoints": 4,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 10,
@@ -920,7 +972,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 11,
@@ -936,7 +989,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       }
     ],
     "warnings": [],
@@ -951,8 +1005,8 @@
   {
     "week": 6,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:21.113340Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:29.499116Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=6",
     "standings": [
       {
@@ -969,7 +1023,8 @@
         "rawPoints": 12,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 2,
@@ -985,7 +1040,8 @@
         "rawPoints": 10,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 3,
@@ -1001,7 +1057,8 @@
         "rawPoints": 9,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 4,
@@ -1017,7 +1074,8 @@
         "rawPoints": 9,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 5,
@@ -1033,7 +1091,8 @@
         "rawPoints": 9,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 6,
@@ -1049,7 +1108,8 @@
         "rawPoints": 8,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 7,
@@ -1065,7 +1125,8 @@
         "rawPoints": 7,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 8,
@@ -1081,7 +1142,8 @@
         "rawPoints": 7,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 9,
@@ -1097,7 +1159,8 @@
         "rawPoints": 6,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 10,
@@ -1113,7 +1176,8 @@
         "rawPoints": 5,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 11,
@@ -1129,7 +1193,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       }
     ],
     "warnings": [],
@@ -1144,8 +1209,8 @@
   {
     "week": 7,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:21.260358Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:29.714310Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=7",
     "standings": [
       {
@@ -1162,7 +1227,8 @@
         "rawPoints": 15,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 2,
@@ -1178,7 +1244,8 @@
         "rawPoints": 12,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 3,
@@ -1194,7 +1261,8 @@
         "rawPoints": 12,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 4,
@@ -1210,7 +1278,8 @@
         "rawPoints": 11,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 5,
@@ -1226,7 +1295,8 @@
         "rawPoints": 10,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 6,
@@ -1242,7 +1312,8 @@
         "rawPoints": 10,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 7,
@@ -1258,7 +1329,8 @@
         "rawPoints": 9,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 8,
@@ -1274,7 +1346,8 @@
         "rawPoints": 7,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 9,
@@ -1290,7 +1363,8 @@
         "rawPoints": 6,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 10,
@@ -1306,7 +1380,8 @@
         "rawPoints": 5,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 11,
@@ -1322,7 +1397,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       }
     ],
     "warnings": [],
@@ -1337,8 +1413,8 @@
   {
     "week": 8,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:21.595978Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:29.617382Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=8",
     "standings": [
       {
@@ -1355,7 +1431,8 @@
         "rawPoints": 18,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 2,
@@ -1371,7 +1448,8 @@
         "rawPoints": 15,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 3,
@@ -1387,7 +1465,8 @@
         "rawPoints": 12,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 4,
@@ -1403,7 +1482,8 @@
         "rawPoints": 12,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 5,
@@ -1419,7 +1499,8 @@
         "rawPoints": 11,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 6,
@@ -1435,7 +1516,8 @@
         "rawPoints": 10,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 7,
@@ -1451,7 +1533,8 @@
         "rawPoints": 10,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 8,
@@ -1467,7 +1550,8 @@
         "rawPoints": 10,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 9,
@@ -1483,7 +1567,8 @@
         "rawPoints": 9,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 10,
@@ -1499,7 +1584,8 @@
         "rawPoints": 5,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 11,
@@ -1515,7 +1601,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       }
     ],
     "warnings": [],
@@ -1530,8 +1617,8 @@
   {
     "week": 9,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:21.858186Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:30.050956Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=9",
     "standings": [
       {
@@ -1548,7 +1635,8 @@
         "rawPoints": 19,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 2,
@@ -1564,7 +1652,8 @@
         "rawPoints": 18,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 3,
@@ -1580,7 +1669,8 @@
         "rawPoints": 14,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 4,
@@ -1596,7 +1686,8 @@
         "rawPoints": 12,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 5,
@@ -1612,7 +1703,8 @@
         "rawPoints": 12,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 6,
@@ -1628,7 +1720,8 @@
         "rawPoints": 11,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 7,
@@ -1644,7 +1737,8 @@
         "rawPoints": 11,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 8,
@@ -1660,7 +1754,8 @@
         "rawPoints": 10,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 9,
@@ -1676,7 +1771,8 @@
         "rawPoints": 9,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 10,
@@ -1692,7 +1788,8 @@
         "rawPoints": 8,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 11,
@@ -1708,7 +1805,8 @@
         "rawPoints": 4,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       }
     ],
     "warnings": [],
@@ -1723,8 +1821,8 @@
   {
     "week": 10,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:21.933588Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:30.252313Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=10",
     "standings": [
       {
@@ -1741,7 +1839,8 @@
         "rawPoints": 22,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 2,
@@ -1757,7 +1856,8 @@
         "rawPoints": 18,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 3,
@@ -1773,7 +1873,8 @@
         "rawPoints": 17,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 4,
@@ -1789,7 +1890,8 @@
         "rawPoints": 15,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 5,
@@ -1805,7 +1907,8 @@
         "rawPoints": 12,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 6,
@@ -1821,7 +1924,8 @@
         "rawPoints": 12,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 7,
@@ -1837,7 +1941,8 @@
         "rawPoints": 12,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 8,
@@ -1853,7 +1958,8 @@
         "rawPoints": 11,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 9,
@@ -1869,7 +1975,8 @@
         "rawPoints": 10,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 10,
@@ -1885,7 +1992,8 @@
         "rawPoints": 8,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 11,
@@ -1901,7 +2009,8 @@
         "rawPoints": 5,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       }
     ],
     "warnings": [],
@@ -1916,8 +2025,8 @@
   {
     "week": 11,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:23.299381Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:31.627675Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=11",
     "standings": [
       {
@@ -1934,7 +2043,8 @@
         "rawPoints": 22,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 2,
@@ -1950,7 +2060,8 @@
         "rawPoints": 18,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 3,
@@ -1966,7 +2077,8 @@
         "rawPoints": 17,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 4,
@@ -1982,7 +2094,8 @@
         "rawPoints": 16,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 5,
@@ -1998,7 +2111,8 @@
         "rawPoints": 15,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 6,
@@ -2014,7 +2128,8 @@
         "rawPoints": 14,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 7,
@@ -2030,7 +2145,8 @@
         "rawPoints": 13,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 8,
@@ -2046,7 +2162,8 @@
         "rawPoints": 12,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 9,
@@ -2062,7 +2179,8 @@
         "rawPoints": 11,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 10,
@@ -2078,7 +2196,8 @@
         "rawPoints": 10,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 11,
@@ -2094,7 +2213,8 @@
         "rawPoints": 8,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       }
     ],
     "warnings": [],
@@ -2109,8 +2229,8 @@
   {
     "week": 12,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:22.939390Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:31.490729Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=12",
     "standings": [
       {
@@ -2127,7 +2247,8 @@
         "rawPoints": 22,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 2,
@@ -2143,7 +2264,8 @@
         "rawPoints": 21,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 3,
@@ -2159,7 +2281,8 @@
         "rawPoints": 19,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 4,
@@ -2175,7 +2298,8 @@
         "rawPoints": 18,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 5,
@@ -2191,7 +2315,8 @@
         "rawPoints": 17,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 6,
@@ -2207,7 +2332,8 @@
         "rawPoints": 14,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 7,
@@ -2223,7 +2349,8 @@
         "rawPoints": 14,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 8,
@@ -2239,7 +2366,8 @@
         "rawPoints": 13,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 9,
@@ -2255,7 +2383,8 @@
         "rawPoints": 12,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 10,
@@ -2271,7 +2400,8 @@
         "rawPoints": 11,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 11,
@@ -2287,7 +2417,8 @@
         "rawPoints": 9,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       }
     ],
     "warnings": [],
@@ -2302,8 +2433,8 @@
   {
     "week": 13,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:23.151450Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:31.968487Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=13",
     "standings": [
       {
@@ -2320,7 +2451,8 @@
         "rawPoints": 25,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 2,
@@ -2336,7 +2468,8 @@
         "rawPoints": 21,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 3,
@@ -2352,7 +2485,8 @@
         "rawPoints": 20,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 4,
@@ -2368,7 +2502,8 @@
         "rawPoints": 19,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 5,
@@ -2384,7 +2519,8 @@
         "rawPoints": 18,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 6,
@@ -2400,7 +2536,8 @@
         "rawPoints": 17,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 7,
@@ -2416,7 +2553,8 @@
         "rawPoints": 15,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 8,
@@ -2432,7 +2570,8 @@
         "rawPoints": 14,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 9,
@@ -2448,7 +2587,8 @@
         "rawPoints": 13,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 10,
@@ -2464,7 +2604,8 @@
         "rawPoints": 12,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 11,
@@ -2480,7 +2621,8 @@
         "rawPoints": 11,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       }
     ],
     "warnings": [],
@@ -2495,8 +2637,8 @@
   {
     "week": 14,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:23.481252Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:31.905277Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=14",
     "standings": [
       {
@@ -2513,7 +2655,8 @@
         "rawPoints": 25,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 2,
@@ -2529,7 +2672,8 @@
         "rawPoints": 22,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 3,
@@ -2545,7 +2689,8 @@
         "rawPoints": 22,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 4,
@@ -2561,7 +2706,8 @@
         "rawPoints": 21,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 5,
@@ -2577,7 +2723,8 @@
         "rawPoints": 20,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 6,
@@ -2593,7 +2740,8 @@
         "rawPoints": 20,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 7,
@@ -2609,7 +2757,8 @@
         "rawPoints": 16,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 8,
@@ -2625,7 +2774,8 @@
         "rawPoints": 16,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 9,
@@ -2641,7 +2791,8 @@
         "rawPoints": 14,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 10,
@@ -2657,7 +2808,8 @@
         "rawPoints": 12,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 11,
@@ -2673,7 +2825,8 @@
         "rawPoints": 11,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       }
     ],
     "warnings": [],
@@ -2688,8 +2841,8 @@
   {
     "week": 15,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:23.609981Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:32.186239Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=15",
     "standings": [
       {
@@ -2706,7 +2859,8 @@
         "rawPoints": 25,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 2,
@@ -2722,7 +2876,8 @@
         "rawPoints": 23,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 3,
@@ -2738,7 +2893,8 @@
         "rawPoints": 22,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 4,
@@ -2754,7 +2910,8 @@
         "rawPoints": 22,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 5,
@@ -2770,7 +2927,8 @@
         "rawPoints": 21,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 6,
@@ -2786,7 +2944,8 @@
         "rawPoints": 20,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 7,
@@ -2802,7 +2961,8 @@
         "rawPoints": 19,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 8,
@@ -2818,7 +2978,8 @@
         "rawPoints": 17,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 9,
@@ -2834,7 +2995,8 @@
         "rawPoints": 16,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 10,
@@ -2850,7 +3012,8 @@
         "rawPoints": 15,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 11,
@@ -2866,7 +3029,8 @@
         "rawPoints": 14,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       }
     ],
     "warnings": [],
@@ -2881,8 +3045,8 @@
   {
     "week": 16,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:24.244431Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:33.811062Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=16",
     "standings": [
       {
@@ -2899,7 +3063,8 @@
         "rawPoints": 26,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 2,
@@ -2915,7 +3080,8 @@
         "rawPoints": 26,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 3,
@@ -2931,7 +3097,8 @@
         "rawPoints": 25,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 4,
@@ -2947,7 +3114,8 @@
         "rawPoints": 25,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 5,
@@ -2963,7 +3131,8 @@
         "rawPoints": 24,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 6,
@@ -2979,7 +3148,8 @@
         "rawPoints": 20,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 7,
@@ -2995,7 +3165,8 @@
         "rawPoints": 20,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 8,
@@ -3011,7 +3182,8 @@
         "rawPoints": 17,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 9,
@@ -3027,7 +3199,8 @@
         "rawPoints": 16,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 10,
@@ -3043,7 +3216,8 @@
         "rawPoints": 15,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 11,
@@ -3059,7 +3233,8 @@
         "rawPoints": 14,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       }
     ],
     "warnings": [],
@@ -3074,8 +3249,8 @@
   {
     "week": 17,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:24.531639Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:33.761362Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=17",
     "standings": [
       {
@@ -3092,7 +3267,8 @@
         "rawPoints": 29,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 2,
@@ -3108,7 +3284,8 @@
         "rawPoints": 28,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 3,
@@ -3124,7 +3301,8 @@
         "rawPoints": 27,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 4,
@@ -3140,7 +3318,8 @@
         "rawPoints": 26,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 5,
@@ -3156,7 +3335,8 @@
         "rawPoints": 25,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 6,
@@ -3172,7 +3352,8 @@
         "rawPoints": 20,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 7,
@@ -3188,7 +3369,8 @@
         "rawPoints": 20,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 8,
@@ -3204,7 +3386,8 @@
         "rawPoints": 20,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 9,
@@ -3220,7 +3403,8 @@
         "rawPoints": 17,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 10,
@@ -3236,7 +3420,8 @@
         "rawPoints": 16,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 11,
@@ -3252,7 +3437,8 @@
         "rawPoints": 15,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       }
     ],
     "warnings": [],
@@ -3267,8 +3453,8 @@
   {
     "week": 18,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:24.654608Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:34.178146Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=18",
     "standings": [
       {
@@ -3285,7 +3471,8 @@
         "rawPoints": 31,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 2,
@@ -3301,7 +3488,8 @@
         "rawPoints": 29,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 3,
@@ -3317,7 +3505,8 @@
         "rawPoints": 29,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 4,
@@ -3333,7 +3522,8 @@
         "rawPoints": 28,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 5,
@@ -3349,7 +3539,8 @@
         "rawPoints": 27,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 6,
@@ -3365,7 +3556,8 @@
         "rawPoints": 23,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 7,
@@ -3381,7 +3573,8 @@
         "rawPoints": 23,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 8,
@@ -3397,7 +3590,8 @@
         "rawPoints": 20,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 9,
@@ -3413,7 +3607,8 @@
         "rawPoints": 17,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 10,
@@ -3429,7 +3624,8 @@
         "rawPoints": 16,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 11,
@@ -3445,7 +3641,8 @@
         "rawPoints": 15,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       }
     ],
     "warnings": [],
@@ -3460,8 +3657,8 @@
   {
     "week": 19,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:24.881295Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:33.965021Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=19",
     "standings": [
       {
@@ -3478,7 +3675,8 @@
         "rawPoints": 32,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 2,
@@ -3494,7 +3692,8 @@
         "rawPoints": 31,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 3,
@@ -3510,7 +3709,8 @@
         "rawPoints": 30,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 4,
@@ -3526,7 +3726,8 @@
         "rawPoints": 29,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 5,
@@ -3542,7 +3743,8 @@
         "rawPoints": 29,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 6,
@@ -3558,7 +3760,8 @@
         "rawPoints": 24,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 7,
@@ -3574,7 +3777,8 @@
         "rawPoints": 23,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 8,
@@ -3590,7 +3794,8 @@
         "rawPoints": 21,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 9,
@@ -3606,7 +3811,8 @@
         "rawPoints": 18,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 10,
@@ -3622,7 +3828,8 @@
         "rawPoints": 18,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 11,
@@ -3638,7 +3845,8 @@
         "rawPoints": 16,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       }
     ],
     "warnings": [],
@@ -3653,8 +3861,8 @@
   {
     "week": 20,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:25.001895Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:34.355671Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=20",
     "standings": [
       {
@@ -3671,7 +3879,8 @@
         "rawPoints": 35,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 2,
@@ -3687,7 +3896,8 @@
         "rawPoints": 32,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 3,
@@ -3703,7 +3913,8 @@
         "rawPoints": 32,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 4,
@@ -3719,7 +3930,8 @@
         "rawPoints": 31,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 5,
@@ -3735,7 +3947,8 @@
         "rawPoints": 30,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 6,
@@ -3751,7 +3964,8 @@
         "rawPoints": 27,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 7,
@@ -3767,7 +3981,8 @@
         "rawPoints": 23,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 8,
@@ -3783,7 +3998,8 @@
         "rawPoints": 21,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 9,
@@ -3799,7 +4015,8 @@
         "rawPoints": 19,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 10,
@@ -3815,7 +4032,8 @@
         "rawPoints": 18,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 11,
@@ -3831,7 +4049,8 @@
         "rawPoints": 18,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       }
     ],
     "warnings": [],
@@ -3846,8 +4065,8 @@
   {
     "week": 21,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:25.801827Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:35.475977Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=21",
     "standings": [
       {
@@ -3864,7 +4083,8 @@
         "rawPoints": 38,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 2,
@@ -3880,7 +4100,8 @@
         "rawPoints": 35,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 3,
@@ -3896,7 +4117,8 @@
         "rawPoints": 32,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 4,
@@ -3912,7 +4134,8 @@
         "rawPoints": 31,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 5,
@@ -3928,7 +4151,8 @@
         "rawPoints": 30,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 6,
@@ -3944,7 +4168,8 @@
         "rawPoints": 27,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 7,
@@ -3960,7 +4185,8 @@
         "rawPoints": 26,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 8,
@@ -3976,7 +4202,8 @@
         "rawPoints": 22,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 9,
@@ -3992,7 +4219,8 @@
         "rawPoints": 21,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 10,
@@ -4008,7 +4236,8 @@
         "rawPoints": 21,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 11,
@@ -4024,7 +4253,8 @@
         "rawPoints": 18,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       }
     ],
     "warnings": [],
@@ -4039,8 +4269,8 @@
   {
     "week": 22,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:26.161784Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:35.609910Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=336&hafta=22",
     "standings": [
       {
@@ -4057,7 +4287,8 @@
         "rawPoints": 41,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "81"
       },
       {
         "rank": 2,
@@ -4073,7 +4304,8 @@
         "rawPoints": 35,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "106"
       },
       {
         "rank": 3,
@@ -4089,7 +4321,8 @@
         "rawPoints": 35,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 4,
@@ -4105,7 +4338,8 @@
         "rawPoints": 31,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 5,
@@ -4121,7 +4355,8 @@
         "rawPoints": 30,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 6,
@@ -4137,7 +4372,8 @@
         "rawPoints": 28,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 7,
@@ -4153,7 +4389,8 @@
         "rawPoints": 26,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 8,
@@ -4169,7 +4406,8 @@
         "rawPoints": 25,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 9,
@@ -4185,7 +4423,8 @@
         "rawPoints": 22,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 10,
@@ -4201,7 +4440,8 @@
         "rawPoints": 21,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 11,
@@ -4217,7 +4457,8 @@
         "rawPoints": 21,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       }
     ],
     "warnings": [],
@@ -4232,8 +4473,8 @@
   {
     "week": 23,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:27.533596Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:36.843180Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=341&hafta=1",
     "standings": [
       {
@@ -4250,7 +4491,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 2,
@@ -4266,7 +4508,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 3,
@@ -4282,7 +4525,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 4,
@@ -4298,7 +4542,8 @@
         "rawPoints": 1,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 5,
@@ -4314,7 +4559,8 @@
         "rawPoints": 1,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 6,
@@ -4330,7 +4576,8 @@
         "rawPoints": 0,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 7,
@@ -4346,7 +4593,8 @@
         "rawPoints": 0,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 8,
@@ -4362,7 +4610,8 @@
         "rawPoints": 0,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       }
     ],
     "warnings": [],
@@ -4377,8 +4626,8 @@
   {
     "week": 24,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:27.324180Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:37.102509Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=341&hafta=2",
     "standings": [
       {
@@ -4395,7 +4644,8 @@
         "rawPoints": 4,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 2,
@@ -4411,7 +4661,8 @@
         "rawPoints": 4,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 3,
@@ -4427,7 +4678,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 4,
@@ -4443,7 +4695,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 5,
@@ -4459,7 +4712,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 6,
@@ -4475,7 +4729,8 @@
         "rawPoints": 2,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 7,
@@ -4491,7 +4746,8 @@
         "rawPoints": 1,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 8,
@@ -4507,7 +4763,8 @@
         "rawPoints": 1,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 9,
@@ -4523,7 +4780,8 @@
         "rawPoints": 0,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       }
     ],
     "warnings": [],
@@ -4538,8 +4796,8 @@
   {
     "week": 25,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:27.694466Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:37.442475Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=341&hafta=3",
     "standings": [
       {
@@ -4556,7 +4814,8 @@
         "rawPoints": 6,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 2,
@@ -4572,7 +4831,8 @@
         "rawPoints": 4,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 3,
@@ -4588,7 +4848,8 @@
         "rawPoints": 4,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 4,
@@ -4604,7 +4865,8 @@
         "rawPoints": 4,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 5,
@@ -4620,7 +4882,8 @@
         "rawPoints": 4,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 6,
@@ -4636,7 +4899,8 @@
         "rawPoints": 4,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 7,
@@ -4652,7 +4916,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 8,
@@ -4668,7 +4933,8 @@
         "rawPoints": 1,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 9,
@@ -4684,7 +4950,8 @@
         "rawPoints": 1,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       }
     ],
     "warnings": [],
@@ -4699,8 +4966,8 @@
   {
     "week": 26,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:27.768247Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:37.129355Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=341&hafta=4",
     "standings": [
       {
@@ -4717,7 +4984,8 @@
         "rawPoints": 9,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 2,
@@ -4733,7 +5001,8 @@
         "rawPoints": 7,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 3,
@@ -4749,7 +5018,8 @@
         "rawPoints": 5,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 4,
@@ -4765,7 +5035,8 @@
         "rawPoints": 5,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 5,
@@ -4781,7 +5052,8 @@
         "rawPoints": 4,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 6,
@@ -4797,7 +5069,8 @@
         "rawPoints": 4,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 7,
@@ -4813,7 +5086,8 @@
         "rawPoints": 4,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 8,
@@ -4829,7 +5103,8 @@
         "rawPoints": 3,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 9,
@@ -4845,7 +5120,8 @@
         "rawPoints": 1,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       }
     ],
     "warnings": [],
@@ -4860,8 +5136,8 @@
   {
     "week": 27,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:27.429913Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:37.265076Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=341&hafta=5",
     "standings": [
       {
@@ -4878,7 +5154,8 @@
         "rawPoints": 12,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 2,
@@ -4894,7 +5171,8 @@
         "rawPoints": 8,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 3,
@@ -4910,7 +5188,8 @@
         "rawPoints": 7,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 4,
@@ -4926,7 +5205,8 @@
         "rawPoints": 7,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 5,
@@ -4942,7 +5222,8 @@
         "rawPoints": 6,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 6,
@@ -4958,7 +5239,8 @@
         "rawPoints": 5,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 7,
@@ -4974,7 +5256,8 @@
         "rawPoints": 4,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 8,
@@ -4990,7 +5273,8 @@
         "rawPoints": 4,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 9,
@@ -5006,7 +5290,8 @@
         "rawPoints": 1,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       }
     ],
     "warnings": [],
@@ -5021,8 +5306,8 @@
   {
     "week": 28,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:28.663242Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:39.450728Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=341&hafta=6",
     "standings": [
       {
@@ -5039,7 +5324,8 @@
         "rawPoints": 13,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 2,
@@ -5055,7 +5341,8 @@
         "rawPoints": 10,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 3,
@@ -5071,7 +5358,8 @@
         "rawPoints": 8,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 4,
@@ -5087,7 +5375,8 @@
         "rawPoints": 7,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 5,
@@ -5103,7 +5392,8 @@
         "rawPoints": 6,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 6,
@@ -5119,7 +5409,8 @@
         "rawPoints": 6,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 7,
@@ -5135,7 +5426,8 @@
         "rawPoints": 5,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 8,
@@ -5151,7 +5443,8 @@
         "rawPoints": 5,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 9,
@@ -5167,7 +5460,8 @@
         "rawPoints": 4,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       }
     ],
     "warnings": [],
@@ -5182,8 +5476,8 @@
   {
     "week": 29,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:28.727461Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:39.545702Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=341&hafta=7",
     "standings": [
       {
@@ -5200,7 +5494,8 @@
         "rawPoints": 13,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 2,
@@ -5216,7 +5511,8 @@
         "rawPoints": 10,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 3,
@@ -5232,7 +5528,8 @@
         "rawPoints": 10,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 4,
@@ -5248,7 +5545,8 @@
         "rawPoints": 9,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 5,
@@ -5264,7 +5562,8 @@
         "rawPoints": 9,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 6,
@@ -5280,7 +5579,8 @@
         "rawPoints": 7,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 7,
@@ -5296,7 +5596,8 @@
         "rawPoints": 6,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 8,
@@ -5312,7 +5613,8 @@
         "rawPoints": 6,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 9,
@@ -5328,7 +5630,8 @@
         "rawPoints": 5,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       }
     ],
     "warnings": [],
@@ -5343,8 +5646,8 @@
   {
     "week": 30,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:28.891402Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:39.272297Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=341&hafta=8",
     "standings": [
       {
@@ -5361,7 +5664,8 @@
         "rawPoints": 13,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 2,
@@ -5377,7 +5681,8 @@
         "rawPoints": 13,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 3,
@@ -5393,7 +5698,8 @@
         "rawPoints": 12,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 4,
@@ -5409,7 +5715,8 @@
         "rawPoints": 11,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 5,
@@ -5425,7 +5732,8 @@
         "rawPoints": 9,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 6,
@@ -5441,7 +5749,8 @@
         "rawPoints": 9,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 7,
@@ -5457,7 +5766,8 @@
         "rawPoints": 7,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 8,
@@ -5473,7 +5783,8 @@
         "rawPoints": 6,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 9,
@@ -5489,7 +5800,8 @@
         "rawPoints": 6,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       }
     ],
     "warnings": [],
@@ -5504,8 +5816,8 @@
   {
     "week": 31,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:29.182190Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:39.679682Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=341&hafta=9",
     "standings": [
       {
@@ -5522,7 +5834,8 @@
         "rawPoints": 15,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 2,
@@ -5538,7 +5851,8 @@
         "rawPoints": 13,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 3,
@@ -5554,7 +5868,8 @@
         "rawPoints": 13,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 4,
@@ -5570,7 +5885,8 @@
         "rawPoints": 12,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 5,
@@ -5586,7 +5902,8 @@
         "rawPoints": 12,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 6,
@@ -5602,7 +5919,8 @@
         "rawPoints": 10,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 7,
@@ -5618,7 +5936,8 @@
         "rawPoints": 9,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 8,
@@ -5634,7 +5953,8 @@
         "rawPoints": 7,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 9,
@@ -5650,7 +5970,8 @@
         "rawPoints": 6,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       }
     ],
     "warnings": [],
@@ -5665,8 +5986,8 @@
   {
     "week": 32,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:29.023906Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:39.825651Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=341&hafta=10",
     "standings": [
       {
@@ -5683,7 +6004,8 @@
         "rawPoints": 16,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 2,
@@ -5699,7 +6021,8 @@
         "rawPoints": 15,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 3,
@@ -5715,7 +6038,8 @@
         "rawPoints": 15,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 4,
@@ -5731,7 +6055,8 @@
         "rawPoints": 13,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 5,
@@ -5747,7 +6072,8 @@
         "rawPoints": 13,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 6,
@@ -5763,7 +6089,8 @@
         "rawPoints": 12,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 7,
@@ -5779,7 +6106,8 @@
         "rawPoints": 12,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 8,
@@ -5795,7 +6123,8 @@
         "rawPoints": 7,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 9,
@@ -5811,7 +6140,8 @@
         "rawPoints": 6,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       }
     ],
     "warnings": [],
@@ -5826,8 +6156,8 @@
   {
     "week": 33,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:30.711579Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:41.599905Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=341&hafta=11",
     "standings": [
       {
@@ -5844,7 +6174,8 @@
         "rawPoints": 17,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 2,
@@ -5860,7 +6191,8 @@
         "rawPoints": 16,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 3,
@@ -5876,7 +6208,8 @@
         "rawPoints": 16,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 4,
@@ -5892,7 +6225,8 @@
         "rawPoints": 15,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 5,
@@ -5908,7 +6242,8 @@
         "rawPoints": 15,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 6,
@@ -5924,7 +6259,8 @@
         "rawPoints": 13,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 7,
@@ -5940,7 +6276,8 @@
         "rawPoints": 12,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 8,
@@ -5956,7 +6293,8 @@
         "rawPoints": 8,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 9,
@@ -5972,7 +6310,8 @@
         "rawPoints": 7,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       }
     ],
     "warnings": [],
@@ -5987,8 +6326,8 @@
   {
     "week": 34,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:30.602496Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:41.855719Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=341&hafta=12",
     "standings": [
       {
@@ -6005,7 +6344,8 @@
         "rawPoints": 18,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 2,
@@ -6021,7 +6361,8 @@
         "rawPoints": 18,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 3,
@@ -6037,7 +6378,8 @@
         "rawPoints": 17,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 4,
@@ -6053,7 +6395,8 @@
         "rawPoints": 17,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 5,
@@ -6069,7 +6412,8 @@
         "rawPoints": 16,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 6,
@@ -6085,7 +6429,8 @@
         "rawPoints": 15,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 7,
@@ -6101,7 +6446,8 @@
         "rawPoints": 14,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 8,
@@ -6117,7 +6463,8 @@
         "rawPoints": 8,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 9,
@@ -6133,7 +6480,8 @@
         "rawPoints": 7,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       }
     ],
     "warnings": [],
@@ -6148,8 +6496,8 @@
   {
     "week": 35,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:30.818202Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:41.909489Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=341&hafta=13",
     "standings": [
       {
@@ -6166,7 +6514,8 @@
         "rawPoints": 20,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 2,
@@ -6182,7 +6531,8 @@
         "rawPoints": 19,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 3,
@@ -6198,7 +6548,8 @@
         "rawPoints": 19,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 4,
@@ -6214,7 +6565,8 @@
         "rawPoints": 18,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 5,
@@ -6230,7 +6582,8 @@
         "rawPoints": 17,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 6,
@@ -6246,7 +6599,8 @@
         "rawPoints": 17,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 7,
@@ -6262,7 +6616,8 @@
         "rawPoints": 15,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 8,
@@ -6278,7 +6633,8 @@
         "rawPoints": 8,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 9,
@@ -6294,7 +6650,8 @@
         "rawPoints": 7,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       }
     ],
     "warnings": [],
@@ -6309,8 +6666,8 @@
   {
     "week": 36,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:30.991592Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:42.036352Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=341&hafta=14",
     "standings": [
       {
@@ -6327,7 +6684,8 @@
         "rawPoints": 22,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 2,
@@ -6343,7 +6701,8 @@
         "rawPoints": 22,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 3,
@@ -6359,7 +6718,8 @@
         "rawPoints": 20,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 4,
@@ -6375,7 +6735,8 @@
         "rawPoints": 20,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 5,
@@ -6391,7 +6752,8 @@
         "rawPoints": 20,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 6,
@@ -6407,7 +6769,8 @@
         "rawPoints": 18,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 7,
@@ -6423,7 +6786,8 @@
         "rawPoints": 15,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 8,
@@ -6439,7 +6803,8 @@
         "rawPoints": 8,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 9,
@@ -6455,7 +6820,8 @@
         "rawPoints": 7,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       }
     ],
     "warnings": [],
@@ -6470,8 +6836,8 @@
   {
     "week": 37,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:31.278368Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:42.172576Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=341&hafta=15",
     "standings": [
       {
@@ -6488,7 +6854,8 @@
         "rawPoints": 25,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 2,
@@ -6504,7 +6871,8 @@
         "rawPoints": 23,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 3,
@@ -6520,7 +6888,8 @@
         "rawPoints": 23,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 4,
@@ -6536,7 +6905,8 @@
         "rawPoints": 22,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 5,
@@ -6552,7 +6922,8 @@
         "rawPoints": 20,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 6,
@@ -6568,7 +6939,8 @@
         "rawPoints": 19,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 7,
@@ -6584,7 +6956,8 @@
         "rawPoints": 16,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 8,
@@ -6600,7 +6973,8 @@
         "rawPoints": 8,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 9,
@@ -6616,7 +6990,8 @@
         "rawPoints": 7,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       }
     ],
     "warnings": [],
@@ -6631,8 +7006,8 @@
   {
     "week": 38,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:32.417469Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:43.916206Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=341&hafta=16",
     "standings": [
       {
@@ -6649,7 +7024,8 @@
         "rawPoints": 26,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 2,
@@ -6665,7 +7041,8 @@
         "rawPoints": 25,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 3,
@@ -6681,7 +7058,8 @@
         "rawPoints": 24,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 4,
@@ -6697,7 +7075,8 @@
         "rawPoints": 23,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 5,
@@ -6713,7 +7092,8 @@
         "rawPoints": 20,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 6,
@@ -6729,7 +7109,8 @@
         "rawPoints": 19,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 7,
@@ -6745,7 +7126,8 @@
         "rawPoints": 16,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 8,
@@ -6761,7 +7143,8 @@
         "rawPoints": 11,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       },
       {
         "rank": 9,
@@ -6777,7 +7160,8 @@
         "rawPoints": 10,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       }
     ],
     "warnings": [],
@@ -6792,8 +7176,8 @@
   {
     "week": 39,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:32.341941Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:44.157878Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=341&hafta=17",
     "standings": [
       {
@@ -6810,7 +7194,8 @@
         "rawPoints": 27,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 2,
@@ -6826,7 +7211,8 @@
         "rawPoints": 25,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 3,
@@ -6842,7 +7228,8 @@
         "rawPoints": 24,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 4,
@@ -6858,7 +7245,8 @@
         "rawPoints": 23,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 5,
@@ -6874,7 +7262,8 @@
         "rawPoints": 23,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 6,
@@ -6890,7 +7279,8 @@
         "rawPoints": 20,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 7,
@@ -6906,7 +7296,8 @@
         "rawPoints": 19,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 8,
@@ -6922,7 +7313,8 @@
         "rawPoints": 13,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 9,
@@ -6938,7 +7330,8 @@
         "rawPoints": 11,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       }
     ],
     "warnings": [],
@@ -6953,8 +7346,8 @@
   {
     "week": 40,
     "source": "official_tff_weekly_table",
-    "generatedAt": "2026-07-12T18:01:32.554326Z",
-    "builderVersion": "standings-builder-v5-archive-stage-scope-carry-safe",
+    "generatedAt": "2026-07-17T22:28:44.084351Z",
+    "builderVersion": "standings-builder-v8-legacy-week-group-routing",
     "sourceUrl": "http://www.tff.org/Default.aspx?pageID=809&grupID=341&hafta=18",
     "standings": [
       {
@@ -6971,7 +7364,8 @@
         "rawPoints": 28,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": true
+        "isBalkes": true,
+        "teamId": "135"
       },
       {
         "rank": 2,
@@ -6987,7 +7381,8 @@
         "rawPoints": 27,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "82"
       },
       {
         "rank": 3,
@@ -7003,7 +7398,8 @@
         "rawPoints": 26,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "110"
       },
       {
         "rank": 4,
@@ -7019,7 +7415,8 @@
         "rawPoints": 24,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "109"
       },
       {
         "rank": 5,
@@ -7035,7 +7432,8 @@
         "rawPoints": 23,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "84"
       },
       {
         "rank": 6,
@@ -7051,7 +7449,8 @@
         "rawPoints": 22,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "83"
       },
       {
         "rank": 7,
@@ -7067,7 +7466,8 @@
         "rawPoints": 20,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "91"
       },
       {
         "rank": 8,
@@ -7083,7 +7483,8 @@
         "rawPoints": 16,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "105"
       },
       {
         "rank": 9,
@@ -7099,7 +7500,8 @@
         "rawPoints": 11,
         "pointsDeducted": 0,
         "penaltyNote": "",
-        "isBalkes": false
+        "isBalkes": false,
+        "teamId": "107"
       }
     ],
     "warnings": [],

@@ -1079,21 +1079,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=1551",
-    "retrievedAt": "2026-07-12T17:37:48.004138Z",
+    "retrievedAt": "2026-07-17T19:32:47.912368Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "15 ISPARTASPOR 1-0 BALIKESİRSPOR 17 Aralık 2006 3. Lig 03",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=1551&pageID=29"
   },
   "week": 15,
   "standingsWeek": 15,
+  "clubFixture": {
+    "week": 15,
+    "rowText": "15 ISPARTASPOR 1-0 BALIKESİRSPOR 17 Aralık 2006 3. Lig 03",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=1551&pageID=29"
+  },
   "stageWeek": 15,
   "roundType": "league",
   "roundLabel": "15. Hafta",
-  "roundSource": "stage_sequence_fallback",
-  "leagueStageId": "group-03",
-  "leagueStageLabel": "03",
-  "leagueStageNumber": 1
+  "roundSource": "tff_club_fixture"
 }

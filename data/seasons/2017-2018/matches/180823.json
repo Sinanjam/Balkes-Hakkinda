@@ -1244,20 +1244,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=180823",
-    "retrievedAt": "2026-07-12T17:36:45.709294Z",
+    "retrievedAt": "2026-07-17T19:31:48.092903Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "21 BALIKESİRSPOR BALTOK 1-3 MKE ANKARAGÜCÜ 11 Şubat 2018 Spor Toto 1. Lig",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=180823&pageID=29"
   },
   "week": 21,
   "standingsWeek": 21,
+  "clubFixture": {
+    "week": 21,
+    "rowText": "21 BALIKESİRSPOR BALTOK 1-3 MKE ANKARAGÜCÜ 11 Şubat 2018 Spor Toto 1. Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=180823&pageID=29"
+  },
   "stageWeek": 21,
   "roundType": "league",
   "roundLabel": "21. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-lig",
   "leagueStageLabel": "Lig",
   "leagueStageNumber": 1

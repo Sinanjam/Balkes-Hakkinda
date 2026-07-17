@@ -1308,18 +1308,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=285664",
-    "retrievedAt": "2026-07-12T17:35:58.524591Z",
+    "retrievedAt": "2026-07-17T19:31:04.210812Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "7 NEV SAĞLIK GRUBU BALIKESİRSPOR 2-0 ESKİŞEHİR ANADOLU SPOR FAALİYETLERİ A.Ş. 19 Ekim 2025 Nesine 3. Lig 04",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=285664&pageID=29"
   },
   "week": 7,
   "standingsWeek": 7,
+  "clubFixture": {
+    "week": 7,
+    "rowText": "7 NEV SAĞLIK GRUBU BALIKESİRSPOR 2-0 ESKİŞEHİR ANADOLU SPOR FAALİYETLERİ A.Ş. 19 Ekim 2025 Nesine 3. Lig 04",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=285664&pageID=29"
+  },
   "stageWeek": 7,
   "roundType": "league",
   "roundLabel": "7. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

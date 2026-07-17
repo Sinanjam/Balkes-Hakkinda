@@ -966,20 +966,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=51313",
-    "retrievedAt": "2026-07-12T17:38:26.282908Z",
+    "retrievedAt": "2026-07-17T19:33:24.346334Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "8 BALIKESIRSPOR 1-2 Y.TURGUTLUSPOR 17 Ekim 1993 Lig B Klasman 02",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=51313&pageID=29"
   },
   "week": 8,
   "standingsWeek": 8,
+  "clubFixture": {
+    "week": 8,
+    "rowText": "8 BALIKESIRSPOR 1-2 Y.TURGUTLUSPOR 17 Ekim 1993 Lig B Klasman 02",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=51313&pageID=29"
+  },
   "stageWeek": 8,
   "roundType": "league",
   "roundLabel": "8. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-02",
   "leagueStageLabel": "02",
   "leagueStageNumber": 1,

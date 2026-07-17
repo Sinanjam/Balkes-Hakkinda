@@ -4,7 +4,7 @@
   "competition": "Spor Toto Süper Lig Süleyman Seba Sezonu (Profesyonel Takım)",
   "sourcePolicy": "TFF-only",
   "factoryVersion": "v5-professional-only-resilient",
-  "updatedAt": "2026-07-12T17:37:10.579388Z",
+  "updatedAt": "2026-07-17T19:32:13.949247Z",
   "summary": {
     "matches": 35,
     "wins": 6,
@@ -26,8 +26,24 @@
     "matchesIndex": "seasons/2014-2015/matches_index.json",
     "standingsByWeek": "seasons/2014-2015/standings_by_week.json"
   },
-  "sanitizedAt": "2026-07-12T17:38:45.647469Z",
+  "sanitizedAt": "2026-07-17T19:33:43.071366Z",
   "sanitizerVersion": "v1-professional-team-only",
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 34,
+    "won": 6,
+    "drawn": 9,
+    "lost": 19,
+    "goalsFor": 48,
+    "goalsAgainst": 69,
+    "goalDifference": -21,
+    "points": 27,
+    "rawPoints": 27,
+    "pointsDeducted": 0,
+    "finalRank": 18
+  },
   "leagueSummary": {
     "played": 34,
     "won": 6,
@@ -41,6 +57,6 @@
     "pointsDeducted": 0,
     "finalRank": 18
   },
-  "standingsUpdatedAt": "2026-07-12T17:50:08.522395Z",
-  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+  "standingsUpdatedAt": "2026-07-17T22:14:27.151823Z",
+  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing"
 }

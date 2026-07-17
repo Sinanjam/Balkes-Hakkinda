@@ -1124,20 +1124,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=22483",
-    "retrievedAt": "2026-07-12T17:37:49.523466Z",
+    "retrievedAt": "2026-07-17T19:32:52.837310Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "15 BALIKESİRSPOR 3-1 TORBALI BLD.SPOR 10 Aralık 2000 3. Lig 06",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=22483&pageID=29"
   },
   "week": 15,
   "standingsWeek": 15,
+  "clubFixture": {
+    "week": 15,
+    "rowText": "15 BALIKESİRSPOR 3-1 TORBALI BLD.SPOR 10 Aralık 2000 3. Lig 06",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=22483&pageID=29"
+  },
   "stageWeek": 15,
   "roundType": "league",
   "roundLabel": "15. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-06",
   "leagueStageLabel": "06",
   "leagueStageNumber": 1

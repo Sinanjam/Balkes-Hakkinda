@@ -80,6 +80,41 @@
     "playoff_matches": 0
   },
   {
+    "name": "1922 AKŞEHİR SPOR KULÜBÜ",
+    "opponent": "1922 AKŞEHİR SPOR KULÜBÜ",
+    "normalized_opponent": "1922 aksehir spor kulubu",
+    "matches": 2,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "homeMatches": 1,
+    "awayMatches": 1,
+    "leagueMatches": 2,
+    "cupMatches": 0,
+    "playoffMatches": 0,
+    "seasons": [
+      "2026-2027"
+    ],
+    "matchIds": [
+      "319372",
+      "319519"
+    ],
+    "lastMatchDate": "2027-02-14",
+    "match_ids": [
+      "319372",
+      "319519"
+    ],
+    "goals_for": 0,
+    "goals_against": 0,
+    "home_matches": 1,
+    "away_matches": 1,
+    "league_matches": 2,
+    "cup_matches": 0,
+    "playoff_matches": 0
+  },
+  {
     "name": "23 ELAZIĞ FUTBOL KULÜBÜ",
     "opponent": "23 ELAZIĞ FUTBOL KULÜBÜ",
     "normalized_opponent": "23 elazig futbol kulubu",
@@ -701,34 +736,39 @@
     "name": "ALANYA 1221 FUTBOL SPOR KULÜBÜ",
     "opponent": "ALANYA 1221 FUTBOL SPOR KULÜBÜ",
     "normalized_opponent": "alanya 1221 futbol spor kulubu",
-    "matches": 2,
+    "matches": 4,
     "wins": 1,
     "draws": 0,
     "losses": 1,
     "goalsFor": 2,
     "goalsAgainst": 1,
-    "homeMatches": 1,
-    "awayMatches": 1,
-    "leagueMatches": 2,
+    "homeMatches": 2,
+    "awayMatches": 2,
+    "leagueMatches": 4,
     "cupMatches": 0,
     "playoffMatches": 0,
     "seasons": [
+      "2026-2027",
       "2025-2026"
     ],
     "matchIds": [
       "285653",
-      "285773"
+      "285773",
+      "319478",
+      "319631"
     ],
-    "lastMatchDate": "2026-02-14",
+    "lastMatchDate": "2027-01-24",
     "match_ids": [
       "285653",
-      "285773"
+      "285773",
+      "319478",
+      "319631"
     ],
     "goals_for": 2,
     "goals_against": 1,
-    "home_matches": 1,
-    "away_matches": 1,
-    "league_matches": 2,
+    "home_matches": 2,
+    "away_matches": 2,
+    "league_matches": 4,
     "cup_matches": 0,
     "playoff_matches": 0
   },
@@ -877,18 +917,19 @@
     "name": "ALTAY",
     "opponent": "ALTAY",
     "normalized_opponent": "altay",
-    "matches": 12,
+    "matches": 14,
     "wins": 7,
     "draws": 2,
     "losses": 3,
     "goalsFor": 15,
     "goalsAgainst": 9,
-    "homeMatches": 6,
-    "awayMatches": 6,
-    "leagueMatches": 12,
+    "homeMatches": 7,
+    "awayMatches": 7,
+    "leagueMatches": 14,
     "cupMatches": 0,
     "playoffMatches": 0,
     "seasons": [
+      "2026-2027",
       "2025-2026",
       "2020-2021",
       "2019-2020",
@@ -908,9 +949,11 @@
       "219468",
       "219621",
       "285682",
-      "285802"
+      "285802",
+      "319391",
+      "319538"
     ],
-    "lastMatchDate": "2026-03-15",
+    "lastMatchDate": "2027-02-28",
     "match_ids": [
       "98325",
       "98461",
@@ -923,13 +966,15 @@
       "219468",
       "219621",
       "285682",
-      "285802"
+      "285802",
+      "319391",
+      "319538"
     ],
     "goals_for": 15,
     "goals_against": 9,
-    "home_matches": 6,
-    "away_matches": 6,
-    "league_matches": 12,
+    "home_matches": 7,
+    "away_matches": 7,
+    "league_matches": 14,
     "cup_matches": 0,
     "playoff_matches": 0
   },
@@ -1561,34 +1606,39 @@
     "name": "AYVALIKGÜCÜ BELEDİYESPOR",
     "opponent": "AYVALIKGÜCÜ BELEDİYESPOR",
     "normalized_opponent": "ayvalikgucu belediyespor",
-    "matches": 2,
+    "matches": 4,
     "wins": 0,
     "draws": 0,
     "losses": 2,
     "goalsFor": 1,
     "goalsAgainst": 3,
-    "homeMatches": 1,
-    "awayMatches": 1,
-    "leagueMatches": 2,
+    "homeMatches": 2,
+    "awayMatches": 2,
+    "leagueMatches": 4,
     "cupMatches": 0,
     "playoffMatches": 0,
     "seasons": [
+      "2026-2027",
       "2025-2026"
     ],
     "matchIds": [
       "285700",
-      "285820"
+      "285820",
+      "319431",
+      "319578"
     ],
-    "lastMatchDate": "2026-03-29",
+    "lastMatchDate": "2027-03-28",
     "match_ids": [
       "285700",
-      "285820"
+      "285820",
+      "319431",
+      "319578"
     ],
     "goals_for": 1,
     "goals_against": 3,
-    "home_matches": 1,
-    "away_matches": 1,
-    "league_matches": 2,
+    "home_matches": 2,
+    "away_matches": 2,
+    "league_matches": 4,
     "cup_matches": 0,
     "playoff_matches": 0
   },
@@ -2306,18 +2356,19 @@
     "name": "BİGASPOR",
     "opponent": "BİGASPOR",
     "normalized_opponent": "bigaspor",
-    "matches": 4,
+    "matches": 6,
     "wins": 1,
     "draws": 1,
     "losses": 2,
     "goalsFor": 2,
     "goalsAgainst": 3,
-    "homeMatches": 2,
-    "awayMatches": 2,
-    "leagueMatches": 4,
+    "homeMatches": 3,
+    "awayMatches": 3,
+    "leagueMatches": 6,
     "cupMatches": 0,
     "playoffMatches": 0,
     "seasons": [
+      "2026-2027",
       "1991-1992",
       "1990-1991"
     ],
@@ -2325,20 +2376,24 @@
       "58307",
       "60444",
       "63718",
-      "65464"
+      "65464",
+      "319507",
+      "319660"
     ],
-    "lastMatchDate": "1992-02-22",
+    "lastMatchDate": "2027-02-10",
     "match_ids": [
       "58307",
       "60444",
       "63718",
-      "65464"
+      "65464",
+      "319507",
+      "319660"
     ],
     "goals_for": 2,
     "goals_against": 3,
-    "home_matches": 2,
-    "away_matches": 2,
-    "league_matches": 4,
+    "home_matches": 3,
+    "away_matches": 3,
+    "league_matches": 6,
     "cup_matches": 0,
     "playoff_matches": 0
   },
@@ -2675,34 +2730,39 @@
     "name": "BUCASPOR 1928",
     "opponent": "BUCASPOR 1928",
     "normalized_opponent": "bucaspor 1928",
-    "matches": 2,
+    "matches": 4,
     "wins": 0,
     "draws": 0,
     "losses": 2,
     "goalsFor": 0,
     "goalsAgainst": 5,
-    "homeMatches": 1,
-    "awayMatches": 1,
-    "leagueMatches": 2,
+    "homeMatches": 2,
+    "awayMatches": 2,
+    "leagueMatches": 4,
     "cupMatches": 0,
     "playoffMatches": 0,
     "seasons": [
+      "2026-2027",
       "2022-2023"
     ],
     "matchIds": [
       "235880",
-      "236040"
+      "236040",
+      "319474",
+      "319627"
     ],
-    "lastMatchDate": "2023-04-02",
+    "lastMatchDate": "2027-01-17",
     "match_ids": [
       "235880",
-      "236040"
+      "236040",
+      "319474",
+      "319627"
     ],
     "goals_for": 0,
     "goals_against": 5,
-    "home_matches": 1,
-    "away_matches": 1,
-    "league_matches": 2,
+    "home_matches": 2,
+    "away_matches": 2,
+    "league_matches": 4,
     "cup_matches": 0,
     "playoff_matches": 0
   },
@@ -2885,6 +2945,41 @@
     "playoff_matches": 0
   },
   {
+    "name": "BURSA NİLÜFER FUTBOL A.Ş.",
+    "opponent": "BURSA NİLÜFER FUTBOL A.Ş.",
+    "normalized_opponent": "bursa nilufer futbol a s",
+    "matches": 2,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "homeMatches": 1,
+    "awayMatches": 1,
+    "leagueMatches": 2,
+    "cupMatches": 0,
+    "playoffMatches": 0,
+    "seasons": [
+      "2026-2027"
+    ],
+    "matchIds": [
+      "319357",
+      "319616"
+    ],
+    "lastMatchDate": "2027-04-24",
+    "match_ids": [
+      "319357",
+      "319616"
+    ],
+    "goals_for": 0,
+    "goals_against": 0,
+    "home_matches": 1,
+    "away_matches": 1,
+    "league_matches": 2,
+    "cup_matches": 0,
+    "playoff_matches": 0
+  },
+  {
     "name": "BURSA NİLÜFERSPOR A.Ş.",
     "opponent": "BURSA NİLÜFERSPOR A.Ş.",
     "normalized_opponent": "bursa niluferspor a s",
@@ -2948,6 +3043,41 @@
     ],
     "goals_for": 2,
     "goals_against": 2,
+    "home_matches": 1,
+    "away_matches": 1,
+    "league_matches": 2,
+    "cup_matches": 0,
+    "playoff_matches": 0
+  },
+  {
+    "name": "BURSA YILDIRIM SPOR KULÜBÜ",
+    "opponent": "BURSA YILDIRIM SPOR KULÜBÜ",
+    "normalized_opponent": "bursa yildirim spor kulubu",
+    "matches": 2,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "homeMatches": 1,
+    "awayMatches": 1,
+    "leagueMatches": 2,
+    "cupMatches": 0,
+    "playoffMatches": 0,
+    "seasons": [
+      "2026-2027"
+    ],
+    "matchIds": [
+      "319393",
+      "319540"
+    ],
+    "lastMatchDate": "2027-03-07",
+    "match_ids": [
+      "319393",
+      "319540"
+    ],
+    "goals_for": 0,
+    "goals_against": 0,
     "home_matches": 1,
     "away_matches": 1,
     "league_matches": 2,
@@ -3657,32 +3787,37 @@
     "name": "DENİZLİ İDMANYURDU 1959 SPOR KULÜBÜ",
     "opponent": "DENİZLİ İDMANYURDU 1959 SPOR KULÜBÜ",
     "normalized_opponent": "denizli idmanyurdu 1959 spor kulubu",
-    "matches": 1,
+    "matches": 3,
     "wins": 1,
     "draws": 0,
     "losses": 0,
     "goalsFor": 1,
     "goalsAgainst": 0,
-    "homeMatches": 0,
-    "awayMatches": 1,
-    "leagueMatches": 1,
+    "homeMatches": 1,
+    "awayMatches": 2,
+    "leagueMatches": 3,
     "cupMatches": 0,
     "playoffMatches": 0,
     "seasons": [
+      "2026-2027",
       "2025-2026"
     ],
     "matchIds": [
-      "285829"
+      "285829",
+      "319452",
+      "319599"
     ],
-    "lastMatchDate": "2026-04-05",
+    "lastMatchDate": "2027-04-11",
     "match_ids": [
-      "285829"
+      "285829",
+      "319452",
+      "319599"
     ],
     "goals_for": 1,
     "goals_against": 0,
-    "home_matches": 0,
-    "away_matches": 1,
-    "league_matches": 1,
+    "home_matches": 1,
+    "away_matches": 2,
+    "league_matches": 3,
     "cup_matches": 0,
     "playoff_matches": 0
   },
@@ -4083,34 +4218,39 @@
     "name": "ESKİŞEHİR ANADOLU SPOR FAALİYETLERİ A.Ş.",
     "opponent": "ESKİŞEHİR ANADOLU SPOR FAALİYETLERİ A.Ş.",
     "normalized_opponent": "eskisehir anadolu spor faaliyetleri a s",
-    "matches": 2,
+    "matches": 4,
     "wins": 1,
     "draws": 1,
     "losses": 0,
     "goalsFor": 3,
     "goalsAgainst": 1,
-    "homeMatches": 1,
-    "awayMatches": 1,
-    "leagueMatches": 2,
+    "homeMatches": 2,
+    "awayMatches": 2,
+    "leagueMatches": 4,
     "cupMatches": 0,
     "playoffMatches": 0,
     "seasons": [
+      "2026-2027",
       "2025-2026"
     ],
     "matchIds": [
       "285664",
-      "285784"
+      "285784",
+      "319421",
+      "319568"
     ],
-    "lastMatchDate": "2026-02-22",
+    "lastMatchDate": "2027-03-21",
     "match_ids": [
       "285664",
-      "285784"
+      "285784",
+      "319421",
+      "319568"
     ],
     "goals_for": 3,
     "goals_against": 1,
-    "home_matches": 1,
-    "away_matches": 1,
-    "league_matches": 2,
+    "home_matches": 2,
+    "away_matches": 2,
+    "league_matches": 4,
     "cup_matches": 0,
     "playoff_matches": 0
   },
@@ -4178,38 +4318,43 @@
     "name": "ESKİŞEHİRSPOR KULÜBÜ",
     "opponent": "ESKİŞEHİRSPOR KULÜBÜ",
     "normalized_opponent": "eskisehirspor kulubu",
-    "matches": 4,
+    "matches": 6,
     "wins": 2,
     "draws": 1,
     "losses": 1,
     "goalsFor": 6,
     "goalsAgainst": 5,
-    "homeMatches": 2,
-    "awayMatches": 2,
-    "leagueMatches": 2,
+    "homeMatches": 3,
+    "awayMatches": 3,
+    "leagueMatches": 4,
     "cupMatches": 0,
     "playoffMatches": 2,
     "seasons": [
+      "2026-2027",
       "2025-2026"
     ],
     "matchIds": [
       "285718",
       "285838",
       "316898",
-      "316899"
+      "316899",
+      "319497",
+      "319650"
     ],
-    "lastMatchDate": "2026-04-28",
+    "lastMatchDate": "2027-02-06",
     "match_ids": [
       "285718",
       "285838",
       "316898",
-      "316899"
+      "316899",
+      "319497",
+      "319650"
     ],
     "goals_for": 6,
     "goals_against": 5,
-    "home_matches": 2,
-    "away_matches": 2,
-    "league_matches": 2,
+    "home_matches": 3,
+    "away_matches": 3,
+    "league_matches": 4,
     "cup_matches": 0,
     "playoff_matches": 2
   },
@@ -4294,32 +4439,37 @@
     "name": "ETİMESGUT SPOR KULÜBÜ",
     "opponent": "ETİMESGUT SPOR KULÜBÜ",
     "normalized_opponent": "etimesgut spor kulubu",
-    "matches": 1,
+    "matches": 3,
     "wins": 1,
     "draws": 0,
     "losses": 0,
     "goalsFor": 1,
     "goalsAgainst": 0,
-    "homeMatches": 0,
-    "awayMatches": 1,
-    "leagueMatches": 1,
+    "homeMatches": 1,
+    "awayMatches": 2,
+    "leagueMatches": 3,
     "cupMatches": 0,
     "playoffMatches": 0,
     "seasons": [
+      "2026-2027",
       "2024-2025"
     ],
     "matchIds": [
-      "265798"
+      "265798",
+      "319380",
+      "319527"
     ],
-    "lastMatchDate": "2025-03-15",
+    "lastMatchDate": "2027-02-21",
     "match_ids": [
-      "265798"
+      "265798",
+      "319380",
+      "319527"
     ],
     "goals_for": 1,
     "goals_against": 0,
-    "home_matches": 0,
-    "away_matches": 1,
-    "league_matches": 1,
+    "home_matches": 1,
+    "away_matches": 2,
+    "league_matches": 3,
     "cup_matches": 0,
     "playoff_matches": 0
   },
@@ -6069,18 +6219,19 @@
     "name": "KARŞIYAKA",
     "opponent": "KARŞIYAKA",
     "normalized_opponent": "karsiyaka",
-    "matches": 10,
+    "matches": 12,
     "wins": 2,
     "draws": 1,
     "losses": 7,
     "goalsFor": 10,
     "goalsAgainst": 14,
-    "homeMatches": 5,
-    "awayMatches": 5,
-    "leagueMatches": 10,
+    "homeMatches": 6,
+    "awayMatches": 6,
+    "leagueMatches": 12,
     "cupMatches": 0,
     "playoffMatches": 0,
     "seasons": [
+      "2026-2027",
       "2025-2026",
       "2015-2016",
       "2013-2014",
@@ -6097,9 +6248,11 @@
       "140404",
       "140557",
       "285632",
-      "285752"
+      "285752",
+      "319457",
+      "319604"
     ],
-    "lastMatchDate": "2026-01-25",
+    "lastMatchDate": "2027-04-18",
     "match_ids": [
       "40486",
       "41602",
@@ -6110,13 +6263,15 @@
       "140404",
       "140557",
       "285632",
-      "285752"
+      "285752",
+      "319457",
+      "319604"
     ],
     "goals_for": 10,
     "goals_against": 14,
-    "home_matches": 5,
-    "away_matches": 5,
-    "league_matches": 10,
+    "home_matches": 6,
+    "away_matches": 6,
+    "league_matches": 12,
     "cup_matches": 0,
     "playoff_matches": 0
   },
@@ -6262,6 +6417,41 @@
     "league_matches": 2,
     "cup_matches": 0,
     "playoff_matches": 1
+  },
+  {
+    "name": "KEPEZ SPOR FUTBOL A.Ş.",
+    "opponent": "KEPEZ SPOR FUTBOL A.Ş.",
+    "normalized_opponent": "kepez spor futbol a s",
+    "matches": 2,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "homeMatches": 1,
+    "awayMatches": 1,
+    "leagueMatches": 2,
+    "cupMatches": 0,
+    "playoffMatches": 0,
+    "seasons": [
+      "2026-2027"
+    ],
+    "matchIds": [
+      "319414",
+      "319561"
+    ],
+    "lastMatchDate": "2027-03-17",
+    "match_ids": [
+      "319414",
+      "319561"
+    ],
+    "goals_for": 0,
+    "goals_against": 0,
+    "home_matches": 1,
+    "away_matches": 1,
+    "league_matches": 2,
+    "cup_matches": 0,
+    "playoff_matches": 0
   },
   {
     "name": "KESTELSPOR",
@@ -9172,34 +9362,39 @@
     "name": "SÖKE 1970 SPOR KULÜBÜ",
     "opponent": "SÖKE 1970 SPOR KULÜBÜ",
     "normalized_opponent": "soke 1970 spor kulubu",
-    "matches": 2,
+    "matches": 4,
     "wins": 1,
     "draws": 1,
     "losses": 0,
     "goalsFor": 3,
     "goalsAgainst": 2,
-    "homeMatches": 1,
-    "awayMatches": 1,
-    "leagueMatches": 2,
+    "homeMatches": 2,
+    "awayMatches": 2,
+    "leagueMatches": 4,
     "cupMatches": 0,
     "playoffMatches": 0,
     "seasons": [
+      "2026-2027",
       "2025-2026"
     ],
     "matchIds": [
       "285615",
-      "285735"
+      "285735",
+      "319445",
+      "319592"
     ],
-    "lastMatchDate": "2026-01-11",
+    "lastMatchDate": "2027-04-04",
     "match_ids": [
       "285615",
-      "285735"
+      "285735",
+      "319445",
+      "319592"
     ],
     "goals_for": 3,
     "goals_against": 2,
-    "home_matches": 1,
-    "away_matches": 1,
-    "league_matches": 2,
+    "home_matches": 2,
+    "away_matches": 2,
+    "league_matches": 4,
     "cup_matches": 0,
     "playoff_matches": 0
   },
@@ -9676,18 +9871,19 @@
     "name": "TİRE 2021 FUTBOL KULÜBÜ",
     "opponent": "TİRE 2021 FUTBOL KULÜBÜ",
     "normalized_opponent": "tire 2021 futbol kulubu",
-    "matches": 4,
+    "matches": 6,
     "wins": 1,
     "draws": 1,
     "losses": 2,
     "goalsFor": 5,
     "goalsAgainst": 6,
-    "homeMatches": 2,
-    "awayMatches": 2,
-    "leagueMatches": 4,
+    "homeMatches": 3,
+    "awayMatches": 3,
+    "leagueMatches": 6,
     "cupMatches": 0,
     "playoffMatches": 0,
     "seasons": [
+      "2026-2027",
       "2025-2026",
       "2024-2025"
     ],
@@ -9695,20 +9891,24 @@
       "265673",
       "265793",
       "285620",
-      "285740"
+      "285740",
+      "319402",
+      "319549"
     ],
-    "lastMatchDate": "2026-01-18",
+    "lastMatchDate": "2027-03-13",
     "match_ids": [
       "265673",
       "265793",
       "285620",
-      "285740"
+      "285740",
+      "319402",
+      "319549"
     ],
     "goals_for": 5,
     "goals_against": 6,
-    "home_matches": 2,
-    "away_matches": 2,
-    "league_matches": 4,
+    "home_matches": 3,
+    "away_matches": 3,
+    "league_matches": 6,
     "cup_matches": 0,
     "playoff_matches": 0
   },
@@ -10167,37 +10367,42 @@
     "name": "UŞAK SPOR A.Ş.",
     "opponent": "UŞAK SPOR A.Ş.",
     "normalized_opponent": "usak spor a s",
-    "matches": 3,
+    "matches": 5,
     "wins": 2,
     "draws": 0,
     "losses": 1,
     "goalsFor": 4,
     "goalsAgainst": 1,
-    "homeMatches": 2,
-    "awayMatches": 1,
-    "leagueMatches": 3,
+    "homeMatches": 3,
+    "awayMatches": 2,
+    "leagueMatches": 5,
     "cupMatches": 0,
     "playoffMatches": 0,
     "seasons": [
+      "2026-2027",
       "2024-2025",
       "2022-2023"
     ],
     "matchIds": [
       "236048",
       "265594",
-      "265746"
+      "265746",
+      "319492",
+      "319645"
     ],
-    "lastMatchDate": "2025-01-25",
+    "lastMatchDate": "2027-01-31",
     "match_ids": [
       "236048",
       "265594",
-      "265746"
+      "265746",
+      "319492",
+      "319645"
     ],
     "goals_for": 4,
     "goals_against": 1,
-    "home_matches": 2,
-    "away_matches": 1,
-    "league_matches": 3,
+    "home_matches": 3,
+    "away_matches": 2,
+    "league_matches": 5,
     "cup_matches": 0,
     "playoff_matches": 0
   },

@@ -1138,20 +1138,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=20957",
-    "retrievedAt": "2026-07-12T17:37:45.830328Z",
+    "retrievedAt": "2026-07-17T19:32:50.646270Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "2 MARMARİSSPOR 5-0 BALIKESİRSPOR 10 Eylül 2000 3. Lig 06",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=20957&pageID=29"
   },
   "week": 2,
   "standingsWeek": 2,
+  "clubFixture": {
+    "week": 2,
+    "rowText": "2 MARMARİSSPOR 5-0 BALIKESİRSPOR 10 Eylül 2000 3. Lig 06",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=20957&pageID=29"
+  },
   "stageWeek": 2,
   "roundType": "league",
   "roundLabel": "2. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-06",
   "leagueStageLabel": "06",
   "leagueStageNumber": 1

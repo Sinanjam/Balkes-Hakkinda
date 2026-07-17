@@ -1277,18 +1277,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=207650",
-    "retrievedAt": "2026-07-12T17:36:35.291100Z",
+    "retrievedAt": "2026-07-17T19:31:39.392082Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "22 EKOL HASTANESİ BALIKESİRSPOR 0-5 İSTANBULSPOR A.Ş. 16 Şubat 2020 TFF 1. Lig",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=207650&pageID=29"
   },
   "week": 22,
   "standingsWeek": 22,
+  "clubFixture": {
+    "week": 22,
+    "rowText": "22 EKOL HASTANESİ BALIKESİRSPOR 0-5 İSTANBULSPOR A.Ş. 16 Şubat 2020 TFF 1. Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=207650&pageID=29"
+  },
   "stageWeek": 22,
   "roundType": "league",
   "roundLabel": "22. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

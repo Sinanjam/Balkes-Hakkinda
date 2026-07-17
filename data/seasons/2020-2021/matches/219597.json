@@ -1275,18 +1275,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=219597",
-    "retrievedAt": "2026-07-12T17:36:25.448792Z",
+    "retrievedAt": "2026-07-17T19:31:39.357481Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "23 BEYPİLİÇ BOLUSPOR 0-0 AYDENİZ ET BALIKESİRSPOR 25 Şubat 2021 TFF 1. Lig",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=219597&pageID=29"
   },
   "week": 23,
   "standingsWeek": 23,
+  "clubFixture": {
+    "week": 23,
+    "rowText": "23 BEYPİLİÇ BOLUSPOR 0-0 AYDENİZ ET BALIKESİRSPOR 25 Şubat 2021 TFF 1. Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=219597&pageID=29"
+  },
   "stageWeek": 23,
   "roundType": "league",
   "roundLabel": "23. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

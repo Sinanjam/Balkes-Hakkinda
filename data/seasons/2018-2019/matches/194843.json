@@ -1120,18 +1120,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=194843",
-    "retrievedAt": "2026-07-12T17:36:31.628804Z",
+    "retrievedAt": "2026-07-17T19:31:43.219878Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "3 BALIKESİRSPOR BALTOK 0-3 OSMANLISPOR FUTBOL KULÜBÜ 26 Ağustos 2018 Spor Toto 1. Lig",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=194843&pageID=29"
   },
   "week": 3,
   "standingsWeek": 3,
+  "clubFixture": {
+    "week": 3,
+    "rowText": "3 BALIKESİRSPOR BALTOK 0-3 OSMANLISPOR FUTBOL KULÜBÜ 26 Ağustos 2018 Spor Toto 1. Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=194843&pageID=29"
+  },
   "stageWeek": 3,
   "roundType": "league",
   "roundLabel": "3. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

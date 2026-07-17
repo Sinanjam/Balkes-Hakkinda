@@ -1080,18 +1080,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=129628",
-    "retrievedAt": "2026-07-12T17:36:57.759183Z",
+    "retrievedAt": "2026-07-17T19:32:05.565638Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "9 MERSİN İDMANYURDU 2-1 BALIKESİRSPOR 8 Kasım 2014 Spor Toto Süper Lig Süleyman Seba Sezonu",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=129628&pageID=29"
   },
   "week": 9,
   "standingsWeek": 9,
+  "clubFixture": {
+    "week": 9,
+    "rowText": "9 MERSİN İDMANYURDU 2-1 BALIKESİRSPOR 8 Kasım 2014 Spor Toto Süper Lig Süleyman Seba Sezonu",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=129628&pageID=29"
+  },
   "stageWeek": 9,
   "roundType": "league",
   "roundLabel": "9. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

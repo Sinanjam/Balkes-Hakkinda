@@ -1139,20 +1139,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=75528",
-    "retrievedAt": "2026-07-12T17:37:36.156975Z",
+    "retrievedAt": "2026-07-17T19:32:38.460046Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "12 BANDIRMASPOR 2-1 BALIKESİRSPOR 16 Kasım 2008 TFF 3.Lig Kademe 02",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=75528&pageID=29"
   },
   "week": 12,
   "standingsWeek": 12,
+  "clubFixture": {
+    "week": 12,
+    "rowText": "12 BANDIRMASPOR 2-1 BALIKESİRSPOR 16 Kasım 2008 TFF 3.Lig Kademe 02",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=75528&pageID=29"
+  },
   "stageWeek": 12,
   "roundType": "league",
   "roundLabel": "12. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-02",
   "leagueStageLabel": "02",
   "leagueStageNumber": 1,

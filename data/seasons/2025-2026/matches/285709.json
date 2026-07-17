@@ -1294,18 +1294,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=285709",
-    "retrievedAt": "2026-07-12T17:35:59.791753Z",
+    "retrievedAt": "2026-07-17T19:31:05.494206Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "13 NEV SAĞLIK GRUBU BALIKESİRSPOR 3-1 DENİZLİ İDMANYURDU GÜRELLER SPOR KULÜBÜ 13 Aralık 2025 Nesine 3. Lig 04",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=285709&pageID=29"
   },
   "week": 13,
   "standingsWeek": 13,
+  "clubFixture": {
+    "week": 13,
+    "rowText": "13 NEV SAĞLIK GRUBU BALIKESİRSPOR 3-1 DENİZLİ İDMANYURDU GÜRELLER SPOR KULÜBÜ 13 Aralık 2025 Nesine 3. Lig 04",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=285709&pageID=29"
+  },
   "stageWeek": 13,
   "roundType": "league",
   "roundLabel": "13. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

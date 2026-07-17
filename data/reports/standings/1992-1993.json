@@ -1,0 +1,56 @@
+{
+  "season": "1992-1993",
+  "generatedAt": "2026-07-17T22:28:25.241208Z",
+  "builderVersion": "standings-builder-v8-legacy-week-group-routing",
+  "mode": "official-only",
+  "maxWeek": 40,
+  "source": "official_tff_multi_stage_weekly_table",
+  "weeksGenerated": 40,
+  "teams": 9,
+  "matchesUsed": 0,
+  "penaltiesApplied": 0,
+  "warnings": [],
+  "stages": [
+    {
+      "id": "group-02",
+      "label": "02",
+      "maxWeek": 22,
+      "expectedMatches": 20,
+      "carriedMatches": 0,
+      "rawFinalPlayed": 20,
+      "weeksGenerated": 22,
+      "targetPageID": "809",
+      "targetGrupID": "336",
+      "targetModuleID": null
+    },
+    {
+      "id": "group-k2",
+      "label": "K2",
+      "maxWeek": 18,
+      "expectedMatches": 16,
+      "carriedMatches": 0,
+      "rawFinalPlayed": 16,
+      "weeksGenerated": 18,
+      "targetPageID": "809",
+      "targetGrupID": "341",
+      "targetModuleID": null
+    }
+  ],
+  "balkesFinal": {
+    "rank": 1,
+    "team": "Balıkesirspor",
+    "played": 16,
+    "won": 8,
+    "drawn": 4,
+    "lost": 4,
+    "goalsFor": 33,
+    "goalsAgainst": 23,
+    "goalDifference": 10,
+    "points": 28,
+    "rawPoints": 28,
+    "pointsDeducted": 0,
+    "penaltyNote": "",
+    "isBalkes": true,
+    "teamId": "135"
+  }
+}

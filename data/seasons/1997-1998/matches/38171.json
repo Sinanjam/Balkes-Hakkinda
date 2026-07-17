@@ -992,20 +992,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=38171",
-    "retrievedAt": "2026-07-12T17:38:07.716413Z",
+    "retrievedAt": "2026-07-17T19:33:06.696985Z",
     "sourceType": "official_tff_match_detail"
   },
+  "week": 16,
+  "standingsWeek": 16,
   "clubFixture": {
-    "week": 0,
+    "week": 16,
     "rowText": "16 BALIKESİRSPOR 2-1 BERGAMASPOR 29 Kasım 1997 3. Lig 06",
     "sourceUrl": "http://www.tff.org/Default.aspx?macID=38171&pageID=29"
   },
-  "week": 15,
-  "standingsWeek": 15,
-  "stageWeek": 15,
+  "stageWeek": 16,
   "roundType": "league",
-  "roundLabel": "15. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundLabel": "16. Hafta",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-06",
   "leagueStageLabel": "06",
   "leagueStageNumber": 1

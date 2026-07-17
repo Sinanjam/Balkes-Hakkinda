@@ -981,20 +981,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=46890",
-    "retrievedAt": "2026-07-12T17:38:22.483246Z",
+    "retrievedAt": "2026-07-17T19:33:17.714587Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "13 BALIKESİRSPOR 0-1 SARIYER 7 Nisan 1996 Lig B F",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=46890&pageID=29"
   },
   "week": 31,
   "standingsWeek": 31,
+  "clubFixture": {
+    "week": 13,
+    "rowText": "13 BALIKESİRSPOR 0-1 SARIYER 7 Nisan 1996 Lig B F",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=46890&pageID=29"
+  },
   "stageWeek": 13,
   "roundType": "league",
   "roundLabel": "13. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-f",
   "leagueStageLabel": "Yükselme F",
   "leagueStageNumber": 2,

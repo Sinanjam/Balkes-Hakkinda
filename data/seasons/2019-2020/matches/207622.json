@@ -1093,18 +1093,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=207622",
-    "retrievedAt": "2026-07-12T17:36:35.091355Z",
+    "retrievedAt": "2026-07-17T19:31:37.596838Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "19 BÜYÜKŞEHİR BELEDİYE ERZURUMSPOR 1-0 EKOL HASTANESİ BALIKESİRSPOR 26 Ocak 2020 TFF 1. Lig",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=207622&pageID=29"
   },
   "week": 19,
   "standingsWeek": 19,
+  "clubFixture": {
+    "week": 19,
+    "rowText": "19 BÜYÜKŞEHİR BELEDİYE ERZURUMSPOR 1-0 EKOL HASTANESİ BALIKESİRSPOR 26 Ocak 2020 TFF 1. Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=207622&pageID=29"
+  },
   "stageWeek": 19,
   "roundType": "league",
   "roundLabel": "19. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

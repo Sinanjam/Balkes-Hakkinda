@@ -1147,18 +1147,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=129600",
-    "retrievedAt": "2026-07-12T17:36:57.340428Z",
+    "retrievedAt": "2026-07-17T19:32:05.555750Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "6 ÇAYKUR RİZESPOR A.Ş. 2-2 BALIKESİRSPOR 20 Ekim 2014 Spor Toto Süper Lig Süleyman Seba Sezonu",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=129600&pageID=29"
   },
   "week": 6,
   "standingsWeek": 6,
+  "clubFixture": {
+    "week": 6,
+    "rowText": "6 ÇAYKUR RİZESPOR A.Ş. 2-2 BALIKESİRSPOR 20 Ekim 2014 Spor Toto Süper Lig Süleyman Seba Sezonu",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=129600&pageID=29"
+  },
   "stageWeek": 6,
   "roundType": "league",
   "roundLabel": "6. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

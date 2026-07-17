@@ -1223,18 +1223,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=223393",
-    "retrievedAt": "2026-07-12T17:36:20.378104Z",
+    "retrievedAt": "2026-07-17T19:31:24.358503Z",
     "sourceType": "official_tff_match_detail"
   },
+  "week": 12,
+  "standingsWeek": 12,
   "clubFixture": {
-    "week": 0,
+    "week": 12,
     "rowText": "12 BALIKESİRSPOR 1-2 ADANASPOR A.Ş. 7 Kasım 2021 Spor Toto 1. Lig",
     "sourceUrl": "http://www.tff.org/Default.aspx?macID=223393&pageID=29"
   },
-  "week": 11,
-  "standingsWeek": 11,
-  "stageWeek": 11,
+  "stageWeek": 12,
   "roundType": "league",
-  "roundLabel": "11. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundLabel": "12. Hafta",
+  "roundSource": "tff_club_fixture"
 }

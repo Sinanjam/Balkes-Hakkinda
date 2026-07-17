@@ -938,20 +938,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=59454",
-    "retrievedAt": "2026-07-12T17:38:37.171799Z",
+    "retrievedAt": "2026-07-17T19:33:34.811189Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "12 DARICA GENÇLERBİRLİĞİ 2-2 BALIKESIRSPOR 24 Kasım 1991 3. Lig 7",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=59454&pageID=29"
   },
   "week": 12,
   "standingsWeek": 12,
+  "clubFixture": {
+    "week": 12,
+    "rowText": "12 DARICA GENÇLERBİRLİĞİ 2-2 BALIKESIRSPOR 24 Kasım 1991 3. Lig 7",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=59454&pageID=29"
+  },
   "stageWeek": 12,
   "roundType": "league",
   "roundLabel": "12. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-7",
   "leagueStageLabel": "7",
   "leagueStageNumber": 1

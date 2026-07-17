@@ -1039,18 +1039,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=195108",
-    "retrievedAt": "2026-07-12T17:36:41.601224Z",
+    "retrievedAt": "2026-07-17T19:31:52.528641Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "33 ADANA DEMİRSPOR 2-0 BALIKESİRSPOR BALTOK 12 Mayıs 2019 Spor Toto 1. Lig",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=195108&pageID=29"
   },
   "week": 33,
   "standingsWeek": 33,
+  "clubFixture": {
+    "week": 33,
+    "rowText": "33 ADANA DEMİRSPOR 2-0 BALIKESİRSPOR BALTOK 12 Mayıs 2019 Spor Toto 1. Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=195108&pageID=29"
+  },
   "stageWeek": 33,
   "roundType": "league",
   "roundLabel": "33. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

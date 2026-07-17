@@ -998,20 +998,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=44389",
-    "retrievedAt": "2026-07-12T17:38:13.752098Z",
+    "retrievedAt": "2026-07-17T19:33:13.372159Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "2 BALIKESİRSPOR 1-1 AYDINSPOR 20 Ağustos 1995 Lig B Klasman 02",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=44389&pageID=29"
   },
   "week": 2,
   "standingsWeek": 2,
+  "clubFixture": {
+    "week": 2,
+    "rowText": "2 BALIKESİRSPOR 1-1 AYDINSPOR 20 Ağustos 1995 Lig B Klasman 02",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=44389&pageID=29"
+  },
   "stageWeek": 2,
   "roundType": "league",
   "roundLabel": "2. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-02",
   "leagueStageLabel": "Kademe 02",
   "leagueStageNumber": 1,

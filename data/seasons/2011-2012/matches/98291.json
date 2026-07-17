@@ -1216,20 +1216,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=98291",
-    "retrievedAt": "2026-07-12T17:37:13.372470Z",
+    "retrievedAt": "2026-07-17T19:32:21.449229Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "3 Ş.URFASPOR 4-1 BALIKESİRSPOR 25 Eylül 2011 Spor Toto 2. Lig Beyaz",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=98291&pageID=29"
   },
   "week": 3,
   "standingsWeek": 3,
+  "clubFixture": {
+    "week": 3,
+    "rowText": "3 Ş.URFASPOR 4-1 BALIKESİRSPOR 25 Eylül 2011 Spor Toto 2. Lig Beyaz",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=98291&pageID=29"
+  },
   "stageWeek": 3,
   "roundType": "league",
   "roundLabel": "3. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-beyaz",
   "leagueStageLabel": "Beyaz",
   "leagueStageNumber": 1

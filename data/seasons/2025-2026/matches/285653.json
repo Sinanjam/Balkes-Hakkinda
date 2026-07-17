@@ -1293,18 +1293,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=285653",
-    "retrievedAt": "2026-07-12T17:35:57.627407Z",
+    "retrievedAt": "2026-07-17T19:31:04.233943Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "6 ALANYA 1221 FUTBOL SPOR KULÜBÜ 0-2 NEV SAĞLIK GRUBU BALIKESİRSPOR 12 Ekim 2025 Nesine 3. Lig 04",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=285653&pageID=29"
   },
   "week": 6,
   "standingsWeek": 6,
+  "clubFixture": {
+    "week": 6,
+    "rowText": "6 ALANYA 1221 FUTBOL SPOR KULÜBÜ 0-2 NEV SAĞLIK GRUBU BALIKESİRSPOR 12 Ekim 2025 Nesine 3. Lig 04",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=285653&pageID=29"
+  },
   "stageWeek": 6,
   "roundType": "league",
   "roundLabel": "6. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

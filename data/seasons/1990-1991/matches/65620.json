@@ -782,20 +782,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=65620",
-    "retrievedAt": "2026-07-12T17:38:43.571876Z",
+    "retrievedAt": "2026-07-17T19:33:41.371155Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "28 BALIKESIRSPOR 1-1 İZNİKSPOR 14 Nisan 1991 3. Lig 7",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=65620&pageID=29"
   },
   "week": 28,
   "standingsWeek": 28,
+  "clubFixture": {
+    "week": 28,
+    "rowText": "28 BALIKESIRSPOR 1-1 İZNİKSPOR 14 Nisan 1991 3. Lig 7",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=65620&pageID=29"
+  },
   "stageWeek": 28,
   "roundType": "league",
   "roundLabel": "28. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-7",
   "leagueStageLabel": "7",
   "leagueStageNumber": 1

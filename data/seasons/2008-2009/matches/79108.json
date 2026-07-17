@@ -1044,20 +1044,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=79108",
-    "retrievedAt": "2026-07-12T17:37:38.234045Z",
+    "retrievedAt": "2026-07-17T19:32:39.373674Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "2 BALIKESİRSPOR 1-0 AYDINSPOR 1 Mart 2009 TFF 3.Lig Klasman K2",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=79108&pageID=29"
   },
   "week": 20,
   "standingsWeek": 20,
+  "clubFixture": {
+    "week": 2,
+    "rowText": "2 BALIKESİRSPOR 1-0 AYDINSPOR 1 Mart 2009 TFF 3.Lig Klasman K2",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=79108&pageID=29"
+  },
   "stageWeek": 2,
   "roundType": "league",
   "roundLabel": "2. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-k2",
   "leagueStageLabel": "K2",
   "leagueStageNumber": 2,

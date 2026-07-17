@@ -1305,18 +1305,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=251300",
-    "retrievedAt": "2026-07-12T17:36:13.267248Z",
+    "retrievedAt": "2026-07-17T19:31:18.226073Z",
     "sourceType": "official_tff_match_detail"
   },
+  "week": 20,
+  "standingsWeek": 20,
   "clubFixture": {
-    "week": 0,
+    "week": 20,
     "rowText": "20 BALIKESİRSPOR 0-0 MUŞ 1984 MUŞSPOR 18 Şubat 2024 TFF 3. LİG 04",
     "sourceUrl": "http://www.tff.org/Default.aspx?macID=251300&pageID=29"
   },
-  "week": 19,
-  "standingsWeek": 19,
-  "stageWeek": 19,
+  "stageWeek": 20,
   "roundType": "league",
-  "roundLabel": "19. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundLabel": "20. Hafta",
+  "roundSource": "tff_club_fixture"
 }

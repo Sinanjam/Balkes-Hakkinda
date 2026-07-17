@@ -884,20 +884,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=53732",
-    "retrievedAt": "2026-07-12T17:38:32.757446Z",
+    "retrievedAt": "2026-07-17T19:33:27.626527Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "12 BUCASPOR 2-2 BALIKESIRSPOR 8 Mayıs 1994 Lig B K2",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=53732&pageID=29"
   },
   "week": 30,
   "standingsWeek": 30,
+  "clubFixture": {
+    "week": 12,
+    "rowText": "12 BUCASPOR 2-2 BALIKESIRSPOR 8 Mayıs 1994 Lig B K2",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=53732&pageID=29"
+  },
   "stageWeek": 12,
   "roundType": "league",
   "roundLabel": "12. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-k2",
   "leagueStageLabel": "K2",
   "leagueStageNumber": 2,

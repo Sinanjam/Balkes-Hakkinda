@@ -1004,20 +1004,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=28726",
-    "retrievedAt": "2026-07-12T17:37:53.754798Z",
+    "retrievedAt": "2026-07-17T19:32:54.441560Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "2 BALIKESİRSPOR 2-1 MUĞLASPOR 26 Eylül 1999 3. Lig 06",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=28726&pageID=29"
   },
   "week": 2,
   "standingsWeek": 2,
+  "clubFixture": {
+    "week": 2,
+    "rowText": "2 BALIKESİRSPOR 2-1 MUĞLASPOR 26 Eylül 1999 3. Lig 06",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=28726&pageID=29"
+  },
   "stageWeek": 2,
   "roundType": "league",
   "roundLabel": "2. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-06",
   "leagueStageLabel": "06",
   "leagueStageNumber": 1

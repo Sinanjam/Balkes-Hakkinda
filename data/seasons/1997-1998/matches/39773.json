@@ -1091,20 +1091,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=39773",
-    "retrievedAt": "2026-07-12T17:38:11.899601Z",
+    "retrievedAt": "2026-07-17T19:33:08.377119Z",
     "sourceType": "official_tff_match_detail"
   },
+  "week": 30,
+  "standingsWeek": 30,
   "clubFixture": {
-    "week": 0,
+    "week": 30,
     "rowText": "30 BALIKESİRSPOR 3-0 FETHİYESPOR 5 Nisan 1998 3. Lig 06",
     "sourceUrl": "http://www.tff.org/Default.aspx?macID=39773&pageID=29"
   },
-  "week": 28,
-  "standingsWeek": 28,
-  "stageWeek": 28,
+  "stageWeek": 30,
   "roundType": "league",
-  "roundLabel": "28. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundLabel": "30. Hafta",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-06",
   "leagueStageLabel": "06",
   "leagueStageNumber": 1

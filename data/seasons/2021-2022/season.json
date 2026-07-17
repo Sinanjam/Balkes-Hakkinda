@@ -4,7 +4,7 @@
   "competition": "Spor Toto 1. Lig (Profesyonel Takım)",
   "sourcePolicy": "TFF-only",
   "factoryVersion": "v5-professional-only-resilient",
-  "updatedAt": "2026-07-12T17:36:28.927594Z",
+  "updatedAt": "2026-07-17T19:31:31.701411Z",
   "summary": {
     "matches": 37,
     "wins": 3,
@@ -26,8 +26,24 @@
     "matchesIndex": "seasons/2021-2022/matches_index.json",
     "standingsByWeek": "seasons/2021-2022/standings_by_week.json"
   },
-  "sanitizedAt": "2026-07-12T17:38:45.462232Z",
+  "sanitizedAt": "2026-07-17T19:33:42.884227Z",
   "sanitizerVersion": "v1-professional-team-only",
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 36,
+    "won": 3,
+    "drawn": 3,
+    "lost": 30,
+    "goalsFor": 26,
+    "goalsAgainst": 77,
+    "goalDifference": -51,
+    "points": 12,
+    "rawPoints": 12,
+    "pointsDeducted": 0,
+    "finalRank": 19
+  },
   "leagueSummary": {
     "played": 36,
     "won": 3,
@@ -41,6 +57,6 @@
     "pointsDeducted": 0,
     "finalRank": 19
   },
-  "standingsUpdatedAt": "2026-07-12T17:42:48.171544Z",
-  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+  "standingsUpdatedAt": "2026-07-17T19:39:23.425373Z",
+  "standingsBuilderVersion": "standings-builder-v6-direct-group-postseason-scope"
 }

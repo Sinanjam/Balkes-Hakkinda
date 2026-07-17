@@ -1373,18 +1373,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=265694",
-    "retrievedAt": "2026-07-12T17:36:01.131925Z",
+    "retrievedAt": "2026-07-17T19:31:14.472344Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "11 BEYKOZ İSHAKLI SPOR FAALİYETLERİ A.Ş. 3-3 BALIKESİRSPOR 16 Kasım 2024 Nesine 3. Lig 02",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=265694&pageID=29"
   },
   "week": 11,
   "standingsWeek": 11,
+  "clubFixture": {
+    "week": 11,
+    "rowText": "11 BEYKOZ İSHAKLI SPOR FAALİYETLERİ A.Ş. 3-3 BALIKESİRSPOR 16 Kasım 2024 Nesine 3. Lig 02",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=265694&pageID=29"
+  },
   "stageWeek": 11,
   "roundType": "league",
   "roundLabel": "11. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

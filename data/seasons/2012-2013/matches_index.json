@@ -53,13 +53,13 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107248",
-      "retrievedAt": "2026-07-12T17:37:11.847519Z",
+      "retrievedAt": "2026-07-17T19:32:15.618517Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 1,
     "roundType": "league",
     "roundLabel": "1. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107252",
@@ -115,13 +115,13 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107252",
-      "retrievedAt": "2026-07-12T17:37:11.574529Z",
+      "retrievedAt": "2026-07-17T19:32:15.453644Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 2,
     "roundType": "league",
     "roundLabel": "2. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107265",
@@ -177,13 +177,13 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107265",
-      "retrievedAt": "2026-07-12T17:37:11.493361Z",
+      "retrievedAt": "2026-07-17T19:32:15.820446Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 3,
     "roundType": "league",
     "roundLabel": "3. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "116152",
@@ -237,7 +237,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=116152",
-      "retrievedAt": "2026-07-12T17:37:19.904398Z",
+      "retrievedAt": "2026-07-17T19:32:20.603526Z",
       "sourceType": "official_tff_match_detail"
     },
     "roundType": "cup"
@@ -296,20 +296,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107268",
-      "retrievedAt": "2026-07-12T17:37:11.558939Z",
+      "retrievedAt": "2026-07-17T19:32:16.018197Z",
       "sourceType": "official_tff_match_detail"
     },
     "stageWeek": 4,
     "roundType": "league",
     "roundLabel": "4. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107285",
     "matchCode": "3316",
     "season": "2012-2013",
-    "week": 5,
-    "standingsWeek": 5,
+    "week": 6,
+    "standingsWeek": 6,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -358,20 +358,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107285",
-      "retrievedAt": "2026-07-12T17:37:11.927593Z",
+      "retrievedAt": "2026-07-17T19:32:16.060214Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 5,
+    "stageWeek": 6,
     "roundType": "league",
-    "roundLabel": "5. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "6. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107297",
     "matchCode": "3328",
     "season": "2012-2013",
-    "week": 6,
-    "standingsWeek": 6,
+    "week": 7,
+    "standingsWeek": 7,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -420,20 +420,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107297",
-      "retrievedAt": "2026-07-12T17:37:12.419555Z",
+      "retrievedAt": "2026-07-17T19:32:16.810144Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 6,
+    "stageWeek": 7,
     "roundType": "league",
-    "roundLabel": "6. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "7. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107303",
     "matchCode": "3334",
     "season": "2012-2013",
-    "week": 7,
-    "standingsWeek": 7,
+    "week": 8,
+    "standingsWeek": 8,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -482,13 +482,13 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107303",
-      "retrievedAt": "2026-07-12T17:37:12.399413Z",
+      "retrievedAt": "2026-07-17T19:32:16.648722Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 7,
+    "stageWeek": 8,
     "roundType": "league",
-    "roundLabel": "7. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "8. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "116657",
@@ -542,7 +542,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=116657",
-      "retrievedAt": "2026-07-12T17:37:20.616531Z",
+      "retrievedAt": "2026-07-17T19:32:20.323339Z",
       "sourceType": "official_tff_match_detail"
     },
     "roundType": "cup"
@@ -551,8 +551,8 @@
     "id": "107312",
     "matchCode": "3343",
     "season": "2012-2013",
-    "week": 8,
-    "standingsWeek": 8,
+    "week": 9,
+    "standingsWeek": 9,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -601,20 +601,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107312",
-      "retrievedAt": "2026-07-12T17:37:12.609121Z",
+      "retrievedAt": "2026-07-17T19:32:16.967056Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 8,
+    "stageWeek": 9,
     "roundType": "league",
-    "roundLabel": "8. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "9. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107321",
     "matchCode": "3352",
     "season": "2012-2013",
-    "week": 9,
-    "standingsWeek": 9,
+    "week": 10,
+    "standingsWeek": 10,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -663,20 +663,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107321",
-      "retrievedAt": "2026-07-12T17:37:13.180194Z",
+      "retrievedAt": "2026-07-17T19:32:16.946574Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 9,
+    "stageWeek": 10,
     "roundType": "league",
-    "roundLabel": "9. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "10. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107327",
     "matchCode": "3358",
     "season": "2012-2013",
-    "week": 10,
-    "standingsWeek": 10,
+    "week": 11,
+    "standingsWeek": 11,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -725,20 +725,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107327",
-      "retrievedAt": "2026-07-12T17:37:13.122887Z",
+      "retrievedAt": "2026-07-17T19:32:16.995078Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 10,
+    "stageWeek": 11,
     "roundType": "league",
-    "roundLabel": "10. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "11. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107331",
     "matchCode": "3362",
     "season": "2012-2013",
-    "week": 11,
-    "standingsWeek": 11,
+    "week": 12,
+    "standingsWeek": 12,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -787,20 +787,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107331",
-      "retrievedAt": "2026-07-12T17:37:13.858012Z",
+      "retrievedAt": "2026-07-17T19:32:17.305687Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 11,
+    "stageWeek": 12,
     "roundType": "league",
-    "roundLabel": "11. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "12. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107342",
     "matchCode": "3373",
     "season": "2012-2013",
-    "week": 12,
-    "standingsWeek": 12,
+    "week": 13,
+    "standingsWeek": 13,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -849,13 +849,13 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107342",
-      "retrievedAt": "2026-07-12T17:37:13.888941Z",
+      "retrievedAt": "2026-07-17T19:32:17.728700Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 12,
+    "stageWeek": 13,
     "roundType": "league",
-    "roundLabel": "12. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "13. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "116695",
@@ -909,7 +909,7 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=116695",
-      "retrievedAt": "2026-07-12T17:37:20.604224Z",
+      "retrievedAt": "2026-07-17T19:32:21.087409Z",
       "sourceType": "official_tff_match_detail"
     },
     "roundType": "cup"
@@ -918,8 +918,8 @@
     "id": "107349",
     "matchCode": "3380",
     "season": "2012-2013",
-    "week": 13,
-    "standingsWeek": 13,
+    "week": 14,
+    "standingsWeek": 14,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -968,20 +968,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107349",
-      "retrievedAt": "2026-07-12T17:37:13.933549Z",
+      "retrievedAt": "2026-07-17T19:32:18.115880Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 13,
+    "stageWeek": 14,
     "roundType": "league",
-    "roundLabel": "13. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "14. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107357",
     "matchCode": "3388",
     "season": "2012-2013",
-    "week": 14,
-    "standingsWeek": 14,
+    "week": 15,
+    "standingsWeek": 15,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -1030,20 +1030,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107357",
-      "retrievedAt": "2026-07-12T17:37:14.277746Z",
+      "retrievedAt": "2026-07-17T19:32:17.379221Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 14,
+    "stageWeek": 15,
     "roundType": "league",
-    "roundLabel": "14. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "15. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107367",
     "matchCode": "3398",
     "season": "2012-2013",
-    "week": 15,
-    "standingsWeek": 15,
+    "week": 16,
+    "standingsWeek": 16,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -1092,20 +1092,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107367",
-      "retrievedAt": "2026-07-12T17:37:14.480800Z",
+      "retrievedAt": "2026-07-17T19:32:17.822174Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 15,
+    "stageWeek": 16,
     "roundType": "league",
-    "roundLabel": "15. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "16. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107372",
     "matchCode": "3403",
     "season": "2012-2013",
-    "week": 16,
-    "standingsWeek": 16,
+    "week": 17,
+    "standingsWeek": 17,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -1154,20 +1154,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107372",
-      "retrievedAt": "2026-07-12T17:37:15.689959Z",
+      "retrievedAt": "2026-07-17T19:32:17.811054Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 16,
+    "stageWeek": 17,
     "roundType": "league",
-    "roundLabel": "16. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "17. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107384",
     "matchCode": "3415",
     "season": "2012-2013",
-    "week": 17,
-    "standingsWeek": 17,
+    "week": 18,
+    "standingsWeek": 18,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -1216,20 +1216,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107384",
-      "retrievedAt": "2026-07-12T17:37:15.175046Z",
+      "retrievedAt": "2026-07-17T19:32:18.189480Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 17,
+    "stageWeek": 18,
     "roundType": "league",
-    "roundLabel": "17. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "18. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107388",
     "matchCode": "3419",
     "season": "2012-2013",
-    "week": 18,
-    "standingsWeek": 18,
+    "week": 19,
+    "standingsWeek": 19,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -1278,20 +1278,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107388",
-      "retrievedAt": "2026-07-12T17:37:15.417504Z",
+      "retrievedAt": "2026-07-17T19:32:18.654890Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 18,
+    "stageWeek": 19,
     "roundType": "league",
-    "roundLabel": "18. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "19. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107401",
     "matchCode": "3432",
     "season": "2012-2013",
-    "week": 19,
-    "standingsWeek": 19,
+    "week": 20,
+    "standingsWeek": 20,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -1340,20 +1340,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107401",
-      "retrievedAt": "2026-07-12T17:37:15.865669Z",
+      "retrievedAt": "2026-07-17T19:32:18.227402Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 19,
+    "stageWeek": 20,
     "roundType": "league",
-    "roundLabel": "19. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "20. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107404",
     "matchCode": "3435",
     "season": "2012-2013",
-    "week": 20,
-    "standingsWeek": 20,
+    "week": 21,
+    "standingsWeek": 21,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -1402,20 +1402,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107404",
-      "retrievedAt": "2026-07-12T17:37:15.734708Z",
+      "retrievedAt": "2026-07-17T19:32:18.275148Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 20,
+    "stageWeek": 21,
     "roundType": "league",
-    "roundLabel": "20. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "21. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107421",
     "matchCode": "3452",
     "season": "2012-2013",
-    "week": 21,
-    "standingsWeek": 21,
+    "week": 23,
+    "standingsWeek": 23,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -1464,20 +1464,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107421",
-      "retrievedAt": "2026-07-12T17:37:16.239240Z",
+      "retrievedAt": "2026-07-17T19:32:19.083283Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 21,
+    "stageWeek": 23,
     "roundType": "league",
-    "roundLabel": "21. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "23. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107433",
     "matchCode": "3464",
     "season": "2012-2013",
-    "week": 22,
-    "standingsWeek": 22,
+    "week": 24,
+    "standingsWeek": 24,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -1526,20 +1526,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107433",
-      "retrievedAt": "2026-07-12T17:37:16.712179Z",
+      "retrievedAt": "2026-07-17T19:32:18.676150Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 22,
+    "stageWeek": 24,
     "roundType": "league",
-    "roundLabel": "22. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "24. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107439",
     "matchCode": "3470",
     "season": "2012-2013",
-    "week": 23,
-    "standingsWeek": 23,
+    "week": 25,
+    "standingsWeek": 25,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -1588,20 +1588,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107439",
-      "retrievedAt": "2026-07-12T17:37:17.111119Z",
+      "retrievedAt": "2026-07-17T19:32:19.124326Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 23,
+    "stageWeek": 25,
     "roundType": "league",
-    "roundLabel": "23. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "25. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107448",
     "matchCode": "3479",
     "season": "2012-2013",
-    "week": 24,
-    "standingsWeek": 24,
+    "week": 26,
+    "standingsWeek": 26,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -1650,20 +1650,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107448",
-      "retrievedAt": "2026-07-12T17:37:17.546482Z",
+      "retrievedAt": "2026-07-17T19:32:18.793078Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 24,
+    "stageWeek": 26,
     "roundType": "league",
-    "roundLabel": "24. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "26. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107457",
     "matchCode": "3488",
     "season": "2012-2013",
-    "week": 25,
-    "standingsWeek": 25,
+    "week": 27,
+    "standingsWeek": 27,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -1712,20 +1712,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107457",
-      "retrievedAt": "2026-07-12T17:37:17.604953Z",
+      "retrievedAt": "2026-07-17T19:32:19.493575Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 25,
+    "stageWeek": 27,
     "roundType": "league",
-    "roundLabel": "25. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "27. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107463",
     "matchCode": "3494",
     "season": "2012-2013",
-    "week": 26,
-    "standingsWeek": 26,
+    "week": 28,
+    "standingsWeek": 28,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -1774,20 +1774,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107463",
-      "retrievedAt": "2026-07-12T17:37:17.770938Z",
+      "retrievedAt": "2026-07-17T19:32:19.515558Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 26,
+    "stageWeek": 28,
     "roundType": "league",
-    "roundLabel": "26. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "28. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107467",
     "matchCode": "3498",
     "season": "2012-2013",
-    "week": 27,
-    "standingsWeek": 27,
+    "week": 29,
+    "standingsWeek": 29,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -1836,20 +1836,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107467",
-      "retrievedAt": "2026-07-12T17:37:18.083562Z",
+      "retrievedAt": "2026-07-17T19:32:19.569283Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 27,
+    "stageWeek": 29,
     "roundType": "league",
-    "roundLabel": "27. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "29. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107478",
     "matchCode": "3509",
     "season": "2012-2013",
-    "week": 28,
-    "standingsWeek": 28,
+    "week": 30,
+    "standingsWeek": 30,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -1898,20 +1898,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107478",
-      "retrievedAt": "2026-07-12T17:37:18.563389Z",
+      "retrievedAt": "2026-07-17T19:32:19.888455Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 28,
+    "stageWeek": 30,
     "roundType": "league",
-    "roundLabel": "28. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "30. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107485",
     "matchCode": "3516",
     "season": "2012-2013",
-    "week": 29,
-    "standingsWeek": 29,
+    "week": 31,
+    "standingsWeek": 31,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -1960,20 +1960,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107485",
-      "retrievedAt": "2026-07-12T17:37:19.606740Z",
+      "retrievedAt": "2026-07-17T19:32:19.921963Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 29,
+    "stageWeek": 31,
     "roundType": "league",
-    "roundLabel": "29. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "31. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107493",
     "matchCode": "3524",
     "season": "2012-2013",
-    "week": 30,
-    "standingsWeek": 30,
+    "week": 32,
+    "standingsWeek": 32,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -2022,20 +2022,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107493",
-      "retrievedAt": "2026-07-12T17:37:19.814447Z",
+      "retrievedAt": "2026-07-17T19:32:20.130663Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 30,
+    "stageWeek": 32,
     "roundType": "league",
-    "roundLabel": "30. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "32. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107503",
     "matchCode": "3534",
     "season": "2012-2013",
-    "week": 31,
-    "standingsWeek": 31,
+    "week": 33,
+    "standingsWeek": 33,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -2084,20 +2084,20 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107503",
-      "retrievedAt": "2026-07-12T17:37:18.872887Z",
+      "retrievedAt": "2026-07-17T19:32:20.068701Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 31,
+    "stageWeek": 33,
     "roundType": "league",
-    "roundLabel": "31. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "33. Hafta",
+    "roundSource": "tff_club_fixture"
   },
   {
     "id": "107508",
     "matchCode": "3539",
     "season": "2012-2013",
-    "week": 32,
-    "standingsWeek": 32,
+    "week": 34,
+    "standingsWeek": 34,
     "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
     "competitionType": "league",
     "competitionLabel": "Lig",
@@ -2146,12 +2146,12 @@
     "source": {
       "name": "TFF",
       "url": "http://www.tff.org/Default.aspx?pageID=29&macId=107508",
-      "retrievedAt": "2026-07-12T17:37:19.239383Z",
+      "retrievedAt": "2026-07-17T19:32:20.264397Z",
       "sourceType": "official_tff_match_detail"
     },
-    "stageWeek": 32,
+    "stageWeek": 34,
     "roundType": "league",
-    "roundLabel": "32. Hafta",
-    "roundSource": "stage_sequence_fallback"
+    "roundLabel": "34. Hafta",
+    "roundSource": "tff_club_fixture"
   }
 ]

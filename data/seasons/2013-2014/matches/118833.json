@@ -1140,20 +1140,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=118833",
-    "retrievedAt": "2026-07-12T17:37:04.951893Z",
+    "retrievedAt": "2026-07-17T19:32:10.609574Z",
     "sourceType": "official_tff_match_detail"
   },
+  "week": 9,
+  "standingsWeek": 9,
   "clubFixture": {
-    "week": 0,
+    "week": 9,
     "rowText": "9 SAMSUNSPOR 3-0 BALIKESİRSPOR 19 Ekim 2013 PTT 1.Lig",
     "sourceUrl": "http://www.tff.org/Default.aspx?macID=118833&pageID=29"
   },
-  "week": 8,
-  "standingsWeek": 8,
-  "stageWeek": 8,
+  "stageWeek": 9,
   "roundType": "league",
-  "roundLabel": "8. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundLabel": "9. Hafta",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-lig",
   "leagueStageLabel": "Lig",
   "leagueStageNumber": 1

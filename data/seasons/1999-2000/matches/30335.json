@@ -1080,20 +1080,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=30335",
-    "retrievedAt": "2026-07-12T17:37:57.257699Z",
+    "retrievedAt": "2026-07-17T19:32:57.050591Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "16 BALIKESİRSPOR 2-1 GÖNENSPOR 30 Ocak 2000 3. Lig 06",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=30335&pageID=29"
   },
   "week": 16,
   "standingsWeek": 16,
+  "clubFixture": {
+    "week": 16,
+    "rowText": "16 BALIKESİRSPOR 2-1 GÖNENSPOR 30 Ocak 2000 3. Lig 06",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=30335&pageID=29"
+  },
   "stageWeek": 16,
   "roundType": "league",
   "roundLabel": "16. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-06",
   "leagueStageLabel": "06",
   "leagueStageNumber": 1

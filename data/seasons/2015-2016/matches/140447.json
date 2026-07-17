@@ -1063,20 +1063,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=140447",
-    "retrievedAt": "2026-07-12T17:36:56.718054Z",
+    "retrievedAt": "2026-07-17T19:32:01.736000Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "19 BALIKESİRSPOR 1-0 MULTIGROUP ALANYASPOR 23 Ocak 2016 PTT 1.Lig",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=140447&pageID=29"
   },
   "week": 19,
   "standingsWeek": 19,
+  "clubFixture": {
+    "week": 19,
+    "rowText": "19 BALIKESİRSPOR 1-0 MULTIGROUP ALANYASPOR 23 Ocak 2016 PTT 1.Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=140447&pageID=29"
+  },
   "stageWeek": 19,
   "roundType": "league",
   "roundLabel": "19. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-lig",
   "leagueStageLabel": "Lig",
   "leagueStageNumber": 1

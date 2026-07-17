@@ -857,20 +857,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=53596",
-    "retrievedAt": "2026-07-12T17:38:32.669065Z",
+    "retrievedAt": "2026-07-17T19:33:27.555778Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "11 BALIKESIRSPOR 1-1 ÇANAKKALE DARDANELSPOR 1 Mayıs 1994 Lig B K2",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=53596&pageID=29"
   },
   "week": 29,
   "standingsWeek": 29,
+  "clubFixture": {
+    "week": 11,
+    "rowText": "11 BALIKESIRSPOR 1-1 ÇANAKKALE DARDANELSPOR 1 Mayıs 1994 Lig B K2",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=53596&pageID=29"
+  },
   "stageWeek": 11,
   "roundType": "league",
   "roundLabel": "11. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-k2",
   "leagueStageLabel": "K2",
   "leagueStageNumber": 2,

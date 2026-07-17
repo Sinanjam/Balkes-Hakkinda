@@ -801,20 +801,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=60897",
-    "retrievedAt": "2026-07-12T17:38:40.476281Z",
+    "retrievedAt": "2026-07-17T19:33:35.967528Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "24 ÇANAKKALE DARDANEL SPOR 0-2 BALIKESIRSPOR 22 Mart 1992 3. Lig 7",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=60897&pageID=29"
   },
   "week": 24,
   "standingsWeek": 24,
+  "clubFixture": {
+    "week": 24,
+    "rowText": "24 ÇANAKKALE DARDANEL SPOR 0-2 BALIKESIRSPOR 22 Mart 1992 3. Lig 7",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=60897&pageID=29"
+  },
   "stageWeek": 24,
   "roundType": "league",
   "roundLabel": "24. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-7",
   "leagueStageLabel": "7",
   "leagueStageNumber": 1

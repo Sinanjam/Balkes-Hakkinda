@@ -1100,20 +1100,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=29376",
-    "retrievedAt": "2026-07-12T17:37:56.272260Z",
+    "retrievedAt": "2026-07-17T19:32:55.748785Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "8 BALIKESİRSPOR 2-0 AYVALIKGÜCÜ 7 Kasım 1999 3. Lig 06",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=29376&pageID=29"
   },
   "week": 8,
   "standingsWeek": 8,
+  "clubFixture": {
+    "week": 8,
+    "rowText": "8 BALIKESİRSPOR 2-0 AYVALIKGÜCÜ 7 Kasım 1999 3. Lig 06",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=29376&pageID=29"
+  },
   "stageWeek": 8,
   "roundType": "league",
   "roundLabel": "8. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-06",
   "leagueStageLabel": "06",
   "leagueStageNumber": 1

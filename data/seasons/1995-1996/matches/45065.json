@@ -1027,20 +1027,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=45065",
-    "retrievedAt": "2026-07-12T17:38:16.289512Z",
+    "retrievedAt": "2026-07-17T19:33:14.693476Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "10 BALIKESİRSPOR 2-1 Y.TURGUTLUSPOR 15 Ekim 1995 Lig B Klasman 02",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=45065&pageID=29"
   },
   "week": 10,
   "standingsWeek": 10,
+  "clubFixture": {
+    "week": 10,
+    "rowText": "10 BALIKESİRSPOR 2-1 Y.TURGUTLUSPOR 15 Ekim 1995 Lig B Klasman 02",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=45065&pageID=29"
+  },
   "stageWeek": 10,
   "roundType": "league",
   "roundLabel": "10. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-02",
   "leagueStageLabel": "Kademe 02",
   "leagueStageNumber": 1,

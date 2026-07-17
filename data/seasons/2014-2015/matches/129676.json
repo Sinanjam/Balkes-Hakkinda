@@ -1060,18 +1060,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=129676",
-    "retrievedAt": "2026-07-12T17:37:00.023769Z",
+    "retrievedAt": "2026-07-17T19:32:06.322802Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "15 KARDEMİR KARABÜKSPOR 0-1 BALIKESİRSPOR 27 Aralık 2014 Spor Toto Süper Lig Süleyman Seba Sezonu",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=129676&pageID=29"
   },
   "week": 15,
   "standingsWeek": 15,
+  "clubFixture": {
+    "week": 15,
+    "rowText": "15 KARDEMİR KARABÜKSPOR 0-1 BALIKESİRSPOR 27 Aralık 2014 Spor Toto Süper Lig Süleyman Seba Sezonu",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=129676&pageID=29"
+  },
   "stageWeek": 15,
   "roundType": "league",
   "roundLabel": "15. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

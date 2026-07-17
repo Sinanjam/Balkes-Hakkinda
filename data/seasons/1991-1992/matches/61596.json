@@ -1004,20 +1004,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=61596",
-    "retrievedAt": "2026-07-12T17:38:43.186925Z",
+    "retrievedAt": "2026-07-17T19:33:37.703583Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "29 BALIKESIRSPOR 2-1 DARICA GENÇLERBİRLİĞİ 26 Nisan 1992 3. Lig 7",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=61596&pageID=29"
   },
   "week": 29,
   "standingsWeek": 29,
+  "clubFixture": {
+    "week": 29,
+    "rowText": "29 BALIKESIRSPOR 2-1 DARICA GENÇLERBİRLİĞİ 26 Nisan 1992 3. Lig 7",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=61596&pageID=29"
+  },
   "stageWeek": 29,
   "roundType": "league",
   "roundLabel": "29. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-7",
   "leagueStageLabel": "7",
   "leagueStageNumber": 1

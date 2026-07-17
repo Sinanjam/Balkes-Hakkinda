@@ -965,20 +965,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=61439",
-    "retrievedAt": "2026-07-12T17:38:41.390977Z",
+    "retrievedAt": "2026-07-17T19:33:36.468087Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "28 EDREMITSPOR 0-3 BALIKESIRSPOR 19 Nisan 1992 3. Lig 7",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=61439&pageID=29"
   },
   "week": 28,
   "standingsWeek": 28,
+  "clubFixture": {
+    "week": 28,
+    "rowText": "28 EDREMITSPOR 0-3 BALIKESIRSPOR 19 Nisan 1992 3. Lig 7",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=61439&pageID=29"
+  },
   "stageWeek": 28,
   "roundType": "league",
   "roundLabel": "28. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-7",
   "leagueStageLabel": "7",
   "leagueStageNumber": 1

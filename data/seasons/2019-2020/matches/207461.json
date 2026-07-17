@@ -1024,18 +1024,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=207461",
-    "retrievedAt": "2026-07-12T17:36:30.058238Z",
+    "retrievedAt": "2026-07-17T19:31:32.306105Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "1 ADANA DEMİRSPOR 2-0 BALIKESİRSPOR 17 Ağustos 2019 TFF 1. Lig",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=207461&pageID=29"
   },
   "week": 1,
   "standingsWeek": 1,
+  "clubFixture": {
+    "week": 1,
+    "rowText": "1 ADANA DEMİRSPOR 2-0 BALIKESİRSPOR 17 Ağustos 2019 TFF 1. Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=207461&pageID=29"
+  },
   "stageWeek": 1,
   "roundType": "league",
   "roundLabel": "1. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

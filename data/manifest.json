@@ -3,9 +3,27 @@
   "schemaVersion": 3,
   "dataVersion": 1,
   "appVersion": "1.5.0-alpha02",
-  "generatedAt": "2026-07-12T17:38:46.113521Z",
+  "generatedAt": "2026-07-17T19:33:43.550413Z",
   "team": "Balıkesirspor",
   "availableSeasons": [
+    {
+      "id": "2026-2027",
+      "name": "2026-2027",
+      "matchCount": 34,
+      "competition": "Nesine 3. Lig (Profesyonel Takım)",
+      "summary": {
+        "matches": 34,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "matchTypes": {
+          "league": 34
+        }
+      }
+    },
     {
       "id": "2025-2026",
       "name": "2025-2026",
@@ -42,7 +60,23 @@
         "pointsDeducted": 0,
         "finalRank": 5
       },
-      "standingsByWeekUrl": "seasons/2025-2026/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/2025-2026/standings_by_week.json",
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
+        "played": 30,
+        "won": 17,
+        "drawn": 7,
+        "lost": 6,
+        "goalsFor": 59,
+        "goalsAgainst": 24,
+        "goalDifference": 35,
+        "points": 58,
+        "rawPoints": 58,
+        "pointsDeducted": 0,
+        "finalRank": 5
+      }
     },
     {
       "id": "2024-2025",
@@ -61,26 +95,8 @@
           "league": 30,
           "cup": 1,
           "playoff": 3
-        },
-        "points": 56,
-        "rawPoints": 56,
-        "pointsDeducted": 0,
-        "finalRank": 2
-      },
-      "leagueSummary": {
-        "played": 30,
-        "won": 17,
-        "drawn": 5,
-        "lost": 8,
-        "goalsFor": 54,
-        "goalsAgainst": 27,
-        "goalDifference": 27,
-        "points": 56,
-        "rawPoints": 56,
-        "pointsDeducted": 0,
-        "finalRank": 2
-      },
-      "standingsByWeekUrl": "seasons/2024-2025/standings_by_week.json"
+        }
+      }
     },
     {
       "id": "2023-2024",
@@ -98,26 +114,8 @@
         "matchTypes": {
           "league": 28,
           "cup": 1
-        },
-        "points": 33,
-        "rawPoints": 33,
-        "pointsDeducted": 0,
-        "finalRank": 8
-      },
-      "leagueSummary": {
-        "played": 28,
-        "won": 7,
-        "drawn": 12,
-        "lost": 9,
-        "goalsFor": 28,
-        "goalsAgainst": 32,
-        "goalDifference": -4,
-        "points": 33,
-        "rawPoints": 33,
-        "pointsDeducted": 0,
-        "finalRank": 8
-      },
-      "standingsByWeekUrl": "seasons/2023-2024/standings_by_week.json"
+        }
+      }
     },
     {
       "id": "2022-2023",
@@ -135,26 +133,8 @@
         "matchTypes": {
           "league": 38,
           "cup": 2
-        },
-        "points": 25,
-        "rawPoints": 25,
-        "pointsDeducted": 0,
-        "finalRank": 17
-      },
-      "leagueSummary": {
-        "played": 38,
-        "won": 6,
-        "drawn": 10,
-        "lost": 22,
-        "goalsFor": 32,
-        "goalsAgainst": 76,
-        "goalDifference": -44,
-        "points": 25,
-        "rawPoints": 25,
-        "pointsDeducted": 0,
-        "finalRank": 17
-      },
-      "standingsByWeekUrl": "seasons/2022-2023/standings_by_week.json"
+        }
+      }
     },
     {
       "id": "2021-2022",
@@ -172,26 +152,8 @@
         "matchTypes": {
           "league": 36,
           "cup": 1
-        },
-        "points": 12,
-        "rawPoints": 12,
-        "pointsDeducted": 0,
-        "finalRank": 19
-      },
-      "leagueSummary": {
-        "played": 36,
-        "won": 3,
-        "drawn": 3,
-        "lost": 30,
-        "goalsFor": 26,
-        "goalsAgainst": 77,
-        "goalDifference": -51,
-        "points": 12,
-        "rawPoints": 12,
-        "pointsDeducted": 0,
-        "finalRank": 19
-      },
-      "standingsByWeekUrl": "seasons/2021-2022/standings_by_week.json"
+        }
+      }
     },
     {
       "id": "2020-2021",
@@ -209,26 +171,8 @@
         "matchTypes": {
           "league": 34,
           "cup": 1
-        },
-        "points": 35,
-        "rawPoints": 35,
-        "pointsDeducted": 0,
-        "finalRank": 13
-      },
-      "leagueSummary": {
-        "played": 34,
-        "won": 9,
-        "drawn": 8,
-        "lost": 17,
-        "goalsFor": 35,
-        "goalsAgainst": 53,
-        "goalDifference": -18,
-        "points": 35,
-        "rawPoints": 35,
-        "pointsDeducted": 0,
-        "finalRank": 13
-      },
-      "standingsByWeekUrl": "seasons/2020-2021/standings_by_week.json"
+        }
+      }
     },
     {
       "id": "2019-2020",
@@ -253,6 +197,22 @@
         "finalRank": 13
       },
       "leagueSummary": {
+        "played": 34,
+        "won": 9,
+        "drawn": 11,
+        "lost": 14,
+        "goalsFor": 36,
+        "goalsAgainst": 48,
+        "goalDifference": -12,
+        "points": 38,
+        "rawPoints": 38,
+        "pointsDeducted": 0,
+        "finalRank": 13
+      },
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
         "played": 34,
         "won": 9,
         "drawn": 11,
@@ -290,6 +250,22 @@
         "finalRank": 15
       },
       "leagueSummary": {
+        "played": 34,
+        "won": 11,
+        "drawn": 7,
+        "lost": 16,
+        "goalsFor": 36,
+        "goalsAgainst": 45,
+        "goalDifference": -9,
+        "points": 34,
+        "rawPoints": 34,
+        "pointsDeducted": 0,
+        "finalRank": 15
+      },
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
         "played": 34,
         "won": 11,
         "drawn": 7,
@@ -359,6 +335,22 @@
           "officialTableIsCumulative": false
         }
       ],
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
+        "played": 34,
+        "won": 16,
+        "drawn": 7,
+        "lost": 11,
+        "goalsFor": 56,
+        "goalsAgainst": 46,
+        "points": 52,
+        "rawPoints": 52,
+        "pointsDeducted": 0,
+        "goalDifference": 10,
+        "finalRank": 8
+      },
       "standingsByWeekUrl": "seasons/2017-2018/standings_by_week.json"
     },
     {
@@ -416,6 +408,22 @@
           "officialTableIsCumulative": false
         }
       ],
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
+        "played": 34,
+        "won": 10,
+        "drawn": 12,
+        "lost": 12,
+        "goalsFor": 56,
+        "goalsAgainst": 48,
+        "points": 42,
+        "rawPoints": 42,
+        "pointsDeducted": 0,
+        "goalDifference": 8,
+        "finalRank": 9
+      },
       "standingsByWeekUrl": "seasons/2016-2017/standings_by_week.json"
     },
     {
@@ -474,6 +482,22 @@
           "officialTableIsCumulative": false
         }
       ],
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
+        "played": 34,
+        "won": 13,
+        "drawn": 13,
+        "lost": 8,
+        "goalsFor": 40,
+        "goalsAgainst": 29,
+        "points": 52,
+        "rawPoints": 52,
+        "pointsDeducted": 0,
+        "goalDifference": 11,
+        "finalRank": 6
+      },
       "standingsByWeekUrl": "seasons/2015-2016/standings_by_week.json"
     },
     {
@@ -499,6 +523,22 @@
         "finalRank": 18
       },
       "leagueSummary": {
+        "played": 34,
+        "won": 6,
+        "drawn": 9,
+        "lost": 19,
+        "goalsFor": 48,
+        "goalsAgainst": 69,
+        "goalDifference": -21,
+        "points": 27,
+        "rawPoints": 27,
+        "pointsDeducted": 0,
+        "finalRank": 18
+      },
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
         "played": 34,
         "won": 6,
         "drawn": 9,
@@ -568,6 +608,22 @@
           "officialTableIsCumulative": false
         }
       ],
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
+        "played": 36,
+        "won": 22,
+        "drawn": 7,
+        "lost": 7,
+        "goalsFor": 56,
+        "goalsAgainst": 33,
+        "points": 73,
+        "rawPoints": 73,
+        "pointsDeducted": 0,
+        "goalDifference": 23,
+        "finalRank": 2
+      },
       "standingsByWeekUrl": "seasons/2013-2014/standings_by_week.json"
     },
     {
@@ -593,6 +649,22 @@
         "finalRank": 1
       },
       "leagueSummary": {
+        "played": 32,
+        "won": 20,
+        "drawn": 9,
+        "lost": 3,
+        "goalsFor": 46,
+        "goalsAgainst": 20,
+        "goalDifference": 26,
+        "points": 69,
+        "rawPoints": 69,
+        "pointsDeducted": 0,
+        "finalRank": 1
+      },
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
         "played": 32,
         "won": 20,
         "drawn": 9,
@@ -662,6 +734,22 @@
           "officialTableIsCumulative": false
         }
       ],
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
+        "played": 32,
+        "won": 20,
+        "drawn": 8,
+        "lost": 4,
+        "goalsFor": 73,
+        "goalsAgainst": 32,
+        "points": 68,
+        "rawPoints": 68,
+        "pointsDeducted": 0,
+        "goalDifference": 41,
+        "finalRank": 2
+      },
       "standingsByWeekUrl": "seasons/2011-2012/standings_by_week.json"
     },
     {
@@ -719,6 +807,22 @@
           "officialTableIsCumulative": false
         }
       ],
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
+        "played": 34,
+        "won": 11,
+        "drawn": 10,
+        "lost": 13,
+        "goalsFor": 48,
+        "goalsAgainst": 50,
+        "points": 43,
+        "rawPoints": 43,
+        "pointsDeducted": 0,
+        "goalDifference": -2,
+        "finalRank": 10
+      },
       "standingsByWeekUrl": "seasons/2010-2011/standings_by_week.json"
     },
     {
@@ -794,6 +898,22 @@
           "officialTableIsCumulative": false
         }
       ],
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
+        "played": 38,
+        "won": 23,
+        "drawn": 8,
+        "lost": 7,
+        "goalsFor": 70,
+        "goalsAgainst": 29,
+        "points": 77,
+        "rawPoints": 77,
+        "pointsDeducted": 0,
+        "goalDifference": 41,
+        "finalRank": 2
+      },
       "standingsByWeekUrl": "seasons/2009-2010/standings_by_week.json"
     },
     {
@@ -869,6 +989,22 @@
           "officialTableIsCumulative": true
         }
       ],
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
+        "played": 32,
+        "won": 14,
+        "drawn": 5,
+        "lost": 13,
+        "goalsFor": 44,
+        "goalsAgainst": 46,
+        "points": 47,
+        "rawPoints": 47,
+        "pointsDeducted": 0,
+        "goalDifference": -2,
+        "finalRank": 1
+      },
       "standingsByWeekUrl": "seasons/2008-2009/standings_by_week.json"
     },
     {
@@ -926,6 +1062,22 @@
           "officialTableIsCumulative": false
         }
       ],
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
+        "played": 32,
+        "won": 13,
+        "drawn": 14,
+        "lost": 5,
+        "goalsFor": 41,
+        "goalsAgainst": 29,
+        "points": 53,
+        "rawPoints": 53,
+        "pointsDeducted": 0,
+        "goalDifference": 12,
+        "finalRank": 5
+      },
       "standingsByWeekUrl": "seasons/2007-2008/standings_by_week.json"
     },
     {
@@ -956,33 +1108,29 @@
         "lost": 11,
         "goalsFor": 37,
         "goalsAgainst": 32,
+        "goalDifference": 5,
         "points": 41,
         "rawPoints": 41,
         "pointsDeducted": 0,
-        "goalDifference": 5,
         "finalRank": 8
       },
-      "leagueStages": [
-        {
-          "id": "group-03",
-          "label": "03",
-          "stageNumber": 1,
-          "startWeek": 1,
-          "endWeek": 30,
-          "played": 30,
-          "won": 11,
-          "drawn": 8,
-          "lost": 11,
-          "goalsFor": 37,
-          "goalsAgainst": 32,
-          "goalDifference": 5,
-          "points": 41,
-          "finalRank": 8,
-          "carriedMatches": 0,
-          "officialTableIsCumulative": false
-        }
+      "standingsByWeekUrl": "seasons/2006-2007/standings_by_week.json",
+      "officialStandingsMatchTypes": [
+        "league"
       ],
-      "standingsByWeekUrl": "seasons/2006-2007/standings_by_week.json"
+      "officialStandingsSummary": {
+        "played": 30,
+        "won": 11,
+        "drawn": 8,
+        "lost": 11,
+        "goalsFor": 37,
+        "goalsAgainst": 32,
+        "goalDifference": 5,
+        "points": 41,
+        "rawPoints": 41,
+        "pointsDeducted": 0,
+        "finalRank": 8
+      }
     },
     {
       "id": "2000-2001",
@@ -1039,6 +1187,22 @@
           "officialTableIsCumulative": false
         }
       ],
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
+        "played": 32,
+        "won": 7,
+        "drawn": 13,
+        "lost": 12,
+        "goalsFor": 41,
+        "goalsAgainst": 50,
+        "points": 34,
+        "rawPoints": 34,
+        "pointsDeducted": 0,
+        "goalDifference": -9,
+        "finalRank": 14
+      },
       "standingsByWeekUrl": "seasons/2000-2001/standings_by_week.json"
     },
     {
@@ -1096,6 +1260,22 @@
           "officialTableIsCumulative": false
         }
       ],
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
+        "played": 32,
+        "won": 18,
+        "drawn": 8,
+        "lost": 6,
+        "goalsFor": 48,
+        "goalsAgainst": 24,
+        "points": 62,
+        "rawPoints": 62,
+        "pointsDeducted": 0,
+        "goalDifference": 24,
+        "finalRank": 2
+      },
       "standingsByWeekUrl": "seasons/1999-2000/standings_by_week.json"
     },
     {
@@ -1153,6 +1333,22 @@
           "officialTableIsCumulative": false
         }
       ],
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
+        "played": 32,
+        "won": 10,
+        "drawn": 10,
+        "lost": 12,
+        "goalsFor": 40,
+        "goalsAgainst": 34,
+        "points": 40,
+        "rawPoints": 40,
+        "pointsDeducted": 0,
+        "goalDifference": 6,
+        "finalRank": 13
+      },
       "standingsByWeekUrl": "seasons/1998-1999/standings_by_week.json"
     },
     {
@@ -1209,6 +1405,22 @@
           "officialTableIsCumulative": false
         }
       ],
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
+        "played": 32,
+        "won": 18,
+        "drawn": 9,
+        "lost": 5,
+        "goalsFor": 46,
+        "goalsAgainst": 23,
+        "points": 63,
+        "rawPoints": 63,
+        "pointsDeducted": 0,
+        "goalDifference": 23,
+        "finalRank": 3
+      },
       "standingsByWeekUrl": "seasons/1997-1998/standings_by_week.json"
     },
     {
@@ -1284,6 +1496,22 @@
           "officialTableIsCumulative": false
         }
       ],
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
+        "played": 32,
+        "won": 7,
+        "drawn": 8,
+        "lost": 17,
+        "goalsFor": 29,
+        "goalsAgainst": 42,
+        "points": 29,
+        "rawPoints": 29,
+        "pointsDeducted": 0,
+        "goalDifference": -13,
+        "finalRank": 6
+      },
       "standingsByWeekUrl": "seasons/1996-1997/standings_by_week.json"
     },
     {
@@ -1360,6 +1588,22 @@
           "officialTableIsCumulative": false
         }
       ],
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
+        "played": 36,
+        "won": 17,
+        "drawn": 10,
+        "lost": 9,
+        "goalsFor": 55,
+        "goalsAgainst": 41,
+        "points": 61,
+        "rawPoints": 61,
+        "pointsDeducted": 0,
+        "goalDifference": 14,
+        "finalRank": 4
+      },
       "standingsByWeekUrl": "seasons/1995-1996/standings_by_week.json"
     },
     {
@@ -1435,6 +1679,22 @@
           "officialTableIsCumulative": false
         }
       ],
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
+        "played": 32,
+        "won": 13,
+        "drawn": 6,
+        "lost": 13,
+        "goalsFor": 37,
+        "goalsAgainst": 35,
+        "points": 45,
+        "rawPoints": 45,
+        "pointsDeducted": 0,
+        "goalDifference": 2,
+        "finalRank": 3
+      },
       "standingsByWeekUrl": "seasons/1994-1995/standings_by_week.json"
     },
     {
@@ -1510,6 +1770,22 @@
           "officialTableIsCumulative": false
         }
       ],
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
+        "played": 32,
+        "won": 11,
+        "drawn": 10,
+        "lost": 11,
+        "goalsFor": 39,
+        "goalsAgainst": 35,
+        "points": 43,
+        "rawPoints": 43,
+        "pointsDeducted": 0,
+        "goalDifference": 4,
+        "finalRank": 6
+      },
       "standingsByWeekUrl": "seasons/1993-1994/standings_by_week.json"
     },
     {
@@ -1585,6 +1861,22 @@
           "officialTableIsCumulative": false
         }
       ],
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
+        "played": 36,
+        "won": 18,
+        "drawn": 5,
+        "lost": 13,
+        "goalsFor": 65,
+        "goalsAgainst": 57,
+        "points": 59,
+        "rawPoints": 59,
+        "pointsDeducted": 0,
+        "goalDifference": 8,
+        "finalRank": 1
+      },
       "standingsByWeekUrl": "seasons/1992-1993/standings_by_week.json"
     },
     {
@@ -1641,6 +1933,22 @@
           "officialTableIsCumulative": false
         }
       ],
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
+        "played": 34,
+        "won": 24,
+        "drawn": 7,
+        "lost": 3,
+        "goalsFor": 69,
+        "goalsAgainst": 27,
+        "points": 79,
+        "rawPoints": 79,
+        "pointsDeducted": 0,
+        "goalDifference": 42,
+        "finalRank": 1
+      },
       "standingsByWeekUrl": "seasons/1991-1992/standings_by_week.json"
     },
     {
@@ -1697,6 +2005,22 @@
           "officialTableIsCumulative": false
         }
       ],
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "officialStandingsSummary": {
+        "played": 34,
+        "won": 14,
+        "drawn": 9,
+        "lost": 11,
+        "goalsFor": 33,
+        "goalsAgainst": 31,
+        "points": 51,
+        "rawPoints": 51,
+        "pointsDeducted": 0,
+        "goalDifference": 2,
+        "finalRank": 7
+      },
       "standingsByWeekUrl": "seasons/1990-1991/standings_by_week.json"
     }
   ],
@@ -1706,12 +2030,13 @@
     "searchIndexUrl": "search_index.json",
     "dataReportUrl": "data_report.json"
   },
-  "appDataVersion": 1783877926,
+  "appDataVersion": 1784316823,
   "appMinVersion": "1.5.0-alpha02",
-  "lastUpdated": "2026-07-12T17:38:46.113538Z",
+  "lastUpdated": "2026-07-17T19:33:43.550432Z",
   "dataBaseUrl": "https://raw.githubusercontent.com/Sinanjam/Balkes-Hakkinda/main/data/",
   "factoryVersion": "v5-professional-only-resilient",
   "processedSeasonsInLastRun": [
+    "2026-2027",
     "2025-2026",
     "2024-2025",
     "2023-2024",
@@ -1744,6 +2069,6 @@
     "1991-1992",
     "1990-1991"
   ],
-  "standingsUpdatedAt": "2026-07-12T18:01:44.016950Z",
-  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+  "standingsUpdatedAt": "2026-07-17T22:29:33.562814Z",
+  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing"
 }

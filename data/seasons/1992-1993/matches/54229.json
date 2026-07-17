@@ -937,20 +937,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=54229",
-    "retrievedAt": "2026-07-12T17:38:25.555508Z",
+    "retrievedAt": "2026-07-17T19:33:28.382569Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "5 İZMİRSPOR 0-4 BALIKESIRSPOR 13 Eylül 1992 Lig B Klasman 02",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=54229&pageID=29"
   },
   "week": 5,
   "standingsWeek": 5,
+  "clubFixture": {
+    "week": 5,
+    "rowText": "5 İZMİRSPOR 0-4 BALIKESIRSPOR 13 Eylül 1992 Lig B Klasman 02",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=54229&pageID=29"
+  },
   "stageWeek": 5,
   "roundType": "league",
   "roundLabel": "5. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-02",
   "leagueStageLabel": "02",
   "leagueStageNumber": 1,

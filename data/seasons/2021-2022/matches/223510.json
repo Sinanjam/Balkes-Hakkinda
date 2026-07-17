@@ -1222,18 +1222,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=223510",
-    "retrievedAt": "2026-07-12T17:36:24.149726Z",
+    "retrievedAt": "2026-07-17T19:31:28.266339Z",
     "sourceType": "official_tff_match_detail"
   },
+  "week": 25,
+  "standingsWeek": 25,
   "clubFixture": {
-    "week": 0,
+    "week": 25,
     "rowText": "25 ANKARA KEÇİÖRENGÜCÜ 3-1 BALIKESİRSPOR 16 Şubat 2022 Spor Toto 1. Lig",
     "sourceUrl": "http://www.tff.org/Default.aspx?macID=223510&pageID=29"
   },
-  "week": 23,
-  "standingsWeek": 23,
-  "stageWeek": 23,
+  "stageWeek": 25,
   "roundType": "league",
-  "roundLabel": "23. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundLabel": "25. Hafta",
+  "roundSource": "tff_club_fixture"
 }

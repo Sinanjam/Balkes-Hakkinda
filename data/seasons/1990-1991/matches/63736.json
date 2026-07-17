@@ -782,20 +782,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=63736",
-    "retrievedAt": "2026-07-12T17:38:39.024211Z",
+    "retrievedAt": "2026-07-17T19:33:39.021288Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "12 BALIKESIRSPOR 2-0 BAYRAMPAŞA 2 Aralık 1990 3. Lig 7",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=63736&pageID=29"
   },
   "week": 12,
   "standingsWeek": 12,
+  "clubFixture": {
+    "week": 12,
+    "rowText": "12 BALIKESIRSPOR 2-0 BAYRAMPAŞA 2 Aralık 1990 3. Lig 7",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=63736&pageID=29"
+  },
   "stageWeek": 12,
   "roundType": "league",
   "roundLabel": "12. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-7",
   "leagueStageLabel": "7",
   "leagueStageNumber": 1

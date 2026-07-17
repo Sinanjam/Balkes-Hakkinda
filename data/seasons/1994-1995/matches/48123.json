@@ -908,20 +908,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=48123",
-    "retrievedAt": "2026-07-12T17:38:16.803298Z",
+    "retrievedAt": "2026-07-17T19:33:19.864300Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "9 AYDINSPOR 1-0 BALIKESIRSPOR 9 Ekim 1994 Lig B Klasman 02",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=48123&pageID=29"
   },
   "week": 9,
   "standingsWeek": 9,
+  "clubFixture": {
+    "week": 9,
+    "rowText": "9 AYDINSPOR 1-0 BALIKESIRSPOR 9 Ekim 1994 Lig B Klasman 02",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=48123&pageID=29"
+  },
   "stageWeek": 9,
   "roundType": "league",
   "roundLabel": "9. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-02",
   "leagueStageLabel": "02",
   "leagueStageNumber": 1,

@@ -908,20 +908,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=61091",
-    "retrievedAt": "2026-07-12T17:38:40.837723Z",
+    "retrievedAt": "2026-07-17T19:33:36.283781Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "26 ÇANSPOR 0-1 BALIKESIRSPOR 5 Nisan 1992 3. Lig 7",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=61091&pageID=29"
   },
   "week": 26,
   "standingsWeek": 26,
+  "clubFixture": {
+    "week": 26,
+    "rowText": "26 ÇANSPOR 0-1 BALIKESIRSPOR 5 Nisan 1992 3. Lig 7",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=61091&pageID=29"
+  },
   "stageWeek": 26,
   "roundType": "league",
   "roundLabel": "26. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-7",
   "leagueStageLabel": "7",
   "leagueStageNumber": 1

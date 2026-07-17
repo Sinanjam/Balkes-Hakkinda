@@ -1129,18 +1129,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=235749",
-    "retrievedAt": "2026-07-12T17:36:08.267817Z",
+    "retrievedAt": "2026-07-17T19:31:20.758966Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "17 BAYNET İNŞAAT BALIKESİRSPOR 1-1 ADIYAMAN FUTBOL KULÜBÜ A.Ş. 4 Aralık 2022 TFF 2.Lig Kırmızı",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=235749&pageID=29"
   },
   "week": 17,
   "standingsWeek": 17,
+  "clubFixture": {
+    "week": 17,
+    "rowText": "17 BAYNET İNŞAAT BALIKESİRSPOR 1-1 ADIYAMAN FUTBOL KULÜBÜ A.Ş. 4 Aralık 2022 TFF 2.Lig Kırmızı",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=235749&pageID=29"
+  },
   "stageWeek": 17,
   "roundType": "league",
   "roundLabel": "17. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

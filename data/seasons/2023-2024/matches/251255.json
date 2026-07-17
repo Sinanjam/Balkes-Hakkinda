@@ -1304,18 +1304,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=251255",
-    "retrievedAt": "2026-07-12T17:36:11.392085Z",
+    "retrievedAt": "2026-07-17T19:31:16.483368Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "13 TOKAT BELEDİYE PLEVNE SPOR 1-1 BALIKESİRSPOR 2 Aralık 2023 TFF 3. LİG 04",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=251255&pageID=29"
   },
   "week": 13,
   "standingsWeek": 13,
+  "clubFixture": {
+    "week": 13,
+    "rowText": "13 TOKAT BELEDİYE PLEVNE SPOR 1-1 BALIKESİRSPOR 2 Aralık 2023 TFF 3. LİG 04",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=251255&pageID=29"
+  },
   "stageWeek": 13,
   "roundType": "league",
   "roundLabel": "13. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

@@ -1117,20 +1117,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=75555",
-    "retrievedAt": "2026-07-12T17:37:37.332955Z",
+    "retrievedAt": "2026-07-17T19:32:39.367785Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "17 İZMİRSPOR 3-0 BALIKESİRSPOR 21 Aralık 2008 TFF 3.Lig Kademe 02",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=75555&pageID=29"
   },
   "week": 17,
   "standingsWeek": 17,
+  "clubFixture": {
+    "week": 17,
+    "rowText": "17 İZMİRSPOR 3-0 BALIKESİRSPOR 21 Aralık 2008 TFF 3.Lig Kademe 02",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=75555&pageID=29"
+  },
   "stageWeek": 17,
   "roundType": "league",
   "roundLabel": "17. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-02",
   "leagueStageLabel": "02",
   "leagueStageNumber": 1,

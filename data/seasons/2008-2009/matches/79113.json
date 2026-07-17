@@ -1120,20 +1120,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=79113",
-    "retrievedAt": "2026-07-12T17:37:38.789150Z",
+    "retrievedAt": "2026-07-17T19:32:39.790733Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "3 BALIKESİRSPOR 0-1 ISPARTASPOR 4 Mart 2009 TFF 3.Lig Klasman K2",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=79113&pageID=29"
   },
   "week": 21,
   "standingsWeek": 21,
+  "clubFixture": {
+    "week": 3,
+    "rowText": "3 BALIKESİRSPOR 0-1 ISPARTASPOR 4 Mart 2009 TFF 3.Lig Klasman K2",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=79113&pageID=29"
+  },
   "stageWeek": 3,
   "roundType": "league",
   "roundLabel": "3. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-k2",
   "leagueStageLabel": "K2",
   "leagueStageNumber": 2,

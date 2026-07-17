@@ -820,20 +820,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=63747",
-    "retrievedAt": "2026-07-12T17:38:39.322305Z",
+    "retrievedAt": "2026-07-17T19:33:39.269780Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "13 THY 1-1 BALIKESIRSPOR 9 Aralık 1990 3. Lig 7",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=63747&pageID=29"
   },
   "week": 13,
   "standingsWeek": 13,
+  "clubFixture": {
+    "week": 13,
+    "rowText": "13 THY 1-1 BALIKESIRSPOR 9 Aralık 1990 3. Lig 7",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=63747&pageID=29"
+  },
   "stageWeek": 13,
   "roundType": "league",
   "roundLabel": "13. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-7",
   "leagueStageLabel": "7",
   "leagueStageNumber": 1

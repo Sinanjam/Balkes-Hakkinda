@@ -832,20 +832,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=53263",
-    "retrievedAt": "2026-07-12T17:38:31.420722Z",
+    "retrievedAt": "2026-07-17T19:33:27.611640Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "8 BALIKESIRSPOR 1-0 Y.SALİHLİSPOR 10 Nisan 1994 Lig B K2",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=53263&pageID=29"
   },
   "week": 26,
   "standingsWeek": 26,
+  "clubFixture": {
+    "week": 8,
+    "rowText": "8 BALIKESIRSPOR 1-0 Y.SALİHLİSPOR 10 Nisan 1994 Lig B K2",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=53263&pageID=29"
+  },
   "stageWeek": 8,
   "roundType": "league",
   "roundLabel": "8. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-k2",
   "leagueStageLabel": "K2",
   "leagueStageNumber": 2,

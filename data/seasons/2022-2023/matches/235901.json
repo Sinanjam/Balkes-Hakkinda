@@ -1168,18 +1168,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=235901",
-    "retrievedAt": "2026-07-12T17:36:12.135293Z",
+    "retrievedAt": "2026-07-17T19:31:23.843408Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "32 WEECOINS KIRKLARELİSPOR 0-0 BAYNET İNŞAAT BALIKESİRSPOR 15 Nisan 2023 TFF 2.Lig Kırmızı",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=235901&pageID=29"
   },
   "week": 32,
   "standingsWeek": 32,
+  "clubFixture": {
+    "week": 32,
+    "rowText": "32 WEECOINS KIRKLARELİSPOR 0-0 BAYNET İNŞAAT BALIKESİRSPOR 15 Nisan 2023 TFF 2.Lig Kırmızı",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=235901&pageID=29"
+  },
   "stageWeek": 32,
   "roundType": "league",
   "roundLabel": "32. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

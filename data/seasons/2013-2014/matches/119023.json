@@ -970,20 +970,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=119023",
-    "retrievedAt": "2026-07-12T17:37:08.267541Z",
+    "retrievedAt": "2026-07-17T19:32:13.856800Z",
     "sourceType": "official_tff_match_detail"
   },
+  "week": 30,
+  "standingsWeek": 30,
   "clubFixture": {
-    "week": 0,
+    "week": 30,
     "rowText": "30 BALIKESİRSPOR 1-1 ANKARASPOR A.Ş. 15 Mart 2014 PTT 1.Lig",
     "sourceUrl": "http://www.tff.org/Default.aspx?macID=119023&pageID=29"
   },
-  "week": 28,
-  "standingsWeek": 28,
-  "stageWeek": 28,
+  "stageWeek": 30,
   "roundType": "league",
-  "roundLabel": "28. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundLabel": "30. Hafta",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-lig",
   "leagueStageLabel": "Lig",
   "leagueStageNumber": 1

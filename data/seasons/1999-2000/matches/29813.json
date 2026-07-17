@@ -1075,20 +1075,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=29813",
-    "retrievedAt": "2026-07-12T17:37:56.592609Z",
+    "retrievedAt": "2026-07-17T19:32:56.581461Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "12 BALIKESİRSPOR 3-0 SİMAV EYNALSPOR 5 Aralık 1999 3. Lig 06",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=29813&pageID=29"
   },
   "week": 12,
   "standingsWeek": 12,
+  "clubFixture": {
+    "week": 12,
+    "rowText": "12 BALIKESİRSPOR 3-0 SİMAV EYNALSPOR 5 Aralık 1999 3. Lig 06",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=29813&pageID=29"
+  },
   "stageWeek": 12,
   "roundType": "league",
   "roundLabel": "12. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-06",
   "leagueStageLabel": "06",
   "leagueStageNumber": 1

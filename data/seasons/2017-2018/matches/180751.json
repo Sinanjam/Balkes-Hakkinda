@@ -1133,20 +1133,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=180751",
-    "retrievedAt": "2026-07-12T17:36:43.482594Z",
+    "retrievedAt": "2026-07-17T19:31:47.064741Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "13 DENİZLİSPOR 0-2 BALIKESİRSPOR BALTOK 27 Kasım 2017 Spor Toto 1. Lig",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=180751&pageID=29"
   },
   "week": 13,
   "standingsWeek": 13,
+  "clubFixture": {
+    "week": 13,
+    "rowText": "13 DENİZLİSPOR 0-2 BALIKESİRSPOR BALTOK 27 Kasım 2017 Spor Toto 1. Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=180751&pageID=29"
+  },
   "stageWeek": 13,
   "roundType": "league",
   "roundLabel": "13. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-lig",
   "leagueStageLabel": "Lig",
   "leagueStageNumber": 1

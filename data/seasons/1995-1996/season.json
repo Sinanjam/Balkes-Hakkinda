@@ -4,7 +4,7 @@
   "competition": "Lig B Klasman (Profesyonel Takım)",
   "sourcePolicy": "TFF-only",
   "factoryVersion": "v5-professional-only-resilient",
-  "updatedAt": "2026-07-12T17:38:24.302663Z",
+  "updatedAt": "2026-07-17T19:33:22.838536Z",
   "summary": {
     "matches": 39,
     "wins": 18,
@@ -27,7 +27,7 @@
     "matchesIndex": "seasons/1995-1996/matches_index.json",
     "standingsByWeek": "seasons/1995-1996/standings_by_week.json"
   },
-  "sanitizedAt": "2026-07-12T17:38:45.987274Z",
+  "sanitizedAt": "2026-07-17T19:33:43.423355Z",
   "sanitizerVersion": "v1-professional-team-only",
   "leagueStages": [
     {
@@ -67,6 +67,22 @@
       "officialTableIsCumulative": false
     }
   ],
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 36,
+    "won": 17,
+    "drawn": 10,
+    "lost": 9,
+    "goalsFor": 55,
+    "goalsAgainst": 41,
+    "points": 61,
+    "rawPoints": 61,
+    "pointsDeducted": 0,
+    "goalDifference": 14,
+    "finalRank": 4
+  },
   "leagueSummary": {
     "played": 36,
     "won": 17,
@@ -80,6 +96,6 @@
     "goalDifference": 14,
     "finalRank": 4
   },
-  "standingsUpdatedAt": "2026-07-12T18:01:18.067165Z",
-  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+  "standingsUpdatedAt": "2026-07-17T22:28:23.825855Z",
+  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing"
 }

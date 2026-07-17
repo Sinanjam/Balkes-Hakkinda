@@ -1268,18 +1268,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=219562",
-    "retrievedAt": "2026-07-12T17:36:24.183363Z",
+    "retrievedAt": "2026-07-17T19:31:37.562833Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "19 AYDENİZ ET BALIKESİRSPOR 0-2 TUZLASPOR A.Ş. 30 Ocak 2021 TFF 1. Lig",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=219562&pageID=29"
   },
   "week": 19,
   "standingsWeek": 19,
+  "clubFixture": {
+    "week": 19,
+    "rowText": "19 AYDENİZ ET BALIKESİRSPOR 0-2 TUZLASPOR A.Ş. 30 Ocak 2021 TFF 1. Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=219562&pageID=29"
+  },
   "stageWeek": 19,
   "roundType": "league",
   "roundLabel": "19. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

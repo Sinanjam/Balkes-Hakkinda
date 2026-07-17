@@ -4,7 +4,7 @@
   "competition": "TFF 1.Lig (Profesyonel Takım)",
   "sourcePolicy": "TFF-only",
   "factoryVersion": "v5-professional-only-resilient",
-  "updatedAt": "2026-07-12T17:36:54.808913Z",
+  "updatedAt": "2026-07-17T19:32:04.151262Z",
   "summary": {
     "matches": 36,
     "wins": 11,
@@ -26,7 +26,7 @@
     "matchesIndex": "seasons/2016-2017/matches_index.json",
     "standingsByWeek": "seasons/2016-2017/standings_by_week.json"
   },
-  "sanitizedAt": "2026-07-12T17:38:45.594367Z",
+  "sanitizedAt": "2026-07-17T19:33:43.015552Z",
   "sanitizerVersion": "v1-professional-team-only",
   "leagueStages": [
     {
@@ -48,6 +48,22 @@
       "officialTableIsCumulative": false
     }
   ],
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 34,
+    "won": 10,
+    "drawn": 12,
+    "lost": 12,
+    "goalsFor": 56,
+    "goalsAgainst": 48,
+    "points": 42,
+    "rawPoints": 42,
+    "pointsDeducted": 0,
+    "goalDifference": 8,
+    "finalRank": 9
+  },
   "leagueSummary": {
     "played": 34,
     "won": 10,
@@ -61,6 +77,6 @@
     "goalDifference": 8,
     "finalRank": 9
   },
-  "standingsUpdatedAt": "2026-07-12T17:47:45.314380Z",
-  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+  "standingsUpdatedAt": "2026-07-17T22:11:17.559086Z",
+  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing"
 }

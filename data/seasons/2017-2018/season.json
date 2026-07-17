@@ -4,7 +4,7 @@
   "competition": "Spor Toto 1. Lig (Profesyonel Takım)",
   "sourcePolicy": "TFF-only",
   "factoryVersion": "v5-professional-only-resilient",
-  "updatedAt": "2026-07-12T17:36:50.497069Z",
+  "updatedAt": "2026-07-17T19:31:53.324410Z",
   "summary": {
     "matches": 35,
     "wins": 16,
@@ -26,7 +26,7 @@
     "matchesIndex": "seasons/2017-2018/matches_index.json",
     "standingsByWeek": "seasons/2017-2018/standings_by_week.json"
   },
-  "sanitizedAt": "2026-07-12T17:38:45.568731Z",
+  "sanitizedAt": "2026-07-17T19:33:42.989451Z",
   "sanitizerVersion": "v1-professional-team-only",
   "leagueStages": [
     {
@@ -48,6 +48,22 @@
       "officialTableIsCumulative": false
     }
   ],
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 34,
+    "won": 16,
+    "drawn": 7,
+    "lost": 11,
+    "goalsFor": 56,
+    "goalsAgainst": 46,
+    "points": 52,
+    "rawPoints": 52,
+    "pointsDeducted": 0,
+    "goalDifference": 10,
+    "finalRank": 8
+  },
   "leagueSummary": {
     "played": 34,
     "won": 16,
@@ -61,6 +77,6 @@
     "goalDifference": 10,
     "finalRank": 8
   },
-  "standingsUpdatedAt": "2026-07-12T17:46:55.373070Z",
-  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+  "standingsUpdatedAt": "2026-07-17T22:09:39.412578Z",
+  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing"
 }

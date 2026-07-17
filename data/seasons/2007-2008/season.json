@@ -4,7 +4,7 @@
   "competition": "TFF 3. Lig (Profesyonel Takım)",
   "sourcePolicy": "TFF-only",
   "factoryVersion": "v5-professional-only-resilient",
-  "updatedAt": "2026-07-12T17:37:44.282352Z",
+  "updatedAt": "2026-07-17T19:32:50.157040Z",
   "summary": {
     "matches": 33,
     "wins": 13,
@@ -26,7 +26,7 @@
     "matchesIndex": "seasons/2007-2008/matches_index.json",
     "standingsByWeek": "seasons/2007-2008/standings_by_week.json"
   },
-  "sanitizedAt": "2026-07-12T17:38:45.825734Z",
+  "sanitizedAt": "2026-07-17T19:33:43.258315Z",
   "sanitizerVersion": "v1-professional-team-only",
   "leagueStages": [
     {
@@ -48,6 +48,22 @@
       "officialTableIsCumulative": false
     }
   ],
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 32,
+    "won": 13,
+    "drawn": 14,
+    "lost": 5,
+    "goalsFor": 41,
+    "goalsAgainst": 29,
+    "points": 53,
+    "rawPoints": 53,
+    "pointsDeducted": 0,
+    "goalDifference": 12,
+    "finalRank": 5
+  },
   "leagueSummary": {
     "played": 32,
     "won": 13,
@@ -61,6 +77,6 @@
     "goalDifference": 12,
     "finalRank": 5
   },
-  "standingsUpdatedAt": "2026-07-12T18:00:53.459513Z",
-  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+  "standingsUpdatedAt": "2026-07-17T22:28:12.152319Z",
+  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing"
 }

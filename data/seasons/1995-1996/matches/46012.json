@@ -1021,20 +1021,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=46012",
-    "retrievedAt": "2026-07-12T17:38:19.309751Z",
+    "retrievedAt": "2026-07-17T19:33:16.585530Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "1 BALIKESİRSPOR 2-0 D.Ç. KARABÜKSPOR 14 Ocak 1996 Lig B F",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=46012&pageID=29"
   },
   "week": 19,
   "standingsWeek": 19,
+  "clubFixture": {
+    "week": 1,
+    "rowText": "1 BALIKESİRSPOR 2-0 D.Ç. KARABÜKSPOR 14 Ocak 1996 Lig B F",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=46012&pageID=29"
+  },
   "stageWeek": 1,
   "roundType": "league",
   "roundLabel": "1. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-f",
   "leagueStageLabel": "Yükselme F",
   "leagueStageNumber": 2,

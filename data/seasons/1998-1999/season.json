@@ -4,7 +4,7 @@
   "competition": "3. Lig (Profesyonel Takım)",
   "sourcePolicy": "TFF-only",
   "factoryVersion": "v5-professional-only-resilient",
-  "updatedAt": "2026-07-12T17:38:03.878884Z",
+  "updatedAt": "2026-07-17T19:33:08.563964Z",
   "summary": {
     "matches": 33,
     "wins": 10,
@@ -26,7 +26,7 @@
     "matchesIndex": "seasons/1998-1999/matches_index.json",
     "standingsByWeek": "seasons/1998-1999/standings_by_week.json"
   },
-  "sanitizedAt": "2026-07-12T17:38:45.916522Z",
+  "sanitizedAt": "2026-07-17T19:33:43.351935Z",
   "sanitizerVersion": "v1-professional-team-only",
   "leagueStages": [
     {
@@ -48,6 +48,22 @@
       "officialTableIsCumulative": false
     }
   ],
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 32,
+    "won": 10,
+    "drawn": 10,
+    "lost": 12,
+    "goalsFor": 40,
+    "goalsAgainst": 34,
+    "points": 40,
+    "rawPoints": 40,
+    "pointsDeducted": 0,
+    "goalDifference": 6,
+    "finalRank": 13
+  },
   "leagueSummary": {
     "played": 32,
     "won": 10,
@@ -61,6 +77,6 @@
     "goalDifference": 6,
     "finalRank": 13
   },
-  "standingsUpdatedAt": "2026-07-12T18:00:54.199044Z",
-  "standingsBuilderVersion": "standings-builder-v5-archive-stage-scope-carry-safe"
+  "standingsUpdatedAt": "2026-07-17T22:26:20.454742Z",
+  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing"
 }

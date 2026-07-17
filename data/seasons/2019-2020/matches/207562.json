@@ -1085,18 +1085,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=207562",
-    "retrievedAt": "2026-07-12T17:36:33.036861Z",
+    "retrievedAt": "2026-07-17T19:31:36.737902Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "12 EKOL GÖZ MENEMENSPOR 1-0 EKOL HASTANESİ BALIKESİRSPOR 24 Kasım 2019 TFF 1. Lig",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=207562&pageID=29"
   },
   "week": 12,
   "standingsWeek": 12,
+  "clubFixture": {
+    "week": 12,
+    "rowText": "12 EKOL GÖZ MENEMENSPOR 1-0 EKOL HASTANESİ BALIKESİRSPOR 24 Kasım 2019 TFF 1. Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=207562&pageID=29"
+  },
   "stageWeek": 12,
   "roundType": "league",
   "roundLabel": "12. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

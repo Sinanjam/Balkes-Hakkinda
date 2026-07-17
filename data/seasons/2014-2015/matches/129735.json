@@ -1155,18 +1155,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=129735",
-    "retrievedAt": "2026-07-12T17:37:01.492911Z",
+    "retrievedAt": "2026-07-17T19:32:07.434131Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "21 BALIKESİRSPOR 0-1 GENÇLERBİRLİĞİ 22 Şubat 2015 Spor Toto Süper Lig Süleyman Seba Sezonu",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=129735&pageID=29"
   },
   "week": 21,
   "standingsWeek": 21,
+  "clubFixture": {
+    "week": 21,
+    "rowText": "21 BALIKESİRSPOR 0-1 GENÇLERBİRLİĞİ 22 Şubat 2015 Spor Toto Süper Lig Süleyman Seba Sezonu",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=129735&pageID=29"
+  },
   "stageWeek": 21,
   "roundType": "league",
   "roundLabel": "21. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

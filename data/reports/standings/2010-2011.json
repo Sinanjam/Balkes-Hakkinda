@@ -1,0 +1,44 @@
+{
+  "season": "2010-2011",
+  "generatedAt": "2026-07-17T22:19:50.321301Z",
+  "builderVersion": "standings-builder-v8-legacy-week-group-routing",
+  "mode": "official-only",
+  "maxWeek": 34,
+  "source": "official_tff_multi_stage_weekly_table",
+  "weeksGenerated": 34,
+  "teams": 18,
+  "matchesUsed": 0,
+  "penaltiesApplied": 0,
+  "warnings": [],
+  "stages": [
+    {
+      "id": "group-kirmizi",
+      "label": "Kırmızı",
+      "maxWeek": 34,
+      "expectedMatches": 34,
+      "carriedMatches": 0,
+      "rawFinalPlayed": 34,
+      "weeksGenerated": 34,
+      "targetPageID": "1061",
+      "targetGrupID": "725",
+      "targetModuleID": null
+    }
+  ],
+  "balkesFinal": {
+    "rank": 10,
+    "team": "Balıkesirspor",
+    "played": 34,
+    "won": 11,
+    "drawn": 10,
+    "lost": 13,
+    "goalsFor": 48,
+    "goalsAgainst": 50,
+    "goalDifference": -2,
+    "points": 43,
+    "rawPoints": 43,
+    "pointsDeducted": 0,
+    "penaltyNote": "",
+    "isBalkes": true,
+    "teamId": "135"
+  }
+}

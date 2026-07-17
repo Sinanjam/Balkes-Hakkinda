@@ -1360,18 +1360,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=285718",
-    "retrievedAt": "2026-07-12T17:36:00.145777Z",
+    "retrievedAt": "2026-07-17T19:31:06.360680Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "14 ESKİŞEHİRSPOR KULÜBÜ 0-3 NEV SAĞLIK GRUBU BALIKESİRSPOR 17 Aralık 2025 Nesine 3. Lig 04",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=285718&pageID=29"
   },
   "week": 14,
   "standingsWeek": 14,
+  "clubFixture": {
+    "week": 14,
+    "rowText": "14 ESKİŞEHİRSPOR KULÜBÜ 0-3 NEV SAĞLIK GRUBU BALIKESİRSPOR 17 Aralık 2025 Nesine 3. Lig 04",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=285718&pageID=29"
+  },
   "stageWeek": 14,
   "roundType": "league",
   "roundLabel": "14. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

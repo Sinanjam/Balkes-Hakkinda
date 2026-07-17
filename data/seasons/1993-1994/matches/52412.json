@@ -865,20 +865,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=52412",
-    "retrievedAt": "2026-07-12T17:38:29.580037Z",
+    "retrievedAt": "2026-07-17T19:33:25.452415Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "18 BALIKESIRSPOR 3-1 AYDINSPOR 26 Aralık 1993 Lig B Klasman 02",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=52412&pageID=29"
   },
   "week": 18,
   "standingsWeek": 18,
+  "clubFixture": {
+    "week": 18,
+    "rowText": "18 BALIKESIRSPOR 3-1 AYDINSPOR 26 Aralık 1993 Lig B Klasman 02",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=52412&pageID=29"
+  },
   "stageWeek": 18,
   "roundType": "league",
   "roundLabel": "18. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-02",
   "leagueStageLabel": "02",
   "leagueStageNumber": 1,

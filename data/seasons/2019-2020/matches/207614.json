@@ -1247,18 +1247,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=207614",
-    "retrievedAt": "2026-07-12T17:36:34.672116Z",
+    "retrievedAt": "2026-07-17T19:31:37.668116Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "18 EKOL HASTANESİ BALIKESİRSPOR 1-6 ADANA DEMİRSPOR 20 Ocak 2020 TFF 1. Lig",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=207614&pageID=29"
   },
   "week": 18,
   "standingsWeek": 18,
+  "clubFixture": {
+    "week": 18,
+    "rowText": "18 EKOL HASTANESİ BALIKESİRSPOR 1-6 ADANA DEMİRSPOR 20 Ocak 2020 TFF 1. Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=207614&pageID=29"
+  },
   "stageWeek": 18,
   "roundType": "league",
   "roundLabel": "18. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

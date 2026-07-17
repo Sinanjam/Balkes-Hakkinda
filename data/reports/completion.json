@@ -1,0 +1,412 @@
+{
+  "generatedAt": "2026-07-17T22:29:43.649223Z",
+  "status": "clean_with_source_limits",
+  "readyToPublish": true,
+  "summary": {
+    "seasons": 32,
+    "matches": 1117,
+    "leagueMatches": 1064,
+    "leaguePlayedMatches": 1030,
+    "standingsWeeks": 1056,
+    "pendingStandingsSeasons": 1,
+    "coreComplete": 1117,
+    "matchesWithFullLineups": 1079,
+    "matchesWithEvents": 1079,
+    "matchesWithOfficials": 1117,
+    "sourceLimitedMatches": 3,
+    "quality": {
+      "A": 1080,
+      "B": 37
+    },
+    "errors": 0,
+    "warnings": 4
+  },
+  "errors": [],
+  "warnings": [
+    "2026-2027: henüz oynanmış lig maçı yok; puan tablosu bu aşamada beklenmiyor",
+    "2006-2007: aynı iç/dış saha lig eşleşmesi birden fazla: 654,2453",
+    "2006-2007: aynı iç/dış saha lig eşleşmesi birden fazla: 1066,1820",
+    "3 maçta TFF kaynak sayfası kadro/olay ayrıntısı yayımlamıyor; bu kayıtlar uydurulmadan kaynak kısıtı olarak bırakıldı."
+  ],
+  "pendingStandings": [
+    {
+      "season": "2026-2027",
+      "leagueMatches": 34,
+      "firstFixtureDate": "2026-09-06"
+    }
+  ],
+  "sourceLimitedMatches": [
+    {
+      "season": "2024-2025",
+      "matchId": "265631",
+      "reason": "TFF maç sayfasında kadro ve olay bölümü yayımlanmamış",
+      "sourceUrl": "http://www.tff.org/Default.aspx?pageID=29&macId=265631"
+    },
+    {
+      "season": "2022-2023",
+      "matchId": "236089",
+      "reason": "TFF maç sayfasında kadro ve olay bölümü yayımlanmamış",
+      "sourceUrl": "http://www.tff.org/Default.aspx?pageID=29&macId=236089"
+    },
+    {
+      "season": "2008-2009",
+      "matchId": "75479",
+      "reason": "TFF maç sayfasında kadro ve olay bölümü yayımlanmamış",
+      "sourceUrl": "http://www.tff.org/Default.aspx?pageID=29&macId=75479"
+    }
+  ],
+  "seasons": [
+    {
+      "season": "2026-2027",
+      "matches": 34,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 0,
+      "coreComplete": 34,
+      "matchesWithFullLineups": 0,
+      "matchesWithEvents": 0,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 0
+    },
+    {
+      "season": "2025-2026",
+      "matches": 33,
+      "leagueMatches": 30,
+      "leaguePlayedMatches": 30,
+      "coreComplete": 33,
+      "matchesWithFullLineups": 33,
+      "matchesWithEvents": 33,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 30
+    },
+    {
+      "season": "2024-2025",
+      "matches": 34,
+      "leagueMatches": 30,
+      "leaguePlayedMatches": 30,
+      "coreComplete": 34,
+      "matchesWithFullLineups": 33,
+      "matchesWithEvents": 33,
+      "sourceLimitedMatches": 1,
+      "standingsWeeks": 30
+    },
+    {
+      "season": "2023-2024",
+      "matches": 29,
+      "leagueMatches": 28,
+      "leaguePlayedMatches": 28,
+      "coreComplete": 29,
+      "matchesWithFullLineups": 29,
+      "matchesWithEvents": 29,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 30
+    },
+    {
+      "season": "2022-2023",
+      "matches": 40,
+      "leagueMatches": 38,
+      "leaguePlayedMatches": 38,
+      "coreComplete": 40,
+      "matchesWithFullLineups": 39,
+      "matchesWithEvents": 39,
+      "sourceLimitedMatches": 1,
+      "standingsWeeks": 38
+    },
+    {
+      "season": "2021-2022",
+      "matches": 37,
+      "leagueMatches": 36,
+      "leaguePlayedMatches": 36,
+      "coreComplete": 37,
+      "matchesWithFullLineups": 37,
+      "matchesWithEvents": 37,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 38
+    },
+    {
+      "season": "2020-2021",
+      "matches": 35,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 34,
+      "coreComplete": 35,
+      "matchesWithFullLineups": 35,
+      "matchesWithEvents": 35,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 34
+    },
+    {
+      "season": "2019-2020",
+      "matches": 35,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 34,
+      "coreComplete": 35,
+      "matchesWithFullLineups": 35,
+      "matchesWithEvents": 35,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 34
+    },
+    {
+      "season": "2018-2019",
+      "matches": 40,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 34,
+      "coreComplete": 40,
+      "matchesWithFullLineups": 40,
+      "matchesWithEvents": 40,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 34
+    },
+    {
+      "season": "2017-2018",
+      "matches": 35,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 34,
+      "coreComplete": 35,
+      "matchesWithFullLineups": 35,
+      "matchesWithEvents": 35,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 34
+    },
+    {
+      "season": "2016-2017",
+      "matches": 36,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 34,
+      "coreComplete": 36,
+      "matchesWithFullLineups": 36,
+      "matchesWithEvents": 36,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 34
+    },
+    {
+      "season": "2015-2016",
+      "matches": 38,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 34,
+      "coreComplete": 38,
+      "matchesWithFullLineups": 38,
+      "matchesWithEvents": 38,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 34
+    },
+    {
+      "season": "2014-2015",
+      "matches": 35,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 34,
+      "coreComplete": 35,
+      "matchesWithFullLineups": 35,
+      "matchesWithEvents": 35,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 34
+    },
+    {
+      "season": "2013-2014",
+      "matches": 40,
+      "leagueMatches": 36,
+      "leaguePlayedMatches": 36,
+      "coreComplete": 40,
+      "matchesWithFullLineups": 40,
+      "matchesWithEvents": 40,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 38
+    },
+    {
+      "season": "2012-2013",
+      "matches": 35,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "coreComplete": 35,
+      "matchesWithFullLineups": 35,
+      "matchesWithEvents": 35,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 34
+    },
+    {
+      "season": "2011-2012",
+      "matches": 33,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "coreComplete": 33,
+      "matchesWithFullLineups": 33,
+      "matchesWithEvents": 33,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 34
+    },
+    {
+      "season": "2010-2011",
+      "matches": 36,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 34,
+      "coreComplete": 36,
+      "matchesWithFullLineups": 36,
+      "matchesWithEvents": 36,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 34
+    },
+    {
+      "season": "2009-2010",
+      "matches": 39,
+      "leagueMatches": 38,
+      "leaguePlayedMatches": 38,
+      "coreComplete": 39,
+      "matchesWithFullLineups": 39,
+      "matchesWithEvents": 39,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 40
+    },
+    {
+      "season": "2008-2009",
+      "matches": 33,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "coreComplete": 33,
+      "matchesWithFullLineups": 32,
+      "matchesWithEvents": 32,
+      "sourceLimitedMatches": 1,
+      "standingsWeeks": 32
+    },
+    {
+      "season": "2007-2008",
+      "matches": 33,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "coreComplete": 33,
+      "matchesWithFullLineups": 33,
+      "matchesWithEvents": 33,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 34
+    },
+    {
+      "season": "2006-2007",
+      "matches": 30,
+      "leagueMatches": 30,
+      "leaguePlayedMatches": 30,
+      "coreComplete": 30,
+      "matchesWithFullLineups": 30,
+      "matchesWithEvents": 30,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 30
+    },
+    {
+      "season": "2000-2001",
+      "matches": 33,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "coreComplete": 33,
+      "matchesWithFullLineups": 32,
+      "matchesWithEvents": 32,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 34
+    },
+    {
+      "season": "1999-2000",
+      "matches": 34,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "coreComplete": 34,
+      "matchesWithFullLineups": 34,
+      "matchesWithEvents": 34,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 34
+    },
+    {
+      "season": "1998-1999",
+      "matches": 33,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "coreComplete": 33,
+      "matchesWithFullLineups": 33,
+      "matchesWithEvents": 33,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 34
+    },
+    {
+      "season": "1997-1998",
+      "matches": 32,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "coreComplete": 32,
+      "matchesWithFullLineups": 32,
+      "matchesWithEvents": 32,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 34
+    },
+    {
+      "season": "1996-1997",
+      "matches": 33,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "coreComplete": 33,
+      "matchesWithFullLineups": 33,
+      "matchesWithEvents": 33,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 32
+    },
+    {
+      "season": "1995-1996",
+      "matches": 39,
+      "leagueMatches": 36,
+      "leaguePlayedMatches": 36,
+      "coreComplete": 39,
+      "matchesWithFullLineups": 39,
+      "matchesWithEvents": 39,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 36
+    },
+    {
+      "season": "1994-1995",
+      "matches": 33,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "coreComplete": 33,
+      "matchesWithFullLineups": 33,
+      "matchesWithEvents": 33,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 32
+    },
+    {
+      "season": "1993-1994",
+      "matches": 34,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "coreComplete": 34,
+      "matchesWithFullLineups": 34,
+      "matchesWithEvents": 34,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 32
+    },
+    {
+      "season": "1992-1993",
+      "matches": 38,
+      "leagueMatches": 36,
+      "leaguePlayedMatches": 36,
+      "coreComplete": 38,
+      "matchesWithFullLineups": 38,
+      "matchesWithEvents": 38,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 40
+    },
+    {
+      "season": "1991-1992",
+      "matches": 34,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 34,
+      "coreComplete": 34,
+      "matchesWithFullLineups": 34,
+      "matchesWithEvents": 34,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 34
+    },
+    {
+      "season": "1990-1991",
+      "matches": 34,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 34,
+      "coreComplete": 34,
+      "matchesWithFullLineups": 34,
+      "matchesWithEvents": 34,
+      "sourceLimitedMatches": 0,
+      "standingsWeeks": 34
+    }
+  ]
+}

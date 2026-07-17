@@ -1359,18 +1359,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=265612",
-    "retrievedAt": "2026-07-12T17:35:57.387076Z",
+    "retrievedAt": "2026-07-17T19:31:11.428582Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "4 SİLİVRİSPOR 1-2 BALIKESİRSPOR 29 Eylül 2024 Nesine 3. Lig 02",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=265612&pageID=29"
   },
   "week": 4,
   "standingsWeek": 4,
+  "clubFixture": {
+    "week": 4,
+    "rowText": "4 SİLİVRİSPOR 1-2 BALIKESİRSPOR 29 Eylül 2024 Nesine 3. Lig 02",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=265612&pageID=29"
+  },
   "stageWeek": 4,
   "roundType": "league",
   "roundLabel": "4. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

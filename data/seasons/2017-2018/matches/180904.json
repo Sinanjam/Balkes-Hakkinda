@@ -1181,20 +1181,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=180904",
-    "retrievedAt": "2026-07-12T17:36:48.483442Z",
+    "retrievedAt": "2026-07-17T19:31:51.572541Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "30 BALIKESİRSPOR BALTOK 2-1 DENİZLİSPOR 9 Nisan 2018 Spor Toto 1. Lig",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=180904&pageID=29"
   },
   "week": 30,
   "standingsWeek": 30,
+  "clubFixture": {
+    "week": 30,
+    "rowText": "30 BALIKESİRSPOR BALTOK 2-1 DENİZLİSPOR 9 Nisan 2018 Spor Toto 1. Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=180904&pageID=29"
+  },
   "stageWeek": 30,
   "roundType": "league",
   "roundLabel": "30. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-lig",
   "leagueStageLabel": "Lig",
   "leagueStageNumber": 1

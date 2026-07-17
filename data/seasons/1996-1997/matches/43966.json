@@ -1033,20 +1033,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=43966",
-    "retrievedAt": "2026-07-12T17:38:12.943109Z",
+    "retrievedAt": "2026-07-17T19:33:14.068190Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "11 MUĞLASPOR 3-1 BALIKESİRSPOR 4 Mayıs 1997 Lig B K2",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=43966&pageID=29"
   },
   "week": 29,
   "standingsWeek": 29,
+  "clubFixture": {
+    "week": 11,
+    "rowText": "11 MUĞLASPOR 3-1 BALIKESİRSPOR 4 Mayıs 1997 Lig B K2",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=43966&pageID=29"
+  },
   "stageWeek": 11,
   "roundType": "league",
   "roundLabel": "11. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-k2",
   "leagueStageLabel": "Klasman K2",
   "leagueStageNumber": 2,

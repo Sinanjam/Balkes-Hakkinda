@@ -1130,20 +1130,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=87661",
-    "retrievedAt": "2026-07-12T17:37:25.895609Z",
+    "retrievedAt": "2026-07-17T19:32:27.790115Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "16 TÜRK TELEKOMSPOR 1-1 BALIKESİRSPOR 8 Aralık 2010 Spor Toto 2. Lig Kırmızı",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=87661&pageID=29"
   },
   "week": 16,
   "standingsWeek": 16,
+  "clubFixture": {
+    "week": 16,
+    "rowText": "16 TÜRK TELEKOMSPOR 1-1 BALIKESİRSPOR 8 Aralık 2010 Spor Toto 2. Lig Kırmızı",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=87661&pageID=29"
+  },
   "stageWeek": 16,
   "roundType": "league",
   "roundLabel": "16. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-kirmizi",
   "leagueStageLabel": "Kırmızı",
   "leagueStageNumber": 1

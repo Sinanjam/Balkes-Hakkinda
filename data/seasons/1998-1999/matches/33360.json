@@ -1019,20 +1019,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=33360",
-    "retrievedAt": "2026-07-12T17:37:57.811114Z",
+    "retrievedAt": "2026-07-17T19:33:01.157309Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "8 İNEGÖLSPOR 2-1 BALIKESİRSPOR 18 Ekim 1998 3. Lig 07",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=33360&pageID=29"
   },
   "week": 8,
   "standingsWeek": 8,
+  "clubFixture": {
+    "week": 8,
+    "rowText": "8 İNEGÖLSPOR 2-1 BALIKESİRSPOR 18 Ekim 1998 3. Lig 07",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=33360&pageID=29"
+  },
   "stageWeek": 8,
   "roundType": "league",
   "roundLabel": "8. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-07",
   "leagueStageLabel": "07",
   "leagueStageNumber": 1

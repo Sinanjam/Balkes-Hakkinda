@@ -1,0 +1,44 @@
+{
+  "season": "1997-1998",
+  "generatedAt": "2026-07-17T22:26:20.458035Z",
+  "builderVersion": "standings-builder-v8-legacy-week-group-routing",
+  "mode": "official-only",
+  "maxWeek": 34,
+  "source": "official_tff_multi_stage_weekly_table",
+  "weeksGenerated": 34,
+  "teams": 17,
+  "matchesUsed": 0,
+  "penaltiesApplied": 0,
+  "warnings": [],
+  "stages": [
+    {
+      "id": "group-06",
+      "label": "06",
+      "maxWeek": 34,
+      "expectedMatches": 32,
+      "carriedMatches": 0,
+      "rawFinalPlayed": 32,
+      "weeksGenerated": 34,
+      "targetPageID": "785",
+      "targetGrupID": "202",
+      "targetModuleID": null
+    }
+  ],
+  "balkesFinal": {
+    "rank": 3,
+    "team": "Balıkesirspor",
+    "played": 32,
+    "won": 18,
+    "drawn": 9,
+    "lost": 5,
+    "goalsFor": 46,
+    "goalsAgainst": 23,
+    "goalDifference": 23,
+    "points": 63,
+    "rawPoints": 63,
+    "pointsDeducted": 0,
+    "penaltyNote": "",
+    "isBalkes": true,
+    "teamId": "135"
+  }
+}

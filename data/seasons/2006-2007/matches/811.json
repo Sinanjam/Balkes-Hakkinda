@@ -1041,21 +1041,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=811",
-    "retrievedAt": "2026-07-12T17:37:44.524582Z",
+    "retrievedAt": "2026-07-17T19:32:46.297754Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "6 KÜTAHYASPOR 1-0 BALIKESİRSPOR 15 Ekim 2006 3. Lig 03",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=811&pageID=29"
   },
   "week": 6,
   "standingsWeek": 6,
+  "clubFixture": {
+    "week": 6,
+    "rowText": "6 KÜTAHYASPOR 1-0 BALIKESİRSPOR 15 Ekim 2006 3. Lig 03",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=811&pageID=29"
+  },
   "stageWeek": 6,
   "roundType": "league",
   "roundLabel": "6. Hafta",
-  "roundSource": "stage_sequence_fallback",
-  "leagueStageId": "group-03",
-  "leagueStageLabel": "03",
-  "leagueStageNumber": 1
+  "roundSource": "tff_club_fixture"
 }

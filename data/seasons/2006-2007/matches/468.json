@@ -1099,21 +1099,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=468",
-    "retrievedAt": "2026-07-12T17:37:44.242308Z",
+    "retrievedAt": "2026-07-17T19:32:47.039273Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "2 AYDINSPOR 2-1 BALIKESİRSPOR 17 Eylül 2006 3. Lig 03",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=468&pageID=29"
   },
   "week": 2,
   "standingsWeek": 2,
+  "clubFixture": {
+    "week": 2,
+    "rowText": "2 AYDINSPOR 2-1 BALIKESİRSPOR 17 Eylül 2006 3. Lig 03",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=468&pageID=29"
+  },
   "stageWeek": 2,
   "roundType": "league",
   "roundLabel": "2. Hafta",
-  "roundSource": "stage_sequence_fallback",
-  "leagueStageId": "group-03",
-  "leagueStageLabel": "03",
-  "leagueStageNumber": 1
+  "roundSource": "tff_club_fixture"
 }

@@ -1,0 +1,66 @@
+{
+  "generatedAt": "2026-07-17T22:29:33.563393Z",
+  "builderVersion": "standings-builder-v8-legacy-week-group-routing",
+  "seasons": [
+    {
+      "season": "2025-2026",
+      "generatedAt": "2026-07-17T22:28:57.555661Z",
+      "builderVersion": "standings-builder-v8-legacy-week-group-routing",
+      "mode": "official-only",
+      "maxWeek": 30,
+      "source": "official_tff_weekly_table",
+      "weeksGenerated": 30,
+      "teams": 16,
+      "matchesUsed": 0,
+      "penaltiesApplied": 0,
+      "warnings": [],
+      "balkesFinal": {
+        "rank": 5,
+        "team": "Balıkesirspor",
+        "played": 30,
+        "won": 17,
+        "drawn": 7,
+        "lost": 6,
+        "goalsFor": 59,
+        "goalsAgainst": 24,
+        "goalDifference": 35,
+        "points": 58,
+        "rawPoints": 58,
+        "pointsDeducted": 0,
+        "penaltyNote": "",
+        "isBalkes": true,
+        "teamId": "135"
+      }
+    },
+    {
+      "season": "2006-2007",
+      "generatedAt": "2026-07-17T22:29:26.774512Z",
+      "builderVersion": "standings-builder-v8-legacy-week-group-routing",
+      "mode": "official-only",
+      "maxWeek": 30,
+      "source": "official_tff_weekly_table",
+      "weeksGenerated": 30,
+      "teams": 16,
+      "matchesUsed": 0,
+      "penaltiesApplied": 0,
+      "warnings": [],
+      "balkesFinal": {
+        "rank": 8,
+        "team": "Balıkesirspor",
+        "played": 30,
+        "won": 11,
+        "drawn": 8,
+        "lost": 11,
+        "goalsFor": 37,
+        "goalsAgainst": 32,
+        "goalDifference": 5,
+        "points": 41,
+        "rawPoints": 41,
+        "pointsDeducted": 0,
+        "penaltyNote": "",
+        "isBalkes": true,
+        "teamId": "135"
+      }
+    }
+  ]
+}

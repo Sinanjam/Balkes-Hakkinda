@@ -1083,20 +1083,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=68117",
-    "retrievedAt": "2026-07-12T17:37:35.646978Z",
+    "retrievedAt": "2026-07-17T19:32:41.711521Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "1 MUĞLASPOR 2-1 BALIKESİRSPOR 2 Eylül 2007 TFF 3. Lig 03",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=68117&pageID=29"
   },
   "week": 1,
   "standingsWeek": 1,
+  "clubFixture": {
+    "week": 1,
+    "rowText": "1 MUĞLASPOR 2-1 BALIKESİRSPOR 2 Eylül 2007 TFF 3. Lig 03",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=68117&pageID=29"
+  },
   "stageWeek": 1,
   "roundType": "league",
   "roundLabel": "1. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-03",
   "leagueStageLabel": "03",
   "leagueStageNumber": 1

@@ -1387,18 +1387,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=285632",
-    "retrievedAt": "2026-07-12T17:35:57.050757Z",
+    "retrievedAt": "2026-07-17T19:31:04.017682Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "3 KARŞIYAKA 2-1 NEV SAĞLIK GRUBU BALIKESİRSPOR 21 Eylül 2025 Nesine 3. Lig 04",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=285632&pageID=29"
   },
   "week": 3,
   "standingsWeek": 3,
+  "clubFixture": {
+    "week": 3,
+    "rowText": "3 KARŞIYAKA 2-1 NEV SAĞLIK GRUBU BALIKESİRSPOR 21 Eylül 2025 Nesine 3. Lig 04",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=285632&pageID=29"
+  },
   "stageWeek": 3,
   "roundType": "league",
   "roundLabel": "3. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

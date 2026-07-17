@@ -1183,18 +1183,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=251186",
-    "retrievedAt": "2026-07-12T17:36:08.194018Z",
+    "retrievedAt": "2026-07-17T19:31:12.666322Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "4 BALIKESİRSPOR 0-0 23 ELAZIĞ FUTBOL KULÜBÜ 1 Ekim 2023 TFF 3. LİG 04",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=251186&pageID=29"
   },
   "week": 4,
   "standingsWeek": 4,
+  "clubFixture": {
+    "week": 4,
+    "rowText": "4 BALIKESİRSPOR 0-0 23 ELAZIĞ FUTBOL KULÜBÜ 1 Ekim 2023 TFF 3. LİG 04",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=251186&pageID=29"
+  },
   "stageWeek": 4,
   "roundType": "league",
   "roundLabel": "4. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

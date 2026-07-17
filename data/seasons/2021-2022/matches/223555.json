@@ -1434,18 +1434,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=223555",
-    "retrievedAt": "2026-07-12T17:36:25.626149Z",
+    "retrievedAt": "2026-07-17T19:31:29.616035Z",
     "sourceType": "official_tff_match_detail"
   },
+  "week": 30,
+  "standingsWeek": 30,
   "clubFixture": {
-    "week": 0,
+    "week": 30,
     "rowText": "30 BALIKESİRSPOR 1-5 BÜYÜKŞEHİR BELEDİYE ERZURUMSPOR 3 Nisan 2022 Spor Toto 1. Lig",
     "sourceUrl": "http://www.tff.org/Default.aspx?macID=223555&pageID=29"
   },
-  "week": 28,
-  "standingsWeek": 28,
-  "stageWeek": 28,
+  "stageWeek": 30,
   "roundType": "league",
-  "roundLabel": "28. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundLabel": "30. Hafta",
+  "roundSource": "tff_club_fixture"
 }

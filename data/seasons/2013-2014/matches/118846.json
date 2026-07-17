@@ -1099,20 +1099,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=118846",
-    "retrievedAt": "2026-07-12T17:37:05.201842Z",
+    "retrievedAt": "2026-07-17T19:32:11.093709Z",
     "sourceType": "official_tff_match_detail"
   },
+  "week": 10,
+  "standingsWeek": 10,
   "clubFixture": {
-    "week": 0,
+    "week": 10,
     "rowText": "10 BALIKESİRSPOR 2-0 BUCASPOR 26 Ekim 2013 PTT 1.Lig",
     "sourceUrl": "http://www.tff.org/Default.aspx?macID=118846&pageID=29"
   },
-  "week": 9,
-  "standingsWeek": 9,
-  "stageWeek": 9,
+  "stageWeek": 10,
   "roundType": "league",
-  "roundLabel": "9. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundLabel": "10. Hafta",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-lig",
   "leagueStageLabel": "Lig",
   "leagueStageNumber": 1

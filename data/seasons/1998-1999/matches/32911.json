@@ -915,20 +915,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=32911",
-    "retrievedAt": "2026-07-12T17:37:56.284084Z",
+    "retrievedAt": "2026-07-17T19:33:00.138700Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "4 MALTEPESPOR 1-0 BALIKESİRSPOR 20 Eylül 1998 3. Lig 07",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=32911&pageID=29"
   },
   "week": 4,
   "standingsWeek": 4,
+  "clubFixture": {
+    "week": 4,
+    "rowText": "4 MALTEPESPOR 1-0 BALIKESİRSPOR 20 Eylül 1998 3. Lig 07",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=32911&pageID=29"
+  },
   "stageWeek": 4,
   "roundType": "league",
   "roundLabel": "4. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-07",
   "leagueStageLabel": "07",
   "leagueStageNumber": 1

@@ -1266,18 +1266,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=235817",
-    "retrievedAt": "2026-07-12T17:36:10.198481Z",
+    "retrievedAt": "2026-07-17T19:31:22.774140Z",
     "sourceType": "official_tff_match_detail"
   },
+  "week": 24,
+  "standingsWeek": 24,
   "clubFixture": {
-    "week": 0,
+    "week": 24,
     "rowText": "24 BAYNET İNŞAAT BALIKESİRSPOR 1-1 GMG KASTAMONUSPOR 15 Mart 2023 TFF 2.Lig Kırmızı",
     "sourceUrl": "http://www.tff.org/Default.aspx?macID=235817&pageID=29"
   },
-  "week": 26,
-  "standingsWeek": 26,
-  "stageWeek": 26,
+  "stageWeek": 24,
   "roundType": "league",
-  "roundLabel": "26. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundLabel": "24. Hafta",
+  "roundSource": "tff_club_fixture"
 }

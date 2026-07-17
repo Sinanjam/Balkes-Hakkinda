@@ -1180,18 +1180,18 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=207722",
-    "retrievedAt": "2026-07-12T17:36:38.020909Z",
+    "retrievedAt": "2026-07-17T19:31:40.972951Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "30 HATAYSPOR 2-0 EKOL HASTANESİ BALIKESİRSPOR 28 Haziran 2020 TFF 1. Lig",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=207722&pageID=29"
   },
   "week": 30,
   "standingsWeek": 30,
+  "clubFixture": {
+    "week": 30,
+    "rowText": "30 HATAYSPOR 2-0 EKOL HASTANESİ BALIKESİRSPOR 28 Haziran 2020 TFF 1. Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=207722&pageID=29"
+  },
   "stageWeek": 30,
   "roundType": "league",
   "roundLabel": "30. Hafta",
-  "roundSource": "stage_sequence_fallback"
+  "roundSource": "tff_club_fixture"
 }

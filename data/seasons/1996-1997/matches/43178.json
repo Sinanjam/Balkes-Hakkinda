@@ -801,20 +801,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=43178",
-    "retrievedAt": "2026-07-12T17:38:11.963789Z",
+    "retrievedAt": "2026-07-17T19:33:13.689737Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "7 GÖZTEPE 0-0 BALIKESİRSPOR 9 Mart 1997 Lig B K2",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=43178&pageID=29"
   },
   "week": 25,
   "standingsWeek": 25,
+  "clubFixture": {
+    "week": 7,
+    "rowText": "7 GÖZTEPE 0-0 BALIKESİRSPOR 9 Mart 1997 Lig B K2",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=43178&pageID=29"
+  },
   "stageWeek": 7,
   "roundType": "league",
   "roundLabel": "7. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-k2",
   "leagueStageLabel": "Klasman K2",
   "leagueStageNumber": 2,

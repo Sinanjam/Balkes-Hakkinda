@@ -953,20 +953,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=31883",
-    "retrievedAt": "2026-07-12T17:38:01.602983Z",
+    "retrievedAt": "2026-07-17T19:32:59.055939Z",
     "sourceType": "official_tff_match_detail"
   },
+  "week": 30,
+  "standingsWeek": 30,
   "clubFixture": {
-    "week": 0,
+    "week": 30,
     "rowText": "30 BALIKESİRSPOR 1-0 UŞAKSPOR 3 Mayıs 2000 3. Lig 06",
     "sourceUrl": "http://www.tff.org/Default.aspx?macID=31883&pageID=29"
   },
-  "week": 29,
-  "standingsWeek": 29,
-  "stageWeek": 29,
+  "stageWeek": 30,
   "roundType": "league",
-  "roundLabel": "29. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundLabel": "30. Hafta",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-06",
   "leagueStageLabel": "06",
   "leagueStageNumber": 1

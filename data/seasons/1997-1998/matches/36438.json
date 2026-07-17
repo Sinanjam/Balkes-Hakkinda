@@ -1014,20 +1014,20 @@
   "source": {
     "name": "TFF",
     "url": "http://www.tff.org/Default.aspx?pageID=29&macId=36438",
-    "retrievedAt": "2026-07-12T17:38:04.450650Z",
+    "retrievedAt": "2026-07-17T19:33:03.038531Z",
     "sourceType": "official_tff_match_detail"
-  },
-  "clubFixture": {
-    "week": 0,
-    "rowText": "1 BALIKESİRSPOR 1-0 MANİSASPOR 17 Ağustos 1997 3. Lig 06",
-    "sourceUrl": "http://www.tff.org/Default.aspx?macID=36438&pageID=29"
   },
   "week": 1,
   "standingsWeek": 1,
+  "clubFixture": {
+    "week": 1,
+    "rowText": "1 BALIKESİRSPOR 1-0 MANİSASPOR 17 Ağustos 1997 3. Lig 06",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=36438&pageID=29"
+  },
   "stageWeek": 1,
   "roundType": "league",
   "roundLabel": "1. Hafta",
-  "roundSource": "stage_sequence_fallback",
+  "roundSource": "tff_club_fixture",
   "leagueStageId": "group-06",
   "leagueStageLabel": "06",
   "leagueStageNumber": 1

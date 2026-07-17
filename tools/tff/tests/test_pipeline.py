@@ -17,6 +17,8 @@ from discover_club_fixtures import (  # noqa: E402
     archive_stage_sort_key,
     fixture_page_actions,
     extract_fixture_result,
+    expected_standings_matches_from_item,
+    max_numbered_league_fixture_week,
     page_mentions_season,
     reconcile_archive_stages,
     standalone_archive_stages,
@@ -31,6 +33,7 @@ from tff_standings_builder import (  # noqa: E402
     build_item_urls,
     parse_official_standings,
     try_official_stages,
+    try_official_weekly,
     update_season_files,
 )
 from validate_export import intentionally_skipped, validate_discovery  # noqa: E402
@@ -87,6 +90,21 @@ class FixtureDiscoveryTests(unittest.TestCase):
         self.assertTrue(archive_group_is_selected(raw, "229"))
         self.assertFalse(archive_group_is_selected(raw, "233"))
         self.assertFalse(archive_group_is_selected(raw, "999"))
+
+    def test_standings_count_keeps_playoff_as_secondary_scope(self) -> None:
+        item = {
+            "knownFixtures": [
+                {"id": "1", "week": 1, "rowText": "1 BALIKESİRSPOR 1-0 RAKİP TFF 3. Lig 04"},
+                {"id": "2", "week": 30, "rowText": "30 RAKİP 0-1 BALIKESİRSPOR TFF 3. Lig 04"},
+                {"id": "3", "week": 0, "rowText": "BALIKESİRSPOR 2-1 RAKİP 3. Lig Play Off Müsabakaları"},
+                {"id": "4", "week": 0, "rowText": "BALIKESİRSPOR 1-2 RAKİP Ziraat Türkiye Kupası"},
+            ]
+        }
+        self.assertEqual(
+            expected_standings_matches_from_item(item),
+            {"league": 2, "playoff": 1, "standings": 3},
+        )
+        self.assertEqual(max_numbered_league_fixture_week(item), 30)
 
 
 class ProfessionalFilterTests(unittest.TestCase):
@@ -149,6 +167,25 @@ class StandingsTests(unittest.TestCase):
         self.assertFalse(any(row.get("isBalkes") for row in scoped_rows))
         self.assertEqual(parse_official_standings(raw, module_id="missing"), [])
 
+    def test_same_display_name_with_distinct_tff_ids_is_not_deduplicated(self) -> None:
+        teams = ["Göztepe A.Ş.", "Göztepe A.Ş."] + [f"Takım {value}" for value in range(3, 9)]
+        rows = "".join(
+            "<tr><td>{rank}.</td><td><a href='?pageID=28&kulupID={team_id}'>{team}</a></td>"
+            "<td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>0</td><td>2</td><td>3</td></tr>".format(
+                rank=index,
+                team_id=100 + index,
+                team=team,
+            )
+            for index, team in enumerate(teams, 1)
+        )
+        raw = (
+            "<table><tr><th>Sıra</th><th>Takım</th><th>O</th><th>G</th><th>B</th><th>M</th>"
+            "<th>A</th><th>Y</th><th>AV</th><th>P</th></tr>" + rows + "</table>"
+        )
+        parsed = parse_official_standings(raw)
+        self.assertEqual(len(parsed), 8)
+        self.assertEqual([row["teamId"] for row in parsed[:2]], ["101", "102"])
+
     def test_group_less_promotion_module_becomes_a_separate_stage(self) -> None:
         module_id = "ctl00_MPane_m_980_5402_ctnr_div"
         raw = (
@@ -177,6 +214,26 @@ class StandingsTests(unittest.TestCase):
         self.assertEqual(selected[1]["carriedMatches"], 18)
         self.assertEqual(selected[1]["maxWeek"], 14)
 
+    def test_direct_archive_group_uses_fixture_week_instead_of_odd_row_count(self) -> None:
+        selected = reconcile_archive_stages(
+            [{"id": "group-03", "label": "03", "expectedMatches": 30, "teamCount": 15}],
+            30,
+            30,
+            30,
+        )
+        self.assertEqual(selected[0]["maxWeek"], 30)
+        self.assertEqual(selected[0]["officialMatchTypes"], ["league"])
+
+    def test_archive_group_can_be_proven_as_league_plus_playoff(self) -> None:
+        selected = reconcile_archive_stages(
+            [{"id": "group-04", "label": "04", "expectedMatches": 32, "teamCount": 16}],
+            30,
+            32,
+            30,
+        )
+        self.assertEqual(selected[0]["expectedMatches"], 32)
+        self.assertEqual(selected[0]["officialMatchTypes"], ["league", "playoff"])
+
     def test_duplicate_exact_target_url_is_fetched_once(self) -> None:
         item = {
             "targetPageID": "805",
@@ -184,6 +241,39 @@ class StandingsTests(unittest.TestCase):
             "targetUrls": ["https://www.tff.org/Default.aspx?pageID=805&grupID=210"],
         }
         self.assertEqual(len(build_item_urls(item, 1)), 1)
+
+    @patch("tff_standings_builder.fetch_official_week")
+    def test_partial_parallel_result_gets_one_serial_fresh_recovery(self, mocked) -> None:
+        calls: list[tuple[int, bool]] = []
+
+        def fetch(_item, _season, _root, _sleep, force, week):
+            calls.append((week, force))
+            if week == 2 and not force:
+                return week, None
+            return week, {
+                "week": week,
+                "standings": [{
+                    "team": "Balıkesirspor",
+                    "isBalkes": True,
+                    "played": week,
+                    "points": week,
+                    "goalDifference": week,
+                }],
+                "warnings": [],
+            }
+
+        mocked.side_effect = fetch
+        snapshots = try_official_weekly(
+            {"targetPageID": "575", "targetGrupID": "15"},
+            "2006-2007",
+            Path("/tmp/test"),
+            0,
+            False,
+            3,
+            workers=1,
+        )
+        self.assertEqual([snapshot["week"] for snapshot in snapshots], [1, 2, 3])
+        self.assertIn((2, True), calls)
 
     @patch("tff_standings_builder.try_official_weekly")
     def test_multi_stage_weeks_are_flattened_without_losing_stage_week(self, mocked) -> None:

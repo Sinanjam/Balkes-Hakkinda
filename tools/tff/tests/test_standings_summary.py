@@ -85,6 +85,40 @@ class StandingsSummaryTests(unittest.TestCase):
             ["league", "playoff"],
         )
 
+    def test_staged_postseason_table_also_preserves_league_only_summary(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            season = root / "seasons" / "2025-2026"
+            write_json(season / "season.json", {"id": "2025-2026", "summary": {}})
+            write_json(season / "matches_index.json", [
+                {
+                    "id": "1", "matchType": "league", "score": {"played": True},
+                    "balkes": {"result": "W", "goalsFor": 2, "goalsAgainst": 0},
+                },
+                {
+                    "id": "2", "matchType": "playoff", "score": {"played": True},
+                    "balkes": {"result": "L", "goalsFor": 1, "goalsAgainst": 3},
+                },
+            ])
+            snapshots = [
+                {
+                    "week": 1, "stageId": "group-04", "stageLabel": "04",
+                    "stageNumber": 1, "stageCarriedMatches": 0,
+                    "standings": [row(1, 2, 0, 1, 0, 0)],
+                },
+                {
+                    "week": 2, "stageId": "group-04", "stageLabel": "04",
+                    "stageNumber": 1, "stageCarriedMatches": 0,
+                    "standings": [row(2, 3, 3, 1, 0, 1)],
+                },
+            ]
+            update_season_files(root, "2025-2026", snapshots)
+            season_json = json.loads((season / "season.json").read_text(encoding="utf-8"))
+
+        self.assertEqual(season_json["leagueSummary"]["played"], 1)
+        self.assertEqual(season_json["officialStandingsSummary"]["played"], 2)
+        self.assertEqual(season_json["officialStandingsMatchTypes"], ["league", "playoff"])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -23,7 +23,7 @@ from urllib.parse import parse_qsl, urlencode, urljoin, urlparse, urlunparse
 import requests
 from bs4 import BeautifulSoup
 
-from archive_rules import select_reconciled_stage_set
+from archive_rules import reconciled_stage_max_week, select_reconciled_stage_set
 from tff_factory import (
     clean_text,
     decode_bytes,
@@ -442,24 +442,54 @@ def archive_stage_sort_key(stage: dict[str, Any]) -> tuple[int, str]:
 
 
 def expected_league_matches_from_item(item: dict[str, Any]) -> int:
-    fixtures = [value for value in item.get("knownFixtures", []) if isinstance(value, dict)]
-    if not fixtures:
-        return 0
+    return expected_standings_matches_from_item(item)["league"]
+
+
+def fixture_match_type(item: dict[str, Any], fixture: dict[str, Any]) -> str:
+    """Kulüp fikstürü satırını ayrıntı indirilmeden dar biçimde sınıflandırır."""
     overrides = item.get("matchOverrides") or {}
-    return sum(
-        1
-        for fixture in fixtures
-        if adult_league_tier(str(fixture.get("rowText") or ""))
-        and str(
-            (overrides.get(str(fixture.get("id") or "")) or {}).get("matchType")
-            or "league"
-        ) == "league"
-    )
+    override = overrides.get(str(fixture.get("id") or "")) if isinstance(overrides, dict) else None
+    if isinstance(override, dict) and override.get("matchType"):
+        return str(override["matchType"])
+    text = norm(fixture.get("rowText") or "")
+    if any(value in text for value in ("play off", "playoff", "final musabakalari")):
+        return "playoff"
+    if any(value in text for value in ("turkiye kupasi", "ziraat", " kupa ")):
+        return "cup"
+    return "league" if adult_league_tier(text) else ""
+
+
+def expected_standings_matches_from_item(item: dict[str, Any]) -> dict[str, int]:
+    """Resmi tablonun kabul edilebilecek maç kapsamlarını sayar.
+
+    Lig sayısı ana hedeftir. TFF grup tablosu play-off maçlarını aynı puan
+    cetveline eklediyse lig+play-off toplamı yalnız ikinci hedef olarak kabul
+    edilir; kupa ve diğer maçlar hiçbir zaman bu toplama girmez.
+    """
+    totals = {"league": 0, "playoff": 0, "standings": 0}
+    fixtures = [value for value in item.get("knownFixtures", []) if isinstance(value, dict)]
+    for fixture in fixtures:
+        match_type = fixture_match_type(item, fixture)
+        if match_type in {"league", "playoff"}:
+            totals[match_type] += 1
+    totals["standings"] = totals["league"] + totals["playoff"]
+    return totals
+
+
+def max_numbered_league_fixture_week(item: dict[str, Any]) -> int:
+    """Yalnız gerçek lig satırlarındaki açık hafta numarasını döndürür."""
+    return max((
+        int(fixture.get("week") or 0)
+        for fixture in item.get("knownFixtures", [])
+        if isinstance(fixture, dict) and fixture_match_type(item, fixture) == "league"
+    ), default=0)
 
 
 def reconcile_archive_stages(
     stages: list[dict[str, Any]],
     expected_league_matches: int,
+    expected_standings_matches: int = 0,
+    direct_fixture_max_week: int = 0,
 ) -> list[dict[str, Any]]:
     """Choose the chronological stages matching the discovered league fixture count.
 
@@ -483,11 +513,10 @@ def reconcile_archive_stages(
             stage["rawFinalPlayed"] = raw_played
             stage["carriedMatches"] = carried
             stage["expectedMatches"] = incremental
-            team_count = int(stage.get("teamCount") or 0)
-            stage["maxWeek"] = (
-                incremental + 2
-                if team_count % 2 == 1 and incremental > 0
-                else incremental
+            stage["maxWeek"] = reconciled_stage_max_week(
+                stage,
+                incremental,
+                direct_fixture_max_week if len(values) == 1 else 0,
             )
             running += incremental
             out.append(stage)
@@ -496,15 +525,29 @@ def reconcile_archive_stages(
     if expected_league_matches <= 0:
         return annotate(ordered)[0]
 
-    exact: list[list[dict[str, Any]]] = []
+    exact_by_total: dict[int, list[list[dict[str, Any]]]] = {}
     for length in range(1, len(ordered) + 1):
         for subset in itertools.combinations(ordered, length):
             annotated, total = annotate(subset)
-            if total == expected_league_matches:
-                exact.append(annotated)
-    if not exact:
-        return []
-    return select_reconciled_stage_set(exact)
+            if total > 0:
+                exact_by_total.setdefault(total, []).append(annotated)
+
+    targets = [expected_league_matches]
+    if expected_standings_matches > expected_league_matches:
+        targets.append(expected_standings_matches)
+    for target in targets:
+        exact = exact_by_total.get(target) or []
+        if not exact:
+            continue
+        selected = select_reconciled_stage_set(exact)
+        if selected:
+            selected[-1]["officialMatchTypes"] = (
+                ["league", "playoff"]
+                if target > expected_league_matches
+                else ["league"]
+            )
+        return selected
+    return []
 
 
 def page_mentions_season(raw: str, season: str) -> bool:
@@ -730,14 +773,24 @@ def discover_archive_standings_stages(
                 seen_signatures.add(signature)
             unique_stages.append(stage)
         stages = unique_stages
-        expected_league_matches = expected_league_matches_from_item(item)
-        reconciled = reconcile_archive_stages(stages, expected_league_matches)
+        expected_counts = expected_standings_matches_from_item(item)
+        expected_league_matches = expected_counts["league"]
+        expected_standings_matches = expected_counts["standings"]
+        fixture_max_week = max_numbered_league_fixture_week(item)
+        reconciled = reconcile_archive_stages(
+            stages,
+            expected_league_matches,
+            expected_standings_matches,
+            fixture_max_week,
+        )
         if expected_league_matches and not reconciled:
             return {
                 "season": season,
                 "archiveRootPageID": str(root_page_id),
                 "seasonPageID": season_page_id,
                 "expectedLeagueMatches": expected_league_matches,
+                "expectedStandingsMatches": expected_standings_matches,
+                "fixtureMaxWeek": fixture_max_week,
                 "error": "arşiv aşamaları kulüp fikstüründeki lig maçı sayısıyla uzlaştırılamadı",
             }
         stages = reconciled
@@ -754,6 +807,11 @@ def discover_archive_standings_stages(
             "seasonPageID": season_page_id,
             "strategy": "official_tff_archive_groups",
             "expectedLeagueMatches": expected_league_matches,
+            "expectedStandingsMatches": expected_standings_matches,
+            "fixtureMaxWeek": fixture_max_week,
+            "officialStandingsMatchTypes": list(
+                (stages[-1] if stages else {}).get("officialMatchTypes") or ["league"]
+            ),
             "stages": stages,
         }
     finally:
@@ -1076,6 +1134,9 @@ def enrich_standings_targets(runtime: dict[str, Any], results: list[dict[str, An
                 stages = target.get("stages") or []
                 if stages and item:
                     item["standingsStages"] = stages
+                    item["officialStandingsMatchTypes"] = list(
+                        target.get("officialStandingsMatchTypes") or ["league"]
+                    )
                     item["targetUrls"] = sorted(
                         set(item.get("targetUrls", []))
                         | {str(stage["targetUrl"]) for stage in stages if stage.get("targetUrl")}

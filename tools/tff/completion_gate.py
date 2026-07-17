@@ -9,6 +9,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from quality_rules import as_match_date, standings_not_yet_expected
+
 
 def now() -> str:
     return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
@@ -51,6 +53,10 @@ def lineup_counts(detail: dict[str, Any]) -> tuple[int, int]:
     return len(as_list(home.get("starting11"))), len(as_list(away.get("starting11")))
 
 
+def unique_messages(values: list[str]) -> list[str]:
+    return list(dict.fromkeys(value for value in values if value))
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="TFF senkron tamamlanma kalite kapısı")
     parser.add_argument("--data-root", default="generated/tff-data")
@@ -69,14 +75,18 @@ def main() -> int:
     warnings: list[str] = []
     quality: Counter[str] = Counter()
     season_reports: list[dict[str, Any]] = []
-    total_matches = total_league = total_weeks = 0
+    total_matches = total_league = total_league_played = total_weeks = 0
     core_complete = full_lineups = with_events = with_officials = 0
     source_limited: list[dict[str, str]] = []
+    pending_standings: list[dict[str, Any]] = []
 
     if not isinstance(validation, dict):
         errors.append("reports/validation.json bulunamadı veya okunamadı.")
     elif validation.get("status") == "error" or as_int((validation.get("summary") or {}).get("errors")):
-        errors.append("Sıkı genel doğrulama hata verdi.")
+        validation_errors = [str(value) for value in as_list(validation.get("errors")) if value]
+        errors.extend(validation_errors or ["Sıkı genel doğrulama hata verdi."])
+    if isinstance(validation, dict):
+        warnings.extend(str(value) for value in as_list(validation.get("warnings")) if value)
 
     if not isinstance(repair, dict):
         errors.append("reports/repair_validation.json bulunamadı veya okunamadı.")
@@ -108,8 +118,9 @@ def main() -> int:
             errors.append(f"{season}: matches_index.json eksik.")
             index = []
 
-        season_league = season_core = season_lineups = season_events = 0
+        season_league = season_league_played = season_core = season_lineups = season_events = 0
         season_source_limited = 0
+        season_details: list[dict[str, Any]] = []
         missing_round_ids: list[str] = []
         for item in index:
             if not isinstance(item, dict):
@@ -121,11 +132,16 @@ def main() -> int:
                 errors.append(f"{season}/{match_id}: maç detayı eksik.")
                 continue
 
+            season_details.append(detail)
             total_matches += 1
             match_type = str(detail.get("matchType") or "league")
+            score = detail.get("score") if isinstance(detail.get("score"), dict) else {}
             if match_type == "league":
                 total_league += 1
                 season_league += 1
+                if score.get("played"):
+                    total_league_played += 1
+                    season_league_played += 1
                 if as_int(detail.get("week")) <= 0 or as_int(detail.get("standingsWeek")) <= 0:
                     missing_round_ids.append(match_id)
 
@@ -159,7 +175,6 @@ def main() -> int:
 
             match_quality = str(detail.get("quality") or "unknown")
             quality[match_quality] += 1
-            score = detail.get("score") if isinstance(detail.get("score"), dict) else {}
             if score.get("played") and home_lineup == 0 and away_lineup == 0 and not events:
                 season_source_limited += 1
                 source_limited.append({
@@ -175,9 +190,11 @@ def main() -> int:
                 f"örnek={','.join(missing_round_ids[:10])}."
             )
 
+        standings_pending = standings_not_yet_expected(season_details)
         standings = read_json(season_dir / "standings_by_week.json", None)
-        if season_league and not isinstance(standings, list):
+        if season_league and not isinstance(standings, list) and not standings_pending:
             errors.append(f"{season}: standings_by_week.json eksik.")
+        if not isinstance(standings, list):
             standings = []
         valid_weeks = sum(
             1 for snapshot in as_list(standings)
@@ -186,7 +203,24 @@ def main() -> int:
             and as_list(snapshot.get("standings"))
         )
         if season_league and valid_weeks == 0:
-            errors.append(f"{season}: geçerli haftalık puan tablosu yok.")
+            if standings_pending:
+                fixture_dates = sorted(
+                    match_day.isoformat()
+                    for detail in season_details
+                    if detail.get("matchType") == "league"
+                    if (match_day := as_match_date(detail.get("date"))) is not None
+                )
+                pending_standings.append({
+                    "season": season,
+                    "leagueMatches": season_league,
+                    "firstFixtureDate": fixture_dates[0] if fixture_dates else None,
+                })
+                warnings.append(
+                    f"{season}: henüz oynanmış lig maçı yok; "
+                    "puan tablosu bu aşamada beklenmiyor."
+                )
+            else:
+                errors.append(f"{season}: geçerli haftalık puan tablosu yok.")
         total_weeks += valid_weeks
         if as_int(entry.get("matchCount")) != len(index):
             errors.append(
@@ -196,6 +230,7 @@ def main() -> int:
             "season": season,
             "matches": len(index),
             "leagueMatches": season_league,
+            "leaguePlayedMatches": season_league_played,
             "coreComplete": season_core,
             "matchesWithFullLineups": season_lineups,
             "matchesWithEvents": season_events,
@@ -214,15 +249,29 @@ def main() -> int:
             "bu kayıtlar uydurulmadan kaynak kısıtı olarak bırakıldı."
         )
 
+    errors = unique_messages(errors)
+    warnings = unique_messages(warnings)
+
+    if errors:
+        status = "error"
+    elif source_limited:
+        status = "clean_with_source_limits"
+    elif warnings:
+        status = "clean_with_warnings"
+    else:
+        status = "clean"
+
     report = {
         "generatedAt": now(),
-        "status": "error" if errors else "clean_with_source_limits" if warnings else "clean",
+        "status": status,
         "readyToPublish": not errors,
         "summary": {
             "seasons": len(seasons),
             "matches": total_matches,
             "leagueMatches": total_league,
+            "leaguePlayedMatches": total_league_played,
             "standingsWeeks": total_weeks,
+            "pendingStandingsSeasons": len(pending_standings),
             "coreComplete": core_complete,
             "matchesWithFullLineups": full_lineups,
             "matchesWithEvents": with_events,
@@ -234,6 +283,7 @@ def main() -> int:
         },
         "errors": errors,
         "warnings": warnings,
+        "pendingStandings": pending_standings,
         "sourceLimitedMatches": source_limited,
         "seasons": season_reports,
     }

@@ -26,10 +26,16 @@ def standings_not_yet_expected(
     bütün lig maçları bugün ya da gelecekteyse geçerlidir. Böylece geçmiş sezon
     verisindeki bozuk/oynanmamış kayıtlar yanlışlıkla kabul edilmez.
     """
-    league = [detail for detail in details if detail.get("matchType") == "league"]
+    league = [
+        detail for detail in details
+        if str(detail.get("matchType") or "league") == "league"
+    ]
     if not league:
         return False
-    if any((detail.get("score") or {}).get("played") for detail in league):
+    if any(
+        isinstance(detail.get("score"), dict) and detail["score"].get("played")
+        for detail in league
+    ):
         return False
 
     current_day = today or date.today()

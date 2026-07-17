@@ -988,6 +988,7 @@
     {
       "season": "2006-2007",
       "pageIds": [
+        575,
         337,
         142,
         976,
@@ -1002,14 +1003,28 @@
       "professionalStatus": "professional",
       "competition": "TFF 3. Lig",
       "leagueEra": "TFF 3. Lig",
-      "planConfidence": "bounded-legacy-pageid-probe",
-      "targetUrls": [],
+      "tffPlan": {
+        "competition": "TFF 3. Lig",
+        "group": "03",
+        "pageID": "575",
+        "grupID": "15",
+        "maxWeek": 30,
+        "confidence": "verified-official-season-archive"
+      },
+      "targetPageID": "575",
+      "targetGrupID": "15",
+      "maxWeek": 30,
+      "expectedLeagueMatches": 30,
+      "planConfidence": "verified-official-season-archive",
+      "targetUrls": [
+        "https://www.tff.org/Default.aspx?grupID=15&pageID=575"
+      ],
       "allowLegacyBroadFallback": false,
       "legacyBroadProbeLimit": 0,
-      "legacyDiscoveryNote": "No exact TFF season pageID is confirmed in registry yet; factory uses generic page discovery, verifies date/team, and broad-fallbacks only if selected IDs produce zero hits.",
+      "legacyDiscoveryNote": "Exact official TFF 2006-2007 group 03 archive target is pinned; bounded probe remains only as an unused safety fallback.",
       "legacySeason": true,
-      "requiresExactTffTarget": false,
-      "legacySafetyNote": "Skipped in strict mode until exact TFF targetPageID/targetUrl or hand-verified knownMatchIds are added.",
+      "requiresExactTffTarget": true,
+      "legacySafetyNote": "Official season archive is pinned to pageID=575 and grupID=15.",
       "skipTff": false,
       "skipReason": "",
       "knownOnly": false,
@@ -1030,7 +1045,7 @@
         "gatewaySkipAfter": 3
       },
       "notes": [
-        "v2.5: exact target missing; safe bounded pageID probe enabled instead of blind current-page scan."
+        "v2.7: official 2006-2007 group 03 archive pinned to pageID=575 and grupID=15."
       ]
     },
     {

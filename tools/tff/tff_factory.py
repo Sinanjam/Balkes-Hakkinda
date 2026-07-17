@@ -39,7 +39,7 @@ TFF = os.environ.get("TFF_BASE_URL", "http://www.tff.org/Default.aspx")
 FETCH_TIMEOUT = float(os.environ.get("TFF_FETCH_TIMEOUT", "24"))
 FAST_SKIP_HTTP_CODES = {502, 503, 504}
 FETCH_LAST_ERROR_BY_PATH: dict[str, str] = {}
-FACTORY_VERSION = "v5-professional-only-resilient"
+FACTORY_VERSION = "v6-atomic-standings-preservation"
 TEAM_CANONICAL = "Balıkesirspor"
 DATA_BASE_URL = os.environ.get(
     "BALKES_DATA_BASE_URL",
@@ -66,6 +66,32 @@ def write_json(path: Path | str, obj: Any) -> None:
     p = Path(path)
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def preserve_or_initialize_standings(path: Path) -> int:
+    """Factory yarıda kesilse bile son başarılı puan tablolarını koru."""
+    existing = read_json(path, None)
+    if isinstance(existing, list):
+        return len(existing)
+    write_json(path, [])
+    return 0
+
+
+def merge_factory_season_metadata(
+    previous: dict[str, Any],
+    current: dict[str, Any],
+) -> dict[str, Any]:
+    """Maç özetini yenilerken standings üreticisinin alanlarını düşürme."""
+    merged = dict(previous) if isinstance(previous, dict) else {}
+    summary = dict(current.get("summary") or {})
+    previous_summary = previous.get("summary") if isinstance(previous, dict) else {}
+    if isinstance(previous_summary, dict):
+        for key in ("points", "rawPoints", "pointsDeducted", "finalRank"):
+            if key in previous_summary:
+                summary[key] = previous_summary[key]
+    merged.update(current)
+    merged["summary"] = summary
+    return merged
 
 
 def tff_url(**params: Any) -> str:
@@ -1533,7 +1559,9 @@ def process_season(item: dict[str, Any], args: argparse.Namespace, seed: dict[st
         path.unlink()
     index = [index_from_detail(d) for d in details]
     write_json(season_dir / "matches_index.json", index)
-    write_json(season_dir / "standings_by_week.json", [])
+    preserved_standings = preserve_or_initialize_standings(
+        season_dir / "standings_by_week.json"
+    )
 
     type_counts: dict[str, int] = {}
     wins = draws = losses = gf = ga = 0
@@ -1550,7 +1578,8 @@ def process_season(item: dict[str, Any], args: argparse.Namespace, seed: dict[st
             ga += int(b.get("goalsAgainst") or 0)
 
     season_competition = details[0].get("competition", "") if details else ""
-    write_json(season_dir / "season.json", {
+    previous_season = read_json(season_dir / "season.json", {}) or {}
+    current_season = {
         "id": season,
         "name": season,
         "competition": season_competition,
@@ -1559,7 +1588,11 @@ def process_season(item: dict[str, Any], args: argparse.Namespace, seed: dict[st
         "updatedAt": now(),
         "summary": {"matches": len(index), "wins": wins, "draws": draws, "losses": losses, "goalsFor": gf, "goalsAgainst": ga, "goalDifference": gf - ga, "matchTypes": type_counts},
         "files": {"matchesIndex": f"seasons/{season}/matches_index.json", "standingsByWeek": f"seasons/{season}/standings_by_week.json"},
-    })
+    }
+    write_json(
+        season_dir / "season.json",
+        merge_factory_season_metadata(previous_season, current_season),
+    )
 
     quality = {
         "season": season,
@@ -1580,8 +1613,8 @@ def process_season(item: dict[str, Any], args: argparse.Namespace, seed: dict[st
         "rejectedReasons": rejected,
         "rejectedSamples": rejected_samples,
         "standingsSkipped": True,
-        "standingsSnapshots": 0,
-        "balkesTableFound": False,
+        "standingsSnapshots": preserved_standings,
+        "balkesTableFound": preserved_standings > 0,
         "matchTypeCounts": type_counts,
         "seasonGuard": {"start": season_bounds(season, seed)[0], "end": season_bounds(season, seed)[1]},
         "generatedAt": now(),
@@ -1593,6 +1626,7 @@ def process_season(item: dict[str, Any], args: argparse.Namespace, seed: dict[st
 
 
 def build_manifest(data_root: Path, processed: list[str]) -> None:
+    previous_manifest = read_json(data_root / "manifest.json", {}) or {}
     seasons = []
     for p in sorted((data_root / "seasons").glob("*/matches_index.json"), reverse=True):
         arr = read_json(p, [])
@@ -1608,8 +1642,22 @@ def build_manifest(data_root: Path, processed: list[str]) -> None:
                     item["leagueSummary"] = season_json.get("leagueSummary")
                 if season_json.get("leagueStages"):
                     item["leagueStages"] = season_json.get("leagueStages")
+                if season_json.get("officialStandingsMatchTypes"):
+                    item["officialStandingsMatchTypes"] = season_json.get(
+                        "officialStandingsMatchTypes"
+                    )
+                if season_json.get("officialStandingsSummary"):
+                    item["officialStandingsSummary"] = season_json.get(
+                        "officialStandingsSummary"
+                    )
+                standings_path = p.parent / "standings_by_week.json"
+                standings = read_json(standings_path, []) or []
+                if isinstance(standings, list) and standings:
+                    item["standingsByWeekUrl"] = (
+                        f"seasons/{p.parent.name}/standings_by_week.json"
+                    )
             seasons.append(item)
-    write_json(data_root / "manifest.json", {
+    manifest = {
         "app": "Balkes Hakkında",
         "schemaVersion": 3,
         "dataVersion": 1,
@@ -1624,7 +1672,11 @@ def build_manifest(data_root: Path, processed: list[str]) -> None:
         "dataBaseUrl": DATA_BASE_URL,
         "factoryVersion": FACTORY_VERSION,
         "processedSeasonsInLastRun": processed,
-    })
+    }
+    for key in ("standingsUpdatedAt", "standingsBuilderVersion"):
+        if previous_manifest.get(key):
+            manifest[key] = previous_manifest[key]
+    write_json(data_root / "manifest.json", manifest)
 
 
 def rebuild_global_indexes(data_root: Path) -> None:

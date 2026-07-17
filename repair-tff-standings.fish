@@ -67,7 +67,7 @@ end
 
 write_repair_state repairing -1 $state_file $output
 echo ""
-echo "1/5 — İki sezonun TFF fikstür hedefleri güncelleniyor..."
+echo "1/6 — İki sezonun TFF fikstür hedefleri güncelleniyor..."
 run_nix python3 tools/tff/discover_club_fixtures.py \
     --registry tools/tff/balkes_tff_seed_registry.json \
     --output $registry \
@@ -100,7 +100,31 @@ if test $registry_status -ne 0
 end
 
 echo ""
-echo "2/5 — 2025-2026 ve 2006-2007 resmi haftaları taze çekiliyor..."
+echo "2/6 — Yarım kalan tam senkronun boşalttığı tablolar önbellekten kuruluyor..."
+run_nix python3 tools/tff/tff_standings_builder.py \
+    --seed $registry \
+    --data-root $output \
+    --raw-root $cache/standings \
+    --reports-root $reports/standings \
+    --penalties tools/tff/standings_penalties.json \
+    --repair-incomplete-only \
+    --mode official-only \
+    --probe-limit 5000 \
+    --workers $workers \
+    --week-workers $workers \
+    --season-workers 2 \
+    --detail-fetch-mode none \
+    --week-param-mode smart \
+    --sleep 0.08
+set -l recovery_status $status
+if test $recovery_status -ne 0
+    write_repair_state failed $recovery_status $state_file $output
+    echo "Hata: önbellekten puan tablosu kurtarma tamamlanamadı." >&2
+    exit $recovery_status
+end
+
+echo ""
+echo "3/6 — 2025-2026 ve 2006-2007 resmi haftaları taze çekiliyor..."
 run_nix python3 tools/tff/tff_standings_builder.py \
     --seed $registry \
     --data-root $output \
@@ -126,7 +150,7 @@ if test $standings_status -ne 0
 end
 
 echo ""
-echo "3/5 — Maç haftaları ve indeksler yeniden bağlanıyor..."
+echo "4/6 — Maç haftaları ve indeksler yeniden bağlanıyor..."
 run_nix python3 tools/tff/repair_export.py \
     --data-root $output \
     --registry $registry \
@@ -140,7 +164,7 @@ if test $repair_status -ne 0
 end
 
 echo ""
-echo "4/5 — Bütün 32 sezon sıkı kurallarla doğrulanıyor..."
+echo "5/6 — Bütün 32 sezon sıkı kurallarla doğrulanıyor..."
 run_nix python3 tools/tff/validate_export.py \
     --data-root $output \
     --report $reports/validation.json \
@@ -150,7 +174,7 @@ run_nix python3 tools/tff/validate_export.py \
 set -l validation_status $status
 
 echo ""
-echo "5/5 — Son kalite kapısı çalışıyor..."
+echo "6/6 — Son kalite kapısı çalışıyor..."
 run_nix python3 tools/tff/completion_gate.py \
     --data-root $output \
     --report $completion_report

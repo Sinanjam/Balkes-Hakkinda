@@ -1118,6 +1118,62 @@ def selected_seasons(seed: dict[str, Any], start: str, max_seasons: int, explici
     return order[idx: idx + max_seasons]
 
 
+def played_league_weeks(data_root: Path, season: str) -> tuple[bool, set[int]]:
+    """Oynanmış lig maçı var mı ve bilinen gerçek haftaları neler?"""
+    season_dir = data_root / "seasons" / season
+    index = read_json(season_dir / "matches_index.json", []) or []
+    played = False
+    weeks: set[int] = set()
+    for value in index if isinstance(index, list) else []:
+        if not isinstance(value, dict):
+            continue
+        detail = value
+        score = detail.get("score") if isinstance(detail.get("score"), dict) else {}
+        if not score or "played" not in score or not detail.get("matchType"):
+            match_id = str(detail.get("id") or "")
+            stored = read_json(season_dir / "matches" / f"{match_id}.json", {}) if match_id else {}
+            if isinstance(stored, dict) and stored:
+                detail = stored
+                score = detail.get("score") if isinstance(detail.get("score"), dict) else {}
+        if str(detail.get("matchType") or "league") != "league" or not score.get("played"):
+            continue
+        played = True
+        week = parse_int(detail.get("standingsWeek") or detail.get("week")) or 0
+        if week > 0:
+            weeks.add(week)
+    return played, weeks
+
+
+def seasons_needing_standings_repair(seed: dict[str, Any], data_root: Path) -> list[str]:
+    """Kesilmiş bir factory koşusundan sonra boş/eksik tabloları bul."""
+    order = [
+        str(value) for value in (
+            seed.get("runOrder")
+            or [item.get("season") for item in seed.get("seasons", []) if item.get("season")]
+        )
+    ]
+    missing: list[str] = []
+    for season in order:
+        played, played_weeks = played_league_weeks(data_root, season)
+        if not played:
+            continue
+        snapshots = read_json(
+            data_root / "seasons" / season / "standings_by_week.json", []
+        ) or []
+        table_weeks = {
+            parse_int(snapshot.get("week")) or 0
+            for snapshot in snapshots if isinstance(snapshot, dict)
+            and isinstance(snapshot.get("standings"), list)
+            and snapshot.get("standings")
+        } if isinstance(snapshots, list) else set()
+        if not table_weeks:
+            missing.append(season)
+            continue
+        if played_weeks and not played_weeks.issubset(table_weeks):
+            missing.append(season)
+    return missing
+
+
 def standings_row_summary(row: dict[str, Any]) -> dict[str, int]:
     goals_for = int(row.get("goalsFor") or 0)
     goals_against = int(row.get("goalsAgainst") or 0)
@@ -1429,6 +1485,11 @@ def main() -> int:
     ap.add_argument("--start-season", default="2025-2026")
     ap.add_argument("--max-seasons", type=int, default=1)
     ap.add_argument("--season", action="append", help="Specific season. Can be repeated.")
+    ap.add_argument(
+        "--repair-incomplete-only",
+        action="store_true",
+        help="Oynanmış lig maçı bulunan boş/eksik sezon tablolarını otomatik seç.",
+    )
     ap.add_argument("--mode", choices=["auto", "official-only", "computed-only"], default="auto")
     ap.add_argument("--default-max-week", type=int, default=34)
     ap.add_argument("--probe-limit", type=int, default=2500)
@@ -1451,7 +1512,13 @@ def main() -> int:
     reports_root = Path(args.reports_root)
     reports_root.mkdir(parents=True, exist_ok=True)
     penalties = load_penalties(Path(args.penalties))
-    seasons = selected_seasons(seed, args.start_season, args.max_seasons, args.season)
+    if args.repair_incomplete_only:
+        seasons = seasons_needing_standings_repair(seed, data_root)
+        if args.season:
+            requested = set(args.season)
+            seasons = [season for season in seasons if season in requested]
+    else:
+        seasons = selected_seasons(seed, args.start_season, args.max_seasons, args.season)
     log("standings queue=" + ", ".join(seasons))
     reports_by_season: dict[str, dict[str, Any]] = {}
     with ThreadPoolExecutor(max_workers=max(1, int(args.season_workers))) as executor:

@@ -118,6 +118,14 @@ class CompletionGateTests(unittest.TestCase):
             detail["events"] = []
             write_json(detail_path, detail)
             write_json(root / "seasons" / "2025-2026" / "standings_by_week.json", [])
+            write_json(root / "reports" / "validation.json", {
+                "status": "ok_with_warnings",
+                "summary": {"errors": 0},
+                "warnings": [
+                    "2025-2026: henüz oynanmış lig maçı yok; "
+                    "puan tablosu bu aşamada beklenmiyor"
+                ],
+            })
             result, report = self.run_gate(root)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         self.assertTrue(report["readyToPublish"])
@@ -125,6 +133,10 @@ class CompletionGateTests(unittest.TestCase):
         self.assertEqual(report["summary"]["leaguePlayedMatches"], 0)
         self.assertEqual(report["summary"]["pendingStandingsSeasons"], 1)
         self.assertEqual(report["pendingStandings"][0]["leagueMatches"], 1)
+        self.assertEqual(
+            sum("puan tablosu bu aşamada beklenmiyor" in value for value in report["warnings"]),
+            1,
+        )
 
     def test_historical_unplayed_season_still_requires_standings(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

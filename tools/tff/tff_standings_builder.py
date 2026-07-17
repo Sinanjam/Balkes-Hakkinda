@@ -64,7 +64,7 @@ from quality_rules import official_standings_scope, played_balkes_totals
 
 TFF = os.environ.get("TFF_BASE_URL", "http://www.tff.org/Default.aspx")
 DEFAULT_PENALTIES = "data/standings_penalties.json"
-BUILDER_VERSION = "standings-builder-v7-archive-gap-recovery"
+BUILDER_VERSION = "standings-builder-v8-legacy-week-group-routing"
 
 
 def now() -> str:
@@ -129,6 +129,15 @@ def build_item_urls(item: dict[str, Any], week: int | None = None) -> list[tuple
     page_id = str(item.get("targetPageID") or plan.get("pageID") or "").strip()
     group_id = str(item.get("targetGrupID") or plan.get("grupID") or "").strip()
     raw_targets = [u for u in item.get("targetUrls", []) or [] if isinstance(u, str) and u.strip()]
+    week_groups = item.get("standingsGroupByWeek") or {}
+    week_group = str(week_groups.get(str(week)) or "").strip() if week is not None else ""
+    if week_group:
+        # Bazı eski TFF arşivlerinde grup sekmesi doğru görünse de standings
+        # modülü belirli haftalarda başka grupID ile doğru tabloyu döndürüyor.
+        # Registry'deki kaynak-doğrulanmış hafta yönlendirmesi bu durumda exact
+        # pageID üzerinde yalnız o hafta için uygulanır.
+        group_id = week_group
+        raw_targets = []
 
     bases: list[tuple[str, str]] = []
     if page_id:

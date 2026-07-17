@@ -253,6 +253,8 @@ class InterruptedRunRecoveryTests(unittest.TestCase):
         item = manifest["availableSeasons"][0]
         self.assertEqual(manifest["standingsBuilderVersion"], "known-good-builder")
         self.assertEqual(item["officialStandingsMatchTypes"], ["league"])
+        self.assertEqual(item["seasonUrl"], "seasons/2020-2021/season.json")
+        self.assertEqual(item["matchesIndexUrl"], "seasons/2020-2021/matches_index.json")
         self.assertEqual(item["standingsByWeekUrl"], "seasons/2020-2021/standings_by_week.json")
 
     def test_repair_selector_finds_only_played_league_with_missing_weeks(self) -> None:

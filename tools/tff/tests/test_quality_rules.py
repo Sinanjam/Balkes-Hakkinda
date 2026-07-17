@@ -10,7 +10,7 @@ from pathlib import Path
 TOOLS = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(TOOLS))
 
-from quality_rules import standings_not_yet_expected  # noqa: E402
+from quality_rules import official_standings_scope, standings_not_yet_expected  # noqa: E402
 
 
 def match(day: str, *, played: bool = False, match_type: str = "league") -> dict:
@@ -53,6 +53,44 @@ class QualityRuleTests(unittest.TestCase):
         self.assertTrue(
             standings_not_yet_expected(details, today=date(2026, 7, 17))
         )
+
+    def test_official_table_can_exactly_include_playoff_matches(self) -> None:
+        details = [
+            {
+                "matchType": "league",
+                "score": {"played": True},
+                "balkes": {"result": "W", "goalsFor": 2, "goalsAgainst": 0},
+            },
+            {
+                "matchType": "playoff",
+                "score": {"played": True},
+                "balkes": {"result": "L", "goalsFor": 1, "goalsAgainst": 3},
+            },
+        ]
+        scope = official_standings_scope(details, {
+            "played": 2, "goalsFor": 3, "goalsAgainst": 3,
+        })
+        self.assertTrue(scope["exact"])
+        self.assertEqual(scope["matchTypes"], ["league", "playoff"])
+
+    def test_playoff_scope_does_not_hide_real_goal_difference(self) -> None:
+        details = [
+            {
+                "matchType": "league",
+                "score": {"played": True},
+                "balkes": {"result": "W", "goalsFor": 2, "goalsAgainst": 0},
+            },
+            {
+                "matchType": "playoff",
+                "score": {"played": True},
+                "balkes": {"result": "L", "goalsFor": 1, "goalsAgainst": 3},
+            },
+        ]
+        scope = official_standings_scope(details, {
+            "played": 2, "goalsFor": 99, "goalsAgainst": 3,
+        })
+        self.assertFalse(scope["exact"])
+        self.assertEqual(scope["matchTypes"], ["league"])
 
 
 if __name__ == "__main__":

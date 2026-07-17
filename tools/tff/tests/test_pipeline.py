@@ -392,6 +392,21 @@ class StandingsTests(unittest.TestCase):
         }
         self.assertEqual(len(build_item_urls(item, 1)), 1)
 
+    def test_legacy_week_can_use_source_verified_group_routing(self) -> None:
+        item = {
+            "targetPageID": "575",
+            "targetGrupID": "15",
+            "targetUrls": ["https://www.tff.org/Default.aspx?pageID=575&grupID=15"],
+            "standingsGroupByWeek": {"18": "14", "29": "14"},
+        }
+        week_17 = build_item_urls(item, 17)
+        week_18 = build_item_urls(item, 18)
+        week_30 = build_item_urls(item, 30)
+        self.assertEqual(len(week_18), 1)
+        self.assertIn("grupID=15", week_17[0][1])
+        self.assertIn("grupID=14", week_18[0][1])
+        self.assertIn("grupID=15", week_30[0][1])
+
     @patch("tff_standings_builder.fetch_official_week")
     def test_partial_parallel_result_gets_one_serial_fresh_recovery(self, mocked) -> None:
         calls: list[tuple[int, bool]] = []

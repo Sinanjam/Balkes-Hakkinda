@@ -6,6 +6,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from datetime import date, timedelta
 from pathlib import Path
 
 
@@ -104,6 +105,54 @@ class CompletionGateTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0)
         self.assertEqual(report["status"], "clean_with_source_limits")
         self.assertEqual(report["summary"]["sourceLimitedMatches"], 1)
+
+    def test_future_unplayed_season_does_not_require_standings(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.fixture(root)
+            detail_path = root / "seasons" / "2025-2026" / "matches" / "1.json"
+            detail = json.loads(detail_path.read_text(encoding="utf-8"))
+            detail["date"] = (date.today() + timedelta(days=30)).isoformat()
+            detail["score"] = {"played": False, "home": None, "away": None}
+            detail["lineups"] = {}
+            detail["events"] = []
+            write_json(detail_path, detail)
+            write_json(root / "seasons" / "2025-2026" / "standings_by_week.json", [])
+            result, report = self.run_gate(root)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertTrue(report["readyToPublish"])
+        self.assertEqual(report["status"], "clean_with_warnings")
+        self.assertEqual(report["summary"]["leaguePlayedMatches"], 0)
+        self.assertEqual(report["summary"]["pendingStandingsSeasons"], 1)
+        self.assertEqual(report["pendingStandings"][0]["leagueMatches"], 1)
+
+    def test_historical_unplayed_season_still_requires_standings(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.fixture(root)
+            detail_path = root / "seasons" / "2025-2026" / "matches" / "1.json"
+            detail = json.loads(detail_path.read_text(encoding="utf-8"))
+            detail["date"] = "2020-09-01"
+            detail["score"] = {"played": False, "home": None, "away": None}
+            write_json(detail_path, detail)
+            write_json(root / "seasons" / "2025-2026" / "standings_by_week.json", [])
+            result, report = self.run_gate(root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertTrue(any("geçerli haftalık puan tablosu yok" in value for value in report["errors"]))
+
+    def test_validation_errors_are_forwarded_verbatim(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.fixture(root)
+            write_json(root / "reports" / "validation.json", {
+                "status": "error",
+                "summary": {"errors": 1},
+                "errors": ["Keşif 2026-2027: örnek gerçek hata"],
+            })
+            result, report = self.run_gate(root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("Keşif 2026-2027: örnek gerçek hata", report["errors"])
+        self.assertNotIn("Sıkı genel doğrulama hata verdi.", report["errors"])
 
 
 if __name__ == "__main__":

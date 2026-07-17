@@ -21,6 +21,7 @@ from discover_club_fixtures import (  # noqa: E402
     max_numbered_league_fixture_week,
     page_mentions_season,
     reconcile_archive_stages,
+    seed_with_preserved_unselected_runtime,
     standalone_archive_stages,
 )
 from tff_factory import (  # noqa: E402
@@ -40,6 +41,18 @@ from validate_export import intentionally_skipped, validate_discovery  # noqa: E
 
 
 class FixtureDiscoveryTests(unittest.TestCase):
+    def test_repair_seasons_pin_permanent_archive_targets(self) -> None:
+        registry = json.loads((TOOLS / "balkes_tff_seed_registry.json").read_text(encoding="utf-8"))
+        by_season = {item["season"]: item for item in registry["seasons"]}
+        self.assertEqual(
+            (by_season["2025-2026"]["targetPageID"], by_season["2025-2026"]["targetGrupID"]),
+            ("1770", "2786"),
+        )
+        self.assertEqual(
+            (by_season["2006-2007"]["targetPageID"], by_season["2006-2007"]["targetGrupID"]),
+            ("575", "15"),
+        )
+
     def test_leading_fixture_column_is_parsed_as_week(self) -> None:
         raw = """
         <table id='ctl00_MPane_m_28_398_ctnr_m_28_398_grdFikstur'>
@@ -105,6 +118,53 @@ class FixtureDiscoveryTests(unittest.TestCase):
             {"league": 2, "playoff": 1, "standings": 3},
         )
         self.assertEqual(max_numbered_league_fixture_week(item), 30)
+
+    def test_targeted_discovery_preserves_unselected_runtime_seasons(self) -> None:
+        seed = {
+            "policy": "fresh-policy",
+            "runOrder": ["2025-2026", "2010-2011"],
+            "seasons": [
+                {
+                    "season": "2025-2026",
+                    "targetPageID": "1770",
+                    "targetGrupID": "2786",
+                    "knownFixtures": [],
+                },
+                {"season": "2010-2011", "knownFixtures": []},
+            ],
+        }
+        existing = {
+            "policy": "old-policy",
+            "runtimeOnly": True,
+            "runOrder": ["2010-2011", "2025-2026", "2009-2010"],
+            "seasons": [
+                {
+                    "season": "2025-2026",
+                    "targetPageID": "971",
+                    "knownFixtures": [{"id": "kept-selected"}],
+                    "standingsStages": [{"id": "stale-current-page-stage"}],
+                },
+                {
+                    "season": "2010-2011",
+                    "knownFixtures": [{"id": "kept"}],
+                    "standingsStages": [{"id": "kept-stage"}],
+                },
+                {"season": "2009-2010", "knownFixtures": [{"id": "also-kept"}]},
+            ],
+        }
+
+        merged = seed_with_preserved_unselected_runtime(seed, existing, ["2025-2026"])
+        by_season = {item["season"]: item for item in merged["seasons"]}
+
+        self.assertEqual(merged["policy"], "fresh-policy")
+        self.assertTrue(merged["runtimeOnly"])
+        self.assertEqual(by_season["2025-2026"]["targetPageID"], "1770")
+        self.assertEqual(by_season["2025-2026"]["knownFixtures"], [{"id": "kept-selected"}])
+        self.assertNotIn("standingsStages", by_season["2025-2026"])
+        self.assertEqual(by_season["2010-2011"]["knownFixtures"], [{"id": "kept"}])
+        self.assertEqual(by_season["2010-2011"]["standingsStages"], [{"id": "kept-stage"}])
+        self.assertEqual(by_season["2009-2010"]["knownFixtures"], [{"id": "also-kept"}])
+        self.assertEqual(merged["runOrder"], ["2025-2026", "2010-2011", "2009-2010"])
 
 
 class ProfessionalFilterTests(unittest.TestCase):

@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 
-from quality_rules import standings_not_yet_expected
+from quality_rules import official_standings_scope, standings_not_yet_expected
 from tff_factory import (
     is_balkes,
     norm,
@@ -433,17 +433,9 @@ def main() -> int:
             else:
                 message = "lig maçı var fakat haftalık puan tablosu üretilemedi"
                 (season_errors if args.strict else season_warnings).append(message)
+        standings_match_types: list[str] = []
         if last_balkes:
-            league_goals_for = sum(
-                as_int((detail.get("balkes") or {}).get("goalsFor"))
-                for detail in valid_details
-                if detail.get("matchType") == "league" and (detail.get("score") or {}).get("played")
-            )
-            league_goals_against = sum(
-                as_int((detail.get("balkes") or {}).get("goalsAgainst"))
-                for detail in valid_details
-                if detail.get("matchType") == "league" and (detail.get("score") or {}).get("played")
-            )
+            table_played = 0
             if stage_balkes:
                 configured = {
                     str(stage.get("id")): stage
@@ -478,27 +470,39 @@ def main() -> int:
                     else:
                         table_goals_for += raw_goals_for
                         table_goals_against += raw_goals_against
-                if stage_played != league_played:
-                    season_errors.append(
-                        f"resmi aşamalarda toplam oynanan={stage_played}, "
-                        f"maç indeksinde oynanan lig maçı={league_played}"
-                    )
+                table_played = stage_played
             else:
-                standings_played = as_int(last_balkes.get("played"))
-                if standings_played != league_played:
-                    season_errors.append(
-                        f"resmi son tabloda oynanan={standings_played}, "
-                        f"maç indeksinde oynanan lig maçı={league_played}"
-                    )
+                table_played = as_int(last_balkes.get("played"))
                 table_goals_for = as_int(last_balkes.get("goalsFor"))
                 table_goals_against = as_int(last_balkes.get("goalsAgainst"))
-            if league_goals_for != table_goals_for:
+
+            scope = official_standings_scope(valid_details, {
+                "played": table_played,
+                "goalsFor": table_goals_for,
+                "goalsAgainst": table_goals_against,
+            })
+            standings_match_types = list(scope["matchTypes"])
+            compared = scope["totals"]
+            if table_played != compared["played"]:
+                if stage_balkes:
+                    season_errors.append(
+                        f"resmi aşamalarda toplam oynanan={table_played}, "
+                        f"maç indeksinde oynanan lig maçı={compared['played']}"
+                    )
+                else:
+                    season_errors.append(
+                        f"resmi son tabloda oynanan={table_played}, "
+                        f"maç indeksinde oynanan lig maçı={compared['played']}"
+                    )
+            if compared["goalsFor"] != table_goals_for:
                 season_warnings.append(
-                    f"lig gol toplamı uyuşmuyor: maçlar={league_goals_for}, tablo={table_goals_for}"
+                    f"lig gol toplamı uyuşmuyor: maçlar={compared['goalsFor']}, "
+                    f"tablo={table_goals_for}"
                 )
-            if league_goals_against != table_goals_against:
+            if compared["goalsAgainst"] != table_goals_against:
                 season_warnings.append(
-                    f"yenilen gol toplamı uyuşmuyor: maçlar={league_goals_against}, tablo={table_goals_against}"
+                    f"yenilen gol toplamı uyuşmuyor: maçlar={compared['goalsAgainst']}, "
+                    f"tablo={table_goals_against}"
                 )
 
         # Geçmişte kalmış oynanmamış tekil kayıtları silmeyiz; inceleme için işaretleriz.
@@ -526,6 +530,7 @@ def main() -> int:
             "detailsWithEventsOrLineups": details_complete,
             "standingsWeeks": valid_weeks,
             "standingsPending": standings_pending,
+            "officialStandingsMatchTypes": standings_match_types,
             "competitions": dict(competition_counts.most_common()),
             "matchTypes": dict(type_counts),
             "staleDetailFiles": len(stale_ids),

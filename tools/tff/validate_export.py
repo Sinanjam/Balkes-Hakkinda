@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 
+from quality_rules import standings_not_yet_expected
 from tff_factory import (
     is_balkes,
     norm,
@@ -423,9 +424,15 @@ def main() -> int:
                 message = "puan tablosu eksik haftalar: " + ", ".join(map(str, missing_weeks))
                 (season_errors if args.strict else season_warnings).append(message)
 
-        if index and valid_weeks == 0:
-            message = "maç var fakat haftalık puan tablosu üretilemedi"
-            (season_errors if args.strict else season_warnings).append(message)
+        standings_pending = standings_not_yet_expected(valid_details)
+        if league_count and valid_weeks == 0:
+            if standings_pending:
+                season_warnings.append(
+                    "henüz oynanmış lig maçı yok; puan tablosu bu aşamada beklenmiyor"
+                )
+            else:
+                message = "lig maçı var fakat haftalık puan tablosu üretilemedi"
+                (season_errors if args.strict else season_warnings).append(message)
         if last_balkes:
             league_goals_for = sum(
                 as_int((detail.get("balkes") or {}).get("goalsFor"))
@@ -518,6 +525,7 @@ def main() -> int:
             "detailsValid": details_ok,
             "detailsWithEventsOrLineups": details_complete,
             "standingsWeeks": valid_weeks,
+            "standingsPending": standings_pending,
             "competitions": dict(competition_counts.most_common()),
             "matchTypes": dict(type_counts),
             "staleDetailFiles": len(stale_ids),

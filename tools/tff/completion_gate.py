@@ -54,7 +54,17 @@ def lineup_counts(detail: dict[str, Any]) -> tuple[int, int]:
 
 
 def unique_messages(values: list[str]) -> list[str]:
-    return list(dict.fromkeys(value for value in values if value))
+    output: list[str] = []
+    seen: set[str] = set()
+    for value in values:
+        if not value:
+            continue
+        key = value.strip().rstrip(".").casefold()
+        if key in seen:
+            continue
+        seen.add(key)
+        output.append(value)
+    return output
 
 
 def main() -> int:

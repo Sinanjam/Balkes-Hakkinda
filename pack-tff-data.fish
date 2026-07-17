@@ -7,8 +7,9 @@ or exit 1
 set -l unit balkes-tff-sync
 set -l data_dir generated/tff-data
 set -l report $data_dir/reports/completion.json
+set -l release_dir local-releases/tff-data
 
-if systemctl --user is-active --quiet $unit
+if type -q systemctl; and systemctl --user is-active --quiet $unit
     echo "Paketleme durduruldu: TFF görevi hâlâ çalışıyor." >&2
     echo "Önce: fish status-tff-local.fish" >&2
     exit 2
@@ -18,22 +19,11 @@ if not test -f $report
     exit 2
 end
 
-set -l ready (nix develop . --command jq -r '.readyToPublish // false' $report | tail -n 1)
-if test "$ready" != "true"
-    echo "Paketleme durduruldu: kalite kapısı henüz geçilmedi." >&2
-    nix develop . --command jq '{status, readyToPublish, summary, errors}' $report
-    exit 2
-end
-
-set -l archive tff-data-final-(date +%Y%m%d-%H%M%S).zip
-nix develop . --command sh -c \
-    'cd generated && zip -q -r ../"$1" tff-data' sh $archive
+nix develop . --command python3 tools/tff/package_release.py \
+    --data-root $data_dir \
+    --output-dir $release_dir
 or exit $status
 
-nix develop . --command unzip -tq $archive
-or begin
-    echo "ZIP doğrulaması başarısız: $archive" >&2
-    exit 3
-end
-
-echo "Hazır ve doğrulandı: $root/$archive"
+echo
+echo "Hazır: $root/$release_dir"
+echo "ZIP + SHA-256 + kalite özeti birlikte üretildi."

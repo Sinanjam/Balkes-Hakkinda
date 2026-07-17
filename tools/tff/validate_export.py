@@ -390,13 +390,19 @@ def main() -> int:
             if week <= 0 or not rows:
                 continue
             teams = [str(row.get("team") or "").strip() for row in rows if isinstance(row, dict)]
-            unique_teams = {team.casefold() for team in teams if team}
+            team_identities = [
+                f"id:{str(row.get('teamId')).strip()}"
+                if str(row.get("teamId") or "").strip()
+                else f"name:{str(row.get('team') or '').strip().casefold()}"
+                for row in rows if isinstance(row, dict) and str(row.get("team") or "").strip()
+            ]
+            unique_teams = set(team_identities)
             if len(unique_teams) < 4:
                 season_warnings.append(
                     f"{week}. hafta tablosu tam lig tablosu değil: yalnızca {len(unique_teams)} takım"
                 )
                 continue
-            if len(unique_teams) != len([team for team in teams if team]):
+            if len(unique_teams) != len(team_identities):
                 season_warnings.append(f"{week}. hafta tablosunda yinelenen takım var")
                 continue
             if week < last_week:

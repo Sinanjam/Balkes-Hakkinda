@@ -25,14 +25,18 @@ from discover_club_fixtures import (  # noqa: E402
     standalone_archive_stages,
 )
 from tff_factory import (  # noqa: E402
+    build_manifest,
     extract_balkes_ids,
     match_override_for,
+    merge_factory_season_metadata,
+    preserve_or_initialize_standings,
     professional_competition_status,
     remove_superseded_unplayed,
 )
 from tff_standings_builder import (  # noqa: E402
     build_item_urls,
     parse_official_standings,
+    seasons_needing_standings_repair,
     try_official_stages,
     try_official_weekly,
     update_season_files,
@@ -197,6 +201,92 @@ class ProfessionalFilterTests(unittest.TestCase):
         }}]}
         self.assertEqual(match_override_for(seed, "1995-1996", "47516")["matchType"], "playoff")
         self.assertEqual(match_override_for(seed, "1996-1997", "47516"), {})
+
+
+class InterruptedRunRecoveryTests(unittest.TestCase):
+    @staticmethod
+    def write(path: Path, value: object) -> None:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(value), encoding="utf-8")
+
+    def test_factory_preserves_last_successful_standings(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "standings_by_week.json"
+            snapshots = [{"week": 1, "standings": [{"team": "Balıkesirspor"}]}]
+            self.write(path, snapshots)
+            count = preserve_or_initialize_standings(path)
+            stored = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(count, 1)
+        self.assertEqual(stored, snapshots)
+
+    def test_factory_keeps_standings_metadata_while_refreshing_match_summary(self) -> None:
+        previous = {
+            "leagueSummary": {"played": 30, "points": 50},
+            "standingsBuilderVersion": "old-builder",
+            "summary": {"matches": 32, "points": 50, "finalRank": 4},
+        }
+        current = {"factoryVersion": "new-factory", "summary": {"matches": 33}}
+        merged = merge_factory_season_metadata(previous, current)
+        self.assertEqual(merged["leagueSummary"]["played"], 30)
+        self.assertEqual(merged["summary"], {"matches": 33, "points": 50, "finalRank": 4})
+
+    def test_factory_manifest_keeps_last_standings_metadata(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            season = root / "seasons" / "2020-2021"
+            self.write(root / "manifest.json", {
+                "standingsBuilderVersion": "known-good-builder",
+                "standingsUpdatedAt": "known-good-time",
+            })
+            self.write(season / "matches_index.json", [{"id": "1"}])
+            self.write(season / "standings_by_week.json", [
+                {"week": 1, "standings": [{"team": "Balıkesirspor"}]}
+            ])
+            self.write(season / "season.json", {
+                "summary": {"matches": 1, "points": 3},
+                "leagueSummary": {"played": 1, "points": 3},
+                "officialStandingsMatchTypes": ["league"],
+            })
+            build_manifest(root, ["2020-2021"])
+            manifest = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
+
+        item = manifest["availableSeasons"][0]
+        self.assertEqual(manifest["standingsBuilderVersion"], "known-good-builder")
+        self.assertEqual(item["officialStandingsMatchTypes"], ["league"])
+        self.assertEqual(item["standingsByWeekUrl"], "seasons/2020-2021/standings_by_week.json")
+
+    def test_repair_selector_finds_only_played_league_with_missing_weeks(self) -> None:
+        seed = {
+            "runOrder": ["complete", "empty", "partial", "future", "cup"],
+            "seasons": [
+                {"season": season}
+                for season in ["complete", "empty", "partial", "future", "cup"]
+            ],
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+
+            def season_fixture(season: str, match_type: str, played: bool, week: int, tables: list[int]) -> None:
+                season_dir = root / "seasons" / season
+                self.write(season_dir / "matches_index.json", [{
+                    "id": "1",
+                    "matchType": match_type,
+                    "standingsWeek": week,
+                    "score": {"played": played},
+                }])
+                self.write(season_dir / "standings_by_week.json", [
+                    {"week": value, "standings": [{"team": "Balıkesirspor"}]}
+                    for value in tables
+                ])
+
+            season_fixture("complete", "league", True, 2, [1, 2])
+            season_fixture("empty", "league", True, 1, [])
+            season_fixture("partial", "league", True, 2, [1])
+            season_fixture("future", "league", False, 1, [])
+            season_fixture("cup", "cup", True, 1, [])
+            selected = seasons_needing_standings_repair(seed, root)
+
+        self.assertEqual(selected, ["empty", "partial"])
 
 
 class StandingsTests(unittest.TestCase):

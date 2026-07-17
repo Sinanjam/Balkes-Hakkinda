@@ -105,7 +105,7 @@ public final class MainActivity extends Activity {
     }
 
     private void warmScoreData() {
-        repository.get(DataEndpoints.scoreManifest(), new RemoteJsonRepository.Callback() {
+        getScoreManifest(new RemoteJsonRepository.Callback() {
             @Override public void onSuccess(Object json, boolean fromCache) {
                 if (isFinishing() || isDestroyed()) return;
                 if (!(json instanceof JSONObject)) return;
@@ -115,11 +115,47 @@ public final class MainActivity extends Activity {
                 if (first == null) return;
                 String id = first.optString("id", "");
                 if (id.length() == 0) return;
-                repository.prefetch(DataEndpoints.scoreFile("seasons/" + id + "/season.json"));
-                repository.prefetch(DataEndpoints.scoreFile("seasons/" + id + "/matches_index.json"));
+                repository.prefetch(DataEndpoints.scoreFile(first.optString(
+                        "seasonUrl", "seasons/" + id + "/season.json")));
+                repository.prefetch(DataEndpoints.scoreFile(first.optString(
+                        "matchesIndexUrl", "seasons/" + id + "/matches_index.json")));
+                String standings = first.optString("standingsByWeekUrl", "");
+                if (standings.length() > 0) repository.prefetch(DataEndpoints.scoreFile(standings));
             }
 
             @Override public void onError(String message) { }
+        });
+    }
+
+    private void getScoreManifest(RemoteJsonRepository.Callback callback) {
+        final String primary = DataEndpoints.scoreManifest();
+        repository.get(primary, new RemoteJsonRepository.Callback() {
+            @Override public void onSuccess(Object json, boolean fromCache) {
+                if (json instanceof JSONObject) {
+                    DataEndpoints.configureScoreManifest((JSONObject) json, primary);
+                }
+                callback.onSuccess(json, fromCache);
+            }
+
+            @Override public void onError(String message) {
+                final String fallback = DataEndpoints.scoreFallbackManifest();
+                if (fallback.equals(primary)) {
+                    callback.onError(message);
+                    return;
+                }
+                repository.get(fallback, new RemoteJsonRepository.Callback() {
+                    @Override public void onSuccess(Object json, boolean fromCache) {
+                        if (json instanceof JSONObject) {
+                            DataEndpoints.configureScoreManifest((JSONObject) json, fallback);
+                        }
+                        callback.onSuccess(json, fromCache);
+                    }
+
+                    @Override public void onError(String fallbackMessage) {
+                        callback.onError(fallbackMessage);
+                    }
+                });
+            }
         });
     }
 
@@ -358,7 +394,7 @@ public final class MainActivity extends Activity {
     private void renderScore() {
         start("Canlı veri", "Balkes Skor",
                 "Güncel sezonlar ve maç kayıtları otomatik yenilenir.", Ui.RED);
-        repository.get(DataEndpoints.scoreManifest(), new RemoteJsonRepository.Callback() {
+        getScoreManifest(new RemoteJsonRepository.Callback() {
             @Override public void onSuccess(Object json, boolean fromCache) {
                 if (chooserVisible || current != Tab.SCORE || !(json instanceof JSONObject)) return;
                 JSONObject root = (JSONObject) json;
@@ -582,7 +618,7 @@ public final class MainActivity extends Activity {
     private void renderSeasons() {
         start("Kulüp tarihi", "Geçmiş Sezonlar",
                 "Geçmiş sezonların maç ve sonuç kayıtlarını incele.", Ui.CYAN);
-        repository.get(DataEndpoints.scoreManifest(), new RemoteJsonRepository.Callback() {
+        getScoreManifest(new RemoteJsonRepository.Callback() {
             @Override public void onSuccess(Object json, boolean fromCache) {
                 if (chooserVisible || current != Tab.SEASONS || !(json instanceof JSONObject)) return;
                 JSONArray seasons = ((JSONObject) json).optJSONArray("availableSeasons");
@@ -774,6 +810,11 @@ public final class MainActivity extends Activity {
                         summary.addView(Ui.text(MainActivity.this, "maç kaydı", 14, Ui.MUTED));
                         body.addView(summary);
 
+                        LinearLayout standingsSlot = new LinearLayout(MainActivity.this);
+                        standingsSlot.setOrientation(LinearLayout.VERTICAL);
+                        body.addView(standingsSlot, new LinearLayout.LayoutParams(-1, -2));
+                        loadSeasonStandings(seasonId, key, standingsSlot);
+
                         for (int i = 0; i < matches.length(); i++) {
                             JSONObject match = matches.optJSONObject(i);
                             if (match == null) continue;
@@ -805,6 +846,132 @@ public final class MainActivity extends Activity {
                                 view -> renderSeasonDetail(seasonId, seasonName, origin)));
                     }
                 });
+    }
+
+    private void loadSeasonStandings(String seasonId, String requestKey, LinearLayout slot) {
+        slot.addView(Ui.loading(this));
+        repository.get(DataEndpoints.scoreFile(
+                        "seasons/" + seasonId + "/standings_by_week.json"),
+                new RemoteJsonRepository.Callback() {
+                    @Override public void onSuccess(Object json, boolean fromCache) {
+                        if (chooserVisible || !requestKey.equals(detailRequestKey)
+                                || !(json instanceof JSONArray)) return;
+                        JSONArray snapshots = (JSONArray) json;
+                        int latest = latestStandingSnapshot(snapshots);
+                        if (latest < 0) {
+                            slot.removeAllViews();
+                            return;
+                        }
+                        renderStandingSnapshot(slot, snapshots, latest);
+                    }
+
+                    @Override public void onError(String message) {
+                        if (!requestKey.equals(detailRequestKey)) return;
+                        slot.removeAllViews();
+                    }
+                });
+    }
+
+    private int latestStandingSnapshot(JSONArray snapshots) {
+        for (int index = snapshots.length() - 1; index >= 0; index--) {
+            JSONObject snapshot = snapshots.optJSONObject(index);
+            JSONArray rows = snapshot == null ? null : snapshot.optJSONArray("standings");
+            if (rows != null && rows.length() > 0) return index;
+        }
+        return -1;
+    }
+
+    private void renderStandingSnapshot(LinearLayout slot, JSONArray snapshots, int index) {
+        if (index < 0 || index >= snapshots.length()) return;
+        JSONObject snapshot = snapshots.optJSONObject(index);
+        JSONArray rows = snapshot == null ? null : snapshot.optJSONArray("standings");
+        if (snapshot == null || rows == null || rows.length() == 0) return;
+
+        slot.removeAllViews();
+        LinearLayout card = Ui.card(this);
+        String source = snapshot.optString("source", "");
+        card.addView(Ui.eyebrow(this,
+                source.startsWith("official_tff") ? "Resmi TFF puan durumu" : "Puan durumu",
+                Ui.CYAN));
+        TextView week = strong(snapshot.optInt("week", index + 1) + ". Hafta");
+        week.setPadding(0, Ui.dp(this, 5), 0, Ui.dp(this, 9));
+        card.addView(week);
+
+        LinearLayout navigation = new LinearLayout(this);
+        navigation.setOrientation(LinearLayout.HORIZONTAL);
+        navigation.setGravity(Gravity.CENTER_VERTICAL);
+        TextView previous = Ui.eyebrow(this, "← ÖNCEKİ", Ui.CYAN);
+        previous.setGravity(Gravity.START);
+        previous.setAlpha(index > 0 ? 1f : 0.28f);
+        if (index > 0) {
+            previous.setClickable(true);
+            previous.setFocusable(true);
+            previous.setOnClickListener(view -> renderStandingSnapshot(slot, snapshots, index - 1));
+        }
+        navigation.addView(previous, new LinearLayout.LayoutParams(0, -2, 1f));
+
+        TextView position = Ui.text(this, (index + 1) + " / " + snapshots.length(), 11, Ui.MUTED);
+        position.setGravity(Gravity.CENTER);
+        navigation.addView(position, new LinearLayout.LayoutParams(0, -2, 1f));
+
+        TextView next = Ui.eyebrow(this, "SONRAKİ →", Ui.CYAN);
+        next.setGravity(Gravity.END);
+        next.setAlpha(index + 1 < snapshots.length() ? 1f : 0.28f);
+        if (index + 1 < snapshots.length()) {
+            next.setClickable(true);
+            next.setFocusable(true);
+            next.setOnClickListener(view -> renderStandingSnapshot(slot, snapshots, index + 1));
+        }
+        navigation.addView(next, new LinearLayout.LayoutParams(0, -2, 1f));
+        card.addView(navigation);
+
+        LinearLayout labels = standingRow("#", "TAKIM", "O   AV   P", false);
+        labels.setPadding(0, Ui.dp(this, 13), 0, Ui.dp(this, 5));
+        card.addView(labels);
+        for (int rowIndex = 0; rowIndex < rows.length(); rowIndex++) {
+            JSONObject row = rows.optJSONObject(rowIndex);
+            if (row == null) continue;
+            boolean isBalkes = row.optBoolean("isBalkes", false)
+                    || row.optString("team", "").toLowerCase(TURKISH).contains("balıkesirspor")
+                    || row.optString("team", "").toLowerCase(Locale.ROOT).contains("balikesirspor");
+            String stats = row.optInt("played", 0) + "   "
+                    + signed(row.optInt("goalDifference", 0)) + "   "
+                    + row.optInt("points", 0);
+            card.addView(standingRow(
+                    String.valueOf(row.optInt("rank", rowIndex + 1)),
+                    row.optString("team", "—"),
+                    stats,
+                    isBalkes));
+        }
+        TextView legend = Ui.text(this, "O: Oynanan   •   AV: Averaj   •   P: Puan", 10, Ui.MUTED);
+        legend.setPadding(0, Ui.dp(this, 9), 0, 0);
+        card.addView(legend);
+        slot.addView(card);
+    }
+
+    private LinearLayout standingRow(String rank, String team, String stats, boolean isBalkes) {
+        LinearLayout row = new LinearLayout(this);
+        row.setOrientation(LinearLayout.HORIZONTAL);
+        row.setGravity(Gravity.CENTER_VERTICAL);
+        row.setPadding(0, Ui.dp(this, 5), 0, Ui.dp(this, 5));
+
+        TextView rankView = Ui.text(this, rank, 11, isBalkes ? Ui.RED : Ui.MUTED);
+        rankView.setTypeface(Typeface.MONOSPACE, isBalkes ? Typeface.BOLD : Typeface.NORMAL);
+        row.addView(rankView, new LinearLayout.LayoutParams(Ui.dp(this, 30), -2));
+
+        TextView teamView = Ui.text(this, team, 12, isBalkes ? Ui.TEXT : Ui.MUTED);
+        if (isBalkes) teamView.setTypeface(Typeface.DEFAULT_BOLD);
+        row.addView(teamView, new LinearLayout.LayoutParams(0, -2, 1f));
+
+        TextView statsView = Ui.text(this, stats, 11, isBalkes ? Ui.CYAN : Ui.MUTED);
+        statsView.setTypeface(Typeface.MONOSPACE, isBalkes ? Typeface.BOLD : Typeface.NORMAL);
+        statsView.setGravity(Gravity.END);
+        row.addView(statsView, new LinearLayout.LayoutParams(Ui.dp(this, 94), -2));
+        return row;
+    }
+
+    private String signed(int value) {
+        return value > 0 ? "+" + value : String.valueOf(value);
     }
 
     private void renderMatchDetail(JSONObject match, String seasonId, String seasonName, Tab origin) {

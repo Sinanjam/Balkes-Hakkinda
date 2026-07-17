@@ -64,7 +64,7 @@ from quality_rules import official_standings_scope, played_balkes_totals
 
 TFF = os.environ.get("TFF_BASE_URL", "http://www.tff.org/Default.aspx")
 DEFAULT_PENALTIES = "data/standings_penalties.json"
-BUILDER_VERSION = "standings-builder-v6-direct-group-postseason-scope"
+BUILDER_VERSION = "standings-builder-v7-archive-gap-recovery"
 
 
 def now() -> str:
@@ -351,7 +351,8 @@ def clean_standings_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     seen: set[str] = set()
     out: list[dict[str, Any]] = []
     for r in cleaned:
-        key = norm(r.get("team", ""))
+        team_id = str(r.get("teamId") or "").strip()
+        key = f"id:{team_id}" if team_id else f"name:{norm(r.get('team', ''))}"
         if not key or key in seen:
             continue
         seen.add(key)
@@ -403,6 +404,20 @@ def _standings_scopes_for_group(sp: Any, group_id: str) -> list[Any]:
     return scopes
 
 
+def standing_team_id(tr: Any) -> str:
+    """Puan tablosu satırındaki kalıcı TFF takım/kulüp kimliğini okur."""
+    for anchor in tr.find_all("a", href=True):
+        query = urllib.parse.parse_qs(
+            urllib.parse.urlparse(html.unescape(str(anchor.get("href") or ""))).query
+        )
+        lowered = {str(key).casefold(): value for key, value in query.items()}
+        for key in ("takimid", "kulupid", "teamid", "clubid"):
+            value = (lowered.get(key) or [""])[0]
+            if str(value).strip():
+                return str(value).strip()
+    return ""
+
+
 def parse_official_standings(
     raw: str,
     group_id: str = "",
@@ -445,6 +460,9 @@ def parse_official_standings(
                 continue
             row = row_from_cells(cells, header)
             if row:
+                team_id = standing_team_id(tr)
+                if team_id:
+                    row["teamId"] = team_id
                 rows.append(row)
         rows = clean_standings_rows(rows)
         if len(rows) >= 8:
@@ -462,7 +480,12 @@ def parse_official_standings(
 
 
 def standings_signature(rows: list[dict[str, Any]]) -> str:
-    compact = [(norm(r.get("team", "")), r.get("played"), r.get("points"), r.get("goalDifference")) for r in rows]
+    compact = [(
+        str(r.get("teamId") or norm(r.get("team", ""))),
+        r.get("played"),
+        r.get("points"),
+        r.get("goalDifference"),
+    ) for r in rows]
     return hashlib.sha1(json.dumps(compact, sort_keys=True).encode("utf-8")).hexdigest()
 
 
@@ -988,6 +1011,38 @@ def try_official_weekly(item: dict[str, Any], season: str, raw_root: Path,
                         f"{season}: resmi haftalar {completed}/{max_week}, "
                         f"tablo={len(snapshots_by_week)}, workers={worker_count}"
                     )
+
+    # Eski TFF arşivi eşzamanlı isteklerin bir bölümünde geçerli HTTP cevabı
+    # içinde boş/varsayılan modül döndürebiliyor. Kısmen başarılı bir sezonun
+    # eksik haftalarını bir kez seri ve zorunlu taze istekle toparla. Bu geçiş
+    # yalnız resmi tabloyu yeniden okur; sentetik veri veya ileri taşıma yapmaz.
+    missing = [week for week in range(1, max_week + 1) if week not in snapshots_by_week]
+    if missing and len(snapshots_by_week) >= max(2, max_week // 3):
+        log(
+            f"{season}: eksik resmi haftalar seri kurtarılıyor: "
+            + ",".join(map(str, missing))
+        )
+        recovered = 0
+        for week in missing:
+            _week, snapshot = fetch_official_week(
+                item,
+                season,
+                raw_root,
+                max(sleep_s, 0.35),
+                True,
+                week,
+            )
+            if not snapshot:
+                continue
+            snapshot.setdefault("warnings", []).append(
+                "Paralel TFF isteğinde eksik kalan hafta seri resmi istekle yeniden alındı."
+            )
+            snapshots_by_week[week] = snapshot
+            recovered += 1
+        log(
+            f"{season}: seri resmi hafta kurtarma={recovered}/{len(missing)}, "
+            f"toplamTablo={len(snapshots_by_week)}"
+        )
     snapshots = [snapshots_by_week[week] for week in sorted(snapshots_by_week)]
     if len(snapshots) < max(2, max_week // 3):
         return []
@@ -1193,8 +1248,8 @@ def update_season_files(data_root: Path, season: str, snapshots: list[dict[str, 
         if balkes:
             league_summary = league_summary_from_stages or standings_row_summary(balkes)
             matches = read_json(season_dir / "matches_index.json", []) or []
-            if not league_summary_from_stages and isinstance(matches, list) and matches:
-                scope = official_standings_scope(matches, balkes)
+            if isinstance(matches, list) and matches:
+                scope = official_standings_scope(matches, league_summary)
                 season_json["officialStandingsMatchTypes"] = scope["matchTypes"]
                 season_json["officialStandingsSummary"] = dict(league_summary)
                 if scope["exact"] and "playoff" in scope["matchTypes"]:

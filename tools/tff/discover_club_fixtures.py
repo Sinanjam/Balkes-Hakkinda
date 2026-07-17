@@ -1309,6 +1309,81 @@ def ensure_seed_item(seed: dict[str, Any], season: str) -> dict[str, Any]:
     return item
 
 
+def seed_with_preserved_unselected_runtime(
+    seed: dict[str, Any],
+    existing_runtime: dict[str, Any],
+    selected_seasons: list[str],
+) -> dict[str, Any]:
+    """Seçili sezonları taze seed'den alırken diğer keşifleri koru.
+
+    Hedefli bir keşif çalışması runtime registry'yi yeniden yazar. Eski davranışta
+    kaynak seed'deki boş kayıtlar, seçilmeyen sezonların daha önce keşfedilmiş maç
+    ve puan tablosu hedeflerinin üstüne yazabiliyordu. Seçili sezonlarda güncel
+    seed (ör. kalıcı sezon arşiv pageID'si), diğerlerinde mevcut runtime esastır.
+    """
+    fresh = copy.deepcopy(seed)
+    if not selected_seasons or not isinstance(existing_runtime, dict):
+        return fresh
+    if not isinstance(existing_runtime.get("seasons"), list):
+        return fresh
+
+    selected = {str(season) for season in selected_seasons}
+    fresh_items = {
+        str(item.get("season")): item
+        for item in fresh.get("seasons", [])
+        if isinstance(item, dict) and item.get("season")
+    }
+    existing_items = {
+        str(item.get("season")): item
+        for item in existing_runtime.get("seasons", [])
+        if isinstance(item, dict) and item.get("season")
+    }
+
+    # Runtime'a sonradan eklenmiş üst seviye alanları koru; kaynak registry'deki
+    # politika ve güvenlik ayarlarının güncel sürümünü bunun üstüne uygula.
+    combined = copy.deepcopy(existing_runtime)
+    for key, value in fresh.items():
+        if key not in {"seasons", "runOrder"}:
+            combined[key] = copy.deepcopy(value)
+
+    order: list[str] = []
+    for values in (
+        fresh.get("runOrder", []),
+        existing_runtime.get("runOrder", []),
+        fresh_items.keys(),
+        existing_items.keys(),
+    ):
+        for value in values:
+            season = str(value)
+            if season and season not in order:
+                order.append(season)
+
+    seasons: list[dict[str, Any]] = []
+    for season in order:
+        if season in selected:
+            fresh_item = fresh_items.get(season)
+            existing_item = existing_items.get(season)
+            item = copy.deepcopy(fresh_item or existing_item)
+            # Kaynak seed kalıcı sayfa/grup hedefleri için belirleyicidir. Daha
+            # önce keşfedilmiş maç/fikstür listeleri ise ağ geçici olarak hata
+            # verse bile kaybolmamalıdır; başarılı keşif bunları zaten yeniler.
+            if fresh_item and existing_item and item is not None:
+                for key in ("knownMatchIds", "knownFixtures"):
+                    if not item.get(key) and existing_item.get(key):
+                        item[key] = copy.deepcopy(existing_item[key])
+        else:
+            item = existing_items.get(season) or fresh_items.get(season)
+        if item is not None:
+            seasons.append(copy.deepcopy(item))
+
+    combined["seasons"] = seasons
+    combined["runOrder"] = [
+        season for season in order
+        if season in fresh_items or season in existing_items
+    ]
+    return combined
+
+
 def merge_results(seed: dict[str, Any], choices: list[dict[str, str | int]],
                   results: list[dict[str, Any]]) -> dict[str, Any]:
     runtime = copy.deepcopy(seed)
@@ -1409,6 +1484,9 @@ def main() -> int:
     seed = read_json(args.registry, {})
     if not isinstance(seed, dict):
         raise SystemExit(f"Registry okunamadı: {args.registry}")
+    if args.season:
+        existing_runtime = read_json(args.output, {})
+        seed = seed_with_preserved_unselected_runtime(seed, existing_runtime, args.season)
 
     club_url = tff_http(args.club_url)
     base_session = make_session()

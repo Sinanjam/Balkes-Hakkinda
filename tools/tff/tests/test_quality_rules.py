@@ -48,6 +48,12 @@ class QualityRuleTests(unittest.TestCase):
             )
         )
 
+    def test_missing_match_type_uses_pipeline_league_default(self) -> None:
+        details = [{"date": "2026-08-01", "score": {"played": False}}]
+        self.assertTrue(
+            standings_not_yet_expected(details, today=date(2026, 7, 17))
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

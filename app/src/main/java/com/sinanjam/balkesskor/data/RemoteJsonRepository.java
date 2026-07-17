@@ -44,10 +44,14 @@ public final class RemoteJsonRepository {
     private static final class FetchResult {
         final String body;
         final boolean notModified;
+        final String etag;
+        final String lastModified;
 
-        FetchResult(String body, boolean notModified) {
+        FetchResult(String body, boolean notModified, String etag, String lastModified) {
             this.body = body;
             this.notModified = notModified;
+            this.etag = etag;
+            this.lastModified = lastModified;
         }
     }
 
@@ -127,6 +131,16 @@ public final class RemoteJsonRepository {
             memoryCache.put(url, parsed);
             rawCache.put(url, body);
             if (!unchanged) write(cacheFile(url), body);
+            if (!response.notModified) {
+                Properties validators = new Properties();
+                if (response.etag.length() > 0) validators.setProperty("etag", response.etag);
+                if (response.lastModified.length() > 0) {
+                    validators.setProperty("lastModified", response.lastModified);
+                }
+                try {
+                    writeMetadata(metaFile(url), validators);
+                } catch (Exception ignored) { }
+            }
             finish(url, parsed, null, unchanged);
         } catch (Exception error) {
             finish(url, null,
@@ -184,21 +198,17 @@ public final class RemoteJsonRepository {
             }
             int status = connection.getResponseCode();
             if (status == HttpURLConnection.HTTP_NOT_MODIFIED && cachedBody != null) {
-                return new FetchResult(cachedBody, true);
+                return new FetchResult(cachedBody, true, "", "");
             }
             if (status < 200 || status >= 300) throw new IllegalStateException("HTTP " + status);
             String body = read(connection.getInputStream());
-            Properties updated = new Properties();
             String etag = connection.getHeaderField("ETag");
             String lastModified = connection.getHeaderField("Last-Modified");
-            if (etag != null && etag.length() > 0) updated.setProperty("etag", etag);
-            if (lastModified != null && lastModified.length() > 0) {
-                updated.setProperty("lastModified", lastModified);
-            }
-            try {
-                writeMetadata(metaFile(address), updated);
-            } catch (Exception ignored) { }
-            return new FetchResult(body, false);
+            return new FetchResult(
+                    body,
+                    false,
+                    etag == null ? "" : etag,
+                    lastModified == null ? "" : lastModified);
         } finally {
             connection.disconnect();
         }

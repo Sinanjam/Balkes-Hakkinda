@@ -23,6 +23,7 @@ from urllib.parse import parse_qsl, urlencode, urljoin, urlparse, urlunparse
 import requests
 from bs4 import BeautifulSoup
 
+from archive_rules import select_reconciled_stage_set
 from tff_factory import (
     clean_text,
     decode_bytes,
@@ -503,14 +504,7 @@ def reconcile_archive_stages(
                 exact.append(annotated)
     if not exact:
         return []
-    # More stages preserve more of the real week-by-week chronology.
-    return max(
-        exact,
-        key=lambda values: (
-            len(values),
-            sum(int(value.get("maxWeek") or 0) for value in values),
-        ),
-    )
+    return select_reconciled_stage_set(exact)
 
 
 def page_mentions_season(raw: str, season: str) -> bool:

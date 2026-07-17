@@ -60,9 +60,11 @@ except Exception as exc:  # pragma: no cover
     print(f"tff_factory import edilemedi: {exc}", file=sys.stderr)
     raise
 
+from quality_rules import official_standings_scope, played_balkes_totals
+
 TFF = os.environ.get("TFF_BASE_URL", "http://www.tff.org/Default.aspx")
 DEFAULT_PENALTIES = "data/standings_penalties.json"
-BUILDER_VERSION = "standings-builder-v5-archive-stage-scope-carry-safe"
+BUILDER_VERSION = "standings-builder-v6-direct-group-postseason-scope"
 
 
 def now() -> str:
@@ -1061,11 +1063,54 @@ def selected_seasons(seed: dict[str, Any], start: str, max_seasons: int, explici
     return order[idx: idx + max_seasons]
 
 
+def standings_row_summary(row: dict[str, Any]) -> dict[str, int]:
+    goals_for = int(row.get("goalsFor") or 0)
+    goals_against = int(row.get("goalsAgainst") or 0)
+    return {
+        "played": int(row.get("played") or 0),
+        "won": int(row.get("won") or 0),
+        "drawn": int(row.get("drawn") or 0),
+        "lost": int(row.get("lost") or 0),
+        "goalsFor": goals_for,
+        "goalsAgainst": goals_against,
+        "goalDifference": int(
+            row.get("goalDifference")
+            if row.get("goalDifference") is not None
+            else goals_for - goals_against
+        ),
+        "points": int(row.get("points") or 0),
+        "rawPoints": int(row.get("rawPoints") or row.get("points") or 0),
+        "pointsDeducted": int(row.get("pointsDeducted") or 0),
+        "finalRank": int(row.get("rank") or 0),
+    }
+
+
+def matching_balkes_snapshot_summary(
+    snapshots: list[dict[str, Any]],
+    totals: dict[str, int],
+) -> dict[str, int] | None:
+    for snapshot in reversed(snapshots):
+        rows = snapshot.get("standings") or []
+        row = next(
+            (value for value in rows if value.get("isBalkes") or is_balkes(value.get("team"))),
+            None,
+        )
+        if not row:
+            continue
+        if all(int(row.get(key) or 0) == totals[key] for key in (
+            "played", "goalsFor", "goalsAgainst"
+        )):
+            return standings_row_summary(row)
+    return None
+
+
 def update_season_files(data_root: Path, season: str, snapshots: list[dict[str, Any]]) -> None:
     season_dir = data_root / "seasons" / season
     season_dir.mkdir(parents=True, exist_ok=True)
     write_json(season_dir / "standings_by_week.json", snapshots)
     season_json = read_json(season_dir / "season.json", {}) or {"id": season, "name": season}
+    season_json.pop("officialStandingsMatchTypes", None)
+    season_json.pop("officialStandingsSummary", None)
     files = season_json.setdefault("files", {})
     files["standingsByWeek"] = f"seasons/{season}/standings_by_week.json"
     if snapshots:
@@ -1146,19 +1191,17 @@ def update_season_files(data_root: Path, season: str, snapshots: list[dict[str, 
         final = snapshots[-1].get("standings") or []
         balkes = next((r for r in final if r.get("isBalkes")), None)
         if balkes:
-            league_summary = league_summary_from_stages or {
-                "played": int(balkes.get("played") or 0),
-                "won": int(balkes.get("won") or 0),
-                "drawn": int(balkes.get("drawn") or 0),
-                "lost": int(balkes.get("lost") or 0),
-                "goalsFor": int(balkes.get("goalsFor") or 0),
-                "goalsAgainst": int(balkes.get("goalsAgainst") or 0),
-                "goalDifference": int(balkes.get("goalDifference") or 0),
-                "points": int(balkes.get("points") or 0),
-                "rawPoints": int(balkes.get("rawPoints") or balkes.get("points") or 0),
-                "pointsDeducted": int(balkes.get("pointsDeducted") or 0),
-                "finalRank": int(balkes.get("rank") or 0),
-            }
+            league_summary = league_summary_from_stages or standings_row_summary(balkes)
+            matches = read_json(season_dir / "matches_index.json", []) or []
+            if not league_summary_from_stages and isinstance(matches, list) and matches:
+                scope = official_standings_scope(matches, balkes)
+                season_json["officialStandingsMatchTypes"] = scope["matchTypes"]
+                season_json["officialStandingsSummary"] = dict(league_summary)
+                if scope["exact"] and "playoff" in scope["matchTypes"]:
+                    league_totals = played_balkes_totals(matches, {"league"})
+                    league_only = matching_balkes_snapshot_summary(snapshots, league_totals)
+                    if league_only:
+                        league_summary = league_only
             season_json["leagueSummary"] = league_summary
             summary = season_json.setdefault("summary", {})
             # Genel özet kupa/play-off dahil bütün maçları kapsar. Puan tablosu
@@ -1179,11 +1222,21 @@ def update_manifest(data_root: Path, seasons: list[str]) -> None:
     for season in seasons:
         season_json = read_json(data_root / "seasons" / season / "season.json", {}) or {}
         if season in by_season and season_json.get("summary"):
+            by_season[season].pop("officialStandingsMatchTypes", None)
+            by_season[season].pop("officialStandingsSummary", None)
             by_season[season]["summary"] = season_json.get("summary")
             if season_json.get("leagueSummary"):
                 by_season[season]["leagueSummary"] = season_json.get("leagueSummary")
             if season_json.get("leagueStages"):
                 by_season[season]["leagueStages"] = season_json.get("leagueStages")
+            if season_json.get("officialStandingsMatchTypes"):
+                by_season[season]["officialStandingsMatchTypes"] = season_json.get(
+                    "officialStandingsMatchTypes"
+                )
+            if season_json.get("officialStandingsSummary"):
+                by_season[season]["officialStandingsSummary"] = season_json.get(
+                    "officialStandingsSummary"
+                )
             by_season[season]["standingsByWeekUrl"] = f"seasons/{season}/standings_by_week.json"
     manifest["standingsUpdatedAt"] = now()
     manifest["standingsBuilderVersion"] = BUILDER_VERSION

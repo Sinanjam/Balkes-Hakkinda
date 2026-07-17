@@ -1632,7 +1632,13 @@ def build_manifest(data_root: Path, processed: list[str]) -> None:
         arr = read_json(p, [])
         season_json = read_json(p.parent / "season.json", {})
         if isinstance(arr, list) and arr:
-            item = {"id": p.parent.name, "name": p.parent.name, "matchCount": len(arr)}
+            item = {
+                "id": p.parent.name,
+                "name": p.parent.name,
+                "matchCount": len(arr),
+                "seasonUrl": f"seasons/{p.parent.name}/season.json",
+                "matchesIndexUrl": f"seasons/{p.parent.name}/matches_index.json",
+            }
             if isinstance(season_json, dict):
                 if season_json.get("competition"):
                     item["competition"] = season_json.get("competition")
@@ -1661,7 +1667,7 @@ def build_manifest(data_root: Path, processed: list[str]) -> None:
         "app": "Balkes Hakkında",
         "schemaVersion": 3,
         "dataVersion": 1,
-        "appVersion": "1.5.0-alpha02",
+        "appVersion": "1.5.0-alpha03",
         "generatedAt": now(),
         "team": "Balıkesirspor",
         "availableSeasons": seasons,

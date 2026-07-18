@@ -9,6 +9,7 @@ import java.net.URI;
 public final class DataEndpoints {
     private static volatile String scoreDataBase = slash(BuildConfig.SCORE_BASE_URL);
     private static volatile String scoreDataVersion = "";
+    private static volatile String scoreSourceLabel = "GitHub Raw";
 
     private DataEndpoints() {}
 
@@ -20,12 +21,21 @@ public final class DataEndpoints {
         return slash(BuildConfig.SCORE_FALLBACK_BASE_URL) + "manifest.json";
     }
 
+    public static String scoreMirrorManifest() {
+        return slash(BuildConfig.SCORE_MIRROR_BASE_URL) + "manifest.json";
+    }
+
     public static synchronized void configureScoreManifest(JSONObject manifest, String manifestUrl) {
         String manifestBase = directory(manifestUrl);
         String advertisedBase = manifest == null ? "" : manifest.optString("dataBaseUrl", "");
-        if (isSafeHttpsBase(advertisedBase)) scoreDataBase = slash(advertisedBase);
+        boolean mirrorSource = manifestUrl != null && manifestUrl.contains("cdn.jsdelivr.net");
+        if (mirrorSource && isSafeHttpsBase(manifestBase)) scoreDataBase = slash(manifestBase);
+        else if (isSafeHttpsBase(advertisedBase)) scoreDataBase = slash(advertisedBase);
         else if (isSafeHttpsBase(manifestBase)) scoreDataBase = slash(manifestBase);
         else scoreDataBase = slash(BuildConfig.SCORE_BASE_URL);
+
+        scoreSourceLabel = mirrorSource
+                ? "GitHub CDN" : "GitHub Raw";
 
         Object version = manifest == null ? null : manifest.opt("appDataVersion");
         if (version == null || version == JSONObject.NULL) {
@@ -35,11 +45,26 @@ public final class DataEndpoints {
     }
 
     public static String scoreFile(String relativePath) {
-        String clean = trim(relativePath);
+        String clean = dataRelativePath(relativePath);
         String address = isSafeHttpsUrl(clean) ? clean : slash(scoreDataBase) + clean;
-        String version = scoreDataVersion;
-        if (version.length() == 0) return address;
-        return address + (address.contains("?") ? "&" : "?") + "v=" + version;
+        return versioned(address);
+    }
+
+    public static String scoreMirrorFile(String relativePath) {
+        String clean = dataRelativePath(relativePath);
+        String alternateBase = scoreDataBase.contains("cdn.jsdelivr.net")
+                ? BuildConfig.SCORE_BASE_URL : BuildConfig.SCORE_MIRROR_BASE_URL;
+        String address = isSafeHttpsUrl(clean)
+                ? clean : slash(alternateBase) + clean;
+        return versioned(address);
+    }
+
+    public static String scoreDataVersion() {
+        return scoreDataVersion;
+    }
+
+    public static String scoreSourceLabel() {
+        return scoreSourceLabel;
     }
 
     public static String archiveManifest() {
@@ -62,6 +87,23 @@ public final class DataEndpoints {
         if (value == null) return "";
         while (value.startsWith("/")) value = value.substring(1);
         return value;
+    }
+
+    private static String dataRelativePath(String value) {
+        String clean = trim(value);
+        if (!isSafeHttpsUrl(clean)) return clean;
+        try {
+            String path = new URI(clean).getPath();
+            int data = path.indexOf("/data/");
+            if (data >= 0) return path.substring(data + 6);
+        } catch (Exception ignored) { }
+        return clean;
+    }
+
+    private static String versioned(String address) {
+        String version = scoreDataVersion;
+        if (version.length() == 0) return address;
+        return address + (address.contains("?") ? "&" : "?") + "v=" + version;
     }
 
     private static String directory(String address) {

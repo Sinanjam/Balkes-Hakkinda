@@ -51,6 +51,7 @@ public final class MainActivity extends Activity {
     private Runnable detailBackAction;
     private String detailRequestKey = "";
     private int archiveRenderGeneration = 0;
+    private int scoreRenderGeneration = 0;
     private final Map<String, String> seasonMatchUrls = new HashMap<>();
     private final Map<String, String> seasonStandingsUrls = new HashMap<>();
 
@@ -115,16 +116,16 @@ public final class MainActivity extends Activity {
                 if (!(json instanceof JSONObject)) return;
                 JSONArray seasons = ((JSONObject) json).optJSONArray("availableSeasons");
                 if (seasons == null || seasons.length() == 0) return;
-                JSONObject first = seasons.optJSONObject(0);
+                JSONObject first = featuredSeason(seasons);
                 if (first == null) return;
                 String id = first.optString("id", "");
                 if (id.length() == 0) return;
-                repository.prefetch(DataEndpoints.scoreFile(first.optString(
-                        "seasonUrl", "seasons/" + id + "/season.json")));
-                repository.prefetch(DataEndpoints.scoreFile(first.optString(
-                        "matchesIndexUrl", "seasons/" + id + "/matches_index.json")));
+                prefetchScoreFile(first.optString(
+                        "seasonUrl", "seasons/" + id + "/season.json"));
+                prefetchScoreFile(first.optString(
+                        "matchesIndexUrl", "seasons/" + id + "/matches_index.json"));
                 String standings = first.optString("standingsByWeekUrl", "");
-                if (standings.length() > 0) repository.prefetch(DataEndpoints.scoreFile(standings));
+                if (standings.length() > 0) prefetchScoreFile(standings);
             }
 
             @Override public void onError(String message) { }
@@ -132,33 +133,64 @@ public final class MainActivity extends Activity {
     }
 
     private void getScoreManifest(RemoteJsonRepository.Callback callback) {
-        final String primary = DataEndpoints.scoreManifest();
-        repository.get(primary, new RemoteJsonRepository.Callback() {
+        String[] candidates = new String[]{
+                DataEndpoints.scoreManifest(),
+                DataEndpoints.scoreMirrorManifest(),
+                DataEndpoints.scoreFallbackManifest()
+        };
+        getScoreManifest(candidates, 0, callback, "");
+    }
+
+    private void getScoreManifest(String[] candidates, int index,
+                                  RemoteJsonRepository.Callback callback, String lastError) {
+        if (index >= candidates.length) {
+            callback.onError(lastError.length() > 0 ? lastError
+                    : "Skor veri listesi alınamadı.");
+            return;
+        }
+        final String address = candidates[index];
+        if (index > 0 && address.equals(candidates[index - 1])) {
+            getScoreManifest(candidates, index + 1, callback, lastError);
+            return;
+        }
+        repository.get(address, new RemoteJsonRepository.Callback() {
             @Override public void onSuccess(Object json, boolean fromCache) {
-                if (json instanceof JSONObject) {
-                    configureScoreManifest((JSONObject) json, primary);
+                if (!(json instanceof JSONObject)
+                        || ((JSONObject) json).optJSONArray("availableSeasons") == null) {
+                    getScoreManifest(candidates, index + 1, callback,
+                            "Skor veri listesi geçersiz.");
+                    return;
                 }
+                configureScoreManifest((JSONObject) json, address);
                 callback.onSuccess(json, fromCache);
             }
 
             @Override public void onError(String message) {
-                final String fallback = DataEndpoints.scoreFallbackManifest();
-                if (fallback.equals(primary)) {
+                getScoreManifest(candidates, index + 1, callback, message);
+            }
+        });
+    }
+
+    private void prefetchScoreFile(String relativePath) {
+        repository.prefetch(DataEndpoints.scoreFile(relativePath));
+        String mirror = DataEndpoints.scoreMirrorFile(relativePath);
+        if (!mirror.equals(DataEndpoints.scoreFile(relativePath))) repository.prefetch(mirror);
+    }
+
+    private void getScoreJson(String relativePath, RemoteJsonRepository.Callback callback) {
+        final String primary = DataEndpoints.scoreFile(relativePath);
+        final String mirror = DataEndpoints.scoreMirrorFile(relativePath);
+        repository.get(primary, new RemoteJsonRepository.Callback() {
+            @Override public void onSuccess(Object json, boolean fromCache) {
+                callback.onSuccess(json, fromCache);
+            }
+
+            @Override public void onError(String message) {
+                if (mirror.equals(primary)) {
                     callback.onError(message);
                     return;
                 }
-                repository.get(fallback, new RemoteJsonRepository.Callback() {
-                    @Override public void onSuccess(Object json, boolean fromCache) {
-                        if (json instanceof JSONObject) {
-                            configureScoreManifest((JSONObject) json, fallback);
-                        }
-                        callback.onSuccess(json, fromCache);
-                    }
-
-                    @Override public void onError(String fallbackMessage) {
-                        callback.onError(fallbackMessage);
-                    }
-                });
+                repository.get(mirror, callback);
             }
         });
     }
@@ -179,6 +211,17 @@ public final class MainActivity extends Activity {
             String standings = season.optString("standingsByWeekUrl", "");
             if (standings.length() > 0) seasonStandingsUrls.put(id, standings);
         }
+    }
+
+    private JSONObject featuredSeason(JSONArray seasons) {
+        if (seasons == null) return null;
+        for (int index = 0; index < seasons.length(); index++) {
+            JSONObject season = seasons.optJSONObject(index);
+            if (season != null && season.optString("standingsByWeekUrl", "").length() > 0) {
+                return season;
+            }
+        }
+        return seasons.optJSONObject(0);
     }
 
     @Override
@@ -414,14 +457,23 @@ public final class MainActivity extends Activity {
     }
 
     private void renderScore() {
+        final int generation = ++scoreRenderGeneration;
         start("Canlı veri", "Balkes Skor",
                 "Güncel sezonlar ve maç kayıtları otomatik yenilenir.", Ui.RED);
         getScoreManifest(new RemoteJsonRepository.Callback() {
             @Override public void onSuccess(Object json, boolean fromCache) {
-                if (chooserVisible || current != Tab.SCORE || !(json instanceof JSONObject)) return;
+                if (chooserVisible || current != Tab.SCORE || generation != scoreRenderGeneration
+                        || !(json instanceof JSONObject)) return;
                 JSONObject root = (JSONObject) json;
                 JSONArray seasons = root.optJSONArray("availableSeasons");
                 clearResults();
+
+                if (seasons == null || seasons.length() == 0) {
+                    content.addView(retryCard("Sezon verisi bulunamadı",
+                            "GitHub veri listesi boş döndü. Yenileyip yeniden dene.", Ui.RED,
+                            view -> refreshScoreData()));
+                    return;
+                }
 
                 LinearLayout hero = Ui.heroCard(MainActivity.this);
                 hero.addView(Ui.chip(MainActivity.this,
@@ -432,11 +484,26 @@ public final class MainActivity extends Activity {
                 big.setTypeface(Typeface.DEFAULT_BOLD);
                 big.setPadding(0, Ui.dp(MainActivity.this, 15), 0, 0);
                 hero.addView(big);
-                hero.addView(Ui.text(MainActivity.this, "erişilebilir sezon", 14, Ui.MUTED));
-                if (seasons != null && seasons.length() > 0) {
-                    JSONObject season = seasons.optJSONObject(0);
+                int totalMatches = 0;
+                for (int index = 0; index < seasons.length(); index++) {
+                    JSONObject item = seasons.optJSONObject(index);
+                    if (item != null) totalMatches += item.optInt("matchCount", 0);
+                }
+                hero.addView(Ui.text(MainActivity.this,
+                        "erişilebilir sezon  •  " + totalMatches + " toplam maç", 14, Ui.MUTED));
+                String dataVersion = DataEndpoints.scoreDataVersion();
+                TextView source = Ui.text(MainActivity.this,
+                        "Uygulama " + BuildConfig.VERSION_NAME
+                                + "  •  Veri " + (dataVersion.length() == 0 ? "canlı" : dataVersion)
+                                + "  •  GitHub + CDN yedekli",
+                        11, Ui.MUTED);
+                source.setPadding(0, Ui.dp(MainActivity.this, 8), 0, 0);
+                hero.addView(source);
+                if (seasons.length() > 0) {
+                    JSONObject season = featuredSeason(seasons);
                     if (season != null) {
-                        TextView active = strong("Aktif sezon  " + season.optString("name", season.optString("id")));
+                        TextView active = strong("Son puan tablosu  "
+                                + season.optString("name", season.optString("id")));
                         active.setPadding(0, Ui.dp(MainActivity.this, 13), 0, 0);
                         hero.addView(active);
                         final String id = season.optString("id", "");
@@ -445,6 +512,12 @@ public final class MainActivity extends Activity {
                                 view -> renderSeasonDetail(id, name, Tab.SCORE));
                     }
                 }
+                TextView refresh = Ui.eyebrow(MainActivity.this, "VERİLERİ ŞİMDİ YENİLE  ↻", Ui.GREEN);
+                refresh.setPadding(0, Ui.dp(MainActivity.this, 14), 0, 0);
+                refresh.setClickable(true);
+                refresh.setFocusable(true);
+                refresh.setOnClickListener(view -> refreshScoreData());
+                hero.addView(refresh);
                 content.addView(hero);
 
                 if (seasons != null) {
@@ -464,14 +537,31 @@ public final class MainActivity extends Activity {
                         seasonTitle.setPadding(0, Ui.dp(MainActivity.this, 5), 0, 0);
                         card.addView(seasonTitle);
                         card.addView(Ui.text(MainActivity.this,
-                                season.optInt("matchCount", 0) + " maç kaydı", 13, Ui.MUTED));
+                                season.optInt("matchCount", 0) + " maç  •  "
+                                        + (season.optString("standingsByWeekUrl", "").length() > 0
+                                        ? "hafta hafta puan durumu" : "fikstür hazır"),
+                                13, Ui.MUTED));
                         makeClickable(card, "SKORLARI AÇ", Ui.RED,
                                 view -> renderSeasonDetail(id, name, Tab.SCORE));
                         content.addView(card);
                     }
                 }
             }
-            @Override public void onError(String message) { showError(Tab.SCORE, message); }
+            @Override public void onError(String message) {
+                if (generation == scoreRenderGeneration) showError(Tab.SCORE, message);
+            }
+        });
+    }
+
+    private void refreshScoreData() {
+        if (chooserVisible || current != Tab.SCORE || repository == null) return;
+        scoreRenderGeneration++;
+        start("Canlı veri", "Veriler Yenileniyor",
+                "Önbellek temizlendi; maçlar ve puan tabloları yeniden alınıyor.", Ui.GREEN);
+        seasonMatchUrls.clear();
+        seasonStandingsUrls.clear();
+        repository.clearCache(() -> {
+            if (!chooserVisible && current == Tab.SCORE) renderScore();
         });
     }
 
@@ -664,7 +754,10 @@ public final class MainActivity extends Activity {
                     heading.setPadding(0, Ui.dp(MainActivity.this, 5), 0, 0);
                     card.addView(heading);
                     card.addView(Ui.text(MainActivity.this,
-                            season.optInt("matchCount", 0) + " maç kaydı", 13, Ui.MUTED));
+                            season.optInt("matchCount", 0) + " maç  •  "
+                                    + (season.optString("standingsByWeekUrl", "").length() > 0
+                                    ? "hafta hafta puan durumu" : "fikstür hazır"),
+                            13, Ui.MUTED));
                     final String id = season.optString("id", "");
                     final String name = season.optString("name", id);
                     makeClickable(card, "SEZONU AÇ", Ui.CYAN,
@@ -822,7 +915,7 @@ public final class MainActivity extends Activity {
         if (matchesUrl == null || matchesUrl.length() == 0) {
             matchesUrl = "seasons/" + seasonId + "/matches_index.json";
         }
-        repository.get(DataEndpoints.scoreFile(matchesUrl),
+        getScoreJson(matchesUrl,
                 new RemoteJsonRepository.Callback() {
                     @Override public void onSuccess(Object json, boolean fromCache) {
                         if (chooserVisible || !key.equals(detailRequestKey) || !(json instanceof JSONArray)) return;
@@ -837,13 +930,35 @@ public final class MainActivity extends Activity {
                         count.setTypeface(Typeface.DEFAULT_BOLD);
                         count.setPadding(0, Ui.dp(MainActivity.this, 12), 0, 0);
                         summary.addView(count);
-                        summary.addView(Ui.text(MainActivity.this, "maç kaydı", 14, Ui.MUTED));
+                        summary.addView(Ui.text(MainActivity.this,
+                                "maç kaydının tamamı bu sayfada", 14, Ui.MUTED));
+                        TextView dataSource = Ui.text(MainActivity.this,
+                                "GitHub veri sürümü " + DataEndpoints.scoreDataVersion()
+                                        + "  •  CDN yedeği etkin",
+                                11, Ui.MUTED);
+                        dataSource.setPadding(0, Ui.dp(MainActivity.this, 7), 0, 0);
+                        summary.addView(dataSource);
                         body.addView(summary);
 
+                        TextView standingsHeading = Ui.eyebrow(MainActivity.this,
+                                "PUAN DURUMU  •  HAFTA HAFTA", Ui.CYAN);
+                        standingsHeading.setPadding(0, Ui.dp(MainActivity.this, 20), 0, 0);
+                        body.addView(standingsHeading);
                         LinearLayout standingsSlot = new LinearLayout(MainActivity.this);
                         standingsSlot.setOrientation(LinearLayout.VERTICAL);
                         body.addView(standingsSlot, new LinearLayout.LayoutParams(-1, -2));
                         loadSeasonStandings(seasonId, key, standingsSlot);
+
+                        TextView matchesHeading = Ui.eyebrow(MainActivity.this,
+                                "TÜM MAÇLAR  •  " + matches.length(), Ui.RED);
+                        matchesHeading.setPadding(0, Ui.dp(MainActivity.this, 21), 0,
+                                Ui.dp(MainActivity.this, 2));
+                        body.addView(matchesHeading);
+
+                        if (matches.length() == 0) {
+                            body.addView(Ui.message(MainActivity.this, "Maç kaydı yok",
+                                    "Bu sezonun fikstürü henüz yayımlanmadı."));
+                        }
 
                         for (int i = 0; i < matches.length(); i++) {
                             JSONObject match = matches.optJSONObject(i);
@@ -851,7 +966,8 @@ public final class MainActivity extends Activity {
                             final JSONObject selectedMatch = match;
                             LinearLayout card = Ui.card(MainActivity.this);
                             card.addView(Ui.eyebrow(MainActivity.this,
-                                    match.optString("stage", "Maç"), resultColor(match)));
+                                    match.optString("roundLabel",
+                                            match.optString("stage", "Maç")), resultColor(match)));
                             TextView teams = strong(match.optString("homeTeam", "Ev sahibi")
                                     + "\n" + scoreDisplay(match) + "\n"
                                     + match.optString("awayTeam", "Deplasman"));
@@ -859,7 +975,10 @@ public final class MainActivity extends Activity {
                             teams.setPadding(0, Ui.dp(MainActivity.this, 8), 0, 0);
                             card.addView(teams);
                             TextView date = Ui.text(MainActivity.this,
-                                    match.optString("dateDisplay", ""), 12, Ui.MUTED);
+                                    match.optString("dateDisplay", "") + "  •  "
+                                            + match.optString("competitionLabel",
+                                                    match.optString("competitionType", "Maç")),
+                                    12, Ui.MUTED);
                             date.setGravity(Gravity.CENTER);
                             date.setPadding(0, Ui.dp(MainActivity.this, 5), 0, 0);
                             card.addView(date);
@@ -882,10 +1001,13 @@ public final class MainActivity extends Activity {
         String standingsUrl = seasonStandingsUrls.get(seasonId);
         if (standingsUrl == null || standingsUrl.length() == 0) {
             slot.removeAllViews();
+            slot.addView(Ui.message(this, "Puan durumu henüz oluşmadı",
+                    "Bu sezonda oynanmış lig maçı veya yayımlanmış resmi tablo bulunmuyor."));
             return;
         }
+        slot.removeAllViews();
         slot.addView(Ui.loading(this));
-        repository.get(DataEndpoints.scoreFile(standingsUrl),
+        getScoreJson(standingsUrl,
                 new RemoteJsonRepository.Callback() {
                     @Override public void onSuccess(Object json, boolean fromCache) {
                         if (chooserVisible || !requestKey.equals(detailRequestKey)
@@ -894,14 +1016,21 @@ public final class MainActivity extends Activity {
                         int latest = latestStandingSnapshot(snapshots);
                         if (latest < 0) {
                             slot.removeAllViews();
+                            slot.addView(retryCard("Puan durumu boş",
+                                    "Resmi haftalık tablo dosyasında gösterilecek satır bulunamadı.",
+                                    Ui.CYAN,
+                                    view -> loadSeasonStandings(seasonId, requestKey, slot)));
                             return;
                         }
                         renderStandingSnapshot(slot, snapshots, latest);
                     }
 
                     @Override public void onError(String message) {
-                        if (!requestKey.equals(detailRequestKey)) return;
+                        if (chooserVisible || !requestKey.equals(detailRequestKey)) return;
                         slot.removeAllViews();
+                        slot.addView(retryCard("Puan durumu açılamadı",
+                                friendlyError(message) + " GitHub CDN yedeği de denendi.", Ui.CYAN,
+                                view -> loadSeasonStandings(seasonId, requestKey, slot)));
                     }
                 });
     }
@@ -959,48 +1088,67 @@ public final class MainActivity extends Activity {
         navigation.addView(next, new LinearLayout.LayoutParams(0, -2, 1f));
         card.addView(navigation);
 
-        LinearLayout labels = standingRow("#", "TAKIM", "O   AV   P", false);
+        TextView labels = Ui.eyebrow(this,
+                "O: OYNANAN  •  G: GALİBİYET  •  B: BERABERLİK  •  M: MAĞLUBİYET",
+                Ui.MUTED);
+        labels.setTextSize(9);
         labels.setPadding(0, Ui.dp(this, 13), 0, Ui.dp(this, 5));
         card.addView(labels);
         for (int rowIndex = 0; rowIndex < rows.length(); rowIndex++) {
             JSONObject row = rows.optJSONObject(rowIndex);
             if (row == null) continue;
-            boolean isBalkes = row.optBoolean("isBalkes", false)
-                    || row.optString("team", "").toLowerCase(TURKISH).contains("balıkesirspor")
-                    || row.optString("team", "").toLowerCase(Locale.ROOT).contains("balikesirspor");
-            String stats = row.optInt("played", 0) + "   "
-                    + signed(row.optInt("goalDifference", 0)) + "   "
-                    + row.optInt("points", 0);
-            card.addView(standingRow(
-                    String.valueOf(row.optInt("rank", rowIndex + 1)),
-                    row.optString("team", "—"),
-                    stats,
-                    isBalkes));
+            card.addView(standingRow(row, rowIndex));
         }
-        TextView legend = Ui.text(this, "O: Oynanan   •   AV: Averaj   •   P: Puan", 10, Ui.MUTED);
+        TextView legend = Ui.text(this,
+                "A: Atılan  •  Y: Yenilen  •  AV: Averaj  •  P: Puan", 10, Ui.MUTED);
         legend.setPadding(0, Ui.dp(this, 9), 0, 0);
         card.addView(legend);
         slot.addView(card);
     }
 
-    private LinearLayout standingRow(String rank, String team, String stats, boolean isBalkes) {
+    private LinearLayout standingRow(JSONObject item, int rowIndex) {
+        String team = item.optString("team", "—");
+        boolean isBalkes = item.optBoolean("isBalkes", false)
+                || team.toLowerCase(TURKISH).contains("balıkesirspor")
+                || team.toLowerCase(Locale.ROOT).contains("balikesirspor");
         LinearLayout row = new LinearLayout(this);
         row.setOrientation(LinearLayout.HORIZONTAL);
         row.setGravity(Gravity.CENTER_VERTICAL);
-        row.setPadding(0, Ui.dp(this, 5), 0, Ui.dp(this, 5));
+        row.setPadding(Ui.dp(this, 7), Ui.dp(this, 7), Ui.dp(this, 7), Ui.dp(this, 7));
+        if (isBalkes) {
+            row.setBackground(Ui.rounded(this, Color.argb(42, 255, 18, 76),
+                    Color.argb(175, 255, 18, 76), 10, 1));
+        }
 
-        TextView rankView = Ui.text(this, rank, 11, isBalkes ? Ui.RED : Ui.MUTED);
+        TextView rankView = Ui.text(this,
+                String.valueOf(item.optInt("rank", rowIndex + 1)), 12,
+                isBalkes ? Ui.RED : Ui.MUTED);
         rankView.setTypeface(Typeface.MONOSPACE, isBalkes ? Typeface.BOLD : Typeface.NORMAL);
         row.addView(rankView, new LinearLayout.LayoutParams(Ui.dp(this, 30), -2));
 
+        LinearLayout teamBox = new LinearLayout(this);
+        teamBox.setOrientation(LinearLayout.VERTICAL);
         TextView teamView = Ui.text(this, team, 12, isBalkes ? Ui.TEXT : Ui.MUTED);
         if (isBalkes) teamView.setTypeface(Typeface.DEFAULT_BOLD);
-        row.addView(teamView, new LinearLayout.LayoutParams(0, -2, 1f));
-
-        TextView statsView = Ui.text(this, stats, 11, isBalkes ? Ui.CYAN : Ui.MUTED);
+        teamBox.addView(teamView);
+        String stats = "O " + item.optInt("played", 0)
+                + "  G " + item.optInt("won", 0)
+                + "  B " + item.optInt("drawn", 0)
+                + "  M " + item.optInt("lost", 0)
+                + "\nA " + item.optInt("goalsFor", 0)
+                + "  Y " + item.optInt("goalsAgainst", 0)
+                + "  AV " + signed(item.optInt("goalDifference", 0));
+        TextView statsView = Ui.text(this, stats, 10, isBalkes ? Ui.CYAN : Ui.MUTED);
         statsView.setTypeface(Typeface.MONOSPACE, isBalkes ? Typeface.BOLD : Typeface.NORMAL);
-        statsView.setGravity(Gravity.END);
-        row.addView(statsView, new LinearLayout.LayoutParams(Ui.dp(this, 94), -2));
+        statsView.setPadding(0, Ui.dp(this, 3), 0, 0);
+        teamBox.addView(statsView);
+        row.addView(teamBox, new LinearLayout.LayoutParams(0, -2, 1f));
+
+        TextView pointsView = Ui.text(this, item.optInt("points", 0) + "\nP", 13,
+                isBalkes ? Ui.CYAN : Ui.TEXT);
+        pointsView.setTypeface(Typeface.DEFAULT_BOLD);
+        pointsView.setGravity(Gravity.CENTER);
+        row.addView(pointsView, new LinearLayout.LayoutParams(Ui.dp(this, 45), -2));
         return row;
     }
 
@@ -1048,7 +1196,7 @@ public final class MainActivity extends Activity {
             return;
         }
 
-        repository.get(DataEndpoints.scoreFile(detailUrl), new RemoteJsonRepository.Callback() {
+        getScoreJson(detailUrl, new RemoteJsonRepository.Callback() {
             @Override public void onSuccess(Object json, boolean fromCache) {
                 if (chooserVisible || !key.equals(detailRequestKey) || !(json instanceof JSONObject)) return;
                 JSONObject detail = (JSONObject) json;

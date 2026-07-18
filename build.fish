@@ -7,3 +7,4 @@ or exit $status
 
 set -l apk app/build/outputs/apk/debug/app-debug.apk
 echo "APK hazır: $root/$apk"
+echo "Telefona kurup doğru sürümü aç: fish install.fish"

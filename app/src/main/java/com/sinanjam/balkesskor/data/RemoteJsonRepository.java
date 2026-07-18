@@ -75,6 +75,21 @@ public final class RemoteJsonRepository {
         });
     }
 
+    public void clearCache(Runnable onComplete) {
+        if (closed) return;
+        execute(() -> {
+            memoryCache.clear();
+            rawCache.clear();
+            File[] files = cacheDir.listFiles();
+            if (files != null) {
+                for (File file : files) {
+                    if (file.isFile()) file.delete();
+                }
+            }
+            if (onComplete != null) post(onComplete);
+        });
+    }
+
     public void get(String url, Callback callback) {
         if (closed) return;
         execute(() -> {

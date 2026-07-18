@@ -3,10 +3,8 @@ set -l root (dirname (status --current-filename))
 cd $root
 
 set -l apk app/build/outputs/apk/debug/app-debug.apk
-if not test -f $apk
-    fish build.fish
-    or exit $status
-end
+fish build.fish
+or exit $status
 
 nix develop --command adb install -r $apk
 or exit $status

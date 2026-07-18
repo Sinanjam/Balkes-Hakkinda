@@ -63,7 +63,7 @@ Telefonunda **Geliştirici seçenekleri > USB hata ayıklama** açıkken kabloyu
 fish install.fish
 ```
 
-Bu komut APK'yı gerekirse build eder, `.dev` paketini günceller ve telefonda
+Bu komut APK'yı temiz kaynak koddan yeniden build eder, `.dev` paketini günceller ve telefonda
 **Balkes DEV** uygulamasını doğrudan açar. Eski **Balkes** simgesini açmaz.
 
 Uygulama yine kapanırsa hata kaydını tek dosyaya al:

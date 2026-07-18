@@ -2,7 +2,7 @@
   "app": "Balkes Hakkında",
   "schemaVersion": 3,
   "dataVersion": 1,
-  "appVersion": "1.5.0-alpha02",
+  "appVersion": "1.5.0-alpha04",
   "generatedAt": "2026-07-17T19:33:43.550413Z",
   "team": "Balıkesirspor",
   "availableSeasons": [
@@ -22,7 +22,9 @@
         "matchTypes": {
           "league": 34
         }
-      }
+      },
+      "seasonUrl": "seasons/2026-2027/season.json",
+      "matchesIndexUrl": "seasons/2026-2027/matches_index.json"
     },
     {
       "id": "2025-2026",
@@ -76,7 +78,9 @@
         "rawPoints": 58,
         "pointsDeducted": 0,
         "finalRank": 5
-      }
+      },
+      "seasonUrl": "seasons/2025-2026/season.json",
+      "matchesIndexUrl": "seasons/2025-2026/matches_index.json"
     },
     {
       "id": "2024-2025",
@@ -96,7 +100,10 @@
           "cup": 1,
           "playoff": 3
         }
-      }
+      },
+      "seasonUrl": "seasons/2024-2025/season.json",
+      "matchesIndexUrl": "seasons/2024-2025/matches_index.json",
+      "standingsByWeekUrl": "seasons/2024-2025/standings_by_week.json"
     },
     {
       "id": "2023-2024",
@@ -115,7 +122,10 @@
           "league": 28,
           "cup": 1
         }
-      }
+      },
+      "seasonUrl": "seasons/2023-2024/season.json",
+      "matchesIndexUrl": "seasons/2023-2024/matches_index.json",
+      "standingsByWeekUrl": "seasons/2023-2024/standings_by_week.json"
     },
     {
       "id": "2022-2023",
@@ -134,7 +144,10 @@
           "league": 38,
           "cup": 2
         }
-      }
+      },
+      "seasonUrl": "seasons/2022-2023/season.json",
+      "matchesIndexUrl": "seasons/2022-2023/matches_index.json",
+      "standingsByWeekUrl": "seasons/2022-2023/standings_by_week.json"
     },
     {
       "id": "2021-2022",
@@ -153,7 +166,10 @@
           "league": 36,
           "cup": 1
         }
-      }
+      },
+      "seasonUrl": "seasons/2021-2022/season.json",
+      "matchesIndexUrl": "seasons/2021-2022/matches_index.json",
+      "standingsByWeekUrl": "seasons/2021-2022/standings_by_week.json"
     },
     {
       "id": "2020-2021",
@@ -172,7 +188,10 @@
           "league": 34,
           "cup": 1
         }
-      }
+      },
+      "seasonUrl": "seasons/2020-2021/season.json",
+      "matchesIndexUrl": "seasons/2020-2021/matches_index.json",
+      "standingsByWeekUrl": "seasons/2020-2021/standings_by_week.json"
     },
     {
       "id": "2019-2020",
@@ -225,7 +244,9 @@
         "pointsDeducted": 0,
         "finalRank": 13
       },
-      "standingsByWeekUrl": "seasons/2019-2020/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/2019-2020/standings_by_week.json",
+      "seasonUrl": "seasons/2019-2020/season.json",
+      "matchesIndexUrl": "seasons/2019-2020/matches_index.json"
     },
     {
       "id": "2018-2019",
@@ -278,7 +299,9 @@
         "pointsDeducted": 0,
         "finalRank": 15
       },
-      "standingsByWeekUrl": "seasons/2018-2019/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/2018-2019/standings_by_week.json",
+      "seasonUrl": "seasons/2018-2019/season.json",
+      "matchesIndexUrl": "seasons/2018-2019/matches_index.json"
     },
     {
       "id": "2017-2018",
@@ -351,7 +374,9 @@
         "goalDifference": 10,
         "finalRank": 8
       },
-      "standingsByWeekUrl": "seasons/2017-2018/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/2017-2018/standings_by_week.json",
+      "seasonUrl": "seasons/2017-2018/season.json",
+      "matchesIndexUrl": "seasons/2017-2018/matches_index.json"
     },
     {
       "id": "2016-2017",
@@ -424,7 +449,9 @@
         "goalDifference": 8,
         "finalRank": 9
       },
-      "standingsByWeekUrl": "seasons/2016-2017/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/2016-2017/standings_by_week.json",
+      "seasonUrl": "seasons/2016-2017/season.json",
+      "matchesIndexUrl": "seasons/2016-2017/matches_index.json"
     },
     {
       "id": "2015-2016",
@@ -498,7 +525,9 @@
         "goalDifference": 11,
         "finalRank": 6
       },
-      "standingsByWeekUrl": "seasons/2015-2016/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/2015-2016/standings_by_week.json",
+      "seasonUrl": "seasons/2015-2016/season.json",
+      "matchesIndexUrl": "seasons/2015-2016/matches_index.json"
     },
     {
       "id": "2014-2015",
@@ -551,7 +580,9 @@
         "pointsDeducted": 0,
         "finalRank": 18
       },
-      "standingsByWeekUrl": "seasons/2014-2015/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/2014-2015/standings_by_week.json",
+      "seasonUrl": "seasons/2014-2015/season.json",
+      "matchesIndexUrl": "seasons/2014-2015/matches_index.json"
     },
     {
       "id": "2013-2014",
@@ -624,7 +655,9 @@
         "goalDifference": 23,
         "finalRank": 2
       },
-      "standingsByWeekUrl": "seasons/2013-2014/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/2013-2014/standings_by_week.json",
+      "seasonUrl": "seasons/2013-2014/season.json",
+      "matchesIndexUrl": "seasons/2013-2014/matches_index.json"
     },
     {
       "id": "2012-2013",
@@ -677,7 +710,9 @@
         "pointsDeducted": 0,
         "finalRank": 1
       },
-      "standingsByWeekUrl": "seasons/2012-2013/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/2012-2013/standings_by_week.json",
+      "seasonUrl": "seasons/2012-2013/season.json",
+      "matchesIndexUrl": "seasons/2012-2013/matches_index.json"
     },
     {
       "id": "2011-2012",
@@ -750,7 +785,9 @@
         "goalDifference": 41,
         "finalRank": 2
       },
-      "standingsByWeekUrl": "seasons/2011-2012/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/2011-2012/standings_by_week.json",
+      "seasonUrl": "seasons/2011-2012/season.json",
+      "matchesIndexUrl": "seasons/2011-2012/matches_index.json"
     },
     {
       "id": "2010-2011",
@@ -823,7 +860,9 @@
         "goalDifference": -2,
         "finalRank": 10
       },
-      "standingsByWeekUrl": "seasons/2010-2011/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/2010-2011/standings_by_week.json",
+      "seasonUrl": "seasons/2010-2011/season.json",
+      "matchesIndexUrl": "seasons/2010-2011/matches_index.json"
     },
     {
       "id": "2009-2010",
@@ -914,7 +953,9 @@
         "goalDifference": 41,
         "finalRank": 2
       },
-      "standingsByWeekUrl": "seasons/2009-2010/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/2009-2010/standings_by_week.json",
+      "seasonUrl": "seasons/2009-2010/season.json",
+      "matchesIndexUrl": "seasons/2009-2010/matches_index.json"
     },
     {
       "id": "2008-2009",
@@ -1005,7 +1046,9 @@
         "goalDifference": -2,
         "finalRank": 1
       },
-      "standingsByWeekUrl": "seasons/2008-2009/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/2008-2009/standings_by_week.json",
+      "seasonUrl": "seasons/2008-2009/season.json",
+      "matchesIndexUrl": "seasons/2008-2009/matches_index.json"
     },
     {
       "id": "2007-2008",
@@ -1078,7 +1121,9 @@
         "goalDifference": 12,
         "finalRank": 5
       },
-      "standingsByWeekUrl": "seasons/2007-2008/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/2007-2008/standings_by_week.json",
+      "seasonUrl": "seasons/2007-2008/season.json",
+      "matchesIndexUrl": "seasons/2007-2008/matches_index.json"
     },
     {
       "id": "2006-2007",
@@ -1130,7 +1175,9 @@
         "rawPoints": 41,
         "pointsDeducted": 0,
         "finalRank": 8
-      }
+      },
+      "seasonUrl": "seasons/2006-2007/season.json",
+      "matchesIndexUrl": "seasons/2006-2007/matches_index.json"
     },
     {
       "id": "2000-2001",
@@ -1203,7 +1250,9 @@
         "goalDifference": -9,
         "finalRank": 14
       },
-      "standingsByWeekUrl": "seasons/2000-2001/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/2000-2001/standings_by_week.json",
+      "seasonUrl": "seasons/2000-2001/season.json",
+      "matchesIndexUrl": "seasons/2000-2001/matches_index.json"
     },
     {
       "id": "1999-2000",
@@ -1276,7 +1325,9 @@
         "goalDifference": 24,
         "finalRank": 2
       },
-      "standingsByWeekUrl": "seasons/1999-2000/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/1999-2000/standings_by_week.json",
+      "seasonUrl": "seasons/1999-2000/season.json",
+      "matchesIndexUrl": "seasons/1999-2000/matches_index.json"
     },
     {
       "id": "1998-1999",
@@ -1349,7 +1400,9 @@
         "goalDifference": 6,
         "finalRank": 13
       },
-      "standingsByWeekUrl": "seasons/1998-1999/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/1998-1999/standings_by_week.json",
+      "seasonUrl": "seasons/1998-1999/season.json",
+      "matchesIndexUrl": "seasons/1998-1999/matches_index.json"
     },
     {
       "id": "1997-1998",
@@ -1421,7 +1474,9 @@
         "goalDifference": 23,
         "finalRank": 3
       },
-      "standingsByWeekUrl": "seasons/1997-1998/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/1997-1998/standings_by_week.json",
+      "seasonUrl": "seasons/1997-1998/season.json",
+      "matchesIndexUrl": "seasons/1997-1998/matches_index.json"
     },
     {
       "id": "1996-1997",
@@ -1512,7 +1567,9 @@
         "goalDifference": -13,
         "finalRank": 6
       },
-      "standingsByWeekUrl": "seasons/1996-1997/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/1996-1997/standings_by_week.json",
+      "seasonUrl": "seasons/1996-1997/season.json",
+      "matchesIndexUrl": "seasons/1996-1997/matches_index.json"
     },
     {
       "id": "1995-1996",
@@ -1604,7 +1661,9 @@
         "goalDifference": 14,
         "finalRank": 4
       },
-      "standingsByWeekUrl": "seasons/1995-1996/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/1995-1996/standings_by_week.json",
+      "seasonUrl": "seasons/1995-1996/season.json",
+      "matchesIndexUrl": "seasons/1995-1996/matches_index.json"
     },
     {
       "id": "1994-1995",
@@ -1695,7 +1754,9 @@
         "goalDifference": 2,
         "finalRank": 3
       },
-      "standingsByWeekUrl": "seasons/1994-1995/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/1994-1995/standings_by_week.json",
+      "seasonUrl": "seasons/1994-1995/season.json",
+      "matchesIndexUrl": "seasons/1994-1995/matches_index.json"
     },
     {
       "id": "1993-1994",
@@ -1786,7 +1847,9 @@
         "goalDifference": 4,
         "finalRank": 6
       },
-      "standingsByWeekUrl": "seasons/1993-1994/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/1993-1994/standings_by_week.json",
+      "seasonUrl": "seasons/1993-1994/season.json",
+      "matchesIndexUrl": "seasons/1993-1994/matches_index.json"
     },
     {
       "id": "1992-1993",
@@ -1877,7 +1940,9 @@
         "goalDifference": 8,
         "finalRank": 1
       },
-      "standingsByWeekUrl": "seasons/1992-1993/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/1992-1993/standings_by_week.json",
+      "seasonUrl": "seasons/1992-1993/season.json",
+      "matchesIndexUrl": "seasons/1992-1993/matches_index.json"
     },
     {
       "id": "1991-1992",
@@ -1949,7 +2014,9 @@
         "goalDifference": 42,
         "finalRank": 1
       },
-      "standingsByWeekUrl": "seasons/1991-1992/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/1991-1992/standings_by_week.json",
+      "seasonUrl": "seasons/1991-1992/season.json",
+      "matchesIndexUrl": "seasons/1991-1992/matches_index.json"
     },
     {
       "id": "1990-1991",
@@ -2021,7 +2088,9 @@
         "goalDifference": 2,
         "finalRank": 7
       },
-      "standingsByWeekUrl": "seasons/1990-1991/standings_by_week.json"
+      "standingsByWeekUrl": "seasons/1990-1991/standings_by_week.json",
+      "seasonUrl": "seasons/1990-1991/season.json",
+      "matchesIndexUrl": "seasons/1990-1991/matches_index.json"
     }
   ],
   "global": {
@@ -2030,9 +2099,9 @@
     "searchIndexUrl": "search_index.json",
     "dataReportUrl": "data_report.json"
   },
-  "appDataVersion": 1784316823,
+  "appDataVersion": 1784387275,
   "appMinVersion": "1.5.0-alpha02",
-  "lastUpdated": "2026-07-17T19:33:43.550432Z",
+  "lastUpdated": "2026-07-18T15:07:55.023953Z",
   "dataBaseUrl": "https://raw.githubusercontent.com/Sinanjam/Balkes-Hakkinda/main/data/",
   "factoryVersion": "v5-professional-only-resilient",
   "processedSeasonsInLastRun": [
@@ -2070,5 +2139,6 @@
     "1990-1991"
   ],
   "standingsUpdatedAt": "2026-07-17T22:29:33.562814Z",
-  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing"
+  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing",
+  "manifestPatchedAt": "2026-07-18T15:07:55.023953Z"
 }

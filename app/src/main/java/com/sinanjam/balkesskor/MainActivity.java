@@ -448,8 +448,12 @@ public final class MainActivity extends Activity {
                 content.addView(hero);
 
                 if (seasons != null) {
-                    int limit = Math.min(seasons.length(), 6);
-                    for (int i = 0; i < limit; i++) {
+                    TextView allSeasons = Ui.eyebrow(MainActivity.this,
+                            "TÜM SEZONLAR  •  " + seasons.length(), Ui.CYAN);
+                    allSeasons.setPadding(0, Ui.dp(MainActivity.this, 18), 0,
+                            Ui.dp(MainActivity.this, 2));
+                    content.addView(allSeasons);
+                    for (int i = 0; i < seasons.length(); i++) {
                         JSONObject season = seasons.optJSONObject(i);
                         if (season == null) continue;
                         final String id = season.optString("id", "");

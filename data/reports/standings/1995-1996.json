@@ -1,0 +1,56 @@
+{
+  "season": "1995-1996",
+  "generatedAt": "2026-07-17T22:27:45.106039Z",
+  "builderVersion": "standings-builder-v8-legacy-week-group-routing",
+  "mode": "official-only",
+  "maxWeek": 36,
+  "source": "official_tff_multi_stage_weekly_table",
+  "weeksGenerated": 36,
+  "teams": 10,
+  "matchesUsed": 0,
+  "penaltiesApplied": 0,
+  "warnings": [],
+  "stages": [
+    {
+      "id": "group-02",
+      "label": "Kademe 02",
+      "maxWeek": 18,
+      "expectedMatches": 18,
+      "carriedMatches": 0,
+      "rawFinalPlayed": 0,
+      "weeksGenerated": 18,
+      "targetPageID": "806",
+      "targetGrupID": "229",
+      "targetModuleID": null
+    },
+    {
+      "id": "group-f",
+      "label": "Yükselme F",
+      "maxWeek": 18,
+      "expectedMatches": 18,
+      "carriedMatches": 0,
+      "rawFinalPlayed": 0,
+      "weeksGenerated": 18,
+      "targetPageID": "806",
+      "targetGrupID": "233",
+      "targetModuleID": null
+    }
+  ],
+  "balkesFinal": {
+    "rank": 4,
+    "team": "Balıkesirspor",
+    "played": 18,
+    "won": 8,
+    "drawn": 4,
+    "lost": 6,
+    "goalsFor": 26,
+    "goalsAgainst": 23,
+    "goalDifference": 3,
+    "points": 28,
+    "rawPoints": 28,
+    "pointsDeducted": 0,
+    "penaltyNote": "",
+    "isBalkes": true,
+    "teamId": "135"
+  }
+}

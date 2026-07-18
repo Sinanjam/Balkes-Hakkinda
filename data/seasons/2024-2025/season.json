@@ -1,0 +1,63 @@
+{
+  "id": "2024-2025",
+  "name": "2024-2025",
+  "competition": "Nesine 3. Lig (Profesyonel Takım)",
+  "sourcePolicy": "TFF-only",
+  "factoryVersion": "v5-professional-only-resilient",
+  "updatedAt": "2026-07-17T19:31:19.753139Z",
+  "summary": {
+    "matches": 34,
+    "wins": 18,
+    "draws": 6,
+    "losses": 10,
+    "goalsFor": 56,
+    "goalsAgainst": 32,
+    "goalDifference": 24,
+    "matchTypes": {
+      "league": 30,
+      "cup": 1,
+      "playoff": 3
+    },
+    "points": 56,
+    "rawPoints": 56,
+    "pointsDeducted": 0,
+    "finalRank": 2
+  },
+  "files": {
+    "matchesIndex": "seasons/2024-2025/matches_index.json",
+    "standingsByWeek": "seasons/2024-2025/standings_by_week.json"
+  },
+  "sanitizedAt": "2026-07-17T19:33:42.803141Z",
+  "sanitizerVersion": "v1-professional-team-only",
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 30,
+    "won": 17,
+    "drawn": 5,
+    "lost": 8,
+    "goalsFor": 54,
+    "goalsAgainst": 27,
+    "goalDifference": 27,
+    "points": 56,
+    "rawPoints": 56,
+    "pointsDeducted": 0,
+    "finalRank": 2
+  },
+  "leagueSummary": {
+    "played": 30,
+    "won": 17,
+    "drawn": 5,
+    "lost": 8,
+    "goalsFor": 54,
+    "goalsAgainst": 27,
+    "goalDifference": 27,
+    "points": 56,
+    "rawPoints": 56,
+    "pointsDeducted": 0,
+    "finalRank": 2
+  },
+  "standingsUpdatedAt": "2026-07-17T19:37:02.773995Z",
+  "standingsBuilderVersion": "standings-builder-v6-direct-group-postseason-scope"
+}

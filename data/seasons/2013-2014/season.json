@@ -1,0 +1,82 @@
+{
+  "id": "2013-2014",
+  "name": "2013-2014",
+  "competition": "PTT 1.Lig (Profesyonel Takım)",
+  "sourcePolicy": "TFF-only",
+  "factoryVersion": "v5-professional-only-resilient",
+  "updatedAt": "2026-07-17T19:32:20.106083Z",
+  "summary": {
+    "matches": 40,
+    "wins": 25,
+    "draws": 7,
+    "losses": 8,
+    "goalsFor": 68,
+    "goalsAgainst": 39,
+    "goalDifference": 29,
+    "matchTypes": {
+      "league": 36,
+      "cup": 4
+    },
+    "points": 73,
+    "rawPoints": 73,
+    "pointsDeducted": 0,
+    "finalRank": 2
+  },
+  "files": {
+    "matchesIndex": "seasons/2013-2014/matches_index.json",
+    "standingsByWeek": "seasons/2013-2014/standings_by_week.json"
+  },
+  "sanitizedAt": "2026-07-17T19:33:43.101569Z",
+  "sanitizerVersion": "v1-professional-team-only",
+  "leagueStages": [
+    {
+      "id": "group-lig",
+      "label": "Lig",
+      "stageNumber": 1,
+      "startWeek": 1,
+      "endWeek": 38,
+      "played": 36,
+      "won": 22,
+      "drawn": 7,
+      "lost": 7,
+      "goalsFor": 56,
+      "goalsAgainst": 33,
+      "goalDifference": 23,
+      "points": 73,
+      "finalRank": 2,
+      "carriedMatches": 0,
+      "officialTableIsCumulative": false
+    }
+  ],
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 36,
+    "won": 22,
+    "drawn": 7,
+    "lost": 7,
+    "goalsFor": 56,
+    "goalsAgainst": 33,
+    "points": 73,
+    "rawPoints": 73,
+    "pointsDeducted": 0,
+    "goalDifference": 23,
+    "finalRank": 2
+  },
+  "leagueSummary": {
+    "played": 36,
+    "won": 22,
+    "drawn": 7,
+    "lost": 7,
+    "goalsFor": 56,
+    "goalsAgainst": 33,
+    "points": 73,
+    "rawPoints": 73,
+    "pointsDeducted": 0,
+    "goalDifference": 23,
+    "finalRank": 2
+  },
+  "standingsUpdatedAt": "2026-07-17T22:16:49.769487Z",
+  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing"
+}

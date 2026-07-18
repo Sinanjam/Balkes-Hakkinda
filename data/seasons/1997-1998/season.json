@@ -1,0 +1,81 @@
+{
+  "id": "1997-1998",
+  "name": "1997-1998",
+  "competition": "3. Lig (Profesyonel Takım)",
+  "sourcePolicy": "TFF-only",
+  "factoryVersion": "v5-professional-only-resilient",
+  "updatedAt": "2026-07-17T19:33:11.350834Z",
+  "summary": {
+    "matches": 32,
+    "wins": 18,
+    "draws": 9,
+    "losses": 5,
+    "goalsFor": 46,
+    "goalsAgainst": 23,
+    "goalDifference": 23,
+    "matchTypes": {
+      "league": 32
+    },
+    "points": 63,
+    "rawPoints": 63,
+    "pointsDeducted": 0,
+    "finalRank": 3
+  },
+  "files": {
+    "matchesIndex": "seasons/1997-1998/matches_index.json",
+    "standingsByWeek": "seasons/1997-1998/standings_by_week.json"
+  },
+  "sanitizedAt": "2026-07-17T19:33:43.374006Z",
+  "sanitizerVersion": "v1-professional-team-only",
+  "leagueStages": [
+    {
+      "id": "group-06",
+      "label": "06",
+      "stageNumber": 1,
+      "startWeek": 1,
+      "endWeek": 34,
+      "played": 32,
+      "won": 18,
+      "drawn": 9,
+      "lost": 5,
+      "goalsFor": 46,
+      "goalsAgainst": 23,
+      "goalDifference": 23,
+      "points": 63,
+      "finalRank": 3,
+      "carriedMatches": 0,
+      "officialTableIsCumulative": false
+    }
+  ],
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 32,
+    "won": 18,
+    "drawn": 9,
+    "lost": 5,
+    "goalsFor": 46,
+    "goalsAgainst": 23,
+    "points": 63,
+    "rawPoints": 63,
+    "pointsDeducted": 0,
+    "goalDifference": 23,
+    "finalRank": 3
+  },
+  "leagueSummary": {
+    "played": 32,
+    "won": 18,
+    "drawn": 9,
+    "lost": 5,
+    "goalsFor": 46,
+    "goalsAgainst": 23,
+    "points": 63,
+    "rawPoints": 63,
+    "pointsDeducted": 0,
+    "goalDifference": 23,
+    "finalRank": 3
+  },
+  "standingsUpdatedAt": "2026-07-17T22:27:03.919365Z",
+  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing"
+}

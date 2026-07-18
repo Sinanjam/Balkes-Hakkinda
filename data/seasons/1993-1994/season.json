@@ -1,0 +1,100 @@
+{
+  "id": "1993-1994",
+  "name": "1993-1994",
+  "competition": "Lig B Klasman (Profesyonel Takım)",
+  "sourcePolicy": "TFF-only",
+  "factoryVersion": "v5-professional-only-resilient",
+  "updatedAt": "2026-07-17T19:33:32.116808Z",
+  "summary": {
+    "matches": 34,
+    "wins": 12,
+    "draws": 10,
+    "losses": 12,
+    "goalsFor": 43,
+    "goalsAgainst": 42,
+    "goalDifference": 1,
+    "matchTypes": {
+      "league": 32,
+      "cup": 2
+    },
+    "points": 43,
+    "rawPoints": 43,
+    "pointsDeducted": 0,
+    "finalRank": 6
+  },
+  "files": {
+    "matchesIndex": "seasons/1993-1994/matches_index.json",
+    "standingsByWeek": "seasons/1993-1994/standings_by_week.json"
+  },
+  "sanitizedAt": "2026-07-17T19:33:43.467146Z",
+  "sanitizerVersion": "v1-professional-team-only",
+  "leagueStages": [
+    {
+      "id": "group-02",
+      "label": "02",
+      "stageNumber": 1,
+      "startWeek": 1,
+      "endWeek": 18,
+      "played": 18,
+      "won": 8,
+      "drawn": 3,
+      "lost": 7,
+      "goalsFor": 26,
+      "goalsAgainst": 22,
+      "goalDifference": 4,
+      "points": 27,
+      "finalRank": 5,
+      "carriedMatches": 0,
+      "officialTableIsCumulative": false
+    },
+    {
+      "id": "group-k2",
+      "label": "K2",
+      "stageNumber": 2,
+      "startWeek": 19,
+      "endWeek": 32,
+      "played": 14,
+      "won": 3,
+      "drawn": 7,
+      "lost": 4,
+      "goalsFor": 13,
+      "goalsAgainst": 13,
+      "goalDifference": 0,
+      "points": 16,
+      "finalRank": 6,
+      "carriedMatches": 0,
+      "officialTableIsCumulative": false
+    }
+  ],
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 32,
+    "won": 11,
+    "drawn": 10,
+    "lost": 11,
+    "goalsFor": 39,
+    "goalsAgainst": 35,
+    "points": 43,
+    "rawPoints": 43,
+    "pointsDeducted": 0,
+    "goalDifference": 4,
+    "finalRank": 6
+  },
+  "leagueSummary": {
+    "played": 32,
+    "won": 11,
+    "drawn": 10,
+    "lost": 11,
+    "goalsFor": 39,
+    "goalsAgainst": 35,
+    "points": 43,
+    "rawPoints": 43,
+    "pointsDeducted": 0,
+    "goalDifference": 4,
+    "finalRank": 6
+  },
+  "standingsUpdatedAt": "2026-07-17T22:28:36.675101Z",
+  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing"
+}

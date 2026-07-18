@@ -1,0 +1,82 @@
+{
+  "id": "2007-2008",
+  "name": "2007-2008",
+  "competition": "TFF 3. Lig (Profesyonel Takım)",
+  "sourcePolicy": "TFF-only",
+  "factoryVersion": "v5-professional-only-resilient",
+  "updatedAt": "2026-07-17T19:32:50.157040Z",
+  "summary": {
+    "matches": 33,
+    "wins": 13,
+    "draws": 14,
+    "losses": 6,
+    "goalsFor": 44,
+    "goalsAgainst": 34,
+    "goalDifference": 10,
+    "matchTypes": {
+      "league": 32,
+      "playoff": 1
+    },
+    "points": 53,
+    "rawPoints": 53,
+    "pointsDeducted": 0,
+    "finalRank": 5
+  },
+  "files": {
+    "matchesIndex": "seasons/2007-2008/matches_index.json",
+    "standingsByWeek": "seasons/2007-2008/standings_by_week.json"
+  },
+  "sanitizedAt": "2026-07-17T19:33:43.258315Z",
+  "sanitizerVersion": "v1-professional-team-only",
+  "leagueStages": [
+    {
+      "id": "group-03",
+      "label": "03",
+      "stageNumber": 1,
+      "startWeek": 1,
+      "endWeek": 34,
+      "played": 32,
+      "won": 13,
+      "drawn": 14,
+      "lost": 5,
+      "goalsFor": 41,
+      "goalsAgainst": 29,
+      "goalDifference": 12,
+      "points": 53,
+      "finalRank": 5,
+      "carriedMatches": 0,
+      "officialTableIsCumulative": false
+    }
+  ],
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 32,
+    "won": 13,
+    "drawn": 14,
+    "lost": 5,
+    "goalsFor": 41,
+    "goalsAgainst": 29,
+    "points": 53,
+    "rawPoints": 53,
+    "pointsDeducted": 0,
+    "goalDifference": 12,
+    "finalRank": 5
+  },
+  "leagueSummary": {
+    "played": 32,
+    "won": 13,
+    "drawn": 14,
+    "lost": 5,
+    "goalsFor": 41,
+    "goalsAgainst": 29,
+    "points": 53,
+    "rawPoints": 53,
+    "pointsDeducted": 0,
+    "goalDifference": 12,
+    "finalRank": 5
+  },
+  "standingsUpdatedAt": "2026-07-17T22:28:12.152319Z",
+  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing"
+}

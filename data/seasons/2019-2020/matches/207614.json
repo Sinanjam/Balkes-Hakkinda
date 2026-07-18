@@ -1,0 +1,1264 @@
+{
+  "id": "207614",
+  "matchCode": "2155",
+  "season": "2019-2020",
+  "competition": "TFF 1. Lig (Profesyonel Takım)",
+  "teamLevel": "professional",
+  "teamLevelEvidence": "explicit_professional",
+  "competitionType": "league",
+  "competitionLabel": "Lig",
+  "stadium": "BALIKESİR ATATÜRK - BALIKESİR",
+  "venue": "BALIKESİR ATATÜRK - BALIKESİR",
+  "stage": "Lig",
+  "stageLabel": "Lig",
+  "date": "2020-01-20",
+  "time": "19:00",
+  "dateDisplay": "2020-01-20 - 19:00",
+  "homeTeam": "Balıkesirspor",
+  "awayTeam": "ADANA DEMİRSPOR",
+  "matchType": "league",
+  "matchTypeLabel": "Lig",
+  "type": "league",
+  "typeLabel": "Lig",
+  "score": {
+    "home": 1,
+    "away": 6,
+    "display": "1-6",
+    "played": true
+  },
+  "balkes": {
+    "isHome": true,
+    "isAway": false,
+    "opponent": "ADANA DEMİRSPOR",
+    "goalsFor": 1,
+    "goalsAgainst": 6,
+    "result": "L"
+  },
+  "officials": [
+    {
+      "role": "Hakem",
+      "name": "DİRENÇ TONUSLUOĞLU"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "CEMAL BİNGÜL"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "MUHAMMET YUMAK"
+    },
+    {
+      "role": "Dördüncü Hakem",
+      "name": "LEVENT BALCI"
+    }
+  ],
+  "referees": [
+    {
+      "role": "Hakem",
+      "name": "DİRENÇ TONUSLUOĞLU"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "CEMAL BİNGÜL"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "MUHAMMET YUMAK"
+    },
+    {
+      "role": "Dördüncü Hakem",
+      "name": "LEVENT BALCI"
+    }
+  ],
+  "lineups": {
+    "home": {
+      "team": "Balıkesirspor",
+      "starting11": [
+        {
+          "name": "ANDRIJA VUKOVIC",
+          "number": 1,
+          "shirt_no": "1",
+          "tffPersonId": "1771457"
+        },
+        {
+          "name": "BERAT AYDOĞDU",
+          "number": 3,
+          "shirt_no": "3",
+          "tffPersonId": "1196386"
+        },
+        {
+          "name": "KAĞAN KAYALI",
+          "number": 66,
+          "shirt_no": "66",
+          "tffPersonId": "1377605"
+        },
+        {
+          "name": "SEZER ÖZMEN",
+          "number": 23,
+          "shirt_no": "23",
+          "tffPersonId": "897889"
+        },
+        {
+          "name": "BATUHAN İŞÇİLER",
+          "number": 35,
+          "shirt_no": "35",
+          "tffPersonId": "981308"
+        },
+        {
+          "name": "SERDAR GÜNCÜ",
+          "number": 21,
+          "shirt_no": "21",
+          "tffPersonId": "1365955"
+        },
+        {
+          "name": "ABDÜLKADİR KAYALI",
+          "number": 4,
+          "shirt_no": "4",
+          "tffPersonId": "648438"
+        },
+        {
+          "name": "ANTONIO MRSIC",
+          "number": 59,
+          "shirt_no": "59",
+          "tffPersonId": "2217528"
+        },
+        {
+          "name": "MAHATMA OSUMANU OTOO",
+          "number": 18,
+          "shirt_no": "18",
+          "tffPersonId": "1973822"
+        },
+        {
+          "name": "ALY MALLE",
+          "number": 9,
+          "shirt_no": "9",
+          "tffPersonId": "2217529"
+        },
+        {
+          "name": "RAHMİ ANIL BAŞARAN",
+          "number": 20,
+          "shirt_no": "20",
+          "tffPersonId": "1442246"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "ATİLLA ÖZMEN",
+          "number": 19,
+          "shirt_no": "19",
+          "tffPersonId": "412201"
+        },
+        {
+          "name": "OKAN KAPLAN",
+          "number": 32,
+          "shirt_no": "32",
+          "tffPersonId": "1488750"
+        },
+        {
+          "name": "ENES KARABULUT",
+          "number": 15,
+          "shirt_no": "15",
+          "tffPersonId": "1695696"
+        },
+        {
+          "name": "ANIL TAŞDEMİR",
+          "number": 24,
+          "shirt_no": "24",
+          "tffPersonId": "316547"
+        },
+        {
+          "name": "OKWUCHUKWU FRANCIS EZEH",
+          "number": 80,
+          "shirt_no": "80",
+          "tffPersonId": "2217530"
+        },
+        {
+          "name": "CELAL EMİR DEDE",
+          "number": 7,
+          "shirt_no": "7",
+          "tffPersonId": "1602439"
+        },
+        {
+          "name": "NEMANJA ANDUSIC",
+          "number": 11,
+          "shirt_no": "11",
+          "tffPersonId": "2212845"
+        },
+        {
+          "name": "EMİRHAN ÇAKIR",
+          "number": 88,
+          "shirt_no": "88",
+          "tffPersonId": "1614404"
+        }
+      ],
+      "technicalStaff": [
+        {
+          "name": "MEHMET NURİ ADIGÜZEL"
+        }
+      ],
+      "coach": "MEHMET NURİ ADIGÜZEL",
+      "raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu"
+    },
+    "away": {
+      "team": "ADANA DEMİRSPOR",
+      "starting11": [
+        {
+          "name": "MUHAMMED ŞENGEZER",
+          "number": 37,
+          "shirt_no": "37",
+          "tffPersonId": "1021203"
+        },
+        {
+          "name": "VEDAT BORA",
+          "number": 12,
+          "shirt_no": "12",
+          "tffPersonId": "1153697"
+        },
+        {
+          "name": "ADİL DEMİRBAĞ",
+          "number": 4,
+          "shirt_no": "4",
+          "tffPersonId": "1196555"
+        },
+        {
+          "name": "TAYYİP TALHA SANUÇ",
+          "number": 2,
+          "shirt_no": "2",
+          "tffPersonId": "1366112"
+        },
+        {
+          "name": "JOHER KHADIM RASSOUL",
+          "number": 95,
+          "shirt_no": "95",
+          "tffPersonId": "2164763"
+        },
+        {
+          "name": "HAMIDOU TRAORE",
+          "number": 6,
+          "shirt_no": "6",
+          "tffPersonId": "1777770"
+        },
+        {
+          "name": "HASAN KILIÇ",
+          "number": 55,
+          "shirt_no": "55",
+          "tffPersonId": "1726904"
+        },
+        {
+          "name": "AIAS AOSMAN",
+          "number": 9,
+          "shirt_no": "9",
+          "tffPersonId": "2212979"
+        },
+        {
+          "name": "ERKAN ZENGİN",
+          "number": 85,
+          "shirt_no": "85",
+          "tffPersonId": "1222102"
+        },
+        {
+          "name": "VOLKAN ŞEN",
+          "number": 20,
+          "shirt_no": "20",
+          "tffPersonId": "427346"
+        },
+        {
+          "name": "PA AMAT DIBBA",
+          "number": 14,
+          "shirt_no": "14",
+          "tffPersonId": "2270071"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "KURTULUŞ YURT",
+          "number": 35,
+          "shirt_no": "35",
+          "tffPersonId": "867856"
+        },
+        {
+          "name": "SEMİH GÜLER",
+          "number": 5,
+          "shirt_no": "5",
+          "tffPersonId": "1726611"
+        },
+        {
+          "name": "MEHMET USLU",
+          "number": 54,
+          "shirt_no": "54",
+          "tffPersonId": "772448"
+        },
+        {
+          "name": "TEVFİK ALTINDAĞ",
+          "number": 13,
+          "shirt_no": "13",
+          "tffPersonId": "1065509"
+        },
+        {
+          "name": "SİNAN KURT",
+          "number": 22,
+          "shirt_no": "22",
+          "tffPersonId": "1923913"
+        },
+        {
+          "name": "JAKUB KOSECKI",
+          "number": 7,
+          "shirt_no": "7",
+          "tffPersonId": "2115348"
+        },
+        {
+          "name": "MUSTAPHA CARAYOL",
+          "number": 11,
+          "shirt_no": "11",
+          "tffPersonId": "2212978"
+        },
+        {
+          "name": "MEHMET AKYÜZ",
+          "number": 80,
+          "shirt_no": "80",
+          "tffPersonId": "772114"
+        }
+      ],
+      "technicalStaff": [
+        {
+          "name": "UĞUR TÜTÜNEKER"
+        }
+      ],
+      "coach": "UĞUR TÜTÜNEKER",
+      "raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu"
+    }
+  },
+  "players": [
+    {
+      "name": "ADİL DEMİRBAĞ",
+      "team": "ADANA DEMİRSPOR",
+      "roles": [
+        "starting11",
+        "goal"
+      ],
+      "number": 4,
+      "tffPersonId": "1196555"
+    },
+    {
+      "name": "AIAS AOSMAN",
+      "team": "ADANA DEMİRSPOR",
+      "roles": [
+        "starting11",
+        "goal",
+        "substitution_out"
+      ],
+      "number": 9,
+      "tffPersonId": "2212979"
+    },
+    {
+      "name": "ERKAN ZENGİN",
+      "team": "ADANA DEMİRSPOR",
+      "roles": [
+        "starting11",
+        "goal"
+      ],
+      "number": 85,
+      "tffPersonId": "1222102"
+    },
+    {
+      "name": "HAMIDOU TRAORE",
+      "team": "ADANA DEMİRSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 6,
+      "tffPersonId": "1777770"
+    },
+    {
+      "name": "HASAN KILIÇ",
+      "team": "ADANA DEMİRSPOR",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 55,
+      "tffPersonId": "1726904"
+    },
+    {
+      "name": "JAKUB KOSECKI",
+      "team": "ADANA DEMİRSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 7,
+      "tffPersonId": "2115348"
+    },
+    {
+      "name": "JOHER KHADIM RASSOUL",
+      "team": "ADANA DEMİRSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 95,
+      "tffPersonId": "2164763"
+    },
+    {
+      "name": "KURTULUŞ YURT",
+      "team": "ADANA DEMİRSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 35,
+      "tffPersonId": "867856"
+    },
+    {
+      "name": "MEHMET AKYÜZ",
+      "team": "ADANA DEMİRSPOR",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 80,
+      "tffPersonId": "772114"
+    },
+    {
+      "name": "MEHMET USLU",
+      "team": "ADANA DEMİRSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 54,
+      "tffPersonId": "772448"
+    },
+    {
+      "name": "MUHAMMED ŞENGEZER",
+      "team": "ADANA DEMİRSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 37,
+      "tffPersonId": "1021203"
+    },
+    {
+      "name": "MUSTAPHA CARAYOL",
+      "team": "ADANA DEMİRSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 11,
+      "tffPersonId": "2212978"
+    },
+    {
+      "name": "PA AMAT DIBBA",
+      "team": "ADANA DEMİRSPOR",
+      "roles": [
+        "starting11",
+        "goal",
+        "substitution_out"
+      ],
+      "number": 14,
+      "tffPersonId": "2270071"
+    },
+    {
+      "name": "SEMİH GÜLER",
+      "team": "ADANA DEMİRSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 5,
+      "tffPersonId": "1726611"
+    },
+    {
+      "name": "SİNAN KURT",
+      "team": "ADANA DEMİRSPOR",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 22,
+      "tffPersonId": "1923913"
+    },
+    {
+      "name": "TAYYİP TALHA SANUÇ",
+      "team": "ADANA DEMİRSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 2,
+      "tffPersonId": "1366112"
+    },
+    {
+      "name": "TEVFİK ALTINDAĞ",
+      "team": "ADANA DEMİRSPOR",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 13,
+      "tffPersonId": "1065509"
+    },
+    {
+      "name": "UĞUR TÜTÜNEKER",
+      "team": "ADANA DEMİRSPOR",
+      "roles": [
+        "technical_staff"
+      ]
+    },
+    {
+      "name": "VEDAT BORA",
+      "team": "ADANA DEMİRSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 12,
+      "tffPersonId": "1153697"
+    },
+    {
+      "name": "VOLKAN ŞEN",
+      "team": "ADANA DEMİRSPOR",
+      "roles": [
+        "starting11",
+        "goal"
+      ],
+      "number": 20,
+      "tffPersonId": "427346"
+    },
+    {
+      "name": "ABDÜLKADİR KAYALI",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 4,
+      "tffPersonId": "648438"
+    },
+    {
+      "name": "ALY MALLE",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 9,
+      "tffPersonId": "2217529"
+    },
+    {
+      "name": "ANDRIJA VUKOVIC",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 1,
+      "tffPersonId": "1771457"
+    },
+    {
+      "name": "ANIL TAŞDEMİR",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 24,
+      "tffPersonId": "316547"
+    },
+    {
+      "name": "ANTONIO MRSIC",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 59,
+      "tffPersonId": "2217528"
+    },
+    {
+      "name": "ATİLLA ÖZMEN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 19,
+      "tffPersonId": "412201"
+    },
+    {
+      "name": "BATUHAN İŞÇİLER",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 35,
+      "tffPersonId": "981308"
+    },
+    {
+      "name": "BERAT AYDOĞDU",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 3,
+      "tffPersonId": "1196386"
+    },
+    {
+      "name": "CELAL EMİR DEDE",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 7,
+      "tffPersonId": "1602439"
+    },
+    {
+      "name": "EMİRHAN ÇAKIR",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 88,
+      "tffPersonId": "1614404"
+    },
+    {
+      "name": "ENES KARABULUT",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 15,
+      "tffPersonId": "1695696"
+    },
+    {
+      "name": "KAĞAN KAYALI",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 66,
+      "tffPersonId": "1377605"
+    },
+    {
+      "name": "MAHATMA OSUMANU OTOO",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 18,
+      "tffPersonId": "1973822"
+    },
+    {
+      "name": "MEHMET NURİ ADIGÜZEL",
+      "team": "Balıkesirspor",
+      "roles": [
+        "technical_staff"
+      ]
+    },
+    {
+      "name": "NEMANJA ANDUSIC",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "goal",
+        "substitution_in"
+      ],
+      "number": 11,
+      "tffPersonId": "2212845"
+    },
+    {
+      "name": "OKAN KAPLAN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 32,
+      "tffPersonId": "1488750"
+    },
+    {
+      "name": "OKWUCHUKWU FRANCIS EZEH",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 80,
+      "tffPersonId": "2217530"
+    },
+    {
+      "name": "RAHMİ ANIL BAŞARAN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 20,
+      "tffPersonId": "1442246"
+    },
+    {
+      "name": "SERDAR GÜNCÜ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 21,
+      "tffPersonId": "1365955"
+    },
+    {
+      "name": "SEZER ÖZMEN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 23,
+      "tffPersonId": "897889"
+    }
+  ],
+  "events": [
+    {
+      "type": "goal",
+      "team": "Balıkesirspor",
+      "player": "NEMANJA ANDUSIC",
+      "scorer": "NEMANJA ANDUSIC",
+      "raw": "NEMANJA ANDUSIC,77.dk (F)",
+      "minute": 77,
+      "minuteRaw": "NEMANJA ANDUSIC,77.dk",
+      "goalType": "F",
+      "tffPersonId": "2212845"
+    },
+    {
+      "type": "goal",
+      "team": "ADANA DEMİRSPOR",
+      "player": "PA AMAT DIBBA",
+      "scorer": "PA AMAT DIBBA",
+      "raw": "PA AMAT DIBBA,6.dk (F)",
+      "minute": 6,
+      "minuteRaw": "PA AMAT DIBBA,6.dk",
+      "goalType": "F",
+      "tffPersonId": "2270071"
+    },
+    {
+      "type": "goal",
+      "team": "ADANA DEMİRSPOR",
+      "player": "ADİL DEMİRBAĞ",
+      "scorer": "ADİL DEMİRBAĞ",
+      "raw": "ADİL DEMİRBAĞ,35.dk (F)",
+      "minute": 35,
+      "minuteRaw": "ADİL DEMİRBAĞ,35.dk",
+      "goalType": "F",
+      "tffPersonId": "1196555"
+    },
+    {
+      "type": "goal",
+      "team": "ADANA DEMİRSPOR",
+      "player": "ERKAN ZENGİN",
+      "scorer": "ERKAN ZENGİN",
+      "raw": "ERKAN ZENGİN,37.dk (F)",
+      "minute": 37,
+      "minuteRaw": "ERKAN ZENGİN,37.dk",
+      "goalType": "F",
+      "tffPersonId": "1222102"
+    },
+    {
+      "type": "goal",
+      "team": "ADANA DEMİRSPOR",
+      "player": "AIAS AOSMAN",
+      "scorer": "AIAS AOSMAN",
+      "raw": "AIAS AOSMAN,39.dk (F)",
+      "minute": 39,
+      "minuteRaw": "AIAS AOSMAN,39.dk",
+      "goalType": "F",
+      "tffPersonId": "2212979"
+    },
+    {
+      "type": "goal",
+      "team": "ADANA DEMİRSPOR",
+      "player": "VOLKAN ŞEN",
+      "scorer": "VOLKAN ŞEN",
+      "raw": "VOLKAN ŞEN,68.dk (F)",
+      "minute": 68,
+      "minuteRaw": "VOLKAN ŞEN,68.dk",
+      "goalType": "F",
+      "tffPersonId": "427346"
+    },
+    {
+      "type": "goal",
+      "team": "ADANA DEMİRSPOR",
+      "player": "PA AMAT DIBBA",
+      "scorer": "PA AMAT DIBBA",
+      "raw": "PA AMAT DIBBA,59.dk (F)",
+      "minute": 59,
+      "minuteRaw": "PA AMAT DIBBA,59.dk",
+      "goalType": "F",
+      "tffPersonId": "2270071"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "BERAT AYDOĞDU",
+      "minute": 17,
+      "minuteRaw": "17.dk",
+      "tffPersonId": "1196386"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "SERDAR GÜNCÜ",
+      "minute": 31,
+      "minuteRaw": "31.dk",
+      "tffPersonId": "1365955"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ANDRIJA VUKOVIC",
+      "minute": 66,
+      "minuteRaw": "66.dk",
+      "tffPersonId": "1771457"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "MAHATMA OSUMANU OTOO",
+      "minute": 20,
+      "minuteRaw": "20.dk",
+      "tffPersonId": "1973822"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 1,
+      "player_in": "OKWUCHUKWU FRANCIS EZEH",
+      "player_out": "KAĞAN KAYALI",
+      "playerIn": "OKWUCHUKWU FRANCIS EZEH",
+      "playerOut": "KAĞAN KAYALI",
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "minute_text": "46.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "KAĞAN KAYALI",
+      "order": 1,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "OKWUCHUKWU FRANCIS EZEH",
+      "order": 1,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 2,
+      "player_in": "CELAL EMİR DEDE",
+      "player_out": "RAHMİ ANIL BAŞARAN",
+      "playerIn": "CELAL EMİR DEDE",
+      "playerOut": "RAHMİ ANIL BAŞARAN",
+      "minute": 55,
+      "minuteRaw": "55.dk",
+      "minute_text": "55.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "RAHMİ ANIL BAŞARAN",
+      "order": 2,
+      "minute": 55,
+      "minuteRaw": "55.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "CELAL EMİR DEDE",
+      "order": 2,
+      "minute": 55,
+      "minuteRaw": "55.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 3,
+      "player_in": "NEMANJA ANDUSIC",
+      "player_out": "ALY MALLE",
+      "playerIn": "NEMANJA ANDUSIC",
+      "playerOut": "ALY MALLE",
+      "minute": 57,
+      "minuteRaw": "57.dk",
+      "minute_text": "57.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "ALY MALLE",
+      "order": 3,
+      "minute": 57,
+      "minuteRaw": "57.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "NEMANJA ANDUSIC",
+      "order": 3,
+      "minute": 57,
+      "minuteRaw": "57.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "ADANA DEMİRSPOR",
+      "order": 1,
+      "player_in": "TEVFİK ALTINDAĞ",
+      "player_out": "HASAN KILIÇ",
+      "playerIn": "TEVFİK ALTINDAĞ",
+      "playerOut": "HASAN KILIÇ",
+      "minute": 73,
+      "minuteRaw": "73.dk",
+      "minute_text": "73.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "ADANA DEMİRSPOR",
+      "player": "HASAN KILIÇ",
+      "order": 1,
+      "minute": 73,
+      "minuteRaw": "73.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "ADANA DEMİRSPOR",
+      "player": "TEVFİK ALTINDAĞ",
+      "order": 1,
+      "minute": 73,
+      "minuteRaw": "73.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "ADANA DEMİRSPOR",
+      "order": 2,
+      "player_in": "SİNAN KURT",
+      "player_out": "AIAS AOSMAN",
+      "playerIn": "SİNAN KURT",
+      "playerOut": "AIAS AOSMAN",
+      "minute": 82,
+      "minuteRaw": "82.dk",
+      "minute_text": "82.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "ADANA DEMİRSPOR",
+      "player": "AIAS AOSMAN",
+      "order": 2,
+      "minute": 82,
+      "minuteRaw": "82.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "ADANA DEMİRSPOR",
+      "player": "SİNAN KURT",
+      "order": 2,
+      "minute": 82,
+      "minuteRaw": "82.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "ADANA DEMİRSPOR",
+      "order": 3,
+      "player_in": "MEHMET AKYÜZ",
+      "player_out": "PA AMAT DIBBA",
+      "playerIn": "MEHMET AKYÜZ",
+      "playerOut": "PA AMAT DIBBA",
+      "minute": 69,
+      "minuteRaw": "69.dk",
+      "minute_text": "69.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "ADANA DEMİRSPOR",
+      "player": "PA AMAT DIBBA",
+      "order": 3,
+      "minute": 69,
+      "minuteRaw": "69.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "ADANA DEMİRSPOR",
+      "player": "MEHMET AKYÜZ",
+      "order": 3,
+      "minute": 69,
+      "minuteRaw": "69.dk"
+    }
+  ],
+  "goals": [
+    {
+      "type": "goal",
+      "team": "Balıkesirspor",
+      "player": "NEMANJA ANDUSIC",
+      "scorer": "NEMANJA ANDUSIC",
+      "raw": "NEMANJA ANDUSIC,77.dk (F)",
+      "minute": 77,
+      "minuteRaw": "NEMANJA ANDUSIC,77.dk",
+      "goalType": "F",
+      "tffPersonId": "2212845"
+    },
+    {
+      "type": "goal",
+      "team": "ADANA DEMİRSPOR",
+      "player": "PA AMAT DIBBA",
+      "scorer": "PA AMAT DIBBA",
+      "raw": "PA AMAT DIBBA,6.dk (F)",
+      "minute": 6,
+      "minuteRaw": "PA AMAT DIBBA,6.dk",
+      "goalType": "F",
+      "tffPersonId": "2270071"
+    },
+    {
+      "type": "goal",
+      "team": "ADANA DEMİRSPOR",
+      "player": "ADİL DEMİRBAĞ",
+      "scorer": "ADİL DEMİRBAĞ",
+      "raw": "ADİL DEMİRBAĞ,35.dk (F)",
+      "minute": 35,
+      "minuteRaw": "ADİL DEMİRBAĞ,35.dk",
+      "goalType": "F",
+      "tffPersonId": "1196555"
+    },
+    {
+      "type": "goal",
+      "team": "ADANA DEMİRSPOR",
+      "player": "ERKAN ZENGİN",
+      "scorer": "ERKAN ZENGİN",
+      "raw": "ERKAN ZENGİN,37.dk (F)",
+      "minute": 37,
+      "minuteRaw": "ERKAN ZENGİN,37.dk",
+      "goalType": "F",
+      "tffPersonId": "1222102"
+    },
+    {
+      "type": "goal",
+      "team": "ADANA DEMİRSPOR",
+      "player": "AIAS AOSMAN",
+      "scorer": "AIAS AOSMAN",
+      "raw": "AIAS AOSMAN,39.dk (F)",
+      "minute": 39,
+      "minuteRaw": "AIAS AOSMAN,39.dk",
+      "goalType": "F",
+      "tffPersonId": "2212979"
+    },
+    {
+      "type": "goal",
+      "team": "ADANA DEMİRSPOR",
+      "player": "VOLKAN ŞEN",
+      "scorer": "VOLKAN ŞEN",
+      "raw": "VOLKAN ŞEN,68.dk (F)",
+      "minute": 68,
+      "minuteRaw": "VOLKAN ŞEN,68.dk",
+      "goalType": "F",
+      "tffPersonId": "427346"
+    },
+    {
+      "type": "goal",
+      "team": "ADANA DEMİRSPOR",
+      "player": "PA AMAT DIBBA",
+      "scorer": "PA AMAT DIBBA",
+      "raw": "PA AMAT DIBBA,59.dk (F)",
+      "minute": 59,
+      "minuteRaw": "PA AMAT DIBBA,59.dk",
+      "goalType": "F",
+      "tffPersonId": "2270071"
+    }
+  ],
+  "goalScorers": [
+    {
+      "player": "NEMANJA ANDUSIC",
+      "team": "Balıkesirspor",
+      "minute": 77,
+      "goalType": "F"
+    },
+    {
+      "player": "PA AMAT DIBBA",
+      "team": "ADANA DEMİRSPOR",
+      "minute": 6,
+      "goalType": "F"
+    },
+    {
+      "player": "ADİL DEMİRBAĞ",
+      "team": "ADANA DEMİRSPOR",
+      "minute": 35,
+      "goalType": "F"
+    },
+    {
+      "player": "ERKAN ZENGİN",
+      "team": "ADANA DEMİRSPOR",
+      "minute": 37,
+      "goalType": "F"
+    },
+    {
+      "player": "AIAS AOSMAN",
+      "team": "ADANA DEMİRSPOR",
+      "minute": 39,
+      "goalType": "F"
+    },
+    {
+      "player": "VOLKAN ŞEN",
+      "team": "ADANA DEMİRSPOR",
+      "minute": 68,
+      "goalType": "F"
+    },
+    {
+      "player": "PA AMAT DIBBA",
+      "team": "ADANA DEMİRSPOR",
+      "minute": 59,
+      "goalType": "F"
+    }
+  ],
+  "cards": [
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "BERAT AYDOĞDU",
+      "minute": 17,
+      "minuteRaw": "17.dk",
+      "tffPersonId": "1196386"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "SERDAR GÜNCÜ",
+      "minute": 31,
+      "minuteRaw": "31.dk",
+      "tffPersonId": "1365955"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ANDRIJA VUKOVIC",
+      "minute": 66,
+      "minuteRaw": "66.dk",
+      "tffPersonId": "1771457"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "MAHATMA OSUMANU OTOO",
+      "minute": 20,
+      "minuteRaw": "20.dk",
+      "tffPersonId": "1973822"
+    }
+  ],
+  "substitutions": [
+    {
+      "team": "Balıkesirspor",
+      "order": 1,
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "playerOut": "KAĞAN KAYALI",
+      "player_out": "KAĞAN KAYALI",
+      "playerOutTffPersonId": "1377605",
+      "playerIn": "OKWUCHUKWU FRANCIS EZEH",
+      "player_in": "OKWUCHUKWU FRANCIS EZEH",
+      "playerInTffPersonId": "2217530"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 2,
+      "minute": 55,
+      "minuteRaw": "55.dk",
+      "playerOut": "RAHMİ ANIL BAŞARAN",
+      "player_out": "RAHMİ ANIL BAŞARAN",
+      "playerOutTffPersonId": "1442246",
+      "playerIn": "CELAL EMİR DEDE",
+      "player_in": "CELAL EMİR DEDE",
+      "playerInTffPersonId": "1602439"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 3,
+      "minute": 57,
+      "minuteRaw": "57.dk",
+      "playerOut": "ALY MALLE",
+      "player_out": "ALY MALLE",
+      "playerOutTffPersonId": "2217529",
+      "playerIn": "NEMANJA ANDUSIC",
+      "player_in": "NEMANJA ANDUSIC",
+      "playerInTffPersonId": "2212845"
+    },
+    {
+      "team": "ADANA DEMİRSPOR",
+      "order": 1,
+      "minute": 73,
+      "minuteRaw": "73.dk",
+      "playerOut": "HASAN KILIÇ",
+      "player_out": "HASAN KILIÇ",
+      "playerOutTffPersonId": "1726904",
+      "playerIn": "TEVFİK ALTINDAĞ",
+      "player_in": "TEVFİK ALTINDAĞ",
+      "playerInTffPersonId": "1065509"
+    },
+    {
+      "team": "ADANA DEMİRSPOR",
+      "order": 2,
+      "minute": 82,
+      "minuteRaw": "82.dk",
+      "playerOut": "AIAS AOSMAN",
+      "player_out": "AIAS AOSMAN",
+      "playerOutTffPersonId": "2212979",
+      "playerIn": "SİNAN KURT",
+      "player_in": "SİNAN KURT",
+      "playerInTffPersonId": "1923913"
+    },
+    {
+      "team": "ADANA DEMİRSPOR",
+      "order": 3,
+      "minute": 69,
+      "minuteRaw": "69.dk",
+      "playerOut": "PA AMAT DIBBA",
+      "player_out": "PA AMAT DIBBA",
+      "playerOutTffPersonId": "2270071",
+      "playerIn": "MEHMET AKYÜZ",
+      "player_in": "MEHMET AKYÜZ",
+      "playerInTffPersonId": "772114"
+    }
+  ],
+  "sections_raw": {
+    "full_text_excerpt": "EKOL HASTANESİ BALIKESİRSPOR ADANA DEMİRSPOR - Maç Detayları TFF\nAra\nTR\nEN\nTRENDYOL SÜPER LİG\nZİRAAT TÜRKİYE KUPASI\nE-SHOP\nANA SAYFA\nTFF\nMİLLİ TAKIMLAR\nLİGLER\nKUPALAR\nKADIN FUTBOLU\nFGD\nBİLGİ BANKASI\nPUAN DURUMU\nTRENDYOL SÜPERLIG\nFutbol Bilgi Bankası\nFutbolcular\nTeknik Direktörler\nTüm Maçlar\nMilli Maçlar\nKulüpler\nStadyumlar\nCezalar\nHakemler\nGözlemci ve Temsilciler\nFutbol Menajerleri\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nFormlar ve Sözleşmeler\nStatüler\nTalimatlar\nTFF Kanun ve Statüsü\nOnline Başvurular\nTam Saha içerikleri için tıklayınız\nFikstürler\nLig Seçiniz...\nTrendyol Süper Lig\nTrendyol 1. Lig\nTFF 2. Lig\nTFF 3. Lig\nKadın Ligleri\nZiraat Türkiye Kupası\nBölgesel Amatör Lig\nGelişim Ligleri\nEngelli Futbolu\nFutsal Ligi\nPlaj Futbolu\nFutbol Altyapı Gelişim Ligi\nSezon Planlaması\nPuan Cetvelleri\nLig Seçiniz..\nTrendyol Süper Lig Şamil Ekinci Sezonu\nTrendyol 1.Lig\nTrendyol 1. Lig Play Off Müsabakaları\nNesine 2. Lig Kırmızı\nNesine 2. Lig Beyaz\nNesine 2. Lig Play Off Müsabakaları\nNesine 3. Lig 01\nNesine 3. Lig 02\nNesine 3. Lig 03\nNesine 3. Lig 04\nNesine 3. Lig Play Off Müsabakaları\nZiraat Türkiye Kupası\nZiraat Türkiye Kupası Grup Aşaması A\nZiraat Türkiye Kupası Grup Aşaması B\nZiraat Türkiye Kupası Grup Aşaması C\nZiraat Türkiye Kupası Grup Aşaması D\nTurkcell Kadın Futbol Süper Ligi\nKadınlar 1. Ligi A Grubu\nKadınlar 1. Ligi B Grubu\nTFF Kadınlar 1. Ligi Play Off 3.lük Müsabakaları\nTFF Kadınlar 1. Ligi Play Off Şampiyonluk Grubu\nTFF Kadınlar 1. Ligi Play Off Yükselme Grubu\nKadınlar 2.Ligi Play Off Müsabakaları\nKadınlar 3.Ligi Play Off Müsabakaları\nKadınlar 2. Ligi A Grup\nKadınlar 2. Ligi B Grup\nKadınlar 2. Ligi C Grup\nKadınlar 2. Ligi D Grup\nKadınlar 3. Ligi 1.\nKadınlar 3. Ligi 10.\nKadınlar 3. Ligi 11.\nKadınlar 3. Ligi 12.\nKadınlar 3. Ligi 13.\nKadınlar 3. Ligi 14.\nKadınlar 3. Ligi 15.\nKadınlar 3. Ligi 16.\nKadınlar 3. Ligi 17.\nKadınlar 3. Ligi 18.\nKadınlar 3. Ligi 19.\nKadınlar 3. Ligi 2.\nKadınlar 3. Ligi 20.\nKadınlar 3. Ligi 21.\nKadınlar 3. Ligi 22.\nKadınlar 3. Ligi 23.\nKadınlar 3. Ligi 24.\nKadınlar 3. Ligi 25.\nKadınlar 3. Ligi 26.\nKadınlar 3. Ligi 27.\nKadınlar 3. Ligi 28.\nKadınlar 3. Ligi 29.\nKadınlar 3. Ligi 3.\nKadınlar 3. Ligi 30.\nKadınlar 3. Ligi 31.\nKadınlar 3. Ligi 32.\nKadınlar 3. Ligi 4.\nKadınlar 3. Ligi 5.\nKadınlar 3. Ligi 6.\nKadınlar 3. Ligi 7.\nKadınlar 3. Ligi 8.\nKadınlar 3. Ligi 9.\nBölgesel Amatör Ligi 1. GRUP\nBölgesel Amatör Ligi 10. GRUP\nBölgesel Amatör Ligi 2. GRUP\nBölgesel Amatör Ligi 3. GRUP\nBölgesel Amatör Ligi 4. GRUP\nBölgesel Amatör Ligi 5. GRUP\nBölgesel Amatör Ligi 6. GRUP\nBölgesel Amatör Ligi 7. GRUP\nBölgesel Amatör Ligi 8. GRUP\nBölgesel Amatör Ligi 9. GRUP\nBölgesel Amatör Lig Baraj Maçları\nBölgesel Amatör Lig Play Off\nU17 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU17 Bölgesel Gelişim Ligi 1. Grup\nU17 Bölgesel Gelişim Ligi 2. Grup\nU17 Bölgesel Gelişim Ligi 3. Grup\nU17 Bölgesel Gelişim Ligi 4. Grup\nU17 Bölgesel Gelişim Ligi 5. Grup\nU17 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi 1. Grup\nU19 Bölgesel Gelişim Ligi 2. Grup\nU19 Bölgesel Gelişim Ligi 3. Grup\nU19 Bölgesel Gelişim Ligi 4. Grup\nU19 Bölgesel Gelişim Ligi 5. Grup\nU19 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Grup 1\nU14 Gelişim Ligi Grup 2\nU14 Gelişim Ligi Grup 3\nU14 Gelişim Ligi Grup 4\nU14 Gelişim Ligi Grup 5\nU14 Gelişim Ligi Grup 6\nU14 Gelişim Ligi Grup 7\nU14 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Finalleri\nU15 Gelişim Ligi Grup 1\nU15 Gelişim Ligi Grup 2\nU15 Gelişim Ligi Grup 3\nU15 Gelişim Ligi Grup 4\nU15 Gelişim Ligi Grup 5\nU15 Gelişim Ligi Grup 6\nU15 Gelişim Ligi Grup 7\nU15 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU15 Gelişim Ligi Finalleri\nU16 Gelişim Ligi Grup 1\nU16 Gelişim Ligi Grup 2\nU16 Gelişim Ligi Grup 3\nU16 Gelişim Ligi Grup 4\nU16 Gelişim Ligi Grup 5\nU16 Gelişim Ligi Grup 6\nU16 Gelişim Ligi Grup 7\nU16 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU16 Gelişim Ligi Finalleri\nU17 Elit A Ligi\nU17 Elit B Ligi\nU19 Elit A Ligi\nU19 Elit B Ligi\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP A\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP B\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP A\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP B\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP A\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP B\nU14 Amatör Türkiye Şampiyonası\nU15 Amatör Türkiye Şampiyonası\nU16 Amatör Türkiye Şampiyonası\nU17 Amatör Türkiye Şampiyonası\nU18 Amatör Türkiye Şampiyonası\nHaftalık Maç Görevlileri\nHakem, Gözlemci ve Temsilciler\nMİLLİ TAKIM TARAFTAR KULÜBÜ\nSON DAKIKA..”\nU17 Kiz Milli Takimi'ndan Zafer Bayrami kutlamasi\n'Kuralina Göre' Programi beIN SPORTS'ta basliyor\nU18 Milli Takimimiz, Azerbaycan karsisinda\nU18 Milli Takimimiz, Azerbaycan karsisinda\n”\nEKOL HASTANESİ BALIKESİRSPOR\n1\nADANA DEMİRSPOR\n6\nTFF 1. Lig (Profesyonel Takım)\nMaç Kodu:\n2155\nBALIKESİR ATATÜRK - BALIKESİR\n20.01.2020 - 19:00\nDİRENÇ TONUSLUOĞLU(Hakem)\nCEMAL BİNGÜL(1. Yardımcı Hakem)\nMUHAMMET YUMAK(2. Yardımcı Hakem)\nLEVENT BALCI(Dördüncü Hakem)\nŞAHİN TAŞKINSOY(Gözlemci)\nALİ OKÇUOĞLU(Temsilci)\nŞEVKET CANITEZ(Temsilci)\nERHAN ŞAHİN(Temsilci)\nİlk 11\n1.\nANDRIJA VUKOVIC\n3.\nBERAT AYDOĞDU\n66.\nKAĞAN KAYALI\n23.\nSEZER ÖZMEN\n35.\nBATUHAN İŞÇİLER\n21.\nSERDAR GÜNCÜ\n4.\nABDÜLKADİR KAYALI\n59.\nANTONIO MRSIC\n18.\nMAHATMA OSUMANU OTOO\n9.\nALY MALLE\n20.\nRAHMİ ANIL BAŞARAN\nYedekler\n19.\nATİLLA ÖZMEN\n32.\nOKAN KAPLAN\n15.\nENES KARABULUT\n24.\nANIL TAŞDEMİR\n80.\nOKWUCHUKWU FRANCIS EZEH\n7.\nCELAL EMİR DEDE\n11.\nNEMANJA ANDUSIC\n88.\nEMİRHAN ÇAKIR\nTeknik Sorumlu\nMEHMET NURİ ADIGÜZEL\nGoller\nNEMANJA ANDUSIC,77.dk (F)\nKartlar\nBERAT AYDOĞDU\n17.dk\nSERDAR GÜNCÜ\n31.dk\nANDRIJA VUKOVIC\n66.dk\nMAHATMA OSUMANU OTOO\n20.dk\nOyundan Çıkanlar\nKAĞAN KAYALI\n46.dk\nRAHMİ ANIL BAŞARAN\n55.dk\nALY MALLE\n57.dk\nOyuna Girenler\nOKWUCHUKWU FRANCIS EZEH\n46.dk\nCELAL EMİR DEDE\n55.dk\nNEMANJA ANDUSIC\n57.dk\nİlk 11\n37.\nMUHAMMED ŞENGEZER\n12.\nVEDAT BORA\n4.\nADİL DEMİRBAĞ\n2.\nTAYYİP TALHA SANUÇ\n95.\nJOHER KHADIM RASSOUL\n6.\nHAMIDOU TRAORE\n55.\nHASAN KILIÇ\n9.\nAIAS AOSMAN\n85.\nERKAN ZENGİN\n20.\nVOLKAN ŞEN\n14.\nPA AMAT DIBBA\nYedekler\n35.\nKURTULUŞ YURT\n5.\nSEMİH GÜLER\n54.\nMEHMET USLU\n13.\nTEVFİK ALTINDAĞ\n22.\nSİNAN KURT\n7.\nJAKUB KOSECKI\n11.\nMUSTAPHA CARAYOL\n80.\nMEHMET AKYÜZ\nTeknik Sorumlu\nUĞUR TÜTÜNEKER\nGoller\nPA AMAT DIBBA,6.dk (F)\nADİL DEMİRBAĞ,35.dk (F)\nERKAN ZENGİN,37.dk (F)\nAIAS AOSMAN,39.dk (F)\nVOLKAN ŞEN,68.dk (F)\nPA AMAT DIBBA,59.dk (F)\nOyundan Çıkanlar\nHASAN KILIÇ\n73.dk\nAIAS AOSMAN\n82.dk\nPA AMAT DIBBA\n69.dk\nOyuna Girenler\nTEVFİK ALTINDAĞ\n73.dk\nSİNAN KURT\n82.dk\nMEHMET AKYÜZ\n69.dk\nF:F - Ayak\nH:H - Kafa\nK:K - Kendi Kalesine\nP:P - Penaltı\nS:S - Seri Penaltı\nİletişim\n|\nSite Haritası\n|\nKopya Hakları\n|\nKullanım Şartları\n|\nSponsorlar\nTüm hakları Türkiye Futbol Federasyonu'na aittir.\nSosyal Medya Adreslerimiz:\nTFF\nTFF\nMilli Takımlar\nSüper Lig\nE-Millî Takım",
+    "officials_raw": "Hakemler\nGözlemci ve Temsilciler\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nHakem, Gözlemci ve Temsilciler\nDİRENÇ TONUSLUOĞLU(Hakem)\nCEMAL BİNGÜL(1. Yardımcı Hakem)\nMUHAMMET YUMAK(2. Yardımcı Hakem)\nLEVENT BALCI(Dördüncü Hakem)\nŞAHİN TAŞKINSOY(Gözlemci)\nALİ OKÇUOĞLU(Temsilci)\nŞEVKET CANITEZ(Temsilci)\nERHAN ŞAHİN(Temsilci)",
+    "lineups_raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu",
+    "events_raw": "Goller\nNEMANJA ANDUSIC,77.dk (F)\n17.dk\n31.dk\n66.dk\n20.dk\nOyundan Çıkanlar\n46.dk\n55.dk\n57.dk\nOyuna Girenler\n46.dk\n55.dk\n57.dk\nGoller\nPA AMAT DIBBA,6.dk (F)\nADİL DEMİRBAĞ,35.dk (F)\nERKAN ZENGİN,37.dk (F)\nAIAS AOSMAN,39.dk (F)\nVOLKAN ŞEN,68.dk (F)\nPA AMAT DIBBA,59.dk (F)\nOyundan Çıkanlar\n73.dk\n82.dk\n69.dk\nOyuna Girenler\n73.dk\n82.dk\n69.dk\nP:P - Penaltı\nS:S - Seri Penaltı"
+  },
+  "detailCompleteness": {
+    "hasStadium": true,
+    "starting11Home": 11,
+    "starting11Away": 11,
+    "substitutesHome": 8,
+    "substitutesAway": 8,
+    "goals": 7,
+    "cards": 4,
+    "substitutions": 6,
+    "players": 40
+  },
+  "quality": "A",
+  "source": {
+    "name": "TFF",
+    "url": "http://www.tff.org/Default.aspx?pageID=29&macId=207614",
+    "retrievedAt": "2026-07-17T19:31:37.668116Z",
+    "sourceType": "official_tff_match_detail"
+  },
+  "week": 18,
+  "standingsWeek": 18,
+  "clubFixture": {
+    "week": 18,
+    "rowText": "18 EKOL HASTANESİ BALIKESİRSPOR 1-6 ADANA DEMİRSPOR 20 Ocak 2020 TFF 1. Lig",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=207614&pageID=29"
+  },
+  "stageWeek": 18,
+  "roundType": "league",
+  "roundLabel": "18. Hafta",
+  "roundSource": "tff_club_fixture"
+}

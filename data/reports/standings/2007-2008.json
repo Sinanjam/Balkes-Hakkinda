@@ -1,0 +1,44 @@
+{
+  "season": "2007-2008",
+  "generatedAt": "2026-07-17T22:23:25.772045Z",
+  "builderVersion": "standings-builder-v8-legacy-week-group-routing",
+  "mode": "official-only",
+  "maxWeek": 34,
+  "source": "official_tff_multi_stage_weekly_table",
+  "weeksGenerated": 34,
+  "teams": 17,
+  "matchesUsed": 0,
+  "penaltiesApplied": 0,
+  "warnings": [],
+  "stages": [
+    {
+      "id": "group-03",
+      "label": "03",
+      "maxWeek": 34,
+      "expectedMatches": 32,
+      "carriedMatches": 0,
+      "rawFinalPlayed": 32,
+      "weeksGenerated": 34,
+      "targetPageID": "774",
+      "targetGrupID": "414",
+      "targetModuleID": null
+    }
+  ],
+  "balkesFinal": {
+    "rank": 5,
+    "team": "Balıkesirspor",
+    "played": 32,
+    "won": 13,
+    "drawn": 14,
+    "lost": 5,
+    "goalsFor": 41,
+    "goalsAgainst": 29,
+    "goalDifference": 12,
+    "points": 53,
+    "rawPoints": 53,
+    "pointsDeducted": 0,
+    "penaltyNote": "",
+    "isBalkes": true,
+    "teamId": "135"
+  }
+}

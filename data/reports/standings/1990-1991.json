@@ -1,0 +1,44 @@
+{
+  "season": "1990-1991",
+  "generatedAt": "2026-07-17T22:28:44.219373Z",
+  "builderVersion": "standings-builder-v8-legacy-week-group-routing",
+  "mode": "official-only",
+  "maxWeek": 34,
+  "source": "official_tff_multi_stage_weekly_table",
+  "weeksGenerated": 34,
+  "teams": 18,
+  "matchesUsed": 0,
+  "penaltiesApplied": 0,
+  "warnings": [],
+  "stages": [
+    {
+      "id": "group-7",
+      "label": "7",
+      "maxWeek": 34,
+      "expectedMatches": 34,
+      "carriedMatches": 0,
+      "rawFinalPlayed": 34,
+      "weeksGenerated": 34,
+      "targetPageID": "792",
+      "targetGrupID": "398",
+      "targetModuleID": null
+    }
+  ],
+  "balkesFinal": {
+    "rank": 7,
+    "team": "Balıkesirspor",
+    "played": 34,
+    "won": 14,
+    "drawn": 9,
+    "lost": 11,
+    "goalsFor": 33,
+    "goalsAgainst": 31,
+    "goalDifference": 2,
+    "points": 51,
+    "rawPoints": 51,
+    "pointsDeducted": 0,
+    "penaltyNote": "",
+    "isBalkes": true,
+    "teamId": "135"
+  }
+}

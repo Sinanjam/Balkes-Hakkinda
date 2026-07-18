@@ -1,0 +1,1322 @@
+{
+  "id": "251300",
+  "matchCode": "4766",
+  "season": "2023-2024",
+  "competition": "TFF 3. LİG (Profesyonel Takım)",
+  "teamLevel": "professional",
+  "teamLevelEvidence": "explicit_professional",
+  "competitionType": "league",
+  "competitionLabel": "Lig",
+  "stadium": "BALIKESİR ATATÜRK - BALIKESİR",
+  "venue": "BALIKESİR ATATÜRK - BALIKESİR",
+  "stage": "Lig",
+  "stageLabel": "Lig",
+  "date": "2024-02-18",
+  "time": "14:00",
+  "dateDisplay": "2024-02-18 - 14:00",
+  "homeTeam": "Balıkesirspor",
+  "awayTeam": "MUŞ 1984 MUŞSPOR",
+  "matchType": "league",
+  "matchTypeLabel": "Lig",
+  "type": "league",
+  "typeLabel": "Lig",
+  "score": {
+    "home": 0,
+    "away": 0,
+    "display": "0-0",
+    "played": true
+  },
+  "balkes": {
+    "isHome": true,
+    "isAway": false,
+    "opponent": "MUŞ 1984 MUŞSPOR",
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "result": "D"
+  },
+  "officials": [
+    {
+      "role": "Hakem",
+      "name": "MUHAMMED MEHMETCAN SÖYLEMEZ"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "ÖMER AKMAN"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "RECEP GÜNDÜZ"
+    },
+    {
+      "role": "Dördüncü Hakem",
+      "name": "RECEP AFŞİN"
+    }
+  ],
+  "referees": [
+    {
+      "role": "Hakem",
+      "name": "MUHAMMED MEHMETCAN SÖYLEMEZ"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "ÖMER AKMAN"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "RECEP GÜNDÜZ"
+    },
+    {
+      "role": "Dördüncü Hakem",
+      "name": "RECEP AFŞİN"
+    }
+  ],
+  "lineups": {
+    "home": {
+      "team": "Balıkesirspor",
+      "starting11": [
+        {
+          "name": "HÜSEYİN ALTINTAŞ",
+          "number": 12,
+          "shirt_no": "12",
+          "tffPersonId": "974194"
+        },
+        {
+          "name": "BERAT AYDOĞDU",
+          "number": 6,
+          "shirt_no": "6",
+          "tffPersonId": "1196386"
+        },
+        {
+          "name": "ABDURRAHMAN AYHANOĞLU",
+          "number": 29,
+          "shirt_no": "29",
+          "tffPersonId": "979871"
+        },
+        {
+          "name": "UTKAN GÖKÇEN",
+          "number": 88,
+          "shirt_no": "88",
+          "tffPersonId": "1734117"
+        },
+        {
+          "name": "ASIM HAMZAÇEBİ",
+          "number": 15,
+          "shirt_no": "15",
+          "tffPersonId": "1340429"
+        },
+        {
+          "name": "BERTUĞ BAYAR",
+          "number": 96,
+          "shirt_no": "96",
+          "tffPersonId": "966047"
+        },
+        {
+          "name": "KORAY BAYKARA",
+          "number": 41,
+          "shirt_no": "41",
+          "tffPersonId": "1281324"
+        },
+        {
+          "name": "DOĞANAY AVCI",
+          "number": 20,
+          "shirt_no": "20",
+          "tffPersonId": "2024592"
+        },
+        {
+          "name": "BİLAL ŞEFLEK",
+          "number": 28,
+          "shirt_no": "28",
+          "tffPersonId": "856540"
+        },
+        {
+          "name": "BATUHAN SÜER",
+          "number": 77,
+          "shirt_no": "77",
+          "tffPersonId": "1256780"
+        },
+        {
+          "name": "KADİR TORBACI",
+          "number": 66,
+          "shirt_no": "66",
+          "tffPersonId": "1183981"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "YİĞİTHAN KIR",
+          "number": 1,
+          "shirt_no": "1",
+          "tffPersonId": "1588286"
+        },
+        {
+          "name": "ERKAN SÜER",
+          "number": 40,
+          "shirt_no": "40",
+          "tffPersonId": "1567856"
+        },
+        {
+          "name": "ALİ SAY",
+          "number": 7,
+          "shirt_no": "7",
+          "tffPersonId": "885961"
+        },
+        {
+          "name": "KAĞAN KAYALI",
+          "number": 5,
+          "shirt_no": "5",
+          "tffPersonId": "1377605"
+        },
+        {
+          "name": "OKTAY BALA",
+          "number": 55,
+          "shirt_no": "55",
+          "tffPersonId": "1108664"
+        },
+        {
+          "name": "MEHMET ASLAN",
+          "number": 47,
+          "shirt_no": "47",
+          "tffPersonId": "1431047"
+        },
+        {
+          "name": "ARDA İBRAHİM AKGÜN",
+          "number": 11,
+          "shirt_no": "11",
+          "tffPersonId": "1934117"
+        },
+        {
+          "name": "HAKAN AKGÜL",
+          "number": 14,
+          "shirt_no": "14",
+          "tffPersonId": "1613383"
+        },
+        {
+          "name": "GÖKSU MUTLU",
+          "number": 70,
+          "shirt_no": "70",
+          "tffPersonId": "1449337"
+        },
+        {
+          "name": "MUHAMMET HAŞİM ÇOBAN",
+          "number": 37,
+          "shirt_no": "37",
+          "tffPersonId": "916082"
+        }
+      ],
+      "technicalStaff": [
+        {
+          "name": "İSMAİL CEM CAMBAZ"
+        }
+      ],
+      "coach": "İSMAİL CEM CAMBAZ",
+      "raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu"
+    },
+    "away": {
+      "team": "MUŞ 1984 MUŞSPOR",
+      "starting11": [
+        {
+          "name": "İLKER GÜNAY",
+          "number": 53,
+          "shirt_no": "53",
+          "tffPersonId": "865359"
+        },
+        {
+          "name": "SALİH ZAFER KURŞUNLU",
+          "number": 2,
+          "shirt_no": "2",
+          "tffPersonId": "106374"
+        },
+        {
+          "name": "EFE KARAOĞLU",
+          "number": 5,
+          "shirt_no": "5",
+          "tffPersonId": "308251"
+        },
+        {
+          "name": "MAHSUN ÇAPKAN",
+          "number": 8,
+          "shirt_no": "8",
+          "tffPersonId": "1135685"
+        },
+        {
+          "name": "İLKER AVŞAR",
+          "number": 9,
+          "shirt_no": "9",
+          "tffPersonId": "1014963"
+        },
+        {
+          "name": "MEHMET ERSAVAŞ",
+          "number": 45,
+          "shirt_no": "45",
+          "tffPersonId": "879652"
+        },
+        {
+          "name": "MERVAN YUSUF YİĞİT",
+          "number": 11,
+          "shirt_no": "11",
+          "tffPersonId": "1583335"
+        },
+        {
+          "name": "EBU SIDDIK ÇELİK",
+          "number": 16,
+          "shirt_no": "16",
+          "tffPersonId": "1036521"
+        },
+        {
+          "name": "FURKAN GEDİK",
+          "number": 18,
+          "shirt_no": "18",
+          "tffPersonId": "1523336"
+        },
+        {
+          "name": "YUSUF YILDIRIM",
+          "number": 99,
+          "shirt_no": "99",
+          "tffPersonId": "1087148"
+        },
+        {
+          "name": "KADİR YAZICI",
+          "number": 88,
+          "shirt_no": "88",
+          "tffPersonId": "1037749"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "EGEBERK GABEL",
+          "number": 35,
+          "shirt_no": "35",
+          "tffPersonId": "1525435"
+        },
+        {
+          "name": "MEHMET ASLANBOĞA",
+          "number": 4,
+          "shirt_no": "4",
+          "tffPersonId": "1621040"
+        },
+        {
+          "name": "ATALAY GÜREL",
+          "number": 6,
+          "shirt_no": "6",
+          "tffPersonId": "1514404"
+        },
+        {
+          "name": "BERTUĞ BAŞDEMİR",
+          "number": 7,
+          "shirt_no": "7",
+          "tffPersonId": "923698"
+        },
+        {
+          "name": "TAHA TUNÇ",
+          "number": 20,
+          "shirt_no": "20",
+          "tffPersonId": "1648905"
+        },
+        {
+          "name": "OZAN PAPAKER",
+          "number": 24,
+          "shirt_no": "24",
+          "tffPersonId": "1065596"
+        },
+        {
+          "name": "MUHAMMET FATİH YILDIRIM",
+          "number": 41,
+          "shirt_no": "41",
+          "tffPersonId": "1158336"
+        },
+        {
+          "name": "AHMET ABDULLAH ÇAKMAK",
+          "number": 10,
+          "shirt_no": "10",
+          "tffPersonId": "1155124"
+        },
+        {
+          "name": "ÖMER ÇETİNBAŞ",
+          "number": 49,
+          "shirt_no": "49",
+          "tffPersonId": "1055086"
+        },
+        {
+          "name": "OSMAN KOCAAĞA",
+          "number": 22,
+          "shirt_no": "22",
+          "tffPersonId": "1349281"
+        }
+      ],
+      "technicalStaff": [
+        {
+          "name": "KADİR KAR"
+        }
+      ],
+      "coach": "KADİR KAR",
+      "raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu"
+    }
+  },
+  "players": [
+    {
+      "name": "ABDURRAHMAN AYHANOĞLU",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 29,
+      "tffPersonId": "979871"
+    },
+    {
+      "name": "ALİ SAY",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 7,
+      "tffPersonId": "885961"
+    },
+    {
+      "name": "ARDA İBRAHİM AKGÜN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "yellow_card",
+        "substitution_in"
+      ],
+      "number": 11,
+      "tffPersonId": "1934117"
+    },
+    {
+      "name": "ASIM HAMZAÇEBİ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 15,
+      "tffPersonId": "1340429"
+    },
+    {
+      "name": "BATUHAN SÜER",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 77,
+      "tffPersonId": "1256780"
+    },
+    {
+      "name": "BERAT AYDOĞDU",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 6,
+      "tffPersonId": "1196386"
+    },
+    {
+      "name": "BERTUĞ BAYAR",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 96,
+      "tffPersonId": "966047"
+    },
+    {
+      "name": "BİLAL ŞEFLEK",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 28,
+      "tffPersonId": "856540"
+    },
+    {
+      "name": "DOĞANAY AVCI",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 20,
+      "tffPersonId": "2024592"
+    },
+    {
+      "name": "ERKAN SÜER",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "yellow_card",
+        "substitution_in"
+      ],
+      "number": 40,
+      "tffPersonId": "1567856"
+    },
+    {
+      "name": "GÖKSU MUTLU",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 70,
+      "tffPersonId": "1449337"
+    },
+    {
+      "name": "HAKAN AKGÜL",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 14,
+      "tffPersonId": "1613383"
+    },
+    {
+      "name": "HÜSEYİN ALTINTAŞ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 12,
+      "tffPersonId": "974194"
+    },
+    {
+      "name": "İSMAİL CEM CAMBAZ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "technical_staff"
+      ]
+    },
+    {
+      "name": "KADİR TORBACI",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card",
+        "substitution_out"
+      ],
+      "number": 66,
+      "tffPersonId": "1183981"
+    },
+    {
+      "name": "KAĞAN KAYALI",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 5,
+      "tffPersonId": "1377605"
+    },
+    {
+      "name": "KORAY BAYKARA",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 41,
+      "tffPersonId": "1281324"
+    },
+    {
+      "name": "MEHMET ASLAN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 47,
+      "tffPersonId": "1431047"
+    },
+    {
+      "name": "MUHAMMET HAŞİM ÇOBAN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 37,
+      "tffPersonId": "916082"
+    },
+    {
+      "name": "OKTAY BALA",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 55,
+      "tffPersonId": "1108664"
+    },
+    {
+      "name": "UTKAN GÖKÇEN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 88,
+      "tffPersonId": "1734117"
+    },
+    {
+      "name": "YİĞİTHAN KIR",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 1,
+      "tffPersonId": "1588286"
+    },
+    {
+      "name": "AHMET ABDULLAH ÇAKMAK",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 10,
+      "tffPersonId": "1155124"
+    },
+    {
+      "name": "ATALAY GÜREL",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 6,
+      "tffPersonId": "1514404"
+    },
+    {
+      "name": "BERTUĞ BAŞDEMİR",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 7,
+      "tffPersonId": "923698"
+    },
+    {
+      "name": "EBU SIDDIK ÇELİK",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "starting11",
+        "yellow_card",
+        "substitution_out"
+      ],
+      "number": 16,
+      "tffPersonId": "1036521"
+    },
+    {
+      "name": "EFE KARAOĞLU",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 5,
+      "tffPersonId": "308251"
+    },
+    {
+      "name": "EGEBERK GABEL",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 35,
+      "tffPersonId": "1525435"
+    },
+    {
+      "name": "FURKAN GEDİK",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 18,
+      "tffPersonId": "1523336"
+    },
+    {
+      "name": "İLKER AVŞAR",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 9,
+      "tffPersonId": "1014963"
+    },
+    {
+      "name": "İLKER GÜNAY",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 53,
+      "tffPersonId": "865359"
+    },
+    {
+      "name": "KADİR KAR",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "technical_staff"
+      ]
+    },
+    {
+      "name": "KADİR YAZICI",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 88,
+      "tffPersonId": "1037749"
+    },
+    {
+      "name": "MAHSUN ÇAPKAN",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 8,
+      "tffPersonId": "1135685"
+    },
+    {
+      "name": "MEHMET ASLANBOĞA",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 4,
+      "tffPersonId": "1621040"
+    },
+    {
+      "name": "MEHMET ERSAVAŞ",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 45,
+      "tffPersonId": "879652"
+    },
+    {
+      "name": "MERVAN YUSUF YİĞİT",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 11,
+      "tffPersonId": "1583335"
+    },
+    {
+      "name": "MUHAMMET FATİH YILDIRIM",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 41,
+      "tffPersonId": "1158336"
+    },
+    {
+      "name": "ÖMER ÇETİNBAŞ",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 49,
+      "tffPersonId": "1055086"
+    },
+    {
+      "name": "OSMAN KOCAAĞA",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 22,
+      "tffPersonId": "1349281"
+    },
+    {
+      "name": "OZAN PAPAKER",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "substitute",
+        "yellow_card",
+        "substitution_in"
+      ],
+      "number": 24,
+      "tffPersonId": "1065596"
+    },
+    {
+      "name": "SALİH ZAFER KURŞUNLU",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 2,
+      "tffPersonId": "106374"
+    },
+    {
+      "name": "TAHA TUNÇ",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "substitute"
+      ],
+      "number": 20,
+      "tffPersonId": "1648905"
+    },
+    {
+      "name": "YUSUF YILDIRIM",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "roles": [
+        "starting11"
+      ],
+      "number": 99,
+      "tffPersonId": "1087148"
+    }
+  ],
+  "events": [
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ABDURRAHMAN AYHANOĞLU",
+      "minute": 66,
+      "minuteRaw": "66.dk",
+      "tffPersonId": "979871"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "KADİR TORBACI",
+      "minute": 40,
+      "minuteRaw": "40.dk",
+      "tffPersonId": "1183981"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "BERAT AYDOĞDU",
+      "minute": 90,
+      "minuteRaw": "90+4.dk",
+      "tffPersonId": "1196386"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ERKAN SÜER",
+      "minute": 64,
+      "minuteRaw": "64.dk",
+      "tffPersonId": "1567856"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ARDA İBRAHİM AKGÜN",
+      "minute": 85,
+      "minuteRaw": "85.dk",
+      "tffPersonId": "1934117"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "player": "EFE KARAOĞLU",
+      "minute": 34,
+      "minuteRaw": "34.dk",
+      "tffPersonId": "308251"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "player": "EBU SIDDIK ÇELİK",
+      "minute": 40,
+      "minuteRaw": "40.dk",
+      "tffPersonId": "1036521"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "player": "OZAN PAPAKER",
+      "minute": 90,
+      "minuteRaw": "90+4.dk",
+      "tffPersonId": "1065596"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 1,
+      "player_in": "MUHAMMET HAŞİM ÇOBAN",
+      "player_out": "BİLAL ŞEFLEK",
+      "playerIn": "MUHAMMET HAŞİM ÇOBAN",
+      "playerOut": "BİLAL ŞEFLEK",
+      "minute": 75,
+      "minuteRaw": "75.dk",
+      "minute_text": "75.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "BİLAL ŞEFLEK",
+      "order": 1,
+      "minute": 75,
+      "minuteRaw": "75.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "MUHAMMET HAŞİM ÇOBAN",
+      "order": 1,
+      "minute": 75,
+      "minuteRaw": "75.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 2,
+      "player_in": "OKTAY BALA",
+      "player_out": "BERTUĞ BAYAR",
+      "playerIn": "OKTAY BALA",
+      "playerOut": "BERTUĞ BAYAR",
+      "minute": 89,
+      "minuteRaw": "89.dk",
+      "minute_text": "89.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "BERTUĞ BAYAR",
+      "order": 2,
+      "minute": 89,
+      "minuteRaw": "89.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "OKTAY BALA",
+      "order": 2,
+      "minute": 89,
+      "minuteRaw": "89.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 3,
+      "player_in": "ALİ SAY",
+      "player_out": "KADİR TORBACI",
+      "playerIn": "ALİ SAY",
+      "playerOut": "KADİR TORBACI",
+      "minute": 69,
+      "minuteRaw": "69.dk",
+      "minute_text": "69.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "KADİR TORBACI",
+      "order": 3,
+      "minute": 69,
+      "minuteRaw": "69.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "ALİ SAY",
+      "order": 3,
+      "minute": 69,
+      "minuteRaw": "69.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 4,
+      "player_in": "ERKAN SÜER",
+      "player_out": "BATUHAN SÜER",
+      "playerIn": "ERKAN SÜER",
+      "playerOut": "BATUHAN SÜER",
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "minute_text": "46.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "BATUHAN SÜER",
+      "order": 4,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "ERKAN SÜER",
+      "order": 4,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 5,
+      "player_in": "ARDA İBRAHİM AKGÜN",
+      "player_out": "DOĞANAY AVCI",
+      "playerIn": "ARDA İBRAHİM AKGÜN",
+      "playerOut": "DOĞANAY AVCI",
+      "minute": 75,
+      "minuteRaw": "75.dk",
+      "minute_text": "75.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "DOĞANAY AVCI",
+      "order": 5,
+      "minute": 75,
+      "minuteRaw": "75.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "ARDA İBRAHİM AKGÜN",
+      "order": 5,
+      "minute": 75,
+      "minuteRaw": "75.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "order": 1,
+      "player_in": "BERTUĞ BAŞDEMİR",
+      "player_out": "MEHMET ERSAVAŞ",
+      "playerIn": "BERTUĞ BAŞDEMİR",
+      "playerOut": "MEHMET ERSAVAŞ",
+      "minute": 63,
+      "minuteRaw": "63.dk",
+      "minute_text": "63.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "player": "MEHMET ERSAVAŞ",
+      "order": 1,
+      "minute": 63,
+      "minuteRaw": "63.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "player": "BERTUĞ BAŞDEMİR",
+      "order": 1,
+      "minute": 63,
+      "minuteRaw": "63.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "order": 2,
+      "player_in": "OZAN PAPAKER",
+      "player_out": "İLKER AVŞAR",
+      "playerIn": "OZAN PAPAKER",
+      "playerOut": "İLKER AVŞAR",
+      "minute": 63,
+      "minuteRaw": "63.dk",
+      "minute_text": "63.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "player": "İLKER AVŞAR",
+      "order": 2,
+      "minute": 63,
+      "minuteRaw": "63.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "player": "OZAN PAPAKER",
+      "order": 2,
+      "minute": 63,
+      "minuteRaw": "63.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "order": 3,
+      "player_in": "ÖMER ÇETİNBAŞ",
+      "player_out": "EBU SIDDIK ÇELİK",
+      "playerIn": "ÖMER ÇETİNBAŞ",
+      "playerOut": "EBU SIDDIK ÇELİK",
+      "minute": 86,
+      "minuteRaw": "86.dk",
+      "minute_text": "86.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "player": "EBU SIDDIK ÇELİK",
+      "order": 3,
+      "minute": 86,
+      "minuteRaw": "86.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "player": "ÖMER ÇETİNBAŞ",
+      "order": 3,
+      "minute": 86,
+      "minuteRaw": "86.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "order": 4,
+      "player_in": "AHMET ABDULLAH ÇAKMAK",
+      "player_out": "MERVAN YUSUF YİĞİT",
+      "playerIn": "AHMET ABDULLAH ÇAKMAK",
+      "playerOut": "MERVAN YUSUF YİĞİT",
+      "minute": 58,
+      "minuteRaw": "58.dk",
+      "minute_text": "58.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "player": "MERVAN YUSUF YİĞİT",
+      "order": 4,
+      "minute": 58,
+      "minuteRaw": "58.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "player": "AHMET ABDULLAH ÇAKMAK",
+      "order": 4,
+      "minute": 58,
+      "minuteRaw": "58.dk"
+    }
+  ],
+  "goals": [],
+  "goalScorers": [],
+  "cards": [
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ABDURRAHMAN AYHANOĞLU",
+      "minute": 66,
+      "minuteRaw": "66.dk",
+      "tffPersonId": "979871"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "KADİR TORBACI",
+      "minute": 40,
+      "minuteRaw": "40.dk",
+      "tffPersonId": "1183981"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "BERAT AYDOĞDU",
+      "minute": 90,
+      "minuteRaw": "90+4.dk",
+      "tffPersonId": "1196386"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ERKAN SÜER",
+      "minute": 64,
+      "minuteRaw": "64.dk",
+      "tffPersonId": "1567856"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "ARDA İBRAHİM AKGÜN",
+      "minute": 85,
+      "minuteRaw": "85.dk",
+      "tffPersonId": "1934117"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "player": "EFE KARAOĞLU",
+      "minute": 34,
+      "minuteRaw": "34.dk",
+      "tffPersonId": "308251"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "player": "EBU SIDDIK ÇELİK",
+      "minute": 40,
+      "minuteRaw": "40.dk",
+      "tffPersonId": "1036521"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "MUŞ 1984 MUŞSPOR",
+      "player": "OZAN PAPAKER",
+      "minute": 90,
+      "minuteRaw": "90+4.dk",
+      "tffPersonId": "1065596"
+    }
+  ],
+  "substitutions": [
+    {
+      "team": "Balıkesirspor",
+      "order": 1,
+      "minute": 75,
+      "minuteRaw": "75.dk",
+      "playerOut": "BİLAL ŞEFLEK",
+      "player_out": "BİLAL ŞEFLEK",
+      "playerOutTffPersonId": "856540",
+      "playerIn": "MUHAMMET HAŞİM ÇOBAN",
+      "player_in": "MUHAMMET HAŞİM ÇOBAN",
+      "playerInTffPersonId": "916082"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 2,
+      "minute": 89,
+      "minuteRaw": "89.dk",
+      "playerOut": "BERTUĞ BAYAR",
+      "player_out": "BERTUĞ BAYAR",
+      "playerOutTffPersonId": "966047",
+      "playerIn": "OKTAY BALA",
+      "player_in": "OKTAY BALA",
+      "playerInTffPersonId": "1108664"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 3,
+      "minute": 69,
+      "minuteRaw": "69.dk",
+      "playerOut": "KADİR TORBACI",
+      "player_out": "KADİR TORBACI",
+      "playerOutTffPersonId": "1183981",
+      "playerIn": "ALİ SAY",
+      "player_in": "ALİ SAY",
+      "playerInTffPersonId": "885961"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 4,
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "playerOut": "BATUHAN SÜER",
+      "player_out": "BATUHAN SÜER",
+      "playerOutTffPersonId": "1256780",
+      "playerIn": "ERKAN SÜER",
+      "player_in": "ERKAN SÜER",
+      "playerInTffPersonId": "1567856"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 5,
+      "minute": 75,
+      "minuteRaw": "75.dk",
+      "playerOut": "DOĞANAY AVCI",
+      "player_out": "DOĞANAY AVCI",
+      "playerOutTffPersonId": "2024592",
+      "playerIn": "ARDA İBRAHİM AKGÜN",
+      "player_in": "ARDA İBRAHİM AKGÜN",
+      "playerInTffPersonId": "1934117"
+    },
+    {
+      "team": "MUŞ 1984 MUŞSPOR",
+      "order": 1,
+      "minute": 63,
+      "minuteRaw": "63.dk",
+      "playerOut": "MEHMET ERSAVAŞ",
+      "player_out": "MEHMET ERSAVAŞ",
+      "playerOutTffPersonId": "879652",
+      "playerIn": "BERTUĞ BAŞDEMİR",
+      "player_in": "BERTUĞ BAŞDEMİR",
+      "playerInTffPersonId": "923698"
+    },
+    {
+      "team": "MUŞ 1984 MUŞSPOR",
+      "order": 2,
+      "minute": 63,
+      "minuteRaw": "63.dk",
+      "playerOut": "İLKER AVŞAR",
+      "player_out": "İLKER AVŞAR",
+      "playerOutTffPersonId": "1014963",
+      "playerIn": "OZAN PAPAKER",
+      "player_in": "OZAN PAPAKER",
+      "playerInTffPersonId": "1065596"
+    },
+    {
+      "team": "MUŞ 1984 MUŞSPOR",
+      "order": 3,
+      "minute": 86,
+      "minuteRaw": "86.dk",
+      "playerOut": "EBU SIDDIK ÇELİK",
+      "player_out": "EBU SIDDIK ÇELİK",
+      "playerOutTffPersonId": "1036521",
+      "playerIn": "ÖMER ÇETİNBAŞ",
+      "player_in": "ÖMER ÇETİNBAŞ",
+      "playerInTffPersonId": "1055086"
+    },
+    {
+      "team": "MUŞ 1984 MUŞSPOR",
+      "order": 4,
+      "minute": 58,
+      "minuteRaw": "58.dk",
+      "playerOut": "MERVAN YUSUF YİĞİT",
+      "player_out": "MERVAN YUSUF YİĞİT",
+      "playerOutTffPersonId": "1583335",
+      "playerIn": "AHMET ABDULLAH ÇAKMAK",
+      "player_in": "AHMET ABDULLAH ÇAKMAK",
+      "playerInTffPersonId": "1155124"
+    }
+  ],
+  "sections_raw": {
+    "full_text_excerpt": "BALIKESİRSPOR MUŞ 1984 MUŞSPOR - Maç Detayları TFF\nAra\nTR\nEN\nTRENDYOL SÜPER LİG\nZİRAAT TÜRKİYE KUPASI\nE-SHOP\nANA SAYFA\nTFF\nMİLLİ TAKIMLAR\nLİGLER\nKUPALAR\nKADIN FUTBOLU\nFGD\nBİLGİ BANKASI\nPUAN DURUMU\nTRENDYOL SÜPERLIG\nFutbol Bilgi Bankası\nFutbolcular\nTeknik Direktörler\nTüm Maçlar\nMilli Maçlar\nKulüpler\nStadyumlar\nCezalar\nHakemler\nGözlemci ve Temsilciler\nFutbol Menajerleri\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nFormlar ve Sözleşmeler\nStatüler\nTalimatlar\nTFF Kanun ve Statüsü\nOnline Başvurular\nTam Saha içerikleri için tıklayınız\nFikstürler\nLig Seçiniz...\nTrendyol Süper Lig\nTrendyol 1. Lig\nTFF 2. Lig\nTFF 3. Lig\nKadın Ligleri\nZiraat Türkiye Kupası\nBölgesel Amatör Lig\nGelişim Ligleri\nEngelli Futbolu\nFutsal Ligi\nPlaj Futbolu\nFutbol Altyapı Gelişim Ligi\nSezon Planlaması\nPuan Cetvelleri\nLig Seçiniz..\nTrendyol Süper Lig Şamil Ekinci Sezonu\nTrendyol 1.Lig\nTrendyol 1. Lig Play Off Müsabakaları\nNesine 2. Lig Kırmızı\nNesine 2. Lig Beyaz\nNesine 2. Lig Play Off Müsabakaları\nNesine 3. Lig 01\nNesine 3. Lig 02\nNesine 3. Lig 03\nNesine 3. Lig 04\nNesine 3. Lig Play Off Müsabakaları\nZiraat Türkiye Kupası\nZiraat Türkiye Kupası Grup Aşaması A\nZiraat Türkiye Kupası Grup Aşaması B\nZiraat Türkiye Kupası Grup Aşaması C\nZiraat Türkiye Kupası Grup Aşaması D\nTurkcell Kadın Futbol Süper Ligi\nKadınlar 1. Ligi A Grubu\nKadınlar 1. Ligi B Grubu\nTFF Kadınlar 1. Ligi Play Off 3.lük Müsabakaları\nTFF Kadınlar 1. Ligi Play Off Şampiyonluk Grubu\nTFF Kadınlar 1. Ligi Play Off Yükselme Grubu\nKadınlar 2.Ligi Play Off Müsabakaları\nKadınlar 3.Ligi Play Off Müsabakaları\nKadınlar 2. Ligi A Grup\nKadınlar 2. Ligi B Grup\nKadınlar 2. Ligi C Grup\nKadınlar 2. Ligi D Grup\nKadınlar 3. Ligi 1.\nKadınlar 3. Ligi 10.\nKadınlar 3. Ligi 11.\nKadınlar 3. Ligi 12.\nKadınlar 3. Ligi 13.\nKadınlar 3. Ligi 14.\nKadınlar 3. Ligi 15.\nKadınlar 3. Ligi 16.\nKadınlar 3. Ligi 17.\nKadınlar 3. Ligi 18.\nKadınlar 3. Ligi 19.\nKadınlar 3. Ligi 2.\nKadınlar 3. Ligi 20.\nKadınlar 3. Ligi 21.\nKadınlar 3. Ligi 22.\nKadınlar 3. Ligi 23.\nKadınlar 3. Ligi 24.\nKadınlar 3. Ligi 25.\nKadınlar 3. Ligi 26.\nKadınlar 3. Ligi 27.\nKadınlar 3. Ligi 28.\nKadınlar 3. Ligi 29.\nKadınlar 3. Ligi 3.\nKadınlar 3. Ligi 30.\nKadınlar 3. Ligi 31.\nKadınlar 3. Ligi 32.\nKadınlar 3. Ligi 4.\nKadınlar 3. Ligi 5.\nKadınlar 3. Ligi 6.\nKadınlar 3. Ligi 7.\nKadınlar 3. Ligi 8.\nKadınlar 3. Ligi 9.\nBölgesel Amatör Ligi 1. GRUP\nBölgesel Amatör Ligi 10. GRUP\nBölgesel Amatör Ligi 2. GRUP\nBölgesel Amatör Ligi 3. GRUP\nBölgesel Amatör Ligi 4. GRUP\nBölgesel Amatör Ligi 5. GRUP\nBölgesel Amatör Ligi 6. GRUP\nBölgesel Amatör Ligi 7. GRUP\nBölgesel Amatör Ligi 8. GRUP\nBölgesel Amatör Ligi 9. GRUP\nBölgesel Amatör Lig Baraj Maçları\nBölgesel Amatör Lig Play Off\nU17 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU17 Bölgesel Gelişim Ligi 1. Grup\nU17 Bölgesel Gelişim Ligi 2. Grup\nU17 Bölgesel Gelişim Ligi 3. Grup\nU17 Bölgesel Gelişim Ligi 4. Grup\nU17 Bölgesel Gelişim Ligi 5. Grup\nU17 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi 1. Grup\nU19 Bölgesel Gelişim Ligi 2. Grup\nU19 Bölgesel Gelişim Ligi 3. Grup\nU19 Bölgesel Gelişim Ligi 4. Grup\nU19 Bölgesel Gelişim Ligi 5. Grup\nU19 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Grup 1\nU14 Gelişim Ligi Grup 2\nU14 Gelişim Ligi Grup 3\nU14 Gelişim Ligi Grup 4\nU14 Gelişim Ligi Grup 5\nU14 Gelişim Ligi Grup 6\nU14 Gelişim Ligi Grup 7\nU14 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Finalleri\nU15 Gelişim Ligi Grup 1\nU15 Gelişim Ligi Grup 2\nU15 Gelişim Ligi Grup 3\nU15 Gelişim Ligi Grup 4\nU15 Gelişim Ligi Grup 5\nU15 Gelişim Ligi Grup 6\nU15 Gelişim Ligi Grup 7\nU15 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU15 Gelişim Ligi Finalleri\nU16 Gelişim Ligi Grup 1\nU16 Gelişim Ligi Grup 2\nU16 Gelişim Ligi Grup 3\nU16 Gelişim Ligi Grup 4\nU16 Gelişim Ligi Grup 5\nU16 Gelişim Ligi Grup 6\nU16 Gelişim Ligi Grup 7\nU16 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU16 Gelişim Ligi Finalleri\nU17 Elit A Ligi\nU17 Elit B Ligi\nU19 Elit A Ligi\nU19 Elit B Ligi\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP A\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP B\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP A\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP B\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP A\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP B\nU14 Amatör Türkiye Şampiyonası\nU15 Amatör Türkiye Şampiyonası\nU16 Amatör Türkiye Şampiyonası\nU17 Amatör Türkiye Şampiyonası\nU18 Amatör Türkiye Şampiyonası\nHaftalık Maç Görevlileri\nHakem, Gözlemci ve Temsilciler\nMİLLİ TAKIM TARAFTAR KULÜBÜ\nSON DAKIKA..”\nU17 Kiz Milli Takimi'ndan Zafer Bayrami kutlamasi\n'Kuralina Göre' Programi beIN SPORTS'ta basliyor\nU18 Milli Takimimiz, Azerbaycan karsisinda\nU18 Milli Takimimiz, Azerbaycan karsisinda\n”\nBALIKESİRSPOR\n0\nMUŞ 1984 MUŞSPOR\n0\nTFF 3. LİG (Profesyonel Takım)\nMaç Kodu:\n4766\nBALIKESİR ATATÜRK - BALIKESİR\n18.02.2024 - 14:00\nMUHAMMED MEHMETCAN SÖYLEMEZ(Hakem)\nÖMER AKMAN(1. Yardımcı Hakem)\nRECEP GÜNDÜZ(2. Yardımcı Hakem)\nRECEP AFŞİN(Dördüncü Hakem)\nABDULKERİM TÖR(Gözlemci)\nÜNAL AKÇA(Temsilci)\nHAKAN HALICI(Temsilci)\nİlk 11\n12.\nHÜSEYİN ALTINTAŞ\n6.\nBERAT AYDOĞDU\n29.\nABDURRAHMAN AYHANOĞLU\n88.\nUTKAN GÖKÇEN\n15.\nASIM HAMZAÇEBİ\n96.\nBERTUĞ BAYAR\n41.\nKORAY BAYKARA\n20.\nDOĞANAY AVCI\n28.\nBİLAL ŞEFLEK\n77.\nBATUHAN SÜER\n66.\nKADİR TORBACI\nYedekler\n1.\nYİĞİTHAN KIR\n40.\nERKAN SÜER\n7.\nALİ SAY\n5.\nKAĞAN KAYALI\n55.\nOKTAY BALA\n47.\nMEHMET ASLAN\n11.\nARDA İBRAHİM AKGÜN\n14.\nHAKAN AKGÜL\n70.\nGÖKSU MUTLU\n37.\nMUHAMMET HAŞİM ÇOBAN\nTeknik Sorumlu\nİSMAİL CEM CAMBAZ\nKartlar\nABDURRAHMAN AYHANOĞLU\n66.dk\nKADİR TORBACI\n40.dk\nBERAT AYDOĞDU\n90+4.dk\nERKAN SÜER\n64.dk\nARDA İBRAHİM AKGÜN\n85.dk\nOyundan Çıkanlar\nBİLAL ŞEFLEK\n75.dk\nBERTUĞ BAYAR\n89.dk\nKADİR TORBACI\n46.dk\nBATUHAN SÜER\n75.dk\nDOĞANAY AVCI\n69.dk\nOyuna Girenler\nMUHAMMET HAŞİM ÇOBAN\n75.dk\nOKTAY BALA\n89.dk\nALİ SAY\n69.dk\nERKAN SÜER\n46.dk\nARDA İBRAHİM AKGÜN\n75.dk\nİlk 11\n53.\nİLKER GÜNAY\n2.\nSALİH ZAFER KURŞUNLU\n5.\nEFE KARAOĞLU\n8.\nMAHSUN ÇAPKAN\n9.\nİLKER AVŞAR\n45.\nMEHMET ERSAVAŞ\n11.\nMERVAN YUSUF YİĞİT\n16.\nEBU SIDDIK ÇELİK\n18.\nFURKAN GEDİK\n99.\nYUSUF YILDIRIM\n88.\nKADİR YAZICI\nYedekler\n35.\nEGEBERK GABEL\n4.\nMEHMET ASLANBOĞA\n6.\nATALAY GÜREL\n7.\nBERTUĞ BAŞDEMİR\n20.\nTAHA TUNÇ\n24.\nOZAN PAPAKER\n41.\nMUHAMMET FATİH YILDIRIM\n10.\nAHMET ABDULLAH ÇAKMAK\n49.\nÖMER ÇETİNBAŞ\n22.\nOSMAN KOCAAĞA\nTeknik Sorumlu\nKADİR KAR\nKartlar\nEFE KARAOĞLU\n34.dk\nEBU SIDDIK ÇELİK\n40.dk\nOZAN PAPAKER\n90+4.dk\nOyundan Çıkanlar\nMEHMET ERSAVAŞ\n63.dk\nİLKER AVŞAR\n63.dk\nEBU SIDDIK ÇELİK\n58.dk\nMERVAN YUSUF YİĞİT\n86.dk\nOyuna Girenler\nBERTUĞ BAŞDEMİR\n63.dk\nOZAN PAPAKER\n63.dk\nÖMER ÇETİNBAŞ\n86.dk\nAHMET ABDULLAH ÇAKMAK\n58.dk\nF:F - Ayak\nH:H - Kafa\nK:K - Kendi Kalesine\nP:P - Penaltı\nS:S - Seri Penaltı\nİletişim\n|\nSite Haritası\n|\nKopya Hakları\n|\nKullanım Şartları\n|\nSponsorlar\nTüm hakları Türkiye Futbol Federasyonu'na aittir.\nSosyal Medya Adreslerimiz:\nTFF\nTFF\nMilli Takımlar\nSüper Lig\nE-Millî Takım",
+    "officials_raw": "Hakemler\nGözlemci ve Temsilciler\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nHakem, Gözlemci ve Temsilciler\nMUHAMMED MEHMETCAN SÖYLEMEZ(Hakem)\nÖMER AKMAN(1. Yardımcı Hakem)\nRECEP GÜNDÜZ(2. Yardımcı Hakem)\nRECEP AFŞİN(Dördüncü Hakem)\nABDULKERİM TÖR(Gözlemci)\nÜNAL AKÇA(Temsilci)\nHAKAN HALICI(Temsilci)",
+    "lineups_raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu",
+    "events_raw": "66.dk\n40.dk\n90+4.dk\n64.dk\n85.dk\nOyundan Çıkanlar\n75.dk\n89.dk\n46.dk\n75.dk\n69.dk\nOyuna Girenler\n75.dk\n89.dk\n69.dk\n46.dk\n75.dk\n34.dk\n40.dk\n90+4.dk\nOyundan Çıkanlar\n63.dk\n63.dk\n58.dk\n86.dk\nOyuna Girenler\n63.dk\n63.dk\n86.dk\n58.dk\nP:P - Penaltı\nS:S - Seri Penaltı"
+  },
+  "detailCompleteness": {
+    "hasStadium": true,
+    "starting11Home": 11,
+    "starting11Away": 11,
+    "substitutesHome": 10,
+    "substitutesAway": 10,
+    "goals": 0,
+    "cards": 8,
+    "substitutions": 9,
+    "players": 44
+  },
+  "quality": "A",
+  "source": {
+    "name": "TFF",
+    "url": "http://www.tff.org/Default.aspx?pageID=29&macId=251300",
+    "retrievedAt": "2026-07-17T19:31:18.226073Z",
+    "sourceType": "official_tff_match_detail"
+  },
+  "week": 20,
+  "standingsWeek": 20,
+  "clubFixture": {
+    "week": 20,
+    "rowText": "20 BALIKESİRSPOR 0-0 MUŞ 1984 MUŞSPOR 18 Şubat 2024 TFF 3. LİG 04",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=251300&pageID=29"
+  },
+  "stageWeek": 20,
+  "roundType": "league",
+  "roundLabel": "20. Hafta",
+  "roundSource": "tff_club_fixture"
+}

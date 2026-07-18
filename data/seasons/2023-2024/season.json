@@ -1,0 +1,62 @@
+{
+  "id": "2023-2024",
+  "name": "2023-2024",
+  "competition": "TFF 3. LİG (Profesyonel Takım)",
+  "sourcePolicy": "TFF-only",
+  "factoryVersion": "v5-professional-only-resilient",
+  "updatedAt": "2026-07-17T19:31:19.968900Z",
+  "summary": {
+    "matches": 29,
+    "wins": 7,
+    "draws": 12,
+    "losses": 10,
+    "goalsFor": 28,
+    "goalsAgainst": 33,
+    "goalDifference": -5,
+    "matchTypes": {
+      "league": 28,
+      "cup": 1
+    },
+    "points": 33,
+    "rawPoints": 33,
+    "pointsDeducted": 0,
+    "finalRank": 8
+  },
+  "files": {
+    "matchesIndex": "seasons/2023-2024/matches_index.json",
+    "standingsByWeek": "seasons/2023-2024/standings_by_week.json"
+  },
+  "sanitizedAt": "2026-07-17T19:33:42.825667Z",
+  "sanitizerVersion": "v1-professional-team-only",
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 28,
+    "won": 7,
+    "drawn": 12,
+    "lost": 9,
+    "goalsFor": 28,
+    "goalsAgainst": 32,
+    "goalDifference": -4,
+    "points": 33,
+    "rawPoints": 33,
+    "pointsDeducted": 0,
+    "finalRank": 8
+  },
+  "leagueSummary": {
+    "played": 28,
+    "won": 7,
+    "drawn": 12,
+    "lost": 9,
+    "goalsFor": 28,
+    "goalsAgainst": 32,
+    "goalDifference": -4,
+    "points": 33,
+    "rawPoints": 33,
+    "pointsDeducted": 0,
+    "finalRank": 8
+  },
+  "standingsUpdatedAt": "2026-07-17T19:37:27.088274Z",
+  "standingsBuilderVersion": "standings-builder-v6-direct-group-postseason-scope"
+}

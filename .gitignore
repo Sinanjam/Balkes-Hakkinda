@@ -1,0 +1,14 @@
+.gradle/
+.idea/
+local.properties
+**/build/
+*.apk
+*.aab
+*.jks
+*.keystore
+secrets.properties
+.cache/tff/
+generated/tff-data/
+local-releases/
+**/__pycache__/
+*.pyc

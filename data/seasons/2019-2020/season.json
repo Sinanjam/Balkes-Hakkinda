@@ -1,0 +1,62 @@
+{
+  "id": "2019-2020",
+  "name": "2019-2020",
+  "competition": "TFF 1. Lig (Profesyonel Takım)",
+  "sourcePolicy": "TFF-only",
+  "factoryVersion": "v5-professional-only-resilient",
+  "updatedAt": "2026-07-17T19:31:42.312841Z",
+  "summary": {
+    "matches": 35,
+    "wins": 9,
+    "draws": 11,
+    "losses": 15,
+    "goalsFor": 36,
+    "goalsAgainst": 49,
+    "goalDifference": -13,
+    "matchTypes": {
+      "league": 34,
+      "cup": 1
+    },
+    "points": 38,
+    "rawPoints": 38,
+    "pointsDeducted": 0,
+    "finalRank": 13
+  },
+  "files": {
+    "matchesIndex": "seasons/2019-2020/matches_index.json",
+    "standingsByWeek": "seasons/2019-2020/standings_by_week.json"
+  },
+  "sanitizedAt": "2026-07-17T19:33:42.936641Z",
+  "sanitizerVersion": "v1-professional-team-only",
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 34,
+    "won": 9,
+    "drawn": 11,
+    "lost": 14,
+    "goalsFor": 36,
+    "goalsAgainst": 48,
+    "goalDifference": -12,
+    "points": 38,
+    "rawPoints": 38,
+    "pointsDeducted": 0,
+    "finalRank": 13
+  },
+  "leagueSummary": {
+    "played": 34,
+    "won": 9,
+    "drawn": 11,
+    "lost": 14,
+    "goalsFor": 36,
+    "goalsAgainst": 48,
+    "goalDifference": -12,
+    "points": 38,
+    "rawPoints": 38,
+    "pointsDeducted": 0,
+    "finalRank": 13
+  },
+  "standingsUpdatedAt": "2026-07-17T22:06:38.852235Z",
+  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing"
+}

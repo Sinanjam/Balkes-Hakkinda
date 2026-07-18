@@ -1,0 +1,44 @@
+{
+  "season": "1999-2000",
+  "generatedAt": "2026-07-17T22:24:25.859153Z",
+  "builderVersion": "standings-builder-v8-legacy-week-group-routing",
+  "mode": "official-only",
+  "maxWeek": 34,
+  "source": "official_tff_multi_stage_weekly_table",
+  "weeksGenerated": 34,
+  "teams": 17,
+  "matchesUsed": 0,
+  "penaltiesApplied": 0,
+  "warnings": [],
+  "stages": [
+    {
+      "id": "group-06",
+      "label": "06",
+      "maxWeek": 34,
+      "expectedMatches": 32,
+      "carriedMatches": 0,
+      "rawFinalPlayed": 32,
+      "weeksGenerated": 34,
+      "targetPageID": "783",
+      "targetGrupID": "164",
+      "targetModuleID": null
+    }
+  ],
+  "balkesFinal": {
+    "rank": 2,
+    "team": "Balıkesirspor",
+    "played": 32,
+    "won": 18,
+    "drawn": 8,
+    "lost": 6,
+    "goalsFor": 48,
+    "goalsAgainst": 24,
+    "goalDifference": 24,
+    "points": 62,
+    "rawPoints": 62,
+    "pointsDeducted": 0,
+    "penaltyNote": "",
+    "isBalkes": true,
+    "teamId": "135"
+  }
+}

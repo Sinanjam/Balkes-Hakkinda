@@ -1,0 +1,82 @@
+{
+  "id": "2000-2001",
+  "name": "2000-2001",
+  "competition": "3. Lig (Profesyonel Takım)",
+  "sourcePolicy": "TFF-only",
+  "factoryVersion": "v5-professional-only-resilient",
+  "updatedAt": "2026-07-17T19:32:59.412029Z",
+  "summary": {
+    "matches": 33,
+    "wins": 7,
+    "draws": 13,
+    "losses": 13,
+    "goalsFor": 41,
+    "goalsAgainst": 51,
+    "goalDifference": -10,
+    "matchTypes": {
+      "league": 32,
+      "cup": 1
+    },
+    "points": 34,
+    "rawPoints": 34,
+    "pointsDeducted": 0,
+    "finalRank": 14
+  },
+  "files": {
+    "matchesIndex": "seasons/2000-2001/matches_index.json",
+    "standingsByWeek": "seasons/2000-2001/standings_by_week.json"
+  },
+  "sanitizedAt": "2026-07-17T19:33:43.304092Z",
+  "sanitizerVersion": "v1-professional-team-only",
+  "leagueStages": [
+    {
+      "id": "group-06",
+      "label": "06",
+      "stageNumber": 1,
+      "startWeek": 1,
+      "endWeek": 34,
+      "played": 32,
+      "won": 7,
+      "drawn": 13,
+      "lost": 12,
+      "goalsFor": 41,
+      "goalsAgainst": 50,
+      "goalDifference": -9,
+      "points": 34,
+      "finalRank": 14,
+      "carriedMatches": 0,
+      "officialTableIsCumulative": false
+    }
+  ],
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 32,
+    "won": 7,
+    "drawn": 13,
+    "lost": 12,
+    "goalsFor": 41,
+    "goalsAgainst": 50,
+    "points": 34,
+    "rawPoints": 34,
+    "pointsDeducted": 0,
+    "goalDifference": -9,
+    "finalRank": 14
+  },
+  "leagueSummary": {
+    "played": 32,
+    "won": 7,
+    "drawn": 13,
+    "lost": 12,
+    "goalsFor": 41,
+    "goalsAgainst": 50,
+    "points": 34,
+    "rawPoints": 34,
+    "pointsDeducted": 0,
+    "goalDifference": -9,
+    "finalRank": 14
+  },
+  "standingsUpdatedAt": "2026-07-17T22:24:25.854287Z",
+  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing"
+}

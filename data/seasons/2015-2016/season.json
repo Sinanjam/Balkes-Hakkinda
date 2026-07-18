@@ -1,0 +1,83 @@
+{
+  "id": "2015-2016",
+  "name": "2015-2016",
+  "competition": "PTT 1.Lig (Profesyonel Takım)",
+  "sourcePolicy": "TFF-only",
+  "factoryVersion": "v5-professional-only-resilient",
+  "updatedAt": "2026-07-17T19:32:08.341699Z",
+  "summary": {
+    "matches": 38,
+    "wins": 14,
+    "draws": 14,
+    "losses": 10,
+    "goalsFor": 45,
+    "goalsAgainst": 36,
+    "goalDifference": 9,
+    "matchTypes": {
+      "league": 34,
+      "cup": 2,
+      "playoff": 2
+    },
+    "points": 52,
+    "rawPoints": 52,
+    "pointsDeducted": 0,
+    "finalRank": 6
+  },
+  "files": {
+    "matchesIndex": "seasons/2015-2016/matches_index.json",
+    "standingsByWeek": "seasons/2015-2016/standings_by_week.json"
+  },
+  "sanitizedAt": "2026-07-17T19:33:43.042787Z",
+  "sanitizerVersion": "v1-professional-team-only",
+  "leagueStages": [
+    {
+      "id": "group-lig",
+      "label": "Lig",
+      "stageNumber": 1,
+      "startWeek": 1,
+      "endWeek": 34,
+      "played": 34,
+      "won": 13,
+      "drawn": 13,
+      "lost": 8,
+      "goalsFor": 40,
+      "goalsAgainst": 29,
+      "goalDifference": 11,
+      "points": 52,
+      "finalRank": 6,
+      "carriedMatches": 0,
+      "officialTableIsCumulative": false
+    }
+  ],
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 34,
+    "won": 13,
+    "drawn": 13,
+    "lost": 8,
+    "goalsFor": 40,
+    "goalsAgainst": 29,
+    "points": 52,
+    "rawPoints": 52,
+    "pointsDeducted": 0,
+    "goalDifference": 11,
+    "finalRank": 6
+  },
+  "leagueSummary": {
+    "played": 34,
+    "won": 13,
+    "drawn": 13,
+    "lost": 8,
+    "goalsFor": 40,
+    "goalsAgainst": 29,
+    "points": 52,
+    "rawPoints": 52,
+    "pointsDeducted": 0,
+    "goalDifference": 11,
+    "finalRank": 6
+  },
+  "standingsUpdatedAt": "2026-07-17T22:12:57.003656Z",
+  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing"
+}

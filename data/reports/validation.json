@@ -1,0 +1,828 @@
+{
+  "generatedAt": "2026-07-17T22:29:42.705455Z",
+  "status": "ok_with_warnings",
+  "summary": {
+    "seasons": 32,
+    "registryExpectedSeasons": 37,
+    "missingExpectedSeasons": 0,
+    "matches": 1117,
+    "standingsWeeks": 1056,
+    "quality": {
+      "A": 1080,
+      "B": 37
+    },
+    "nonProfessionalRecords": 0,
+    "staleDetailFiles": 0,
+    "errors": 0,
+    "warnings": 3
+  },
+  "discovery": {
+    "available": true,
+    "requested": 2,
+    "succeeded": 2,
+    "withMatches": 2,
+    "hardErrors": 0,
+    "partialPagination": 0,
+    "reusedStandingsTargets": 0,
+    "duplicateStageSignatures": 0
+  },
+  "errors": [],
+  "warnings": [
+    "2026-2027: henüz oynanmış lig maçı yok; puan tablosu bu aşamada beklenmiyor",
+    "2006-2007: aynı iç/dış saha lig eşleşmesi birden fazla: 654,2453",
+    "2006-2007: aynı iç/dış saha lig eşleşmesi birden fazla: 1066,1820"
+  ],
+  "missingExpectedSeasons": [],
+  "seasons": [
+    {
+      "season": "2026-2027",
+      "matches": 34,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 0,
+      "detailsValid": 34,
+      "detailsWithEventsOrLineups": 0,
+      "standingsWeeks": 0,
+      "standingsPending": true,
+      "officialStandingsMatchTypes": [],
+      "competitions": {
+        "Nesine 3. Lig (Profesyonel Takım)": 34
+      },
+      "matchTypes": {
+        "league": 34
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": [
+        "henüz oynanmış lig maçı yok; puan tablosu bu aşamada beklenmiyor"
+      ]
+    },
+    {
+      "season": "2025-2026",
+      "matches": 33,
+      "leagueMatches": 30,
+      "leaguePlayedMatches": 30,
+      "detailsValid": 33,
+      "detailsWithEventsOrLineups": 33,
+      "standingsWeeks": 30,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "Nesine 3. Lig (Profesyonel Takım)": 30,
+        "Nesine 3. Lig Play Off Müsabakaları (Profesyonel Takım) (1.Tur)": 2,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (2.Tur)": 1
+      },
+      "matchTypes": {
+        "league": 30,
+        "cup": 1,
+        "playoff": 2
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "2024-2025",
+      "matches": 34,
+      "leagueMatches": 30,
+      "leaguePlayedMatches": 30,
+      "detailsValid": 34,
+      "detailsWithEventsOrLineups": 33,
+      "standingsWeeks": 30,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "Nesine 3. Lig (Profesyonel Takım)": 30,
+        "Nesine 3. Lig Play Off Müsabakaları (Profesyonel Takım) (3.Tur)": 2,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (2.Tur)": 1,
+        "Nesine 3. Lig Play Off Müsabakaları (Profesyonel Takım) (Final)": 1
+      },
+      "matchTypes": {
+        "league": 30,
+        "cup": 1,
+        "playoff": 3
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "2023-2024",
+      "matches": 29,
+      "leagueMatches": 28,
+      "leaguePlayedMatches": 28,
+      "detailsValid": 29,
+      "detailsWithEventsOrLineups": 29,
+      "standingsWeeks": 30,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "TFF 3. LİG (Profesyonel Takım)": 28,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (1.Tur)": 1
+      },
+      "matchTypes": {
+        "league": 28,
+        "cup": 1
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "2022-2023",
+      "matches": 40,
+      "leagueMatches": 38,
+      "leaguePlayedMatches": 38,
+      "detailsValid": 40,
+      "detailsWithEventsOrLineups": 39,
+      "standingsWeeks": 38,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "TFF 2.Lig (Profesyonel Takım)": 38,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (2.Tur)": 1,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (3.Tur)": 1
+      },
+      "matchTypes": {
+        "league": 38,
+        "cup": 2
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "2021-2022",
+      "matches": 37,
+      "leagueMatches": 36,
+      "leaguePlayedMatches": 36,
+      "detailsValid": 37,
+      "detailsWithEventsOrLineups": 37,
+      "standingsWeeks": 38,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "Spor Toto 1. Lig (Profesyonel Takım)": 36,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (3.Tur)": 1
+      },
+      "matchTypes": {
+        "league": 36,
+        "cup": 1
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "2020-2021",
+      "matches": 35,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 34,
+      "detailsValid": 35,
+      "detailsWithEventsOrLineups": 35,
+      "standingsWeeks": 34,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "TFF 1. Lig (Profesyonel Takım)": 34,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (3.Tur)": 1
+      },
+      "matchTypes": {
+        "league": 34,
+        "cup": 1
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "2019-2020",
+      "matches": 35,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 34,
+      "detailsValid": 35,
+      "detailsWithEventsOrLineups": 35,
+      "standingsWeeks": 34,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "TFF 1. Lig (Profesyonel Takım)": 34,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (3.Tur)": 1
+      },
+      "matchTypes": {
+        "league": 34,
+        "cup": 1
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "2018-2019",
+      "matches": 40,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 34,
+      "detailsValid": 40,
+      "detailsWithEventsOrLineups": 40,
+      "standingsWeeks": 34,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "Spor Toto 1. Lig (Profesyonel Takım)": 34,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (5.Tur)": 2,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (Son 16 Turu)": 2,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (3.Tur)": 1,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (4.Tur)": 1
+      },
+      "matchTypes": {
+        "league": 34,
+        "cup": 6
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "2017-2018",
+      "matches": 35,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 34,
+      "detailsValid": 35,
+      "detailsWithEventsOrLineups": 35,
+      "standingsWeeks": 34,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "Spor Toto 1. Lig (Profesyonel Takım)": 34,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (3.Tur)": 1
+      },
+      "matchTypes": {
+        "league": 34,
+        "cup": 1
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "2016-2017",
+      "matches": 36,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 34,
+      "detailsValid": 36,
+      "detailsWithEventsOrLineups": 36,
+      "standingsWeeks": 34,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "TFF 1.Lig (Profesyonel Takım)": 34,
+        "Ziraat Türkiye Kupası Eleme Turları (Profesyonel Takım) (2.Tur)": 1,
+        "Ziraat Türkiye Kupası Eleme Turları (Profesyonel Takım) (3.Tur)": 1
+      },
+      "matchTypes": {
+        "league": 34,
+        "cup": 2
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "2015-2016",
+      "matches": 38,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 34,
+      "detailsValid": 38,
+      "detailsWithEventsOrLineups": 38,
+      "standingsWeeks": 34,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "PTT 1.Lig (Profesyonel Takım)": 34,
+        "PTT 1. Lig Play Off Müsabakaları (Profesyonel Takım) (Yarı Final)": 2,
+        "Ziraat Türkiye Kupası Eleme Turları (Profesyonel Takım) (2.Tur)": 1,
+        "Ziraat Türkiye Kupası Eleme Turları (Profesyonel Takım) (3.Tur)": 1
+      },
+      "matchTypes": {
+        "league": 34,
+        "cup": 2,
+        "playoff": 2
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "2014-2015",
+      "matches": 35,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 34,
+      "detailsValid": 35,
+      "detailsWithEventsOrLineups": 35,
+      "standingsWeeks": 34,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "Spor Toto Süper Lig Süleyman Seba Sezonu (Profesyonel Takım)": 34,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (2.Tur)": 1
+      },
+      "matchTypes": {
+        "league": 34,
+        "cup": 1
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "2013-2014",
+      "matches": 40,
+      "leagueMatches": 36,
+      "leaguePlayedMatches": 36,
+      "detailsValid": 40,
+      "detailsWithEventsOrLineups": 40,
+      "standingsWeeks": 38,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "PTT 1.Lig (Profesyonel Takım)": 36,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (2. Kademe)": 1,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (3. Kademe)": 1,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (4. Kademe)": 1,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (5. Kademe)": 1
+      },
+      "matchTypes": {
+        "league": 36,
+        "cup": 4
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "2012-2013",
+      "matches": 35,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "detailsValid": 35,
+      "detailsWithEventsOrLineups": 35,
+      "standingsWeeks": 34,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "Spor Toto 2. Lig (Profesyonel Takım)": 32,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (2. Kademe)": 1,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (3. Kademe)": 1,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (4. Kademe)": 1
+      },
+      "matchTypes": {
+        "league": 32,
+        "cup": 3
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "2011-2012",
+      "matches": 33,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "detailsValid": 33,
+      "detailsWithEventsOrLineups": 33,
+      "standingsWeeks": 34,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "Spor Toto 2. Lig (Profesyonel Takım)": 32,
+        "Spor Toto 2. Lig Play Off Müsabakaları (Profesyonel Takım) (Çeyrek Final)": 1
+      },
+      "matchTypes": {
+        "league": 32,
+        "playoff": 1
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "2010-2011",
+      "matches": 36,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 34,
+      "detailsValid": 36,
+      "detailsWithEventsOrLineups": 36,
+      "standingsWeeks": 34,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "Spor Toto 2. Lig (Profesyonel Takım)": 34,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (1. Kademe)": 1,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (2. Kademe)": 1
+      },
+      "matchTypes": {
+        "league": 34,
+        "cup": 2
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "2009-2010",
+      "matches": 39,
+      "leagueMatches": 38,
+      "leaguePlayedMatches": 38,
+      "detailsValid": 39,
+      "detailsWithEventsOrLineups": 39,
+      "standingsWeeks": 40,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "TFF 3.Lig Kademe (Profesyonel Takım)": 20,
+        "TFF 3.Lig Yükselme (Profesyonel Takım)": 18,
+        "Ziraat Türkiye Kupası (Profesyonel Takım) (1. Kademe)": 1
+      },
+      "matchTypes": {
+        "league": 38,
+        "cup": 1
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "2008-2009",
+      "matches": 33,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "detailsValid": 33,
+      "detailsWithEventsOrLineups": 32,
+      "standingsWeeks": 32,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "TFF 3.Lig Kademe (Profesyonel Takım)": 18,
+        "TFF 3.Lig Klasman (Profesyonel Takım)": 14,
+        "TFF 3.Lig Play Off Müsabakaları (Profesyonel Takım) (Grup Eleme)": 1
+      },
+      "matchTypes": {
+        "league": 32,
+        "playoff": 1
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "2007-2008",
+      "matches": 33,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "detailsValid": 33,
+      "detailsWithEventsOrLineups": 33,
+      "standingsWeeks": 34,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "TFF 3. Lig (Profesyonel Takım)": 32,
+        "TFF 3.Lig Play Off Müsabakaları (Profesyonel Takım)": 1
+      },
+      "matchTypes": {
+        "league": 32,
+        "playoff": 1
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "2006-2007",
+      "matches": 30,
+      "leagueMatches": 30,
+      "leaguePlayedMatches": 30,
+      "detailsValid": 30,
+      "detailsWithEventsOrLineups": 30,
+      "standingsWeeks": 30,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "3. Lig (Profesyonel Takım)": 30
+      },
+      "matchTypes": {
+        "league": 30
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": [
+        "aynı iç/dış saha lig eşleşmesi birden fazla: 654,2453",
+        "aynı iç/dış saha lig eşleşmesi birden fazla: 1066,1820"
+      ]
+    },
+    {
+      "season": "2000-2001",
+      "matches": 33,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "detailsValid": 33,
+      "detailsWithEventsOrLineups": 33,
+      "standingsWeeks": 34,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "3. Lig (Profesyonel Takım)": 32,
+        "Fortis Türkiye Kupası (Profesyonel Takım) (1. Kademe)": 1
+      },
+      "matchTypes": {
+        "league": 32,
+        "cup": 1
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "1999-2000",
+      "matches": 34,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "detailsValid": 34,
+      "detailsWithEventsOrLineups": 34,
+      "standingsWeeks": 34,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "3. Lig (Profesyonel Takım)": 34
+      },
+      "matchTypes": {
+        "league": 32,
+        "playoff": 2
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "1998-1999",
+      "matches": 33,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "detailsValid": 33,
+      "detailsWithEventsOrLineups": 33,
+      "standingsWeeks": 34,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "3. Lig (Profesyonel Takım)": 32,
+        "Fortis Türkiye Kupası (Profesyonel Takım) (1. Kademe)": 1
+      },
+      "matchTypes": {
+        "league": 32,
+        "cup": 1
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "1997-1998",
+      "matches": 32,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "detailsValid": 32,
+      "detailsWithEventsOrLineups": 32,
+      "standingsWeeks": 34,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "3. Lig (Profesyonel Takım)": 32
+      },
+      "matchTypes": {
+        "league": 32
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "1996-1997",
+      "matches": 33,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "detailsValid": 33,
+      "detailsWithEventsOrLineups": 33,
+      "standingsWeeks": 32,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "Lig B Klasman (Profesyonel Takım)": 18,
+        "Lig B (Profesyonel Takım)": 14,
+        "Fortis Türkiye Kupası (Profesyonel Takım) (2. Kademe)": 1
+      },
+      "matchTypes": {
+        "league": 32,
+        "cup": 1
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "1995-1996",
+      "matches": 39,
+      "leagueMatches": 36,
+      "leaguePlayedMatches": 36,
+      "detailsValid": 39,
+      "detailsWithEventsOrLineups": 39,
+      "standingsWeeks": 36,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "Lig B (Profesyonel Takım)": 19,
+        "Lig B Klasman (Profesyonel Takım)": 18,
+        "Fortis Türkiye Kupası (Profesyonel Takım) (2. Kademe)": 1,
+        "Fortis Türkiye Kupası (Profesyonel Takım) (3. Kademe)": 1
+      },
+      "matchTypes": {
+        "league": 36,
+        "cup": 2,
+        "playoff": 1
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "1994-1995",
+      "matches": 33,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "detailsValid": 33,
+      "detailsWithEventsOrLineups": 33,
+      "standingsWeeks": 32,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "Lig B Klasman (Profesyonel Takım)": 18,
+        "Lig B (Profesyonel Takım)": 14,
+        "Fortis Türkiye Kupası (Profesyonel Takım) (2. Kademe)": 1
+      },
+      "matchTypes": {
+        "league": 32,
+        "cup": 1
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "1993-1994",
+      "matches": 34,
+      "leagueMatches": 32,
+      "leaguePlayedMatches": 32,
+      "detailsValid": 34,
+      "detailsWithEventsOrLineups": 34,
+      "standingsWeeks": 32,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "Lig B Klasman (Profesyonel Takım)": 18,
+        "Lig B (Profesyonel Takım)": 14,
+        "Fortis Türkiye Kupası (Profesyonel Takım) (1. Kademe)": 1,
+        "Fortis Türkiye Kupası (Profesyonel Takım) (2. Kademe)": 1
+      },
+      "matchTypes": {
+        "league": 32,
+        "cup": 2
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "1992-1993",
+      "matches": 38,
+      "leagueMatches": 36,
+      "leaguePlayedMatches": 36,
+      "detailsValid": 38,
+      "detailsWithEventsOrLineups": 38,
+      "standingsWeeks": 40,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "Lig B Klasman (Profesyonel Takım)": 20,
+        "Lig B (Profesyonel Takım)": 16,
+        "Fortis Türkiye Kupası (Profesyonel Takım) (1. Kademe)": 1,
+        "Fortis Türkiye Kupası (Profesyonel Takım) (2. Kademe)": 1
+      },
+      "matchTypes": {
+        "league": 36,
+        "cup": 2
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "1991-1992",
+      "matches": 34,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 34,
+      "detailsValid": 34,
+      "detailsWithEventsOrLineups": 34,
+      "standingsWeeks": 34,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "3. Lig (Profesyonel Takım)": 34
+      },
+      "matchTypes": {
+        "league": 34
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "season": "1990-1991",
+      "matches": 34,
+      "leagueMatches": 34,
+      "leaguePlayedMatches": 34,
+      "detailsValid": 34,
+      "detailsWithEventsOrLineups": 34,
+      "standingsWeeks": 34,
+      "standingsPending": false,
+      "officialStandingsMatchTypes": [
+        "league"
+      ],
+      "competitions": {
+        "3. Lig (Profesyonel Takım)": 34
+      },
+      "matchTypes": {
+        "league": 34
+      },
+      "staleDetailFiles": 0,
+      "errors": [],
+      "warnings": []
+    }
+  ]
+}

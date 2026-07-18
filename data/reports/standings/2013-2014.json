@@ -1,0 +1,44 @@
+{
+  "season": "2013-2014",
+  "generatedAt": "2026-07-17T22:12:57.081382Z",
+  "builderVersion": "standings-builder-v8-legacy-week-group-routing",
+  "mode": "official-only",
+  "maxWeek": 38,
+  "source": "official_tff_multi_stage_weekly_table",
+  "weeksGenerated": 38,
+  "teams": 19,
+  "matchesUsed": 0,
+  "penaltiesApplied": 0,
+  "warnings": [],
+  "stages": [
+    {
+      "id": "group-lig",
+      "label": "Lig",
+      "maxWeek": 38,
+      "expectedMatches": 36,
+      "carriedMatches": 0,
+      "rawFinalPlayed": 36,
+      "weeksGenerated": 38,
+      "targetPageID": "1275",
+      "targetGrupID": "",
+      "targetModuleID": null
+    }
+  ],
+  "balkesFinal": {
+    "rank": 2,
+    "team": "Balıkesirspor",
+    "played": 36,
+    "won": 22,
+    "drawn": 7,
+    "lost": 7,
+    "goalsFor": 56,
+    "goalsAgainst": 33,
+    "goalDifference": 23,
+    "points": 73,
+    "rawPoints": 73,
+    "pointsDeducted": 0,
+    "penaltyNote": "",
+    "isBalkes": true,
+    "teamId": "135"
+  }
+}

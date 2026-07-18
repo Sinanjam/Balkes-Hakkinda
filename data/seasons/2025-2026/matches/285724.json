@@ -1,0 +1,1397 @@
+{
+  "id": "285724",
+  "matchCode": "4835",
+  "season": "2025-2026",
+  "competition": "Nesine 3. Lig (Profesyonel Takım)",
+  "teamLevel": "professional",
+  "teamLevelEvidence": "explicit_professional",
+  "competitionType": "league",
+  "competitionLabel": "Lig",
+  "stadium": "BALIKESİR ATATÜRK - BALIKESİR - BALIKESİR MERKEZ",
+  "venue": "BALIKESİR ATATÜRK - BALIKESİR - BALIKESİR MERKEZ",
+  "stage": "Lig",
+  "stageLabel": "Lig",
+  "date": "2025-12-21",
+  "time": "17:00",
+  "dateDisplay": "2025-12-21 - 17:00",
+  "homeTeam": "Balıkesirspor",
+  "awayTeam": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+  "matchType": "league",
+  "matchTypeLabel": "Lig",
+  "type": "league",
+  "typeLabel": "Lig",
+  "score": {
+    "home": 1,
+    "away": 1,
+    "display": "1-1",
+    "played": true
+  },
+  "balkes": {
+    "isHome": true,
+    "isAway": false,
+    "opponent": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+    "goalsFor": 1,
+    "goalsAgainst": 1,
+    "result": "D"
+  },
+  "officials": [
+    {
+      "role": "Hakem",
+      "name": "OĞUZHAN DEMİR"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "ERDİ ABDULMECİT SAYAR"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "GÜRCAN USLU"
+    },
+    {
+      "role": "Dördüncü Hakem",
+      "name": "AYBERK BURHAN"
+    }
+  ],
+  "referees": [
+    {
+      "role": "Hakem",
+      "name": "OĞUZHAN DEMİR"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "ERDİ ABDULMECİT SAYAR"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "GÜRCAN USLU"
+    },
+    {
+      "role": "Dördüncü Hakem",
+      "name": "AYBERK BURHAN"
+    }
+  ],
+  "lineups": {
+    "home": {
+      "team": "Balıkesirspor",
+      "starting11": [
+        {
+          "name": "TALHA DEMİRKOL",
+          "number": 28,
+          "shirt_no": "28",
+          "tffPersonId": "1919922"
+        },
+        {
+          "name": "HARUN TOPRAK",
+          "number": 6,
+          "shirt_no": "6",
+          "tffPersonId": "1771562"
+        },
+        {
+          "name": "TALHA DOĞUŞ",
+          "number": 8,
+          "shirt_no": "8",
+          "tffPersonId": "2022790"
+        },
+        {
+          "name": "ARTUN AKÇAKIN",
+          "number": 9,
+          "shirt_no": "9",
+          "tffPersonId": "652987"
+        },
+        {
+          "name": "SEDAT YİĞİT KURNAZ",
+          "number": 10,
+          "shirt_no": "10",
+          "tffPersonId": "1712887"
+        },
+        {
+          "name": "BORA YILMAZ",
+          "number": 17,
+          "shirt_no": "17",
+          "tffPersonId": "1629396"
+        },
+        {
+          "name": "YEKTA SÖNMEZ",
+          "number": 20,
+          "shirt_no": "20",
+          "tffPersonId": "1515022"
+        },
+        {
+          "name": "HASAN GÜNDOĞDU",
+          "number": 21,
+          "shirt_no": "21",
+          "tffPersonId": "1214605"
+        },
+        {
+          "name": "ERŞAN YAŞA",
+          "number": 27,
+          "shirt_no": "27",
+          "tffPersonId": "1589637"
+        },
+        {
+          "name": "AHMET NECAT AYDIN",
+          "number": 29,
+          "shirt_no": "29",
+          "tffPersonId": "1770316"
+        },
+        {
+          "name": "YİĞİT EPÖZDEMİR",
+          "number": 33,
+          "shirt_no": "33",
+          "tffPersonId": "1749227"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "MEHMET EMRE YAR",
+          "number": 76,
+          "shirt_no": "76",
+          "tffPersonId": "1894863"
+        },
+        {
+          "name": "OĞUZCAN KESGİN",
+          "number": 18,
+          "shirt_no": "18",
+          "tffPersonId": "1757645"
+        },
+        {
+          "name": "EFE ÖZEN",
+          "number": 30,
+          "shirt_no": "30",
+          "tffPersonId": "2022352"
+        },
+        {
+          "name": "BURAK CAN",
+          "number": 35,
+          "shirt_no": "35",
+          "tffPersonId": "2100614"
+        },
+        {
+          "name": "MİKDAT ÇİL",
+          "number": 41,
+          "shirt_no": "41",
+          "tffPersonId": "2015877"
+        },
+        {
+          "name": "YİĞİT DÖNMEZ",
+          "number": 45,
+          "shirt_no": "45",
+          "tffPersonId": "2063980"
+        },
+        {
+          "name": "KÜRŞAT MUTLU",
+          "number": 61,
+          "shirt_no": "61",
+          "tffPersonId": "2054966"
+        },
+        {
+          "name": "ALİ TOPÇU",
+          "number": 70,
+          "shirt_no": "70",
+          "tffPersonId": "2825011"
+        },
+        {
+          "name": "HASAN HÜSEYİN ERİŞ",
+          "number": 85,
+          "shirt_no": "85",
+          "tffPersonId": "2209227"
+        },
+        {
+          "name": "KADİRCAN ALBAHAN",
+          "number": 99,
+          "shirt_no": "99",
+          "tffPersonId": "2441590"
+        }
+      ],
+      "technicalStaff": [
+        {
+          "name": "CEM KAVÇAK"
+        }
+      ],
+      "coach": "CEM KAVÇAK",
+      "raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu"
+    },
+    "away": {
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "starting11": [
+        {
+          "name": "BATU EFE AKDAĞ",
+          "number": 44,
+          "shirt_no": "44",
+          "tffPersonId": "2074005"
+        },
+        {
+          "name": "BARAN KIRMACİ",
+          "number": 5,
+          "shirt_no": "5",
+          "tffPersonId": "1898794"
+        },
+        {
+          "name": "MURAT ARSLAN",
+          "number": 8,
+          "shirt_no": "8",
+          "tffPersonId": "1292958"
+        },
+        {
+          "name": "ABDULKADİR KUZEY",
+          "number": 9,
+          "shirt_no": "9",
+          "tffPersonId": "881674"
+        },
+        {
+          "name": "ERTUĞRUL YILDIRIM",
+          "number": 19,
+          "shirt_no": "19",
+          "tffPersonId": "2022696"
+        },
+        {
+          "name": "RECEP KEREM BİROL",
+          "number": 23,
+          "shirt_no": "23",
+          "tffPersonId": "2074511"
+        },
+        {
+          "name": "EGE ASIM DUYAR",
+          "number": 24,
+          "shirt_no": "24",
+          "tffPersonId": "2102574"
+        },
+        {
+          "name": "METE ŞENTÜRK",
+          "number": 26,
+          "shirt_no": "26",
+          "tffPersonId": "1672907"
+        },
+        {
+          "name": "ARDA FURKAN ABBAK",
+          "number": 48,
+          "shirt_no": "48",
+          "tffPersonId": "1552792"
+        },
+        {
+          "name": "EGE KARAYEL",
+          "number": 70,
+          "shirt_no": "70",
+          "tffPersonId": "2166967"
+        },
+        {
+          "name": "ENVER BÜYÜKDERE",
+          "number": 86,
+          "shirt_no": "86",
+          "tffPersonId": "1997529"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "ASLAN İLİDİ",
+          "number": 73,
+          "shirt_no": "73",
+          "tffPersonId": "2094315"
+        },
+        {
+          "name": "AYTUĞ YILDIRIM",
+          "number": 3,
+          "shirt_no": "3",
+          "tffPersonId": "2144729"
+        },
+        {
+          "name": "EMRE AKBULUT",
+          "number": 7,
+          "shirt_no": "7",
+          "tffPersonId": "1367797"
+        },
+        {
+          "name": "TURAN ALİ DEMİRCİ",
+          "number": 12,
+          "shirt_no": "12",
+          "tffPersonId": "1800969"
+        },
+        {
+          "name": "AHMET ATA KALAYCIOĞLU",
+          "number": 17,
+          "shirt_no": "17",
+          "tffPersonId": "1967002"
+        },
+        {
+          "name": "BATUHAN GÜNER",
+          "number": 53,
+          "shirt_no": "53",
+          "tffPersonId": "1984905"
+        },
+        {
+          "name": "İLHAN DOĞANAY",
+          "number": 69,
+          "shirt_no": "69",
+          "tffPersonId": "2029154"
+        },
+        {
+          "name": "BERKE KILIÇ",
+          "number": 77,
+          "shirt_no": "77",
+          "tffPersonId": "1847146"
+        },
+        {
+          "name": "BORAN YILMAZ",
+          "number": 83,
+          "shirt_no": "83",
+          "tffPersonId": "1999310"
+        },
+        {
+          "name": "ÖMER HIZIROĞLU",
+          "number": 96,
+          "shirt_no": "96",
+          "tffPersonId": "1989952"
+        }
+      ],
+      "technicalStaff": [
+        {
+          "name": "FERHAT BÖLÜKBAŞI"
+        }
+      ],
+      "coach": "FERHAT BÖLÜKBAŞI",
+      "raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu"
+    }
+  },
+  "players": [
+    {
+      "name": "AHMET NECAT AYDIN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 29,
+      "tffPersonId": "1770316"
+    },
+    {
+      "name": "ALİ TOPÇU",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 70,
+      "tffPersonId": "2825011"
+    },
+    {
+      "name": "ARTUN AKÇAKIN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "goal"
+      ],
+      "number": 9,
+      "tffPersonId": "652987"
+    },
+    {
+      "name": "BORA YILMAZ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 17,
+      "tffPersonId": "1629396"
+    },
+    {
+      "name": "BURAK CAN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 35,
+      "tffPersonId": "2100614"
+    },
+    {
+      "name": "CEM KAVÇAK",
+      "team": "Balıkesirspor",
+      "roles": [
+        "technical_staff"
+      ]
+    },
+    {
+      "name": "EFE ÖZEN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 30,
+      "tffPersonId": "2022352"
+    },
+    {
+      "name": "ERŞAN YAŞA",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 27,
+      "tffPersonId": "1589637"
+    },
+    {
+      "name": "HARUN TOPRAK",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 6,
+      "tffPersonId": "1771562"
+    },
+    {
+      "name": "HASAN GÜNDOĞDU",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 21,
+      "tffPersonId": "1214605"
+    },
+    {
+      "name": "HASAN HÜSEYİN ERİŞ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 85,
+      "tffPersonId": "2209227"
+    },
+    {
+      "name": "KADİRCAN ALBAHAN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 99,
+      "tffPersonId": "2441590"
+    },
+    {
+      "name": "KÜRŞAT MUTLU",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 61,
+      "tffPersonId": "2054966"
+    },
+    {
+      "name": "MEHMET EMRE YAR",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 76,
+      "tffPersonId": "1894863"
+    },
+    {
+      "name": "MİKDAT ÇİL",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 41,
+      "tffPersonId": "2015877"
+    },
+    {
+      "name": "OĞUZCAN KESGİN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 18,
+      "tffPersonId": "1757645"
+    },
+    {
+      "name": "SEDAT YİĞİT KURNAZ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 10,
+      "tffPersonId": "1712887"
+    },
+    {
+      "name": "TALHA DEMİRKOL",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 28,
+      "tffPersonId": "1919922"
+    },
+    {
+      "name": "TALHA DOĞUŞ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card",
+        "substitution_out"
+      ],
+      "number": 8,
+      "tffPersonId": "2022790"
+    },
+    {
+      "name": "YEKTA SÖNMEZ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 20,
+      "tffPersonId": "1515022"
+    },
+    {
+      "name": "YİĞİT DÖNMEZ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 45,
+      "tffPersonId": "2063980"
+    },
+    {
+      "name": "YİĞİT EPÖZDEMİR",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 33,
+      "tffPersonId": "1749227"
+    },
+    {
+      "name": "ABDULKADİR KUZEY",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 9,
+      "tffPersonId": "881674"
+    },
+    {
+      "name": "AHMET ATA KALAYCIOĞLU",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "substitute",
+        "yellow_card",
+        "substitution_in"
+      ],
+      "number": 17,
+      "tffPersonId": "1967002"
+    },
+    {
+      "name": "ARDA FURKAN ABBAK",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 48,
+      "tffPersonId": "1552792"
+    },
+    {
+      "name": "ASLAN İLİDİ",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "substitute"
+      ],
+      "number": 73,
+      "tffPersonId": "2094315"
+    },
+    {
+      "name": "AYTUĞ YILDIRIM",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "substitute"
+      ],
+      "number": 3,
+      "tffPersonId": "2144729"
+    },
+    {
+      "name": "BARAN KIRMACİ",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 5,
+      "tffPersonId": "1898794"
+    },
+    {
+      "name": "BATU EFE AKDAĞ",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "starting11"
+      ],
+      "number": 44,
+      "tffPersonId": "2074005"
+    },
+    {
+      "name": "BATUHAN GÜNER",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "substitute"
+      ],
+      "number": 53,
+      "tffPersonId": "1984905"
+    },
+    {
+      "name": "BERKE KILIÇ",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 77,
+      "tffPersonId": "1847146"
+    },
+    {
+      "name": "BORAN YILMAZ",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 83,
+      "tffPersonId": "1999310"
+    },
+    {
+      "name": "EGE ASIM DUYAR",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "starting11"
+      ],
+      "number": 24,
+      "tffPersonId": "2102574"
+    },
+    {
+      "name": "EGE KARAYEL",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "starting11",
+        "yellow_card",
+        "substitution_out"
+      ],
+      "number": 70,
+      "tffPersonId": "2166967"
+    },
+    {
+      "name": "EMRE AKBULUT",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "substitute"
+      ],
+      "number": 7,
+      "tffPersonId": "1367797"
+    },
+    {
+      "name": "ENVER BÜYÜKDERE",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "starting11",
+        "yellow_card",
+        "substitution_out"
+      ],
+      "number": 86,
+      "tffPersonId": "1997529"
+    },
+    {
+      "name": "ERTUĞRUL YILDIRIM",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 19,
+      "tffPersonId": "2022696"
+    },
+    {
+      "name": "FERHAT BÖLÜKBAŞI",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "technical_staff"
+      ]
+    },
+    {
+      "name": "İLHAN DOĞANAY",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 69,
+      "tffPersonId": "2029154"
+    },
+    {
+      "name": "METE ŞENTÜRK",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "starting11"
+      ],
+      "number": 26,
+      "tffPersonId": "1672907"
+    },
+    {
+      "name": "MURAT ARSLAN",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "starting11",
+        "goal",
+        "yellow_card"
+      ],
+      "number": 8,
+      "tffPersonId": "1292958"
+    },
+    {
+      "name": "ÖMER HIZIROĞLU",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 96,
+      "tffPersonId": "1989952"
+    },
+    {
+      "name": "RECEP KEREM BİROL",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "starting11"
+      ],
+      "number": 23,
+      "tffPersonId": "2074511"
+    },
+    {
+      "name": "TURAN ALİ DEMİRCİ",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "roles": [
+        "substitute",
+        "yellow_card"
+      ],
+      "number": 12,
+      "tffPersonId": "1800969"
+    }
+  ],
+  "events": [
+    {
+      "type": "goal",
+      "team": "Balıkesirspor",
+      "player": "ARTUN AKÇAKIN",
+      "scorer": "ARTUN AKÇAKIN",
+      "raw": "ARTUN AKÇAKIN,49.dk (P)",
+      "minute": 49,
+      "minuteRaw": "ARTUN AKÇAKIN,49.dk",
+      "goalType": "P",
+      "tffPersonId": "652987"
+    },
+    {
+      "type": "goal",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "MURAT ARSLAN",
+      "scorer": "MURAT ARSLAN",
+      "raw": "MURAT ARSLAN,66.dk (F)",
+      "minute": 66,
+      "minuteRaw": "MURAT ARSLAN,66.dk",
+      "goalType": "F",
+      "tffPersonId": "1292958"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "HASAN GÜNDOĞDU",
+      "minute": 68,
+      "minuteRaw": "68.dk",
+      "tffPersonId": "1214605"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "YİĞİT EPÖZDEMİR",
+      "minute": 69,
+      "minuteRaw": "69.dk",
+      "tffPersonId": "1749227"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "AHMET NECAT AYDIN",
+      "minute": 78,
+      "minuteRaw": "78.dk",
+      "tffPersonId": "1770316"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "HARUN TOPRAK",
+      "minute": 71,
+      "minuteRaw": "71.dk",
+      "tffPersonId": "1771562"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "TALHA DOĞUŞ",
+      "minute": 52,
+      "minuteRaw": "52.dk",
+      "tffPersonId": "2022790"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "MURAT ARSLAN",
+      "minute": 48,
+      "minuteRaw": "48.dk",
+      "tffPersonId": "1292958"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "ARDA FURKAN ABBAK",
+      "minute": 55,
+      "minuteRaw": "55.dk",
+      "tffPersonId": "1552792"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "TURAN ALİ DEMİRCİ",
+      "minute": 43,
+      "minuteRaw": "43.dk",
+      "tffPersonId": "1800969"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "AHMET ATA KALAYCIOĞLU",
+      "minute": 90,
+      "minuteRaw": "90+2.dk",
+      "tffPersonId": "1967002"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "ENVER BÜYÜKDERE",
+      "minute": 78,
+      "minuteRaw": "78.dk",
+      "tffPersonId": "1997529"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "EGE KARAYEL",
+      "minute": 35,
+      "minuteRaw": "35.dk",
+      "tffPersonId": "2166967"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 1,
+      "player_in": "ALİ TOPÇU",
+      "player_out": "BORA YILMAZ",
+      "playerIn": "ALİ TOPÇU",
+      "playerOut": "BORA YILMAZ",
+      "minute": 73,
+      "minuteRaw": "73.dk",
+      "minute_text": "73.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "BORA YILMAZ",
+      "order": 1,
+      "minute": 73,
+      "minuteRaw": "73.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "ALİ TOPÇU",
+      "order": 1,
+      "minute": 73,
+      "minuteRaw": "73.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 2,
+      "player_in": "KADİRCAN ALBAHAN",
+      "player_out": "SEDAT YİĞİT KURNAZ",
+      "playerIn": "KADİRCAN ALBAHAN",
+      "playerOut": "SEDAT YİĞİT KURNAZ",
+      "minute": 89,
+      "minuteRaw": "89.dk",
+      "minute_text": "89.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "SEDAT YİĞİT KURNAZ",
+      "order": 2,
+      "minute": 89,
+      "minuteRaw": "89.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "KADİRCAN ALBAHAN",
+      "order": 2,
+      "minute": 89,
+      "minuteRaw": "89.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 3,
+      "player_in": "OĞUZCAN KESGİN",
+      "player_out": "TALHA DOĞUŞ",
+      "playerIn": "OĞUZCAN KESGİN",
+      "playerOut": "TALHA DOĞUŞ",
+      "minute": 89,
+      "minuteRaw": "89.dk",
+      "minute_text": "89.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "TALHA DOĞUŞ",
+      "order": 3,
+      "minute": 89,
+      "minuteRaw": "89.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "OĞUZCAN KESGİN",
+      "order": 3,
+      "minute": 89,
+      "minuteRaw": "89.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "order": 1,
+      "player_in": "ÖMER HIZIROĞLU",
+      "player_out": "ABDULKADİR KUZEY",
+      "playerIn": "ÖMER HIZIROĞLU",
+      "playerOut": "ABDULKADİR KUZEY",
+      "minute": 78,
+      "minuteRaw": "78.dk",
+      "minute_text": "78.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "ABDULKADİR KUZEY",
+      "order": 1,
+      "minute": 78,
+      "minuteRaw": "78.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "ÖMER HIZIROĞLU",
+      "order": 1,
+      "minute": 78,
+      "minuteRaw": "78.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "order": 2,
+      "player_in": "BORAN YILMAZ",
+      "player_out": "BARAN KIRMACİ",
+      "playerIn": "BORAN YILMAZ",
+      "playerOut": "BARAN KIRMACİ",
+      "minute": 64,
+      "minuteRaw": "64.dk",
+      "minute_text": "64.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "BARAN KIRMACİ",
+      "order": 2,
+      "minute": 64,
+      "minuteRaw": "64.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "BORAN YILMAZ",
+      "order": 2,
+      "minute": 64,
+      "minuteRaw": "64.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "order": 3,
+      "player_in": "BERKE KILIÇ",
+      "player_out": "ENVER BÜYÜKDERE",
+      "playerIn": "BERKE KILIÇ",
+      "playerOut": "ENVER BÜYÜKDERE",
+      "minute": 87,
+      "minuteRaw": "87.dk",
+      "minute_text": "87.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "ENVER BÜYÜKDERE",
+      "order": 3,
+      "minute": 87,
+      "minuteRaw": "87.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "BERKE KILIÇ",
+      "order": 3,
+      "minute": 87,
+      "minuteRaw": "87.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "order": 4,
+      "player_in": "AHMET ATA KALAYCIOĞLU",
+      "player_out": "ERTUĞRUL YILDIRIM",
+      "playerIn": "AHMET ATA KALAYCIOĞLU",
+      "playerOut": "ERTUĞRUL YILDIRIM",
+      "minute": 87,
+      "minuteRaw": "87.dk",
+      "minute_text": "87.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "ERTUĞRUL YILDIRIM",
+      "order": 4,
+      "minute": 87,
+      "minuteRaw": "87.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "AHMET ATA KALAYCIOĞLU",
+      "order": 4,
+      "minute": 87,
+      "minuteRaw": "87.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "order": 5,
+      "player_in": "İLHAN DOĞANAY",
+      "player_out": "EGE KARAYEL",
+      "playerIn": "İLHAN DOĞANAY",
+      "playerOut": "EGE KARAYEL",
+      "minute": 78,
+      "minuteRaw": "78.dk",
+      "minute_text": "78.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "EGE KARAYEL",
+      "order": 5,
+      "minute": 78,
+      "minuteRaw": "78.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "İLHAN DOĞANAY",
+      "order": 5,
+      "minute": 78,
+      "minuteRaw": "78.dk"
+    }
+  ],
+  "goals": [
+    {
+      "type": "goal",
+      "team": "Balıkesirspor",
+      "player": "ARTUN AKÇAKIN",
+      "scorer": "ARTUN AKÇAKIN",
+      "raw": "ARTUN AKÇAKIN,49.dk (P)",
+      "minute": 49,
+      "minuteRaw": "ARTUN AKÇAKIN,49.dk",
+      "goalType": "P",
+      "tffPersonId": "652987"
+    },
+    {
+      "type": "goal",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "MURAT ARSLAN",
+      "scorer": "MURAT ARSLAN",
+      "raw": "MURAT ARSLAN,66.dk (F)",
+      "minute": 66,
+      "minuteRaw": "MURAT ARSLAN,66.dk",
+      "goalType": "F",
+      "tffPersonId": "1292958"
+    }
+  ],
+  "goalScorers": [
+    {
+      "player": "ARTUN AKÇAKIN",
+      "team": "Balıkesirspor",
+      "minute": 49,
+      "goalType": "P"
+    },
+    {
+      "player": "MURAT ARSLAN",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "minute": 66,
+      "goalType": "F"
+    }
+  ],
+  "cards": [
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "HASAN GÜNDOĞDU",
+      "minute": 68,
+      "minuteRaw": "68.dk",
+      "tffPersonId": "1214605"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "YİĞİT EPÖZDEMİR",
+      "minute": 69,
+      "minuteRaw": "69.dk",
+      "tffPersonId": "1749227"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "AHMET NECAT AYDIN",
+      "minute": 78,
+      "minuteRaw": "78.dk",
+      "tffPersonId": "1770316"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "HARUN TOPRAK",
+      "minute": 71,
+      "minuteRaw": "71.dk",
+      "tffPersonId": "1771562"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "TALHA DOĞUŞ",
+      "minute": 52,
+      "minuteRaw": "52.dk",
+      "tffPersonId": "2022790"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "MURAT ARSLAN",
+      "minute": 48,
+      "minuteRaw": "48.dk",
+      "tffPersonId": "1292958"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "ARDA FURKAN ABBAK",
+      "minute": 55,
+      "minuteRaw": "55.dk",
+      "tffPersonId": "1552792"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "TURAN ALİ DEMİRCİ",
+      "minute": 43,
+      "minuteRaw": "43.dk",
+      "tffPersonId": "1800969"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "AHMET ATA KALAYCIOĞLU",
+      "minute": 90,
+      "minuteRaw": "90+2.dk",
+      "tffPersonId": "1967002"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "ENVER BÜYÜKDERE",
+      "minute": 78,
+      "minuteRaw": "78.dk",
+      "tffPersonId": "1997529"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "player": "EGE KARAYEL",
+      "minute": 35,
+      "minuteRaw": "35.dk",
+      "tffPersonId": "2166967"
+    }
+  ],
+  "substitutions": [
+    {
+      "team": "Balıkesirspor",
+      "order": 1,
+      "minute": 73,
+      "minuteRaw": "73.dk",
+      "playerOut": "BORA YILMAZ",
+      "player_out": "BORA YILMAZ",
+      "playerOutTffPersonId": "1629396",
+      "playerIn": "ALİ TOPÇU",
+      "player_in": "ALİ TOPÇU",
+      "playerInTffPersonId": "2825011"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 2,
+      "minute": 89,
+      "minuteRaw": "89.dk",
+      "playerOut": "SEDAT YİĞİT KURNAZ",
+      "player_out": "SEDAT YİĞİT KURNAZ",
+      "playerOutTffPersonId": "1712887",
+      "playerIn": "KADİRCAN ALBAHAN",
+      "player_in": "KADİRCAN ALBAHAN",
+      "playerInTffPersonId": "2441590"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 3,
+      "minute": 89,
+      "minuteRaw": "89.dk",
+      "playerOut": "TALHA DOĞUŞ",
+      "player_out": "TALHA DOĞUŞ",
+      "playerOutTffPersonId": "2022790",
+      "playerIn": "OĞUZCAN KESGİN",
+      "player_in": "OĞUZCAN KESGİN",
+      "playerInTffPersonId": "1757645"
+    },
+    {
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "order": 1,
+      "minute": 78,
+      "minuteRaw": "78.dk",
+      "playerOut": "ABDULKADİR KUZEY",
+      "player_out": "ABDULKADİR KUZEY",
+      "playerOutTffPersonId": "881674",
+      "playerIn": "ÖMER HIZIROĞLU",
+      "player_in": "ÖMER HIZIROĞLU",
+      "playerInTffPersonId": "1989952"
+    },
+    {
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "order": 2,
+      "minute": 64,
+      "minuteRaw": "64.dk",
+      "playerOut": "BARAN KIRMACİ",
+      "player_out": "BARAN KIRMACİ",
+      "playerOutTffPersonId": "1898794",
+      "playerIn": "BORAN YILMAZ",
+      "player_in": "BORAN YILMAZ",
+      "playerInTffPersonId": "1999310"
+    },
+    {
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "order": 3,
+      "minute": 87,
+      "minuteRaw": "87.dk",
+      "playerOut": "ENVER BÜYÜKDERE",
+      "player_out": "ENVER BÜYÜKDERE",
+      "playerOutTffPersonId": "1997529",
+      "playerIn": "BERKE KILIÇ",
+      "player_in": "BERKE KILIÇ",
+      "playerInTffPersonId": "1847146"
+    },
+    {
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "order": 4,
+      "minute": 87,
+      "minuteRaw": "87.dk",
+      "playerOut": "ERTUĞRUL YILDIRIM",
+      "player_out": "ERTUĞRUL YILDIRIM",
+      "playerOutTffPersonId": "2022696",
+      "playerIn": "AHMET ATA KALAYCIOĞLU",
+      "player_in": "AHMET ATA KALAYCIOĞLU",
+      "playerInTffPersonId": "1967002"
+    },
+    {
+      "team": "BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.",
+      "order": 5,
+      "minute": 78,
+      "minuteRaw": "78.dk",
+      "playerOut": "EGE KARAYEL",
+      "player_out": "EGE KARAYEL",
+      "playerOutTffPersonId": "2166967",
+      "playerIn": "İLHAN DOĞANAY",
+      "player_in": "İLHAN DOĞANAY",
+      "playerInTffPersonId": "2029154"
+    }
+  ],
+  "sections_raw": {
+    "full_text_excerpt": "NEV SAĞLIK GRUBU BALIKESİRSPOR BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş. - Maç Detayları TFF\nAra\nTR\nEN\nTRENDYOL SÜPER LİG\nZİRAAT TÜRKİYE KUPASI\nE-SHOP\nANA SAYFA\nTFF\nMİLLİ TAKIMLAR\nLİGLER\nKUPALAR\nKADIN FUTBOLU\nFGD\nBİLGİ BANKASI\nPUAN DURUMU\nTRENDYOL SÜPERLIG\nFutbol Bilgi Bankası\nFutbolcular\nTeknik Direktörler\nTüm Maçlar\nMilli Maçlar\nKulüpler\nStadyumlar\nCezalar\nHakemler\nGözlemci ve Temsilciler\nFutbol Menajerleri\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nFormlar ve Sözleşmeler\nStatüler\nTalimatlar\nTFF Kanun ve Statüsü\nOnline Başvurular\nTam Saha içerikleri için tıklayınız\nFikstürler\nLig Seçiniz...\nTrendyol Süper Lig\nTrendyol 1. Lig\nTFF 2. Lig\nTFF 3. Lig\nKadın Ligleri\nZiraat Türkiye Kupası\nBölgesel Amatör Lig\nGelişim Ligleri\nEngelli Futbolu\nFutsal Ligi\nPlaj Futbolu\nFutbol Altyapı Gelişim Ligi\nSezon Planlaması\nPuan Cetvelleri\nLig Seçiniz..\nTrendyol Süper Lig Şamil Ekinci Sezonu\nTrendyol 1.Lig\nTrendyol 1. Lig Play Off Müsabakaları\nNesine 2. Lig Kırmızı\nNesine 2. Lig Beyaz\nNesine 2. Lig Play Off Müsabakaları\nNesine 3. Lig 01\nNesine 3. Lig 02\nNesine 3. Lig 03\nNesine 3. Lig 04\nNesine 3. Lig Play Off Müsabakaları\nZiraat Türkiye Kupası\nZiraat Türkiye Kupası Grup Aşaması A\nZiraat Türkiye Kupası Grup Aşaması B\nZiraat Türkiye Kupası Grup Aşaması C\nZiraat Türkiye Kupası Grup Aşaması D\nTurkcell Kadın Futbol Süper Ligi\nKadınlar 1. Ligi A Grubu\nKadınlar 1. Ligi B Grubu\nTFF Kadınlar 1. Ligi Play Off 3.lük Müsabakaları\nTFF Kadınlar 1. Ligi Play Off Şampiyonluk Grubu\nTFF Kadınlar 1. Ligi Play Off Yükselme Grubu\nKadınlar 2.Ligi Play Off Müsabakaları\nKadınlar 3.Ligi Play Off Müsabakaları\nKadınlar 2. Ligi A Grup\nKadınlar 2. Ligi B Grup\nKadınlar 2. Ligi C Grup\nKadınlar 2. Ligi D Grup\nKadınlar 3. Ligi 1.\nKadınlar 3. Ligi 10.\nKadınlar 3. Ligi 11.\nKadınlar 3. Ligi 12.\nKadınlar 3. Ligi 13.\nKadınlar 3. Ligi 14.\nKadınlar 3. Ligi 15.\nKadınlar 3. Ligi 16.\nKadınlar 3. Ligi 17.\nKadınlar 3. Ligi 18.\nKadınlar 3. Ligi 19.\nKadınlar 3. Ligi 2.\nKadınlar 3. Ligi 20.\nKadınlar 3. Ligi 21.\nKadınlar 3. Ligi 22.\nKadınlar 3. Ligi 23.\nKadınlar 3. Ligi 24.\nKadınlar 3. Ligi 25.\nKadınlar 3. Ligi 26.\nKadınlar 3. Ligi 27.\nKadınlar 3. Ligi 28.\nKadınlar 3. Ligi 29.\nKadınlar 3. Ligi 3.\nKadınlar 3. Ligi 30.\nKadınlar 3. Ligi 31.\nKadınlar 3. Ligi 32.\nKadınlar 3. Ligi 4.\nKadınlar 3. Ligi 5.\nKadınlar 3. Ligi 6.\nKadınlar 3. Ligi 7.\nKadınlar 3. Ligi 8.\nKadınlar 3. Ligi 9.\nBölgesel Amatör Ligi 1. GRUP\nBölgesel Amatör Ligi 10. GRUP\nBölgesel Amatör Ligi 2. GRUP\nBölgesel Amatör Ligi 3. GRUP\nBölgesel Amatör Ligi 4. GRUP\nBölgesel Amatör Ligi 5. GRUP\nBölgesel Amatör Ligi 6. GRUP\nBölgesel Amatör Ligi 7. GRUP\nBölgesel Amatör Ligi 8. GRUP\nBölgesel Amatör Ligi 9. GRUP\nBölgesel Amatör Lig Baraj Maçları\nBölgesel Amatör Lig Play Off\nU17 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU17 Bölgesel Gelişim Ligi 1. Grup\nU17 Bölgesel Gelişim Ligi 2. Grup\nU17 Bölgesel Gelişim Ligi 3. Grup\nU17 Bölgesel Gelişim Ligi 4. Grup\nU17 Bölgesel Gelişim Ligi 5. Grup\nU17 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi 1. Grup\nU19 Bölgesel Gelişim Ligi 2. Grup\nU19 Bölgesel Gelişim Ligi 3. Grup\nU19 Bölgesel Gelişim Ligi 4. Grup\nU19 Bölgesel Gelişim Ligi 5. Grup\nU19 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Grup 1\nU14 Gelişim Ligi Grup 2\nU14 Gelişim Ligi Grup 3\nU14 Gelişim Ligi Grup 4\nU14 Gelişim Ligi Grup 5\nU14 Gelişim Ligi Grup 6\nU14 Gelişim Ligi Grup 7\nU14 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Finalleri\nU15 Gelişim Ligi Grup 1\nU15 Gelişim Ligi Grup 2\nU15 Gelişim Ligi Grup 3\nU15 Gelişim Ligi Grup 4\nU15 Gelişim Ligi Grup 5\nU15 Gelişim Ligi Grup 6\nU15 Gelişim Ligi Grup 7\nU15 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU15 Gelişim Ligi Finalleri\nU16 Gelişim Ligi Grup 1\nU16 Gelişim Ligi Grup 2\nU16 Gelişim Ligi Grup 3\nU16 Gelişim Ligi Grup 4\nU16 Gelişim Ligi Grup 5\nU16 Gelişim Ligi Grup 6\nU16 Gelişim Ligi Grup 7\nU16 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU16 Gelişim Ligi Finalleri\nU17 Elit A Ligi\nU17 Elit B Ligi\nU19 Elit A Ligi\nU19 Elit B Ligi\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP A\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP B\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP A\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP B\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP A\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP B\nU14 Amatör Türkiye Şampiyonası\nU15 Amatör Türkiye Şampiyonası\nU16 Amatör Türkiye Şampiyonası\nU17 Amatör Türkiye Şampiyonası\nU18 Amatör Türkiye Şampiyonası\nHaftalık Maç Görevlileri\nHakem, Gözlemci ve Temsilciler\nMİLLİ TAKIM TARAFTAR KULÜBÜ\nSON DAKIKA..”\nU17 Kiz Milli Takimi'ndan Zafer Bayrami kutlamasi\n'Kuralina Göre' Programi beIN SPORTS'ta basliyor\nU18 Milli Takimimiz, Azerbaycan karsisinda\nU18 Milli Takimimiz, Azerbaycan karsisinda\n”\nNEV SAĞLIK GRUBU BALIKESİRSPOR\n1\nBORNOVA 1877 SPORTİF YATIRIMLAR A.Ş.\n1\nNesine 3. Lig (Profesyonel Takım)\nMaç Kodu:\n4835\nBALIKESİR ATATÜRK - BALIKESİR - BALIKESİR MERKEZ\n21.12.2025 - 17:00\nOĞUZHAN DEMİR(Hakem)\nERDİ ABDULMECİT SAYAR(1. Yardımcı Hakem)\nGÜRCAN USLU(2. Yardımcı Hakem)\nAYBERK BURHAN(Dördüncü Hakem)\nBİROL GÜLDANE(Gözlemci)\nAYHAN TAŞ(Temsilci)\nİlk 11\n28.\nTALHA DEMİRKOL\n6.\nHARUN TOPRAK\n8.\nTALHA DOĞUŞ\n9.\nARTUN AKÇAKIN\n10.\nSEDAT YİĞİT KURNAZ\n17.\nBORA YILMAZ\n20.\nYEKTA SÖNMEZ\n21.\nHASAN GÜNDOĞDU\n27.\nERŞAN YAŞA\n29.\nAHMET NECAT AYDIN\n33.\nYİĞİT EPÖZDEMİR\nYedekler\n76.\nMEHMET EMRE YAR\n18.\nOĞUZCAN KESGİN\n30.\nEFE ÖZEN\n35.\nBURAK CAN\n41.\nMİKDAT ÇİL\n45.\nYİĞİT DÖNMEZ\n61.\nKÜRŞAT MUTLU\n70.\nALİ TOPÇU\n85.\nHASAN HÜSEYİN ERİŞ\n99.\nKADİRCAN ALBAHAN\nTeknik Sorumlu\nCEM KAVÇAK\nGoller\nARTUN AKÇAKIN,49.dk (P)\nKartlar\nHASAN GÜNDOĞDU\n68.dk\nYİĞİT EPÖZDEMİR\n69.dk\nAHMET NECAT AYDIN\n78.dk\nHARUN TOPRAK\n71.dk\nTALHA DOĞUŞ\n52.dk\nOyundan Çıkanlar\nBORA YILMAZ\n73.dk\nSEDAT YİĞİT KURNAZ\n89.dk\nTALHA DOĞUŞ\n89.dk\nOyuna Girenler\nALİ TOPÇU\n73.dk\nKADİRCAN ALBAHAN\n89.dk\nOĞUZCAN KESGİN\n89.dk\nİlk 11\n44.\nBATU EFE AKDAĞ\n5.\nBARAN KIRMACİ\n8.\nMURAT ARSLAN\n9.\nABDULKADİR KUZEY\n19.\nERTUĞRUL YILDIRIM\n23.\nRECEP KEREM BİROL\n24.\nEGE ASIM DUYAR\n26.\nMETE ŞENTÜRK\n48.\nARDA FURKAN ABBAK\n70.\nEGE KARAYEL\n86.\nENVER BÜYÜKDERE\nYedekler\n73.\nASLAN İLİDİ\n3.\nAYTUĞ YILDIRIM\n7.\nEMRE AKBULUT\n12.\nTURAN ALİ DEMİRCİ\n17.\nAHMET ATA KALAYCIOĞLU\n53.\nBATUHAN GÜNER\n69.\nİLHAN DOĞANAY\n77.\nBERKE KILIÇ\n83.\nBORAN YILMAZ\n96.\nÖMER HIZIROĞLU\nTeknik Sorumlu\nFERHAT BÖLÜKBAŞI\nGoller\nMURAT ARSLAN,66.dk (F)\nKartlar\nMURAT ARSLAN\n48.dk\nARDA FURKAN ABBAK\n55.dk\nTURAN ALİ DEMİRCİ\n43.dk\nAHMET ATA KALAYCIOĞLU\n90+2.dk\nENVER BÜYÜKDERE\n78.dk\nEGE KARAYEL\n35.dk\nOyundan Çıkanlar\nABDULKADİR KUZEY\n78.dk\nBARAN KIRMACİ\n64.dk\nENVER BÜYÜKDERE\n78.dk\nERTUĞRUL YILDIRIM\n87.dk\nEGE KARAYEL\n87.dk\nOyuna Girenler\nÖMER HIZIROĞLU\n78.dk\nBORAN YILMAZ\n64.dk\nBERKE KILIÇ\n87.dk\nAHMET ATA KALAYCIOĞLU\n87.dk\nİLHAN DOĞANAY\n78.dk\nF:F - Ayak\nH:H - Kafa\nK:K - Kendi Kalesine\nP:P - Penaltı\nS:S - Seri Penaltı\nİletişim\n|\nSite Haritası\n|\nKopya Hakları\n|\nKullanım Şartları\n|\nSponsorlar\nTüm hakları Türkiye Futbol Federasyonu'na aittir.\nSosyal Medya Adreslerimiz:\nTFF\nTFF\nMilli Takımlar\nSüper Lig\nE-Millî Takım",
+    "officials_raw": "Hakemler\nGözlemci ve Temsilciler\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nHakem, Gözlemci ve Temsilciler\nOĞUZHAN DEMİR(Hakem)\nERDİ ABDULMECİT SAYAR(1. Yardımcı Hakem)\nGÜRCAN USLU(2. Yardımcı Hakem)\nAYBERK BURHAN(Dördüncü Hakem)\nBİROL GÜLDANE(Gözlemci)\nAYHAN TAŞ(Temsilci)",
+    "lineups_raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu",
+    "events_raw": "Goller\nARTUN AKÇAKIN,49.dk (P)\n68.dk\n69.dk\n78.dk\n71.dk\n52.dk\nOyundan Çıkanlar\n73.dk\n89.dk\n89.dk\nOyuna Girenler\n73.dk\n89.dk\n89.dk\nGoller\nMURAT ARSLAN,66.dk (F)\n48.dk\n55.dk\n43.dk\n90+2.dk\n78.dk\n35.dk\nOyundan Çıkanlar\n78.dk\n64.dk\n78.dk\n87.dk\n87.dk\nOyuna Girenler\n78.dk\n64.dk\n87.dk\n87.dk\n78.dk\nP:P - Penaltı\nS:S - Seri Penaltı"
+  },
+  "detailCompleteness": {
+    "hasStadium": true,
+    "starting11Home": 11,
+    "starting11Away": 11,
+    "substitutesHome": 10,
+    "substitutesAway": 10,
+    "goals": 2,
+    "cards": 11,
+    "substitutions": 8,
+    "players": 44
+  },
+  "quality": "A",
+  "source": {
+    "name": "TFF",
+    "url": "http://www.tff.org/Default.aspx?pageID=29&macId=285724",
+    "retrievedAt": "2026-07-17T19:31:06.729791Z",
+    "sourceType": "official_tff_match_detail"
+  },
+  "week": 15,
+  "standingsWeek": 15,
+  "clubFixture": {
+    "week": 15,
+    "rowText": "15 NEV SAĞLIK GRUBU BALIKESİRSPOR 1-1 BORNOVA 1877 SPORTİF YATIRIMLAR A.Ş. 21 Aralık 2025 Nesine 3. Lig 04",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=285724&pageID=29"
+  },
+  "stageWeek": 15,
+  "roundType": "league",
+  "roundLabel": "15. Hafta",
+  "roundSource": "tff_club_fixture"
+}

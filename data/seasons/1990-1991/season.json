@@ -1,0 +1,81 @@
+{
+  "id": "1990-1991",
+  "name": "1990-1991",
+  "competition": "3. Lig (Profesyonel Takım)",
+  "sourcePolicy": "TFF-only",
+  "factoryVersion": "v5-professional-only-resilient",
+  "updatedAt": "2026-07-17T19:33:41.852238Z",
+  "summary": {
+    "matches": 34,
+    "wins": 14,
+    "draws": 9,
+    "losses": 11,
+    "goalsFor": 33,
+    "goalsAgainst": 31,
+    "goalDifference": 2,
+    "matchTypes": {
+      "league": 34
+    },
+    "points": 51,
+    "rawPoints": 51,
+    "pointsDeducted": 0,
+    "finalRank": 7
+  },
+  "files": {
+    "matchesIndex": "seasons/1990-1991/matches_index.json",
+    "standingsByWeek": "seasons/1990-1991/standings_by_week.json"
+  },
+  "sanitizedAt": "2026-07-17T19:33:43.534978Z",
+  "sanitizerVersion": "v1-professional-team-only",
+  "leagueStages": [
+    {
+      "id": "group-7",
+      "label": "7",
+      "stageNumber": 1,
+      "startWeek": 1,
+      "endWeek": 34,
+      "played": 34,
+      "won": 14,
+      "drawn": 9,
+      "lost": 11,
+      "goalsFor": 33,
+      "goalsAgainst": 31,
+      "goalDifference": 2,
+      "points": 51,
+      "finalRank": 7,
+      "carriedMatches": 0,
+      "officialTableIsCumulative": false
+    }
+  ],
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 34,
+    "won": 14,
+    "drawn": 9,
+    "lost": 11,
+    "goalsFor": 33,
+    "goalsAgainst": 31,
+    "points": 51,
+    "rawPoints": 51,
+    "pointsDeducted": 0,
+    "goalDifference": 2,
+    "finalRank": 7
+  },
+  "leagueSummary": {
+    "played": 34,
+    "won": 14,
+    "drawn": 9,
+    "lost": 11,
+    "goalsFor": 33,
+    "goalsAgainst": 31,
+    "points": 51,
+    "rawPoints": 51,
+    "pointsDeducted": 0,
+    "goalDifference": 2,
+    "finalRank": 7
+  },
+  "standingsUpdatedAt": "2026-07-17T22:28:56.793508Z",
+  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing"
+}

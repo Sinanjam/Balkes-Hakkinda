@@ -1,0 +1,44 @@
+{
+  "season": "2016-2017",
+  "generatedAt": "2026-07-17T22:08:09.628386Z",
+  "builderVersion": "standings-builder-v8-legacy-week-group-routing",
+  "mode": "official-only",
+  "maxWeek": 34,
+  "source": "official_tff_multi_stage_weekly_table",
+  "weeksGenerated": 34,
+  "teams": 18,
+  "matchesUsed": 0,
+  "penaltiesApplied": 0,
+  "warnings": [],
+  "stages": [
+    {
+      "id": "group-lig",
+      "label": "Lig",
+      "maxWeek": 34,
+      "expectedMatches": 34,
+      "carriedMatches": 0,
+      "rawFinalPlayed": 34,
+      "weeksGenerated": 34,
+      "targetPageID": "1414",
+      "targetGrupID": "",
+      "targetModuleID": null
+    }
+  ],
+  "balkesFinal": {
+    "rank": 9,
+    "team": "Balıkesirspor",
+    "played": 34,
+    "won": 10,
+    "drawn": 12,
+    "lost": 12,
+    "goalsFor": 56,
+    "goalsAgainst": 48,
+    "goalDifference": 8,
+    "points": 42,
+    "rawPoints": 42,
+    "pointsDeducted": 0,
+    "penaltyNote": "",
+    "isBalkes": true,
+    "teamId": "135"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "season": "2009-2010",
+  "generatedAt": "2026-07-17T22:21:32.315800Z",
+  "builderVersion": "standings-builder-v8-legacy-week-group-routing",
+  "mode": "official-only",
+  "maxWeek": 40,
+  "source": "official_tff_multi_stage_weekly_table",
+  "weeksGenerated": 40,
+  "teams": 10,
+  "matchesUsed": 0,
+  "penaltiesApplied": 0,
+  "warnings": [],
+  "stages": [
+    {
+      "id": "group-01",
+      "label": "01",
+      "maxWeek": 22,
+      "expectedMatches": 20,
+      "carriedMatches": 0,
+      "rawFinalPlayed": 20,
+      "weeksGenerated": 22,
+      "targetPageID": "980",
+      "targetGrupID": "605",
+      "targetModuleID": null
+    },
+    {
+      "id": "standalone-yukselme-grubu",
+      "label": "Yükselme Grubu",
+      "maxWeek": 18,
+      "expectedMatches": 18,
+      "carriedMatches": 0,
+      "rawFinalPlayed": 18,
+      "weeksGenerated": 18,
+      "targetPageID": "980",
+      "targetGrupID": "",
+      "targetModuleID": "ctl00_MPane_m_980_5402_ctnr_div"
+    }
+  ],
+  "balkesFinal": {
+    "rank": 2,
+    "team": "Balıkesirspor",
+    "played": 18,
+    "won": 10,
+    "drawn": 4,
+    "lost": 4,
+    "goalsFor": 30,
+    "goalsAgainst": 16,
+    "goalDifference": 14,
+    "points": 34,
+    "rawPoints": 34,
+    "pointsDeducted": 0,
+    "penaltyNote": "",
+    "isBalkes": true,
+    "teamId": "135"
+  }
+}

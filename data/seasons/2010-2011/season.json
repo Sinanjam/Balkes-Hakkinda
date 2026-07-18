@@ -1,0 +1,82 @@
+{
+  "id": "2010-2011",
+  "name": "2010-2011",
+  "competition": "Spor Toto 2. Lig (Profesyonel Takım)",
+  "sourcePolicy": "TFF-only",
+  "factoryVersion": "v5-professional-only-resilient",
+  "updatedAt": "2026-07-17T19:32:35.919463Z",
+  "summary": {
+    "matches": 36,
+    "wins": 12,
+    "draws": 10,
+    "losses": 14,
+    "goalsFor": 49,
+    "goalsAgainst": 52,
+    "goalDifference": -3,
+    "matchTypes": {
+      "league": 34,
+      "cup": 2
+    },
+    "points": 43,
+    "rawPoints": 43,
+    "pointsDeducted": 0,
+    "finalRank": 10
+  },
+  "files": {
+    "matchesIndex": "seasons/2010-2011/matches_index.json",
+    "standingsByWeek": "seasons/2010-2011/standings_by_week.json"
+  },
+  "sanitizedAt": "2026-07-17T19:33:43.180078Z",
+  "sanitizerVersion": "v1-professional-team-only",
+  "leagueStages": [
+    {
+      "id": "group-kirmizi",
+      "label": "Kırmızı",
+      "stageNumber": 1,
+      "startWeek": 1,
+      "endWeek": 34,
+      "played": 34,
+      "won": 11,
+      "drawn": 10,
+      "lost": 13,
+      "goalsFor": 48,
+      "goalsAgainst": 50,
+      "goalDifference": -2,
+      "points": 43,
+      "finalRank": 10,
+      "carriedMatches": 0,
+      "officialTableIsCumulative": false
+    }
+  ],
+  "officialStandingsMatchTypes": [
+    "league"
+  ],
+  "officialStandingsSummary": {
+    "played": 34,
+    "won": 11,
+    "drawn": 10,
+    "lost": 13,
+    "goalsFor": 48,
+    "goalsAgainst": 50,
+    "points": 43,
+    "rawPoints": 43,
+    "pointsDeducted": 0,
+    "goalDifference": -2,
+    "finalRank": 10
+  },
+  "leagueSummary": {
+    "played": 34,
+    "won": 11,
+    "drawn": 10,
+    "lost": 13,
+    "goalsFor": 48,
+    "goalsAgainst": 50,
+    "points": 43,
+    "rawPoints": 43,
+    "pointsDeducted": 0,
+    "goalDifference": -2,
+    "finalRank": 10
+  },
+  "standingsUpdatedAt": "2026-07-17T22:23:42.958204Z",
+  "standingsBuilderVersion": "standings-builder-v8-legacy-week-group-routing"
+}

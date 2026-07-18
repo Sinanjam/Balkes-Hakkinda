@@ -1,0 +1,576 @@
+{
+  "generatedAt": "2026-07-17T22:29:40.852789Z",
+  "status": "ok",
+  "dataRoot": "generated/tff-data",
+  "registry": ".cache/tff/runtime_registry.json",
+  "detailsProcessed": 1117,
+  "personFieldsCleaned": 0,
+  "playersIndexed": 12573,
+  "opponentsIndexed": 282,
+  "leagueMatches": 1064,
+  "exactFixtureWeeks": 1064,
+  "fallbackWeeks": 0,
+  "seasons": [
+    {
+      "leagueMatches": 34,
+      "assigned": 34,
+      "exactFixtureWeeks": 34,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [
+        {
+          "id": "group-7",
+          "label": "7",
+          "number": 1,
+          "maxWeek": 34,
+          "expectedMatches": 34
+        }
+      ],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "1990-1991",
+      "details": 34
+    },
+    {
+      "leagueMatches": 34,
+      "assigned": 34,
+      "exactFixtureWeeks": 34,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [
+        {
+          "id": "group-7",
+          "label": "7",
+          "number": 1,
+          "maxWeek": 34,
+          "expectedMatches": 34
+        }
+      ],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "1991-1992",
+      "details": 34
+    },
+    {
+      "leagueMatches": 36,
+      "assigned": 36,
+      "exactFixtureWeeks": 36,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [
+        {
+          "id": "group-02",
+          "label": "02",
+          "number": 1,
+          "maxWeek": 22,
+          "expectedMatches": 20
+        },
+        {
+          "id": "group-k2",
+          "label": "K2",
+          "number": 2,
+          "maxWeek": 18,
+          "expectedMatches": 16
+        }
+      ],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "1992-1993",
+      "details": 38
+    },
+    {
+      "leagueMatches": 32,
+      "assigned": 32,
+      "exactFixtureWeeks": 32,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [
+        {
+          "id": "group-02",
+          "label": "02",
+          "number": 1,
+          "maxWeek": 18,
+          "expectedMatches": 18
+        },
+        {
+          "id": "group-k2",
+          "label": "K2",
+          "number": 2,
+          "maxWeek": 14,
+          "expectedMatches": 14
+        }
+      ],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "1993-1994",
+      "details": 34
+    },
+    {
+      "leagueMatches": 32,
+      "assigned": 32,
+      "exactFixtureWeeks": 32,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [
+        {
+          "id": "group-02",
+          "label": "02",
+          "number": 1,
+          "maxWeek": 18,
+          "expectedMatches": 18
+        },
+        {
+          "id": "group-k2",
+          "label": "K2",
+          "number": 2,
+          "maxWeek": 14,
+          "expectedMatches": 14
+        }
+      ],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "1994-1995",
+      "details": 33
+    },
+    {
+      "leagueMatches": 36,
+      "assigned": 36,
+      "exactFixtureWeeks": 36,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [
+        {
+          "id": "group-02",
+          "label": "Kademe 02",
+          "number": 1,
+          "maxWeek": 18,
+          "expectedMatches": 18
+        },
+        {
+          "id": "group-f",
+          "label": "Yükselme F",
+          "number": 2,
+          "maxWeek": 18,
+          "expectedMatches": 18
+        }
+      ],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "1995-1996",
+      "details": 39
+    },
+    {
+      "leagueMatches": 32,
+      "assigned": 32,
+      "exactFixtureWeeks": 32,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [
+        {
+          "id": "group-02",
+          "label": "Kademe 02",
+          "number": 1,
+          "maxWeek": 18,
+          "expectedMatches": 18
+        },
+        {
+          "id": "group-k2",
+          "label": "Klasman K2",
+          "number": 2,
+          "maxWeek": 14,
+          "expectedMatches": 14
+        }
+      ],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "1996-1997",
+      "details": 33
+    },
+    {
+      "leagueMatches": 32,
+      "assigned": 32,
+      "exactFixtureWeeks": 32,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [
+        {
+          "id": "group-06",
+          "label": "06",
+          "number": 1,
+          "maxWeek": 34,
+          "expectedMatches": 32
+        }
+      ],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "1997-1998",
+      "details": 32
+    },
+    {
+      "leagueMatches": 32,
+      "assigned": 32,
+      "exactFixtureWeeks": 32,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [
+        {
+          "id": "group-07",
+          "label": "07",
+          "number": 1,
+          "maxWeek": 34,
+          "expectedMatches": 32
+        }
+      ],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "1998-1999",
+      "details": 33
+    },
+    {
+      "leagueMatches": 32,
+      "assigned": 32,
+      "exactFixtureWeeks": 32,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [
+        {
+          "id": "group-06",
+          "label": "06",
+          "number": 1,
+          "maxWeek": 34,
+          "expectedMatches": 32
+        }
+      ],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "1999-2000",
+      "details": 34
+    },
+    {
+      "leagueMatches": 32,
+      "assigned": 32,
+      "exactFixtureWeeks": 32,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [
+        {
+          "id": "group-06",
+          "label": "06",
+          "number": 1,
+          "maxWeek": 34,
+          "expectedMatches": 32
+        }
+      ],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2000-2001",
+      "details": 33
+    },
+    {
+      "leagueMatches": 30,
+      "assigned": 30,
+      "exactFixtureWeeks": 30,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2006-2007",
+      "details": 30
+    },
+    {
+      "leagueMatches": 32,
+      "assigned": 32,
+      "exactFixtureWeeks": 32,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [
+        {
+          "id": "group-03",
+          "label": "03",
+          "number": 1,
+          "maxWeek": 34,
+          "expectedMatches": 32
+        }
+      ],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2007-2008",
+      "details": 33
+    },
+    {
+      "leagueMatches": 32,
+      "assigned": 32,
+      "exactFixtureWeeks": 32,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [
+        {
+          "id": "group-02",
+          "label": "02",
+          "number": 1,
+          "maxWeek": 18,
+          "expectedMatches": 18
+        },
+        {
+          "id": "group-k2",
+          "label": "K2",
+          "number": 2,
+          "maxWeek": 14,
+          "expectedMatches": 14
+        }
+      ],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2008-2009",
+      "details": 33
+    },
+    {
+      "leagueMatches": 38,
+      "assigned": 38,
+      "exactFixtureWeeks": 38,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [
+        {
+          "id": "group-01",
+          "label": "01",
+          "number": 1,
+          "maxWeek": 22,
+          "expectedMatches": 20
+        },
+        {
+          "id": "standalone-yukselme-grubu",
+          "label": "Yükselme Grubu",
+          "number": 2,
+          "maxWeek": 18,
+          "expectedMatches": 18
+        }
+      ],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2009-2010",
+      "details": 39
+    },
+    {
+      "leagueMatches": 34,
+      "assigned": 34,
+      "exactFixtureWeeks": 34,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [
+        {
+          "id": "group-kirmizi",
+          "label": "Kırmızı",
+          "number": 1,
+          "maxWeek": 34,
+          "expectedMatches": 34
+        }
+      ],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2010-2011",
+      "details": 36
+    },
+    {
+      "leagueMatches": 32,
+      "assigned": 32,
+      "exactFixtureWeeks": 32,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [
+        {
+          "id": "group-beyaz",
+          "label": "Beyaz",
+          "number": 1,
+          "maxWeek": 34,
+          "expectedMatches": 32
+        }
+      ],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2011-2012",
+      "details": 33
+    },
+    {
+      "leagueMatches": 32,
+      "assigned": 32,
+      "exactFixtureWeeks": 32,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2012-2013",
+      "details": 35
+    },
+    {
+      "leagueMatches": 36,
+      "assigned": 36,
+      "exactFixtureWeeks": 36,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [
+        {
+          "id": "group-lig",
+          "label": "Lig",
+          "number": 1,
+          "maxWeek": 38,
+          "expectedMatches": 36
+        }
+      ],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2013-2014",
+      "details": 40
+    },
+    {
+      "leagueMatches": 34,
+      "assigned": 34,
+      "exactFixtureWeeks": 34,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2014-2015",
+      "details": 35
+    },
+    {
+      "leagueMatches": 34,
+      "assigned": 34,
+      "exactFixtureWeeks": 34,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [
+        {
+          "id": "group-lig",
+          "label": "Lig",
+          "number": 1,
+          "maxWeek": 34,
+          "expectedMatches": 34
+        }
+      ],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2015-2016",
+      "details": 38
+    },
+    {
+      "leagueMatches": 34,
+      "assigned": 34,
+      "exactFixtureWeeks": 34,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [
+        {
+          "id": "group-lig",
+          "label": "Lig",
+          "number": 1,
+          "maxWeek": 34,
+          "expectedMatches": 34
+        }
+      ],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2016-2017",
+      "details": 36
+    },
+    {
+      "leagueMatches": 34,
+      "assigned": 34,
+      "exactFixtureWeeks": 34,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [
+        {
+          "id": "group-lig",
+          "label": "Lig",
+          "number": 1,
+          "maxWeek": 34,
+          "expectedMatches": 34
+        }
+      ],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2017-2018",
+      "details": 35
+    },
+    {
+      "leagueMatches": 34,
+      "assigned": 34,
+      "exactFixtureWeeks": 34,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2018-2019",
+      "details": 40
+    },
+    {
+      "leagueMatches": 34,
+      "assigned": 34,
+      "exactFixtureWeeks": 34,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2019-2020",
+      "details": 35
+    },
+    {
+      "leagueMatches": 34,
+      "assigned": 34,
+      "exactFixtureWeeks": 34,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2020-2021",
+      "details": 35
+    },
+    {
+      "leagueMatches": 36,
+      "assigned": 36,
+      "exactFixtureWeeks": 36,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2021-2022",
+      "details": 37
+    },
+    {
+      "leagueMatches": 38,
+      "assigned": 38,
+      "exactFixtureWeeks": 38,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2022-2023",
+      "details": 40
+    },
+    {
+      "leagueMatches": 28,
+      "assigned": 28,
+      "exactFixtureWeeks": 28,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2023-2024",
+      "details": 29
+    },
+    {
+      "leagueMatches": 30,
+      "assigned": 30,
+      "exactFixtureWeeks": 30,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2024-2025",
+      "details": 34
+    },
+    {
+      "leagueMatches": 30,
+      "assigned": 30,
+      "exactFixtureWeeks": 30,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2025-2026",
+      "details": 33
+    },
+    {
+      "leagueMatches": 34,
+      "assigned": 34,
+      "exactFixtureWeeks": 34,
+      "fallbackWeeks": 0,
+      "fallbackMatchIds": [],
+      "stages": [],
+      "nonLeagueFieldsCleaned": 0,
+      "season": "2026-2027",
+      "details": 34
+    }
+  ]
+}

@@ -1,0 +1,1402 @@
+{
+  "id": "251210",
+  "matchCode": "4676",
+  "season": "2023-2024",
+  "competition": "TFF 3. LİG (Profesyonel Takım)",
+  "teamLevel": "professional",
+  "teamLevelEvidence": "explicit_professional",
+  "competitionType": "league",
+  "competitionLabel": "Lig",
+  "stadium": "YENİ ORDU STADYUMU - ORDU",
+  "venue": "YENİ ORDU STADYUMU - ORDU",
+  "stage": "Lig",
+  "stageLabel": "Lig",
+  "date": "2023-10-21",
+  "time": "18:00",
+  "dateDisplay": "2023-10-21 - 18:00",
+  "homeTeam": "ORDUSPOR 1967 A.Ş.",
+  "awayTeam": "Balıkesirspor",
+  "matchType": "league",
+  "matchTypeLabel": "Lig",
+  "type": "league",
+  "typeLabel": "Lig",
+  "score": {
+    "home": 4,
+    "away": 0,
+    "display": "4-0",
+    "played": true
+  },
+  "balkes": {
+    "isHome": false,
+    "isAway": true,
+    "opponent": "ORDUSPOR 1967 A.Ş.",
+    "goalsFor": 0,
+    "goalsAgainst": 4,
+    "result": "L"
+  },
+  "officials": [
+    {
+      "role": "Hakem",
+      "name": "MELİH ALDEMİR"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "ERAY PINAR"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "GÖKER EREL"
+    },
+    {
+      "role": "Dördüncü Hakem",
+      "name": "ONUR CAN DOLĞUN"
+    }
+  ],
+  "referees": [
+    {
+      "role": "Hakem",
+      "name": "MELİH ALDEMİR"
+    },
+    {
+      "role": "1. Yardımcı Hakem",
+      "name": "ERAY PINAR"
+    },
+    {
+      "role": "2. Yardımcı Hakem",
+      "name": "GÖKER EREL"
+    },
+    {
+      "role": "Dördüncü Hakem",
+      "name": "ONUR CAN DOLĞUN"
+    }
+  ],
+  "lineups": {
+    "home": {
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "starting11": [
+        {
+          "name": "CİHAN ŞENTÜRK",
+          "number": 1,
+          "shirt_no": "1",
+          "tffPersonId": "728325"
+        },
+        {
+          "name": "GÜNEY GENÇEL",
+          "number": 5,
+          "shirt_no": "5",
+          "tffPersonId": "1513822"
+        },
+        {
+          "name": "MUSTAFA SAMİCAN KESKİN",
+          "number": 6,
+          "shirt_no": "6",
+          "tffPersonId": "831109"
+        },
+        {
+          "name": "GÖKAY ESER",
+          "number": 77,
+          "shirt_no": "77",
+          "tffPersonId": "1440142"
+        },
+        {
+          "name": "ÖNDER AKDAĞ",
+          "number": 12,
+          "shirt_no": "12",
+          "tffPersonId": "879762"
+        },
+        {
+          "name": "ŞÜKRÜ KAAN KILIÇASLAN",
+          "number": 17,
+          "shirt_no": "17",
+          "tffPersonId": "1344608"
+        },
+        {
+          "name": "KADİR TAŞOĞLU",
+          "number": 23,
+          "shirt_no": "23",
+          "tffPersonId": "1307215"
+        },
+        {
+          "name": "FATİH MANKIR",
+          "number": 42,
+          "shirt_no": "42",
+          "tffPersonId": "1608312"
+        },
+        {
+          "name": "RIDVAN KOÇAK",
+          "number": 52,
+          "shirt_no": "52",
+          "tffPersonId": "238887"
+        },
+        {
+          "name": "İSMAİL KAYALI",
+          "number": 67,
+          "shirt_no": "67",
+          "tffPersonId": "1367345"
+        },
+        {
+          "name": "YUSUF AVCILAR",
+          "number": 90,
+          "shirt_no": "90",
+          "tffPersonId": "1344796"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "OĞUZHAN ÇELİK",
+          "number": 78,
+          "shirt_no": "78",
+          "tffPersonId": "1604564"
+        },
+        {
+          "name": "CEVATCAN EKİNCİ",
+          "number": 7,
+          "shirt_no": "7",
+          "tffPersonId": "1408733"
+        },
+        {
+          "name": "MUSTAFA YILMAZ",
+          "number": 8,
+          "shirt_no": "8",
+          "tffPersonId": "1559637"
+        },
+        {
+          "name": "GÜNEY TUTCUOĞLU",
+          "number": 10,
+          "shirt_no": "10",
+          "tffPersonId": "782816"
+        },
+        {
+          "name": "EFEKAN ŞENSOY",
+          "number": 21,
+          "shirt_no": "21",
+          "tffPersonId": "1805884"
+        },
+        {
+          "name": "GÜRCAN GÖZÜM",
+          "number": 30,
+          "shirt_no": "30",
+          "tffPersonId": "979405"
+        },
+        {
+          "name": "FURKAN MIZRAK",
+          "number": 66,
+          "shirt_no": "66",
+          "tffPersonId": "1044480"
+        },
+        {
+          "name": "KÜRŞAT BABAMOĞLU",
+          "number": 14,
+          "shirt_no": "14",
+          "tffPersonId": "2066167"
+        },
+        {
+          "name": "BATUHAN BERKAY FINDIK",
+          "number": 93,
+          "shirt_no": "93",
+          "tffPersonId": "1558924"
+        },
+        {
+          "name": "ATA ÖZTÜRK",
+          "number": 99,
+          "shirt_no": "99",
+          "tffPersonId": "1702144"
+        }
+      ],
+      "technicalStaff": [
+        {
+          "name": "BÜLENT DEMİRKANLI"
+        }
+      ],
+      "coach": "BÜLENT DEMİRKANLI",
+      "raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu"
+    },
+    "away": {
+      "team": "Balıkesirspor",
+      "starting11": [
+        {
+          "name": "HÜSEYİN ALTINTAŞ",
+          "number": 12,
+          "shirt_no": "12",
+          "tffPersonId": "974194"
+        },
+        {
+          "name": "MUHSİN YILDIRIM",
+          "number": 21,
+          "shirt_no": "21",
+          "tffPersonId": "984491"
+        },
+        {
+          "name": "BİROL PARLAK",
+          "number": 4,
+          "shirt_no": "4",
+          "tffPersonId": "824596"
+        },
+        {
+          "name": "GÖKSU MUTLU",
+          "number": 70,
+          "shirt_no": "70",
+          "tffPersonId": "1449337"
+        },
+        {
+          "name": "BERAT AYDOĞDU",
+          "number": 6,
+          "shirt_no": "6",
+          "tffPersonId": "1196386"
+        },
+        {
+          "name": "ERKAN SÜER",
+          "number": 40,
+          "shirt_no": "40",
+          "tffPersonId": "1567856"
+        },
+        {
+          "name": "SEDAT YİĞİT KURNAZ",
+          "number": 10,
+          "shirt_no": "10",
+          "tffPersonId": "1712887"
+        },
+        {
+          "name": "ASIM HAMZAÇEBİ",
+          "number": 15,
+          "shirt_no": "15",
+          "tffPersonId": "1340429"
+        },
+        {
+          "name": "ARDA İBRAHİM AKGÜN",
+          "number": 11,
+          "shirt_no": "11",
+          "tffPersonId": "1934117"
+        },
+        {
+          "name": "BERKAY AYKURT",
+          "number": 7,
+          "shirt_no": "7",
+          "tffPersonId": "1621081"
+        },
+        {
+          "name": "DOĞANAY AVCI",
+          "number": 20,
+          "shirt_no": "20",
+          "tffPersonId": "2024592"
+        }
+      ],
+      "substitutes": [
+        {
+          "name": "YİĞİTHAN KIR",
+          "number": 1,
+          "shirt_no": "1",
+          "tffPersonId": "1588286"
+        },
+        {
+          "name": "BERK TOSUN",
+          "number": 16,
+          "shirt_no": "16",
+          "tffPersonId": "1621067"
+        },
+        {
+          "name": "KAĞAN KAYALI",
+          "number": 5,
+          "shirt_no": "5",
+          "tffPersonId": "1377605"
+        },
+        {
+          "name": "BERKE DOĞUKAN ÖNDE",
+          "number": 9,
+          "shirt_no": "9",
+          "tffPersonId": "1139074"
+        },
+        {
+          "name": "OKTAY BALA",
+          "number": 55,
+          "shirt_no": "55",
+          "tffPersonId": "1108664"
+        },
+        {
+          "name": "ÖMER FARUK YAYLACI",
+          "number": 54,
+          "shirt_no": "54",
+          "tffPersonId": "1389969"
+        },
+        {
+          "name": "DOĞUKAN SARAL",
+          "number": 53,
+          "shirt_no": "53",
+          "tffPersonId": "1693057"
+        },
+        {
+          "name": "UTKAN GÖKÇEN",
+          "number": 88,
+          "shirt_no": "88",
+          "tffPersonId": "1734117"
+        },
+        {
+          "name": "HAKAN AKGÜL",
+          "number": 14,
+          "shirt_no": "14",
+          "tffPersonId": "1613383"
+        },
+        {
+          "name": "RAHMİ ANIL BAŞARAN",
+          "number": 27,
+          "shirt_no": "27",
+          "tffPersonId": "1442246"
+        }
+      ],
+      "technicalStaff": [
+        {
+          "name": "MEHMET DEMİRTAŞ"
+        }
+      ],
+      "coach": "MEHMET DEMİRTAŞ",
+      "raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu"
+    }
+  },
+  "players": [
+    {
+      "name": "ARDA İBRAHİM AKGÜN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 11,
+      "tffPersonId": "1934117"
+    },
+    {
+      "name": "ASIM HAMZAÇEBİ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 15,
+      "tffPersonId": "1340429"
+    },
+    {
+      "name": "BERAT AYDOĞDU",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 6,
+      "tffPersonId": "1196386"
+    },
+    {
+      "name": "BERK TOSUN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 16,
+      "tffPersonId": "1621067"
+    },
+    {
+      "name": "BERKAY AYKURT",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 7,
+      "tffPersonId": "1621081"
+    },
+    {
+      "name": "BERKE DOĞUKAN ÖNDE",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 9,
+      "tffPersonId": "1139074"
+    },
+    {
+      "name": "BİROL PARLAK",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 4,
+      "tffPersonId": "824596"
+    },
+    {
+      "name": "DOĞANAY AVCI",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 20,
+      "tffPersonId": "2024592"
+    },
+    {
+      "name": "DOĞUKAN SARAL",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 53,
+      "tffPersonId": "1693057"
+    },
+    {
+      "name": "ERKAN SÜER",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 40,
+      "tffPersonId": "1567856"
+    },
+    {
+      "name": "GÖKSU MUTLU",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 70,
+      "tffPersonId": "1449337"
+    },
+    {
+      "name": "HAKAN AKGÜL",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 14,
+      "tffPersonId": "1613383"
+    },
+    {
+      "name": "HÜSEYİN ALTINTAŞ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11"
+      ],
+      "number": 12,
+      "tffPersonId": "974194"
+    },
+    {
+      "name": "KAĞAN KAYALI",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 5,
+      "tffPersonId": "1377605"
+    },
+    {
+      "name": "MEHMET DEMİRTAŞ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "technical_staff"
+      ]
+    },
+    {
+      "name": "MUHSİN YILDIRIM",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "yellow_card"
+      ],
+      "number": 21,
+      "tffPersonId": "984491"
+    },
+    {
+      "name": "OKTAY BALA",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 55,
+      "tffPersonId": "1108664"
+    },
+    {
+      "name": "ÖMER FARUK YAYLACI",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 54,
+      "tffPersonId": "1389969"
+    },
+    {
+      "name": "RAHMİ ANIL BAŞARAN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 27,
+      "tffPersonId": "1442246"
+    },
+    {
+      "name": "SEDAT YİĞİT KURNAZ",
+      "team": "Balıkesirspor",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 10,
+      "tffPersonId": "1712887"
+    },
+    {
+      "name": "UTKAN GÖKÇEN",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 88,
+      "tffPersonId": "1734117"
+    },
+    {
+      "name": "YİĞİTHAN KIR",
+      "team": "Balıkesirspor",
+      "roles": [
+        "substitute"
+      ],
+      "number": 1,
+      "tffPersonId": "1588286"
+    },
+    {
+      "name": "ATA ÖZTÜRK",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "substitute"
+      ],
+      "number": 99,
+      "tffPersonId": "1702144"
+    },
+    {
+      "name": "BATUHAN BERKAY FINDIK",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "substitute"
+      ],
+      "number": 93,
+      "tffPersonId": "1558924"
+    },
+    {
+      "name": "BÜLENT DEMİRKANLI",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "technical_staff"
+      ]
+    },
+    {
+      "name": "CEVATCAN EKİNCİ",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "substitute",
+        "goal",
+        "substitution_in"
+      ],
+      "number": 7,
+      "tffPersonId": "1408733"
+    },
+    {
+      "name": "CİHAN ŞENTÜRK",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "starting11"
+      ],
+      "number": 1,
+      "tffPersonId": "728325"
+    },
+    {
+      "name": "EFEKAN ŞENSOY",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 21,
+      "tffPersonId": "1805884"
+    },
+    {
+      "name": "FATİH MANKIR",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 42,
+      "tffPersonId": "1608312"
+    },
+    {
+      "name": "FURKAN MIZRAK",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 66,
+      "tffPersonId": "1044480"
+    },
+    {
+      "name": "GÖKAY ESER",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "starting11",
+        "yellow_card",
+        "substitution_out"
+      ],
+      "number": 77,
+      "tffPersonId": "1440142"
+    },
+    {
+      "name": "GÜNEY GENÇEL",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "starting11",
+        "substitution_out"
+      ],
+      "number": 5,
+      "tffPersonId": "1513822"
+    },
+    {
+      "name": "GÜNEY TUTCUOĞLU",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "substitute"
+      ],
+      "number": 10,
+      "tffPersonId": "782816"
+    },
+    {
+      "name": "GÜRCAN GÖZÜM",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "substitute",
+        "substitution_in"
+      ],
+      "number": 30,
+      "tffPersonId": "979405"
+    },
+    {
+      "name": "İSMAİL KAYALI",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "starting11"
+      ],
+      "number": 67,
+      "tffPersonId": "1367345"
+    },
+    {
+      "name": "KADİR TAŞOĞLU",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "starting11",
+        "red_card"
+      ],
+      "number": 23,
+      "tffPersonId": "1307215"
+    },
+    {
+      "name": "KÜRŞAT BABAMOĞLU",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "substitute"
+      ],
+      "number": 14,
+      "tffPersonId": "2066167"
+    },
+    {
+      "name": "MUSTAFA SAMİCAN KESKİN",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "starting11",
+        "goal",
+        "yellow_card"
+      ],
+      "number": 6,
+      "tffPersonId": "831109"
+    },
+    {
+      "name": "MUSTAFA YILMAZ",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "substitute",
+        "yellow_card",
+        "substitution_in"
+      ],
+      "number": 8,
+      "tffPersonId": "1559637"
+    },
+    {
+      "name": "OĞUZHAN ÇELİK",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "substitute"
+      ],
+      "number": 78,
+      "tffPersonId": "1604564"
+    },
+    {
+      "name": "ÖNDER AKDAĞ",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "starting11",
+        "goal",
+        "yellow_card",
+        "substitution_out"
+      ],
+      "number": 12,
+      "tffPersonId": "879762"
+    },
+    {
+      "name": "RIDVAN KOÇAK",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "starting11"
+      ],
+      "number": 52,
+      "tffPersonId": "238887"
+    },
+    {
+      "name": "ŞÜKRÜ KAAN KILIÇASLAN",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "starting11",
+        "goal",
+        "substitution_out"
+      ],
+      "number": 17,
+      "tffPersonId": "1344608"
+    },
+    {
+      "name": "YUSUF AVCILAR",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "roles": [
+        "starting11"
+      ],
+      "number": 90,
+      "tffPersonId": "1344796"
+    }
+  ],
+  "events": [
+    {
+      "type": "goal",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "ÖNDER AKDAĞ",
+      "scorer": "ÖNDER AKDAĞ",
+      "raw": "ÖNDER AKDAĞ,19.dk (F)",
+      "minute": 19,
+      "minuteRaw": "ÖNDER AKDAĞ,19.dk",
+      "goalType": "F",
+      "tffPersonId": "879762"
+    },
+    {
+      "type": "goal",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "ŞÜKRÜ KAAN KILIÇASLAN",
+      "scorer": "ŞÜKRÜ KAAN KILIÇASLAN",
+      "raw": "ŞÜKRÜ KAAN KILIÇASLAN,35.dk (F)",
+      "minute": 35,
+      "minuteRaw": "ŞÜKRÜ KAAN KILIÇASLAN,35.dk",
+      "goalType": "F",
+      "tffPersonId": "1344608"
+    },
+    {
+      "type": "goal",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "CEVATCAN EKİNCİ",
+      "scorer": "CEVATCAN EKİNCİ",
+      "raw": "CEVATCAN EKİNCİ,66.dk (F)",
+      "minute": 66,
+      "minuteRaw": "CEVATCAN EKİNCİ,66.dk",
+      "goalType": "F",
+      "tffPersonId": "1408733"
+    },
+    {
+      "type": "goal",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "MUSTAFA SAMİCAN KESKİN",
+      "scorer": "MUSTAFA SAMİCAN KESKİN",
+      "raw": "MUSTAFA SAMİCAN KESKİN,83.dk (P)",
+      "minute": 83,
+      "minuteRaw": "MUSTAFA SAMİCAN KESKİN,83.dk",
+      "goalType": "P",
+      "tffPersonId": "831109"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "MUSTAFA SAMİCAN KESKİN",
+      "minute": 48,
+      "minuteRaw": "48.dk",
+      "tffPersonId": "831109"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "ÖNDER AKDAĞ",
+      "minute": 38,
+      "minuteRaw": "38.dk",
+      "tffPersonId": "879762"
+    },
+    {
+      "type": "red_card",
+      "card": "red",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "KADİR TAŞOĞLU",
+      "minute": 43,
+      "minuteRaw": "43.dk",
+      "tffPersonId": "1307215"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "GÖKAY ESER",
+      "minute": 90,
+      "minuteRaw": "90+2.dk",
+      "tffPersonId": "1440142"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "MUSTAFA YILMAZ",
+      "minute": 86,
+      "minuteRaw": "86.dk",
+      "tffPersonId": "1559637"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "MUHSİN YILDIRIM",
+      "minute": 33,
+      "minuteRaw": "33.dk",
+      "tffPersonId": "984491"
+    },
+    {
+      "type": "substitution",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "order": 1,
+      "player_in": "MUSTAFA YILMAZ",
+      "player_out": "ÖNDER AKDAĞ",
+      "playerIn": "MUSTAFA YILMAZ",
+      "playerOut": "ÖNDER AKDAĞ",
+      "minute": 77,
+      "minuteRaw": "77.dk",
+      "minute_text": "77.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "ÖNDER AKDAĞ",
+      "order": 1,
+      "minute": 77,
+      "minuteRaw": "77.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "MUSTAFA YILMAZ",
+      "order": 1,
+      "minute": 77,
+      "minuteRaw": "77.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "order": 2,
+      "player_in": "CEVATCAN EKİNCİ",
+      "player_out": "ŞÜKRÜ KAAN KILIÇASLAN",
+      "playerIn": "CEVATCAN EKİNCİ",
+      "playerOut": "ŞÜKRÜ KAAN KILIÇASLAN",
+      "minute": 54,
+      "minuteRaw": "54.dk",
+      "minute_text": "54.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "ŞÜKRÜ KAAN KILIÇASLAN",
+      "order": 2,
+      "minute": 54,
+      "minuteRaw": "54.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "CEVATCAN EKİNCİ",
+      "order": 2,
+      "minute": 54,
+      "minuteRaw": "54.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "order": 3,
+      "player_in": "GÜRCAN GÖZÜM",
+      "player_out": "GÖKAY ESER",
+      "playerIn": "GÜRCAN GÖZÜM",
+      "playerOut": "GÖKAY ESER",
+      "minute": 90,
+      "minuteRaw": "90+3.dk",
+      "minute_text": "90+3.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "GÖKAY ESER",
+      "order": 3,
+      "minute": 90,
+      "minuteRaw": "90+3.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "GÜRCAN GÖZÜM",
+      "order": 3,
+      "minute": 90,
+      "minuteRaw": "90+3.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "order": 4,
+      "player_in": "FURKAN MIZRAK",
+      "player_out": "GÜNEY GENÇEL",
+      "playerIn": "FURKAN MIZRAK",
+      "playerOut": "GÜNEY GENÇEL",
+      "minute": 77,
+      "minuteRaw": "77.dk",
+      "minute_text": "77.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "GÜNEY GENÇEL",
+      "order": 4,
+      "minute": 77,
+      "minuteRaw": "77.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "FURKAN MIZRAK",
+      "order": 4,
+      "minute": 77,
+      "minuteRaw": "77.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "order": 5,
+      "player_in": "EFEKAN ŞENSOY",
+      "player_out": "FATİH MANKIR",
+      "playerIn": "EFEKAN ŞENSOY",
+      "playerOut": "FATİH MANKIR",
+      "minute": 90,
+      "minuteRaw": "90+3.dk",
+      "minute_text": "90+3.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "FATİH MANKIR",
+      "order": 5,
+      "minute": 90,
+      "minuteRaw": "90+3.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "EFEKAN ŞENSOY",
+      "order": 5,
+      "minute": 90,
+      "minuteRaw": "90+3.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 1,
+      "player_in": "BERK TOSUN",
+      "player_out": "ASIM HAMZAÇEBİ",
+      "playerIn": "BERK TOSUN",
+      "playerOut": "ASIM HAMZAÇEBİ",
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "minute_text": "46.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "ASIM HAMZAÇEBİ",
+      "order": 1,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "BERK TOSUN",
+      "order": 1,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 2,
+      "player_in": "OKTAY BALA",
+      "player_out": "BERKAY AYKURT",
+      "playerIn": "OKTAY BALA",
+      "playerOut": "BERKAY AYKURT",
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "minute_text": "46.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "BERKAY AYKURT",
+      "order": 2,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "OKTAY BALA",
+      "order": 2,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 3,
+      "player_in": "BERKE DOĞUKAN ÖNDE",
+      "player_out": "SEDAT YİĞİT KURNAZ",
+      "playerIn": "BERKE DOĞUKAN ÖNDE",
+      "playerOut": "SEDAT YİĞİT KURNAZ",
+      "minute": 80,
+      "minuteRaw": "80.dk",
+      "minute_text": "80.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "SEDAT YİĞİT KURNAZ",
+      "order": 3,
+      "minute": 80,
+      "minuteRaw": "80.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "BERKE DOĞUKAN ÖNDE",
+      "order": 3,
+      "minute": 80,
+      "minuteRaw": "80.dk"
+    },
+    {
+      "type": "substitution",
+      "team": "Balıkesirspor",
+      "order": 4,
+      "player_in": "RAHMİ ANIL BAŞARAN",
+      "player_out": "ARDA İBRAHİM AKGÜN",
+      "playerIn": "RAHMİ ANIL BAŞARAN",
+      "playerOut": "ARDA İBRAHİM AKGÜN",
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "minute_text": "46.dk"
+    },
+    {
+      "type": "substitution_out",
+      "team": "Balıkesirspor",
+      "player": "ARDA İBRAHİM AKGÜN",
+      "order": 4,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    },
+    {
+      "type": "substitution_in",
+      "team": "Balıkesirspor",
+      "player": "RAHMİ ANIL BAŞARAN",
+      "order": 4,
+      "minute": 46,
+      "minuteRaw": "46.dk"
+    }
+  ],
+  "goals": [
+    {
+      "type": "goal",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "ÖNDER AKDAĞ",
+      "scorer": "ÖNDER AKDAĞ",
+      "raw": "ÖNDER AKDAĞ,19.dk (F)",
+      "minute": 19,
+      "minuteRaw": "ÖNDER AKDAĞ,19.dk",
+      "goalType": "F",
+      "tffPersonId": "879762"
+    },
+    {
+      "type": "goal",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "ŞÜKRÜ KAAN KILIÇASLAN",
+      "scorer": "ŞÜKRÜ KAAN KILIÇASLAN",
+      "raw": "ŞÜKRÜ KAAN KILIÇASLAN,35.dk (F)",
+      "minute": 35,
+      "minuteRaw": "ŞÜKRÜ KAAN KILIÇASLAN,35.dk",
+      "goalType": "F",
+      "tffPersonId": "1344608"
+    },
+    {
+      "type": "goal",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "CEVATCAN EKİNCİ",
+      "scorer": "CEVATCAN EKİNCİ",
+      "raw": "CEVATCAN EKİNCİ,66.dk (F)",
+      "minute": 66,
+      "minuteRaw": "CEVATCAN EKİNCİ,66.dk",
+      "goalType": "F",
+      "tffPersonId": "1408733"
+    },
+    {
+      "type": "goal",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "MUSTAFA SAMİCAN KESKİN",
+      "scorer": "MUSTAFA SAMİCAN KESKİN",
+      "raw": "MUSTAFA SAMİCAN KESKİN,83.dk (P)",
+      "minute": 83,
+      "minuteRaw": "MUSTAFA SAMİCAN KESKİN,83.dk",
+      "goalType": "P",
+      "tffPersonId": "831109"
+    }
+  ],
+  "goalScorers": [
+    {
+      "player": "ÖNDER AKDAĞ",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "minute": 19,
+      "goalType": "F"
+    },
+    {
+      "player": "ŞÜKRÜ KAAN KILIÇASLAN",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "minute": 35,
+      "goalType": "F"
+    },
+    {
+      "player": "CEVATCAN EKİNCİ",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "minute": 66,
+      "goalType": "F"
+    },
+    {
+      "player": "MUSTAFA SAMİCAN KESKİN",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "minute": 83,
+      "goalType": "P"
+    }
+  ],
+  "cards": [
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "MUSTAFA SAMİCAN KESKİN",
+      "minute": 48,
+      "minuteRaw": "48.dk",
+      "tffPersonId": "831109"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "ÖNDER AKDAĞ",
+      "minute": 38,
+      "minuteRaw": "38.dk",
+      "tffPersonId": "879762"
+    },
+    {
+      "type": "red_card",
+      "card": "red",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "KADİR TAŞOĞLU",
+      "minute": 43,
+      "minuteRaw": "43.dk",
+      "tffPersonId": "1307215"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "GÖKAY ESER",
+      "minute": 90,
+      "minuteRaw": "90+2.dk",
+      "tffPersonId": "1440142"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "player": "MUSTAFA YILMAZ",
+      "minute": 86,
+      "minuteRaw": "86.dk",
+      "tffPersonId": "1559637"
+    },
+    {
+      "type": "yellow_card",
+      "card": "yellow",
+      "team": "Balıkesirspor",
+      "player": "MUHSİN YILDIRIM",
+      "minute": 33,
+      "minuteRaw": "33.dk",
+      "tffPersonId": "984491"
+    }
+  ],
+  "substitutions": [
+    {
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "order": 1,
+      "minute": 77,
+      "minuteRaw": "77.dk",
+      "playerOut": "ÖNDER AKDAĞ",
+      "player_out": "ÖNDER AKDAĞ",
+      "playerOutTffPersonId": "879762",
+      "playerIn": "MUSTAFA YILMAZ",
+      "player_in": "MUSTAFA YILMAZ",
+      "playerInTffPersonId": "1559637"
+    },
+    {
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "order": 2,
+      "minute": 54,
+      "minuteRaw": "54.dk",
+      "playerOut": "ŞÜKRÜ KAAN KILIÇASLAN",
+      "player_out": "ŞÜKRÜ KAAN KILIÇASLAN",
+      "playerOutTffPersonId": "1344608",
+      "playerIn": "CEVATCAN EKİNCİ",
+      "player_in": "CEVATCAN EKİNCİ",
+      "playerInTffPersonId": "1408733"
+    },
+    {
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "order": 3,
+      "minute": 90,
+      "minuteRaw": "90+3.dk",
+      "playerOut": "GÖKAY ESER",
+      "player_out": "GÖKAY ESER",
+      "playerOutTffPersonId": "1440142",
+      "playerIn": "GÜRCAN GÖZÜM",
+      "player_in": "GÜRCAN GÖZÜM",
+      "playerInTffPersonId": "979405"
+    },
+    {
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "order": 4,
+      "minute": 77,
+      "minuteRaw": "77.dk",
+      "playerOut": "GÜNEY GENÇEL",
+      "player_out": "GÜNEY GENÇEL",
+      "playerOutTffPersonId": "1513822",
+      "playerIn": "FURKAN MIZRAK",
+      "player_in": "FURKAN MIZRAK",
+      "playerInTffPersonId": "1044480"
+    },
+    {
+      "team": "ORDUSPOR 1967 A.Ş.",
+      "order": 5,
+      "minute": 90,
+      "minuteRaw": "90+3.dk",
+      "playerOut": "FATİH MANKIR",
+      "player_out": "FATİH MANKIR",
+      "playerOutTffPersonId": "1608312",
+      "playerIn": "EFEKAN ŞENSOY",
+      "player_in": "EFEKAN ŞENSOY",
+      "playerInTffPersonId": "1805884"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 1,
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "playerOut": "ASIM HAMZAÇEBİ",
+      "player_out": "ASIM HAMZAÇEBİ",
+      "playerOutTffPersonId": "1340429",
+      "playerIn": "BERK TOSUN",
+      "player_in": "BERK TOSUN",
+      "playerInTffPersonId": "1621067"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 2,
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "playerOut": "BERKAY AYKURT",
+      "player_out": "BERKAY AYKURT",
+      "playerOutTffPersonId": "1621081",
+      "playerIn": "OKTAY BALA",
+      "player_in": "OKTAY BALA",
+      "playerInTffPersonId": "1108664"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 3,
+      "minute": 80,
+      "minuteRaw": "80.dk",
+      "playerOut": "SEDAT YİĞİT KURNAZ",
+      "player_out": "SEDAT YİĞİT KURNAZ",
+      "playerOutTffPersonId": "1712887",
+      "playerIn": "BERKE DOĞUKAN ÖNDE",
+      "player_in": "BERKE DOĞUKAN ÖNDE",
+      "playerInTffPersonId": "1139074"
+    },
+    {
+      "team": "Balıkesirspor",
+      "order": 4,
+      "minute": 46,
+      "minuteRaw": "46.dk",
+      "playerOut": "ARDA İBRAHİM AKGÜN",
+      "player_out": "ARDA İBRAHİM AKGÜN",
+      "playerOutTffPersonId": "1934117",
+      "playerIn": "RAHMİ ANIL BAŞARAN",
+      "player_in": "RAHMİ ANIL BAŞARAN",
+      "playerInTffPersonId": "1442246"
+    }
+  ],
+  "sections_raw": {
+    "full_text_excerpt": "ORDUSPOR 1967 A.Ş. BALIKESİRSPOR - Maç Detayları TFF\nAra\nTR\nEN\nTRENDYOL SÜPER LİG\nZİRAAT TÜRKİYE KUPASI\nE-SHOP\nANA SAYFA\nTFF\nMİLLİ TAKIMLAR\nLİGLER\nKUPALAR\nKADIN FUTBOLU\nFGD\nBİLGİ BANKASI\nPUAN DURUMU\nTRENDYOL SÜPERLIG\nFutbol Bilgi Bankası\nFutbolcular\nTeknik Direktörler\nTüm Maçlar\nMilli Maçlar\nKulüpler\nStadyumlar\nCezalar\nHakemler\nGözlemci ve Temsilciler\nFutbol Menajerleri\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nFormlar ve Sözleşmeler\nStatüler\nTalimatlar\nTFF Kanun ve Statüsü\nOnline Başvurular\nTam Saha içerikleri için tıklayınız\nFikstürler\nLig Seçiniz...\nTrendyol Süper Lig\nTrendyol 1. Lig\nTFF 2. Lig\nTFF 3. Lig\nKadın Ligleri\nZiraat Türkiye Kupası\nBölgesel Amatör Lig\nGelişim Ligleri\nEngelli Futbolu\nFutsal Ligi\nPlaj Futbolu\nFutbol Altyapı Gelişim Ligi\nSezon Planlaması\nPuan Cetvelleri\nLig Seçiniz..\nTrendyol Süper Lig Şamil Ekinci Sezonu\nTrendyol 1.Lig\nTrendyol 1. Lig Play Off Müsabakaları\nNesine 2. Lig Kırmızı\nNesine 2. Lig Beyaz\nNesine 2. Lig Play Off Müsabakaları\nNesine 3. Lig 01\nNesine 3. Lig 02\nNesine 3. Lig 03\nNesine 3. Lig 04\nNesine 3. Lig Play Off Müsabakaları\nZiraat Türkiye Kupası\nZiraat Türkiye Kupası Grup Aşaması A\nZiraat Türkiye Kupası Grup Aşaması B\nZiraat Türkiye Kupası Grup Aşaması C\nZiraat Türkiye Kupası Grup Aşaması D\nTurkcell Kadın Futbol Süper Ligi\nKadınlar 1. Ligi A Grubu\nKadınlar 1. Ligi B Grubu\nTFF Kadınlar 1. Ligi Play Off 3.lük Müsabakaları\nTFF Kadınlar 1. Ligi Play Off Şampiyonluk Grubu\nTFF Kadınlar 1. Ligi Play Off Yükselme Grubu\nKadınlar 2.Ligi Play Off Müsabakaları\nKadınlar 3.Ligi Play Off Müsabakaları\nKadınlar 2. Ligi A Grup\nKadınlar 2. Ligi B Grup\nKadınlar 2. Ligi C Grup\nKadınlar 2. Ligi D Grup\nKadınlar 3. Ligi 1.\nKadınlar 3. Ligi 10.\nKadınlar 3. Ligi 11.\nKadınlar 3. Ligi 12.\nKadınlar 3. Ligi 13.\nKadınlar 3. Ligi 14.\nKadınlar 3. Ligi 15.\nKadınlar 3. Ligi 16.\nKadınlar 3. Ligi 17.\nKadınlar 3. Ligi 18.\nKadınlar 3. Ligi 19.\nKadınlar 3. Ligi 2.\nKadınlar 3. Ligi 20.\nKadınlar 3. Ligi 21.\nKadınlar 3. Ligi 22.\nKadınlar 3. Ligi 23.\nKadınlar 3. Ligi 24.\nKadınlar 3. Ligi 25.\nKadınlar 3. Ligi 26.\nKadınlar 3. Ligi 27.\nKadınlar 3. Ligi 28.\nKadınlar 3. Ligi 29.\nKadınlar 3. Ligi 3.\nKadınlar 3. Ligi 30.\nKadınlar 3. Ligi 31.\nKadınlar 3. Ligi 32.\nKadınlar 3. Ligi 4.\nKadınlar 3. Ligi 5.\nKadınlar 3. Ligi 6.\nKadınlar 3. Ligi 7.\nKadınlar 3. Ligi 8.\nKadınlar 3. Ligi 9.\nBölgesel Amatör Ligi 1. GRUP\nBölgesel Amatör Ligi 10. GRUP\nBölgesel Amatör Ligi 2. GRUP\nBölgesel Amatör Ligi 3. GRUP\nBölgesel Amatör Ligi 4. GRUP\nBölgesel Amatör Ligi 5. GRUP\nBölgesel Amatör Ligi 6. GRUP\nBölgesel Amatör Ligi 7. GRUP\nBölgesel Amatör Ligi 8. GRUP\nBölgesel Amatör Ligi 9. GRUP\nBölgesel Amatör Lig Baraj Maçları\nBölgesel Amatör Lig Play Off\nU17 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU17 Bölgesel Gelişim Ligi 1. Grup\nU17 Bölgesel Gelişim Ligi 2. Grup\nU17 Bölgesel Gelişim Ligi 3. Grup\nU17 Bölgesel Gelişim Ligi 4. Grup\nU17 Bölgesel Gelişim Ligi 5. Grup\nU17 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi 1. Grup\nU19 Bölgesel Gelişim Ligi 2. Grup\nU19 Bölgesel Gelişim Ligi 3. Grup\nU19 Bölgesel Gelişim Ligi 4. Grup\nU19 Bölgesel Gelişim Ligi 5. Grup\nU19 Bölgesel Gelişim Ligi 6. Grup\nU19 Bölgesel Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Grup 1\nU14 Gelişim Ligi Grup 2\nU14 Gelişim Ligi Grup 3\nU14 Gelişim Ligi Grup 4\nU14 Gelişim Ligi Grup 5\nU14 Gelişim Ligi Grup 6\nU14 Gelişim Ligi Grup 7\nU14 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU14 Gelişim Ligi Finalleri\nU15 Gelişim Ligi Grup 1\nU15 Gelişim Ligi Grup 2\nU15 Gelişim Ligi Grup 3\nU15 Gelişim Ligi Grup 4\nU15 Gelişim Ligi Grup 5\nU15 Gelişim Ligi Grup 6\nU15 Gelişim Ligi Grup 7\nU15 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU15 Gelişim Ligi Finalleri\nU16 Gelişim Ligi Grup 1\nU16 Gelişim Ligi Grup 2\nU16 Gelişim Ligi Grup 3\nU16 Gelişim Ligi Grup 4\nU16 Gelişim Ligi Grup 5\nU16 Gelişim Ligi Grup 6\nU16 Gelişim Ligi Grup 7\nU16 Gelişim Ligi Ön Eleme ve Son 16 Turu\nU16 Gelişim Ligi Finalleri\nU17 Elit A Ligi\nU17 Elit B Ligi\nU19 Elit A Ligi\nU19 Elit B Ligi\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP A\nU14 Çeyrek Final Grupları U14 ÇEYREK FİNAL GRUP B\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP A\nU15 Çeyrek Final Grupları U15 ÇEYREK FİNAL GRUP B\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP A\nU16 Çeyrek Final Grupları U16 ÇEYREK FİNAL GRUP B\nU14 Amatör Türkiye Şampiyonası\nU15 Amatör Türkiye Şampiyonası\nU16 Amatör Türkiye Şampiyonası\nU17 Amatör Türkiye Şampiyonası\nU18 Amatör Türkiye Şampiyonası\nHaftalık Maç Görevlileri\nHakem, Gözlemci ve Temsilciler\nMİLLİ TAKIM TARAFTAR KULÜBÜ\nSON DAKIKA..”\nU17 Kiz Milli Takimi'ndan Zafer Bayrami kutlamasi\n'Kuralina Göre' Programi beIN SPORTS'ta basliyor\nU18 Milli Takimimiz, Azerbaycan karsisinda\nU18 Milli Takimimiz, Azerbaycan karsisinda\n”\nORDUSPOR 1967 A.Ş.\n4\nBALIKESİRSPOR\n0\nTFF 3. LİG (Profesyonel Takım)\nMaç Kodu:\n4676\nYENİ ORDU STADYUMU - ORDU\n21.10.2023 - 18:00\nMELİH ALDEMİR(Hakem)\nERAY PINAR(1. Yardımcı Hakem)\nGÖKER EREL(2. Yardımcı Hakem)\nONUR CAN DOLĞUN(Dördüncü Hakem)\nŞEREF BASMACI(Gözlemci)\nMUAMMER ŞAHİN(Temsilci)\nEBRU TAVŞAN(Temsilci)\nİlk 11\n1.\nCİHAN ŞENTÜRK\n5.\nGÜNEY GENÇEL\n6.\nMUSTAFA SAMİCAN KESKİN\n77.\nGÖKAY ESER\n12.\nÖNDER AKDAĞ\n17.\nŞÜKRÜ KAAN KILIÇASLAN\n23.\nKADİR TAŞOĞLU\n42.\nFATİH MANKIR\n52.\nRIDVAN KOÇAK\n67.\nİSMAİL KAYALI\n90.\nYUSUF AVCILAR\nYedekler\n78.\nOĞUZHAN ÇELİK\n7.\nCEVATCAN EKİNCİ\n8.\nMUSTAFA YILMAZ\n10.\nGÜNEY TUTCUOĞLU\n21.\nEFEKAN ŞENSOY\n30.\nGÜRCAN GÖZÜM\n66.\nFURKAN MIZRAK\n14.\nKÜRŞAT BABAMOĞLU\n93.\nBATUHAN BERKAY FINDIK\n99.\nATA ÖZTÜRK\nTeknik Sorumlu\nBÜLENT DEMİRKANLI\nGoller\nÖNDER AKDAĞ,19.dk (F)\nŞÜKRÜ KAAN KILIÇASLAN,35.dk (F)\nCEVATCAN EKİNCİ,66.dk (F)\nMUSTAFA SAMİCAN KESKİN,83.dk (P)\nKartlar\nMUSTAFA SAMİCAN KESKİN\n48.dk\nÖNDER AKDAĞ\n38.dk\nKADİR TAŞOĞLU\n43.dk\nGÖKAY ESER\n90+2.dk\nMUSTAFA YILMAZ\n86.dk\nOyundan Çıkanlar\nÖNDER AKDAĞ\n77.dk\nŞÜKRÜ KAAN KILIÇASLAN\n54.dk\nGÖKAY ESER\n90+3.dk\nGÜNEY GENÇEL\n90+3.dk\nFATİH MANKIR\n77.dk\nOyuna Girenler\nMUSTAFA YILMAZ\n77.dk\nCEVATCAN EKİNCİ\n54.dk\nGÜRCAN GÖZÜM\n90+3.dk\nFURKAN MIZRAK\n77.dk\nEFEKAN ŞENSOY\n90+3.dk\nİlk 11\n12.\nHÜSEYİN ALTINTAŞ\n21.\nMUHSİN YILDIRIM\n4.\nBİROL PARLAK\n70.\nGÖKSU MUTLU\n6.\nBERAT AYDOĞDU\n40.\nERKAN SÜER\n10.\nSEDAT YİĞİT KURNAZ\n15.\nASIM HAMZAÇEBİ\n11.\nARDA İBRAHİM AKGÜN\n7.\nBERKAY AYKURT\n20.\nDOĞANAY AVCI\nYedekler\n1.\nYİĞİTHAN KIR\n16.\nBERK TOSUN\n5.\nKAĞAN KAYALI\n9.\nBERKE DOĞUKAN ÖNDE\n55.\nOKTAY BALA\n54.\nÖMER FARUK YAYLACI\n53.\nDOĞUKAN SARAL\n88.\nUTKAN GÖKÇEN\n14.\nHAKAN AKGÜL\n27.\nRAHMİ ANIL BAŞARAN\nTeknik Sorumlu\nMEHMET DEMİRTAŞ\nKartlar\nMUHSİN YILDIRIM\n33.dk\nOyundan Çıkanlar\nASIM HAMZAÇEBİ\n46.dk\nBERKAY AYKURT\n46.dk\nSEDAT YİĞİT KURNAZ\n46.dk\nARDA İBRAHİM AKGÜN\n80.dk\nOyuna Girenler\nBERK TOSUN\n46.dk\nOKTAY BALA\n46.dk\nBERKE DOĞUKAN ÖNDE\n80.dk\nRAHMİ ANIL BAŞARAN\n46.dk\nF:F - Ayak\nH:H - Kafa\nK:K - Kendi Kalesine\nP:P - Penaltı\nS:S - Seri Penaltı\nİletişim\n|\nSite Haritası\n|\nKopya Hakları\n|\nKullanım Şartları\n|\nSponsorlar\nTüm hakları Türkiye Futbol Federasyonu'na aittir.\nSosyal Medya Adreslerimiz:\nTFF\nTFF\nMilli Takımlar\nSüper Lig\nE-Millî Takım",
+    "officials_raw": "Hakemler\nGözlemci ve Temsilciler\nHaftalık Hakem, Gözlemci ve Temsilci Bilgileri\nHakem, Gözlemci ve Temsilciler\nMELİH ALDEMİR(Hakem)\nERAY PINAR(1. Yardımcı Hakem)\nGÖKER EREL(2. Yardımcı Hakem)\nONUR CAN DOLĞUN(Dördüncü Hakem)\nŞEREF BASMACI(Gözlemci)\nMUAMMER ŞAHİN(Temsilci)\nEBRU TAVŞAN(Temsilci)",
+    "lineups_raw": "İlk 11\nYedekler\nTeknik Sorumlu\nİlk 11\nYedekler\nTeknik Sorumlu",
+    "events_raw": "Goller\nÖNDER AKDAĞ,19.dk (F)\nŞÜKRÜ KAAN KILIÇASLAN,35.dk (F)\nCEVATCAN EKİNCİ,66.dk (F)\nMUSTAFA SAMİCAN KESKİN,83.dk (P)\n48.dk\n38.dk\n43.dk\n90+2.dk\n86.dk\nOyundan Çıkanlar\n77.dk\n54.dk\n90+3.dk\n90+3.dk\n77.dk\nOyuna Girenler\n77.dk\n54.dk\n90+3.dk\n77.dk\n90+3.dk\n33.dk\nOyundan Çıkanlar\n46.dk\n46.dk\n46.dk\n80.dk\nOyuna Girenler\n46.dk\n46.dk\n80.dk\n46.dk\nP:P - Penaltı\nS:S - Seri Penaltı"
+  },
+  "detailCompleteness": {
+    "hasStadium": true,
+    "starting11Home": 11,
+    "starting11Away": 11,
+    "substitutesHome": 10,
+    "substitutesAway": 10,
+    "goals": 4,
+    "cards": 6,
+    "substitutions": 9,
+    "players": 44
+  },
+  "quality": "A",
+  "source": {
+    "name": "TFF",
+    "url": "http://www.tff.org/Default.aspx?pageID=29&macId=251210",
+    "retrievedAt": "2026-07-17T19:31:14.666607Z",
+    "sourceType": "official_tff_match_detail"
+  },
+  "week": 7,
+  "standingsWeek": 7,
+  "clubFixture": {
+    "week": 7,
+    "rowText": "7 ORDUSPOR 1967 A.Ş. 4-0 BALIKESİRSPOR 21 Ekim 2023 TFF 3. LİG 04",
+    "sourceUrl": "http://www.tff.org/Default.aspx?macID=251210&pageID=29"
+  },
+  "stageWeek": 7,
+  "roundType": "league",
+  "roundLabel": "7. Hafta",
+  "roundSource": "tff_club_fixture"
+}

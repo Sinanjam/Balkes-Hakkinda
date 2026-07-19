@@ -4,8 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_balkes"
+        android:icon="@drawable/balkes_logo"
         android:label="@string/app_name"
+        android:roundIcon="@drawable/balkes_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="false">

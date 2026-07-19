@@ -4,8 +4,8 @@ cd $root
 or exit $status
 
 set -l version_line (string match -r 'versionName "[^"]+"' < app/build.gradle | head -n 1)
-set -l version (string replace -r 'versionName "([^"]+)"' '$1' $version_line)
-if test -z "$version"; or string match -q '*-*' $version
+set -l app_version (string replace -r 'versionName "([^"]+)"' '$1' $version_line)
+if test -z "$app_version"; or string match -q '*-*' $app_version
     echo "Hata: app/build.gradle içinde kararlı bir versionName bulunamadı."
     exit 1
 end
@@ -46,13 +46,13 @@ or begin
     exit 1
 end
 
-set -l tag v$version
+set -l tag v$app_version
 if nix develop --command gh release view $tag --repo Sinanjam/Balkes-Hakkinda >/dev/null 2>&1
     echo "Hata: $tag sürümü GitHub'da zaten var; mevcut yayın değiştirilmedi."
     exit 1
 end
 
-echo "1/3 — İmzalı Balkes $version APK oluşturuluyor..."
+echo "1/3 — İmzalı Balkes $app_version APK oluşturuluyor..."
 nix develop --command gradle --no-daemon clean :app:assembleRelease
 or exit $status
 
@@ -68,7 +68,7 @@ or exit $status
 
 set -l output_dir $root/local-releases/app
 mkdir -p $output_dir
-set -l output_apk $output_dir/Balkes-$version.apk
+set -l output_apk $output_dir/Balkes-$app_version.apk
 cp $built_apk $output_apk
 or exit $status
 
@@ -77,7 +77,7 @@ set -l notes "Kararlı son kullanıcı sürümü: sadeleştirilmiş ekranlar ve 
 nix develop --command gh release create $tag $output_apk \
     --repo Sinanjam/Balkes-Hakkinda \
     --target main \
-    --title "Balkes $version" \
+    --title "Balkes $app_version" \
     --notes $notes \
     --latest
 or exit $status

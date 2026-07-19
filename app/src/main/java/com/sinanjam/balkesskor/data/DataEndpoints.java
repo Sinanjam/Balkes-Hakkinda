@@ -17,10 +17,6 @@ public final class DataEndpoints {
         return slash(BuildConfig.SCORE_BASE_URL) + "manifest.json";
     }
 
-    public static String scoreFallbackManifest() {
-        return slash(BuildConfig.SCORE_FALLBACK_BASE_URL) + "manifest.json";
-    }
-
     public static String scoreMirrorManifest() {
         return slash(BuildConfig.SCORE_MIRROR_BASE_URL) + "manifest.json";
     }

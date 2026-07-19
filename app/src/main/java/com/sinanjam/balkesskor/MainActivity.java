@@ -147,7 +147,7 @@ public final class MainActivity extends Activity {
             @Override public void onSuccess(Object json, boolean fromCache) {
                 if (!splashVisible || updateDecisionMade || !(json instanceof JSONObject)) return;
                 AppRelease release = readAppRelease((JSONObject) json);
-                if (release != null || !fromCache) finishReleaseCheck(release);
+                finishReleaseCheck(release);
             }
 
             @Override public void onError(String message) {

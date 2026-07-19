@@ -4,8 +4,6 @@ plugins {
 
 def scoreBase = providers.gradleProperty("SCORE_BASE_URL")
         .getOrElse("https://raw.githubusercontent.com/Sinanjam/Balkes-Hakkinda/main/data/")
-def scoreFallbackBase = providers.gradleProperty("SCORE_FALLBACK_BASE_URL")
-        .getOrElse("https://raw.githubusercontent.com/Sinanjam/balkes-skor/main/data/")
 def scoreMirrorBase = providers.gradleProperty("SCORE_MIRROR_BASE_URL")
         .getOrElse("https://cdn.jsdelivr.net/gh/Sinanjam/Balkes-Hakkinda@main/data/")
 def archiveManifest = providers.gradleProperty("ARCHIVE_MANIFEST_URL")
@@ -24,11 +22,10 @@ android {
         applicationId "com.sinanjam.balkesskor"
         minSdk 23
         targetSdk 35
-        versionCode 109
-        versionName "1.5.0-alpha05"
+        versionCode 110
+        versionName "1.5.0-alpha06"
 
         buildConfigField "String", "SCORE_BASE_URL", "\"${scoreBase}\""
-        buildConfigField "String", "SCORE_FALLBACK_BASE_URL", "\"${scoreFallbackBase}\""
         buildConfigField "String", "SCORE_MIRROR_BASE_URL", "\"${scoreMirrorBase}\""
         buildConfigField "String", "ARCHIVE_MANIFEST_URL", "\"${archiveManifest}\""
         buildConfigField "String", "ARCHIVE_MEDIA_BASE_URL", "\"${archiveMediaBase}\""

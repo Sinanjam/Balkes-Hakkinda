@@ -79,12 +79,9 @@ public final class MainActivity extends Activity {
         root.setGravity(Gravity.CENTER);
         root.setBackground(Ui.appBackground());
 
-        TextView badge = Ui.text(this, "B", 50, Color.WHITE);
-        badge.setTypeface(Typeface.DEFAULT_BOLD);
-        badge.setGravity(Gravity.CENTER);
-        badge.setBackground(Ui.badgeBackground(this));
+        ImageView badge = brandLogo();
         badge.setElevation(Ui.dp(this, 14));
-        root.addView(badge, new LinearLayout.LayoutParams(Ui.dp(this, 96), Ui.dp(this, 96)));
+        root.addView(badge, new LinearLayout.LayoutParams(Ui.dp(this, 150), Ui.dp(this, 150)));
 
         TextView title = Ui.text(this, "BALKES", 34, Ui.TEXT);
         title.setTypeface(Typeface.DEFAULT_BOLD);
@@ -135,30 +132,28 @@ public final class MainActivity extends Activity {
     private void getScoreManifest(RemoteJsonRepository.Callback callback) {
         String[] candidates = new String[]{
                 DataEndpoints.scoreManifest(),
-                DataEndpoints.scoreMirrorManifest(),
-                DataEndpoints.scoreFallbackManifest()
+                DataEndpoints.scoreMirrorManifest()
         };
-        getScoreManifest(candidates, 0, callback, "");
+        getScoreManifest(candidates, 0, callback);
     }
 
     private void getScoreManifest(String[] candidates, int index,
-                                  RemoteJsonRepository.Callback callback, String lastError) {
+                                  RemoteJsonRepository.Callback callback) {
         if (index >= candidates.length) {
-            callback.onError(lastError.length() > 0 ? lastError
-                    : "Skor veri listesi alınamadı.");
+            callback.onError("32 sezonluk birleşik skor verisi alınamadı. "
+                    + "GitHub veri deposunun herkese açık olduğundan emin olup yeniden dene.");
             return;
         }
         final String address = candidates[index];
         if (index > 0 && address.equals(candidates[index - 1])) {
-            getScoreManifest(candidates, index + 1, callback, lastError);
+            getScoreManifest(candidates, index + 1, callback);
             return;
         }
         repository.get(address, new RemoteJsonRepository.Callback() {
             @Override public void onSuccess(Object json, boolean fromCache) {
                 if (!(json instanceof JSONObject)
-                        || ((JSONObject) json).optJSONArray("availableSeasons") == null) {
-                    getScoreManifest(candidates, index + 1, callback,
-                            "Skor veri listesi geçersiz.");
+                        || !isUnifiedScoreManifest((JSONObject) json)) {
+                    getScoreManifest(candidates, index + 1, callback);
                     return;
                 }
                 configureScoreManifest((JSONObject) json, address);
@@ -166,9 +161,27 @@ public final class MainActivity extends Activity {
             }
 
             @Override public void onError(String message) {
-                getScoreManifest(candidates, index + 1, callback, message);
+                getScoreManifest(candidates, index + 1, callback);
             }
         });
+    }
+
+    private boolean isUnifiedScoreManifest(JSONObject manifest) {
+        JSONArray seasons = manifest.optJSONArray("availableSeasons");
+        if (seasons == null || seasons.length() < 32) return false;
+        int matchIndexes = 0;
+        int standingsIndexes = 0;
+        int totalMatches = 0;
+        for (int index = 0; index < seasons.length(); index++) {
+            JSONObject season = seasons.optJSONObject(index);
+            if (season == null) continue;
+            if (season.optString("matchesIndexUrl", "").length() > 0) matchIndexes++;
+            if (season.optString("standingsByWeekUrl", "").length() > 0) standingsIndexes++;
+            totalMatches += season.optInt("matchCount", 0);
+        }
+        return matchIndexes == seasons.length()
+                && standingsIndexes >= 31
+                && totalMatches >= 1_100;
     }
 
     private void prefetchScoreFile(String relativePath) {
@@ -269,12 +282,9 @@ public final class MainActivity extends Activity {
         root.setPadding(Ui.dp(this, 22), Ui.dp(this, 34), Ui.dp(this, 22), Ui.dp(this, 30));
         scroll.addView(root, new ScrollView.LayoutParams(-1, -1));
 
-        TextView badge = Ui.text(this, "B", 42, Color.WHITE);
-        badge.setTypeface(Typeface.DEFAULT_BOLD);
-        badge.setGravity(Gravity.CENTER);
-        badge.setBackground(Ui.badgeBackground(this));
+        ImageView badge = brandLogo();
         badge.setElevation(Ui.dp(this, 12));
-        root.addView(badge, new LinearLayout.LayoutParams(Ui.dp(this, 82), Ui.dp(this, 82)));
+        root.addView(badge, new LinearLayout.LayoutParams(Ui.dp(this, 112), Ui.dp(this, 112)));
 
         TextView brand = Ui.eyebrow(this, "Balıkesirspor Dijital Merkezi", Ui.CYAN);
         brand.setGravity(Gravity.CENTER);
@@ -381,11 +391,8 @@ public final class MainActivity extends Activity {
         header.setBackground(Ui.headerBackground());
         header.setElevation(Ui.dp(this, 8));
 
-        TextView badge = Ui.text(this, "B", 23, Color.WHITE);
-        badge.setTypeface(Typeface.DEFAULT_BOLD);
-        badge.setGravity(Gravity.CENTER);
-        badge.setBackground(Ui.badgeBackground(this));
-        header.addView(badge, new LinearLayout.LayoutParams(Ui.dp(this, 52), Ui.dp(this, 52)));
+        ImageView badge = brandLogo();
+        header.addView(badge, new LinearLayout.LayoutParams(Ui.dp(this, 62), Ui.dp(this, 62)));
 
         LinearLayout titles = new LinearLayout(this);
         titles.setOrientation(LinearLayout.VERTICAL);
@@ -1302,6 +1309,15 @@ public final class MainActivity extends Activity {
                 expected == Tab.ARCHIVE || expected == Tab.SCORE || expected == Tab.NEWS
                         ? Ui.RED : Ui.CYAN,
                 view -> select(expected)));
+    }
+
+    private ImageView brandLogo() {
+        ImageView logo = new ImageView(this);
+        logo.setImageResource(R.drawable.balkes_logo);
+        logo.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        logo.setContentDescription("Balkes logosu");
+        logo.setBackgroundColor(Color.BLACK);
+        return logo;
     }
 
     private LinearLayout retryCard(String title, String message, int accent,

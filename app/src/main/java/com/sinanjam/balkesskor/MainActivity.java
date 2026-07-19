@@ -61,6 +61,7 @@ public final class MainActivity extends Activity {
 
     private RemoteJsonRepository repository;
     private RemoteImageLoader imageLoader;
+    private boolean splashVisible;
     private final Handler uiHandler = new Handler(Looper.getMainLooper());
     private final Runnable openChooser = () -> {
         if (!isFinishing() && !isDestroyed() && splashVisible) showEntryChoice();
@@ -72,7 +73,6 @@ public final class MainActivity extends Activity {
     private TextView headerSubtitle;
     private Tab current = Tab.SCORE;
     private boolean chooserVisible = true;
-    private boolean splashVisible;
     private boolean updatePromptVisible;
     private boolean updateDecisionMade;
     private long splashStartedAt;

@@ -12,6 +12,12 @@ def archiveMediaBase = providers.gradleProperty("ARCHIVE_MEDIA_BASE_URL")
         .getOrElse("https://raw.githubusercontent.com/Sinanjam/Balkes-Arsivi/main/app/src/main/assets/")
 def contentBase = providers.gradleProperty("CONTENT_BASE_URL")
         .getOrElse("https://raw.githubusercontent.com/Sinanjam/balkes-data/main/")
+def releaseKeystore = System.getenv("BALKES_KEYSTORE")
+def releaseStorePassword = System.getenv("BALKES_STORE_PASSWORD")
+def releaseKeyAlias = System.getenv("BALKES_KEY_ALIAS")
+def releaseKeyPassword = System.getenv("BALKES_KEY_PASSWORD")
+def hasReleaseSigning = releaseKeystore && releaseStorePassword
+        && releaseKeyAlias && releaseKeyPassword
 
 android {
     namespace "com.sinanjam.balkesskor"
@@ -22,8 +28,8 @@ android {
         applicationId "com.sinanjam.balkesskor"
         minSdk 23
         targetSdk 35
-        versionCode 111
-        versionName "1.5.0-alpha07"
+        versionCode 112
+        versionName "1.5.0"
 
         buildConfigField "String", "SCORE_BASE_URL", "\"${scoreBase}\""
         buildConfigField "String", "SCORE_MIRROR_BASE_URL", "\"${scoreMirrorBase}\""
@@ -36,12 +42,24 @@ android {
         buildConfig true
     }
 
+    signingConfigs {
+        if (hasReleaseSigning) {
+            release {
+                storeFile file(releaseKeystore)
+                storePassword releaseStorePassword
+                keyAlias releaseKeyAlias
+                keyPassword releaseKeyPassword
+            }
+        }
+    }
+
     buildTypes {
         debug {
             applicationIdSuffix ".dev"
             versionNameSuffix "-dev"
         }
         release {
+            if (hasReleaseSigning) signingConfig signingConfigs.release
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"

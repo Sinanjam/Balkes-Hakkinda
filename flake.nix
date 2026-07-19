@@ -36,6 +36,7 @@
               pkgs.jdk17
               pkgs.gradle
               pkgs.git
+              pkgs.gh
               pkgs.jq
               pkgs.zip
               pkgs.unzip

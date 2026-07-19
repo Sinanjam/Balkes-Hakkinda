@@ -22,8 +22,8 @@ android {
         applicationId "com.sinanjam.balkesskor"
         minSdk 23
         targetSdk 35
-        versionCode 110
-        versionName "1.5.0-alpha06"
+        versionCode 111
+        versionName "1.5.0-alpha07"
 
         buildConfigField "String", "SCORE_BASE_URL", "\"${scoreBase}\""
         buildConfigField "String", "SCORE_MIRROR_BASE_URL", "\"${scoreMirrorBase}\""

@@ -41,7 +41,7 @@ public final class RemoteImageLoader {
         if (closed || address == null || address.length() == 0) return;
         target.setTag(address);
         target.setAlpha(0.35f);
-        target.setImageResource(R.drawable.ic_balkes);
+        target.setImageResource(R.drawable.balkes_logo);
 
         execute(() -> {
             try {
@@ -62,7 +62,7 @@ public final class RemoteImageLoader {
                 post(() -> {
                     if (!address.equals(target.getTag())) return;
                     target.setAlpha(0.18f);
-                    target.setImageResource(R.drawable.ic_balkes);
+                    target.setImageResource(R.drawable.balkes_logo);
                 });
             }
         });

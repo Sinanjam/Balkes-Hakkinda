@@ -64,7 +64,7 @@ public final class RemoteJsonRepository {
     private volatile boolean closed;
 
     public RemoteJsonRepository(Context context) {
-        cacheDir = new File(context.getFilesDir(), "json-cache");
+        cacheDir = new File(context.getFilesDir(), "json-cache-v2");
         if (!cacheDir.exists()) cacheDir.mkdirs();
     }
 

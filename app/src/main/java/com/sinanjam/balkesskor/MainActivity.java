@@ -1,8 +1,10 @@
 package com.sinanjam.balkesskor;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -17,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.sinanjam.balkesskor.data.DataEndpoints;
 import com.sinanjam.balkesskor.data.RemoteImageLoader;
@@ -35,6 +38,8 @@ import java.util.Map;
 public final class MainActivity extends Activity {
     private enum Tab { SCORE, ARCHIVE, PHOTOS, NEWS, SEASONS }
     private static final Locale TURKISH = new Locale("tr", "TR");
+    private static final String FEEDBACK_FORM_URL =
+            "https://forms.gle/PgRRAGpovH3tRWTM7";
 
     private RemoteJsonRepository repository;
     private RemoteImageLoader imageLoader;
@@ -332,8 +337,77 @@ public final class MainActivity extends Activity {
         footerParams.setMargins(0, Ui.dp(this, 27), 0, 0);
         root.addView(footer, footerParams);
 
+        LinearLayout about = aboutEntryCard();
+        LinearLayout.LayoutParams aboutParams = new LinearLayout.LayoutParams(-1, -2);
+        aboutParams.setMargins(0, Ui.dp(this, 17), 0, 0);
+        root.addView(about, aboutParams);
+
         setContentView(scroll);
         EdgeToEdge.applyInsets(scroll, 0, 0, 0, 0);
+    }
+
+    private LinearLayout aboutEntryCard() {
+        LinearLayout card = Ui.card(this);
+        card.addView(Ui.eyebrow(this, "Hakkında", Ui.CYAN));
+
+        TextView title = Ui.text(this, "Balkes hakkında", 21, Ui.TEXT);
+        title.setTypeface(Typeface.DEFAULT_BOLD);
+        title.setPadding(0, Ui.dp(this, 6), 0, Ui.dp(this, 2));
+        card.addView(title);
+
+        addAboutSection(card, "Sorumluluk reddi beyanı",
+                "Bu uygulama taraftar yapımı bağımsız bir projedir; Balıkesirspor, "
+                        + "TFF veya adı geçen kurumların resmî uygulaması değildir. Skor, "
+                        + "puan durumu ve arşiv içerikleri bilgilendirme amaçlıdır; hata ya "
+                        + "da gecikme olabilir. Kesin bilgi için resmî kaynakları kontrol edin.",
+                Ui.RED);
+        addAboutSection(card, "Kaynaklar",
+                "Maç, fikstür ve puan tabloları: TFF resmî sayfaları. Tarihî içerik ve "
+                        + "fotoğraflar: Balkes Arşivi ile içeriklerde belirtilen özgün "
+                        + "kaynaklar. Uygulama verileri: GitHub Raw veri manifestleri.",
+                Ui.CYAN);
+        addAboutSection(card, "Vibe Coding",
+                "Uygulamanın geliştirme sürecinde Vibe Coding ve yapay zekâ destekli "
+                        + "araçlardan faydalanılmıştır. İçerik, doğrulama ve yayımlama "
+                        + "kararları geliştirici tarafından kontrol edilmektedir.",
+                Ui.GREEN);
+        addAboutSection(card, "Geri bildirim ve iletişim",
+                "Hata bildirimi, öneri veya iletişim için aşağıdaki Google Form'u kullanın.",
+                Ui.RED);
+
+        TextView feedback = Ui.chip(this, "GERİ BİLDİRİM FORMUNU AÇ  ↗", Ui.CYAN);
+        feedback.setPadding(Ui.dp(this, 13), Ui.dp(this, 10),
+                Ui.dp(this, 13), Ui.dp(this, 10));
+        feedback.setClickable(true);
+        feedback.setFocusable(true);
+        feedback.setContentDescription("Geri bildirim ve iletişim formunu aç");
+        feedback.setOnClickListener(view -> openFeedbackForm());
+        LinearLayout.LayoutParams feedbackParams = new LinearLayout.LayoutParams(-1, -2);
+        feedbackParams.setMargins(0, Ui.dp(this, 13), 0, 0);
+        card.addView(feedback, feedbackParams);
+
+        TextView address = Ui.text(this, FEEDBACK_FORM_URL, 10, Ui.MUTED);
+        address.setPadding(0, Ui.dp(this, 8), 0, 0);
+        address.setGravity(Gravity.CENTER);
+        card.addView(address);
+        return card;
+    }
+
+    private void addAboutSection(LinearLayout card, String heading, String body, int accent) {
+        TextView section = Ui.eyebrow(this, heading, accent);
+        section.setPadding(0, Ui.dp(this, 15), 0, 0);
+        card.addView(section);
+        TextView description = Ui.text(this, body, 13, Ui.MUTED);
+        description.setPadding(0, Ui.dp(this, 5), 0, 0);
+        card.addView(description);
+    }
+
+    private void openFeedbackForm() {
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(FEEDBACK_FORM_URL)));
+        } catch (Exception ignored) {
+            Toast.makeText(this, "Formu açacak bir tarayıcı bulunamadı.", Toast.LENGTH_LONG).show();
+        }
     }
 
     private View choiceCard(String eyebrow, String title, String body, int accent,

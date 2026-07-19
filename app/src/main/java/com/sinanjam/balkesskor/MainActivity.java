@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.SystemClock;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
@@ -24,6 +25,7 @@ import android.widget.Toast;
 import com.sinanjam.balkesskor.data.DataEndpoints;
 import com.sinanjam.balkesskor.data.RemoteImageLoader;
 import com.sinanjam.balkesskor.data.RemoteJsonRepository;
+import com.sinanjam.balkesskor.data.Versioning;
 import com.sinanjam.balkesskor.ui.EdgeToEdge;
 import com.sinanjam.balkesskor.ui.Ui;
 
@@ -38,21 +40,42 @@ import java.util.Map;
 public final class MainActivity extends Activity {
     private enum Tab { SCORE, ARCHIVE, PHOTOS, NEWS, SEASONS }
     private static final Locale TURKISH = new Locale("tr", "TR");
+    private static final String LATEST_RELEASE_API =
+            "https://api.github.com/repos/Sinanjam/Balkes-Hakkinda/releases/latest";
+    private static final String RELEASES_URL =
+            "https://github.com/Sinanjam/Balkes-Hakkinda/releases/latest";
     private static final String FEEDBACK_FORM_URL =
             "https://forms.gle/PgRRAGpovH3tRWTM7";
+    private static final long SPLASH_MINIMUM_MS = 700L;
+    private static final long UPDATE_CHECK_TIMEOUT_MS = 2_400L;
+
+    private static final class AppRelease {
+        final String version;
+        final String downloadUrl;
+
+        AppRelease(String version, String downloadUrl) {
+            this.version = version;
+            this.downloadUrl = downloadUrl;
+        }
+    }
 
     private RemoteJsonRepository repository;
     private RemoteImageLoader imageLoader;
     private final Handler uiHandler = new Handler(Looper.getMainLooper());
     private final Runnable openChooser = () -> {
-        if (!isFinishing() && !isDestroyed()) showEntryChoice();
+        if (!isFinishing() && !isDestroyed() && splashVisible) showEntryChoice();
     };
+    private final Runnable updateCheckTimeout = () -> finishReleaseCheck(null);
     private LinearLayout content;
     private ScrollView screenScroll;
     private TextView headerTitle;
     private TextView headerSubtitle;
     private Tab current = Tab.SCORE;
     private boolean chooserVisible = true;
+    private boolean splashVisible;
+    private boolean updatePromptVisible;
+    private boolean updateDecisionMade;
+    private long splashStartedAt;
     private Runnable detailBackAction;
     private String detailRequestKey = "";
     private int archiveRenderGeneration = 0;
@@ -64,17 +87,19 @@ public final class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.configure(this);
+        repository = new RemoteJsonRepository(this);
+        imageLoader = new RemoteImageLoader(this);
         if (savedInstanceState == null) {
+            splashVisible = true;
+            splashStartedAt = SystemClock.elapsedRealtime();
             showSplashScreen();
+            checkLatestRelease();
+            uiHandler.postDelayed(updateCheckTimeout, UPDATE_CHECK_TIMEOUT_MS);
         } else {
             showEntryChoice();
         }
-
-        repository = new RemoteJsonRepository(this);
-        imageLoader = new RemoteImageLoader(this);
         warmScoreData();
         repository.prefetch(DataEndpoints.archiveManifest());
-        if (savedInstanceState == null) uiHandler.postDelayed(openChooser, 700L);
     }
 
     private void showSplashScreen() {
@@ -96,19 +121,137 @@ public final class MainActivity extends Activity {
         titleParams.setMargins(0, Ui.dp(this, 25), 0, 0);
         root.addView(title, titleParams);
 
-        TextView subtitle = Ui.eyebrow(this, "Skor • Arşiv • Kulübün Hafızası", Ui.CYAN);
+        TextView subtitle = Ui.eyebrow(this, "Balıkesirspor Dijital Merkezi", Ui.CYAN);
         subtitle.setGravity(Gravity.CENTER);
         LinearLayout.LayoutParams subtitleParams = new LinearLayout.LayoutParams(-1, -2);
-        subtitleParams.setMargins(0, Ui.dp(this, 9), 0, Ui.dp(this, 25));
+        subtitleParams.setMargins(0, Ui.dp(this, 9), 0, Ui.dp(this, 20));
         root.addView(subtitle, subtitleParams);
 
         View line = new View(this);
         line.setBackground(Ui.neonLine());
         root.addView(line, new LinearLayout.LayoutParams(Ui.dp(this, 210), Ui.dp(this, 2)));
 
+        TextView status = Ui.text(this, "Son sürüm denetleniyor…", 12, Ui.MUTED);
+        status.setGravity(Gravity.CENTER);
+        LinearLayout.LayoutParams statusParams = new LinearLayout.LayoutParams(-1, -2);
+        statusParams.setMargins(0, Ui.dp(this, 16), 0, 0);
+        root.addView(status, statusParams);
+
         setContentView(root);
         EdgeToEdge.applyInsets(root, Ui.dp(this, 24), Ui.dp(this, 28),
                 Ui.dp(this, 24), Ui.dp(this, 28));
+    }
+
+    private void checkLatestRelease() {
+        repository.get(LATEST_RELEASE_API, new RemoteJsonRepository.Callback() {
+            @Override public void onSuccess(Object json, boolean fromCache) {
+                if (!splashVisible || updateDecisionMade || !(json instanceof JSONObject)) return;
+                AppRelease release = readAppRelease((JSONObject) json);
+                if (release != null || !fromCache) finishReleaseCheck(release);
+            }
+
+            @Override public void onError(String message) {
+                finishReleaseCheck(null);
+            }
+        });
+    }
+
+    private AppRelease readAppRelease(JSONObject json) {
+        String tag = json.optString("tag_name", "").trim();
+        if (!Versioning.isNewer(tag, BuildConfig.VERSION_NAME)) return null;
+
+        String downloadUrl = "";
+        JSONArray assets = json.optJSONArray("assets");
+        if (assets != null) {
+            for (int index = 0; index < assets.length(); index++) {
+                JSONObject asset = assets.optJSONObject(index);
+                if (asset == null) continue;
+                String name = asset.optString("name", "").toLowerCase(Locale.ROOT);
+                String address = asset.optString("browser_download_url", "");
+                if (name.endsWith(".apk") && address.startsWith("https://")) {
+                    downloadUrl = address;
+                    break;
+                }
+            }
+        }
+        if (downloadUrl.length() == 0) {
+            downloadUrl = json.optString("html_url", RELEASES_URL);
+        }
+        if (!downloadUrl.startsWith("https://")) downloadUrl = RELEASES_URL;
+        return new AppRelease(Versioning.display(tag), downloadUrl);
+    }
+
+    private void finishReleaseCheck(AppRelease release) {
+        if (!splashVisible || updateDecisionMade || isFinishing() || isDestroyed()) return;
+        updateDecisionMade = true;
+        uiHandler.removeCallbacks(updateCheckTimeout);
+        long elapsed = SystemClock.elapsedRealtime() - splashStartedAt;
+        long delay = Math.max(0L, SPLASH_MINIMUM_MS - elapsed);
+        if (release == null) {
+            uiHandler.postDelayed(openChooser, delay);
+        } else {
+            uiHandler.postDelayed(() -> {
+                if (splashVisible && !isFinishing() && !isDestroyed()) {
+                    showUpdateAvailable(release);
+                }
+            }, delay);
+        }
+    }
+
+    private void showUpdateAvailable(AppRelease release) {
+        splashVisible = false;
+        updatePromptVisible = true;
+        chooserVisible = true;
+
+        LinearLayout root = new LinearLayout(this);
+        root.setOrientation(LinearLayout.VERTICAL);
+        root.setGravity(Gravity.CENTER_HORIZONTAL);
+        root.setPadding(Ui.dp(this, 24), Ui.dp(this, 42),
+                Ui.dp(this, 24), Ui.dp(this, 30));
+        root.setBackground(Ui.appBackground());
+
+        ImageView badge = brandLogo();
+        root.addView(badge, new LinearLayout.LayoutParams(Ui.dp(this, 108), Ui.dp(this, 108)));
+
+        TextView eyebrow = Ui.eyebrow(this, "Yeni sürüm hazır", Ui.GREEN);
+        eyebrow.setGravity(Gravity.CENTER);
+        LinearLayout.LayoutParams eyebrowParams = new LinearLayout.LayoutParams(-1, -2);
+        eyebrowParams.setMargins(0, Ui.dp(this, 24), 0, 0);
+        root.addView(eyebrow, eyebrowParams);
+
+        TextView title = Ui.text(this, "Balkes " + release.version, 28, Ui.TEXT);
+        title.setTypeface(Typeface.DEFAULT_BOLD);
+        title.setGravity(Gravity.CENTER);
+        title.setPadding(0, Ui.dp(this, 8), 0, 0);
+        root.addView(title);
+
+        TextView body = Ui.text(this,
+                "Yeni sürümü indirerek en güncel özellikleri ve düzeltmeleri kullanabilirsin.",
+                14, Ui.MUTED);
+        body.setGravity(Gravity.CENTER);
+        body.setPadding(0, Ui.dp(this, 10), 0, Ui.dp(this, 22));
+        root.addView(body);
+
+        TextView download = Ui.chip(this, "GÜNCELLEMEYİ İNDİR  ↓", Ui.CYAN);
+        download.setPadding(Ui.dp(this, 18), Ui.dp(this, 13),
+                Ui.dp(this, 18), Ui.dp(this, 13));
+        download.setClickable(true);
+        download.setFocusable(true);
+        download.setContentDescription("Balkes " + release.version + " sürümünü indir");
+        download.setOnClickListener(view -> openExternalUrl(release.downloadUrl));
+        root.addView(download, new LinearLayout.LayoutParams(-1, -2));
+
+        TextView later = Ui.text(this, "Şimdi değil", 13, Ui.MUTED);
+        later.setGravity(Gravity.CENTER);
+        later.setPadding(0, Ui.dp(this, 18), 0, Ui.dp(this, 12));
+        later.setClickable(true);
+        later.setFocusable(true);
+        later.setOnClickListener(view -> showEntryChoice());
+        root.addView(later, new LinearLayout.LayoutParams(-1, -2));
+
+        setContentView(root);
+        EdgeToEdge.applyInsets(root, Ui.dp(this, 24), Ui.dp(this, 24),
+                Ui.dp(this, 24), Ui.dp(this, 24));
     }
 
     private void warmScoreData() {
@@ -145,8 +288,7 @@ public final class MainActivity extends Activity {
     private void getScoreManifest(String[] candidates, int index,
                                   RemoteJsonRepository.Callback callback) {
         if (index >= candidates.length) {
-            callback.onError("32 sezonluk birleşik skor verisi alınamadı. "
-                    + "GitHub veri deposunun herkese açık olduğundan emin olup yeniden dene.");
+            callback.onError("Sezon verileri şu anda alınamadı. Bağlantını kontrol edip yeniden dene.");
             return;
         }
         final String address = candidates[index];
@@ -245,6 +387,8 @@ public final class MainActivity extends Activity {
     @Override
     protected void onDestroy() {
         chooserVisible = true;
+        splashVisible = false;
+        updatePromptVisible = false;
         archiveRenderGeneration++;
         detailRequestKey = "";
         uiHandler.removeCallbacksAndMessages(null);
@@ -255,6 +399,10 @@ public final class MainActivity extends Activity {
 
     @Override
     public void onBackPressed() {
+        if (updatePromptVisible) {
+            showEntryChoice();
+            return;
+        }
         if (detailBackAction != null) {
             Runnable action = detailBackAction;
             detailBackAction = null;
@@ -270,6 +418,9 @@ public final class MainActivity extends Activity {
 
     private void showEntryChoice() {
         uiHandler.removeCallbacks(openChooser);
+        uiHandler.removeCallbacks(updateCheckTimeout);
+        splashVisible = false;
+        updatePromptVisible = false;
         archiveRenderGeneration++;
         chooserVisible = true;
         detailBackAction = null;
@@ -330,16 +481,9 @@ public final class MainActivity extends Activity {
         archiveParams.setMargins(0, Ui.dp(this, 14), 0, 0);
         root.addView(archiveChoice, archiveParams);
 
-        TextView footer = Ui.text(this,
-                "İçerikler otomatik güncellenir ve çevrimdışı da açılır", 11, Ui.MUTED);
-        footer.setGravity(Gravity.CENTER);
-        LinearLayout.LayoutParams footerParams = new LinearLayout.LayoutParams(-1, -2);
-        footerParams.setMargins(0, Ui.dp(this, 27), 0, 0);
-        root.addView(footer, footerParams);
-
         LinearLayout about = aboutEntryCard();
         LinearLayout.LayoutParams aboutParams = new LinearLayout.LayoutParams(-1, -2);
-        aboutParams.setMargins(0, Ui.dp(this, 17), 0, 0);
+        aboutParams.setMargins(0, Ui.dp(this, 24), 0, 0);
         root.addView(about, aboutParams);
 
         setContentView(scroll);
@@ -364,7 +508,7 @@ public final class MainActivity extends Activity {
         addAboutSection(card, "Kaynaklar",
                 "Maç, fikstür ve puan tabloları: TFF resmî sayfaları. Tarihî içerik ve "
                         + "fotoğraflar: Balkes Arşivi ile içeriklerde belirtilen özgün "
-                        + "kaynaklar. Uygulama verileri: GitHub Raw veri manifestleri.",
+                        + "kaynaklar. Uygulama verileri: projenin GitHub veri deposu.",
                 Ui.CYAN);
         addAboutSection(card, "Vibe Coding",
                 "Uygulamanın geliştirme sürecinde Vibe Coding ve yapay zekâ destekli "
@@ -403,10 +547,15 @@ public final class MainActivity extends Activity {
     }
 
     private void openFeedbackForm() {
+        openExternalUrl(FEEDBACK_FORM_URL);
+    }
+
+    private void openExternalUrl(String address) {
         try {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(FEEDBACK_FORM_URL)));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(address)));
         } catch (Exception ignored) {
-            Toast.makeText(this, "Formu açacak bir tarayıcı bulunamadı.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Bağlantıyı açacak bir tarayıcı bulunamadı.",
+                    Toast.LENGTH_LONG).show();
         }
     }
 
@@ -513,11 +662,11 @@ public final class MainActivity extends Activity {
 
     private void updateHeader(Tab tab) {
         if (headerSubtitle == null) return;
-        if (tab == Tab.SCORE) headerSubtitle.setText("Skor merkezi • güncel veri");
-        else if (tab == Tab.ARCHIVE) headerSubtitle.setText("Kulübün hafızası • arşiv");
-        else if (tab == Tab.PHOTOS) headerSubtitle.setText("Tarihi kareler • fotoğraf");
-        else if (tab == Tab.NEWS) headerSubtitle.setText("Haberler • duyurular");
-        else headerSubtitle.setText("Geçmiş sezonlar • istatistik");
+        if (tab == Tab.SCORE) headerSubtitle.setText("Skor merkezi");
+        else if (tab == Tab.ARCHIVE) headerSubtitle.setText("Kulübün hafızası");
+        else if (tab == Tab.PHOTOS) headerSubtitle.setText("Tarihi kareler");
+        else if (tab == Tab.NEWS) headerSubtitle.setText("Haberler ve duyurular");
+        else headerSubtitle.setText("Geçmiş sezonlar");
     }
 
     private void start(String eyebrow, String title, String subtitle, int accent) {
@@ -539,8 +688,8 @@ public final class MainActivity extends Activity {
 
     private void renderScore() {
         final int generation = ++scoreRenderGeneration;
-        start("Canlı veri", "Balkes Skor",
-                "Güncel sezonlar ve maç kayıtları otomatik yenilenir.", Ui.RED);
+        start("Skor merkezi", "Balkes Skor",
+                "Sezonlar, maçlar ve puan durumları", Ui.RED);
         getScoreManifest(new RemoteJsonRepository.Callback() {
             @Override public void onSuccess(Object json, boolean fromCache) {
                 if (chooserVisible || current != Tab.SCORE || generation != scoreRenderGeneration
@@ -551,15 +700,12 @@ public final class MainActivity extends Activity {
 
                 if (seasons == null || seasons.length() == 0) {
                     content.addView(retryCard("Sezon verisi bulunamadı",
-                            "GitHub veri listesi boş döndü. Yenileyip yeniden dene.", Ui.RED,
+                            "Verileri yenileyip yeniden dene.", Ui.RED,
                             view -> refreshScoreData()));
                     return;
                 }
 
                 LinearLayout hero = Ui.heroCard(MainActivity.this);
-                hero.addView(Ui.chip(MainActivity.this,
-                        fromCache ? "Hemen hazır" : "Veriler güncel",
-                        fromCache ? Ui.CYAN : Ui.GREEN));
                 TextView big = Ui.text(MainActivity.this,
                         seasons == null ? "—" : String.valueOf(seasons.length()), 46, Ui.TEXT);
                 big.setTypeface(Typeface.DEFAULT_BOLD);
@@ -572,14 +718,6 @@ public final class MainActivity extends Activity {
                 }
                 hero.addView(Ui.text(MainActivity.this,
                         "erişilebilir sezon  •  " + totalMatches + " toplam maç", 14, Ui.MUTED));
-                String dataVersion = DataEndpoints.scoreDataVersion();
-                TextView source = Ui.text(MainActivity.this,
-                        "Uygulama " + BuildConfig.VERSION_NAME
-                                + "  •  Veri " + (dataVersion.length() == 0 ? "canlı" : dataVersion)
-                                + "  •  GitHub + CDN yedekli",
-                        11, Ui.MUTED);
-                source.setPadding(0, Ui.dp(MainActivity.this, 8), 0, 0);
-                hero.addView(source);
                 if (seasons.length() > 0) {
                     JSONObject season = featuredSeason(seasons);
                     if (season != null) {
@@ -637,8 +775,8 @@ public final class MainActivity extends Activity {
     private void refreshScoreData() {
         if (chooserVisible || current != Tab.SCORE || repository == null) return;
         scoreRenderGeneration++;
-        start("Canlı veri", "Veriler Yenileniyor",
-                "Önbellek temizlendi; maçlar ve puan tabloları yeniden alınıyor.", Ui.GREEN);
+        start("Skor merkezi", "Veriler yenileniyor",
+                "Maçlar ve puan durumları yeniden alınıyor.", Ui.GREEN);
         seasonMatchUrls.clear();
         seasonStandingsUrls.clear();
         repository.clearCache(() -> {
@@ -666,8 +804,6 @@ public final class MainActivity extends Activity {
                 }
 
                 LinearLayout summary = Ui.heroCard(MainActivity.this);
-                summary.addView(Ui.chip(MainActivity.this,
-                        fromCache ? "Anında önbellek" : "Canlı arşiv", fromCache ? Ui.CYAN : Ui.GREEN));
                 TextView count = Ui.text(MainActivity.this, String.valueOf(items.length()), 42, Ui.TEXT);
                 count.setTypeface(Typeface.DEFAULT_BOLD);
                 count.setPadding(0, Ui.dp(MainActivity.this, 12), 0, 0);
@@ -1004,21 +1140,12 @@ public final class MainActivity extends Activity {
                         body.removeAllViews();
 
                         LinearLayout summary = Ui.heroCard(MainActivity.this);
-                        summary.addView(Ui.chip(MainActivity.this,
-                                fromCache ? "Hemen hazır" : "Veriler güncel",
-                                fromCache ? Ui.CYAN : Ui.GREEN));
                         TextView count = Ui.text(MainActivity.this, String.valueOf(matches.length()), 42, Ui.TEXT);
                         count.setTypeface(Typeface.DEFAULT_BOLD);
                         count.setPadding(0, Ui.dp(MainActivity.this, 12), 0, 0);
                         summary.addView(count);
                         summary.addView(Ui.text(MainActivity.this,
                                 "maç kaydının tamamı bu sayfada", 14, Ui.MUTED));
-                        TextView dataSource = Ui.text(MainActivity.this,
-                                "GitHub veri sürümü " + DataEndpoints.scoreDataVersion()
-                                        + "  •  CDN yedeği etkin",
-                                11, Ui.MUTED);
-                        dataSource.setPadding(0, Ui.dp(MainActivity.this, 7), 0, 0);
-                        summary.addView(dataSource);
                         body.addView(summary);
 
                         TextView standingsHeading = Ui.eyebrow(MainActivity.this,
@@ -1110,7 +1237,7 @@ public final class MainActivity extends Activity {
                         if (chooserVisible || !requestKey.equals(detailRequestKey)) return;
                         slot.removeAllViews();
                         slot.addView(retryCard("Puan durumu açılamadı",
-                                friendlyError(message) + " GitHub CDN yedeği de denendi.", Ui.CYAN,
+                                friendlyError(message), Ui.CYAN,
                                 view -> loadSeasonStandings(seasonId, requestKey, slot)));
                     }
                 });

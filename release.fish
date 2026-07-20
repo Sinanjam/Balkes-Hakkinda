@@ -73,7 +73,7 @@ cp $built_apk $output_apk
 or exit $status
 
 echo "3/3 — GitHub Release yayımlanıyor..."
-set -l notes "Kararlı son kullanıcı sürümü: sadeleştirilmiş ekranlar ve açılışta güncelleme kontrolü."
+set -l notes "Kararlı son kullanıcı sürümü: Balkes web sitesi bağlantısı ve son kullanıcı düzeltmeleri."
 nix develop --command gh release create $tag $output_apk \
     --repo Sinanjam/Balkes-Hakkinda \
     --target main \

@@ -31,8 +31,11 @@ or exit 1
 
 set -l run_id ""
 for attempt in (seq 1 15)
-    set run_id (nix develop --command gh run list --repo $repo --workflow pages.yml --limit 1 --json databaseId --jq '.[0].databaseId')
-    if test -n "$run_id"
+    # Nix shellHook bilgilendirme satırı da stdout'a yazabilir. Yalnızca
+    # GitHub'ın sayısal çalışma kimliğini kabul et.
+    set -l listed_ids (nix develop --command gh run list --repo $repo --workflow pages.yml --limit 1 --json databaseId --jq '.[0].databaseId' | string match -r '^[0-9][0-9]*$')
+    if test (count $listed_ids) -gt 0
+        set run_id $listed_ids[-1]
         break
     end
     sleep 2

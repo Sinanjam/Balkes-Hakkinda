@@ -1,0 +1,35 @@
+name: Android CI
+
+on:
+  pull_request:
+    paths:
+      - "app/**"
+      - "build.gradle"
+      - "settings.gradle"
+      - "gradle.properties"
+      - "flake.nix"
+      - "flake.lock"
+      - ".github/workflows/android.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: android-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Nix debug build
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Kaynak kodu al
+        uses: actions/checkout@v7
+
+      - name: Nix'i kur
+        uses: cachix/install-nix-action@v31.11.0
+
+      - name: Debug APK oluştur
+        run: nix develop --command gradle --no-daemon :app:assembleDebug

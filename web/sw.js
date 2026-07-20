@@ -23,8 +23,9 @@ self.addEventListener("fetch", (event) => {
   if (request.method !== "GET") return;
 
   const url = new URL(request.url);
-  const isData = url.hostname === "raw.githubusercontent.com" || url.hostname === "cdn.jsdelivr.net";
-  if (isData) {
+  const isRemoteJson = (url.hostname === "raw.githubusercontent.com" || url.hostname === "cdn.jsdelivr.net")
+    && url.pathname.toLowerCase().endsWith(".json");
+  if (isRemoteJson) {
     event.respondWith(staleWhileRevalidate(request));
     return;
   }

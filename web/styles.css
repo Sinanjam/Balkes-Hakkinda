@@ -899,6 +899,53 @@ tr:last-child td { border-bottom: 0; }
 
 .site-footer p { margin: 0; }
 
+.analytics-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border: 1px solid rgba(83, 220, 145, 0.34);
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(83, 220, 145, 0.10), rgba(2, 231, 242, 0.06));
+  color: var(--green);
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.analytics-badge:hover {
+  border-color: rgba(83, 220, 145, 0.72);
+  box-shadow: 0 0 24px rgba(83, 220, 145, 0.10);
+  transform: translateY(-2px);
+}
+
+.analytics-badge > span:nth-child(2) {
+  display: grid;
+  line-height: 1.25;
+}
+
+.analytics-badge strong {
+  color: var(--text);
+  font-size: 0.75rem;
+}
+
+.analytics-badge small {
+  color: var(--muted);
+  font-size: 0.65rem;
+}
+
+.analytics-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 12px var(--green);
+  animation: analytics-pulse 2.2s ease-in-out infinite;
+}
+
+@keyframes analytics-pulse {
+  0%, 100% { opacity: 0.55; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.12); }
+}
+
 .footer-links {
   display: flex;
   flex-wrap: wrap;

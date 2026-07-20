@@ -46,6 +46,8 @@ public final class MainActivity extends Activity {
             "https://github.com/Sinanjam/Balkes-Hakkinda/releases/latest";
     private static final String FEEDBACK_FORM_URL =
             "https://forms.gle/PgRRAGpovH3tRWTM7";
+    private static final String WEBSITE_URL =
+            "https://sinanjam.github.io/Balkes-Hakkinda/";
     private static final long SPLASH_MINIMUM_MS = 700L;
     private static final long UPDATE_CHECK_TIMEOUT_MS = 2_400L;
 
@@ -534,6 +536,22 @@ public final class MainActivity extends Activity {
         address.setPadding(0, Ui.dp(this, 8), 0, 0);
         address.setGravity(Gravity.CENTER);
         card.addView(address);
+
+        TextView website = Ui.chip(this, "WEB SİTESİNİ AÇ  ↗", Ui.GREEN);
+        website.setPadding(Ui.dp(this, 13), Ui.dp(this, 10),
+                Ui.dp(this, 13), Ui.dp(this, 10));
+        website.setClickable(true);
+        website.setFocusable(true);
+        website.setContentDescription("Balkes web sitesini aç");
+        website.setOnClickListener(view -> openExternalUrl(WEBSITE_URL));
+        LinearLayout.LayoutParams websiteParams = new LinearLayout.LayoutParams(-1, -2);
+        websiteParams.setMargins(0, Ui.dp(this, 13), 0, 0);
+        card.addView(website, websiteParams);
+
+        TextView websiteAddress = Ui.text(this, WEBSITE_URL, 10, Ui.MUTED);
+        websiteAddress.setPadding(0, Ui.dp(this, 8), 0, 0);
+        websiteAddress.setGravity(Gravity.CENTER);
+        card.addView(websiteAddress);
         return card;
     }
 

@@ -1,5 +1,19 @@
 # Balkes birleşik Android uygulaması
 
+Android uygulaması ve aynı uzaktan verileri kullanan GitHub Pages sitesi:
+
+- Web: https://sinanjam.github.io/Balkes-Hakkinda/
+- Android: https://github.com/Sinanjam/Balkes-Hakkinda/releases/latest
+
+Web sitesi `web/` dizinindedir ve `main` dalındaki değişikliklerde GitHub Actions
+ile yayımlanır. Yerelde önizlemek için:
+
+```fish
+python3 -m http.server 8080 --directory web
+```
+
+Ardından `http://localhost:8080` adresini açın.
+
 Bu iskelet, **Balkes Skor** paket kimliğini ve ağ tabanlı veri yaklaşımını korur; **Balkes Arşivi** içeriğini uzaktaki manifest üzerinden ekler. Büyük arşiv medyası APK'ya gömülmez.
 
 ## İlk iskelette çalışanlar

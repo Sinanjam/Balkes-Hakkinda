@@ -33,20 +33,7 @@ set -l run_id ""
 for attempt in (seq 1 15)
     # Nix shellHook bilgilendirme satırı da stdout'a yazabilir. Yalnızca
     # GitHub'ın sayısal çalışma kimliğini kabul et.
-    set -l listed_ids (nix develop --command gh run list --repo $repo --workflow pages.yml --limit 1 --json databaseId --jq '.[0].databaseId' | string match -r '^[0-9]+
-
-if test -z "$run_id"
-    echo "Pages etkin; iş akışı kimliği henüz görünmedi. Bir dakika sonra GitHub Actions sayfasını kontrol et."
-    exit 0
-end
-
-echo "Yayın izleniyor (çalışma: $run_id)..."
-nix develop --command gh run watch $run_id --repo $repo --exit-status
-or exit 1
-
-echo ""
-echo "TAMAM: https://sinanjam.github.io/Balkes-Hakkinda/"
-)
+    set -l listed_ids (nix develop --command gh run list --repo $repo --workflow pages.yml --limit 1 --json databaseId --jq '.[0].databaseId' | string match -r '^[0-9][0-9]*$')
     if test (count $listed_ids) -gt 0
         set run_id $listed_ids[-1]
         break

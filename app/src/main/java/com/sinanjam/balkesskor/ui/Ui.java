@@ -23,6 +23,7 @@ public final class Ui {
     public static final int RED_DARK = Color.rgb(105, 0, 34);
     public static final int CYAN = Color.rgb(0, 238, 255);
     public static final int GREEN = Color.rgb(99, 211, 145);
+    public static final int AMBER = Color.rgb(255, 196, 87);
 
     private Ui() {}
 
@@ -54,13 +55,53 @@ public final class Ui {
         card.setOrientation(LinearLayout.VERTICAL);
         card.setPadding(dp(context, 18), dp(context, 16), dp(context, 18), dp(context, 16));
         card.setBackground(roundedGradient(context,
-                new int[]{Color.rgb(10, 15, 24), Color.rgb(5, 8, 14)},
-                Color.argb(160, 0, 238, 255), 14, 1));
-        card.setElevation(dp(context, 4));
+                new int[]{Color.rgb(12, 17, 26), Color.rgb(6, 9, 15)},
+                Color.argb(58, 255, 255, 255), 18, 1));
+        card.setElevation(dp(context, 3));
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(-1, -2);
         params.setMargins(0, dp(context, 11), 0, 0);
         card.setLayoutParams(params);
         return card;
+    }
+
+    public static LinearLayout sportsCard(Context context, int accent) {
+        LinearLayout card = card(context);
+        card.setBackground(roundedGradient(context,
+                new int[]{Color.rgb(12, 17, 27), Color.rgb(6, 10, 16)},
+                Color.argb(105, Color.red(accent), Color.green(accent), Color.blue(accent)),
+                18, 1));
+        card.setElevation(dp(context, 3));
+        return card;
+    }
+
+    public static LinearLayout metric(Context context, String value, String label, int accent) {
+        LinearLayout box = new LinearLayout(context);
+        box.setOrientation(LinearLayout.VERTICAL);
+        box.setGravity(Gravity.CENTER);
+        box.setPadding(dp(context, 7), dp(context, 10), dp(context, 7), dp(context, 9));
+        box.setBackground(rounded(context,
+                Color.argb(22, Color.red(accent), Color.green(accent), Color.blue(accent)),
+                Color.argb(68, Color.red(accent), Color.green(accent), Color.blue(accent)),
+                12, 1));
+
+        TextView number = text(context, value, 18, TEXT);
+        number.setTypeface(Typeface.DEFAULT_BOLD);
+        number.setGravity(Gravity.CENTER);
+        box.addView(number);
+
+        TextView caption = eyebrow(context, label, accent);
+        caption.setTextSize(8);
+        caption.setGravity(Gravity.CENTER);
+        caption.setPadding(0, dp(context, 3), 0, 0);
+        box.addView(caption);
+        return box;
+    }
+
+    public static View divider(Context context) {
+        View divider = new View(context);
+        divider.setBackgroundColor(Color.argb(40, 255, 255, 255));
+        divider.setLayoutParams(new LinearLayout.LayoutParams(-1, dp(context, 1)));
+        return divider;
     }
 
     public static LinearLayout heroCard(Context context) {

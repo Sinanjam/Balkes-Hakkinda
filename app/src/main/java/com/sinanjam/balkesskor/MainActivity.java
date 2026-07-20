@@ -465,8 +465,8 @@ public final class MainActivity extends Activity {
 
         View scoreChoice = choiceCard(
                 "CANLI VE GÜNCEL",
-                "Skor Merkezi",
-                "Maçlar, sezonlar, puan durumu ve takım istatistikleri",
+                "Maç Merkezi",
+                "Fikstür, sonuçlar, haftalık puan durumu ve maç ayrıntıları",
                 Ui.RED,
                 view -> enterApp(Tab.SCORE));
         LinearLayout.LayoutParams scoreParams = new LinearLayout.LayoutParams(-1, -2);
@@ -706,8 +706,8 @@ public final class MainActivity extends Activity {
 
     private void renderScore() {
         final int generation = ++scoreRenderGeneration;
-        start("Skor merkezi", "Balkes Skor",
-                "Sezonlar, maçlar ve puan durumları", Ui.RED);
+        start("Maç merkezi", "Balkes Maç Merkezi",
+                "Fikstür, sonuçlar ve hafta hafta puan durumu", Ui.RED);
         getScoreManifest(new RemoteJsonRepository.Callback() {
             @Override public void onSuccess(Object json, boolean fromCache) {
                 if (chooserVisible || current != Tab.SCORE || generation != scoreRenderGeneration
@@ -723,71 +723,271 @@ public final class MainActivity extends Activity {
                     return;
                 }
 
-                LinearLayout hero = Ui.heroCard(MainActivity.this);
-                TextView big = Ui.text(MainActivity.this,
-                        seasons == null ? "—" : String.valueOf(seasons.length()), 46, Ui.TEXT);
-                big.setTypeface(Typeface.DEFAULT_BOLD);
-                big.setPadding(0, Ui.dp(MainActivity.this, 15), 0, 0);
-                hero.addView(big);
                 int totalMatches = 0;
+                int tableSeasons = 0;
                 for (int index = 0; index < seasons.length(); index++) {
                     JSONObject item = seasons.optJSONObject(index);
-                    if (item != null) totalMatches += item.optInt("matchCount", 0);
+                    if (item == null) continue;
+                    totalMatches += item.optInt("matchCount", 0);
+                    if (item.optString("standingsByWeekUrl", "").length() > 0) tableSeasons++;
                 }
-                hero.addView(Ui.text(MainActivity.this,
-                        "erişilebilir sezon  •  " + totalMatches + " toplam maç", 14, Ui.MUTED));
-                if (seasons.length() > 0) {
-                    JSONObject season = featuredSeason(seasons);
-                    if (season != null) {
-                        TextView active = strong("Son puan tablosu  "
-                                + season.optString("name", season.optString("id")));
-                        active.setPadding(0, Ui.dp(MainActivity.this, 13), 0, 0);
-                        hero.addView(active);
-                        final String id = season.optString("id", "");
-                        final String name = season.optString("name", id);
-                        makeClickable(hero, "SEZONU VE MAÇLARI AÇ", Ui.CYAN,
-                                view -> renderSeasonDetail(id, name, Tab.SCORE));
-                    }
-                }
-                TextView refresh = Ui.eyebrow(MainActivity.this, "VERİLERİ ŞİMDİ YENİLE  ↻", Ui.GREEN);
-                refresh.setPadding(0, Ui.dp(MainActivity.this, 14), 0, 0);
-                refresh.setClickable(true);
-                refresh.setFocusable(true);
-                refresh.setOnClickListener(view -> refreshScoreData());
-                hero.addView(refresh);
-                content.addView(hero);
 
-                if (seasons != null) {
-                    TextView allSeasons = Ui.eyebrow(MainActivity.this,
-                            "TÜM SEZONLAR  •  " + seasons.length(), Ui.CYAN);
-                    allSeasons.setPadding(0, Ui.dp(MainActivity.this, 18), 0,
+                JSONObject currentSeason = seasons.optJSONObject(0);
+                LinearLayout overview = Ui.heroCard(MainActivity.this);
+                LinearLayout top = new LinearLayout(MainActivity.this);
+                top.setOrientation(LinearLayout.HORIZONTAL);
+                top.setGravity(Gravity.CENTER_VERTICAL);
+                TextView centerLabel = Ui.eyebrow(MainActivity.this, "Güncel spor merkezi", Ui.RED);
+                top.addView(centerLabel, new LinearLayout.LayoutParams(0, -2, 1f));
+                TextView live = Ui.chip(MainActivity.this, "VERİLER GÜNCEL", Ui.GREEN);
+                live.setTextSize(9);
+                top.addView(live);
+                overview.addView(top);
+
+                TextView overviewTitle = Ui.text(MainActivity.this,
+                        currentSeason == null ? "Balkes" :
+                                currentSeason.optString("name", currentSeason.optString("id", "Balkes")),
+                        28, Ui.TEXT);
+                overviewTitle.setTypeface(Typeface.DEFAULT_BOLD);
+                overviewTitle.setPadding(0, Ui.dp(MainActivity.this, 13), 0, Ui.dp(MainActivity.this, 3));
+                overview.addView(overviewTitle);
+                overview.addView(Ui.text(MainActivity.this,
+                        currentSeason == null ? "Balıkesirspor" :
+                                currentSeason.optString("competition", "Balıkesirspor"),
+                        12, Ui.MUTED));
+                overview.addView(metricRow(
+                        new String[]{String.valueOf(seasons.length()), String.valueOf(totalMatches),
+                                String.valueOf(tableSeasons)},
+                        new String[]{"SEZON", "MAÇ", "TABLO"},
+                        new int[]{Ui.CYAN, Ui.RED, Ui.GREEN}));
+
+                if (currentSeason != null) {
+                    final String currentId = currentSeason.optString("id", "");
+                    final String currentName = currentSeason.optString("name", currentId);
+                    makeClickable(overview, "GÜNCEL SEZONU AÇ", Ui.CYAN,
+                            view -> renderSeasonDetail(currentId, currentName, Tab.SCORE));
+                }
+                content.addView(overview);
+
+                if (currentSeason != null) {
+                    TextView fixtureHeading = Ui.eyebrow(MainActivity.this,
+                            "SIRADAKİ MAÇLAR", Ui.RED);
+                    fixtureHeading.setPadding(0, Ui.dp(MainActivity.this, 21), 0,
                             Ui.dp(MainActivity.this, 2));
-                    content.addView(allSeasons);
-                    for (int i = 0; i < seasons.length(); i++) {
-                        JSONObject season = seasons.optJSONObject(i);
-                        if (season == null) continue;
-                        final String id = season.optString("id", "");
-                        final String name = season.optString("name", id);
-                        LinearLayout card = Ui.card(MainActivity.this);
-                        card.addView(Ui.eyebrow(MainActivity.this, "Sezon", Ui.CYAN));
-                        TextView seasonTitle = strong(name);
-                        seasonTitle.setPadding(0, Ui.dp(MainActivity.this, 5), 0, 0);
-                        card.addView(seasonTitle);
-                        card.addView(Ui.text(MainActivity.this,
-                                season.optInt("matchCount", 0) + " maç  •  "
-                                        + (season.optString("standingsByWeekUrl", "").length() > 0
-                                        ? "hafta hafta puan durumu" : "fikstür hazır"),
-                                13, Ui.MUTED));
-                        makeClickable(card, "SKORLARI AÇ", Ui.RED,
-                                view -> renderSeasonDetail(id, name, Tab.SCORE));
-                        content.addView(card);
-                    }
+                    content.addView(fixtureHeading);
+                    LinearLayout fixtureSlot = new LinearLayout(MainActivity.this);
+                    fixtureSlot.setOrientation(LinearLayout.VERTICAL);
+                    fixtureSlot.addView(Ui.loading(MainActivity.this));
+                    content.addView(fixtureSlot, new LinearLayout.LayoutParams(-1, -2));
+                    loadFeaturedMatches(currentSeason, generation, fixtureSlot);
+                }
+
+                TextView allSeasons = Ui.eyebrow(MainActivity.this,
+                        "TÜM SEZONLAR  •  " + seasons.length(), Ui.CYAN);
+                allSeasons.setPadding(0, Ui.dp(MainActivity.this, 22), 0,
+                        Ui.dp(MainActivity.this, 2));
+                content.addView(allSeasons);
+
+                for (int index = 0; index < seasons.length(); index++) {
+                    JSONObject season = seasons.optJSONObject(index);
+                    if (season == null) continue;
+                    content.addView(seasonSportsCard(season, index == 0));
                 }
             }
+
             @Override public void onError(String message) {
                 if (generation == scoreRenderGeneration) showError(Tab.SCORE, message);
             }
         });
+    }
+
+    private LinearLayout metricRow(String[] values, String[] labels, int[] accents) {
+        LinearLayout row = new LinearLayout(this);
+        row.setOrientation(LinearLayout.HORIZONTAL);
+        row.setPadding(0, Ui.dp(this, 15), 0, 0);
+        int count = Math.min(values.length, Math.min(labels.length, accents.length));
+        for (int index = 0; index < count; index++) {
+            LinearLayout metric = Ui.metric(this, values[index], labels[index], accents[index]);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(0, -2, 1f);
+            if (index > 0) params.setMargins(Ui.dp(this, 7), 0, 0, 0);
+            row.addView(metric, params);
+        }
+        return row;
+    }
+
+    private LinearLayout seasonSportsCard(JSONObject season, boolean currentSeason) {
+        final String id = season.optString("id", "");
+        final String name = season.optString("name", id);
+        JSONObject summary = season.optJSONObject("summary");
+        if (summary == null) summary = new JSONObject();
+
+        LinearLayout card = Ui.sportsCard(this, currentSeason ? Ui.GREEN : Ui.CYAN);
+        LinearLayout top = new LinearLayout(this);
+        top.setOrientation(LinearLayout.HORIZONTAL);
+        top.setGravity(Gravity.CENTER_VERTICAL);
+        TextView seasonChip = Ui.chip(this, name, currentSeason ? Ui.GREEN : Ui.CYAN);
+        seasonChip.setTextSize(9);
+        top.addView(seasonChip);
+        if (summary.optInt("finalRank", 0) > 0) {
+            TextView rank = Ui.eyebrow(this, summary.optInt("finalRank") + ". SIRA", Ui.AMBER);
+            rank.setGravity(Gravity.END);
+            top.addView(rank, new LinearLayout.LayoutParams(0, -2, 1f));
+        }
+        card.addView(top);
+
+        TextView competition = Ui.text(this,
+                season.optString("competition", "Profesyonel takım"), 16, Ui.TEXT);
+        competition.setTypeface(Typeface.DEFAULT_BOLD);
+        competition.setPadding(0, Ui.dp(this, 11), 0, 0);
+        card.addView(competition);
+
+        String points = summary.has("points") ? String.valueOf(summary.optInt("points")) : "—";
+        card.addView(metricRow(
+                new String[]{String.valueOf(summary.optInt("wins", 0)),
+                        String.valueOf(summary.optInt("draws", 0)),
+                        String.valueOf(summary.optInt("losses", 0)), points},
+                new String[]{"G", "B", "M", "P"},
+                new int[]{Ui.GREEN, Ui.AMBER, Ui.RED, Ui.CYAN}));
+
+        TextView meta = Ui.text(this,
+                season.optInt("matchCount", 0) + " maç  •  "
+                        + (season.optString("standingsByWeekUrl", "").length() > 0
+                        ? "hafta hafta tablo" : "fikstür hazır"),
+                12, Ui.MUTED);
+        meta.setPadding(0, Ui.dp(this, 11), 0, 0);
+        card.addView(meta);
+        makeClickable(card, "SEZON MERKEZİNİ AÇ", Ui.RED,
+                view -> renderSeasonDetail(id, name, Tab.SCORE));
+        return card;
+    }
+
+    private void loadFeaturedMatches(JSONObject season, int generation, LinearLayout slot) {
+        final String id = season.optString("id", "");
+        final String name = season.optString("name", id);
+        String matchesUrl = season.optString(
+                "matchesIndexUrl", "seasons/" + id + "/matches_index.json");
+        getScoreJson(matchesUrl, new RemoteJsonRepository.Callback() {
+            @Override public void onSuccess(Object json, boolean fromCache) {
+                if (chooserVisible || current != Tab.SCORE || generation != scoreRenderGeneration
+                        || !(json instanceof JSONArray)) return;
+                JSONArray matches = (JSONArray) json;
+                ArrayList<JSONObject> featured = new ArrayList<>();
+                for (int index = 0; index < matches.length() && featured.size() < 4; index++) {
+                    JSONObject match = matches.optJSONObject(index);
+                    if (match != null && !isMatchPlayed(match)) featured.add(match);
+                }
+                if (featured.size() == 0) {
+                    for (int index = matches.length() - 1;
+                         index >= 0 && featured.size() < 4; index--) {
+                        JSONObject match = matches.optJSONObject(index);
+                        if (match != null) featured.add(match);
+                    }
+                }
+
+                slot.removeAllViews();
+                if (featured.size() == 0) {
+                    slot.addView(Ui.message(MainActivity.this, "Fikstür bekleniyor",
+                            "Güncel sezonun maç programı henüz yayımlanmadı."));
+                    return;
+                }
+                for (JSONObject match : featured) {
+                    slot.addView(matchSportsCard(match, id, name, Tab.SCORE));
+                }
+            }
+
+            @Override public void onError(String message) {
+                if (chooserVisible || current != Tab.SCORE || generation != scoreRenderGeneration) return;
+                slot.removeAllViews();
+                slot.addView(retryCard("Güncel maçlar açılamadı", friendlyError(message), Ui.RED,
+                        view -> loadFeaturedMatches(season, generation, slot)));
+            }
+        });
+    }
+
+    private boolean isMatchPlayed(JSONObject match) {
+        JSONObject score = match.optJSONObject("score");
+        if (score == null) return false;
+        if (score.has("played")) return score.optBoolean("played", false);
+        return score.has("home") && !score.isNull("home")
+                && score.has("away") && !score.isNull("away");
+    }
+
+    private boolean isBalkesTeam(String team) {
+        if (team == null) return false;
+        String turkish = team.toLowerCase(TURKISH);
+        String root = team.toLowerCase(Locale.ROOT);
+        return turkish.contains("balıkesirspor") || root.contains("balikesirspor");
+    }
+
+    private LinearLayout teamScoreLine(String team, String score, boolean balkes) {
+        LinearLayout row = new LinearLayout(this);
+        row.setOrientation(LinearLayout.HORIZONTAL);
+        row.setGravity(Gravity.CENTER_VERTICAL);
+
+        TextView teamView = Ui.text(this, team, 13, balkes ? Ui.TEXT : Ui.MUTED);
+        if (balkes) teamView.setTypeface(Typeface.DEFAULT_BOLD);
+        row.addView(teamView, new LinearLayout.LayoutParams(0, -2, 1f));
+
+        TextView scoreView = Ui.text(this, score, 16, balkes ? Ui.CYAN : Ui.TEXT);
+        scoreView.setTypeface(Typeface.DEFAULT_BOLD);
+        scoreView.setGravity(Gravity.END);
+        row.addView(scoreView, new LinearLayout.LayoutParams(Ui.dp(this, 30), -2));
+        return row;
+    }
+
+    private LinearLayout matchSportsCard(JSONObject match, String seasonId,
+                                         String seasonName, Tab origin) {
+        int accent = resultColor(match);
+        LinearLayout card = Ui.sportsCard(this, accent);
+        card.setOrientation(LinearLayout.HORIZONTAL);
+        card.setGravity(Gravity.CENTER_VERTICAL);
+        card.setPadding(Ui.dp(this, 13), Ui.dp(this, 12),
+                Ui.dp(this, 12), Ui.dp(this, 12));
+
+        LinearLayout meta = new LinearLayout(this);
+        meta.setOrientation(LinearLayout.VERTICAL);
+        TextView round = Ui.eyebrow(this,
+                clip(match.optString("roundLabel",
+                        match.optString("stage", "Maç")), 11), accent);
+        round.setTextSize(8);
+        meta.addView(round);
+        TextView date = Ui.text(this,
+                clip(match.optString("dateDisplay", match.optString("date", "")), 12),
+                9, Ui.MUTED);
+        date.setPadding(0, Ui.dp(this, 5), 0, 0);
+        meta.addView(date);
+        card.addView(meta, new LinearLayout.LayoutParams(Ui.dp(this, 72), -2));
+
+        JSONObject score = match.optJSONObject("score");
+        boolean played = isMatchPlayed(match);
+        String homeScore = played && score != null ? String.valueOf(score.optInt("home", 0)) : "—";
+        String awayScore = played && score != null ? String.valueOf(score.optInt("away", 0)) : "—";
+
+        LinearLayout teams = new LinearLayout(this);
+        teams.setOrientation(LinearLayout.VERTICAL);
+        teams.addView(teamScoreLine(match.optString("homeTeam", "Ev sahibi"), homeScore,
+                isBalkesTeam(match.optString("homeTeam", ""))));
+        teams.addView(teamScoreLine(match.optString("awayTeam", "Deplasman"), awayScore,
+                isBalkesTeam(match.optString("awayTeam", ""))));
+        LinearLayout.LayoutParams teamParams = new LinearLayout.LayoutParams(0, -2, 1f);
+        teamParams.setMargins(Ui.dp(this, 8), 0, Ui.dp(this, 8), 0);
+        card.addView(teams, teamParams);
+
+        JSONObject balkes = match.optJSONObject("balkes");
+        String result = balkes == null ? "" : balkes.optString("result", "");
+        String badge = !played ? "FİK" : "W".equals(result) ? "G"
+                : "L".equals(result) ? "M" : "B";
+        TextView resultView = Ui.chip(this, badge, accent);
+        resultView.setTextSize(9);
+        card.addView(resultView, new LinearLayout.LayoutParams(Ui.dp(this, 48), -2));
+
+        card.setClickable(true);
+        card.setFocusable(true);
+        card.setContentDescription(match.optString("homeTeam", "") + " "
+                + scoreDisplay(match) + " " + match.optString("awayTeam", ""));
+        card.setOnClickListener(view ->
+                renderMatchDetail(match, seasonId, seasonName, origin));
+        return card;
     }
 
     private void refreshScoreData() {
@@ -1139,10 +1339,10 @@ public final class MainActivity extends Activity {
         final String key = "season:" + seasonId + ":" + System.nanoTime();
         detailRequestKey = key;
         LinearLayout body = beginDetail(
-                "Skor merkezi",
+                "Maç merkezi",
                 seasonName + " Sezonu",
-                "Maç skorları ve ayrıntılı karşılaşma kayıtları",
-                Ui.CYAN,
+                "Fikstür, sonuçlar ve hafta hafta puan durumu",
+                Ui.RED,
                 () -> select(origin));
         body.addView(Ui.loading(this));
 
@@ -1150,77 +1350,81 @@ public final class MainActivity extends Activity {
         if (matchesUrl == null || matchesUrl.length() == 0) {
             matchesUrl = "seasons/" + seasonId + "/matches_index.json";
         }
-        getScoreJson(matchesUrl,
-                new RemoteJsonRepository.Callback() {
-                    @Override public void onSuccess(Object json, boolean fromCache) {
-                        if (chooserVisible || !key.equals(detailRequestKey) || !(json instanceof JSONArray)) return;
-                        JSONArray matches = (JSONArray) json;
-                        body.removeAllViews();
+        getScoreJson(matchesUrl, new RemoteJsonRepository.Callback() {
+            @Override public void onSuccess(Object json, boolean fromCache) {
+                if (chooserVisible || !key.equals(detailRequestKey) || !(json instanceof JSONArray)) return;
+                JSONArray matches = (JSONArray) json;
+                body.removeAllViews();
 
-                        LinearLayout summary = Ui.heroCard(MainActivity.this);
-                        TextView count = Ui.text(MainActivity.this, String.valueOf(matches.length()), 42, Ui.TEXT);
-                        count.setTypeface(Typeface.DEFAULT_BOLD);
-                        count.setPadding(0, Ui.dp(MainActivity.this, 12), 0, 0);
-                        summary.addView(count);
-                        summary.addView(Ui.text(MainActivity.this,
-                                "maç kaydının tamamı bu sayfada", 14, Ui.MUTED));
-                        body.addView(summary);
+                int wins = 0;
+                int draws = 0;
+                int losses = 0;
+                for (int index = 0; index < matches.length(); index++) {
+                    JSONObject match = matches.optJSONObject(index);
+                    JSONObject balkes = match == null ? null : match.optJSONObject("balkes");
+                    String result = balkes == null ? "" : balkes.optString("result", "");
+                    if ("W".equals(result)) wins++;
+                    else if ("L".equals(result)) losses++;
+                    else if ("D".equals(result)) draws++;
+                }
 
-                        TextView standingsHeading = Ui.eyebrow(MainActivity.this,
-                                "PUAN DURUMU  •  HAFTA HAFTA", Ui.CYAN);
-                        standingsHeading.setPadding(0, Ui.dp(MainActivity.this, 20), 0, 0);
-                        body.addView(standingsHeading);
-                        LinearLayout standingsSlot = new LinearLayout(MainActivity.this);
-                        standingsSlot.setOrientation(LinearLayout.VERTICAL);
-                        body.addView(standingsSlot, new LinearLayout.LayoutParams(-1, -2));
-                        loadSeasonStandings(seasonId, key, standingsSlot);
+                LinearLayout summary = Ui.heroCard(MainActivity.this);
+                LinearLayout summaryTop = new LinearLayout(MainActivity.this);
+                summaryTop.setOrientation(LinearLayout.HORIZONTAL);
+                summaryTop.setGravity(Gravity.CENTER_VERTICAL);
+                summaryTop.addView(Ui.eyebrow(MainActivity.this, "SEZON ÖZETİ", Ui.RED),
+                        new LinearLayout.LayoutParams(0, -2, 1f));
+                TextView source = Ui.chip(MainActivity.this, "TFF VERİSİ", Ui.CYAN);
+                source.setTextSize(8);
+                summaryTop.addView(source);
+                summary.addView(summaryTop);
 
-                        TextView matchesHeading = Ui.eyebrow(MainActivity.this,
-                                "TÜM MAÇLAR  •  " + matches.length(), Ui.RED);
-                        matchesHeading.setPadding(0, Ui.dp(MainActivity.this, 21), 0,
-                                Ui.dp(MainActivity.this, 2));
-                        body.addView(matchesHeading);
+                TextView seasonTitle = Ui.text(MainActivity.this, seasonName, 27, Ui.TEXT);
+                seasonTitle.setTypeface(Typeface.DEFAULT_BOLD);
+                seasonTitle.setPadding(0, Ui.dp(MainActivity.this, 12), 0, 0);
+                summary.addView(seasonTitle);
+                summary.addView(metricRow(
+                        new String[]{String.valueOf(matches.length()), String.valueOf(wins),
+                                String.valueOf(draws), String.valueOf(losses)},
+                        new String[]{"MAÇ", "G", "B", "M"},
+                        new int[]{Ui.CYAN, Ui.GREEN, Ui.AMBER, Ui.RED}));
+                body.addView(summary);
 
-                        if (matches.length() == 0) {
-                            body.addView(Ui.message(MainActivity.this, "Maç kaydı yok",
-                                    "Bu sezonun fikstürü henüz yayımlanmadı."));
-                        }
+                TextView standingsHeading = Ui.eyebrow(MainActivity.this,
+                        "PUAN DURUMU  •  HAFTA HAFTA", Ui.CYAN);
+                standingsHeading.setPadding(0, Ui.dp(MainActivity.this, 22), 0, 0);
+                body.addView(standingsHeading);
+                LinearLayout standingsSlot = new LinearLayout(MainActivity.this);
+                standingsSlot.setOrientation(LinearLayout.VERTICAL);
+                body.addView(standingsSlot, new LinearLayout.LayoutParams(-1, -2));
+                loadSeasonStandings(seasonId, key, standingsSlot);
 
-                        for (int i = 0; i < matches.length(); i++) {
-                            JSONObject match = matches.optJSONObject(i);
-                            if (match == null) continue;
-                            final JSONObject selectedMatch = match;
-                            LinearLayout card = Ui.card(MainActivity.this);
-                            card.addView(Ui.eyebrow(MainActivity.this,
-                                    match.optString("roundLabel",
-                                            match.optString("stage", "Maç")), resultColor(match)));
-                            TextView teams = strong(match.optString("homeTeam", "Ev sahibi")
-                                    + "\n" + scoreDisplay(match) + "\n"
-                                    + match.optString("awayTeam", "Deplasman"));
-                            teams.setGravity(Gravity.CENTER);
-                            teams.setPadding(0, Ui.dp(MainActivity.this, 8), 0, 0);
-                            card.addView(teams);
-                            TextView date = Ui.text(MainActivity.this,
-                                    match.optString("dateDisplay", "") + "  •  "
-                                            + match.optString("competitionLabel",
-                                                    match.optString("competitionType", "Maç")),
-                                    12, Ui.MUTED);
-                            date.setGravity(Gravity.CENTER);
-                            date.setPadding(0, Ui.dp(MainActivity.this, 5), 0, 0);
-                            card.addView(date);
-                            makeClickable(card, "MAÇ DETAYINI AÇ", Ui.CYAN,
-                                    view -> renderMatchDetail(selectedMatch, seasonId, seasonName, origin));
-                            body.addView(card);
-                        }
+                TextView matchesHeading = Ui.eyebrow(MainActivity.this,
+                        "TÜM MAÇLAR  •  " + matches.length(), Ui.RED);
+                matchesHeading.setPadding(0, Ui.dp(MainActivity.this, 23), 0,
+                        Ui.dp(MainActivity.this, 2));
+                body.addView(matchesHeading);
+
+                if (matches.length() == 0) {
+                    body.addView(Ui.message(MainActivity.this, "Maç kaydı yok",
+                            "Bu sezonun fikstürü henüz yayımlanmadı."));
+                }
+
+                for (int index = 0; index < matches.length(); index++) {
+                    JSONObject match = matches.optJSONObject(index);
+                    if (match != null) {
+                        body.addView(matchSportsCard(match, seasonId, seasonName, origin));
                     }
+                }
+            }
 
-                    @Override public void onError(String message) {
-                        if (chooserVisible || !key.equals(detailRequestKey)) return;
-                        body.removeAllViews();
-                        body.addView(retryCard("Skorlar açılamadı", friendlyError(message), Ui.RED,
-                                view -> renderSeasonDetail(seasonId, seasonName, origin)));
-                    }
-                });
+            @Override public void onError(String message) {
+                if (chooserVisible || !key.equals(detailRequestKey)) return;
+                body.removeAllViews();
+                body.addView(retryCard("Skorlar açılamadı", friendlyError(message), Ui.RED,
+                        view -> renderSeasonDetail(seasonId, seasonName, origin)));
+            }
+        });
     }
 
     private void loadSeasonStandings(String seasonId, String requestKey, LinearLayout slot) {
@@ -1395,20 +1599,54 @@ public final class MainActivity extends Activity {
                 () -> renderSeasonDetail(seasonId, seasonName, origin));
 
         LinearLayout scoreboard = Ui.heroCard(this);
-        TextView homeView = Ui.text(this, home, 17, Ui.TEXT);
+        scoreboard.setGravity(Gravity.CENTER_HORIZONTAL);
+        scoreboard.addView(Ui.eyebrow(this, "MAÇ MERKEZİ", resultColor(match)));
+
+        LinearLayout scoreLine = new LinearLayout(this);
+        scoreLine.setOrientation(LinearLayout.HORIZONTAL);
+        scoreLine.setGravity(Gravity.CENTER_VERTICAL);
+        scoreLine.setPadding(0, Ui.dp(this, 17), 0, Ui.dp(this, 12));
+
+        TextView homeView = Ui.text(this, home, 14, Ui.TEXT);
         homeView.setTypeface(Typeface.DEFAULT_BOLD);
         homeView.setGravity(Gravity.CENTER);
-        scoreboard.addView(homeView);
-        TextView scoreView = Ui.text(this, scoreDisplay(match), 44, resultColor(match));
+        scoreLine.addView(homeView, new LinearLayout.LayoutParams(0, -2, 1f));
+
+        TextView scoreView = Ui.text(this, scoreDisplay(match), 34, resultColor(match));
         scoreView.setTypeface(Typeface.DEFAULT_BOLD);
         scoreView.setGravity(Gravity.CENTER);
-        scoreView.setPadding(0, Ui.dp(this, 9), 0, Ui.dp(this, 9));
-        scoreboard.addView(scoreView);
-        TextView awayView = Ui.text(this, away, 17, Ui.TEXT);
+        scoreView.setBackground(Ui.rounded(this,
+                Color.argb(28, Color.red(resultColor(match)),
+                        Color.green(resultColor(match)), Color.blue(resultColor(match))),
+                Color.argb(110, Color.red(resultColor(match)),
+                        Color.green(resultColor(match)), Color.blue(resultColor(match))),
+                14, 1));
+        scoreView.setPadding(Ui.dp(this, 14), Ui.dp(this, 9),
+                Ui.dp(this, 14), Ui.dp(this, 9));
+        scoreLine.addView(scoreView, new LinearLayout.LayoutParams(-2, -2));
+
+        TextView awayView = Ui.text(this, away, 14, Ui.TEXT);
         awayView.setTypeface(Typeface.DEFAULT_BOLD);
         awayView.setGravity(Gravity.CENTER);
-        scoreboard.addView(awayView);
+        scoreLine.addView(awayView, new LinearLayout.LayoutParams(0, -2, 1f));
+        scoreboard.addView(scoreLine);
         body.addView(scoreboard);
+
+        LinearLayout facts = Ui.sportsCard(this, Ui.CYAN);
+        facts.addView(Ui.eyebrow(this, "MAÇ BİLGİLERİ", Ui.CYAN));
+        facts.addView(Ui.text(this,
+                "Tarih  •  " + match.optString("dateDisplay", "Belirtilmedi"), 12, Ui.TEXT));
+        TextView venue = Ui.text(this,
+                "Stadyum  •  " + match.optString("stadium",
+                        match.optString("venue", "Belirtilmedi")), 12, Ui.MUTED);
+        venue.setPadding(0, Ui.dp(this, 7), 0, 0);
+        facts.addView(venue);
+        TextView competition = Ui.text(this,
+                "Organizasyon  •  " + match.optString("competition",
+                        match.optString("competitionLabel", "Belirtilmedi")), 12, Ui.MUTED);
+        competition.setPadding(0, Ui.dp(this, 7), 0, 0);
+        facts.addView(competition);
+        body.addView(facts);
 
         LinearLayout extra = new LinearLayout(this);
         extra.setOrientation(LinearLayout.VERTICAL);
@@ -1476,8 +1714,10 @@ public final class MainActivity extends Activity {
 
     private String scoreDisplay(JSONObject match) {
         JSONObject score = match.optJSONObject("score");
-        if (score == null) return "-";
-        return score.optString("display", score.optInt("home", 0) + "-" + score.optInt("away", 0));
+        if (score == null || !isMatchPlayed(match)) return "—";
+        String display = score.optString("display", "").trim();
+        if (display.length() > 0) return display;
+        return score.optInt("home", 0) + "-" + score.optInt("away", 0);
     }
 
     private int resultColor(JSONObject match) {

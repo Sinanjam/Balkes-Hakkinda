@@ -26,7 +26,7 @@ self.addEventListener("fetch", (event) => {
   const isRemoteJson = (url.hostname === "raw.githubusercontent.com" || url.hostname === "cdn.jsdelivr.net")
     && url.pathname.toLowerCase().endsWith(".json");
   if (isRemoteJson) {
-    event.respondWith(staleWhileRevalidate(request));
+    event.respondWith(networkFirst(request));
     return;
   }
 
@@ -40,12 +40,15 @@ self.addEventListener("fetch", (event) => {
   }
 });
 
-async function staleWhileRevalidate(request) {
+async function networkFirst(request) {
   const cache = await caches.open(DATA_CACHE);
   const cached = await cache.match(request);
-  const network = fetch(request).then((response) => {
+  try {
+    const response = await fetch(request);
     if (response.ok) cache.put(request, response.clone());
     return response;
-  }).catch(() => cached);
-  return cached || network;
+  } catch (error) {
+    if (cached) return cached;
+    throw error;
+  }
 }

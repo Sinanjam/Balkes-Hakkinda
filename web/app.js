@@ -366,15 +366,10 @@
   }
 
   async function renderHome(token) {
-    const [scoreResult, archiveResult] = await Promise.allSettled([scoreManifest(), archiveManifest()]);
+    const manifest = await scoreManifest();
     if (token !== state.routeToken) return;
 
-    const seasons = scoreResult.status === "fulfilled"
-      ? asArray(scoreResult.value.availableSeasons)
-      : [];
-    const archiveItems = archiveResult.status === "fulfilled"
-      ? asArray(archiveResult.value.items)
-      : [];
+    const seasons = asArray(manifest.availableSeasons);
     const totalMatches = seasons.reduce((sum, season) => sum + number(season.matchCount), 0);
 
     document.title = "Balkes — Balıkesirspor Dijital Merkezi";
@@ -405,7 +400,7 @@
       h("div", { className: "stat-grid" },
         stat(seasons.length || "—", "erişilebilir sezon"),
         stat(totalMatches || "—", "maç kaydı"),
-        stat(archiveItems.length || "—", "arşiv yazısı"),
+        stat("71", "korunan arşiv kaydı"),
         stat("GitHub", "güncel veri kaynağı")
       )
     );

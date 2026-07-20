@@ -14,4 +14,4 @@ or exit $status
 nix develop --command adb shell am start -n com.sinanjam.balkesskor.dev/com.sinanjam.balkesskor.MainActivity
 or exit $status
 
-echo "Balkes DEV kuruldu ve açıldı. Sürüm: 1.5.0-dev"
+echo "Balkes DEV kuruldu ve açıldı. Sürüm: 1.5.1-dev"

@@ -6,7 +6,13 @@ Android uygulaması ve aynı uzaktan verileri kullanan GitHub Pages sitesi:
 - Android: https://github.com/Sinanjam/Balkes-Hakkinda/releases/latest
 
 Web sitesi `web/` dizinindedir ve `main` dalındaki değişikliklerde GitHub Actions
-ile yayımlanır. Yerelde önizlemek için:
+ile yayımlanır. GitHub Pages ilk kez etkinleştirilecekse yalnızca bir kez:
+
+```fish
+fish enable-pages.fish
+```
+
+Yerelde önizlemek için:
 
 ```fish
 python3 -m http.server 8080 --directory web

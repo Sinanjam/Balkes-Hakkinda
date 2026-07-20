@@ -12,9 +12,11 @@
   <title>Balkes — Balıkesirspor Dijital Merkezi</title>
   <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://gc.zgo.at" crossorigin>
+  <link rel="preconnect" href="https://sinanjam10.goatcounter.com" crossorigin>
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./app.js" defer></script>
+  <link rel="stylesheet" href="./styles.css?v=20260720-1">
+  <script src="./app.js?v=20260720-1" defer></script>
   <script data-goatcounter="https://sinanjam10.goatcounter.com/count"
           async src="https://gc.zgo.at/count.js"></script>
 </head>
@@ -43,11 +45,15 @@
 
   <footer class="site-footer">
     <p><strong>Balkes</strong> taraftar yapımı bağımsız bir projedir.</p>
-    <a class="analytics-badge" href="https://sinanjam10.goatcounter.com/" target="_blank" rel="noopener noreferrer" aria-label="Balkes anonim ziyaret istatistiklerini aç">
+    <div class="analytics-badge" id="visitor-counter">
       <span class="analytics-pulse" aria-hidden="true"></span>
-      <span><strong>Ziyaret istatistikleri</strong><small>GoatCounter · çerezsiz ölçüm</small></span>
-      <span aria-hidden="true">↗</span>
-    </a>
+      <span class="analytics-value" id="goatcounter-value" aria-live="polite">—</span>
+      <span class="analytics-copy">
+        <strong>toplam ziyaret</strong>
+        <small id="goatcounter-status">GoatCounter verisi alınıyor</small>
+      </span>
+      <a class="analytics-open" href="https://sinanjam10.goatcounter.com/" target="_blank" rel="noopener noreferrer" aria-label="GoatCounter istatistiklerini aç">↗</a>
+    </div>
     <div class="footer-links">
       <a href="#/about">Hakkında</a>
       <a href="https://forms.gle/PgRRAGpovH3tRWTM7" target="_blank" rel="noopener noreferrer">Geri bildirim</a>

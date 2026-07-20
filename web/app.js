@@ -110,7 +110,8 @@
     return text(value)
       .toLocaleLowerCase("tr-TR")
       .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "");
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/ı/g, "i");
   }
 
   function truncate(value, limit = 180) {
@@ -384,7 +385,7 @@
     const played = hasPlayed(match);
     const result = text(match.balkes && match.balkes.result).toUpperCase();
     const tone = result === "W" ? "win" : result === "L" ? "loss" : result === "D" ? "draw" : "fixture";
-    const status = played ? text(score.display, `${score.home}-${score.away}`) : text(match.time, shortDate(match.date));
+    const status = played ? text(score.display, `${score.home}-${score.away}`) : text(match.time, "—");
     const week = number(match.week || match.standingsWeek);
     return h("a", { className: "fixture-row", href: routeHref("score", seasonId, "match", match.id) },
       h("span", { className: "fixture-round", text: week ? `${week}. HF` : text(match.matchTypeLabel, "MAÇ") }),

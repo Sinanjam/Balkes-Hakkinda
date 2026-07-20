@@ -1,6 +1,12 @@
-const SHELL_CACHE = "balkes-shell-v1";
+const SHELL_CACHE = "balkes-shell-v2";
 const DATA_CACHE = "balkes-data-v1";
-const SHELL = ["./", "./index.html", "./styles.css", "./app.js", "./manifest.webmanifest"];
+const SHELL = [
+  "./",
+  "./index.html",
+  "./styles.css?v=20260720-1",
+  "./app.js?v=20260720-1",
+  "./manifest.webmanifest"
+];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(SHELL_CACHE).then((cache) => cache.addAll(SHELL)));
@@ -25,30 +31,30 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
   const isRemoteJson = (url.hostname === "raw.githubusercontent.com" || url.hostname === "cdn.jsdelivr.net")
     && url.pathname.toLowerCase().endsWith(".json");
+
   if (isRemoteJson) {
-    event.respondWith(networkFirst(request));
+    event.respondWith(networkFirst(request, DATA_CACHE));
     return;
   }
 
   if (url.origin === self.location.origin) {
-    event.respondWith(
-      caches.match(request).then((cached) => cached || fetch(request).then((response) => {
-        if (response.ok) caches.open(SHELL_CACHE).then((cache) => cache.put(request, response.clone()));
-        return response;
-      }).catch(() => caches.match("./index.html")))
-    );
+    event.respondWith(networkFirst(request, SHELL_CACHE, request.mode === "navigate" ? "./index.html" : null));
   }
 });
 
-async function networkFirst(request) {
-  const cache = await caches.open(DATA_CACHE);
-  const cached = await cache.match(request);
+async function networkFirst(request, cacheName, fallbackUrl = null) {
+  const cache = await caches.open(cacheName);
   try {
     const response = await fetch(request);
     if (response.ok) cache.put(request, response.clone());
     return response;
   } catch (error) {
+    const cached = await cache.match(request);
     if (cached) return cached;
+    if (fallbackUrl) {
+      const fallback = await cache.match(fallbackUrl);
+      if (fallback) return fallback;
+    }
     throw error;
   }
 }

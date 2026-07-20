@@ -17,6 +17,7 @@
   const FEEDBACK_URL = "https://forms.gle/PgRRAGpovH3tRWTM7";
   const ANDROID_URL = "https://github.com/Sinanjam/Balkes-Hakkinda/releases/latest";
   const REPOSITORY_URL = "https://github.com/Sinanjam/Balkes-Hakkinda";
+  const GOATCOUNTER_TOTAL_URL = "https://sinanjam10.goatcounter.com/counter/TOTAL.json";
   const CACHE_PREFIX = "balkes-web:";
   const CACHE_TTL = 15 * 60 * 1000;
   const FETCH_TIMEOUT = 12_000;
@@ -109,7 +110,8 @@
     return text(value)
       .toLocaleLowerCase("tr-TR")
       .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "");
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/ı/g, "i");
   }
 
   function truncate(value, limit = 180) {
@@ -365,54 +367,171 @@
     }
   }
 
+  function hasPlayed(match) {
+    const score = match && match.score || {};
+    return score.played !== false && (text(score.display) || score.home !== null && score.home !== undefined);
+  }
+
+  function shortDate(value) {
+    const clean = text(value);
+    if (!clean) return "Tarih bekleniyor";
+    const parsed = new Date(`${clean}T12:00:00`);
+    if (Number.isNaN(parsed.getTime())) return clean;
+    return new Intl.DateTimeFormat("tr-TR", { day: "2-digit", month: "short" }).format(parsed);
+  }
+
+  function fixtureRow(match, seasonId) {
+    const score = match.score || {};
+    const played = hasPlayed(match);
+    const result = text(match.balkes && match.balkes.result).toUpperCase();
+    const tone = result === "W" ? "win" : result === "L" ? "loss" : result === "D" ? "draw" : "fixture";
+    const status = played ? text(score.display, `${score.home}-${score.away}`) : text(match.time, "—");
+    const week = number(match.week || match.standingsWeek);
+    return h("a", { className: "fixture-row", href: routeHref("score", seasonId, "match", match.id) },
+      h("span", { className: "fixture-round", text: week ? `${week}. HF` : text(match.matchTypeLabel, "MAÇ") }),
+      h("span", { className: "fixture-clubs" },
+        h("span", { className: normalize(match.homeTeam).includes("balikesirspor") ? "balkes-name" : "", text: text(match.homeTeam, "Ev sahibi") }),
+        h("span", { className: normalize(match.awayTeam).includes("balikesirspor") ? "balkes-name" : "", text: text(match.awayTeam, "Deplasman") })
+      ),
+      h("span", { className: `fixture-result ${tone}`.trim() },
+        h("strong", { text: status }),
+        h("small", { text: played ? (result === "W" ? "Galibiyet" : result === "L" ? "Mağlubiyet" : "Beraberlik") : shortDate(match.date) })
+      )
+    );
+  }
+
+  function standingsPreview(snapshot, season) {
+    const rows = asArray(snapshot && snapshot.standings);
+    if (!rows.length) {
+      return notice("Tablo hazırlanıyor", "Yeni sezonun puan durumu ilk lig maçlarıyla birlikte burada görünecek.");
+    }
+    const top = rows.slice(0, 5);
+    const balkes = rows.find((row) => row.isBalkes);
+    const visible = balkes && !top.includes(balkes) ? [...top, balkes] : top;
+    return h("div", { className: "mini-table" },
+      h("div", { className: "mini-table-head" },
+        h("span", { text: "#" }),
+        h("span", { text: "Takım" }),
+        h("span", { text: "O" }),
+        h("span", { text: "P" })
+      ),
+      ...visible.map((row, index) => h("a", {
+        className: `mini-table-row ${row.isBalkes ? "balkes" : ""} ${index === 5 ? "separated" : ""}`.trim(),
+        href: routeHref("score", season.id)
+      },
+        h("strong", { text: number(row.rank) }),
+        h("span", { text: text(row.team) }),
+        h("span", { text: number(row.played) }),
+        h("strong", { text: number(row.points) })
+      ))
+    );
+  }
+
+  function sportsDashboard(currentSeason, currentMatches, tableSeason, standingWeeks) {
+    const upcoming = currentMatches.filter((match) => !hasPlayed(match)).slice(0, 4);
+    const recent = currentMatches.filter(hasPlayed).slice(-4).reverse();
+    const featured = upcoming.length ? upcoming : recent;
+    const snapshot = standingWeeks.length ? standingWeeks[standingWeeks.length - 1] : null;
+
+    return h("section", { className: "section sports-center" },
+      h("div", { className: "sports-center-head" },
+        h("div", {},
+          eyebrow("Maç merkezi", "red"),
+          h("h2", { text: "Güncel sezon tek bakışta" }),
+          h("p", { className: "muted", text: `${text(currentSeason.name)} · ${text(currentSeason.competition)}` })
+        ),
+        buttonLink("Tüm fikstür", routeHref("score", currentSeason.id), "ghost")
+      ),
+      h("div", { className: "sports-dashboard-grid" },
+        h("article", { className: "sports-panel fixtures-panel" },
+          h("div", { className: "panel-title" },
+            h("div", {}, h("span", { className: "live-dot" }), h("strong", { text: upcoming.length ? "Sıradaki maçlar" : "Son sonuçlar" })),
+            h("span", { className: "pill red", text: text(currentSeason.name) })
+          ),
+          h("div", { className: "fixture-list" },
+            ...(featured.length
+              ? featured.map((match) => fixtureRow(match, currentSeason.id))
+              : [notice("Fikstür bekleniyor", "Bu sezonun maç programı henüz yayımlanmadı.")])
+          )
+        ),
+        h("article", { className: "sports-panel standings-panel" },
+          h("div", { className: "panel-title" },
+            h("div", {}, h("span", { className: "table-icon", text: "≡" }), h("strong", { text: "Puan durumu" })),
+            h("a", { className: "panel-link", href: routeHref("score", tableSeason.id), text: `${text(tableSeason.name)} →` })
+          ),
+          standingsPreview(snapshot, tableSeason)
+        )
+      )
+    );
+  }
+
   async function renderHome(token) {
     const manifest = await scoreManifest();
+    const seasons = asArray(manifest.availableSeasons);
+    const currentSeason = seasons[0];
+    const tableSeason = seasons.find((season) => text(season.standingsByWeekUrl)) || currentSeason;
+    const [currentMatchesResult, standingsResult] = await Promise.all([
+      currentSeason ? scoreFile(text(currentSeason.matchesIndexUrl, `seasons/${currentSeason.id}/matches_index.json`)).catch(() => []) : Promise.resolve([]),
+      tableSeason && text(tableSeason.standingsByWeekUrl)
+        ? scoreFile(text(tableSeason.standingsByWeekUrl)).catch(() => [])
+        : Promise.resolve([])
+    ]);
     if (token !== state.routeToken) return;
 
-    const seasons = asArray(manifest.availableSeasons);
+    const currentMatches = asArray(currentMatchesResult, "matches");
+    const standingWeeks = asArray(standingsResult, "weeks");
     const totalMatches = seasons.reduce((sum, season) => sum + number(season.matchCount), 0);
 
     document.title = "Balkes — Balıkesirspor Dijital Merkezi";
-    const hero = h("section", { className: "hero" },
+    const hero = h("section", { className: "hero premium-hero" },
       h("div", { className: "hero-copy" },
-        eyebrow("Balıkesirspor Dijital Merkezi"),
-        h("h1", {}, "Balkes'in ", h("span", { className: "accent-red", text: "bugünü" }), " ve ", h("span", { className: "accent-cyan", text: "hafızası" }), "."),
-        h("p", { className: "lead", text: "Maç sonuçları, hafta hafta puan durumları ve kulübün dijital arşivi. Tek yerde, her cihazda." }),
+        eyebrow("Balıkesirspor Maç ve Arşiv Merkezi"),
+        h("div", { className: "season-kicker" },
+          h("span", { className: "live-dot" }),
+          h("span", { text: `${text(currentSeason && currentSeason.name, "Güncel")} sezon verisi hazır` })
+        ),
+        h("h1", {}, "Balkes ", h("span", { className: "accent-red", text: "Maç" }), " Merkezi"),
+        h("p", { className: "lead", text: "Fikstür, sonuç, hafta hafta puan durumu ve ayrıntılı maç kayıtları; kulübün dijital arşiviyle aynı yerde." }),
         h("div", { className: "actions" },
-          buttonLink("Skor merkezini aç", "#/score", "red"),
+          buttonLink("Maç merkezini aç", "#/score", "red"),
           buttonLink("Arşivi keşfet", "#/archive")
+        ),
+        h("div", { className: "hero-metrics" },
+          h("span", {}, h("strong", { text: seasons.length }), " sezon"),
+          h("span", {}, h("strong", { text: totalMatches }), " maç"),
+          h("span", {}, h("strong", { text: "71" }), " arşiv")
         )
       ),
       h("div", { className: "hero-visual" },
-        h("img", { className: "hero-logo", src: LOGO_URL, alt: "Balkes logosu", attrs: { width: "350", height: "350" } })
+        h("div", { className: "hero-logo-shell" },
+          h("img", { className: "hero-logo", src: LOGO_URL, alt: "Balkes logosu", attrs: { width: "350", height: "350" } }),
+          h("span", { className: "hero-logo-caption", text: "BALIKESİRSPOR" })
+        )
       )
     );
 
-    const choices = h("section", { className: "section" },
-      sectionHead("İki merkez, tek adres", "Nereden başlamak istersin?", "Veriler GitHub üzerinden otomatik güncellenir."),
+    const dashboard = currentSeason
+      ? sportsDashboard(currentSeason, currentMatches, tableSeason, standingWeeks)
+      : null;
+
+    const choices = h("section", { className: "section quick-access" },
+      sectionHead("Hızlı erişim", "Balkes'in bütün verisi", "İstediğin bölüme tek dokunuşla geç."),
       h("div", { className: "choice-grid" },
-        choiceCard("Canlı ve güncel", "Skor Merkezi", "Tüm sezonlar, bütün maçlar, hafta hafta puan tabloları ve ayrıntılı karşılaşma kayıtları.", "red", "#/score"),
-        choiceCard("Kulübün hafızası", "Balkes Arşivi", "Sezon hikâyeleri, tarihî yazılar, tablolar ve uzaktan yüklenen fotoğraf koleksiyonları.", "", "#/archive")
+        choiceCard("Sonuçlar ve fikstür", "Skor Merkezi", "32 sezon, 1117 maç, haftalık tablolar ve bütün karşılaşma ayrıntıları.", "red", "#/score"),
+        choiceCard("71 kayıt", "Balkes Arşivi", "Sezon hikâyeleri, tarihî yazılar, tablolar ve uzaktan yüklenen fotoğraflar.", "", "#/archive")
       )
     );
 
     const stats = h("section", { className: "section" },
-      h("div", { className: "stat-grid" },
+      h("div", { className: "stat-grid premium-stats" },
         stat(seasons.length || "—", "erişilebilir sezon"),
-        stat(totalMatches || "—", "maç kaydı"),
-        stat("71", "korunan arşiv kaydı"),
-        stat("GitHub", "güncel veri kaynağı")
+        stat(totalMatches || "—", "ayrıntılı maç kaydı"),
+        stat("1056", "haftalık puan tablosu"),
+        stat("71", "korunan arşiv kaydı")
       )
     );
 
-    const aboutTeaser = h("section", { className: "section card" },
-      eyebrow("Açık ve bağımsız", "green"),
-      h("h2", { text: "Taraftar yapımı dijital merkez" }),
-      h("p", { className: "lead", text: "Kaynakları, sorumluluk reddi beyanını, Vibe Coding bilgisini ve iletişim kanalını açıkça yayımlıyoruz." }),
-      h("div", { className: "actions" }, buttonLink("Hakkında bölümünü aç", "#/about", "ghost"))
-    );
-
-    main.replaceChildren(pageShell(hero, choices, stats, aboutTeaser));
+    main.replaceChildren(pageShell(hero, dashboard, choices, stats));
   }
 
   function choiceCard(kicker, title, body, tone, href) {
@@ -432,13 +551,13 @@
     const totalStandings = seasons.filter((season) => text(season.standingsByWeekUrl)).length;
 
     document.title = "Skor Merkezi — Balkes";
-    const grid = h("div", { className: "card-grid", id: "season-grid" });
+    const grid = h("div", { className: "card-grid season-grid", id: "season-grid" });
     const countLabel = h("p", { className: "muted", text: `${seasons.length} sezon gösteriliyor` });
 
     const paint = (query = "") => {
       const needle = normalize(query);
       const visible = seasons.filter((season) => normalize(`${season.name} ${season.competition}`).includes(needle));
-      grid.replaceChildren(...visible.map(seasonCard));
+      grid.replaceChildren(...visible.map((season) => seasonCard(season, season === seasons[0])));
       countLabel.textContent = `${visible.length} sezon gösteriliyor`;
       if (!visible.length) grid.append(notice("Sonuç bulunamadı", "Farklı bir sezon veya lig adı deneyin."));
     };
@@ -446,8 +565,8 @@
     const intro = h("div", { className: "page-intro" },
       h("div", {},
         eyebrow("Skor Merkezi", "red"),
-        h("h1", { text: "Bütün sezonlar" }),
-        h("p", { className: "lead", text: "Balıkesirspor'un profesyonel lig maçları ve TFF kaynaklı hafta hafta puan tabloları." })
+        h("h1", { text: "Sezon merkezi" }),
+        h("p", { className: "lead", text: "Fikstür, sonuçlar, lig performansı ve TFF kaynaklı hafta hafta puan tabloları." })
       ),
       h("button", { className: "button small", type: "button", text: "Veriyi yenile ↻", onClick: refreshCurrentRoute })
     );
@@ -476,21 +595,34 @@
     ));
   }
 
-  function seasonCard(season) {
+  function seasonCard(season, isCurrent = false) {
     const id = text(season.id);
     const summary = season.summary || {};
-    return h("article", { className: "card season-card" },
-      h("div", { className: "chip-row" },
-        h("span", { className: "pill", text: text(season.name, id) }),
-        text(season.standingsByWeekUrl) ? h("span", { className: "pill red", text: "Puan tablosu" }) : null
+    const wins = number(summary.wins);
+    const draws = number(summary.draws);
+    const losses = number(summary.losses);
+    const played = wins + draws + losses;
+    return h("article", { className: `card season-card ${isCurrent ? "current" : ""}`.trim() },
+      h("div", { className: "season-card-top" },
+        h("div", { className: "chip-row" },
+          h("span", { className: "pill", text: text(season.name, id) }),
+          isCurrent ? h("span", { className: "pill live", text: "Güncel" }) : null
+        ),
+        summary.finalRank ? h("span", { className: "rank-chip", text: `${number(summary.finalRank)}. sıra` }) : null
       ),
       h("h3", { text: text(season.competition, "Profesyonel takım") }),
+      h("div", { className: "season-scoreline" },
+        h("span", {}, h("strong", { text: wins }), h("small", { text: "G" })),
+        h("span", {}, h("strong", { text: draws }), h("small", { text: "B" })),
+        h("span", {}, h("strong", { text: losses }), h("small", { text: "M" })),
+        h("span", { className: "season-points" }, h("strong", { text: summary.points !== undefined ? number(summary.points) : "—" }), h("small", { text: "P" }))
+      ),
       h("p", { className: "meta" },
         h("span", { text: `${number(season.matchCount)} maç` }),
-        summary.wins !== undefined ? h("span", { text: `${number(summary.wins)} galibiyet` }) : null,
-        summary.finalRank ? h("span", { text: `${number(summary.finalRank)}. sıra` }) : null
+        played ? h("span", { text: `${played} oynandı` }) : h("span", { text: "fikstür hazır" }),
+        text(season.standingsByWeekUrl) ? h("span", { text: "haftalık tablo" }) : null
       ),
-      h("a", { className: "card-link red", href: routeHref("score", id) }, "Sezonu aç →")
+      h("a", { className: "card-link red", href: routeHref("score", id) }, "Sezon merkezini aç →")
     );
   }
 
@@ -680,26 +812,33 @@
 
   function matchCard(match, seasonId) {
     const score = match.score || {};
+    const played = hasPlayed(match);
     const result = text(match.balkes && match.balkes.result).toUpperCase();
-    const scoreClass = result === "W" ? "win" : result === "L" ? "loss" : "";
+    const scoreClass = result === "W" ? "win" : result === "L" ? "loss" : result === "D" ? "draw" : "fixture";
     const week = number(match.week || match.standingsWeek);
     const round = text(match.roundLabel || match.stageLabel || match.stage);
     const weekLabel = week ? `${week}. hafta` : round || text(match.matchTypeLabel, "Maç");
-    const displayScore = score.played === false
-      ? text(match.time, "—")
-      : text(score.display, score.home !== undefined ? `${score.home}-${score.away}` : "—");
+    const resultLabel = !played ? "Fikstür" : result === "W" ? "G" : result === "L" ? "M" : "B";
 
-    return h("a", { className: "card match-card", href: routeHref("score", seasonId, "match", match.id) },
-      h("div", {},
-        h("div", { className: "match-week", text: weekLabel }),
-        h("div", { className: "meta", text: text(match.date) })
+    return h("a", { className: "card match-card premium-match", href: routeHref("score", seasonId, "match", match.id) },
+      h("div", { className: "match-info" },
+        h("span", { className: "match-week", text: weekLabel }),
+        h("span", { className: "match-date", text: [shortDate(match.date), text(match.time)].filter(Boolean).join(" · ") })
       ),
-      h("div", { className: "match-teams" },
-        h("span", { text: text(match.homeTeam, "Ev sahibi") }),
-        h("span", { text: text(match.awayTeam, "Deplasman") }),
-        h("small", { className: "muted", text: text(match.matchTypeLabel || match.competitionLabel || match.competition) })
+      h("div", { className: "match-team-stack" },
+        h("div", { className: normalize(match.homeTeam).includes("balikesirspor") ? "match-team-row balkes-name" : "match-team-row" },
+          h("span", { text: text(match.homeTeam, "Ev sahibi") }),
+          h("strong", { text: played ? number(score.home) : "—" })
+        ),
+        h("div", { className: normalize(match.awayTeam).includes("balikesirspor") ? "match-team-row balkes-name" : "match-team-row" },
+          h("span", { text: text(match.awayTeam, "Deplasman") }),
+          h("strong", { text: played ? number(score.away) : "—" })
+        )
       ),
-      h("div", { className: `match-score ${scoreClass}`.trim(), text: displayScore })
+      h("div", { className: `match-result-chip ${scoreClass}`.trim() },
+        h("strong", { text: resultLabel }),
+        h("small", { text: text(match.matchTypeLabel || match.competitionLabel || match.competition, "Maç") })
+      )
     );
   }
 
@@ -1049,8 +1188,36 @@
     );
   }
 
+  async function loadVisitorCount() {
+    const counter = document.querySelector("#visitor-counter");
+    const value = document.querySelector("#goatcounter-value");
+    const status = document.querySelector("#goatcounter-status");
+    if (!counter || !value || !status) return;
+
+    try {
+      const response = await fetch(GOATCOUNTER_TOTAL_URL, {
+        headers: { Accept: "application/json" },
+        cache: "no-store"
+      });
+      if (!response.ok) throw new Error(`GoatCounter ${response.status}`);
+      const data = await response.json();
+      const count = text(data && data.count);
+      if (!count) throw new Error("Sayaç değeri boş");
+      value.textContent = count;
+      status.textContent = "GoatCounter · toplam görüntülenme";
+      counter.classList.add("is-ready");
+    } catch (_error) {
+      value.textContent = "—";
+      status.textContent = "Sayaç görünürlüğü bekleniyor";
+      counter.classList.add("is-unavailable");
+    }
+  }
+
   window.addEventListener("hashchange", route);
-  window.addEventListener("DOMContentLoaded", route, { once: true });
+  window.addEventListener("DOMContentLoaded", () => {
+    route();
+    loadVisitorCount();
+  }, { once: true });
 
   if ("serviceWorker" in navigator && location.protocol === "https:") {
     window.addEventListener("load", () => {
